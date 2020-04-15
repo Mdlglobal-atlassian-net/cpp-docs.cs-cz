@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 1c9c0805834a59d10a559bfc2b6da0f10e2fe160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77bcb8336e4650de7ed01a067fa1bdd7ec0ba3e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374269"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,40 +36,40 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 ### <a name="parameters"></a>Parametry
 
 *SyncTraits*<br/>
-Typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.
+Typ, který může převzít výhradní nebo sdílené vlastnictví prostředku.
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.
+Představuje typ, který může mít výhradní nebo sdílené vlastnictví prostředku.
 
-`SyncLockWithStatusT` Třída se používá k implementaci [Mutex](mutex-class.md) a [semafor](semaphore-class.md) třídy.
+Třída `SyncLockWithStatusT` se používá k implementaci [Mutex](mutex-class.md) a [Semafor](semaphore-class.md) třídy.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                             | Popis
+Name (Název)                                                             | Popis
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy `SyncLockWithStatusT` třídy.
+[synclockwithstatust::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy. `SyncLockWithStatusT`
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Název                                                             | Popis
+Name (Název)                                                             | Popis
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy `SyncLockWithStatusT` třídy.
+[synclockwithstatust::SyncLockWithStatusT](#synclockwithstatust) | Inicializuje novou instanci třídy. `SyncLockWithStatusT`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                         | Popis
+Name (Název)                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
-[Synclockwithstatust::getStatus –](#getstatus) | Načte aktuální stav Čekání `SyncLockWithStatusT` objektu.
-[SyncLockWithStatusT::IsLocked](#islocked)   | Označuje, zda aktuální `SyncLockWithStatusT` vlastní prostředek objektu; to znamená, `SyncLockWithStatusT` objekt je *uzamčen*.
+[SyncLockWithStatusT::GetStatus](#getstatus) | Načte stav čekání aktuálního `SyncLockWithStatusT` objektu.
+[SyncLockWithStatusT::Uzamčeno](#islocked)   | Označuje, zda `SyncLockWithStatusT` aktuální objekt vlastní prostředek; to znamená, `SyncLockWithStatusT` že objekt je *uzamčen*.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Název                                    | Popis
+Name (Název)                                    | Popis
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::status_](#status) | Obsahuje výsledek základní operace čekání po operaci zámku na objektu na základě aktuálního `SyncLockWithStatusT` objektu.
+[SyncLockWithStatusT::status_](#status) | Obsahuje výsledek operace základní čekání po operaci uzamčení na `SyncLockWithStatusT` objekt u aktuálního objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -81,11 +81,11 @@ Název                                    | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Obor názvů:** Microsoft::WRL::Obálky::Details
 
-## <a name="getstatus"></a>Synclockwithstatust::getStatus –
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>SyncLockWithStatusT::GetStatus
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 DWORD GetStatus() const;
@@ -93,17 +93,17 @@ DWORD GetStatus() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek operace čekání na objekt, který je založen na `SyncLockWithStatusT` třídy, jako například [Mutex](mutex-class.md) nebo [semafor](semaphore-class.md). Nula (0) označuje, že operace čekání vrátí signalizovaného stavu; v opačném případě jiný stav došlo k chybě, jako hodnotu časového limitu vypršel.
+Výsledek operace čekání na objekt, který je `SyncLockWithStatusT` založen na třídy, například [Mutex](mutex-class.md) nebo [Semafor](semaphore-class.md). Zero (0) označuje, že operace čekání vrátila signalovaný stav; v opačném případě došlo k jinému stavu, jako je například hodnota časového limitu uplynul.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte aktuální stav Čekání `SyncLockWithStatusT` objektu.
+Načte stav čekání aktuálního `SyncLockWithStatusT` objektu.
 
-Načte hodnotu základní funkce GetStatus() [status_ –](#status) datový člen. Když se objekt na platformě `SyncLockWithStatusT` třída provádí operace uzamčení, objekt nejprve počká na objekt k dispozici. Výsledek této operace čekání je uložen v `status_` datový člen. Možné hodnoty `status_` datový člen jsou vrácené hodnoty operace čekání. Další informace najdete v tématu vrácené hodnoty `WaitForSingleObjectEx()` funkce v knihovně MSDN.
+Funkce GetStatus() načte hodnotu podkladového [status_](#status) datového člena. Když objekt založený `SyncLockWithStatusT` na třídě provede operaci uzamčení, objekt nejprve čeká na objekt k dispozici. Výsledek této operace čekání je `status_` uložen v datovém členu. Možné hodnoty datového `status_` člena jsou vrácené hodnoty operace čekání. Další informace naleznete v návratových `WaitForSingleObjectEx()` hodnotách funkce v knihovně MSDN.
 
-## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>SyncLockWithStatusT::Uzamčeno
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 bool IsLocked() const;
@@ -111,15 +111,15 @@ bool IsLocked() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Označuje, zda aktuální `SyncLockWithStatusT` vlastní prostředek objektu; to znamená, `SyncLockWithStatusT` objekt je *uzamčen*.
+Označuje, zda `SyncLockWithStatusT` aktuální objekt vlastní prostředek; to znamená, `SyncLockWithStatusT` že objekt je *uzamčen*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `SyncLockWithStatusT` objekt je uzamčena, jinak **false**.
+**true,** `SyncLockWithStatusT` pokud je objekt uzamčen; jinak **false**.
 
-## <a name="status"></a>SyncLockWithStatusT::status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT::status_
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 DWORD status_;
@@ -127,11 +127,11 @@ DWORD status_;
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje výsledek základní operace čekání po operaci zámku na objektu na základě aktuálního `SyncLockWithStatusT` objektu.
+Obsahuje výsledek operace základní čekání po operaci uzamčení na `SyncLockWithStatusT` objekt u aktuálního objektu.
 
-## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>synclockwithstatust::SyncLockWithStatusT
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 SyncLockWithStatusT(
@@ -146,17 +146,17 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Odkaz rvalue na jiný `SyncLockWithStatusT` objektu.
+*Další*<br/>
+Rvalue odkaz na `SyncLockWithStatusT` jiný objekt.
 
-*sync*<br/>
-Odkaz na jiný `SyncLockWithStatusT` objektu.
+*synchronizace*<br/>
+Odkaz na `SyncLockWithStatusT` jiný objekt.
 
-*status*<br/>
-Hodnota [status_ –](#status) datový člen třídy *jiných* parametr nebo *synchronizace* parametr.
+*Stav*<br/>
+Hodnota [status_](#status) datový člen *jiného* parametru nebo parametr *synchronizace.*
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `SyncLockWithStatusT` třídy.
+Inicializuje novou instanci třídy. `SyncLockWithStatusT`
 
-První konstruktor inicializuje aktuální `SyncLockWithStatusT` objektu z jiného `SyncLockWithStatusT` určené parametrem *jiných*a pak zruší platnost druhé `SyncLockWithStatusT` objektu. Druhý konstruktor není `protected`a inicializuje aktuální `SyncLockWithStatusT` objekt má neplatný stav.
+První konstruktor inicializuje `SyncLockWithStatusT` aktuální objekt `SyncLockWithStatusT` z jiného určeného parametrem `SyncLockWithStatusT` *other*a potom zruší platnost jiného objektu. Druhý konstruktor `protected`je a inicializuje `SyncLockWithStatusT` aktuální objekt do neplatného stavu.

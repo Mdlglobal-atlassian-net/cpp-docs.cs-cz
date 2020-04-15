@@ -1,5 +1,5 @@
 ---
-title: COleServerDoc Class
+title: Třída COleServerDoc
 ms.date: 11/04/2016
 f1_keywords:
 - COleServerDoc
@@ -82,16 +82,16 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: eec94a32fa0963d4cf2eccae0fb9e2423e75ffdc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376128"
 ---
-# <a name="coleserverdoc-class"></a>COleServerDoc Class
+# <a name="coleserverdoc-class"></a>Třída COleServerDoc
 
-Základní třída pro dokumenty OLE serveru.
+Základní třída pro dokumenty serveru OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -103,80 +103,80 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleServerDoc::COleServerDoc](#coleserverdoc)|Vytvoří objekt `COleServerDoc`.|
+|[COleServerDoc::COleServerDoc](#coleserverdoc)|Vytvoří `COleServerDoc` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Aktivuje přidružený dokument DocObject.|
-|[COleServerDoc::ActivateInPlace](#activateinplace)|Aktivuje dokument pro místní úpravy.|
-|[COleServerDoc::D eactivateAndUndo](#deactivateandundo)|Deaktivuje uživatelské rozhraní serveru.|
-|[COleServerDoc::D iscardUndoState](#discardundostate)|Odstraní informace o stavu vrácení zpět.|
-|[COleServerDoc::GetClientSite](#getclientsite)|Načte ukazatel na základní `IOleClientSite` rozhraní.|
+|[COleServerdoc::Aktivovatinplace](#activateinplace)|Aktivuje dokument pro úpravy na místě.|
+|[COleServerDoc::DeaktivovatAOddělat](#deactivateandundo)|Deaktivuje uživatelské rozhraní serveru.|
+|[COleServerDoc::DiscardUndoState](#discardundostate)|Zahodí informace o stavu vrátit.|
+|[COleServerDoc::GetClientSite](#getclientsite)|Načte ukazatel na `IOleClientSite` základní rozhraní.|
 |[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|Vrátí ukazatel na položku představující celý dokument.|
-|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Vrátí aktuální obdélník oříznutí pro místní úpravy.|
-|[COleServerDoc::GetItemPosition](#getitemposition)|Vrátí aktuální pozici obdélník vzhledem k klientské oblasti aplikace kontejneru pro místní úpravy.|
-|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Vrátí faktor přiblížení v pixelech.|
-|[COleServerDoc::IsDocObject](#isdocobject)|Určuje, zda je dokument DocObject.|
-|[COleServerDoc::-Embedded](#isembedded)|Označuje, zda je dokument vložen do dokumentu kontejneru nebo zda je spuštěn samostatný.|
-|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Vrátí hodnotu TRUE, pokud je položka aktuálně aktivována.|
-|[COleServerDoc::NotifyChanged](#notifychanged)|Upozorní kontejnery, které uživatel změnil, v dokumentu.|
-|[COleServerDoc::NotifyClosed](#notifyclosed)|Upozorní kontejnery, které uživatel dokument zavřel.|
-|[COleServerDoc::NotifyRename](#notifyrename)|Upozorní kontejnery, které uživatel přejmenoval na dokument.|
-|[COleServerDoc::NotifySaved](#notifysaved)|Upozorní kontejnery, které uživatel dokument uložil.|
-|[COleServerDoc:: deaktivovat](#ondeactivate)|Volá se rozhraním, když uživatel deaktivuje položku, která se aktivovala na místě.|
-|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Volá se rozhraním, aby se zničily ovládací prvky a jiné prvky uživatelského rozhraní vytvořené pro místní aktivaci.|
-|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Volá se rozhraním, když se aktivuje nebo deaktivuje okno rámce dokumentu kontejneru.|
-|[COleServerDoc::OnResizeBorder](#onresizeborder)|Volá se rozhraním, když se změní velikost okna rámce nebo okna dokumentu aplikace kontejneru.|
-|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Volá se rozhraním, aby se zobrazily nebo skryly ovládací panely pro místní úpravy.|
-|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Volá se rozhraním, když se uloží dokument serveru, který je vloženou položkou, a aktualizuje kopii této položky kontejneru.|
-|[COleServerDoc::RequestPositionChange](#requestpositionchange)|Změní umístění místního editačního snímku.|
-|[COleServerDoc::SaveEmbedding](#saveembedding)|Instruuje aplikaci kontejneru, aby dokument ukládal.|
-|[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|Posune dokument kontejneru.|
-|[COleServerDoc::UpdateAllItems](#updateallitems)|Upozorní kontejnery, které uživatel změnil, v dokumentu.|
+|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Vrátí aktuální ořezový obdélník pro úpravy na místě.|
+|[COleServerDoc::GetItemPosition](#getitemposition)|Vrátí obdélník aktuální pozice vzhledem k klientské oblasti aplikace kontejneru pro úpravy na místě.|
+|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Vrátí faktor zvětšení v obrazových bodech.|
+|[COleServerdoc::isdocobjekt](#isdocobject)|Určuje, zda je dokument DocObject.|
+|[COleServerDoc::IsEmbedded](#isembedded)|Označuje, zda je dokument vložen do dokumentu kontejneru nebo zda je spuštěn samostatně.|
+|[COleServerdoc::IsInplaceActive](#isinplaceactive)|Vrátí hodnotu PRAVDA, pokud je položka aktuálně aktivována na místě.|
+|[COleServerDoc::NotifyChanged](#notifychanged)|Upozorní kontejnery, že uživatel změnil dokument.|
+|[COleServerDoc::NotifyClosed](#notifyclosed)|Upozorní kontejnery, že uživatel zavřel dokument.|
+|[COleServerDoc::Přejmenovat notifyrename](#notifyrename)|Upozorní kontejnery, které uživatel přejmenoval dokument.|
+|[COleServerDoc::NotifySaved](#notifysaved)|Upozorní kontejnery, které uživatel uložil dokument.|
+|[COleServerDoc::OnDeaktivovat](#ondeactivate)|Volat rámci při uživatel deaktivuje položku, která byla aktivována na místě.|
+|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Volat rámci zničit ovládací prvky a další prvky uživatelského rozhraní vytvořené pro aktivaci na místě.|
+|[COleServerdoc::OnDocWindowActivate](#ondocwindowactivate)|Volat rámci při kontejneru okno rámce dokumentu je aktivován nebo deaktivován.|
+|[COleServerDoc::OnResizeBorder](#onresizeborder)|Volat rámci při velikosti okna rámce aplikace kontejneru nebo dokumentu.|
+|[COleServerdoc::OnShowControlBars](#onshowcontrolbars)|Volat rámci zobrazit nebo skrýt ovládací panely pro úpravy na místě.|
+|[COleServerdoc::OnUpdateDocument](#onupdatedocument)|Volat rámci při uložení dokumentu serveru, který je vložené položky, aktualizace kontejneru kopii položky.|
+|[COleServerDoc::RequestPositionChange](#requestpositionchange)|Změní polohu rámečku pro úpravy na místě.|
+|[COleServerDoc::Uložit vkládání](#saveembedding)|Informuje aplikaci kontejneru o uložení dokumentu.|
+|[COleServerdoc::ScrollContainerby](#scrollcontainerby)|Posune dokument kontejneru.|
+|[COleServerDoc::Aktualizovatvšechny položky](#updateallitems)|Upozorní kontejnery, že uživatel změnil dokument.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Volá se rozhraním, aby se vytvořilo okno rámce pro místní úpravy.|
-|[COleServerDoc::D estroyInPlaceFrame](#destroyinplaceframe)|Volá se rozhraním, aby se zničilo okno rámce pro místní úpravy.|
-|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Přepsáním této funkce vytvoříte nový objekt `CDocObjectServer` a označíte si, že tento dokument je kontejnerem DocObject.|
-|[COleServerDoc::-Close](#onclose)|Volá se rozhraním, když kontejner požaduje zavření dokumentu.|
-|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Provede zadaný příkaz nebo zobrazí nápovědu k příkazu.|
-|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Volá se rozhraním, když se aktivuje nebo deaktivuje okno rámce kontejneru.|
-|[COleServerDoc:: funkci OnGetEmbeddedItem](#ongetembeddeditem)|Volá se, aby se získal `COleServerItem`, který představuje celý dokument. slouží k získání vložené položky. Vyžaduje se implementace.|
-|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Volá se rozhraním, aby se odvolaly změny provedené při místních úpravách.|
-|[COleServerDoc::OnSetHostNames](#onsethostnames)|Volá se rozhraním, když kontejner nastaví název okna pro vložený objekt.|
-|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Volá se rozhraním, aby se umístilo místní editační okno rámce v okně aplikace kontejneru.|
-|[COleServerDoc::OnShowDocument](#onshowdocument)|Volá se rozhraním pro zobrazení nebo skrytí dokumentu.|
+|[COleServerdoc::CreateInplaceFrame](#createinplaceframe)|Volat rámci vytvořit okno rámce pro úpravy na místě.|
+|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Volat rámci zničit okno rámce pro úpravy na místě.|
+|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Přepsáním této funkce `CDocObjectServer` vytvořte nový objekt a označte, že tento dokument je kontejner DocObject.|
+|[COleServerDoc::OnClose](#onclose)|Volat rámci při kontejneru požadavky na zavření dokumentu.|
+|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Provede zadaný příkaz nebo zobrazí nápovědu pro příkaz.|
+|[COleServerdoc::OnFrameWindowActivate](#onframewindowactivate)|Volat rámci při okno rámce kontejneru je aktivován nebo deaktivován.|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Volána `COleServerItem` získat, který představuje celý dokument; slouží k získání vložené položky. Implementace je nutná.|
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Volat rámci vrátit zpět změny provedené během úprav na místě.|
+|[COleserverdoc::OnSetHostNames](#onsethostnames)|Volat rámci při kontejneru nastaví název okna pro vložený objekt.|
+|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Volat rámci umístit na místě okno rámce pro úpravy v okně aplikace kontejneru.|
+|[COleServerdoc::Dokument OnShow](#onshowdocument)|Volat rámci zobrazit nebo skrýt dokument.|
 
 ## <a name="remarks"></a>Poznámky
 
-Dokument serveru může obsahovat objekty [odvozenou třídu COleServerItem](../../mfc/reference/coleserveritem-class.md) , které reprezentují serverové rozhraní pro vložené nebo propojené položky. Pokud je serverová aplikace spuštěna kontejnerem pro úpravu vložené položky, je položka načtena jako vlastní serverový dokument; objekt `COleServerDoc` obsahuje pouze jeden objekt `COleServerItem`, který se skládá z celého dokumentu. Pokud je serverová aplikace spuštěna kontejnerem pro úpravu propojené položky, je z disku načten existující dokument. část obsahu dokumentu je zvýrazněna, aby označovala propojenou položku.
+Dokument serveru může obsahovat objekty [COleServerItem,](../../mfc/reference/coleserveritem-class.md) které představují rozhraní serveru pro vložené nebo propojené položky. Když je serverová aplikace spuštěna kontejnerem pro úpravu vložené položky, položka je načtena jako vlastní serverový dokument. objekt `COleServerDoc` obsahuje pouze `COleServerItem` jeden objekt, který se skládá z celého dokumentu. Když je serverová aplikace spuštěna kontejnerem pro úpravu propojené položky, je existující dokument načten z disku. část obsahu dokumentu je zvýrazněna, aby se označila propojená položka.
 
-`COleServerDoc` objekty mohou také obsahovat položky třídy [COleClientItem](../../mfc/reference/coleclientitem-class.md) . To vám umožní vytvářet aplikace kontejnerového serveru. Rozhraní poskytuje funkce pro správné uložení `COleClientItem`ch položek při údržbě objektů `COleServerItem`.
+`COleServerDoc`objekty mohou také obsahovat položky [cOleClientItem](../../mfc/reference/coleclientitem-class.md) třídy. To umožňuje vytvářet aplikace kontejner-server. Rozhraní framework poskytuje funkce `COleClientItem` pro správné uložení `COleServerItem` položek při údržbě objektů.
 
-Pokud serverová aplikace nepodporuje odkazy, bude serverový dokument vždycky obsahovat jenom jednu položku serveru, která představuje celý vložený objekt jako dokument. Pokud vaše aplikace serveru podporuje odkazy, musí vytvořit položku serveru pokaždé, když se do schránky zkopíruje výběr.
+Pokud serverová aplikace nepodporuje odkazy, bude serverový dokument vždy obsahovat pouze jednu položku serveru, která představuje celý vložený objekt jako dokument. Pokud serverová aplikace podporuje odkazy, musí vytvořit položku serveru při každém zkopírování výběru do schránky.
 
-Chcete-li použít `COleServerDoc`, odvodit z něj třídu a implementovat členskou funkci [funkci OnGetEmbeddedItem](#ongetembeddeditem) , která umožňuje serveru podporovat vložené položky. Odvodit třídu z `COleServerItem` k implementaci položek v dokumentech a vracet objekty této třídy z `OnGetEmbeddedItem`.
+Chcete-li použít `COleServerDoc`, odvodit třídu z něj a implementovat [OnGetEmbeddedItem](#ongetembeddeditem) členské funkce, která umožňuje serveru pro podporu vložené položky. Odvodit `COleServerItem` třídu z implementovat položky v dokumentech a vrátit objekty této třídy z `OnGetEmbeddedItem`.
 
-Pro podporu propojených položek `COleServerDoc` poskytuje členskou funkci [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) . Můžete použít výchozí implementaci nebo ji přepsat, pokud máte vlastní způsob správy položek dokumentu.
+Chcete-li podporovat `COleServerDoc` propojené položky, poskytuje [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) člennou funkci. Můžete použít výchozí implementaci nebo přepsat, pokud máte vlastní způsob správy položek dokumentu.
 
-Pro každý typ dokumentu serveru, který podporuje vaše aplikace, potřebujete jednu `COleServerDoc`odvozenou třídu. Například pokud vaše serverová aplikace podporuje listy a grafy, potřebujete dvě třídy odvozené od `COleServerDoc`.
+Potřebujete jednu `COleServerDoc`odvozenou třídu pro každý typ dokumentu serveru, který vaše aplikace podporuje. Pokud například serverová aplikace podporuje listy a `COleServerDoc`grafy, potřebujete dvě odvozené třídy.
 
-Další informace o serverech najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).
+Další informace o serverech naleznete v článku [Servery: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[Objektu CDocument](../../mfc/reference/cdocument-class.md)
+[CDokument](../../mfc/reference/cdocument-class.md)
 
 [COleDocument](../../mfc/reference/coledocument-class.md)
 
@@ -186,9 +186,9 @@ Další informace o serverech najdete v článku [servery: implementace serveru]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXOLE. h
+**Záhlaví:** afxole.h
 
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject
+## <a name="coleserverdocactivatedocobject"></a><a name="activatedocobject"></a>COleServerDoc::ActivateDocObject
 
 Aktivuje přidružený dokument DocObject.
 
@@ -198,11 +198,11 @@ void ActivateDocObject();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `COleServerDoc` nepodporuje aktivní dokumenty (také označované jako DocObjects). Pokud chcete povolit tuto podporu, přečtěte si téma [GetDocObjectServer](#getdocobjectserver) a class [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).
+Ve výchozím `COleServerDoc` nastavení nepodporuje aktivní dokumenty (označované také jako DocObjects). Chcete-li tuto podporu povolit, přečtěte si téma [GetDocObjectServer](#getdocobjectserver) a třída [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).
 
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace
+## <a name="coleserverdocactivateinplace"></a><a name="activateinplace"></a>COleServerdoc::Aktivovatinplace
 
-Aktivuje položku pro místní úpravy.
+Aktivuje položku pro úpravy na místě.
 
 ```
 BOOL ActivateInPlace();
@@ -210,17 +210,17 @@ BOOL ActivateInPlace();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak 0, což znamená, že položka je plně otevřená.
+Nenulová, pokud je úspěšná; jinak 0, což znamená, že položka je plně otevřena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce provádí všechny operace nezbytné k místní aktivaci. Vytvoří místní okno rámce, aktivuje ho a velikost na položku, nastaví sdílené nabídky a další ovládací prvky, posuňte položku na zobrazení a nastaví fokus na místní okno rámce.
+Tato funkce provádí všechny operace nezbytné pro aktivaci na místě. Vytvoří okno rámečku na místě, aktivuje ho a zvětší na položku, nastaví sdílené nabídky a další ovládací prvky, posune položku do zobrazení a nastaví fokus na okno rámečku na místě.
 
-Tato funkce je volána výchozí implementací [odvozenou třídu COleServerItem:: show](../../mfc/reference/coleserveritem-class.md#onshow). Tuto funkci volejte, pokud vaše aplikace podporuje jinou operaci pro místní aktivaci (například Play).
+Tato funkce je volána výchozí implementací [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Tuto funkci zavolejte, pokud vaše aplikace podporuje jiné sloveso pro aktivaci na místě (například Play).
 
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc
+## <a name="coleserverdoccoleserverdoc"></a><a name="coleserverdoc"></a>COleServerDoc::COleServerDoc
 
-Vytvoří objekt `COleServerDoc` bez připojení k systémovým knihovnám DLL systému OLE.
+Vytvoří `COleServerDoc` objekt bez připojení k knihovnám DLL systému OLE.
 
 ```
 COleServerDoc();
@@ -228,11 +228,11 @@ COleServerDoc();
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li otevřít komunikaci s OLE, je nutné zavolat [COleLinkingDoc:: Register](../../mfc/reference/colelinkingdoc-class.md#register) . Pokud ve své aplikaci používáte [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) , `COleLinkingDoc::Register` je volána `COleLinkingDoc`implementaci `OnNewDocument`, `OnOpenDocument`a `OnSaveDocument`.
+Chcete-li otevřít komunikaci s ole, musíte volat [COleLinkingDoc::Register.](../../mfc/reference/colelinkingdoc-class.md#register) Pokud používáte [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) ve `COleLinkingDoc::Register` vaší aplikaci, `COleLinkingDoc`je volána pro vás implementací společnosti `OnNewDocument`, `OnOpenDocument`a `OnSaveDocument`.
 
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame
+## <a name="coleserverdoccreateinplaceframe"></a><a name="createinplaceframe"></a>COleServerdoc::CreateInplaceFrame
 
-Rozhraní volá tuto funkci, aby vytvořilo okno rámce pro místní úpravy.
+Rozhraní Framework volá tuto funkci k vytvoření okna rámce pro úpravy na místě.
 
 ```
 virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
@@ -245,17 +245,17 @@ Ukazatel na nadřazené okno aplikace kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na místní okno rámce nebo hodnotu NULL, pokud je neúspěšný.
+Ukazatel na okno rámce na místě nebo NULL, pokud není úspěšný.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace používá pro vytvoření rámce informace zadané v šabloně dokumentu. Toto zobrazení je prvním zobrazením vytvořeným pro dokument. Toto zobrazení je dočasně odpojeno od původního rámce a připojeno k nově vytvořenému snímku.
+Výchozí implementace používá k vytvoření rámce informace zadané v šabloně dokumentu. Použité zobrazení je prvním zobrazením vytvořeným pro dokument. Toto zobrazení je dočasně odpojeno od původního rámečku a připojeno k nově vytvořenému rámečku.
 
-Toto je pokročilá přepsatelné.
+Tohle je pokročilé překažné.
 
-##  <a name="deactivateandundo"></a>COleServerDoc::D eactivateAndUndo
+## <a name="coleserverdocdeactivateandundo"></a><a name="deactivateandundo"></a>COleServerDoc::DeaktivovatAOddělat
 
-Tuto funkci volejte, pokud vaše aplikace podporuje vrácení zpět a uživatel klikne na tlačítko zpět po aktivaci položky, ale před jejím úpravou.
+Tuto funkci zavolejte, pokud aplikace podporuje vrácení a uživatel po aktivaci položky, ale před její úpravou zvolí vrácení.
 
 ```
 BOOL DeactivateAndUndo();
@@ -263,15 +263,15 @@ BOOL DeactivateAndUndo();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové při úspěchu; v opačném případě 0.
+Nenulová na úspěch; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je aplikace kontejneru zapisována pomocí knihovna Microsoft Foundation Class, volání této funkce způsobí, že je volána metoda [COleClientItem:: OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) , která deaktivuje uživatelské rozhraní serveru.
+Pokud je aplikace kontejneru zapsána pomocí knihovny tříd Microsoft Foundation, volání této funkce způsobí, [že cOleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) bude volána, což deaktivuje uživatelské rozhraní serveru.
 
-##  <a name="destroyinplaceframe"></a>COleServerDoc::D estroyInPlaceFrame
+## <a name="coleserverdocdestroyinplaceframe"></a><a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame
 
-Rozhraní volá tuto funkci, aby zničila místní okno rámce a vrátila okno dokumentu serverové aplikace do stavu před místní aktivací.
+Rozhraní Framework volá tuto funkci zničit okno rámce na místě a vrátit okno dokumentu serverové aplikace do jeho stavu před aktivací na místě.
 
 ```
 virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
@@ -280,15 +280,15 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ### <a name="parameters"></a>Parametry
 
 *pFrameWnd*<br/>
-Ukazatel na místní okno rámce, které má být zničeno.
+Ukazatel na okno rámce na místě, které má být zničeno.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je pokročilá přepsatelné.
+Tohle je pokročilé překažné.
 
-##  <a name="discardundostate"></a>COleServerDoc::D iscardUndoState
+## <a name="coleserverdocdiscardundostate"></a><a name="discardundostate"></a>COleServerDoc::DiscardUndoState
 
-Pokud uživatel provede operaci úpravy, kterou nelze vrátit zpět, zavolejte tuto funkci, aby aplikace kontejneru vynutila zahození informací o stavu vrácení zpět.
+Pokud uživatel provede operaci úprav, kterou nelze vrátit zpět, volání této funkce vynutí aplikaci kontejneru zahodit informace o stavu zpět.
 
 ```
 BOOL DiscardUndoState();
@@ -296,15 +296,15 @@ BOOL DiscardUndoState();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové při úspěchu; v opačném případě 0.
+Nenulová na úspěch; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je k dispozici, takže servery, které podporují vrácení zpět, můžou uvolnit prostředky, které by jinak byly spotřebovány informacemi o stavu vrácení, které nelze použít.
+Tato funkce je k dispozici tak, aby servery, které podporují Undo můžete uvolnit prostředky, které by jinak byly spotřebovány informace o stavu vrátit, které nelze použít.
 
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite
+## <a name="coleserverdocgetclientsite"></a><a name="getclientsite"></a>COleServerDoc::GetClientSite
 
-Načte ukazatel na základní `IOleClientSite` rozhraní.
+Načte ukazatel na `IOleClientSite` základní rozhraní.
 
 ```
 LPOLECLIENTSITE GetClientSite() const;
@@ -312,11 +312,11 @@ LPOLECLIENTSITE GetClientSite() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načte ukazatel na základní rozhraní [IOleClientSite](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite) .
+Načte ukazatel na základní rozhraní [IOleClientSite.](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite)
 
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer
+## <a name="coleserverdocgetdocobjectserver"></a><a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer
 
-Přepsáním této funkce vytvoříte novou `CDocObjectServer` položku a vrátíte na ni ukazatel.
+Přepište tuto funkci a `CDocObjectServer` vytvořte novou položku a vraťte jí ukazatel.
 
 ```
 virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
@@ -325,23 +325,23 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ### <a name="parameters"></a>Parametry
 
 *pDocSite*<br/>
-Ukazatel na rozhraní `IOleDocumentSite`, které bude připojit tento dokument k serveru.
+Ukazatel na `IOleDocumentSite` rozhraní, které připojí tento dokument k serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CDocObjectServer`; Hodnota NULL, pokud se operace nezdařila.
+Ukazatel na `CDocObjectServer`; Null, pokud se operace nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je aktivován Server DocObject, vrátí se návratový ukazatel bez hodnoty NULL, který může klient podporovat DocObjects. Výchozí implementace vrací hodnotu NULL.
+Při aktivaci serveru DocObject, návrat non-NULL ukazatel ukazuje, že klient může podporovat DocObjects. Výchozí implementace vrátí hodnotu NULL.
 
-Typická implementace pro dokument, který podporuje DocObjects, jednoduše přidělí nový objekt `CDocObjectServer` a vrátí jej volajícímu. Příklad:
+Typické implementace pro dokument, který podporuje DocObjects `CDocObjectServer` jednoduše přidělit nový objekt a vrátit jej volajícímu. Příklad:
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem
+## <a name="coleserverdocgetembeddeditem"></a><a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem
 
-Voláním této funkce získáte ukazatel na položku představující celý dokument.
+Volání této funkce získat ukazatel na položku představující celý dokument.
 
 ```
 COleServerItem* GetEmbeddedItem();
@@ -349,15 +349,15 @@ COleServerItem* GetEmbeddedItem();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na položku představující celý dokument; Hodnota NULL, pokud se operace nezdařila.
+Ukazatel na položku představující celý dokument; Null, pokud se operace nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [COleServerDoc:: funkci OnGetEmbeddedItem](#ongetembeddeditem), virtuální funkci bez výchozí implementace.
+Volá [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), virtuální funkce bez výchozí implementace.
 
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect
+## <a name="coleserverdocgetitemcliprect"></a><a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect
 
-Zavolejte členskou funkci `GetItemClipRect` pro získání souřadnic obdélníku oříznutí položky, která je upravována na místě.
+Volání `GetItemClipRect` členské funkce získat ořezové obdélník ové souřadnice položky, která je upravována na místě.
 
 ```
 void GetItemClipRect(LPRECT lpClipRect) const;
@@ -366,17 +366,17 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpClipRect*<br/>
-Ukazatel na `RECT`ovou strukturu nebo objekt `CRect`, který získá souřadnice ořezového obdélníku položky.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt pro příjem souřadnic ořezového obdélníku položky.
 
 ### <a name="remarks"></a>Poznámky
 
-Souřadnice jsou v pixelech vzhledem k klientské oblasti okna kontejneru aplikace.
+Souřadnice jsou v obrazových bodech vzhledem k klientské oblasti okna aplikace kontejneru.
 
-K vykreslování by nemělo dojít mimo obdélník oříznutí. Vykreslování je obvykle automaticky omezeno. Pomocí této funkce lze určit, zda se uživatel přesunul mimo viditelnou část dokumentu. Pokud ano, posuňte dokument kontejneru podle potřeby prostřednictvím volání [ScrollContainerBy](#scrollcontainerby).
+Kreslení by se nemělo vyskytovat mimo ořezový obdélník. Kreslení je obvykle automaticky omezeno. Pomocí této funkce můžete určit, zda se uživatel posouval mimo viditelnou část dokumentu. Pokud ano, posuňte dokument kontejneru podle potřeby pomocí volání [ScrollContainerBy](#scrollcontainerby).
 
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition
+## <a name="coleserverdocgetitemposition"></a><a name="getitemposition"></a>COleServerDoc::GetItemPosition
 
-Zavolejte členskou funkci `GetItemPosition`, aby se získaly souřadnice položky upravované na místě.
+Volání `GetItemPosition` členské funkce získat souřadnice položky upravovány na místě.
 
 ```
 void GetItemPosition(LPRECT lpPosRect) const;
@@ -385,17 +385,17 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Ukazatel na strukturu `RECT` nebo objekt `CRect` pro příjem souřadnic položky.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt pro příjem souřadnic položky.
 
 ### <a name="remarks"></a>Poznámky
 
-Souřadnice jsou v pixelech vzhledem k klientské oblasti okna kontejneru aplikace.
+Souřadnice jsou v obrazových bodech vzhledem k klientské oblasti okna aplikace kontejneru.
 
-Pozice položky může být porovnána s aktuálním obdélníkem oříznutí, aby bylo možné určit rozsah, ve kterém je položka viditelná (nebo není viditelná) na obrazovce.
+Pozici položky lze porovnat s aktuálním ořezovým obdélníkem a určit rozsah, ve kterém je položka viditelná (nebo není viditelná) na obrazovce.
 
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor
+## <a name="coleserverdocgetzoomfactor"></a><a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor
 
-Členská funkce `GetZoomFactor` určuje "faktor přiblížení" položky, která byla aktivována pro místní úpravy.
+Členská `GetZoomFactor` funkce určuje "faktor zvětšení" položky, která byla aktivována pro úpravy na místě.
 
 ```
 BOOL GetZoomFactor(
@@ -407,25 +407,25 @@ BOOL GetZoomFactor(
 ### <a name="parameters"></a>Parametry
 
 *lpSizeNum*<br/>
-Ukazatel na objekt třídy `CSize`, který bude obsahovat čitatel faktoru přiblížení. Může mít hodnotu NULL.
+Ukazatel na objekt `CSize` třídy, který bude obsahovat čítač faktoru zvětšení. Může být NULL.
 
 *lpSizeDenom*<br/>
-Ukazatel na objekt třídy `CSize`, který bude obsahovat jmenovatele faktoru přiblížení. Může mít hodnotu NULL.
+Ukazatel na objekt `CSize` třídy, který bude obsahovat jmenovatele faktoru zvětšení. Může být NULL.
 
 *lpPosRect*<br/>
-Ukazatel na objekt třídy `CRect`, který popisuje novou pozici položky. Pokud má argument hodnotu NULL, funkce použije aktuální pozici položky.
+Ukazatel na objekt `CRect` třídy, který popisuje novou pozici položky. Pokud je tento argument NULL, funkce používá aktuální pozici položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je položka aktivována pro místní úpravy a její faktor přiblížení je jiný než 100% (1:1); v opačném případě 0.
+Nenulová, pokud je položka aktivována pro úpravy na místě a její faktor zvětšení je jiný než 100% (1:1); jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Faktor přiblížení (v pixelech) je poměr velikosti položky k jeho aktuálnímu rozsahu. Pokud aplikace kontejneru nenastaví rozsah položky, použije se její přirozený rozsah (jak Určuje [odvozenou třídu COleServerItem:: OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)).
+Faktor zvětšení v obrazových bodech je poměr velikosti položky k jejímu aktuálnímu rozsahu. Pokud aplikace kontejneru nenastavila rozsah položky, použije se její přirozený rozsah (určený [cOleServerItem::OnGetExtent).](../../mfc/reference/coleserveritem-class.md#ongetextent)
 
-Funkce nastaví své první dva argumenty na čitatel a jmenovatel "faktor lupy položky". Pokud se položka neupravuje na místě, funkce nastaví tyto argumenty na výchozí hodnotu 100% (nebo 1:1) a vrátí hodnotu nula. Další informace naleznete v části technická Poznámka 40, [změny velikosti a zvětšení umístění v prostředích MFC/OLE](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
+Funkce nastaví své první dva argumenty na čitatel a jmenovatel položky "faktor zvětšení." Pokud položka není upravována na místě, funkce nastaví tyto argumenty na výchozí hodnotu 100 % (nebo 1:1) a vrátí nulu. Další informace naleznete v technických poznámkách 40, [mfc/OLE změna velikosti a přiblížení](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
 
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject
+## <a name="coleserverdocisdocobject"></a><a name="isdocobject"></a>COleServerdoc::isdocobjekt
 
 Určuje, zda je dokument DocObject.
 
@@ -435,11 +435,11 @@ BOOL IsDocObject() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je dokument DocObject; v opačném případě FALSE.
+TRUE, pokud je dokument DocObject; jinak FALSE.
 
-##  <a name="isembedded"></a>COleServerDoc::-Embedded
+## <a name="coleserverdocisembedded"></a><a name="isembedded"></a>COleServerDoc::IsEmbedded
 
-Voláním členské funkce `IsEmbedded` určíte, zda dokument představuje objekt vložený do kontejneru.
+Volání `IsEmbedded` členské funkce k určení, zda dokument představuje objekt vložený do kontejneru.
 
 ```
 BOOL IsEmbedded() const;
@@ -447,15 +447,15 @@ BOOL IsEmbedded() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je objekt `COleServerDoc` dokument, který představuje objekt vložený do kontejneru; v opačném případě 0.
+Nenulová, `COleServerDoc` pokud je objekt dokument, který představuje objekt vložený do kontejneru; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Dokument načtený ze souboru není vložený, i když ho může zpracovat aplikace typu kontejner jako odkaz. Dokument, který je vložený v dokumentu kontejneru, se považuje za vložený.
+Dokument načtený ze souboru není vložen, i když s ním může pracovat aplikace kontejneru jako odkaz. Dokument, který je vložen ý do dokumentu kontejneru, se považuje za vložený.
 
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive
+## <a name="coleserverdocisinplaceactive"></a><a name="isinplaceactive"></a>COleServerdoc::IsInplaceActive
 
-Voláním členské funkce `IsInPlaceActive` určíte, zda je položka aktuálně na místě aktivního stavu.
+Volání `IsInPlaceActive` členské funkce k určení, zda je položka aktuálně v aktivním stavu na místě.
 
 ```
 BOOL IsInPlaceActive() const;
@@ -463,11 +463,11 @@ BOOL IsInPlaceActive() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je objekt `COleServerDoc` aktivní. v opačném případě 0.
+Nenulová, `COleServerDoc` pokud je objekt aktivní na místě; jinak 0.
 
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged
+## <a name="coleserverdocnotifychanged"></a><a name="notifychanged"></a>COleServerDoc::NotifyChanged
 
-Voláním této funkce oznamujete všem propojeným položkám připojeným k dokumentu, že se dokument změnil.
+Voláním této funkce oznámíte všem připojeným položkám připojeným k dokumentu, že dokument byl změněn.
 
 ```
 void NotifyChanged();
@@ -475,14 +475,14 @@ void NotifyChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle zavoláte tuto funkci poté, co uživatel změní některý z globálních atributů, jako je například dimenze dokumentu serveru. Pokud je položka OLE propojena s dokumentem pomocí automatického propojení, bude položka aktualizována, aby odrážela změny. V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class je volána členská funkce [Change](../../mfc/reference/coleclientitem-class.md#onchange) v `COleClientItem`.
+Obvykle voláte tuto funkci poté, co uživatel změní některé globální atribut, jako jsou rozměry dokumentu serveru. Pokud je položka OLE propojena s dokumentem s automatickým propojením, bude aktualizována tak, aby odrážela změny. V kontejnerových aplikacích napsaných pomocí knihovny `COleClientItem` tříd Microsoft Foundation je volána členská funkce [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
 > [!NOTE]
->  Tato funkce je zahrnutá pro kompatibilitu s OLE 1. Nové aplikace by měly používat [UpdateAllItems](#updateallitems).
+> Tato funkce je součástí kompatibility s OLE 1. Nové aplikace by měly používat [UpdateAllItems](#updateallitems).
 
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed
+## <a name="coleserverdocnotifyclosed"></a><a name="notifyclosed"></a>COleServerDoc::NotifyClosed
 
-Voláním této funkce se upozorní na kontejnery, že dokument byl uzavřen.
+Volání této funkce upozornit kontejner (y), že dokument byl uzavřen.
 
 ```
 void NotifyClosed();
@@ -490,11 +490,11 @@ void NotifyClosed();
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel zvolí příkaz Zavřít v nabídce soubor, `NotifyClosed` je volána pomocí `COleServerDoc`implementace členské funkce [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) . V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class je volána členská funkce [Change](../../mfc/reference/coleclientitem-class.md#onchange) v `COleClientItem`.
+Když uživatel vybere příkaz Zavřít z nabídky `NotifyClosed` Soubor, `COleServerDoc`je volána implementací členské funkce [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) . V kontejnerových aplikacích napsaných pomocí knihovny `COleClientItem` tříd Microsoft Foundation je volána členská funkce [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename
+## <a name="coleserverdocnotifyrename"></a><a name="notifyrename"></a>COleServerDoc::Přejmenovat notifyrename
 
-Tuto funkci zavolejte poté, co uživatel přejmenuje dokument serveru.
+Tuto funkci zavolejte po přejmenování dokumentu serveru uživatelem.
 
 ```
 void NotifyRename(LPCTSTR lpszNewName);
@@ -507,11 +507,11 @@ Ukazatel na řetězec určující nový název dokumentu serveru; obvykle se jed
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel zvolí příkaz Uložit jako v nabídce soubor, `NotifyRename` je volána pomocí `COleServerDoc`implementace členské funkce [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) . Tato funkce upozorní systémové knihovny DLL systému OLE, které zase upozorní kontejnery. V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class je volána členská funkce [Change](../../mfc/reference/coleclientitem-class.md#onchange) v `COleClientItem`.
+Když uživatel zvolí příkaz Uložit jako z `NotifyRename` nabídky Soubor, je volána implementací `COleServerDoc`členské funkce [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) . Tato funkce upozorní knihovny DLL systému OLE, které zase upozorňují kontejnery. V kontejnerových aplikacích napsaných pomocí knihovny `COleClientItem` tříd Microsoft Foundation je volána členská funkce [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved
+## <a name="coleserverdocnotifysaved"></a><a name="notifysaved"></a>COleServerDoc::NotifySaved
 
-Tuto funkci zavolejte poté, co uživatel dokument serveru uloží.
+Tuto funkci zavolejte po uložení dokumentu serveru uživatelem.
 
 ```
 void NotifySaved();
@@ -519,11 +519,11 @@ void NotifySaved();
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel zvolí příkaz Uložit v nabídce soubor, `NotifySaved` je volána za vás `COleServerDoc`implementaci [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Tato funkce upozorní systémové knihovny DLL systému OLE, které zase upozorní kontejnery. V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class je volána členská funkce [Change](../../mfc/reference/coleclientitem-class.md#onchange) v `COleClientItem`.
+Když uživatel zvolí příkaz Uložit z nabídky `NotifySaved` Soubor, je `COleServerDoc`volána implementací [aplikace OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Tato funkce upozorní knihovny DLL systému OLE, které zase upozorňují kontejnery. V kontejnerových aplikacích napsaných pomocí knihovny `COleClientItem` tříd Microsoft Foundation je volána členská funkce [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="onclose"></a>COleServerDoc::-Close
+## <a name="coleserverdoconclose"></a><a name="onclose"></a>COleServerDoc::OnClose
 
-Volá se rozhraním, když kontejner požaduje zavření dokumentu serveru.
+Volat rámci při kontejneru požaduje, aby byl uzavřen dokument serveru.
 
 ```
 virtual void OnClose(OLECLOSE dwCloseOption);
@@ -534,21 +534,21 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 *dwCloseOption*<br/>
 Hodnota z výčtu OLECLOSE. Tento parametr může mít jednu z následujících hodnot:
 
-- OLECLOSE_SAVEIFDIRTY soubor se uloží, pokud byl upravený.
+- OLECLOSE_SAVEIFDIRTY Soubor je uložen, pokud byl změněn.
 
-- OLECLOSE_NOSAVE soubor je zavřený bez uložení.
+- OLECLOSE_NOSAVE Soubor je uzavřen bez uložení.
 
-- OLECLOSE_PROMPTSAVE Pokud byl soubor upravený, zobrazí se uživateli výzva k jeho uložení.
+- OLECLOSE_PROMPTSAVE Pokud byl soubor změněn, je uživatel vyzván k jeho uložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `CDocument::OnCloseDocument`.
+Výchozí volání `CDocument::OnCloseDocument`implementace .
 
-Další informace a další hodnoty naleznete v tématu [OLECLOSE](/windows/win32/api/oleidl/ne-oleidl-oleclose) v Windows SDK.
+Další informace a další hodnoty naleznete v [tématu OLECLOSE](/windows/win32/api/oleidl/ne-oleidl-oleclose) v sadě Windows SDK.
 
-##  <a name="ondeactivate"></a>COleServerDoc:: deaktivovat
+## <a name="coleserverdocondeactivate"></a><a name="ondeactivate"></a>COleServerDoc::OnDeaktivovat
 
-Volá se rozhraním, když uživatel deaktivuje vloženou nebo propojenou položku, která je aktuálně na místě aktivní.
+Volat rámci při uživatel deaktivuje vložené nebo propojené položky, která je aktuálně na místě aktivní.
 
 ```
 virtual void OnDeactivate();
@@ -556,15 +556,15 @@ virtual void OnDeactivate();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce obnoví uživatelské rozhraní aplikace typu kontejner do původního stavu a zničí všechny nabídky a další ovládací prvky, které byly vytvořeny pro místní aktivaci.
+Tato funkce obnoví uživatelské rozhraní aplikace kontejneru do původního stavu a zničí všechny nabídky a další ovládací prvky, které byly vytvořeny pro aktivaci na místě.
 
-Informace o stavu vrácení zpět by měly být v tomto okamžiku bezpodmínečně uvolněny.
+Informace o stavu vrátit vrátit by měla být bezpodmínečně uvolněna v tomto okamžiku.
 
-Další informace najdete v článku [Aktivace](../../mfc/activation-cpp.md)..
+Další informace naleznete v článku [Aktivace](../../mfc/activation-cpp.md)..
 
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI
+## <a name="coleserverdocondeactivateui"></a><a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI
 
-Volá se, když uživatel deaktivuje položku, která se aktivovala na místě.
+Volána, když uživatel deaktivuje položku, která byla aktivována na místě.
 
 ```
 virtual void OnDeactivateUI(BOOL bUndoable);
@@ -572,18 +572,18 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 
 ### <a name="parameters"></a>Parametry
 
-*bUndoable*<br/>
-Určuje, zda lze změny v úpravách vrátit zpět.
+*bNeodáhnutelný*<br/>
+Určuje, zda lze změny úprav vrátit zpět.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce obnoví uživatelské rozhraní aplikace typu kontejner do původního stavu, skryje všechny nabídky a další ovládací prvky, které byly vytvořeny pro místní aktivaci.
+Tato funkce obnoví uživatelské rozhraní aplikace kontejneru do původního stavu a skryje všechny nabídky a další ovládací prvky, které byly vytvořeny pro aktivaci na místě.
 
-Rozhraní vždy nastaví *bUndoable* na false. Pokud server podporuje vrácení zpět a existuje operace, která může být vrácena zpět, zavolejte implementaci základní třídy s *bUndoable* nastavenou na hodnotu true.
+Rozhraní framework vždy nastaví *bUndoable* na FALSE. Pokud server podporuje zpět a je operace, která může být vrátit zpět, volání základní třídy implementace s *bUndoable* nastavena na hodnotu TRUE.
 
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate
+## <a name="coleserverdocondocwindowactivate"></a><a name="ondocwindowactivate"></a>COleServerdoc::OnDocWindowActivate
 
-Rozhraní volá tuto funkci, aby aktivovala nebo deaktivovala okno dokumentu pro místní úpravy.
+Framework volá tuto funkci k aktivaci nebo deaktivaci okna dokumentu pro úpravy na místě.
 
 ```
 virtual void OnDocWindowActivate(BOOL bActivate);
@@ -591,18 +591,18 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*<br/>
-Určuje, zda má být okno dokumentu aktivováno nebo dezaktivováno.
+*bAktivovat*<br/>
+Určuje, zda má být okno dokumentu aktivováno nebo deaktivováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace odebere nebo přidá prvky uživatelského rozhraní na úrovni rámce podle potřeby. Tuto funkci můžete přepsat, pokud chcete provést další akce, když se dokument obsahující vaši položku aktivuje nebo deaktivuje.
+Výchozí implementace odebere nebo přidá prvky uživatelského rozhraní na úrovni rámce podle potřeby. Tuto funkci přepište, pokud chcete provést další akce, když je dokument obsahující položku aktivován nebo deaktivován.
 
-Další informace najdete v článku [Aktivace](../../mfc/activation-cpp.md)..
+Další informace naleznete v článku [Aktivace](../../mfc/activation-cpp.md)..
 
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd
+## <a name="coleserverdoconexecolecmd"></a><a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd
 
-Rozhraní volá tuto funkci k provedení zadaného příkazu nebo zobrazení nápovědu pro příkaz.
+Rozhraní Framework volá tuto funkci ke spuštění zadaného příkazu nebo zobrazení nápovědy pro příkaz.
 
 ```
 virtual HRESULT OnExecOleCmd(
@@ -616,13 +616,13 @@ virtual HRESULT OnExecOleCmd(
 ### <a name="parameters"></a>Parametry
 
 *pguidCmdGroup*<br/>
-Ukazatel na identifikátor GUID, který identifikuje sadu příkazů. Může mít hodnotu NULL, aby označovala výchozí skupinu příkazů.
+Ukazatel na identifikátor GUID, který identifikuje sadu příkazů. Může být NULL k označení výchozí skupiny příkazů.
 
 *nCmdID*<br/>
-Příkaz, který má být spuštěn. Musí být ve skupině určené pomocí *pguidCmdGroup*.
+Příkaz k provedení. Musí být ve skupině označené *pguidCmdGroup*.
 
 *nCmdExecOut*<br/>
-Způsob, jakým má objekt spustit příkaz, jednu nebo více z následujících hodnot z výčtu OLECMDEXECOPT:
+Způsob, jakým by měl objekt provést příkaz, jednu nebo více z následujících hodnot z výčtu OLECMDEXECOPT:
 
 OLECMDEXECOPT_DODEFAULT
 
@@ -633,41 +633,41 @@ OLECMDEXECOPT_DONTPROMPTUSER
 OLECMDEXECOPT_SHOWHELP
 
 *pvarargIn*<br/>
-Ukazatel na VARIANTARG obsahující vstupní argumenty pro příkaz. Může mít hodnotu NULL.
+Ukazatel na VARIANTARG obsahující vstupní argumenty pro příkaz. Může být NULL.
 
 *pvarargOut*<br/>
-Ukazatel na VARIANTARG pro příjem výstupních vrácených hodnot z příkazu. Může mít hodnotu NULL.
+Ukazatel na VARIANTARG pro příjem výstupních vrácené hodnoty z příkazu. Může být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí S_OK. v opačném případě jeden z následujících kódů chyb:
+Vrátí S_OK v případě úspěchu. v opačném případě jeden z následujících kódů chyb:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|E_UNEXPECTED|Stala se neočekávaná chyba.|
-|E_FAIL|Došlo k chybě|
-|E_NOTIMPL|Indikuje, že by se sama knihovna MFC měla pokusit přeložit a odeslat příkaz.|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* je nenulová, ale neurčuje rozpoznanou skupinu příkazů.|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID* se v *pguidCmdGroup* skupiny nedá rozpoznat jako platný příkaz.|
-|OLECMDERR_DISABLED|Příkaz identifikovaný *nCmdID* je zakázaný a nedá se spustit.|
-|OLECMDERR_NOHELP|Volající se požádal o nápovědu k příkazu identifikovanému funkcí *nCmdID* , ale není k dispozici žádná nápovědu.|
-|OLECMDERR_CANCELED|Uživatel zrušil provádění.|
+|E_UNEXPECTED|Došlo k neočekávané chybě.|
+|E_fail|Došlo k chybě|
+|E_NOTIMPL|Označuje, že samotný knihovna MFC by se měl pokusit přeložit a odeslat příkaz.|
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* není null, ale neurčuje rozpoznanou skupinu příkazů|
+|OLECMDERR_E_NOTSUPPORTED|*nCmdID* není rozpoznán jako platný příkaz ve skupině *pguidCmdGroup*|
+|OLECMDERR_DISABLED|Příkaz identifikovaný *nCmdID* je zakázán a nelze jej provést.|
+|OLECMDERR_NOHELP|Volající požádal o pomoc na příkaz identifikován *nCmdID,* ale žádná pomoc je k dispozici|
+|OLECMDERR_CANCELED|Uživatel zrušil spuštění|
 
 ### <a name="remarks"></a>Poznámky
 
-`COleCmdUI` lze použít k povolení, aktualizaci a nastavení dalších vlastností příkazů uživatelského rozhraní DocObject. Po inicializaci příkazů je můžete spustit pomocí `OnExecOleCmd`.
+`COleCmdUI`lze povolit, aktualizovat a nastavit další vlastnosti příkazů uživatelského rozhraní DocObject. Po inicializování příkazů je můžete `OnExecOleCmd`spustit pomocí .
 
-Rozhraní volá funkci před pokusem o převod a odeslání příkazu dokumentu OLE. Tuto funkci není nutné potlačit, pokud chcete zpracovat standardní příkazy v dokumentu OLE, ale pokud chcete zpracovávat vlastní příkazy nebo zpracovávat příkazy, které přijímají parametry nebo vrací výsledky, musíte zadat přepsání této funkce.
+Rozhraní Framework volá funkci před pokusem o překlad a odeslání příkazu dokumentu OLE. Tuto funkci není nutné přepsat pro zpracování standardních příkazů dokumentu OLE, ale pokud chcete zpracovat vlastní příkazy nebo příkazy, které přijímají parametry nebo vracejí výsledky, je nutné zadat přepsání této funkce.
 
-Většina příkazů nepřijímá argumenty nebo návratové hodnoty. Pro většinu příkazů může volající předat hodnoty NULL pro *pvarargIn* a *pvarargOut*. Pro příkazy, které očekávají vstupní hodnoty, volající může deklarovat a inicializovat proměnnou VARIANTARG a předat ukazatel na proměnnou v *pvarargIn*. Pro příkazy, které vyžadují jednu hodnotu, lze argument uložit přímo v VARIANTARG a předat do funkce. Více argumentů musí být zabaleno v rámci VARIANTARG pomocí jednoho z podporovaných typů (například `IDispatch` a SAFEARRAY).
+Většina příkazů neberou argumenty nebo vrátí hodnoty. Pro většinu příkazů může volající předat null pro *pvarargIn* a *pvarargOut*. Pro příkazy, které očekávají vstupní hodnoty, volající může deklarovat a inicializovat proměnnou VARIANTARG a předat ukazatel proměnné v *pvarargIn*. Pro příkazy, které vyžadují jednu hodnotu, argument může být uložen přímo v VARIANTARG a předán funkci. Více argumentů musí být zabaleny v rámci VARIANTARG pomocí `IDispatch` jednoho z podporovaných typů (například safearray).
 
-Podobně, pokud příkaz vrátí argumenty, u kterých se očekává, že volající deklaruje VARIANTARG, inicializuje jej na VT_EMPTY a předáte jeho adresu v *pvarargOut*. Pokud příkaz vrátí jednu hodnotu, objekt může tuto hodnotu uložit přímo do *pvarargOut*. Více výstupních hodnot musí být zabaleno nějakým způsobem vhodným pro VARIANTARG.
+Podobně pokud příkaz vrátí argumenty volajícího se očekává deklarovat VARIANTARG, inicializovat VT_EMPTY a předat jeho adresu v *pvarargOut*. Pokud příkaz vrátí jednu hodnotu, objekt můžete uložit tuto hodnotu přímo v *pvarargOut*. Více výstupních hodnot musí být nějakým způsobem zabaleno vhodné pro VARIANTARG.
 
-Implementace základní třídy této funkce provede OLE_COMMAND_MAP struktury přidružené k cíli příkazu a pokusí se odeslat příkaz příslušné obslužné rutině. Implementace základní třídy funguje pouze s příkazy, které nepřijímají argumenty nebo návratové hodnoty. Pokud potřebujete zpracovat příkazy, které akceptují argumenty nebo návratové hodnoty, musíte tuto funkci přepsat a pracovat s parametry *pvarargIn* a *pvarargOut* sami.
+Implementace této funkce základní třídy bude procházet OLE_COMMAND_MAP struktury přidružené k cíli příkazu a pokusí se odeslat příkaz příslušné obslužné rutině. Implementace základní třídy funguje pouze s příkazy, které nepřijímají argumenty nebo vrátí hodnoty. Pokud potřebujete zpracovat příkazy, které přijímají argumenty nebo vrátí hodnoty, musíte přepsat tuto funkci a pracovat s parametry *pvarargIn* a *pvarargOut* sami.
 
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate
+## <a name="coleserverdoconframewindowactivate"></a><a name="onframewindowactivate"></a>COleServerdoc::OnFrameWindowActivate
 
-Rozhraní volá tuto funkci, když se aktivuje nebo deaktivuje okno rámce aplikace kontejneru.
+Framework volá tuto funkci při aktivaci nebo deaktivaci okna rámce aplikace kontejneru.
 
 ```
 virtual void OnFrameWindowActivate(BOOL bActivate);
@@ -675,18 +675,18 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*<br/>
-Určuje, zda má být okno rámce aktivováno nebo dezaktivováno.
+*bAktivovat*<br/>
+Určuje, zda má být okno rámce aktivováno nebo deaktivováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace zruší všechny režimy, ve kterých se může okno rámce nacházet. Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při aktivaci nebo deaktivaci okna rámce.
+Výchozí implementace zruší všechny režimy nápovědy, ve kterých se může okno rámce napíjet. Přepsat tuto funkci, pokud chcete provést speciální zpracování při aktivaci nebo deaktivaci okna rámce.
 
-Další informace najdete v článku [Aktivace](../../mfc/activation-cpp.md)..
+Další informace naleznete v článku [Aktivace](../../mfc/activation-cpp.md)..
 
-##  <a name="ongetembeddeditem"></a>COleServerDoc:: funkci OnGetEmbeddedItem
+## <a name="coleserverdocongetembeddeditem"></a><a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem
 
-Volá se rozhraním, když aplikace typu kontejner volá serverovou aplikaci, aby vytvořila nebo upravila vloženou položku.
+Volat rámci při kontejneru aplikace volá serverovou aplikaci k vytvoření nebo úpravě vložené položky.
 
 ```
 virtual COleServerItem* OnGetEmbeddedItem() = 0;
@@ -694,15 +694,15 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na položku představující celý dokument; Hodnota NULL, pokud se operace nezdařila.
+Ukazatel na položku představující celý dokument; Null, pokud se operace nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Neexistuje žádná výchozí implementace. Tuto funkci musíte přepsat, chcete-li vrátit položku, která představuje celý dokument. Tato návratová hodnota by měla být objektem třídy odvozené od `COleServerItem`.
+Neexistuje žádná výchozí implementace. Chcete-li vrátit položku, která představuje celý dokument, je nutné přepsat tuto funkci. Tato vrácená hodnota by `COleServerItem`měla být objektem odvozené třídy.
 
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo
+## <a name="coleserverdoconreactivateandundo"></a><a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo
 
-Rozhraní volá tuto funkci, když se uživatel rozhodne vrátit zpět změny provedené u položky, která byla aktivována, změněna a následně dezaktivována.
+Rozhraní Framework volá tuto funkci, když se uživatel rozhodne vrátit zpět změny provedené v položce, která byla aktivována na místě, změněna a následně deaktivována.
 
 ```
 virtual BOOL OnReactivateAndUndo();
@@ -710,17 +710,17 @@ virtual BOOL OnReactivateAndUndo();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nedělá nic s výjimkou vrácení FALSE pro indikaci selhání.
+Výchozí implementace neprovede žádné další informace o vrácení CHYBY NEPRAVDA, což znamená selhání.
 
-Tuto funkci přepište, pokud vaše aplikace podporuje vrácení zpět. Obvykle byste provedli operaci vrácení zpět a pak jste aktivovali položku voláním `ActivateInPlace`. Pokud je aplikace kontejneru zapsána s knihovna Microsoft Foundation Class, volání `COleClientItem::ReactivateAndUndo` způsobí, že tato funkce bude volána.
+Přepsat tuto funkci, pokud vaše aplikace podporuje vrátit. Obvykle byste provést operaci zpět, pak aktivovat `ActivateInPlace`položku voláním . Pokud je aplikace kontejneru zapsána pomocí `COleClientItem::ReactivateAndUndo` knihovny tříd Microsoft Foundation, volání způsobí, že tato funkce bude volána.
 
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder
+## <a name="coleserverdoconresizeborder"></a><a name="onresizeborder"></a>COleServerDoc::OnResizeBorder
 
-Rozhraní volá tuto funkci, když se změní velikost oken v rámečku aplikace kontejneru.
+Rozhraní Framework volá tuto funkci při změně velikosti okna rámce aplikace kontejneru.
 
 ```
 virtual void OnResizeBorder(
@@ -732,25 +732,25 @@ virtual void OnResizeBorder(
 ### <a name="parameters"></a>Parametry
 
 *lpRectBorder*<br/>
-Ukazatel na `RECT`ovou strukturu nebo objekt `CRect`, který určuje souřadnice ohraničení.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt, který určuje souřadnice ohraničení.
 
-*lpUIWindow*<br/>
-Ukazatel na objekt třídy `IOleInPlaceUIWindow` vlastnící aktuální místní relaci úprav.
+*lpUIOkno*<br/>
+Ukazatel na objekt `IOleInPlaceUIWindow` třídy, který vlastní aktuální relaci úprav na místě.
 
-*bFrame*<br/>
-TRUE, pokud *lpUIWindow* odkazuje na okno rámce nejvyšší úrovně aplikace kontejneru, nebo false, pokud *lpUIWindow* odkazuje na okno rámce na úrovni dokumentu aplikace kontejneru.
+*bRám*<br/>
+TRUE Pokud *lpUIWindow* odkazuje na okno rámce nejvyšší úrovně aplikace kontejneru nebo FALSE, pokud *lpUIWindow* odkazuje na okno rámce na úrovni dokumentu aplikace kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce změní velikost a upraví panely nástrojů a další prvky uživatelského rozhraní podle nové velikosti okna.
+Tato funkce změní velikost a upraví panely nástrojů a další prvky uživatelského rozhraní v souladu s novou velikostí okna.
 
-Další informace najdete v tématu [IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow) v Windows SDK.
+Další informace naleznete v tématu [IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow) v sadě Windows SDK.
 
-Toto je pokročilá přepsatelné.
+Tohle je pokročilé překažné.
 
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames
+## <a name="coleserverdoconsethostnames"></a><a name="onsethostnames"></a>COleserverdoc::OnSetHostNames
 
-Volá se rozhraním, když kontejner nastavuje nebo mění názvy hostitelů pro tento dokument.
+Volat rámci při kontejneru nastaví nebo změní názvy hostitelů pro tento dokument.
 
 ```
 virtual void OnSetHostNames(
@@ -761,20 +761,20 @@ virtual void OnSetHostNames(
 ### <a name="parameters"></a>Parametry
 
 *lpszHost*<br/>
-Ukazatel na řetězec, který určuje název aplikace typu kontejner.
+Ukazatel na řetězec, který určuje název aplikace kontejneru.
 
 *lpszHostObj*<br/>
 Ukazatel na řetězec, který určuje název kontejneru pro dokument.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace změní název dokumentu u všech zobrazení odkazujících na tento dokument.
+Výchozí implementace změní název dokumentu pro všechna zobrazení odkazující na tento dokument.
 
-Tuto funkci přepište, pokud vaše aplikace nastaví názvy pomocí jiného mechanismu.
+Přepsat tuto funkci, pokud vaše aplikace nastaví tituly prostřednictvím jiného mechanismu.
 
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects
+## <a name="coleserverdoconsetitemrects"></a><a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects
 
-Rozhraní volá tuto funkci, aby umístila místní editační okno rámce v rámci okna rámce aplikace kontejneru.
+Rozhraní Framework volá tuto funkci k umístění okna rámce pro úpravy na místě v okně rámce aplikace kontejneru.
 
 ```
 virtual void OnSetItemRects(
@@ -785,20 +785,20 @@ virtual void OnSetItemRects(
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Ukazatel na `RECT`ovou strukturu nebo objekt `CRect`, který určuje polohu místního okna rámce vzhledem k klientské oblasti aplikace kontejneru.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt, který určuje umístění okna rámce na místě vzhledem k klientské oblasti aplikace kontejneru.
 
 *lpClipRect*<br/>
-Ukazatel na `RECT`ovou strukturu nebo objekt `CRect`, který určuje rámeček oříznutí okna na místě, který je relativní vzhledem k klientské oblasti aplikace typu kontejner.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt, který určuje ořezový obdélník okna rámečku na místě vzhledem k klientské oblasti aplikace kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačením této funkce aktualizujete faktor přiblížení zobrazení v případě potřeby.
+Přepsáním této funkce v případě potřeby aktualizujte faktor zvětšení zobrazení.
 
-Tato funkce je obvykle volána v reakci na volání `RequestPositionChange`, přestože může být kdykoli volána kontejnerem pro vyžádání změny pozice pro místní položku.
+Tato funkce je obvykle volána jako odpověď na `RequestPositionChange` volání, i když může být volána kdykoli kontejnerem požádat o změnu pozice pro položku na místě.
 
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars
+## <a name="coleserverdoconshowcontrolbars"></a><a name="onshowcontrolbars"></a>COleServerdoc::OnShowControlBars
 
-Rozhraní volá tuto funkci, aby zobrazila nebo skryla ovládací prvky serverové aplikace přidružené k oknu rámce identifikovaném na *pFrameWnd*.
+Framework volá tuto funkci k zobrazení nebo skrytí ovládacích panelů serverové aplikace přidružených k oknu rámce identifikovanému *pFrameWnd*.
 
 ```
 virtual void OnShowControlBars(
@@ -809,18 +809,18 @@ virtual void OnShowControlBars(
 ### <a name="parameters"></a>Parametry
 
 *pFrameWnd*<br/>
-Ukazatel na okno rámce, jehož ovládací panely by měly být skryté nebo zobrazené.
+Ukazatel na okno rámce, jehož ovládací panely by měly být skryté nebo zobrazeny.
 
-*bShow*<br/>
+*bZobrazit*<br/>
 Určuje, zda jsou ovládací panely zobrazeny nebo skryty.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace vytvoří výčet všech ovládacích prvků vlastněných oknem tohoto rámce a jeho skrytí nebo zobrazení.
+Výchozí implementace vyjmenovává všechny řídicí panely vlastněné tímto oknem rámce a skryje nebo zobrazí.
 
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument
+## <a name="coleserverdoconshowdocument"></a><a name="onshowdocument"></a>COleServerdoc::Dokument OnShow
 
-Rozhraní volá funkci `OnShowDocument`, když dokument serveru musí být skrytý nebo zobrazený.
+Rozhraní Framework `OnShowDocument` volá funkci, když musí být dokument serveru skrytý nebo zobrazen.
 
 ```
 virtual void OnShowDocument(BOOL bShow);
@@ -828,16 +828,16 @@ virtual void OnShowDocument(BOOL bShow);
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*<br/>
-Určuje, zda se má zobrazit nebo skrýt uživatelské rozhraní dokumentu.
+*bZobrazit*<br/>
+Určuje, zda má být uživatelské rozhraní dokumentu zobrazeno nebo skryto.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *bShow* hodnotu true, výchozí implementace aktivuje serverovou aplikaci, je-li to nutné, a způsobí, že aplikace kontejneru posune své okno tak, aby byla položka viditelná. Pokud má *BSHOW* hodnotu false, výchozí implementace deaktivuje položku prostřednictvím volání `OnDeactivate`a potom zničí nebo skryje všechna okna oken, která byla vytvořena pro dokument s výjimkou prvního z nich. Pokud žádné viditelné dokumenty nezůstanou, výchozí implementace skryje serverovou aplikaci.
+Pokud *bShow* je PRAVDA, výchozí implementace aktivuje serverovou aplikaci, v případě potřeby a způsobí, že aplikace kontejneru posunout jeho okna tak, aby položka je viditelná. Pokud *je bShow* FALSE, výchozí implementace deaktivuje položku prostřednictvím volání do `OnDeactivate`aplikace , pak zničí nebo skryje všechna okna rámce, která byla vytvořena pro dokument, s výjimkou prvního. Pokud nezůstanou žádné viditelné dokumenty, výchozí implementace skryje serverovou aplikaci.
 
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument
+## <a name="coleserverdoconupdatedocument"></a><a name="onupdatedocument"></a>COleServerdoc::OnUpdateDocument
 
-Volá se rozhraním při ukládání dokumentu, který je vloženou položkou ve složeném dokumentu.
+Volat rámci při ukládání dokumentu, který je vložené položky ve složeném dokumentu.
 
 ```
 virtual BOOL OnUpdateDocument();
@@ -845,15 +845,15 @@ virtual BOOL OnUpdateDocument();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se dokument úspěšně aktualizoval; v opačném případě 0.
+Nenulová, pokud byl dokument úspěšně aktualizován; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá členské funkce [COleServerDoc:: NotifySaved](#notifysaved) a [COleServerDoc:: SaveEmbedding](#saveembedding) a označí dokument jako čistý. Tuto funkci můžete přepsat, pokud chcete při aktualizaci vložené položky provést zvláštní zpracování.
+Výchozí implementace volá [cOleServerDoc::NotifySaved](#notifysaved) a [COleServerDoc::SaveEmbedding](#saveembedding) členské funkce a pak označí dokument jako čistý. Přepsat tuto funkci, pokud chcete provést speciální zpracování při aktualizaci vložené položky.
 
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange
+## <a name="coleserverdocrequestpositionchange"></a><a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange
 
-Tuto členskou funkci zavolejte, pokud chcete, aby aplikace kontejneru změnila pozici položky.
+Volání této členské funkce, aby aplikace kontejneru změnit pozici položky.
 
 ```
 void RequestPositionChange(LPCRECT lpPosRect);
@@ -862,15 +862,15 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Ukazatel na strukturu `RECT` nebo objekt `CRect` obsahující novou pozici položky.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt obsahující novou pozici položky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se obvykle nazývá (ve spojení s `UpdateAllItems`), když se změní data na místní aktivní položce. Po tomto volání kontejner může nebo nemusí provést změnu voláním `OnSetItemRects`. Výsledná pozice se může lišit od toho, co se požaduje.
+Tato funkce je obvykle volána (ve spojení s) `UpdateAllItems`při změně dat v aktivní položce na místě. Po tomto volání kontejneru může nebo nemusí `OnSetItemRects`provést změnu voláním . Výsledná pozice se může lišit od požadované pozice.
 
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding
+## <a name="coleserverdocsaveembedding"></a><a name="saveembedding"></a>COleServerDoc::Uložit vkládání
 
-Voláním této funkce sdělíte aplikaci kontejneru, aby uložila vložený objekt.
+Volání této funkce sdělte aplikaci kontejneru uložení vloženého objektu.
 
 ```
 void SaveEmbedding();
@@ -878,11 +878,11 @@ void SaveEmbedding();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána automaticky z `OnUpdateDocument`. Všimněte si, že tato funkce způsobí, že se položka aktualizuje na disku, takže je obvykle volána pouze v důsledku konkrétní akce uživatele.
+Tato funkce je `OnUpdateDocument`volána automaticky z aplikace . Všimněte si, že tato funkce způsobí, že položka má být aktualizován na disku, takže je obvykle volána pouze v důsledku akce konkrétní uživatele.
 
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy
+## <a name="coleserverdocscrollcontainerby"></a><a name="scrollcontainerby"></a>COleServerdoc::ScrollContainerby
 
-Voláním členské funkce `ScrollContainerBy` posuňte dokument kontejneru o hodnotu v pixelech, která je označena `sizeScroll`.
+Volání `ScrollContainerBy` členské funkce pro posun dokumentu kontejneru o množství v `sizeScroll`pixelech označené .
 
 ```
 BOOL ScrollContainerBy(CSize sizeScroll);
@@ -891,19 +891,19 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ### <a name="parameters"></a>Parametry
 
 *sizeScroll*<br/>
-Určuje, jak daleko má být dokument kontejneru posunut.
+Označuje, jak daleko je dokument kontejneru posunout.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Kladné hodnoty označují posun dolů a doprava; záporné hodnoty označují posun nahoru a doleva.
+Kladné hodnoty označují posouvání dolů a doprava; záporné hodnoty označují posouvání nahoru a doleva.
 
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems
+## <a name="coleserverdocupdateallitems"></a><a name="updateallitems"></a>COleServerDoc::Aktualizovatvšechny položky
 
-Voláním této funkce oznamujete všem propojeným položkám připojeným k dokumentu, že se dokument změnil.
+Voláním této funkce oznámíte všem připojeným položkám připojeným k dokumentu, že dokument byl změněn.
 
 ```
 void UpdateAllItems(
@@ -915,37 +915,37 @@ void UpdateAllItems(
 
 ### <a name="parameters"></a>Parametry
 
-*pSender*<br/>
-Ukazatel na položku, která změnila dokument, nebo hodnotu NULL, pokud mají být aktualizovány všechny položky.
+*pOdesílatelí*<br/>
+Ukazatel na položku, která dokument upravila, nebo hodnotu NULL, pokud mají být aktualizovány všechny položky.
 
-*lHint*<br/>
-Obsahuje informace o změně.
+*lTip*<br/>
+Obsahuje informace o úpravě.
 
 *pHint*<br/>
-Ukazatel na objekt, který ukládá informace o změně.
+Ukazatel na objekt ukládající informace o změně.
 
 *nDrawAspect*<br/>
-Určuje, jak má být položka vykreslena. Toto je hodnota z výčtu DVASPECT. Tento parametr může mít jednu z následujících hodnot:
+Určuje způsob, jakým má být položka nakreslena. Toto je hodnota z výčtu DVASPECT. Tento parametr může mít jednu z následujících hodnot:
 
-- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT Item je reprezentován a to takovým způsobem, že může být zobrazen jako vložený objekt uvnitř kontejneru.
 
-- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL Položka je vykreslena v "miniatuře", aby ji bylo možné zobrazit v nástroji pro procházení.
 
 - DVASPECT_ICON položka je reprezentována ikonou.
 
-- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT Položka je reprezentována, jako by byla vytištěna pomocí příkazu Tisk z nabídky Soubor.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se obvykle volá poté, co uživatel změní dokument serveru. Pokud je položka OLE propojena s dokumentem pomocí automatického propojení, bude položka aktualizována, aby odrážela změny. V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class je volána členská funkce [Change](../../mfc/reference/coleclientitem-class.md#onchange) v `COleClientItem`.
+Obvykle voláte tuto funkci poté, co uživatel změní dokument serveru. Pokud je položka OLE propojena s dokumentem s automatickým propojením, bude aktualizována tak, aby odrážela změny. V kontejnerových aplikacích napsaných pomocí knihovny `COleClientItem` tříd Microsoft Foundation je volána členská funkce [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-Tato funkce volá členskou funkci `OnUpdate` pro každou položku dokumentu s výjimkou odesílající položky, která předává *pHint*, *lHint*a *nDrawAspect*. Pomocí těchto parametrů můžete předat informace k položkám o změnách provedených v dokumentu. Můžete kódovat informace pomocí *lHint* nebo můžete definovat třídu odvozenou od `CObject`pro ukládání informací o úpravách a předání objektu této třídy pomocí *pHint*. Přepište členskou funkci `OnUpdate` v třídě odvozené `COleServerItem`k optimalizaci aktualizace každé položky v závislosti na tom, zda se její prezentace změnila.
+Tato funkce `OnUpdate` volá členskou funkci pro každou položku dokumentu s výjimkou odesílající položky, předávání *pHint*, *lHint*a *nDrawAspect*. Tyto parametry slouží k předání informací položkám o změnách provedených v dokumentu. Můžete zakódovat informace pomocí *lHint* `CObject`nebo můžete definovat -derived třídy pro ukládání informací o změny a předat objekt této třídy pomocí *pHint*. Přepište `OnUpdate` členská funkce `COleServerItem`ve vaší odvozené třídě a optimalizujte aktualizaci každé položky v závislosti na tom, zda se změnila její prezentace.
 
 ## <a name="see-also"></a>Viz také
 
-[HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
-[COleLinkingDoc – třída](../../mfc/reference/colelinkingdoc-class.md)<br/>
+[Ukázka knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Třída COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>
-[COleLinkingDoc – třída](../../mfc/reference/colelinkingdoc-class.md)<br/>
-[COleTemplateServer – třída](../../mfc/reference/coletemplateserver-class.md)
+[Třída COleDocument](../../mfc/reference/coledocument-class.md)<br/>
+[Třída COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>
+[Třída COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)

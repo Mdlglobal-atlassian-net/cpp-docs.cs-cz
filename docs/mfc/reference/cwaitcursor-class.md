@@ -1,5 +1,5 @@
 ---
-title: Cwaitcursor – třída
+title: Třída CWaitCursor
 ms.date: 11/04/2016
 f1_keywords:
 - CWaitCursor
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 87ac87019f127d3956caf959a28fc889fdecad50
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 48ef8f9c965f54deafcc62451639f8c31021e900
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373179"
 ---
-# <a name="cwaitcursor-class"></a>Cwaitcursor – třída
+# <a name="cwaitcursor-class"></a>Třída CWaitCursor
 
-Poskytuje jednořádkový způsob, jak zobrazit kurzor pro čekání, obvykle zobrazený jako přesýpací hodiny, zatímco provádíte dlouhotrvající operace.
+Poskytuje jednořádkový způsob zobrazení kurzoru čekání, který se obvykle zobrazuje jako přesýpací hodiny, zatímco provádíte zdlouhavou operaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,35 +31,35 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CWaitCursor::CWaitCursor](#cwaitcursor)|Vytvoří `CWaitCursor` objektu a zobrazí kurzor pro čekání.|
+|[CWaitCursor::CWaitCursor](#cwaitcursor)|Vytvoří `CWaitCursor` objekt a zobrazí kurzor čekání.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CWaitCursor::Restore](#restore)|Obnoví kurzor pro čekání po byl změněn.|
+|[CWaitCursor::Obnovit](#restore)|Obnoví kurzor čekání po jeho změně.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CWaitCursor` nemá základní třídu.
+`CWaitCursor`nemá základní třídu.
 
-Programovací postupy vhodné Windows vyžadují zobrazit kurzor pro čekání pokaždé, když se při provádění operace, která trvá určitou dobu.
+Dobré postupy programování systému Windows vyžadují, abyste při každé operaci, která trvá znatelně, zobrazili kurzor čekání.
 
-Chcete-li zobrazit kurzor pro čekání, stačí definovat `CWaitCursor` proměnné před kód, který provádí časově náročná operace. Konstruktor objektu automaticky způsobí, že se kurzor pro čekání má být zobrazen.
+Chcete-li zobrazit kurzor `CWaitCursor` čekání, stačí definovat proměnnou před kódem, který provádí zdlouhavou operaci. Konstruktor objektu automaticky způsobí, že kurzor čekání se zobrazí.
 
-Pokud objekt dostane mimo rozsah (na konci bloku, ve kterém `CWaitCursor` deklaraci objektu), jeho destruktor nastaví kurzor na předchozí kurzor. Jinými slovy objekt provádí automaticky potřebné vyčištění.
-
-> [!NOTE]
->  Z důvodu jejich konstruktory a destruktory fungování `CWaitCursor` objekty jsou vždy deklarované jako lokální proměnné – nikdy jsou deklarovány jako globální proměnné ani se přidělují s **nové**.
-
-Pokud provádíte operaci, což by mohlo způsobit kurzor, který se změnil, jako je například zobrazení okna se zprávou nebo dialogové okno, volání [obnovení](#restore) členskou funkci obnovení kurzor pro čekání. Je možné volat `Restore` i když kurzor pro čekání se nyní zobrazí.
-
-Dalším způsobem, jak zobrazit kurzor pro čekání je určený kombinací [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)a případně [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Nicméně `CWaitCursor` je jednodušší použít, protože není nutné nastavte kurzor na předchozí kurzor, až budete hotovi s časově náročná operace.
+Když objekt přejde mimo rozsah (na konci bloku, ve kterém je `CWaitCursor` deklarován objekt), jeho destruktor nastaví kurzor na předchozí kurzor. Jinými slovy objekt provede potřebné vyčištění automaticky.
 
 > [!NOTE]
->  Nastaví knihovny MFC a obnoví pomocí kurzoru [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) virtuální funkce. Tato funkce se vlastní chování můžete přepsat.
+> Vzhledem k tomu, jak jejich konstruktory `CWaitCursor` a destruktory práce, objekty jsou vždy deklarovány jako místní proměnné – jsou nikdy deklarovány jako globální proměnné, ani jsou přiděleny s **novým**.
+
+Pokud provedete operaci, která může způsobit změnu kurzoru, například zobrazení okna se zprávou nebo dialogového okna, zavolejte [obnovení](#restore) členské funkce a obnovte kurzor čekání. Je v pořádku `Restore` volat i v případě, že je aktuálně zobrazen kurzor čekání.
+
+Dalším způsobem, jak zobrazit kurzor čekání je použít kombinaci [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)a možná [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Je `CWaitCursor` však jednodušší, protože není nutné nastavit kurzor na předchozí kurzor, když jste hotovi s dlouhou operaci.
+
+> [!NOTE]
+> Knihovna MFC nastaví a obnoví kurzor pomocí virtuální funkce [CWinApp::DoWaitCursor.](../../mfc/reference/cwinapp-class.md#dowaitcursor) Tuto funkci můžete přepsat a poskytnout tak vlastní chování.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -73,9 +73,9 @@ Dalším způsobem, jak zobrazit kurzor pro čekání je určený kombinací [CC
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor
 
-Chcete-li zobrazit kurzor pro čekání, stačí deklarovat `CWaitCursor` objektu před kód, který provádí časově náročná operace.
+Chcete-li zobrazit kurzor `CWaitCursor` čekání, stačí deklarovat objekt před kódem, který provádí zdlouhavou operaci.
 
 ```
 CWaitCursor();
@@ -83,22 +83,22 @@ CWaitCursor();
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor automaticky způsobí, že se kurzor pro čekání má být zobrazen.
+Konstruktor automaticky způsobí, že kurzor čekání se zobrazí.
 
-Pokud objekt dostane mimo rozsah (na konci bloku, ve kterém `CWaitCursor` deklaraci objektu), jeho destruktor nastaví kurzor na předchozí kurzor. Jinými slovy objekt provádí automaticky potřebné vyčištění.
+Když objekt přejde mimo rozsah (na konci bloku, ve kterém je `CWaitCursor` deklarován objekt), jeho destruktor nastaví kurzor na předchozí kurzor. Jinými slovy objekt provede potřebné vyčištění automaticky.
 
-Můžete využít výhod skutečnost, že je zavolán destruktor na konci bloku (který může být před ukončením funkce) aby kurzor pro čekání aktivní jenom část vaší funkce. Tato technika je zobrazena ve druhém níže uvedeném příkladu.
+Můžete využít skutečnost, že destruktor je volána na konci bloku (což může být před koncem funkce) chcete-li, aby kurzor čekání aktivní pouze v části funkce. Tato technika je uvedena v druhém příkladu níže.
 
 > [!NOTE]
->  Z důvodu jejich konstruktory a destruktory fungování `CWaitCursor` objekty jsou vždy deklarované jako lokální proměnné – nikdy jsou deklarovány jako globální proměnné ani se přidělují s **nové**.
+> Vzhledem k tomu, jak jejich konstruktory `CWaitCursor` a destruktory práce, objekty jsou vždy deklarovány jako místní proměnné – jsou nikdy deklarovány jako globální proměnné, ani jsou přiděleny s **novým**.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-##  <a name="restore"></a>  CWaitCursor::Restore
+## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::Obnovit
 
-Chcete-li obnovit kurzor pro čekání, voláním této funkce po provedení operace, jako je například zobrazení okna se zprávou nebo dialogové okno, které mohou změnit kurzor pro čekání na jiný kurzor.
+Chcete-li obnovit kurzor čekání, zavolejte tuto funkci po provedení operace, jako je například zobrazení okna se zprávou nebo dialogového okna, které může změnit kurzor čekání na jiný kurzor.
 
 ```
 void Restore();
@@ -106,19 +106,19 @@ void Restore();
 
 ### <a name="remarks"></a>Poznámky
 
-Je možné volat `Restore` i když kurzor pro čekání se nyní zobrazí.
+Je v pořádku `Restore` volat i v případě, že je aktuálně zobrazen kurzor čekání.
 
-Pokud potřebujete obnovit kurzor pro čekání ve funkci než ten, ve kterém `CWaitCursor` deklaraci objektu, můžete volat [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).
+Pokud potřebujete obnovit kurzor čekání v jiné funkci než `CWaitCursor` ve které je objekt deklarován, můžete volat [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
 [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[Postup: Změnit kurzoru myši v aplikaci tříd Microsoft Foundation](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[Jak se mi: Změna kurzoru myši v aplikaci třídy Microsoft Foundation](https://go.microsoft.com/fwlink/p/?linkid=128044)

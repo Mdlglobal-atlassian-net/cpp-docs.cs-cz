@@ -1,5 +1,5 @@
 ---
-title: Cmfcribboncustomizedialog – třída
+title: CMFCRibbonCustomizeDialog – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237615"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375210"
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>Cmfcribboncustomizedialog – třída
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog – třída
 
-Zobrazí na pásu karet **vlastní** stránky.
+Zobrazí stránku **Přizpůsobení** pásu karet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,46 +29,46 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Vytvoří `CMFCRibbonCustomizeDialog` objektu.|
+|[CmFCRibbonCustomizeDialog::Dialogové okno Přizpůsobení cmfcribbon](#cmfcribboncustomizedialog)|Vytvoří `CMFCRibbonCustomizeDialog` objekt.|
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
 
 ## <a name="remarks"></a>Poznámky
 
-MFC vytvoří instanci této třídy automaticky pokud nezpracovává zprávy AFX_WM_ON_RIBBON_CUSTOMIZE nebo vrátí 0 z obslužné rutiny zprávy.
+Knihovna MFC vytvoří tuto třídu automaticky, pokud nezpracujete zprávu AFX_WM_ON_RIBBON_CUSTOMIZE nebo pokud vrátíte 0 z obslužné rutiny zprávy.
 
-Pokud chcete použít tuto třídu v aplikaci zobrazit na pásu karet **vlastní** dialogové okno pole, stačí vytvořit její instanci a volat `DoModal` metody.
+Pokud chcete použít tuto třídu ve vaší **Customize** aplikaci k zobrazení dialogového okna `DoModal` Přizpůsobení pásu karet, stačí ji vytvořit instanci a zavolat metodu.
 
-Protože tato třída je odvozena z [CMFCPropertySheet – třída](../../mfc/reference/cmfcpropertysheet-class.md), můžete přidat vlastní stránky pomocí `CMFCPropertySheet` rozhraní API.
+Vzhledem k tomu, že tato třída je odvozena z `CMFCPropertySheet` [třídy CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md), můžete přidat vlastní stránky pomocí rozhraní API.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
 
-[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
+[CmFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-[Cmfcribboncustomizedialog –](../../mfc/reference/cmfcribboncustomizedialog-class.md)
+[CmFCFCRibbonPřizpůsobenídialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxribboncustomizedialog.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CmFCRibbonCustomizeDialog::Dialogové okno Přizpůsobení cmfcribbon
 
-Vytvoří `CMFCRibbonCustomizeDialog` objektu.
+Vytvoří `CMFCRibbonCustomizeDialog` objekt.
 
 ```
 CMFCRibbonCustomizeDialog(
@@ -79,22 +79,22 @@ CMFCRibbonCustomizeDialog(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-[in] Ukazatel do nadřazeného okna (obvykle hlavního rámce).
+[v] Ukazatel na nadřazené okno (obvykle hlavní rámec).
 
-*pRibbon*<br/>
-[in] Ukazatel `CMFCRibbonBar` , který je možné přizpůsobit.
+*pStuha karet*<br/>
+[v] Ukazatel na `CMFCRibbonBar` který je třeba přizpůsobit.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCRibbonCustomizeDialog` objektu.
+Následující příklad ukazuje, jak `CMFCRibbonCustomizeDialog` vytvořit objekt.
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří instanci konstruktoru [cmfcribboncustomizepropertypage – třída](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) objektu a přidá jej do kolekce stránky vlastností.
+Konstruktor vytvoří instance objektu [třídy CMFCRibbonRibbonPropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) a přidá jej do kolekce stránek seznamu vlastností.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

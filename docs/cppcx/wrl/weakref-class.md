@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 9616fcffac0b92d5ac6d96cfe5f4119f3a3b180f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681f5a64c3e2902c66facbd4f0ac3a3663a7e79d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374259"
 ---
 # <a name="weakref-class"></a>WeakRef – třída
 
-Představuje *nestálý odkaz* , který lze používat pouze modulu Windows Runtime, ne klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.
+Představuje *slabý odkaz,* který může být použit pouze prostředím Windows Runtime, nikoli klasickým com. Slabý odkaz představuje objekt, který může nebo nemusí být přístupný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,32 +40,32 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[WeakRef::WeakRef – konstruktor](#weakref)|Inicializuje novou instanci třídy `WeakRef` třídy.|
-|[WeakRef::~WeakRef – destruktor](#tilde-weakref)|Zruší inicializaci aktuální instance `WeakRef` třídy.|
+|[WeakRef::WeakRef – konstruktor](#weakref)|Inicializuje novou instanci třídy. `WeakRef`|
+|[WeakRef::~WeakRef – destruktor](#tilde-weakref)|Deinitializes aktuální instance `WeakRef` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[WeakRef::As – metoda](#as)|Nastaví zadaný `ComPtr` parametr ukazatele k reprezentaci zadané rozhraní.|
-|[WeakRef::AsIID – metoda](#asiid)|Nastaví zadaný `ComPtr` parametr ukazatele představující ID zadané rozhraní.|
-|[WeakRef::CopyTo – metoda](#copyto)|Přiřadí ukazatel rozhraní, pokud je k dispozici k proměnné zadané ukazatele.|
+|[WeakRef::As – metoda](#as)|Nastaví `ComPtr` zadaný parametr ukazatele tak, aby představoval zadané rozhraní.|
+|[WeakRef::AsIID – metoda](#asiid)|Nastaví `ComPtr` zadaný parametr ukazatele tak, aby představoval zadané ID rozhraní.|
+|[WeakRef::CopyTo – metoda](#copyto)|Přiřadí ukazatel rozhraní, pokud je k dispozici, k zadané proměnné ukazatele.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[WeakRef::operator& – operátor](#operator-ampersand-operator)|Vrátí `ComPtrRef` objekt, který představuje aktuální `WeakRef` objektu.|
+|[WeakRef::operator& – operátor](#operator-ampersand-operator)|Vrátí `ComPtrRef` objekt, který `WeakRef` představuje aktuální objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-A `WeakRef` udržuje objekt *silného odkazu*, který je přidružený k objektu a může být platný nebo neplatný. Volání `As()` nebo `AsIID()` metodu k získání silného odkazu. Silný odkaz je platný, má přístup k přidruženého objektu. Když je neplatný silný odkaz (`nullptr`), přidruženého objektu není dostupný.
+Objekt `WeakRef` zachová *silnou referenci*, která je přidružena k objektu a může být platná nebo neplatná. Volání `As()` nebo `AsIID()` metoda získat silný odkaz. Pokud je silný odkaz platný, může získat přístup k přidruženému objektu. Pokud je silný odkaz`nullptr`neplatný ( ), přidružený objekt je nepřístupný.
 
-A `WeakRef` objekt se obvykle používá k reprezentaci objektu, jehož existence je řízena vnějším vláknem nebo aplikací. Například sestavit `WeakRef` objekt z odkazu na objekt souboru. Když je soubor otevřen, silný odkaz je platný. Ale pokud se soubor zavře, silný odkaz níže uvedených situací.
+Objekt `WeakRef` se obvykle používá k reprezentaci objektu, jehož existence je řízena externím vláknem nebo aplikací. Například vytvořte `WeakRef` objekt z odkazu na objekt souboru. Když je soubor otevřený, silný odkaz je platný. Pokud je však soubor uzavřen, silný odkaz se stane neplatným.
 
-Všimněte si, že dojde ke změně chování v [jako](#as), [asiid –](#asiid) a [CopyTo](#copyto) metody ve Windows 10 SDK. Dříve, po volání některé z těchto metod, můžete zkontrolovat, `WeakRef` pro `nullptr` k určení, pokud silného odkazu byl úspěšně získán, stejně jako v následujícím kódu:
+Všimněte si, že je změna chování v [As](#as), [AsIID](#asiid) a [CopyTo](#copyto) metody v systému Windows 10 SDK. Dříve po volání některé z těchto metod, můžete zkontrolovat `WeakRef` pro `nullptr` zjistit, zda byl úspěšně získán silný odkaz, jako v následujícím kódu:
 
 ```cpp
 WeakRef wr;
@@ -84,7 +84,7 @@ if(wr == nullptr)
 }
 ```
 
-Ve výše uvedeném kódu nefunguje při použití Windows 10 SDK (nebo novější). Místo toho zkontrolujte ukazatel, který byl předán pro `nullptr`.
+Výše uvedený kód nefunguje při použití sady Windows 10 SDK (nebo novější). Místo toho zkontrolujte ukazatel, `nullptr`který byl předán v pro .
 
 ```cpp
 if (strongRef == nullptr)
@@ -103,19 +103,19 @@ if (strongRef == nullptr)
 
 **Záhlaví:** client.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="tilde-weakref"></a>WeakRef:: ~ WeakRef – destruktor
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>WeakRef::~WeakRef Destructor
 
-Zruší inicializaci aktuální instance `WeakRef` třídy.
+Deinitializes aktuální instance `WeakRef` třídy.
 
 ```cpp
 ~WeakRef();
 ```
 
-## <a name="as"></a>Weakref::AS – metoda
+## <a name="weakrefas-method"></a><a name="as"></a>WeakRef::Jako metoda
 
-Nastaví zadaný `ComPtr` parametr ukazatele k reprezentaci zadané rozhraní.
+Nastaví `ComPtr` zadaný parametr ukazatele tak, aby představoval zadané rozhraní.
 
 ```cpp
 template<typename U>
@@ -132,30 +132,30 @@ HRESULT As(
 ### <a name="parameters"></a>Parametry
 
 *U*<br/>
-Identifikátor rozhraní.
+ID rozhraní.
 
-*ptr*<br/>
-Když tato operace dokončí, objekt, který představuje parametr *U*.
+*Ptr*<br/>
+Po dokončení této operace objekt, který představuje parametr *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-- Pokud je tato operace úspěšná; S_OK v opačném případě HRESULT, který označuje důvod operace nebyla úspěšná, a *ptr* je nastavena na `nullptr`.
+- S_OK pokud tato operace proběhne úspěšně; v opačném případě HRESULT, který označuje důvod, proč `nullptr`se operace nezdařila a *ptr* je nastavena na .
 
-- Pokud tato operace úspěšná, ale aktuální S_OK `WeakRef` objekt již byl uvolněn. Parametr *ptr* je nastavena na `nullptr`.
+- S_OK pokud tato operace proběhne `WeakRef` úspěšně, ale aktuální objekt již byl vydán. Parametr *ptr* je `nullptr`nastaven na .
 
-- Pokud tato operace úspěšná, ale aktuální S_OK `WeakRef` objekt není odvozen z parametru *U*. Parametr *ptr* je nastavena na `nullptr`.
+- S_OK pokud je tato operace `WeakRef` úspěšná, ale aktuální objekt není odvozen z parametru *U*. Parametr *ptr* je `nullptr`nastaven na .
 
 ### <a name="remarks"></a>Poznámky
 
-Je vygenerován chybu, pokud parametr *U* je `IWeakReference`, nebo není odvozen od `IInspectable`.
+Chyba je emitován, `IWeakReference`pokud je parametr `IInspectable` *U* , nebo není odvozen z .
 
-První šablona je formulář, který by měl používat ve vašem kódu. Druhá šablona se osobní a specializace pomocné rutiny, podporující funkcí jazyka C++, jako [automaticky](../../cpp/auto-cpp.md) klíčovým slovem odvození typu.
+První šablona je formulář, který byste měli použít v kódu. Druhá šablona je interní, pomocná specializace, která podporuje funkce jazyka C++, jako je například klíčové slovo [automatického](../../cpp/auto-cpp.md) odpočtu typu.
 
-Od verze Windows 10 SDK, tato metoda nenastaví `WeakRef` instance na `nullptr` Pokud nebylo možné získat nestálý odkaz, takže byste se měli vyhnout kontroly chyb kódu, který kontroluje `WeakRef` pro `nullptr`. Místo toho zkontrolujte *ptr* pro `nullptr`.
+Počínaje windows 10 SDK, tato metoda `WeakRef` nenastaví instanci, pokud `nullptr` nelze získat slabý odkaz, takže byste `WeakRef` `nullptr`se měli vyhnout kódu kontroly chyb, který kontroluje pro . Místo toho zkontrolujte `nullptr` *ptr* pro .
 
-## <a name="asiid"></a>Weakref::asiid – metoda
+## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef::Asiid metoda
 
-Nastaví zadaný `ComPtr` parametr ukazatele představující ID zadané rozhraní.
+Nastaví `ComPtr` zadaný parametr ukazatele tak, aby představoval zadané ID rozhraní.
 
 ```cpp
 HRESULT AsIID(
@@ -166,31 +166,31 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ptr*<br/>
-Když tato operace dokončí, objekt, který představuje parametr *riid*.
+*Ptr*<br/>
+Po dokončení této operace objekt, který představuje parametr *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-- Pokud je tato operace úspěšná; S_OK v opačném případě HRESULT, který označuje důvod operace nebyla úspěšná, a *ptr* je nastavena na `nullptr`.
+- S_OK pokud tato operace proběhne úspěšně; v opačném případě HRESULT, který označuje důvod, proč `nullptr`se operace nezdařila a *ptr* je nastavena na .
 
-- Pokud tato operace úspěšná, ale aktuální S_OK `WeakRef` objekt již byl uvolněn. Parametr *ptr* je nastavena na `nullptr`.
+- S_OK pokud tato operace proběhne `WeakRef` úspěšně, ale aktuální objekt již byl vydán. Parametr *ptr* je `nullptr`nastaven na .
 
-- Pokud tato operace úspěšná, ale aktuální S_OK `WeakRef` objekt není odvozen z parametru *riid*. Parametr *ptr* je nastavena na `nullptr`. (Další informace najdete v části poznámky.)
+- S_OK pokud tato operace proběhne `WeakRef` úspěšně, ale aktuální objekt není odvozen z *parametru riid*. Parametr *ptr* je `nullptr`nastaven na . (Další informace naleznete v tématu Poznámky.)
 
 ### <a name="remarks"></a>Poznámky
 
-Je vygenerován chybu, pokud parametr *riid* není odvozen od `IInspectable`. Tato chyba nahrazuje návratovou hodnotu.
+Chyba je emitován, pokud parametr *riid* není odvozen z `IInspectable`. Tato chyba nahrazuje vrácenou hodnotu.
 
-První šablona je formulář, který by měl používat ve vašem kódu. Druhá šablona (není vidět, ale deklarované v souboru hlaviček) je interní, specializace pomocné rutiny, podporující funkcí jazyka C++, jako [automaticky](../../cpp/auto-cpp.md) klíčovým slovem odvození typu.
+První šablona je formulář, který byste měli použít v kódu. Druhá šablona (není zobrazena zde, ale deklarována v souboru záhlaví) je interní specializace pomocníka, která podporuje funkce jazyka C++, jako je například klíčové slovo [automatického](../../cpp/auto-cpp.md) odpočtu typu.
 
-Od verze Windows 10 SDK, tato metoda nenastaví `WeakRef` instance na `nullptr` Pokud nebylo možné získat nestálý odkaz, takže byste se měli vyhnout kontroly chyb kódu, který kontroluje `WeakRef` pro `nullptr`. Místo toho zkontrolujte *ptr* pro `nullptr`.
+Počínaje windows 10 SDK, tato metoda `WeakRef` nenastaví instanci, pokud `nullptr` nelze získat slabý odkaz, takže byste `WeakRef` `nullptr`se měli vyhnout kódu kontroly chyb, který kontroluje pro . Místo toho zkontrolujte `nullptr` *ptr* pro .
 
-## <a name="copyto"></a>Weakref::CopyTo – metoda
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a>weakref::metoda copyto
 
-Přiřadí ukazatel rozhraní, pokud je k dispozici k proměnné zadané ukazatele.
+Přiřadí ukazatel rozhraní, pokud je k dispozici, k zadané proměnné ukazatele.
 
 ```cpp
 HRESULT CopyTo(
@@ -211,27 +211,27 @@ HRESULT CopyTo(
 ### <a name="parameters"></a>Parametry
 
 *U*<br/>
-Ukazatel `IInspectable` rozhraní. Je vygenerován chybu, pokud *U* není odvozen od `IInspectable`.
+Ukazatel `IInspectable` rozhraní. Chyba je emitován, pokud `IInspectable` *U* není odvozen od .
 
-*riid*<br/>
-Identifikátor rozhraní. Je vygenerován chybu, pokud *riid* není odvozen od `IWeakReference`.
+*riid řekl:*<br/>
+ID rozhraní. Chyba je emitován, pokud *riid* není odvozen z `IWeakReference`.
 
-*ptr*<br/>
-Dvakrát nepřímé ukazatel na `IInspectable` nebo `IWeakReference`.
+*Ptr*<br/>
+Dvojnásob nepřímý ukazatel na `IInspectable` nebo `IWeakReference`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. Další informace najdete v tématu **poznámky**.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání. Další informace naleznete v **tématu Poznámky**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácená hodnota S_OK znamená, že tato operace proběhla úspěšně, ale neukazuje, jestli se přeložila na silný odkaz nestálý odkaz. Pokud se vrátí hodnotu S_OK, otestujte tento parametr *p* je silný odkaz; to znamená, že parametr *p* není roven `nullptr`.
+Vrácená hodnota S_OK znamená, že tato operace byla úspěšná, ale neznamená, zda byl slabý odkaz vyřešen na silný odkaz. Pokud je vrácena S_OK, otestujte, že parametr *p* je silný odkaz; to znamená, *p* že parametr p `nullptr`se nerovná .
 
-Od verze Windows 10 SDK, tato metoda nenastaví `WeakRef` instance na `nullptr` Pokud nebylo možné získat nestálý odkaz, takže byste se měli vyhnout Chyba při kontrole kódu, který kontroluje `WeakRef` pro `nullptr`. Místo toho zkontrolujte *ptr* pro `nullptr`.
+Počínaje windows 10 SDK, tato metoda `WeakRef` nenastaví instanci, pokud `nullptr` nelze získat slabý odkaz, takže `WeakRef` byste `nullptr`se měli vyhnout kódu kontroly chyb, který kontroluje pro . Místo toho zkontrolujte `nullptr` *ptr* pro .
 
-## <a name="operator-ampersand-operator"></a>WeakRef::operator&amp; – operátor
+## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef::Operátor&amp; operátoru
 
-Vrátí `ComPtrRef` objekt, který představuje aktuální `WeakRef` objektu.
+Vrátí `ComPtrRef` objekt, který `WeakRef` představuje aktuální objekt.
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()
@@ -239,15 +239,15 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `ComPtrRef` objekt, který představuje aktuální `WeakRef` objektu.
+Objekt, `ComPtrRef` který představuje `WeakRef` aktuální objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je interní pomocné operátor, který není určena k použití ve vašem kódu.
+Toto je interní pomocný operátor, který není určen pro použití v kódu.
 
-## <a name="weakref"></a>Weakref::weakref – konstruktor
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef::Konstruktor WeakRef
 
-Inicializuje novou instanci třídy `WeakRef` třídy.
+Inicializuje novou instanci třídy. `WeakRef`
 
 ```cpp
 WeakRef();
@@ -274,9 +274,9 @@ WeakRef(
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
-Ukazatel, odkaz nebo odkaz rvalue na existující objekt, který inicializuje aktuální `WeakRef` objektu.
+*Ptr*<br/>
+Ukazatel, odkaz nebo rvalue odkaz na existující objekt, který `WeakRef` inicializuje aktuální objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje prázdnou `WeakRef` objektu. Druhý konstruktor inicializuje `WeakRef` z ukazatele na objekt `IWeakReference` rozhraní. Třetí konstruktor inicializuje `WeakRef` z odkazu na objekt `ComPtr<IWeakReference>` objektu. Čtvrtý a pátý konstruktor inicializuje `WeakRef` objektu z jiného `WeakRef` objektu.
+První konstruktor inicializuje `WeakRef` prázdný objekt. Druhý konstruktor inicializuje `WeakRef` objekt z ukazatele `IWeakReference` na rozhraní. Třetí konstruktor inicializuje `WeakRef` objekt z odkazu `ComPtr<IWeakReference>` na objekt. Čtvrtý a pátý konstruktory inicializuje `WeakRef` `WeakRef` objekt z jiného objektu.

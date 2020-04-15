@@ -1,5 +1,5 @@
 ---
-title: 'Průvodce: Práce s projekty a řešenímiC++()'
+title: 'Návod: Práce s projekty a řešeními (C++)'
 ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
@@ -7,110 +7,110 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 36c64a74310c72df38021aebd8abb3ee430da3f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108399"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375895"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Průvodce: Práce s projekty a řešenímiC++()
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
 Toto téma shrnuje postup, jak vytvořit projekt jazyka C++ v sadě Visual Studio, přidat kód a poté projekt sestavit a spustit. V tomto návodu používáme jako příklad projektu program, který sleduje, kolik hráčů hraje různé karetní hry.
 
-V aplikaci Visual Studio je práce organizována v projektech a řešeních. Řešení může mít více než jeden projekt, například knihovnu DLL a spustitelný soubor, který odkazuje na tuto knihovnu DLL. Další informace najdete v tématu [řešení a projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+V sadě Visual Studio je práce organizována v projektech a řešeních. Řešení může mít více než jeden projekt – například DLL a spustitelný soubor, který odkazuje na tuto dll. Další informace naleznete v tématu [Řešení a projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Než začnete
 
-K dokončení tohoto návodu budete potřebovat Visual Studio 2017 nebo novější. Pokud potřebujete kopii, tady je Stručná příručka: [Nainstalujte C++ podporu v aplikaci Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte po instalaci prostřednictvím kurzu "Hello, World", abyste se ujistili, C++ že jsou komponenty správně nainstalované a vše funguje.
+K dokončení tohoto návodu potřebujete Visual Studio 2017 nebo novější. Pokud potřebujete kopii, tady je stručný průvodce: [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Pokud jste to ještě neudělali, postupujte podle následujících kroků po instalaci prostřednictvím kurzu "Hello, World", abyste se ujistili, že součásti Jazyka C++ jsou nainstalovány správně a vše funguje.
 
-Pomáhá porozumět základům C++ jazyka a znát, k čemu se kompilátor, linker a ladicí program používají. Tento kurz také předpokládá, že jste obeznámeni se systémem Windows a jak používat nabídky, dialogy,
+Pomáhá, pokud rozumíte základy jazyka C++ a víte, co kompilátor, propojovací program a ladicí program se používají. Kurz také předpokládá, že jste obeznámeni s Windows a jak používat nabídky, dialogy,
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý typ projektu sada Visual Studio nastaví nastavení kompilátoru a – v závislosti na typu – vygeneruje počáteční kód, který můžete později změnit. Následující postup se liší v závislosti na verzi sady Visual Studio, kterou používáte. Ujistěte se, že selektor verzí v levém horním rohu této stránky je nastavený na správnou verzi.
+Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý typ projektu Visual Studio nastaví nastavení kompilátoru a – v závislosti na typu – generuje počáteční kód, který můžete později upravit. Následující kroky se liší v závislosti na verzi sady Visual Studio, kterou používáte. Chcete-li zobrazit dokumentaci k upřednostňované verzi sady Visual Studio, použijte ovládací prvek pro výběr **verze.** Nachází se v horní části obsahu na této stránce.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-project-in-visual-studio-2019"></a>Vytvoření projektu v aplikaci Visual Studio 2019
+### <a name="to-create-a-project-in-visual-studio-2019"></a>Vytvoření projektu v Sadě Visual Studio 2019
 
-1. V hlavní nabídce vyberte **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
+1. V hlavní nabídce zvolte **Soubor** > **nového** > **projektu** a otevřete dialogové okno Vytvořit **nový projekt.**
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
+1. V horní části dialogového okna nastavte **jazyk** na **C++**, nastavte **platformu** na **Systém Windows**a **typ projektu** na **Console**.
 
-1. Z filtrovaného seznamu typů projektů zvolte Konzolová **aplikace** a pak zvolte **Další**. Na další stránce zadejte jako název projektu *hru* .
+1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte *hru* jako název projektu.
 
-   Výchozí umístění můžete přijmout v rozevíracím seznamu **umístění** , zadejte jiné umístění nebo klikněte na tlačítko **Procházet** a přejděte do adresáře, kam chcete projekt uložit.
+   Můžete přijmout výchozí umístění v rozevíracím seznamu **Umístění,** zadat jiné umístění nebo zvolit tlačítko **Procházet** a procházet do adresáře, do kterého chcete projekt uložit.
 
-   Když vytvoříte projekt, Visual Studio vloží projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **název řešení** , ale v tomto příkladu ponecháme výchozí název.
+   Při vytváření projektu Visual Studio umístí projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **Název řešení,** ale v tomto příkladu zachovat výchozí název.
 
-1. Kliknutím na tlačítko **vytvořit** vytvořte projekt.
+1. Chcete-li vytvořit projekt, zvolte tlačítko **Vytvořit.**
 
-   Visual Studio vytvoří nové soubory řešení a projektu a otevře Editor pro soubor zdrojového kódu Game. cpp, který vygeneroval.
+   Visual Studio vytvoří nové řešení a soubory projektu a otevře editor pro soubor zdrojového kódu Game.cpp, který vygeneroval.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017"></a>Vytvoření projektu v aplikaci Visual Studio 2017
+### <a name="to-create-a-project-in-visual-studio-2017"></a>Vytvoření projektu v sadě Visual Studio 2017
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
 
-1. V levém podokně dialogového okna **Nový projekt** rozbalte položku **nainstalované** a vyberte možnost **vizuál C++** , pokud již není otevřená.
+1. V levém podokně dialogového okna **Nový projekt** rozbalte **Možnost Nainstalováno** a vyberte **Visual C++**, pokud ještě není otevřený.
 
-1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace systému Windows**.
+1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **možnost Konzola Windows Aplikace**.
 
-1. Do pole **název** zadejte název projektu. V tomto příkladu zadejte *Game*.
+1. Do pole **Název** zadejte název projektu. V tomto příkladu zadejte *hru*.
 
-   Výchozí umístění můžete přijmout v rozevíracím seznamu **umístění** , zadejte jiné umístění nebo klikněte na tlačítko **Procházet** a přejděte do adresáře, kam chcete projekt uložit.
+   Můžete přijmout výchozí umístění v rozevíracím seznamu **Umístění,** zadat jiné umístění nebo zvolit tlačítko **Procházet** a procházet do adresáře, do kterého chcete projekt uložit.
 
-   Když vytvoříte projekt, Visual Studio vloží projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **název řešení** , ale v tomto příkladu ponecháme výchozí název.
+   Při vytváření projektu Visual Studio umístí projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **Název řešení,** ale v tomto příkladu zachovat výchozí název.
 
-1. Kliknutím na tlačítko **OK** vytvořte projekt.
+1. Pro vytvoření projektu zvolte tlačítko **OK.**
 
-   Visual Studio vytvoří nové soubory řešení a projektu a otevře Editor pro soubor zdrojového kódu Game. cpp, který vygeneroval.
+   Visual Studio vytvoří nové řešení a soubory projektu a otevře editor pro soubor zdrojového kódu Game.cpp, který vygeneroval.
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-project-in-visual-studio-2015"></a>Vytvoření projektu v aplikaci Visual Studio 2015
+### <a name="to-create-a-project-in-visual-studio-2015"></a>Vytvoření projektu v sadě Visual Studio 2015
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
 
-1. V levém podokně dialogového okna **Nový projekt** rozbalte položku **nainstalované** a vyberte možnost **vizuál C++** , pokud již není otevřená.
+1. V levém podokně dialogového okna **Nový projekt** rozbalte **Možnost Nainstalováno** a vyberte **Visual C++**, pokud ještě není otevřený.
 
-1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Win32**.
+1. V seznamu nainstalovaných šablon v prostředním podokně vyberte možnost **Win32 Console Application**.
 
-1. Do pole **název** zadejte název projektu. V tomto příkladu zadejte *Game*.
+1. Do pole **Název** zadejte název projektu. V tomto příkladu zadejte *hru*.
 
-   Výchozí umístění můžete přijmout v rozevíracím seznamu **umístění** , zadejte jiné umístění nebo klikněte na tlačítko **Procházet** a přejděte do adresáře, kam chcete projekt uložit.
+   Můžete přijmout výchozí umístění v rozevíracím seznamu **Umístění,** zadat jiné umístění nebo zvolit tlačítko **Procházet** a procházet do adresáře, do kterého chcete projekt uložit.
 
-   Když vytvoříte projekt, Visual Studio vloží projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **název řešení** , ale v tomto příkladu ponecháme výchozí název.
+   Při vytváření projektu Visual Studio umístí projekt do řešení. Ve výchozím nastavení má řešení stejný název jako projekt. Název můžete změnit v poli **Název řešení,** ale v tomto příkladu zachovat výchozí název.
 
-1. Kliknutím na tlačítko **OK** vytvořte projekt.
+1. Pro vytvoření projektu zvolte tlačítko **OK.**
 
-   Visual Studio vytvoří nové soubory řešení a projektu a otevře Editor pro soubor zdrojového kódu Game. cpp, který vygeneroval.
+   Visual Studio vytvoří nové řešení a soubory projektu a otevře editor pro soubor zdrojového kódu Game.cpp, který vygeneroval.
 
 ::: moniker-end
 
 ## <a name="organize-projects-and-files"></a>Uspořádání projektů a souborů
 
-**Průzkumník řešení** můžete použít k organizování a správě projektů, souborů a dalších prostředků ve vašem řešení.
+**Průzkumník řešení** můžete použít k uspořádání a správě projektů, souborů a dalších prostředků v řešení.
 
-Tato část návodu ukazuje, jak přidat třídu do projektu. Když přidáte třídu, Visual Studio přidá odpovídající soubory. h a. cpp. Výsledky můžete zobrazit v **Průzkumník řešení**.
+Tato část návodu ukazuje, jak přidat třídu do projektu. Když přidáte třídu, Visual Studio přidá odpovídající soubory H a CPP. Výsledky se zobrazí v **Průzkumníku řešení**.
 
 ### <a name="to-add-a-class-to-a-project"></a>Přidání třídy do projektu
 
-1. Pokud se okno **Průzkumník řešení** v aplikaci Visual Studio nezobrazí, v řádku nabídek vyberte možnost **Zobrazit** > **Průzkumník řešení**.
+1. Pokud se okno **Průzkumník řešení** v sadě Visual Studio nezobrazuje, na řádku nabídek zvolte **Zobrazit** > **Průzkumníka řešení**.
 
-1. V **Průzkumník řešení**vyberte projekt **hry** . Na panelu nabídek vyberte **projekt** > **Přidat třídu**.
+1. V **Průzkumníku řešení**vyberte **herní** projekt. Na řádku nabídek zvolte **Project** > **Add Class**.
 
-1. V dialogovém okně **Přidat třídu** zadejte do pole **název třídy** *Cardgame* . Neupravujte výchozí názvy souborů a nastavení. Zvolte **OK** tlačítko.
+1. V dialogovém okně **Přidat třídu** zadejte *Cardgame* do pole **Název třídy.** Neupravujte výchozí názvy souborů a nastavení. Zvolte tlačítko **OK.**
 
-   Visual Studio vytvoří nové soubory a přidá je do projektu. Můžete je zobrazit v okně **Průzkumník řešení** . Soubory Cardgame. h a Cardgame. cpp jsou otevřeny v editoru.
+   Visual Studio vytvoří nové soubory a přidá je do projektu. Můžete je vidět v okně **Průzkumník řešení.** Soubory Cardgame.h a Cardgame.cpp jsou otevřeny v editoru.
 
-1. Upravte soubor Cardgame. h a proveďte tyto změny:
+1. Upravte soubor Cardgame.h a proveďte tyto změny:
 
    - Přidejte dva soukromé datové členy po otevírací závorce definice třídy.
      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
@@ -120,21 +120,21 @@ Tato část návodu ukazuje, jak přidat třídu do projektu. Když přidáte t�
       static int totalParticipants;
       ```
 
-   - Upravte výchozí konstruktor, který aplikace Visual Studio vygenerovala. Po specifikátoru `public:` přístupu Najděte řádek, který vypadá takto:
+   - Upravte výchozí konstruktor, který aplikace Visual Studio vygenerovala. Po `public:` specifikátoru přístupu vyhledejte řádek, který vypadá takto:
 
       `Cardgame();`
 
-      Upravte konstruktor tak, aby převzal jeden parametr `int`typu snázvem Players.
+      Upravte konstruktor tak, aby `int`přeji jeden parametr typu , pojmenované *přehrávače*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
 
-   - Po výchozím destruktoru přidejte vloženou deklaraci `static int` členské funkce s názvem getúčastníci, která nepřijímá žádné `totalParticipants` parametry a vrací hodnotu.
+   - Za výchozí destruktor přidejte včleněnou deklaraci pro členskou `static int` funkci s názvem *GetParticipants,* která nepřijímá žádné parametry a vrací hodnotu. `totalParticipants`
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
       `static int GetParticipants() { return totalParticipants; }`
 
-   Soubor Cardgame. h by měl po změně vypadat podobně jako v následujícím příkladu:
+   Soubor Cardgame.h by se měl po změně podobat níže uvedenému kódu:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
 
@@ -151,11 +151,11 @@ Tato část návodu ukazuje, jak přidat třídu do projektu. Když přidáte t�
     };
     ```
 
-   Řádek `#pragma once` instruuje kompilátor, aby soubor hlaviček zahrnul pouze jednou. Další informace najdete v tématu [jednou](../preprocessor/once.md). Informace C++ o dalších klíčových slovech v hlavičkovém souboru výše naleznete v tématu [Class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md)a [Public](../cpp/public-cpp.md).
+   Řádek `#pragma once` říká kompilátoru zahrnout soubor záhlaví pouze jednou. Další informace naleznete v tématu [once](../preprocessor/once.md). Informace o dalších klíčových slovech jazyka C++ ve výše uvedeném souboru záhlaví naleznete v [tématu třída](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md)a [public](../cpp/public-cpp.md).
 
-1. Vyberte kartu **Cardgame. cpp** v horní části podokna úprav a otevřete ji pro úpravy.
+1. Zvolte kartu **Cardgame.cpp** v horní části podokna úprav a otevřete ji pro úpravy.
 
-1. Odstraňte všechny položky v souboru a nahraďte je kódem:
+1. Odstraňte vše v souboru a nahraďte jej kódem:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
@@ -182,15 +182,15 @@ Tato část návodu ukazuje, jak přidat třídu do projektu. Když přidáte t�
     ```
 
    > [!NOTE]
-   > Při zadávání kódu lze použít automatické dokončování. Pokud například zadáte tento kód na klávesnici, můžete zadat *pl* nebo *celkem* a pak stisknout klávesovou zkratku **CTRL**+**MEZERNÍK**. Automatické doplňování se `players` zadá `totalParticipants` nebo za vás.
+   > Při zadávání kódu lze použít automatické dokončování. Pokud například zadáte tento kód na klávesnici, můžete zadat *pl* nebo *tot* a pak stisknout **klávesu Ctrl**+**Mezerník**. Automatické dokončování vstoupí `players` nebo `totalParticipants` pro vás.
 
-## <a name="add-test-code-to-your-main-function"></a>Přidání testovacího kódu do funkce main
+## <a name="add-test-code-to-your-main-function"></a>Přidání testovacího kódu do hlavní funkce
 
 Přidejte do aplikace nějaký kód, který testuje nové funkce.
 
 ### <a name="to-add-test-code-to-the-project"></a>Přidání testovacího kódu do projektu
 
-1. V okně editoru **hry. cpp** nahraďte existující kód:
+1. V okně editoru **Game.cpp** nahraďte existující kód:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
 
@@ -219,17 +219,17 @@ Přidejte do aplikace nějaký kód, který testuje nové funkce.
     }
     ```
 
-   Kód přidá funkci testu, `PlayGames`ke zdrojovému kódu a zavolá ji v. `main`
+   Kód přidá testovací funkci `PlayGames`, do zdrojového kódu `main`a zavolá ji v aplikaci .
 
 ## <a name="build-and-run-your-app-project"></a>Sestavení a spuštění projektu aplikace
 
-V dalším kroku Sestavte projekt a spusťte aplikaci.
+Dále vytvořte projekt a spusťte aplikaci.
 
 ### <a name="to-build-and-run-the-project"></a>Sestavení a spuštění projektu
 
-1. Na řádku nabídek klikněte na **sestavit** > sestavení**řešení**.
+1. Na řádku nabídek zvolte **Build** > **Build Build Solution**.
 
-   Výstup sestavení se zobrazí v okně **výstup** . Pokud je sestavení úspěšné, výstup by měl vypadat přibližně takto:
+   Výstup ze sestavení se zobrazí v okně **Výstup.** Pokud je sestavení úspěšné, výstup by se měl podobat:
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------
@@ -241,11 +241,11 @@ V dalším kroku Sestavte projekt a spusťte aplikaci.
     ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
     ```
 
-   Okno **výstup** může v závislosti na konfiguraci sestavení zobrazit různé kroky, ale pokud je sestavení projektu úspěšné, poslední řádek by měl vypadat jako zobrazený výstup.
+   **Okno Výstup** může zobrazit různé kroky v závislosti na konfiguraci sestavení, ale pokud sestavení projektu proběhne úspěšně, poslední řádek by se měl podobat zobrazený výstup.
 
-   Pokud vaše sestavení nebylo úspěšné, porovnejte kód s kódem, který je uveden v předchozích krocích.
+   Pokud vaše sestavení nebylo úspěšné, porovnejte kód s kódem, který je zobrazen v předchozích krocích.
 
-1. Chcete-li spustit projekt, na panelu nabídek vyberte možnost **ladit** > **Spustit bez ladění**. Mělo by se zobrazit okno konzoly a výstup by měl vypadat přibližně takto:
+1. Chcete-li projekt spustit, zvolte na řádku nabídek možnost **Ladění** > **startu bez ladění**. Mělo by se zobrazit okno konzoly a výstup by se měl podobat:
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.
@@ -256,14 +256,14 @@ V dalším kroku Sestavte projekt a spusťte aplikaci.
 
    Stisknutím klávesy zavřete okno konzoly.
 
-Gratulujeme, úspěšně jste vytvořili projekt aplikace a řešení. V tomto návodu se dozvíte víc o tom, C++ jak vytvářet projekty kódu v aplikaci Visual Studio.
+Gratulujeme, úspěšně jste vytvořili projekt a řešení aplikace. Pokračujte v návodu, abyste se dozvěděli další informace o tom, jak vytvořit projekty kódu jazyka C++ v sadě Visual Studio.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-**Předchozí** [Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Generace** [Návod: Sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
+**Předchozí:** [Použití ide sady Visual Studio pro vývoj plochy v jazyce C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Další:** [Návod: Vytvoření projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>

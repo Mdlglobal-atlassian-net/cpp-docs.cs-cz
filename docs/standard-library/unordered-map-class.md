@@ -138,16 +138,16 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4b7f62adfccde519782f076a8bbb937efd211f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373148"
 ---
 # <a name="unordered_map-class"></a>unordered_map – třída
 
-Šablona třídy popisuje objekt, který řídí proměnlivou délku sekvence prvků typu `std::pair<const Key, Ty>`. Sekvence je slabě seřazená podle funkce hash, která sekvenci rozděluje do uspořádané sady dílčích sekvencí, které se nazývají kbelíky. V rámci každého kbelíku funkce porovnání určuje, zda má nějaká dvojice prvků odpovídající řazení. Každý prvek obsahuje dva objekty, klíč řazení a hodnotu. Sekvence je reprezentována způsobem, který umožňuje vyhledat, vložit a odebrat libovolný prvek s několika operacemi, které mohou být nezávislé na počtu prvků v sekvenci (konstantní čas), alespoň pokud všechny kbelíky mají přibližně stejnou délku. V nejhorším případě platí, že když jsou všechny prvky v jednom kbelíku, je počet operací úměrný počtu prvků v sekvenci (lineární čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
+Šablona třídy popisuje objekt, který řídí posloupnost `std::pair<const Key, Ty>`prvků typu s různou délkou . Sekvence je slabě seřazená podle funkce hash, která sekvenci rozděluje do uspořádané sady dílčích sekvencí, které se nazývají kbelíky. V rámci každého kbelíku funkce porovnání určuje, zda má nějaká dvojice prvků odpovídající řazení. Každý prvek obsahuje dva objekty, klíč řazení a hodnotu. Sekvence je reprezentována způsobem, který umožňuje vyhledat, vložit a odebrat libovolný prvek s několika operacemi, které mohou být nezávislé na počtu prvků v sekvenci (konstantní čas), alespoň pokud všechny kbelíky mají přibližně stejnou délku. V nejhorším případě platí, že když jsou všechny prvky v jednom kbelíku, je počet operací úměrný počtu prvků v sekvenci (lineární čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -165,10 +165,10 @@ class unordered_map;
 |Parametr|Popis|
 |-|-|
 |*Klíč*|Klíčový typ|
-|*Ty*|Mapovaný typ|
-|*Kontrole*|Typ objektu hashovací funkce|
-|*Čekání*|Typ objektu funkce porovnání rovnosti|
-|*Vyhrazen*|Třída alokátoru|
+|*Ty (Ty)*|Mapovaný typ|
+|*Hodnota hash*|Typ objektu hashovací funkce|
+|*Pred*|Typ objektu funkce porovnání rovnosti|
+|*Alloc*|Třída alokátoru|
 
 ## <a name="members"></a>Členové
 
@@ -180,70 +180,70 @@ class unordered_map;
 |[const_pointer](#const_pointer)|Typ konstantního ukazatele na prvek|
 |[const_reference](#const_reference)|Typ konstantního odkazu na prvek|
 |[difference_type](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|
-|[Hasher –](#hasher)|Typ hashovací funkce|
-|[iterátor](#iterator)|Typ iterátoru řízené sekvence|
+|[Hasher](#hasher)|Typ hashovací funkce|
+|[Iterace](#iterator)|Typ iterátoru řízené sekvence|
 |[key_equal](#key_equal)|Typ funkce porovnání|
 |[key_type](#key_type)|Typ klíče řazení|
 |[local_iterator](#local_iterator)|Typ iterátoru kbelíku řízené sekvence|
 |[mapped_type](#mapped_type)|Typ mapované hodnoty přiřazené ke každému klíči|
-|[ukazatele](#pointer)|Typ ukazatele na prvek|
-|[odkaz](#reference)|Typ odkazu na prvek|
+|[ukazatel](#pointer)|Typ ukazatele na prvek|
+|[Odkaz](#reference)|Typ odkazu na prvek|
 |[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|
 |[value_type](#value_type)|Typ prvku|
 
 |Členská funkce|Popis|
 |-|-|
-|[Počínaje](#at)|Vyhledá prvek se zadaným klíčem.|
-|[ifunctiondiscovery](#begin)|Určuje začátek řízené sekvence.|
-|[blocích](#bucket)|Získá číslo kbelíku pro hodnotu klíče.|
+|[Na](#at)|Vyhledá prvek se zadaným klíčem.|
+|[Začít](#begin)|Určuje začátek řízené sekvence.|
+|[Kbelík](#bucket)|Získá číslo kbelíku pro hodnotu klíče.|
 |[bucket_count](#bucket_count)|Získá počet kbelíků.|
 |[bucket_size](#bucket_size)|Získá velikost kbelíku.|
 |[cbegin](#cbegin)|Určuje začátek řízené sekvence.|
 |[cend](#cend)|Určuje konec řízené sekvence.|
-|[jejich](#clear)|Odebere všechny prvky.|
-|[count](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
-|[emplace](#emplace)|Přidá prvek vytvořený v místě.|
+|[Jasné](#clear)|Odebere všechny prvky.|
+|[Počet](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
+|[místo](#emplace)|Přidá prvek vytvořený v místě.|
 |[emplace_hint](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
-|[obsahovat](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
-|[účelu](#end)|Určuje konec řízené sekvence.|
+|[empty](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
+|[Konec](#end)|Určuje konec řízené sekvence.|
 |[equal_range](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
-|[ověřování](#erase)|Odebere prvky v určených pozicích.|
+|[Vymazat](#erase)|Odebere prvky v určených pozicích.|
 |[find](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
 |[get_allocator](#get_allocator)|Získá uložený objekt alokátoru.|
 |[hash_function](#hash)|Získá uložený objekt hashovací funkce.|
-|[zadat](#insert)|Přidá prvky.|
+|[Vložit](#insert)|Přidá prvky.|
 |[key_eq](#key_eq)|Získá uložený objekt funkce porovnání.|
 |[load_factor](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
 |[max_bucket_count](#max_bucket_count)|Získá maximální počet kbelíků.|
 |[max_load_factor](#max_load_factor)|Získá nebo nastaví maximální počet prvků na kbelík.|
 |[max_size](#max_size)|Získá maximální velikost řízené sekvence.|
-|[rehash –](#rehash)|Znovu vytvoří hashovací tabulku.|
-|[hodnota](#size)|Spočítá počet prvků.|
-|[adresu](#swap)|Zamění obsah dvou kontejnerů.|
+|[Předělávka](#rehash)|Znovu vytvoří hashovací tabulku.|
+|[Velikost](#size)|Spočítá počet prvků.|
+|[Swap](#swap)|Zamění obsah dvou kontejnerů.|
 |[unordered_map](#unordered_map)|Sestaví objekt kontejneru.|
 
 |Operátor|Popis|
 |-|-|
-|[unordered_map:: operator [] – operátor](#op_at)|Vyhledá nebo vloží prvek se zadaným klíčem.|
-|[unordered_map:: operator =](#op_eq)|Zkopíruje tabulku hash.|
+|[unordered_map::operátor[]](#op_at)|Vyhledá nebo vloží prvek se zadaným klíčem.|
+|[unordered_map::operátor=](#op_eq)|Zkopíruje tabulku hash.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt seřadí sekvenci, kterou ovládá, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_map:: key_equal](#key_equal) a objektu funkce hash typu [unordered_map:: hash](#hasher). K prvnímu uloženému objektu přistupujete voláním členské funkce [unordered_map:: key_eq](#key_eq)`()`; a přístup k druhému uloženému objektu získáte voláním členské funkce [unordered_map:: hash_function](#hash)`()`. Konkrétně pro všechny hodnoty `X` a `Y` typu `Key`vrátí volání `key_eq()(X, Y)` hodnotu true pouze v případě, že obě hodnoty argumentů mají ekvivalentní řazení; `hash_function()(keyval)` volání poskytuje distribuci hodnot typu `size_t`. Na rozdíl od šablony třídy [Unordered_multimap třídy](../standard-library/unordered-multimap-class.md), objekt typu `unordered_map` zajišťuje, aby `key_eq()(X, Y)` vždy false pro jakékoli dva prvky řízené sekvence. (Klíče jsou jedinečné).
+Objekt usřídí sekvenci, kterou řídí, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_map::key_equal](#key_equal) a objektu funkce hash typu [unordered_map::hasher](#hasher). K prvnímu uloženému objektu se dostanete voláním členské funkce [unordered_map::key_eq](#key_eq)`()`; a k druhému uloženému objektu přistupujete voláním členské funkce [unordered_map::hash_function](#hash)`()`. Konkrétně pro všechny `X` `Y` hodnoty `Key`a typu `key_eq()(X, Y)` , volání vrátí true pouze v případě, že dvě argumenthodnoty mají ekvivalentní řazení; volání `hash_function()(keyval)` dává rozdělení hodnot typu `size_t`. Na rozdíl od šablony třídy `unordered_map` unordered_multimap `key_eq()(X, Y)` [Class](../standard-library/unordered-multimap-class.md), objekt typu zajišťuje, že je vždy false pro všechny dva prvky řízené sekvence. (Klíče jsou jedinečné).
 
-Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení elementu způsobí, že [unordered_map:: load_factor](#load_factor)`()` překročit maximální zátěžový faktor, kontejner zvýší počet intervalů a znovu sestaví zatřiďovací tabulku podle potřeby.
+Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení prvku [způsobí, že unordered_map::load_factor](#load_factor) `()` překročí maximální faktor zatížení, kontejner zvýší počet bloků a podle potřeby obnoví tabulku hash.
 
 Skutečné pořadí prvků v řízené sekvenci závisí na hashovací funkci, funkci porovnání, pořadí vkládání, faktoru maximálního zatížení a aktuálním počtu kbelíků. Pořadí prvků v řízené sekvenci obecně nelze předvídat. Můžete si však vždy být jisti, že všechny dílčí množiny prvků, které mají ekvivalentní řazení, v řízené sekvenci sousedí.
 
-Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím uloženého objektu přidělování typu [unordered_map:: allocator_type](#allocator_type). Takový objekt přidělování musí mít stejné externí rozhraní jako objekt typu `allocator`. Všimněte si, že uložený objekt alokátoru není zkopírován při přiřazení objektu kontejneru.
+Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou řídí prostřednictvím uloženého objektu alokátoru typu [unordered_map::allocator_type](#allocator_type). Takový objekt přidělování musí mít stejné externí rozhraní jako `allocator`objekt typu . Všimněte si, že uložený objekt alokátoru není zkopírován při přiřazení objektu kontejneru.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<unordered_map >
+**Záhlaví:** \<unordered_map>
 
 **Obor názvů:** std
 
-## <a name="allocator_type"></a>unordered_map:: allocator_type
+## <a name="unordered_mapallocator_type"></a><a name="allocator_type"></a>unordered_map::allocator_type
 
 Typ alokátoru pro správu úložiště
 
@@ -253,7 +253,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Alloc`.
+Typ je synonymem pro `Alloc`parametr šablony .
 
 ### <a name="example"></a>Příklad
 
@@ -281,9 +281,9 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="at"></a>unordered_map:: at
+## <a name="unordered_mapat"></a><a name="at"></a>unordered_map::at
 
-Vyhledá prvek v unordered_map se zadanou hodnotou klíče.
+Najde prvek v unordered_map s zadanou hodnotou klíče.
 
 ```cpp
 Ty& at(const Key& key);
@@ -294,15 +294,15 @@ const Ty& at(const Key& key) const;
 
 |Parametr|Popis|
 |-|-|
-|*key*|Hodnota klíče, která se má najít|
+|*key*|Hodnota klíče najít.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na hodnotu dat nalezeného prvku.
+Odkaz na datovou hodnotu nalezeného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud hodnota klíče argumentu nebyla nalezena, funkce vyvolá objekt třídy `out_of_range`.
+Pokud není nalezena hodnota klíče argumentu, pak funkce `out_of_range`vyvolá objekt třídy .
 
 ### <a name="example"></a>Příklad
 
@@ -331,9 +331,9 @@ int main()
 }
 ```
 
-## <a name="begin"></a>unordered_map:: begin
+## <a name="unordered_mapbegin"></a><a name="begin"></a>unordered_map::začátek
 
-Určuje začátek řízené sekvence nebo intervalu.
+Označuje začátek řízené sekvence nebo bloku.
 
 ```cpp
 iterator begin();
@@ -346,11 +346,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |Parametr|Popis|
 |-|-|
-|*nbucket*|Číslo intervalu.|
+|*nkbelík*|Číslo kbelíku.|
 
 ### <a name="remarks"></a>Poznámky
 
-První dvě členské funkce vrátí dopředný iterátor, který odkazuje na první prvek sekvence (nebo těsně za konec prázdné sekvence). Poslední dvě členské funkce vrátí dopředný iterátor, který odkazuje na první prvek *nbucket* kontejneru (nebo těsně za konec prázdného kontejneru).
+První dvě členské funkce vrátí dopředný iterátor, který odkazuje na první prvek sekvence (nebo těsně za koncem prázdné sekvence). Poslední dvě členské funkce vrátí dopředu iterátor, který odkazuje na první prvek *bucket nbucket* (nebo těsně za koncem prázdného kbelíku).
 
 ### <a name="example"></a>Příklad
 
@@ -396,7 +396,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="bucket"></a>unordered_map:: interval
+## <a name="unordered_mapbucket"></a><a name="bucket"></a>unordered_map::kbelík
 
 Získá číslo kbelíku pro hodnotu klíče.
 
@@ -406,12 +406,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
-Hodnota klíče, která má být namapována.
+*klávesový klíč*\
+Hodnota klíče mapovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací číslo kontejneru aktuálně odpovídající hodnotě klíče *keyVal*.
+Členská funkce vrátí číslo segmentu aktuálně odpovídající *klíčce*hodnoty klíče .
 
 ### <a name="example"></a>Příklad
 
@@ -452,7 +452,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>unordered_map:: bucket_count
+## <a name="unordered_mapbucket_count"></a><a name="bucket_count"></a>unordered_map::bucket_count
 
 Získá počet kbelíků.
 
@@ -462,7 +462,7 @@ size_type bucket_count() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí aktuální počet sad.
+Členská funkce vrátí aktuální počet bloků.
 
 ### <a name="example"></a>Příklad
 
@@ -538,9 +538,9 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>unordered_map:: bucket_size
+## <a name="unordered_mapbucket_size"></a><a name="bucket_size"></a>unordered_map::bucket_size
 
-Získá velikost kontejneru.
+Získá velikost bloku
 
 ```cpp
 size_type bucket_size(size_type nbucket) const;
@@ -548,12 +548,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*\
-Číslo intervalu.
+*nkbelík*\
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí velikost *nbucket*čísla kontejneru.
+Členské funkce vrátí velikost číslo *nbucket*.
 
 ### <a name="example"></a>Příklad
 
@@ -594,9 +594,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>unordered_map:: cbegin
+## <a name="unordered_mapcbegin"></a><a name="cbegin"></a>unordered_map::cbegin
 
-Vrátí **konstantní** iterátor, který adresuje první prvek v rozsahu.
+Vrátí **const** iterator, který řeší první prvek v rozsahu.
 
 ```cpp
 const_iterator cbegin() const;
@@ -604,13 +604,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor pro dopředný přístup **const** , který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
+**Const** dopředu přístupititel, který odkazuje na první prvek rozsahu nebo umístění těsně za koncem prázdné oblasti `cbegin() == cend()`(pro prázdný rozsah), ).
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin`nelze upravovat elementy v rozsahu.
+S vrácenou `cbegin`hodnotou , prvky v rozsahu nelze změnit.
 
-Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
+Tuto člennou funkci můžete použít `begin()` místo členské funkce k `const_iterator`zajištění, že vrácená hodnota je . Obvykle se používá ve spojení s klíčovým slovem [automatického](../cpp/auto-cpp.md) odpočtu typu, jak je znázorněno v následujícím příkladu. V příkladu `Container` zvažte upravitelné (non-const) kontejner jakéhokoli druhu, `cbegin()`který podporuje **const** `begin()` a .
 
 ```cpp
 auto i1 = Container.begin();
@@ -620,9 +620,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>unordered_map:: cend
+## <a name="unordered_mapcend"></a><a name="cend"></a>unordered_map::cenzura
 
-Vrátí **konstantní** iterátor, který adresuje umístění hned za poslední prvek v rozsahu.
+Vrátí **const** iterator, který řeší umístění těsně za poslední prvek v rozsahu.
 
 ```cpp
 const_iterator cend() const;
@@ -630,13 +630,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor pro dopředný přístup **const** , který ukazuje hned za konec rozsahu.
+**Const** dopředu přístupitit, který ukazuje těsně za koncem rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k otestování, zda iterátor prošl na konci rozsahu.
+`cend`se používá k testování, zda iterátor prošel koncem svého rozsahu.
 
-Tuto členskou funkci lze použít místo `end()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `end()` a `cend()`.
+Tuto člennou funkci můžete použít `end()` místo členské funkce k `const_iterator`zajištění, že vrácená hodnota je . Obvykle se používá ve spojení s klíčovým slovem [automatického](../cpp/auto-cpp.md) odpočtu typu, jak je znázorněno v následujícím příkladu. V příkladu `Container` zvažte upravitelné (non-const) kontejner jakéhokoli druhu, `cend()`který podporuje **const** `end()` a .
 
 ```cpp
 auto i1 = Container.end();
@@ -645,9 +645,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
+Hodnota vrácená `cend` by neměla být odkazována.
 
-## <a name="clear"></a>unordered_map:: Clear
+## <a name="unordered_mapclear"></a><a name="clear"></a>unordered_map::vymazat
 
 Odebere všechny prvky.
 
@@ -657,7 +657,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [unordered_map:: erase](#erase)`(` [unordered_map:: begin](#begin)`(),` [unordered_map:: end](#end)`())`.
+Členská funkce volá [unordered_map::vymazat](#erase) `(` [unordered_map::begin](#begin) `(),` [unordered_map::end](#end)`())`.
 
 ### <a name="example"></a>Příklad
 
@@ -714,7 +714,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>unordered_map:: const_iterator
+## <a name="unordered_mapconst_iterator"></a><a name="const_iterator"></a>unordered_map::const_iterator
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -724,7 +724,7 @@ typedef T1 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může sloužit jako konstantní dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T1`.
+Typ popisuje objekt, který může sloužit jako konstantní dopředu iterátor pro řízené sekvence. Je zde popsán jako synonymum pro `T1`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -757,7 +757,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_local_iterator"></a>unordered_map:: const_local_iterator
+## <a name="unordered_mapconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_map::const_local_iterator
 
 Typ konstantního iterátoru kbelíku řízené sekvence
 
@@ -767,7 +767,7 @@ typedef T5 const_local_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může sloužit jako konstantní dopředný iterátor pro kontejner. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T5`.
+Typ popisuje objekt, který může sloužit jako konstantní dopředu iterátor pro kbelík. Je zde popsán jako synonymum pro `T5`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -805,7 +805,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="const_pointer"></a>unordered_map:: const_pointer
+## <a name="unordered_mapconst_pointer"></a><a name="const_pointer"></a>unordered_map::const_pointer
 
 Typ konstantního ukazatele na prvek
 
@@ -851,7 +851,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_reference"></a>unordered_map:: const_reference
+## <a name="unordered_mapconst_reference"></a><a name="const_reference"></a>unordered_map::const_reference
 
 Typ konstantního odkazu na prvek
 
@@ -897,7 +897,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="count"></a>unordered_map:: Count
+## <a name="unordered_mapcount"></a><a name="count"></a>unordered_map::počet
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -907,12 +907,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
-Hodnota klíče, která se má vyhledat
+*klávesový klíč*\
+Hodnotu klíče k hledání.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v rozsahu, který je oddělený [unordered_map:: equal_range](#equal_range)`(keyval)`.
+Členská funkce vrátí počet prvků v rozsahu odděleném [unordered_map::equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Příklad
 
@@ -952,7 +952,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>unordered_map::d ifference_type
+## <a name="unordered_mapdifference_type"></a><a name="difference_type"></a>unordered_map::difference_type
 
 Typ vzdálenosti se znaménkem mezi dvěma prvky
 
@@ -962,7 +962,7 @@ typedef T3 difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ signed integer popisuje objekt, který může představovat rozdíl mezi adresami všech dvou prvků v řízené sekvenci. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T3`.
+Typ podepsaného celého čísla popisuje objekt, který může představovat rozdíl mezi adresami libovolných dvou prvků v řízené sekvenci. Je zde popsán jako synonymum pro `T3`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -1011,9 +1011,9 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>unordered_map:: emplace
+## <a name="unordered_mapemplace"></a><a name="emplace"></a>unordered_map::emplace
 
-Vloží prvek sestavený na místě (nejsou provedeny žádné operace kopírování nebo přesunutí) do unordered_map.
+Vloží prvek vytvořený na místě (žádné operace kopírování nebo přesunutí) do unordered_map.
 
 ```cpp
 template <class... Args>
@@ -1024,25 +1024,25 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 |Parametr|Popis|
 |-|-|
-|*argumentů*|Argumenty předané k vytvoření elementu, který má být vložen do unordered_map, pokud již neobsahují element, jehož hodnota je ekvivalentně seřazena.|
+|*Args*|Argumenty předány k vytvoření prvku, který má být vložen do unordered_map pokud již obsahuje prvek, jehož hodnota je ekvivalentní objednané.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`pair`, jehož komponenta **bool** vrátí hodnotu true, pokud bylo provedeno vložení a false v případě, že `unordered_map` již obsahovala prvek, jehož klíč měl ekvivalentní hodnotu v pořadí řazení a jehož komponenta iterátoru vrátí adresu, kam byl vložen nový prvek nebo kde byl prvek již umístěn.
+A `pair` jehož **bool** komponenta vrátí true, pokud `unordered_map` vložení bylo provedeno a false, pokud již obsahoval prvek, jehož klíč měl ekvivalentní hodnotu v řazení a jehož komponenta iterátorvrátí adresu, kde byl vložen nový prvek nebo kde byl již umístěn prvek.
 
-Chcete-li získat přístup k součásti iterátoru páru `pr` vráceného touto členskou funkcí, použijte `pr.first`a k jeho zpětnému odkazování použijte `*(pr.first)`. Chcete-li získat přístup ke komponentě **bool** páru `pr` vrácená touto členskou funkcí, použijte `pr.second`.
+Chcete-li získat přístup k součásti iterátoru `pr` `pr.first`dvojice vrácené touto členovou funkcí, použijte a pro její odkaz použijte `*(pr.first)`. Chcete-li získat přístup k `pr` **bool** součásti `pr.second`dvojice vrácené touto člennou funkcí, použijte .
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce neověřuje žádné iterátory ani odkazy.
+Žádná iterátory nebo odkazy jsou zrušena touto funkcí.
 
-Pokud při vložení dojde k výjimce, ale nedojde k tomu ve funkci hash kontejneru, kontejner se neupraví. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován.
+Během vkládání, pokud je vyvolána výjimka, ale nedochází ve funkci hash kontejneru, kontejner není změněn. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován.
 
-Příklad kódu naleznete v tématu [map:: emplace](../standard-library/map-class.md#emplace).
+Příklad kódu naleznete v tématu [map::emplace](../standard-library/map-class.md#emplace).
 
-## <a name="emplace_hint"></a>unordered_map:: emplace_hint
+## <a name="unordered_mapemplace_hint"></a><a name="emplace_hint"></a>unordered_map::emplace_hint
 
-Vloží prvek sestavený na místě (nejsou provedeny žádné operace kopírování nebo přesunutí) s pomocným parametrem umístění.
+Vloží prvek vytvořený na místě (nejsou prováděny žádné operace kopírování nebo přesunutí) s nápovědou k umístění.
 
 ```cpp
 template <class... Args>
@@ -1053,26 +1053,26 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |Parametr|Popis|
 |-|-|
-|*argumentů*|Argumenty předané k vytvoření prvku, který má být vložen do unordered_map, pokud unordered_map již tento prvek neobsahuje, nebo obecněji, pokud již neobsahuje prvek, jehož klíč je ekvivalentní objednání.|
-|*,*|Nápověda týkající se místa, kde lze začít hledat správný bod vložení.|
+|*Args*|Argumenty předány k vytvoření prvku, který má být vložen do unordered_map pokud unordered_map již obsahuje tento prvek nebo obecněji, pokud již obsahuje prvek, jehož klíč je rovnocenně objednán.|
+|*Kde*|Nápověda týkající se místa, kde chcete začít hledat správný bod vložení.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Iterátor nově vloženého prvku.
 
-Pokud se vložení nezdařilo, protože prvek již existuje, vrátí iterátor existujícímu prvku.
+Pokud vložení se nezdařilo, protože prvek již existuje, vrátí iterátor existujícímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce nejsou neověřeny žádné odkazy.
+Touto funkcí nejsou zrušeny žádné odkazy.
 
-Pokud při vložení dojde k výjimce, ale nedojde k tomu ve funkci hash kontejneru, kontejner se neupraví. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován.
+Během vkládání, pokud je vyvolána výjimka, ale nedochází ve funkci hash kontejneru, kontejner není změněn. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován.
 
-[Value_type](../standard-library/map-class.md#value_type) prvku je dvojice, takže hodnota elementu bude seřazená dvojice s první komponentou rovnající se hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
+Value_type [value_type](../standard-library/map-class.md#value_type) prvku je pár, takže hodnota prvku bude uspořádaný pár s první komponentou rovnající se hodnotě klíče a druhou komponentou rovnající se hodnotě dat prvku.
 
-Příklad kódu naleznete v tématu [map:: emplace_hint](../standard-library/map-class.md#emplace_hint).
+Příklad kódu naleznete v tématu [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="empty"></a>unordered_map:: Empty
+## <a name="unordered_mapempty"></a><a name="empty"></a>unordered_map::prázdné
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -1139,7 +1139,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>unordered_map:: end
+## <a name="unordered_mapend"></a><a name="end"></a>unordered_map::konec
 
 Určuje konec řízené sekvence.
 
@@ -1154,13 +1154,13 @@ const_local_iterator end(size_type nbucket) const;
 
 |Parametr|Popis|
 |-|-|
-|*nbucket*|Číslo intervalu.|
+|*nkbelík*|Číslo kbelíku.|
 
 ### <a name="remarks"></a>Poznámky
 
-První dvě členské funkce vrátí dopředný iterátor, který odkazuje hned za konec sekvence. Poslední dvě členské funkce vrátí dopředný iterátor, který odkazuje hned za konec intervalu *nbucket*.
+První dvě členské funkce vrátí dopředu iterátor, který odkazuje těsně za konec sekvence. Poslední dvě členské funkce vrátí dopředu iterátor, který ukazuje těsně za konec bucket *nbucket*.
 
-## <a name="equal_range"></a>unordered_map:: equal_range
+## <a name="unordered_mapequal_range"></a><a name="equal_range"></a>unordered_map::equal_range
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -1171,12 +1171,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
-Hodnota klíče, která se má vyhledat
+*klávesový klíč*\
+Hodnotu klíče k hledání.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí dvojici iterátorů `X` tak, že `[X.first, X.second)` omezuje pouze ty prvky řízené sekvence, které mají ekvivalentní řazení pomocí *keyVal*. Pokud žádné takové prvky neexistují, oba iterátory jsou `end()`.
+Členská funkce vrátí dvojici iterátorů `[X.first, X.second)` tak, aby vymezila `X` pouze ty prvky řízené sekvence, které mají ekvivalentní řazení s *keyval*. Pokud žádné takové prvky neexistují, jsou `end()`oba iterátory .
 
 ### <a name="example"></a>Příklad
 
@@ -1228,9 +1228,9 @@ equal_range('x'):
 equal_range('b'): [b, 2]
 ```
 
-## <a name="erase"></a>unordered_map:: Erase
+## <a name="unordered_maperase"></a><a name="erase"></a>unordered_map::vymazat
 
-Odebere prvek nebo rozsah prvků v unordered_map ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v unordered_map ze zadaných pozic nebo odebere prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(const_iterator Where);
@@ -1249,20 +1249,20 @@ Pozice prvního prvku, který má být odebrán.
 *Poslední*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-\ *klíčů*
+*Klíč*\
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je konci mapy, pokud žádný takový prvek neexistuje.
+Pro první dvě členské funkce obousměrný iterátor, který označuje první prvek zbývající za všechny prvky odebrány nebo prvek, který je konec mapy, pokud žádný takový prvek neexistuje.
 
-Třetí členská funkce vrátí počet prvků, které byly odebrány z unordered_map.
+Pro třetí členskou funkci vrátí počet prvků, které byly odebrány z unordered_map.
 
 ### <a name="remarks"></a>Poznámky
 
-Příklad kódu naleznete v tématu [map:: Erase](../standard-library/map-class.md#erase).
+Příklad kódu naleznete v tématu [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="find"></a>unordered_map:: Find
+## <a name="unordered_mapfind"></a><a name="find"></a>unordered_map::najít
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -1272,12 +1272,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
-Hodnota klíče, která se má vyhledat
+*klávesový klíč*\
+Hodnotu klíče k hledání.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [unordered_map:: equal_range](#equal_range)`(keyval).first`.
+Členská funkce vrátí [unordered_map::equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Příklad
 
@@ -1322,7 +1322,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="get_allocator"></a>unordered_map:: get_allocator
+## <a name="unordered_mapget_allocator"></a><a name="get_allocator"></a>unordered_map::get_allocator
 
 Získá uložený objekt alokátoru.
 
@@ -1360,7 +1360,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>unordered_map:: hash_function
+## <a name="unordered_maphash_function"></a><a name="hash"></a>unordered_map::hash_function
 
 Získá uložený objekt hashovací funkce.
 
@@ -1398,7 +1398,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>unordered_map:: hasher
+## <a name="unordered_maphasher"></a><a name="hasher"></a>unordered_map::hasher
 
 Typ hashovací funkce
 
@@ -1408,7 +1408,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Hash`.
+Typ je synonymem pro `Hash`parametr šablony .
 
 ### <a name="example"></a>Příklad
 
@@ -1436,7 +1436,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>unordered_map:: INSERT
+## <a name="unordered_mapinsert"></a><a name="insert"></a>unordered_map::vložit
 
 Vloží prvek nebo rozsah prvků do objektu unordered_map.
 
@@ -1472,19 +1472,19 @@ IList);
 
 |Parametr|Popis|
 |-|-|
-|*Počítává*|Hodnota prvku, který má být vložen do objektu unordered_map, pokud již neobsahuje prvek, jehož klíč je ekvivalentně seřazen.|
-|*,*|Místo zahájení vyhledání správného bodu vložení.|
-|*ValTy*|Parametr šablony, který určuje typ argumentu, který může unordered_map použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a Perfect-Forwards *Val* jako argument.|
+|*Val*|Hodnota prvku, který má být vložen do objektu unordered_map, pokud již neobsahuje prvek, jehož klíč je ekvivalentně seřazen.|
+|*Kde*|Místo zahájení vyhledání správného bodu vložení.|
+|*Valty*|Parametr šablony, který určuje typ argumentu, který může unordered_map použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a předá *val* jako argument.|
 |*První*|Pozice prvního prvku, který chcete zkopírovat.|
-|*Posledního*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření [value_type](../standard-library/map-class.md#value_type) objektů.|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , ze kterých se mají kopírovat prvky|
+|*Poslední*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
+|*Vstupní iterátor*|Argument funkce šablony, který splňuje požadavky [vstupního iterátoru,](../standard-library/input-iterator-tag-struct.md) který odkazuje na prvky typu, který lze použít ke konstrukci [value_type](../standard-library/map-class.md#value_type) objektů.|
+|*Ilist*|[Initializer_list,](../standard-library/initializer-list.md) ze kterého chcete zkopírovat prvky.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členské funkce s jedním prvkem (1) a (2) vrátí [dvojici](../standard-library/pair-structure.md) , jejíž **logická** komponenta má hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud unordered_map již obsahovala element, jehož klíč měl ekvivalentní hodnotu v řazení. Komponenta iterátoru dvojice vrácených hodnot odkazuje na nově vložený element, pokud je **logická** komponenta true nebo na existující prvek, pokud je komponenta **bool** false.
+Jednoprvkové členské funkce,1) a (2), vrátí [dvojici,](../standard-library/pair-structure.md) jejíž **bool** komponenta je true, pokud vložení bylo provedeno a false, pokud unordered_map již obsahoval prvek, jehož klíč měl ekvivalentní hodnotu v pořadí. Komponenta iterátoru dvojice vrácené hodnoty odkazuje na nově vložený prvek, pokud je komponenta **bool** true, nebo na existující prvek, pokud je komponenta **bool** false.
 
-Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do unordered_map nebo, pokud element s ekvivalentním klíčem již existuje, pro existující prvek.
+Jednoelementové s nápovědou členské funkce(3) a (4), vrátí iterátor, který odkazuje na pozici, kde byl vložen nový prvek do unordered_map nebo, pokud prvek s ekvivalentní medailon již existuje, existující prvek.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1492,19 +1492,19 @@ Touto funkcí nejsou zneplatněny žádné iterátory, ukazatele ani odkazy.
 
 Pokud je při vložení pouze jednoho prvku vyvolána výjimka, ale nenastane v kontejneru funkce hash, stav kontejneru se nezmění. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-Chcete-li získat přístup k součásti iterátoru `pair` `pr`, který je vrácen členskými funkcemi s jedním prvkem, použijte `pr.first`; Chcete-li překázat na iterátor v rámci vráceného páru, použijte `*pr.first`, což vám poskytne element. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
+Chcete-li získat přístup k `pair` `pr` součásti iterátoru, která je `pr.first`vrácena jednoprvkovými členskými funkcemi, použijte ; chcete-li odkazovat na iterátor v `*pr.first`rámci vrácené dvojice, použijte , dává vám prvek. Chcete-li získat přístup `pr.second`ke komponentě **bool,** použijte . Příklad naleznete v ukázce kódu dále v tomto článku.
 
-[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru a pro mapu `map<K, V>::value_type` je `pair<const K, V>`. Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
+[Value_type](../standard-library/map-class.md#value_type) kontejneru je typedef, který patří do kontejneru `map<K, V>::value_type` `pair<const K, V>`a pro mapu, je . Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
 
-Členská funkce range (5) vloží sekvenci hodnot prvků do unordered_map, který odpovídá každému prvku, který adresuje iterátor v rozsahu `[First, Last)`; Proto se `Last` nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `m.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `m`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
+Členská funkce rozsahu (5) vloží posloupnost hodnot prvků do unordered_map, která odpovídá každému prvku, `[First, Last)`kterému iterátor v rozsahu odpovídá ; proto `Last` není vložen. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `m.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `m`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
 
-Členská funkce seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) ke zkopírování prvků do unordered_map.
+Inicializační seznam členské funkce (6) používá [initializer_list](../standard-library/initializer-list.md) ke kopírování prvků do unordered_map.
 
-Pro vložení elementu vytvořeného na místě – to znamená, že nejsou provedeny žádné operace kopírování nebo přesunu – viz [unordered_map:: emplace](#emplace) a [unordered_map:: emplace_hint](#emplace_hint).
+Pro vložení prvku vytvořeného na místě – to znamená, že nejsou prováděny žádné operace kopírování nebo přesouvání – viz [unordered_map::emplace](#emplace) a [unordered_map::emplace_hint](#emplace_hint).
 
-Příklad kódu naleznete v tématu [map:: INSERT](../standard-library/map-class.md#insert).
+Příklad kódu naleznete v tématu [map::insert](../standard-library/map-class.md#insert).
 
-## <a name="iterator"></a>unordered_map:: iterátor
+## <a name="unordered_mapiterator"></a><a name="iterator"></a>unordered_map::iterátor
 
 Typ iterátoru řízené sekvence
 
@@ -1514,7 +1514,7 @@ typedef T0 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může sloužit jako dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T0`.
+Typ popisuje objekt, který může sloužit jako dopředu iterátor pro řízené sekvence. Je zde popsán jako synonymum pro `T0`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -1547,7 +1547,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="key_eq"></a>unordered_map:: key_eq
+## <a name="unordered_mapkey_eq"></a><a name="key_eq"></a>unordered_map::key_eq
 
 Získá uložený objekt funkce porovnání.
 
@@ -1587,7 +1587,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>unordered_map:: key_equal
+## <a name="unordered_mapkey_equal"></a><a name="key_equal"></a>unordered_map::key_equal
 
 Typ funkce porovnání
 
@@ -1597,7 +1597,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Pred`.
+Typ je synonymem pro `Pred`parametr šablony .
 
 ### <a name="example"></a>Příklad
 
@@ -1627,7 +1627,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>unordered_map:: key_type
+## <a name="unordered_mapkey_type"></a><a name="key_type"></a>unordered_map::key_type
 
 Typ klíče řazení
 
@@ -1637,7 +1637,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Key`.
+Typ je synonymem pro `Key`parametr šablony .
 
 ### <a name="example"></a>Příklad
 
@@ -1682,7 +1682,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="load_factor"></a>unordered_map:: load_factor
+## <a name="unordered_mapload_factor"></a><a name="load_factor"></a>unordered_map::load_factor
 
 Spočítá průměrný počet prvků na kbelík.
 
@@ -1692,7 +1692,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `(float)`[unordered_map:: size](#size)`() / (float)`[unordered_map:: bucket_count](#bucket_count)`()`, průměrný počet prvků na interval.
+Členská funkce `(float)`vrátí [unordered_map::size](#size)`() / (float)`[unordered_map::bucket_count](#bucket_count)`()`, což je průměrný počet prvků na segment.
 
 ### <a name="example"></a>Příklad
 
@@ -1768,9 +1768,9 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>unordered_map:: local_iterator
+## <a name="unordered_maplocal_iterator"></a><a name="local_iterator"></a>unordered_map::local_iterator
 
-Typ iterátoru kontejneru.
+Typ kbelíku iterátoru.
 
 ```cpp
 typedef T4 local_iterator;
@@ -1778,7 +1778,7 @@ typedef T4 local_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může sloužit jako dopředný iterátor pro kontejner. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T4`.
+Typ popisuje objekt, který může sloužit jako dopředu iterátor pro kbelík. Je zde popsán jako synonymum pro `T4`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -1816,7 +1816,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="mapped_type"></a>unordered_map:: mapped_type
+## <a name="unordered_mapmapped_type"></a><a name="mapped_type"></a>unordered_map::mapped_type
 
 Typ mapované hodnoty přiřazené ke každému klíči
 
@@ -1826,7 +1826,7 @@ typedef Ty mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Ty`.
+Typ je synonymem pro `Ty`parametr šablony .
 
 ### <a name="example"></a>Příklad
 
@@ -1871,7 +1871,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="max_bucket_count"></a>unordered_map:: max_bucket_count
+## <a name="unordered_mapmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_map::max_bucket_count
 
 Získá maximální počet kbelíků.
 
@@ -1881,7 +1881,7 @@ size_type max_bucket_count() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí maximální povolený počet kontejnerů.
+Členská funkce vrátí maximální počet aktuálně povolených bloků.
 
 ### <a name="example"></a>Příklad
 
@@ -1957,7 +1957,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>unordered_map:: max_load_factor
+## <a name="unordered_mapmax_load_factor"></a><a name="max_load_factor"></a>unordered_map::max_load_factor
 
 Získá nebo nastaví maximální počet prvků na kbelík.
 
@@ -1969,12 +1969,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor*\
+*Faktor*\
 Nový faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí uložený maximální faktor zatížení. Druhá členská funkce nahradí uložený maximální faktor zatížení *faktorem*.
+První členská funkce vrátí uložený faktor maximálního zatížení. Druhá členská funkce nahradí uložený faktor maximálního zatížení *faktorem*.
 
 ### <a name="example"></a>Příklad
 
@@ -2050,7 +2050,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>unordered_map:: max_size
+## <a name="unordered_mapmax_size"></a><a name="max_size"></a>unordered_map::max_size
 
 Získá maximální velikost řízené sekvence.
 
@@ -2060,7 +2060,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku nejdelší sekvence, kterou může objekt ovládat.
+Členská funkce vrátí délku nejdelší sekvence, kterou může objekt řídit.
 
 ### <a name="example"></a>Příklad
 
@@ -2085,7 +2085,7 @@ int main()
 max_size() == 536870911
 ```
 
-## <a name="op_at"></a>unordered_map:: operator [] – operátor
+## <a name="unordered_mapoperator"></a><a name="op_at"></a>unordered_map::operátor[]
 
 Vyhledá nebo vloží prvek se zadaným klíčem.
 
@@ -2099,7 +2099,7 @@ Ty& operator[](Key&& keyval);
 
 |Parametr|Popis|
 |-|-|
-|*Keyval*|Hodnota klíče, kterou chcete vyhledat nebo vložit.|
+|*Klíčová*|Hodnota klíče, kterou chcete vyhledat nebo vložit.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2109,9 +2109,9 @@ Odkaz na hodnotu dat vloženého prvku.
 
 Pokud není nalezena hodnota klíče argumentu, je vložen spolu s výchozí hodnotou datového typu.
 
-`operator[]` lze použít k vložení prvků do mapy *m* pomocí *m*[*klíč*] = `DataValue`; kde `DataValue` je hodnota `mapped_type` elementu s klíčovou hodnotou *klíče*.
+`operator[]`mohou být použity k vložení prvků do mapy `DataValue` *m* pomocí *m*[*Key*] = ; kde `DataValue` je hodnota `mapped_type` prvku s hodnotou klíče *Key*.
 
-Při použití `operator[]` pro vložení prvků, vrácený odkaz neurčuje, zda vložení mění již existující prvek nebo vytváří nový. Členské funkce [find](../standard-library/map-class.md#find) a [INSERT](../standard-library/map-class.md#insert) lze použít k určení, zda je prvek se zadaným klíčem již přítomen před vložením.
+Při `operator[]` použití vložení prvků vrácený odkaz neznamená, zda vložení mění již existující prvek nebo vytváří nový. Členské funkce [najít](../standard-library/map-class.md#find) a [vložit](../standard-library/map-class.md#insert) lze určit, zda prvek s zadaným klíčem je již přítomen před vložením.
 
 ### <a name="example"></a>Příklad
 
@@ -2170,9 +2170,9 @@ c2["abc"] == 1
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje iterátor `where` jako návratovou hodnotu [unordered_map:: insert](#insert)`(` [unordered_map:: value_type](#value_type)`(keyval, Ty())`. (Vloží prvek se zadaným klíčem, pokud žádný takový prvek neexistuje.) Pak vrátí odkaz na `(*where).second`.
+Členská funkce určuje iterátor `where` jako vrácenou hodnotu [unordered_map::insert](#insert) `(` [unordered_map::value_type](#value_type)`(keyval, Ty())`. (Vloží prvek se zadaným klíčem, pokud takový prvek neexistuje.) Potom vrátí odkaz `(*where).second`na .
 
-## <a name="op_eq"></a>unordered_map:: operator =
+## <a name="unordered_mapoperator"></a><a name="op_eq"></a>unordered_map::operátor=
 
 Nahradí prvky tohoto unordered_map pomocí prvků z jiného unordered_map.
 
@@ -2186,15 +2186,15 @@ unordered_map& operator=(unordered_map&& right);
 
 |Parametr|Popis|
 |-|-|
-|*Kliknutím*|Unordered_map, z níž funkce operator přiřazuje obsah.|
+|*Právo*|Unordered_map, ze kterého funkce operátoru přiřazuje obsah.|
 
 ### <a name="remarks"></a>Poznámky
 
-První verze zkopíruje všechny prvky z *pravé* části do tohoto unordered_map.
+První verze zkopíruje všechny prvky z *pravé* na tento unordered_map.
 
-Druhá verze přesune všechny prvky od *pravého* k tomuto unordered_map.
+Druhá verze přesune všechny prvky *zprava* na tento unordered_map.
 
-Všechny prvky, které jsou v tomto unordered_map před `operator`= provede se zahozené.
+Všechny prvky, které `operator`jsou v této unordered_map před = spustí jsou zahozeny.
 
 ### <a name="example"></a>Příklad
 
@@ -2233,7 +2233,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>unordered_map::p ointer
+## <a name="unordered_mappointer"></a><a name="pointer"></a>unordered_map::pointer
 
 Typ ukazatele na prvek
 
@@ -2279,7 +2279,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="reference"></a>unordered_map:: Reference
+## <a name="unordered_mapreference"></a><a name="reference"></a>unordered_map::odkaz
 
 Typ odkazu na prvek
 
@@ -2325,7 +2325,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="rehash"></a>unordered_map:: rehash – hodnota
+## <a name="unordered_maprehash"></a><a name="rehash"></a>unordered_map::opakování
 
 Znovu vytvoří hashovací tabulku.
 
@@ -2335,12 +2335,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*\
-Požadovaný počet kontejnerů.
+*nkbelíky*\
+Požadovaný počet bloků.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce mění počet intervalů, aby byly alespoň *nbuckets* a znovu sestaví zatřiďovací tabulku podle potřeby.
+Členská funkce změní počet bloků být alespoň *nbuckets* a obnoví tabulku hash podle potřeby.
 
 ### <a name="example"></a>Příklad
 
@@ -2403,7 +2403,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>unordered_map:: size
+## <a name="unordered_mapsize"></a><a name="size"></a>unordered_map::velikost
 
 Spočítá počet prvků.
 
@@ -2413,7 +2413,7 @@ size_type size() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací délku řízené sekvence.
+Členská funkce vrátí délku řízené sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -2470,7 +2470,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>unordered_map:: size_type
+## <a name="unordered_mapsize_type"></a><a name="size_type"></a>unordered_map::size_type
 
 Typ vzdálenosti bez znaménka mezi dvěma prvky
 
@@ -2480,7 +2480,7 @@ typedef T2 size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ unsigned integer popisuje objekt, který může představovat délku kontrolované sekvence. Je zde popsána jako synonymum pro typ definovaný pro implementaci `T2`.
+Nepodepsaný typ celého čísla popisuje objekt, který může představovat délku libovolné řízené sekvence. Je zde popsán jako synonymum pro `T2`typ definovaný implementací .
 
 ### <a name="example"></a>Příklad
 
@@ -2506,7 +2506,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>unordered_map:: swap
+## <a name="unordered_mapswap"></a><a name="swap"></a>unordered_map::swap
 
 Zamění obsah dvou kontejnerů.
 
@@ -2516,12 +2516,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Kontejner, pomocí kterého se má prohodit.
+*Právo*\
+Kontejner vyměnit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud [unordered_map:: get_allocator](#get_allocator)`() == right.get_allocator()`provede v konstantním čase, vyvolá výjimku pouze v důsledku kopírování objektu uložených vlastností typu `Tr`a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují prvky ve dvou řízených sekvencích. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
+Členská funkce zamění řízené `*this` sekvence mezi a *vpravo*. Pokud [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`, činí tak v konstantním čase, vyvolá výjimku pouze v důsledku `Tr`zkopírování objektu uložené vlastnosti typu a zruší platnost žádné odkazy, ukazatele nebo iterátory, které označují prvky ve dvou řízených sekvencí. V opačném případě provádí počet přiřazení prvků a volání konstruktoru úměrná počtu prvků ve dvou řízených sekvencích.
 
 ### <a name="example"></a>Příklad
 
@@ -2578,7 +2578,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_map"></a>unordered_map:: unordered_map
+## <a name="unordered_mapunordered_map"></a><a name="unordered_map"></a>unordered_map::unordered_map
 
 Sestaví objekt kontejneru.
 
@@ -2627,28 +2627,28 @@ unordered_map(
 
 |Parametr|Popis|
 |-|-|
-|*VŠ*|Objekt alokátoru, který se má uložit.|
-|*Zajištění*|Objekt funkce porovnání, který se má uložit.|
-|*Kontrole*|Objekt hashovací funkce, který se má uložit.|
+|*Al*|Objekt alokátoru, který se má uložit.|
+|*Comp*|Objekt funkce porovnání, který se má uložit.|
+|*Hodnota hash*|Objekt hashovací funkce, který se má uložit.|
 |*Bucket_count*|Minimální počet kbelíků.|
-|*Kliknutím*|Kontejner, který se má kopírovat.|
+|*Právo*|Kontejner, který se má kopírovat.|
 |*První*||
-|*Posledního*||
-|*IList*|Initializer_list obsahující prvky, které mají být zkopírovány.|
+|*Poslední*||
+|*Ilist*|Initializer_list, který obsahuje prvky, které mají být zkopírovány.|
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor určuje kopii sekvence řízenou pomocí `right`. Druhý konstruktor určuje prázdnou řízenou sekvenci. Třetí konstruktor vloží sekvenci hodnot prvků `[first, last)`. Čtvrtý konstruktor určuje kopii sekvence přesunutím `right`.
+První konstruktor určuje kopii sekvence řízené `right`. Druhý konstruktor určuje prázdnou řízenou sekvenci. Třetí konstruktor vloží posloupnost `[first, last)`hodnot prvků . Čtvrtý konstruktor určuje kopii sekvence přesunutím `right`.
 
-Všechny konstruktory také inicializují několik uložených hodnot. Pro kopírovací konstruktor jsou hodnoty získány *zprava*. V opačném případě:
+Všechny konstruktory také inicializují několik uložených hodnot. Pro konstruktor kopie jsou hodnoty získány z *Right*. V opačném případě:
 
-minimální počet intervalů je argument *Bucket_count*, pokud je k dispozici; v opačném případě se jedná o výchozí hodnotu, která je zde popsána jako hodnota definovaná implementací `N0`.
+minimální počet košů je *argument, Bucket_count*, pokud je přítomen; jinak se jedná o výchozí hodnotu popsanou zde jako hodnotu `N0`definovanou implementací .
 
-objekt funkce hash je argumentem *hodnota hash*, pokud je k dispozici; v opačném případě se `Hash()`.
+objekt funkce hash je argument *Hash*, pokud je přítomen; jinak to `Hash()`je .
 
-Objekt funkce porovnání je *kompozice*argumentů, pokud je k dispozici; v opačném případě se `Pred()`.
+Objekt funkce porovnání je argument *Comp*, pokud je přítomen; jinak to `Pred()`je .
 
-Objekt přidělování je argument *Al*, pokud je k dispozici; v opačném případě je `Alloc()`.
+Alokátor objekt ujetý argument *Al*, pokud je přítomen; v opačném `Alloc()`případě je .
 
 ### <a name="example"></a>Příklad
 
@@ -2784,7 +2784,7 @@ int main()
 [a, 1] [b, 2] [c, 3]
 ```
 
-## <a name="value_type"></a>unordered_map:: value_type
+## <a name="unordered_mapvalue_type"></a><a name="value_type"></a>unordered_map::value_type
 
 Typ prvku
 
@@ -2841,7 +2841,7 @@ int main()
 
 ## <a name="see-also"></a>Viz také
 
-[< unordered_map >](../standard-library/unordered-map.md)\
-[Containers](../cpp/containers-modern-cpp.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[<unordered_map>](../standard-library/unordered-map.md)\
+[Kontejnery](../cpp/containers-modern-cpp.md)\
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

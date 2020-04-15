@@ -4,166 +4,166 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: a045b04e5a57e9963b2ad374fbdfdd533bde0a05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374166"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
-Tento článek popisuje všechny zásadní změny ze sady Visual Studio 2015, které se vrátí do sady Visual Studio 2003 a v tomto článku "nové chování" nebo "teď" odkazují na Visual Studio 2015 a novější. Pojem "staré chování" a "před" odkazují na Visual Studio 2013 a starší verze.
+Tento článek popisuje všechny nejnovější změny z Visual Studio 2015 vrací do Visual Studio 2003 a v tomto článku termíny "nové chování" nebo "nyní" naleznete Visual Studio 2015 a novější. Termíny "staré chování" a "před" odkazují na Visual Studio 2013 a dřívější verze.
 
-Informace o nejnovější verzi sady Visual Studio naleznete v tématu [co je nového pro vizuál C++ v aplikaci Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení shody v aplikaci C++ Visual Studio](../overview/cpp-conformance-improvements.md).
+Informace o nejnovější verzi sady Visual Studio najdete v tématu [Co je nového pro Visual C++ v sadě Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) a vylepšení [shody v jazyce Visual C++ v sadě Visual Studio](../overview/cpp-conformance-improvements.md).
 
 > [!NOTE]
-> Mezi Visual Studio 2015 a Visual Studio 2017 neexistují žádné binární změny.
+> Mezi Visual Studio 2015 a Visual Studio 2017 nejsou žádné binární změny.
 
-Při upgradu na novou verzi sady Visual Studio může dojít k chybám kompilace a/nebo za běhu v kódu, který byl dříve kompilován a spuštěn správně. Změny v nové verzi, které způsobují takové problémy, se označují jako zásadní *změny*a obvykle jsou vyžadovány změnami ve standardním C++ jazyku, signaturách funkcí nebo rozložení objektů v paměti.
+Při upgradu na novou verzi sady Visual Studio může dojít kompilace nebo runtime chyby v kódu, který dříve zkompiloval a správně spuštěn. Změny v nové verzi, které způsobují tyto problémy jsou označovány jako *narušující změny*a obvykle jsou vyžadovány změnami ve standardu jazyka C++, podpisy funkcí nebo rozložení objektů v paměti.
 
-Aby nedocházelo k chybám za běhu, které je obtížné rozpoznat a diagnostikovat, doporučujeme, abyste nikdy nepoužili staticky odkaz na binární soubory kompilovány pomocí jiné verze kompilátoru. Když upgradujete projekt EXE nebo DLL, nezapomeňte také provést upgrade knihoven, na které odkazuje. Neprovádějte typy CRT (C Runtime) C++ nebo standardní knihovnaC++ (standardní knihovna) mezi binárními soubory, včetně knihoven DLL, kompilovány pomocí různých verzí kompilátoru. Další informace najdete v tématu [možné chyby při předávání objektů CRT napříč hranicemi knihoven DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Chcete-li se vyhnout chybám za běhu, které je obtížné zjistit a diagnostikovat, doporučujeme nikdy staticky propojit binární soubory zkompilované pomocí jiné verze kompilátoru. Když upgradujete projekt EXE nebo DLL, nezapomeňte také provést upgrade knihoven, na které odkazuje. Nepředávají CRT (C Runtime) nebo C++ Standardní knihovna (C++ Standardní knihovna) typy mezi binárními soubory, včetně Knihovny DLL, zkompilované pomocí různých verzí kompilátoru. Další informace naleznete [v tématu Potenciální chyby předávání crt objekty přes hranice dll](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-Nikdy byste neměli psát kód, který závisí na konkrétním rozložení objektu, který není rozhraním COM nebo objektem POD. Pokud takový kód napíšete, musíte zajistit, aby po upgradu fungoval. Další informace najdete v tématu [přenositelnost na hranicích ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
+Nikdy byste neměli psát kód, který závisí na konkrétním rozložení pro objekt, který není rozhraní com nebo objekt POD. Pokud takový kód napíšete, musíte zajistit, aby po upgradu fungoval. Další informace naleznete v tématu [Přenositelnost na hranicích ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
-Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob, jakým kompilátor rozumí vašemu existujícímu zdrojovému kódu. Například můžete najít nové nebo jiné chyby během sestavení nebo dokonce i rozdíly v kódu, které dříve vytvořili a zdály se pracovat správně. I když tato vylepšení nejsou zásadními změnami, jako jsou popsané v tomto dokumentu, možná budete muset provést změny ve zdrojovém kódu pro vyřešení těchto problémů:
+Kromě toho probíhající vylepšení shody kompilátoru může někdy změnit způsob, jakým kompilátor chápe váš existující zdrojový kód. Můžete například najít nové nebo různé chyby během sestavení nebo dokonce behaviorální rozdíly v kódu, který byl dříve sestaven a zdálo se, že běží správně. Přestože tato vylepšení nejsou porušení změny, jako jsou popsány v tomto dokumentu, budete muset provést změny ve zdrojovém kódu k vyřešení těchto problémů:
 
-- [Přerušující se změny knihovny C runtime (CRT)](#BK_CRT)
+- [C Runtime (CRT) Změny rozdělení knihovny](#BK_CRT)
 
-- [Nenejnovější změny standardní C++ a C++ standardní knihovny](#BK_STL)
+- [Standardní změny rozdělení standardní knihovny c++ a c++](#BK_STL)
 
-- [Přerušující změny MFC a ATL](#BK_MFC)
+- [Změny rozdělení knihovny MFC a knihovny ATL](#BK_MFC)
 
-- [Concurrency Runtime přerušující změny](#BK_ConcRT)
+- [Změny přelomení za běhu souběžnosti](#BK_ConcRT)
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a>Změny shody sady Visual Studio 2015
 
-###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>Běhová knihovna jazyka C (CRT)
+### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>C Runtime knihovna (CRT)
 
 #### <a name="general-changes"></a>Obecné změny
 
 - **Refaktorované binární soubory**
 
-   Knihovna CRT byla refaktorovaná do dvou různých binárních souborů: Universal CRT (ucrtbase), který obsahuje většinu standardních funkcí a knihovnu runtime VC (vcruntime). Knihovna vcruntime obsahuje funkce související s kompilátorem, jako je zpracování výjimek, a vnitřní objekty. Pokud používáte výchozí nastavení projektu, pak tato změna nemá vliv na to, že linker bude automaticky používat nové výchozí knihovny. Pokud jste nastavili vlastnost **linkeru** projektu **Ignorovat všechny výchozí knihovny** na **hodnotu Ano** nebo na příkazovém řádku používáte možnost linker `/NODEFAULTLIB`, je nutné aktualizovat seznam knihoven (ve vlastnosti **Další závislosti** ) tak, aby zahrnovaly nové, refaktoringované knihovny. Nahraďte starou knihovnu CRT (Libcmt. lib, LIBCMTD. lib, Msvcrt. lib, msvcrtd. lib) ekvivalentními refaktoring knihovny. Pro každou ze dvou předaných knihoven existují statické verze (. lib) a dynamické (. dll) a verze (bez přípony) a ladicí verze (s příponou "d"). Dynamické verze obsahují knihovnu importu, se kterou propojíte. Dvě refaktorované knihovny jsou Universal CRT, konkrétně ucrtbase. dll nebo ucrtbase. lib, ucrtbased. dll nebo ucrtbased. lib a knihovny runtime VC, libvcruntime. lib, vcruntime*Version*. dll, libvcruntimed. lib a vcruntimed*Version*. dll. *Verze* v aplikaci visual Studio 2015 a visual Studio 2017 je 140. Viz [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
+   Knihovna CRT byla refaktorována do dvou různých binárních souborů: Univerzální CRT (ucrtbase), který obsahuje většinu standardních funkcí, a Knihovna běhu VC (vcruntime). Knihovna vcruntime obsahuje funkce související s kompilátorem, jako je například zpracování výjimek a vnitřní objekty. Pokud používáte výchozí nastavení projektu, pak tato změna nemá vliv na vás, protože propojovací aplikace bude automaticky používat nové výchozí knihovny. Pokud jste nastavili vlastnost **Propojovací** služba projektu Ignorovat všechny výchozí `/NODEFAULTLIB` **knihovny** na **Ano** nebo používáte možnost propojovacího programu na příkazovém řádku, je nutné aktualizovat seznam knihoven (ve **vlastnosti Další závislosti)** tak, aby zahrnovala nové refaktorované knihovny. Nahraďte starou knihovnu CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) ekvivalentními refaktorovanými knihovnami. Pro každou ze dvou refaktorovaných knihoven existují statické (.lib) a dynamické (.dll) verze a verze (bez přípony) a ladicí verze (s příponou "d"). Dynamické verze mají knihovnu importu, se kterou je propojen. Dvě refaktorované knihovny jsou Universal CRT, konkrétně ucrtbase.dll nebo ucrtbase.lib, ucrtbased.dll nebo ucrtbased.lib a knihovna Runtime VC, libvcruntime.lib, vcruntime*verze*.dll, libvcruntimed.lib a*verze*vcruntimed .dll. *Verze* v sadě Visual Studio 2015 a Visual Studio 2017 je 140. Viz [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 
-#### <a name="localeh"></a>\<locale. h >
+#### <a name="localeh"></a>\<locale.h>
 
 - **localeconv**
 
-   Funkce [localeconv](../c-runtime-library/reference/localeconv.md) deklarovaná v locale. h teď funguje správně i v případě, že je povoleno [národní prostředí pro vlákno](../parallel/multithreading-and-locales.md) . V předchozích verzích knihovny vrátila Tato funkce data `lconv` pro globální národní prostředí, nikoli národní prostředí vlákna.
+   Funkce [localeconv](../c-runtime-library/reference/localeconv.md) deklarovaná v souboru locale.h nyní funguje správně, pokud je povoleno [národní prostředí pro vlákno.](../parallel/multithreading-and-locales.md) V předchozích verzích knihovny by `lconv` tato funkce vrátit data pro globální národní prostředí, nikoli národní prostředí vlákna.
 
-   Pokud používáte národní prostředí pro vlákno, měli byste kontrolovat použití `localeconv`. Pokud váš kód předpokládá, že vracená data `lconv` jsou pro globální národní prostředí, měli byste je opravit.
+   Pokud používáte národní prostředí pro vlastní vlákno, `localeconv`měli byste zkontrolovat použití aplikace . Pokud váš kód předpokládá, že `lconv` vrácená data jsou pro globální národní prostředí, měli byste je opravit.
 
-#### <a name="mathh"></a>\<Math. h >
+#### <a name="mathh"></a>\<math.h>
 
-- **C++přetížení funkcí matematické knihovny**
+- **C++ přetížení funkcí matematické knihovny**
 
-   V předchozích verzích \<Math. h > definovali některé, ale ne všechny, z C++ přetížení pro funkce matematické knihovny. Zbytek přetížení byl v hlavičce \<cmath >. Kód, který je zahrnutý pouze \<Math. h > by mohl mít problémy s řešením přetížení funkce. C++ Přetížení se teď odebrala z \<Math. h > a najdete je jenom v \<cmath >.
+   V předchozích \<verzích math.h> definovány některé, ale ne všechny přetížení Jazyka C++ pro funkce matematické knihovny. Zbytek přetížení byly v \<cmath> záhlaví. Kód, který \<zahrnoval pouze math.h> může mít problémy s řešením přetížení funkce. Nyní c++ přetížení byly odebrány z \<math.h> \<a jsou nalezeny pouze v cmath>.
 
-   Chcete-li vyřešit chyby, zahrňte \<cmath > a získejte deklarace funkcí, které byly odebrány z \<Math. h >. Tyto funkce byly přesunuty:
+   Chcete-li vyřešit chyby, zahrňte \<cmath> \<získat deklarace funkcí, které byly odebrány z math.h>. Tyto funkce byly přesunuty:
 
   - `double abs(double)` a `float abs(float)`
 
-  - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)``long double pow(long double, int)`
+  - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` a `long double` verze funkcí s plovoucí desetinnou čárkou `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2``expm1``fabs``fdim``floor``fma``fmax``fmin``fmod``frexp``hypot`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round``scalbln``scalbn``sin``ilogb``sinh``sqrt``tan``tanh``tgamma``trunc`
+  - `float`a `long double` `acos`verze funkcí s `acosh`pohyblivou desetinnou tál `erfc` `exp`, `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` `round` `scalbln` `scalbn`, , , , `ceil` `copysign` `cos` `cosh` `erf` `atan` `atanh` `atan2` `cbrt`, , , `lround` `modf` `nearbyint` `nexttoward`, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , `remainder` `remquo` `rint` `nextafter` `asin` `asinh``trunc`
 
-  Pokud máte kód, který používá `abs` s typem s plovoucí desetinnou čárkou, který obsahuje pouze hlavičku \<Math. h >, verze s plovoucí desetinnou čárkou již nebudou k dispozici. Volání nyní překládá na `abs(int)`, a to i v argumentu s plovoucí desetinnou čárkou, což způsobí chybu:
+  Pokud máte kód, `abs` který používá s plovoucí \<desetinnou čárkou typu, který obsahuje pouze math.h> záhlaví, verze s plovoucí desetinnou čárkou již nebude k dispozici. Volání nyní překládá `abs(int)`na , i s argumentem s plovoucí desetinnou tázkou, který způsobuje chybu:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-  Oprava tohoto upozornění je nahrazení volání `abs` s použitím verze `abs`s plovoucí desetinnou čárkou, jako je například `fabs` pro dvojitý argument nebo `fabsf` pro argument typu float, nebo zahrnutí hlavičky \<cmath > a pokračování v používání `abs`.
+  Oprava tohoto upozornění je nahradit volání `abs` `abs`s plovoucí desetinnou `fabs` tácek `fabsf` em , například pro \<dvojitý argument nebo pro `abs`argument float nebo zahrnout cmath> záhlaví a nadále používat .
 
-- **Shoda s plovoucí desetinnou čárkou**
+- **Shody s plovoucí desetinnou táhovostí**
 
-   Bylo provedeno mnoho změn v knihovně Math pro zlepšení dodržování specifikace IEEE-754 a přílohy F specifikací C11 s ohledem na vstupy zvláštních případů, jako je hodnoty NaN a nekonečno. Například tiché vstupy NaN, které byly často zpracovány jako chyby v předchozích verzích knihovny, již nejsou považovány za chyby. Viz standard [IEEE 754](https://standards.ieee.org/standard/754-2008.html) a Příloha F [standardu C11](https://www.iso.org/standard/57853.html).
+   Mnoho změn v matematické knihovně bylo provedeno s cílem zlepšit shodu se specifikacemi přílohy F IEEE-754 a C11 s ohledem na zvláštní vstupy případů, jako jsou NANs a nekonečna. Například tiché vstupy NaN, které byly často považovány za chyby v předchozích verzích knihovny, již nejsou považovány za chyby. Viz [norma IEEE 754](https://standards.ieee.org/standard/754-2008.html) a příloha F [normy C11](https://www.iso.org/standard/57853.html).
 
-   Tyto změny nezpůsobí chyby při kompilaci, ale mohou způsobit, že se programy chovají jinak a správně podle standardu.
+   Tyto změny nezpůsobí chyby v době kompilace, ale mohou způsobit, že se programy budou chovat odlišně a správněji podle standardu.
 
 - **FLT_ROUNDS**
 
-   V Visual Studio 2013 se makro FLT_ROUNDS rozšířilo na konstantní výraz, který byl nesprávný, protože režim zaokrouhlení lze konfigurovat za běhu, například voláním fesetround. Makro FLT_ROUNDS je teď dynamické a správně odráží aktuální režim zaokrouhlení.
+   V sadě Visual Studio 2013 FLT_ROUNDS makro rozbalené na konstantní výraz, který byl nesprávný, protože režim zaokrouhlení lze konfigurovat za běhu, například voláním fesetround. Makro FLT_ROUNDS je nyní dynamické a správně odráží aktuální režim zaokrouhlení.
 
-#### <a name="new-and-newh"></a>\<nové > a \<New. h >
+#### <a name="new-and-newh"></a>\<nové> \<a new.h>
 
 - **nové a odstranit**
 
-   V předchozích verzích knihovny byly vyexportovány funkce operátora New a DELETE definované implementací z knihovny DLL běhové knihovny (například msvcr120. dll). Tyto funkce operátora jsou nyní vždy staticky propojeny do vašich binárních souborů i při použití knihoven DLL knihoven modulu runtime.
+   V předchozích verzích knihovny byly nové a funkce odstranění definované implementací exportovány z knihovny DLL knihovny runtime (například msvcr120.dll). Tyto funkce operátoru jsou nyní vždy staticky propojeny do binárních souborů, a to i při použití knihoven DLL knihovny runtime.
 
-   Nejedná se o zásadní změnu pro nativní nebo smíšený kód (`/clr`), ale pro kód kompilovaný jako [/clr: Pure](../build/reference/clr-common-language-runtime-compilation.md)může tato změna způsobit selhání kompilace kódu. Pokud kompilujete kód jako `/clr:pure`, může být nutné přidat `#include <new>` nebo `#include <new.h>` pro řešení chyb sestavení z důvodu této změny. Možnost`/clr:pure` je zastaralá v aplikaci Visual Studio 2015 a nepodporovaná v aplikaci Visual Studio 2017. Kód, který musí být "Pure", by měl být na C#port.
+   Toto není narušující změna pro nativní nebo smíšený kód (`/clr`), ale pro kód kompilovaný jako [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), tato změna může způsobit selhání kompilace kódu. Pokud kompilujete kód `/clr:pure`jako `#include <new>` `#include <new.h>` , budete muset přidat nebo obejít chyby sestavení z důvodu této změny. Tato`/clr:pure` možnost je v sadě Visual Studio 2015 již zastaralá a v sadě Visual Studio 2017 není podporována. Kód, který musí být "čistý" by měl být portován do jazyka C#.
 
-#### <a name="processh"></a>\<Process. h >
+#### <a name="processh"></a>\<process.h>
 
 - **_beginthread a _beginthreadex**
 
-   Funkce [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) nyní obsahují odkaz na modul, ve kterém je procedura vlákna definována pro dobu trvání vlákna. To pomáhá zajistit, že moduly nebudou uvolněny, dokud vlákno nebude dokončeno.
+   Funkce [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) nyní obsahuje odkaz na modul, ve kterém je definován postup podprocesu po dobu trvání vlákna. To pomáhá zajistit, že moduly nejsou uvolněny, dokud vlákno bude spuštěno až do dokončení.
 
-#### <a name="stdargh"></a>\<STDARG. h >
+#### <a name="stdargh"></a>\<stdarg.h>
 
-- **va_start a odkazové typy**
+- **va_start a referenční typy**
 
-   Při kompilování C++ kódu [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověřuje v době kompilace, že argument předaný do něj není odkazový typ. Argumenty typu odkazu jsou zakázané C++ standardem.
+   Při kompilaci kódu Jazyka C++ [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověřuje v době kompilace, že argument předán není typu odkazu. Argumenty referenčního typu jsou zakázány standardem C++.
 
-#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio. h > a \<CONIO. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h> \<a conio.h>
 
-- **Rodina funkcí printf a scanf je teď definovaná jako inline.**
+- **Řada funkcí printf a scanf jsou nyní definovány jako vzaúšátkové.**
 
-   Definice všech funkcí `printf` a `scanf` byly přesunuty do \<stdio. h >, \<CONIO. h > a dalších hlaviček CRT. Tato zásadní změna vede k chybě linkeru (LINKERŮ LNK2019, nerozpoznaný externí symbol) pro všechny programy, které tyto funkce deklarovaly místně bez zahrnutí odpovídajících hlaviček CRT. Pokud je to možné, měli byste kód aktualizovat tak, aby zahrnoval hlavičky CRT (tj. přidat `#include <stdio.h>`) a vložené funkce, ale pokud nechcete upravovat kód pro zahrnutí těchto hlavičkových souborů, alternativním řešením je přidat další knihovnu do vstupu linkeru, legacy_stdio_definitions. lib.
+   Definice všech funkcí `printf` a `scanf` byly přesunuty do \<> stdio.h, \<conio.h> a dalších hlavičkách CRT. Tato změna přerušení vede k chybě propojovacího programu (LNK2019, nevyřešený externí symbol) pro všechny programy, které deklarovaly tyto funkce místně bez zahrnutí příslušných záhlaví CRT. Pokud je to možné, měli byste aktualizovat kód tak, `#include <stdio.h>`aby zahrnoval hlavičky CRT (to znamená přidat) a vložené funkce, ale pokud nechcete upravit kód tak, aby zahrnoval tyto soubory záhlaví, alternativním řešením je přidat další knihovnu do vstupu propojovacího programu, legacy_stdio_definitions.lib.
 
-   Chcete-li přidat tuto knihovnu do vstupu linkeru v integrovaném vývojovém prostředí, otevřete kontextovou nabídku uzlu projektu, zvolte možnost **vlastnosti**, poté v dialogovém okně **Vlastnosti projektu** zvolte možnost **linker**a upravte **vstup linkeru** tak, aby byly přidány `legacy_stdio_definitions.lib` do seznamu odděleného středníkem.
+   Chcete-li přidat tuto knihovnu do vstupu propojovacího aplikace v rozhraní IDE, otevřete kontextovou nabídku pro uzel projektu, `legacy_stdio_definitions.lib` zvolte **Vlastnosti** **projektu** , zvolte **Propojovací systém**a upravte vstup **propojovacího prostředí,** který chcete přidat do seznamu oddělených středníkem.
 
-   Pokud projekt odkazuje na statické knihovny, které byly zkompilovány s vydáním sady Visual Studio starší než 2015, linker může hlásit nevyřešený externí symbol. Tyto chyby mohou odkazovat na interní definice pro `_iob`, `_iob_func`nebo související importy pro určité \<> funkcí ve formě\*_IMP_ . Společnost Microsoft doporučuje při upgradu projektu překompilovat všechny statické knihovny s nejnovější verzí C++ kompilátoru a knihoven. Pokud je knihovna knihovnou třetí strany, pro kterou není k dispozici zdroj, měli byste buď požádat o aktualizovaný binární soubor od třetí strany, nebo zapouzdřit použití této knihovny do samostatné knihovny DLL, která kompilujete pomocí starší verze kompilátoru a knihoven. .
+   Pokud váš projekt propojení se statickými knihovnami, které byly zkompilovány s verzí sady Visual Studio dříve než 2015, propojovací aplikace může hlásit nevyřešený externí symbol. Tyto chyby mohou odkazovat `_iob_func`na vnitřní definice \<pro `_iob`, nebo související dovozy pro některé stdio.h> funkce ve formě _imp_\*. Společnost Microsoft doporučuje překompilovat všechny statické knihovny s nejnovější verzí kompilátoru jazyka C++ a knihoven při upgradu projektu. Pokud je knihovna knihovnou jiného výrobce, pro kterou není k dispozici zdroj, měli byste požádat třetí stranu o aktualizovaný binární soubor nebo zapouzdřit použití této knihovny do samostatné knihovny DLL, kterou zkompilujete se starší verzí kompilátoru a knihoven.
 
     > [!WARNING]
-    > Pokud propojujete s Windows SDK 8,1 nebo starším, můžete se setkat s těmito nevyřešenými chybami externích symbolů. V takovém případě byste tuto chybu měli vyřešit přidáním legacy_stdio_definitions. lib do vstupu linkeru, jak je popsáno výše.
+    > Pokud se připojujete k sada Windows SDK 8.1 nebo starší, může dojít k těmto nevyřešeným chybám externích symbolů. V takovém případě byste měli chybu vyřešit přidáním legacy_stdio_definitions.lib do vstupu linkeru, jak je popsáno výše.
 
-   K řešení chyb nevyřešených symbolů můžete zkusit použít nástroj [DUMPBIN. exe](../build/reference/dumpbin-reference.md) k prohlédnutí symbolů definovaných v binárním souboru. Zkuste zobrazit symboly definované v knihovně pomocí následujícího příkazového řádku.
+   Chcete-li odstranit nevyřešené chyby symbolů, můžete zkusit pomocí [dumpbin.exe](../build/reference/dumpbin-reference.md) prozkoumat symboly definované v binárním souboru. Chcete-li zobrazit symboly definované v knihovně, vyzkoušejte následující příkazový řádek.
 
     ```cpp
     dumpbin.exe /LINKERMEMBER somelibrary.lib
     ```
 
-- **Získá a _getws**
+- **dostane a _getws**
 
-   Funkce [Get](../c-runtime-library/gets-getws.md) a [_getws](../c-runtime-library/gets-getws.md) byly odebrány. Funkce Get byla ze standardní knihovny jazyka C v C11 odebrána, protože ji nelze bezpečně použít. _Getws funkce byla rozšíření společnosti Microsoft, které bylo ekvivalentní k získání, ale pro velké řetězce. Jako alternativy k těmto funkcím zvažte použití [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md)a [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+   Funkce [gets](../c-runtime-library/gets-getws.md) a [_getws](../c-runtime-library/gets-getws.md) byly odebrány. Funkce gets byla odebrána z c standardní knihovny v C11, protože ji nelze bezpečně použít. Funkce _getws byla rozšíření společnosti Microsoft, které bylo ekvivalentní gets, ale pro široké řetězce. Jako alternativy k těmto funkcím zvažte použití [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md)a [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 - **_cgets a _cgetws**
 
-   Byly odebrány funkce [_cgets](../c-runtime-library/cgets-cgetws.md) a [_cgetws](../c-runtime-library/cgets-cgetws.md) . Jako alternativy k těmto funkcím zvažte použití [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) a [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+   Funkce [_cgets](../c-runtime-library/cgets-cgetws.md) a [_cgetws](../c-runtime-library/cgets-cgetws.md) byly odebrány. Jako alternativy k těmto funkcím zvažte použití [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) a [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
-- **Formátování nekonečno a NaN**
+- **Formátování Nekonečna a NaN**
 
-   V předchozích verzích se nekonečny a hodnoty NaN naformátují pomocí sady ověřovacích řetězců specifických pro MSVC.
+   V předchozích verzích by byly nekonečna a nany formátovány pomocí sady ověřovacích řetězců specifických pro MSVC.
 
-  - Nekonečno: 1. #INF
+  - Nekonečno: 1,#INF
 
-  - Tiché NaN: 1. #QNAN
+  - Tichá NaN: 1,#QNAN
 
-  - Signalizace: 1. #SNAN
+  - Signalizace NaN: 1.#SNAN
 
-  - Nekonečný NaN: 1. #IND
+  - Neurčitý NaN: 1,#IND
 
-  Některý z těchto formátů může být předponou a mohl by být zformátován mírně různě v závislosti na šířce a přesnosti pole (v některých případech se jedná o neobvyklé účinky, například `printf("%.2f\n", INFINITY)` by měl tisknout 1. #J, protože #INF "zaokrouhlit" na 2 číslice přesnost). C99 zavedl nové požadavky na to, jak mají být naformátovány nekonečny a hodnoty NaN. Implementace MSVC nyní splňuje tyto požadavky. Nové řetězce jsou následující:
+  Některý z těchto formátů může být předponou znaménkem a může být formátován mírně odlišně v závislosti na šířce a přesnosti pole (někdy s neobvyklými efekty, například `printf("%.2f\n", INFINITY)` by tisk 1.#J, protože #INF by byl "zaokrouhlen" na dvoumístnou přesnost). C99 zavedla nové požadavky na to, jak mají být nekonečna a NaN formátovány. Implementace MSVC nyní splňuje tyto požadavky. Nové řetězce jsou následující:
 
-  - Nekonečno: INF
+  - Nekonečno: inf
 
-  - Tiché NaN: NaN
+  - Quiet NaN: nan
 
-  - Signalizace: NaN (Snan)
+  - Signalizace NaN: nan(snan)
 
-  - Nekonečná hodnota NaN: NaN (DIS-ajít)
+  - Neurčitý NaN: nan(ind)
 
-  Jakékoli z nich může být předponou. Pokud se používá specifikátor formátu s velkými písmeny (% F namísto% F), pak se řetězce tisknou velkými písmeny (`INF` místo `inf`), jak je potřeba.
+  Kterákoli z nich může být předponou značkou. Pokud je použit specifikátor formátu s velkými písmeny (%F místo %f),`INF` jsou `inf`řetězce vytištěny velkými písmeny ( místo ), jak je požadováno.
 
-  Funkce [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) byly upraveny tak, aby se tyto nové řetězce analyzovaly, takže tyto řetězce se nyní budou cyklicky předávat `printf` a `scanf`.
+  Funkce [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) byly upraveny tak, aby analyzovat tyto nové řetězce, `printf` takže `scanf`tyto řetězce nyní round-trip through a .
 
-- **Formátování a analýza plovoucí desetinné čárky**
+- **Formátování a analýza plovoucích bodů**
 
-   Byly zavedeny nové formátování a algoritmy pro analýzu plovoucí desetinné čárky, aby se zlepšila správnost. Tato změna má vliv na řady funkcí [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) a také na funkce jako [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).
+   Byly zavedeny nové algoritmy formátování a analýzy plovoucí chod, aby se zlepšila správnost. Tato změna ovlivňuje [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) rodiny funkcí, stejně jako funkce jako [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).
 
-   Staré algoritmy formátování by vygenerovaly jenom omezený počet číslic a pak zbývající desetinná místa vyplní nula. Obvykle by generovaly řetězce, které by se převedly zpět na původní hodnotu s plovoucí desetinnou čárkou, ale nebyly Skvělé, pokud jste chtěli přesnou hodnotu (nebo nejbližší desítkovou reprezentaci). Nové algoritmy formátování generují tolik číslic, kolik je potřeba k reprezentaci hodnoty (nebo k vyplnění zadané přesnosti). Jako příklad zlepšení; Vezměte v úvahu výsledky při tisku velkých mocnin dvou:
+   Staré formátovací algoritmy by generovaly pouze omezený počet číslic a pak by vyplnily zbývající desetinná místa nulou. Obvykle mohou generovat řetězce, které by round-trip zpět na původní hodnotu s plovoucí desetinnou čárkou, ale nebyly skvělé, pokud jste chtěli přesnou hodnotu (nebo nejbližší desítkové reprezentace). Nové formátovací algoritmy generují tolik číslic, kolik je potřeba k reprezentaci hodnoty (nebo k vyplnění zadané přesnosti). Jako příklad zlepšení; zvažte výsledky při tisku velkého výkonu dvou:
 
     ```cpp
     printf("%.0f\n", pow(2.0, 80))
@@ -181,169 +181,169 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
     1208925819614629174706176
     ```
 
-   Staré algoritmy analýzy by zvážily pouze až 17 platných číslic ze vstupního řetězce a zahodí zbytek číslic. Tento přístup je dostačující pro vygenerování přibližného aproximace hodnoty reprezentované řetězcem a výsledek je obvykle velmi blízko pro správný zaoblený výsledek. Nová implementace považuje všechny aktuální číslice a vytvoří správně zaoblený výsledek pro všechny vstupy (až 768 číslic po délce). Kromě toho tyto funkce nyní respektují režim zaokrouhlení (ovladatelné přes fesetround).  To je potenciálně pravděpodobné změny chování, protože tyto funkce mohou mít za následek výstup různých výsledků. Nové výsledky jsou vždy častěji správné než staré výsledky.
+   Staré algoritmy analýzy by zvážit pouze až 17 významné číslice ze vstupního řetězce a by zahodit zbytek číslic. Tento přístup je dostatečná k vytvoření blízké aproximace hodnoty reprezentované řetězcem a výsledek je obvykle velmi blízko správně zaoblený výsledek. Nová implementace bere v úvahu všechny přítomné číslice a vytváří správně zaokrouhlený výsledek pro všechny vstupy (až 768 číslic na délku). Kromě toho tyto funkce nyní respektují režim zaokrouhlení (kontrolovatelné pomocí fesetround).  Toto je potenciálně narušující změny chování, protože tyto funkce mohou výstup různých výsledků. Nové výsledky jsou vždy správnější než staré výsledky.
 
-- **Šestnáctková a nekonečná nebo NaN analýza plovoucí desetinné čárky**
+- **Šestnáctkové a nekonečno/NaN analýza plovoucí desetinné čárky**
 
-   Algoritmy analýzy plovoucí desetinné čárky nyní analyzují šestnáctkové řetězce s plovoucí desetinnou čárkou (například ty generované specifikátory formátu% a a% A printf) a všechny nekonečno a NaN řetězce, které jsou vygenerovány funkcemi `printf`, jak je popsáno výše.
+   Algoritmy analýzy plovoucí desetinné čárky budou nyní analyzovat šestnáctkové řetězce s plovoucí desetinnou čárkou (například řetězce generované specifikátory formátu %a a a `printf` %A) a všechny řetězce infinity a NaN, které jsou generovány funkcemi, jak je popsáno výše.
 
-- **% A a% nulového odsazení**
+- **%A a %nulové odsazení**
 
-   Specifikátory formátu% a a% formátuje číslo s plovoucí desetinnou čárkou jako hexadecimální mantisu a binární exponent. V předchozích verzích `printf` funkce nesprávně odblokované řetězce. `printf("%07.0a\n", 1.0)` by například měl tisknout 00x1p + 0, kde by měl tisknout 0x01p + 0. Tato chyba byla opravena.
+   Specifikátory formátu %a a %A formátují číslo s plovoucí desetinnou čárkou jako šestnáctkovou mantisu a binární exponent. V předchozích verzích by `printf` funkce nesprávně nula pad řetězce. Například `printf("%07.0a\n", 1.0)` by tisk 00x1p +0, kde by měl tisknout 0x01p +0. Tato chyba byla opravena.
 
-- **% A a% – přesnost**
+- **Přesnost %A a %a**
 
-   Výchozí přesnost specifikátorů formátu% A a% byla 6 v předchozích verzích knihovny. Výchozí přesnost je nyní 13 pro shodu s standardem C.
+   Výchozí přesnost specifikátorů formátu %A a %a byla v předchozích verzích knihovny 6. Výchozí přesnost je nyní 13 pro shodu s c standard.
 
-   Toto je změna chování za běhu ve výstupu jakékoli funkce, která používá formátovací řetězec s% A nebo% a. Ve starém chování může být výstup pomocí% specifikátoru "1.1 A2B3Cp + 111". Nyní je výstup pro stejnou hodnotu "1.1 A2B3C4D5E6F7p + 111". Chcete-li získat staré chování, můžete zadat přesnost, například%. 6A. Viz [specifikace přesnosti](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).
+   Jedná se o změnu chování za běhu ve výstupu libovolné funkce, která používá formátovací řetězec s %A nebo %a. Ve starém chování může být výstup pomocí specifikátoru %A "1.1A2B3Cp+111". Nyní je výstup pro stejnou hodnotu "1.1A2B3C4D5E6F7p+111". Chcete-li získat staré chování, můžete zadat přesnost, například %. 6A. Viz [Specifikace přesnosti](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).
 
-- **Specifikátor% F**
+- **%F specifikátor**
 
-   Specifikátor formátu nebo převodu% F se teď podporuje. Je funkčně ekvivalentní specifikátoru formátu% f s tím rozdílem, že nekonečná a hodnoty NaN jsou formátována pomocí velkých písmen.
+   Specifikátor formátu /převodu %F je nyní podporován. Je funkčně ekvivalentní specifikátoru formátu %f s tím rozdílem, že nekonečna a nans jsou formátovány velkými písmeny.
 
-   V předchozích verzích byla implementace použita k analýze F a N jako modifikátorů délky. Toto chování bylo vráceno zpět do stáří segmentů segmentů adres: Tyto modifikátory délky byly použity k označení daleko a blízko ukazatelů v uvedeném pořadí, jako v% FP nebo% NS. Toto chování bylo odebráno. Pokud dojde k% F, je nyní zpracován jako specifikátor formátu% F; je-li zjištěno% N, je nyní zpracován jako neplatný parametr.
+   V předchozích verzích implementace slouží k analyzovat F a N jako modifikátory délky. Toto chování pochází z doby segmentovaných adresních prostorů: tyto modifikátory délky byly použity k označení ukazatelů vzdálených a blízkých, jako v %Fp nebo %Ns. Toto chování bylo odebráno. Pokud je %F zjištěn, je nyní považován za specifikátor formátu %F. Pokud je zjištěn %N, je nyní považován za neplatný parametr.
 
-- **Formátování exponentu**
+- **Exponent formátování**
 
-   Specifikátory formátu% e a% E naformátují číslo s plovoucí desetinnou čárkou jako Desítková mantisa a exponent. Specifikátory formátu% g a% G také formátuje čísla v tomto formuláři v některých případech. V předchozích verzích by CRT vždy generovala řetězce se třemi číslicemi exponentů. `printf("%e\n", 1.0)` například 1.000000 tisk e + 000, což nebylo správné. Jazyk C vyžaduje, aby se exponent reprezentovat jenom s jedním nebo dvěma číslicemi, takže se vytisknou jenom dvě číslice.
+   The %e and %E format specifiers format a floating point number as a decimal mantissa and exponent. Specifikatory formátu %g a %G také v některých případech formátují čísla v tomto formuláři. V předchozích verzích crt by vždy generovat řetězce s třímístné exponenty. Například `printf("%e\n", 1.0)` by vytisknout 1.000000e+000, což bylo nesprávné. C vyžaduje, aby pokud exponent je reprezentovat pouze jednu nebo dvě číslice, pak pouze dvě číslice mají být vytištěny.
 
-   V aplikaci Visual Studio 2005 byl přidán globální přepínač pro shodu: [_set_output_format](../c-runtime-library/set-output-format.md). Program by mohl zavolat tuto funkci s argumentem _TWO_DIGIT_EXPONENT, aby bylo možné povolit vyhovující vytisknutí exponentu. Výchozí chování bylo změněno do režimu tisku exponentu vyhovujícího standardům.
+   V sadě Visual Studio 2005 byl přidán přepínač globální shody: [_set_output_format](../c-runtime-library/set-output-format.md). Program může tuto funkci volat s argumentem _TWO_DIGIT_EXPONENT, aby umožnil odpovídající exponentní tisk. Výchozí chování bylo změněno na exponentní režim standardy.
 
-- **Ověřování řetězce formátu**
+- **Ověření formátovacího řetězce**
 
-   V předchozích verzích funkce `printf` a `scanf` tiše přijímají mnoho neplatných formátovacích řetězců, někdy s neobvyklými účinky. Například% hlhlhld by měl být považován za% d. Všechny neplatné řetězce formátu se teď považují za neplatné parametry.
+   V předchozích `printf` verzích `scanf` a funkce by tiše přijmout mnoho neplatný formát řetězce, někdy s neobvyklé efekty. Například %hlhlhld by bylo považováno za %d. Všechny neplatné formátovací řetězce jsou nyní považovány za neplatné parametry.
 
-- **ověřování řetězců v režimu fopen**
+- **ověření řetězce režimu fopen**
 
-   V předchozích verzích `fopen` rodina funkcí tiše přijala některé neplatné řetězce režimu, jako je například `r+b+`. Nyní jsou zjištěny neplatné řetězce režimu a zpracovány jako neplatné parametry.
+   V předchozích verzích `fopen` rodina funkcí tiše přijala některé řetězce `r+b+`neplatného režimu, například . Řetězce neplatného režimu jsou nyní rozpoznány a považovány za neplatné parametry.
 
 - **_O_U8TEXT režim**
 
-   Funkce [_setmode](../c-runtime-library/reference/setmode.md) nyní správně hlásí režim pro datové proudy otevřené v režimu in_O_U8TEXT. V předchozích verzích knihovny by se takové datové proudy nahlásily jako otevřené v _O_WTEXT.
+   Funkce [_setmode](../c-runtime-library/reference/setmode.md) nyní správně hlásí režim pro datové proudy otevřené in_O_U8TEXT režimu. V předchozích verzích knihovny by hlásit takové datové proudy jako otevření v _O_WTEXT.
 
-   Toto je zásadní změna, pokud váš kód interpretuje _O_WTEXT režim pro datové proudy, kde kódování je UTF-8. Pokud vaše aplikace nepodporuje UTF_8, zvažte přidání podpory pro toto stále běžné kódování.
+   Toto je narušující změna, pokud váš kód interpretuje _O_WTEXT režim pro datové proudy, kde kódování je UTF-8. Pokud vaše aplikace nepodporuje UTF_8, zvažte přidání podpory pro toto stále běžnější kódování.
 
 - **snprintf a vsnprintf**
 
-   Funkce [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) a [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) jsou nyní implementovány. Starší kód často poskytuje definice verze makra těchto funkcí, protože nebyly implementovány knihovnou CRT, ale již nejsou potřeba v novějších verzích. Pokud je [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) nebo [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) definováno jako makro před zahrnutím \<stdio. h >, kompilace nyní selhává s chybou, která indikuje, kde bylo makro definováno.
+   Funkce [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) a [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) jsou nyní implementovány. Starší kód často za předpokladu, definice makro verze těchto funkcí, protože nebyly implementovány knihovnou CRT, ale již nejsou potřebné v novějších verzích. Pokud [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) nebo [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) je definován \<jako makro před zahrnutím stdio.h>, kompilace nyní selže s chybou, která označuje, kde bylo makro definováno.
 
-   Běžným řešením tohoto problému je odstranit jakékoliv deklarace `snprintf` nebo `vsnprintf` v uživatelském kódu.
+   Za normálních okolností je oprava tohoto `snprintf` problému `vsnprintf` odstranit všechny deklarace nebo v uživatelském kódu.
 
-- **tmpnam generuje použitelné názvy souborů.**
+- **tmpnam generuje použitelné názvy souborů**
 
-   V předchozích verzích funkce `tmpnam` a `tmpnam_s` vygenerovaly názvy souborů v kořenovém adresáři jednotky (například \sd3c.). Tyto funkce teď v dočasném adresáři generují použitelné cesty k názvům souborů.
+   V předchozích `tmpnam` verzích `tmpnam_s` a funkce generované názvy souborů v kořenovém adresáři jednotky (například \sd3c.). Tyto funkce nyní generují použitelné cesty názvů souborů v dočasném adresáři.
 
-- **Zapouzdření souborů**
+- **Zapouzdření souboru**
 
-   V předchozích verzích byl kompletní typ souboru definován veřejně v \<stdio. h >, takže bylo možné, aby uživatelský kód dosáhl do souboru a upravil jeho vnitřní části. Knihovna byla změněna tak, aby se skryly podrobnosti implementace. V rámci této změny soubor, jak je definováno v \<stdio. h > je nyní neprůhledný typ a jeho členové jsou nepřístupní mimo samotný CRT.
+   V předchozích verzích byl celý typ \<SOUBORu veřejně definován v stdio.h>, takže bylo možné, aby se uživatelský kód dostal do SOUBORU a upravil jeho vnitřní. Knihovna byla změněna tak, aby skryla podrobnosti implementace. Jako součást této změny FILE, \<jak je definováno v stdio.h> je nyní neprůhledný typ a jeho členy jsou nepřístupné z mimo CRT sám.
 
 - **_outp a _inp**
 
    Funkce [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md)a [_inpd](../c-runtime-library/inp-inpw-inpd.md) byly odebrány.
 
-#### <a name="stdlibh-malloch-and-sysstath"></a>\<Stdlib. h >, \<\. h > a \<sys/stat. h >
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h \<> a sys/stat.h>
 
 - **strtof a wcstof**
 
-   Funkce `strtof` a `wcstof` se nepovedlo nastavit `errno` na ERANGE, když se hodnota nedá reprezentovat jako float. Tato chyba byla specifická pro tyto dvě funkce; funkce `strtod`, `wcstod`, `strtold`a `wcstold` nebyly nijak ovlivněny. Tento problém byl opraven a je zásadní změnou v modulu runtime.
+   Funkce `strtof` `wcstof` a se `errno` nepodařilo nastavit eRANGE, když hodnota nebyla rezivovatelná jako float. Tato chyba byla specifická pro tyto dvě funkce; `strtod` `wcstod`nebyly `strtold` `wcstold` ovlivněny . Tento problém byl opraven a je změna za běhu přerušení.
 
-- **Funkce zarovnaného přidělení**
+- **Zarovnané alokační funkce**
 
-   V předchozích verzích funkce zarovnané alokace (`_aligned_malloc`, `_aligned_offset_malloc`atd.) by v tichosti přijímaly požadavky na blok s zarovnáním 0. Požadované zarovnání musí být mocninou hodnoty 2, která nemá hodnotu true nula. Požadované zarovnání 0 se teď považuje za neplatný parametr. Tento problém byl opraven a je zásadní změnou v modulu runtime.
+   V předchozích verzích by zarovnány alokační funkce (`_aligned_malloc`, `_aligned_offset_malloc`, atd.) tiše přijímaly požadavky na blok se zarovnáním 0. Požadované zarovnání musí být mocninu dvou, což neplatí pro nulu. Požadované zarovnání 0 je nyní považováno za neplatný parametr. Tento problém byl opraven a je změna za běhu přerušení.
 
 - **Funkce haldy**
 
-   Byly odebrány funkce `_heapadd`, `_heapset`a `_heapused`. Tyto funkce nebyly funkční, protože CRT byla aktualizována, aby používala haldu systému Windows.
+   Funkce `_heapadd` `_heapset`, `_heapused` a byly odebrány. Tyto funkce byly nefunkční od CRT byl aktualizován na haldu systému Windows.
 
-- **smallheap**
+- **malá halda**
 
-   Možnost odkazu `smallheap` byla odebrána. Viz [Možnosti odkazů](../c-runtime-library/link-options.md).
+   Možnost `smallheap` propojení byla odebrána. Viz [Možnosti propojení](../c-runtime-library/link-options.md).
 
-#### <a name="stringh"></a>\<String. h >
+#### <a name="stringh"></a>\<string.h>
 
 - **wcstok**
 
-   Signatura funkce `wcstok` se změnila tak, aby odpovídala hodnotám, které vyžaduje standard jazyka C. V předchozích verzích knihovny byl podpis této funkce:
+   Podpis funkce `wcstok` byl změněn tak, aby odpovídal tomu, co je požadováno standardem C. V předchozích verzích knihovny byl podpis této funkce:
 
     ```cpp
     wchar_t* wcstok(wchar_t*, wchar_t const*)
     ```
 
-   Používá interní kontext pro vlákno ke sledování stavu napříč voláními, jak je to pro `strtok`provedeno. Funkce má nyní signaturu `wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**)`a vyžaduje volajícímu předat kontext jako třetí argument funkce.
+   Používá interní kontext pro vlákno ke sledování stavu mezi voláními, jak je tomu u . `strtok` Funkce má nyní `wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**)`podpis a vyžaduje, aby volající předat kontext jako třetí argument funkce.
 
-   Byla přidána nová funkce `_wcstok` se starým podpisem pro usnadnění přenosu. Při kompilování C++ kódu existuje také vložené přetížení `wcstok`, které má starý podpis. Toto přetížení je deklarováno jako zastaralé. V kódu jazyka C můžete define_CRT_NON_CONFORMING_WCSTOK, že `_wcstok` použít místo `wcstok`.
+   Byla `_wcstok` přidána nová funkce se starým podpisem pro usnadnění přenosu. Při kompilaci kódu Jazyka C++ je také `wcstok` vřádkové přetížení, které má starý podpis. Toto přetížení je deklarováno jako zastaralé. V kódu C, můžete `_wcstok` define_CRT_NON_CONFORMING_WCSTOK způsobit použití `wcstok`místo .
 
-#### <a name="timeh"></a>\<Time. h >
+#### <a name="timeh"></a>\<time.h>
 
 - **clock**
 
-   V předchozích verzích byla funkce [Clock](../c-runtime-library/reference/clock.md) implementována pomocí rozhraní API systému Windows [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). V této implementaci byla funkce hodin citlivá na systémový čas, a proto nebyla nutně monotónní. Funkce Clock se znovu implementovala z podmínek [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) a teď je monotónní.
+   V předchozích verzích byla funkce [hodiny](../c-runtime-library/reference/clock.md) implementována pomocí rozhraní API systému Windows [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). S touto implementací byla funkce hodin citlivá na systémový čas, a proto nebyla nutně monotónní. Funkce hodiny byla znovu implementována z hlediska [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) a je nyní monotónní.
 
 - **fstat a _utime**
 
-   V předchozích verzích funkce [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)a [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) zpracovávají letní čas nesprávně. Před Visual Studio 2013 všechny tyto funkce nesprávně upravily standardní časové časy, jako kdyby byly v letním čase.
+   V předchozích verzích [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)a [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) funkce nesprávně zpracovávají letní čas. Před Visual Studio 2013 všechny tyto funkce nesprávně upraveny standardní čas, jako by byly v letním čase.
 
-   V Visual Studio 2013 byl problém vyřešen v **_stat** rodině funkcí, ale podobné problémy v **fstat** **_utime** a rodinám funkcí nebyly opraveny. Tato částečná oprava vedla k problémům z důvodu nekonzistence mezi funkcemi. **Fstat** a **_utime** řady funkcí byly nyní opraveny, takže všechny tyto funkce nyní zpracovávají letní čas správně a konzistentně.
+   V sadě Visual Studio 2013 byl problém vyřešen v **_stat** rodiny funkcí, ale podobné problémy v **fstat** a **_utime** rodiny funkcí nebyly opraveny. Tato částečná oprava vedla k problémům kvůli nekonzistenci mezi funkcemi. **Fstat** a **_utime** rodiny funkcí byly nyní opraveny, takže všechny tyto funkce nyní zpracovávají letní čas správně a konzistentně.
 
 - **asctime**
 
-   V předchozích verzích [asctime](../c-runtime-library/reference/asctime-wasctime.md) funkce odvolala jednociferné číslo dnů s úvodní nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby tyto dny byly doplněny na počáteční místo, jak je uvedeno v `Fri Jun  6 08:00:00 2014`. Tento problém byl opraven.
+   V předchozích verzích by funkce [asctime](../c-runtime-library/reference/asctime-wasctime.md) vymezila jednociferné dny s počáteční nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby tyto dny byly doplněny `Fri Jun  6 08:00:00 2014`úvodním prostorem, jako v . Tento problém byl opraven.
 
 - **strftime a wcsftime**
 
-   Funkce `strftime` a `wcsftime` nyní podporují specifikátory formátu% C,% D,% e,% F,% g,% G,% h,% n,% r,% R,% t,% T,% u a% V. Kromě toho modifikátory E a O jsou analyzovány, ale ignorovány.
+   Funkce `strftime` `wcsftime` a nyní podporují specifikátory formátu %C, %D, %e, %F, %g, %G, %h, %n, %r, %r, %t, %T, %u a %V. Modifikátory E a O jsou navíc analyzovány, ale ignorovány.
 
-   Specifikátor formátu% c je zadán jako označení "vhodné reprezentace data a času" pro aktuální národní prostředí. V národním prostředí jazyka C musí být tato reprezentace stejná jako `%a %b %e %T %Y`, což je stejný tvar, který je vytvořen pomocí `asctime`. V předchozích verzích specifikátor formátu% c nesprávně formátované časy pomocí `MM/DD/YY HH:MM:SS` reprezentace. Tento problém byl opraven.
+   Specifikátor formátu %c je určen jako vytvoření "vhodné reprezentace data a času" pro aktuální národní prostředí. V národním prostředí C musí být toto `%a %b %e %T %Y`znázornění stejné jako ve `asctime`stejném formuláři, který vytváří . V předchozích verzích specifikátor formátu %c nesprávně `MM/DD/YY HH:MM:SS` formátoval časy pomocí reprezentace. Tento problém byl opraven.
 
 - **timespec a TIME_UTC**
 
-   Hlavička \<Time. h > nyní definuje typ `timespec` a `timespec_get` funkce ze standardu C11. Kromě toho je nyní definováno makro TIME_UTC pro použití s funkcí `timespec_get`. Tato aktualizace je zásadní změnou kódu, který má konfliktní definici pro některý z těchto identifikátorů.
+   Hlavička \<time.h> nyní `timespec` definuje `timespec_get` typ a funkci ze standardu C11. Kromě toho je nyní definováno `timespec_get` TIME_UTC makro pro použití s funkcí. Tato aktualizace je narušující změna pro kód, který má konfliktní definici pro některý z těchto identifikátorů.
 
 - **CLOCKS_PER_SEC**
 
-   CLOCKS_PER_SEC makro se nyní rozbalí na celé číslo typu `clock_t`, jak to vyžaduje jazyk C.
+   Makro CLOCKS_PER_SEC se nyní rozbalí na `clock_t`celé číslo typu , jak to vyžaduje jazyk C.
 
-####  <a name="c-standard-library"></a><a name="BK_STL"></a>C++ Standardní knihovna
+#### <a name="c-standard-library"></a><a name="BK_STL"></a>Standardní knihovna C++
 
-Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (_MSC_VER je makro, které obsahuje hlavní verzi kompilátoru, například 1800 pro Visual Studio 2013.) Tato kontrola nedokáže detekovat kombinování knihoven DLL a nemůže detekovat kombinování, které zahrnuje Visual Studio 2008 nebo starší.
+Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (_MSC_VER je makro, které obsahuje hlavní verzi kompilátoru – například 1800 pro Visual Studio 2013.) Tato kontrola nemůže rozpoznat míchání dll a nelze zjistit míchání, které zahrnuje Visual Studio 2008 nebo starší.
 
-- **C++Soubory zahrnuté do standardní knihovny**
+- **Standardní knihovna c++ obsahuje soubory**
 
-   V hlavičkách C++ standardní knihovny byly provedeny některé změny ve struktuře include. C++Standardní hlavičky knihovny můžou zahrnovat jiné neurčené způsoby. Obecně byste měli napsat kód tak, aby pečlivě zahrnoval všechny hlavičky, které potřebuje podle C++ standardu, a nespoléhá se na to, které C++ standardní hlavičky knihovny obsahují další C++ standardní hlavičky knihovny. Díky tomu je kód přenosný napříč různými verzemi a platformami. Alespoň dvě změny hlaviček v aplikaci Visual Studio 2015 ovlivňují uživatelský kód. První \<řetězec > již nezahrnuje \<iterátor >. Za druhé \<řazené kolekce členů > nyní deklaruje `std::array` bez zahrnutí všech \<pole >, který může přerušit kód prostřednictvím následující kombinace konstrukcí kódu: váš kód má proměnnou s názvem Array a máte pomocí oboru názvů std; použitou direktivu C++ Standard, a zahrnete standardní hlavičku knihovny (například \<funkční >), která obsahuje \<řazené kolekce členů >, který nyní deklaruje `std::array`.
+   Některé změny byly provedeny do struktury zahrnutí v záhlaví standardní knihovny C++. Záhlaví standardní knihovny jazyka C++ se mohou vzájemně začleňovat nespecifikovanými způsoby. Obecně byste měli napsat kód tak, aby pečlivě zahrnuje všechny hlavičky, které potřebuje podle standardu C++ a nespoléhá na které hlavičky standardní knihovny C++ obsahují další hlavičky standardní knihovny C++. Díky tomu je kód přenosný napříč verzemi a platformami. Alespoň dvě změny záhlaví ve Visual Studiu 2015 ovlivní uživatelský kód. Za \<prvé, řetězec \<> již neobsahuje> iterátoru. Za \<druhé, n-tice> nyní deklaruje `std::array` bez \<zahrnutí všech> pole, které mohou přerušit kód prostřednictvím následující kombinace konstrukce kódu: váš kód má proměnnou s názvem "pole" a máte using-direktivu "pomocí oboru názvů std;" a zahrnout hlavičku standardní knihovny Jazyka C++ (například \<funkční>), která zahrnuje \<> n-tice, která nyní deklaruje `std::array`.
 
 - **steady_clock**
 
-   \<Chrono > implementace [steady_clock](../standard-library/steady-clock-struct.md) se změnila tak, aby splňovala C++ standardní požadavky pro Steadiness a monotonicity. `steady_clock` je nyní založen na [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) a `high_resolution_clock` je nyní definicí pro `steady_clock`. V důsledku toho je v sadě Visual Studio `steady_clock::time_point` nyní definice typu pro `chrono::time_point<steady_clock>`; to však není nutně případ pro jiné implementace.
+   Chrono \<> implementace [steady_clock](../standard-library/steady-clock-struct.md) se změnila tak, aby splňovala požadavky standardu C++ na stálost a monotónnost. `steady_clock`Je nyní založen na [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) a `high_resolution_clock` `steady_clock`je nyní typedef pro . V důsledku toho v `steady_clock::time_point` sadě Visual Studio `chrono::time_point<steady_clock>`je nyní typedef pro ; to však nemusí být nutně případ pro jiné implementace.
 
-- **přidělování a const**
+- **alokátory a const**
 
-   Pro přijetí argumentů const na obou stranách teď vyžadujeme porovnání rovnosti a nerovnosti přidělování. Pokud vaše přidělování definují tyto operátory jako toto,
+   Nyní požadujeme, aby srovnání rovnosti a nerovnosti alokátorů akceptovně akceptovalo konstituční argumenty na obou stranách. Pokud alokátory definují tyto operátory takto,
 
     ```cpp
     bool operator==(const MyAlloc& other)
     ```
 
-   pak byste je měli aktualizovat a deklarovat jako členy const:
+   pak byste je měli aktualizovat a prohlásit je za členy const:
 
     ```cpp
     bool operator==(const MyAlloc& other) const
     ```
 
-- **elementy const**
+- **const prvky**
 
-   C++ Standard má vždycky zakázané kontejnery elementů const (například Vector\<const t > nebo nastavte\<const t >). Visual Studio 2013 a dříve přijaly takové kontejnery. V aktuální verzi nelze tyto kontejnery zkompilovat.
+   Standard C++ má vždy zakázané kontejnery const\<prvků (například\<vector const T> nebo set const T>). Visual Studio 2013 a dříve přijal takové kontejnery. V aktuální verzi tyto kontejnery nepodaří zkompilovat.
 
-- **std:: přidělování::d eallocate**
+- **std::alokátor::deallocate**
 
-   V Visual Studio 2013 a dřívějších `std::allocator::deallocate(p, n)` ignorován argument předaný pro *n*.  C++ Standard vždy vyžadoval, aby hodnota *n* musela být rovna hodnotě předané jako první argument vyvolání `allocate`, která vrátila hodnotu *p*. V aktuální verzi je však zkontrolována hodnota *n* . Kód, který předává argumenty pro *n* , které se liší od toho, co vyžaduje standard, může za běhu selhat.
+   V sadě Visual Studio 2013 a starší `std::allocator::deallocate(p, n)` ignoroval argument předaný pro *n*.  Standard Jazyka C++ vždy vyžadoval, aby *se n* rovnalo hodnotě předané jako první argument `allocate` vyvolání, které bylo vráceno. *p* V aktuální verzi je však zkontrolována hodnota *n.* Kód, který předává argumenty pro *n,* které se liší od toho, co vyžaduje standard, může za běhu chybět.
 
 - **hash_map a hash_set**
 
-   Soubory hlaviček, které nejsou standardní \<hash_map > a \<hash_set > jsou v rámci sady Visual Studio 2015 zastaralé a v budoucí verzi budou odebrány. Místo toho použijte \<unordered_map > a \<unordered_set.
+   Nestandardní soubory \<hlaviček \<hash_map> a hash_set> se v sadě Visual Studio 2015 zastaraly a budou odebrány v budoucí verzi. Místo \<toho \<použijte unordered_map> a unordered_set>.
 
-- **komparátorů a – operátor ()**
+- **komparátory a operátor()**
 
-   Asociativní kontejnery (\<mapa > Rodina) nyní vyžadují, aby jejich komparátorů měly operátory volání funkce, které lze volat jako const. Následující kód v deklaraci třídy komparátor nyní nemůže kompilovat:
+   Asociativní kontejnery \<(mapa> rodiny) nyní vyžadují, aby jejich komparátory měly operátory volání funkce const callable. Následující kód v deklaraci třídy komparátoru se nyní nepodaří zkompilovat:
 
     ```cpp
     bool operator()(const X& a, const X& b)
@@ -357,9 +357,9 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
 - **vlastnosti typu**
 
-   Odebraly se staré názvy vlastností typu z dřívější verze C++ konceptu Standard. Tyto změny byly změněny v C++ 11 a byly aktualizovány na hodnoty C++ 11 v aplikaci Visual Studio 2015. V následující tabulce jsou uvedeny staré a nové názvy.
+   Staré názvy vlastností typu ze starší verze konceptu c++ standardu byly odebrány. Tyto byly změněny v Jazyce C ++ 11 a byly aktualizovány na hodnoty C++ 11 v sadě Visual Studio 2015. V následující tabulce jsou uvedeny staré a nové názvy.
 
-   |Starý název|Nový název|
+   |Starý název|Nové jméno|
    |--------------|--------------|
    |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
@@ -381,57 +381,57 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
    |has_trivial_move_assign|is_trivially_move_assignable|
    |has_trivial_destructor|is_trivially_destructible|
 
-- **spustit:: Any a Launch:: Sync – zásady**
+- **spuštění::any a launch::zásady synchronizace**
 
-   Nestandardní `launch::any` a zásady `launch::sync` se odebraly. Místo toho použijte pro `launch::any``launch:async | launch:deferred`. Pro `launch::sync`použijte `launch::deferred`. Viz [Spustit výčet](../standard-library/future-enums.md#launch).
+   Nestandardní `launch::any` a `launch::sync` zásady byly odstraněny. Místo toho `launch::any`pro `launch:async | launch:deferred`, použijte . Pro `launch::sync`použití `launch::deferred`. Viz [spuštění výčtu](../standard-library/future-enums.md#launch).
 
-####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a>MFC a ATL
+#### <a name="mfc-and-atl"></a><a name="BK_MFC"></a>Knihovny MFC a knihovny ATL
 
 - **Knihovna MFC (Microsoft Foundation Classes)**
 
-   už není zahrnutý v typické instalaci Visual studia z důvodu jeho velké velikosti. Chcete-li nainstalovat knihovnu MFC, zvolte možnost **vlastní** instalace v instalačním programu sady Visual Studio 2015. Pokud již máte nainstalovánu aplikaci Visual Studio 2015, můžete znovu nainstalovat knihovnu MFC spuštěním instalačního programu sady **Visual Studio** . Zvolte možnost **vlastní** instalace a pak zvolte položku **Microsoft Foundation Classes**. Instalaci sady **Visual Studio** můžete spustit z ovládacích **panelů** ovládací panely **programy a funkce**nebo z instalačního média nástroje.
+   již není součástí "Typické" instalace sady Visual Studio z důvodu jeho velké velikosti. Chcete-li nainstalovat knihovnu MFC, zvolte možnost **Vlastní** instalace v nastavení Visual Studia 2015. Pokud už máte nainstalovanou Visual Studio 2015, můžete nainstalovat knihovnu MFC dalším spuštěním nastavení **sady Visual Studio.** Zvolte možnost **Vlastní** instalace a pak zvolte **Třídy microsoft foundation**. Nastavení **sady Visual Studio** můžete spustit v ovládacím **panelu** **Programy a funkce**nebo z instalačního média.
 
    Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.
 
-####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>Concurrency Runtime
+#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>Doba runtime souběžnosti
 
-- **Dej makro z Windows. h v konfliktu s concurrency:: Context:: yield**
+- **Výnosové makro ze systému Windows.h v konfliktu s souběžnou měnou::Kontext::Výnos**
 
-   Concurrency Runtime dřív používal `#undef` k zrušení definice makra yield, aby nedocházelo ke konfliktům mezi makrem yield definovaným v systému Windows. h h a funkcí `concurrency::Context::Yield`. Tato `#undef` byla odebrána a bylo přidáno nové Nekolidující ekvivalentní volání rozhraní API [:: Context:: YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) . Chcete-li vyřešit konflikty s výsledkem, můžete buď aktualizovat kód pro volání funkce `YieldExecution`, nebo obklopit název `Yield` funkce závorkami na webech volání, jako v následujícím příkladu:
+   Souběžnost Runtime dříve `#undef` používá k nedefinování yield makro, aby se zabránilo konfliktům `concurrency::Context::Yield` mezi yield makro definované v Windows.h h a funkce. Tato `#undef` byla odebrána a byl přidán nový nekonfliktní ekvivalentní volání rozhraní API [souběžnosti::Context::YieldExecution.](../parallel/concrt/reference/context-class.md#yieldexecution) Chcete-li obejít konflikty s Yield, můžete `YieldExecution` buď aktualizovat kód `Yield` pro volání funkce místo, nebo obklopit název funkce s závorky na místech volání, jako v následujícím příkladu:
 
     ```cpp
     (concurrency::Context::Yield)();
     ```
 
-## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Vylepšení shody kompilátoru v aplikaci Visual Studio 2015
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Vylepšení shody kompilátoru v sadě Visual Studio 2015
 
-Při upgradu kódu z předchozích verzí může dojít také k chybám kompilátoru, které jsou způsobeny vylepšeními shody provedenými v aplikaci Visual Studio 2015. Tato vylepšení neruší binární kompatibilitu z dřívějších verzí sady Visual Studio, ale mohou způsobit chyby kompilátoru, kde žádná nebyla vygenerována dříve. Další informace najdete v tématu [ C++ co je nového 2003 až 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
+Při upgradu kódu z předchozích verzí může dojít také k chybám kompilátoru, které jsou z důvodu zlepšení shody provedené v sadě Visual Studio 2015. Tato vylepšení neporušují binární kompatibilitu z dřívějších verzí sady Visual Studio, ale mohou vytvářet chyby kompilátoru, kde žádné byly emitovány dříve. Další informace naleznete v [tématu Visual C++ What's New 2003 až 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
-V rámci sady Visual Studio 2015 může někdy změna způsobu, jakým je v souladu s kompilátorem, někdy změnit způsob, jakým kompilátor rozumí vašemu existujícímu zdrojovému kódu. V důsledku toho může dojít k výskytu nových nebo různých chyb během sestavení nebo dokonce i rozdílů v kódu, které dříve sestavily a zdály se pracovat správně.
+V sadě Visual Studio 2015 probíhající vylepšení shody kompilátoru může někdy změnit způsob, jakým kompilátor chápe váš existující zdrojový kód. V důsledku toho může dojít k nové nebo různé chyby během sestavení nebo dokonce behaviorální rozdíly v kódu, který dříve sestavené a zdálo se, že správně spustit.
 
-Naštěstí tyto rozdíly mají malý nebo žádný vliv na většinu vašeho zdrojového kódu. V případě, že je pro vyřešení těchto rozdílů nutný zdrojový kód nebo jiné změny, jsou opravy velmi malé a musí být přímo předávány. Zahrnuli jsme spoustu příkladů dříve přijatelného zdrojového kódu, který může být potřeba změnit *(před)* , a opravy, které je třeba opravit *(po)* .
+Naštěstí tyto rozdíly mají malý nebo žádný vliv na většinu zdrojového kódu. Pokud zdrojový kód nebo jiné změny jsou potřebné k řešení těchto rozdílů, opravy mají tendenci být malé a přímočaré. Zahrnuli jsme mnoho příkladů dříve přijatelného zdrojového kódu, který může být nutné změnit *(před)* a opravy, které je opravují *(po)*.
 
-I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty sestavení, nemají vliv na binární kompatibilitu mezi aktualizacemi verzí sady Visual Studio. Zásadní *Změna* je mnohem závažná a může mít vliv na binární kompatibilitu, ale u těchto typů binárních rozdílů se vyskytuje pouze mezi hlavními verzemi sady Visual Studio, například mezi Visual Studio 2013 a Visual Studio 2015. Informace o nejnovějších změnách, ke kterým došlo mezi Visual Studio 2013 a Visual Studio 2015, najdete v článku [změny shody sady Visual studio 2015](#VC_2015).
+Přestože tyto rozdíly mohou ovlivnit zdrojový kód nebo jiné artefakty sestavení, nemají vliv na binární kompatibilitu mezi aktualizacemi verzí sady Visual Studio. *Narušující změna* je závažnější a může ovlivnit binární kompatibilitu, ale tyto druhy binární kompatibility přestávky dojít pouze mezi hlavní verze sady Visual Studio, například mezi Visual Studio 2013 a Visual Studio 2015. Informace o narušujících změnách, ke kterým došlo mezi Visual Studio 2013 a Visual Studio 2015, naleznete v [tématu Visual Studio 2015 Změny shody](#VC_2015).
 
-- [Vylepšení shody v aplikaci Visual Studio 2015](#VS_RTM)
+- [Vylepšení shody v sadě Visual Studio 2015](#VS_RTM)
 
-- [Vylepšení shody v aktualizaci Update 1](#VS_Update1)
+- [Vylepšení shody v aktualizaci 1](#VS_Update1)
 
-- [Vylepšení shody v aktualizaci Update 2](#VS_Update2)
+- [Vylepšení shody v aktualizaci 2](#VS_Update2)
 
-- [Vylepšení shody v aktualizaci Update 3](#VS_Update3)
+- [Vylepšení shody v aktualizaci 3](#VS_Update3)
 
-###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Vylepšení shody v aplikaci Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Vylepšení shody v sadě Visual Studio 2015
 
-- /Zc: forScope-Option
+- /Zc:forScope- volba
 
-   Možnost kompilátoru `/Zc:forScope-` je zastaralá a v budoucí verzi se odebere.
+   Možnost `/Zc:forScope-` kompilátoru je zastaralé a budou odebrány v budoucí verzi.
 
     ```cpp
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   Obvykle se tato možnost použila, aby povolovala nestandardní kód, který používá proměnné smyčky za bodem, kde, podle standardu, by měl být mimo rozsah. Bylo nutné pouze při kompilaci s možností `/Za`, od bez `/Za`, použití proměnné for Loop po konci smyčky je vždy povoleno. Pokud nezáleží na dodržování standardů (například pokud váš kód není určen pro přenos do jiných kompilátorů), můžete vypnout možnost `/Za` (nebo nastavit vlastnost **Zakázat jazykové rozšíření** na hodnotu **ne**). Pokud se zajímáte o zápis přenosného kódu kompatibilního s normami, měli byste přepsat kód tak, aby odpovídal standardu přesunutím deklarace těchto proměnných do bodu mimo smyčku.
+   Obvykle tato možnost byla použita k povolení nestandardní kód, který používá proměnné smyčky po bodu, kde podle standardu, měly být mimo rozsah. Bylo to nutné pouze tehdy, když jste zkompilovali s `/Za` možností, protože bez `/Za`, použití proměnné smyčky for po skončení smyčky je vždy povoleno. Pokud se nestaráte o shodu standardů (například pokud váš kód není určen k `/Za` přenositelnosti na jiné kompilátory), můžete tuto možnost vypnout (nebo nastavit vlastnost **Zakázat rozšíření jazyka** na **ne).** Pokud vám záleží na psaní přenosný, standardy kompatibilní kód, měli byste přepsat kód tak, aby odpovídalstandard přesunutím deklarace těchto proměnných do bodu mimo smyčky.
 
     ```cpp
     // C2065 expected
@@ -443,15 +443,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- `/Zg` – možnost kompilátoru
+- `/Zg`možnost kompilátoru
 
-   Možnost kompilátoru `/Zg` (generovat prototypy funkcí) už není dostupná. Tato možnost kompilátoru byla dřív zastaralá.
+   Možnost `/Zg` kompilátoru (Generovat prototypy funkcí) již není k dispozici. Tato možnost kompilátoru byla dříve zastaralá.
 
-- Pomocí příkazu/CLI z příkazového řádku s C++MSTest. exe už nemůžete spouštět testy jednotek s/CLI. Místo toho použijte VSTest. Console. exe. Viz [Možnosti příkazového řádku VSTest. Console. exe](/visualstudio/test/vstest-console-options).
+- Již nelze spustit testy částí s C++/CLI z příkazového řádku s mstest.exe. Místo toho použijte vstest.console.exe. Viz [možnosti příkazového řádku VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
-- **mutable – klíčové slovo**
+- **proměnlivé klíčové slovo**
 
-   Specifikátor třídy **měnitelného** úložiště již není povolen v místech, kde byla dříve zkompilována bez chyby. Nyní kompilátor poskytuje chybu C2071 (neplatná třída úložiště). Podle standardu může být **proměnlivý** specifikátor použit pouze pro názvy datových členů třídy a nelze jej použít pro názvy deklarované jako const nebo static a nelze jej použít pro členy odkazu.
+   Specifikátor třídy **proměnlivé** úložiště již není povolen v místech, kde dříve zkompiloval bez chyby. Nyní kompilátor poskytuje chybu C2071 (třída neplatné úložiště). Podle standardu lze **proměnlivý** specifikátor použít pouze na názvy datových členů třídy a nelze jej použít na názvy deklarované jako const nebo statické a nelze je použít na referenční členy.
 
    Zvažte například následující kód:
 
@@ -462,17 +462,17 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Předchozí verze kompilátoru to přijaly, ale teď kompilátor poskytuje tuto chybu:
+   Předchozí verze kompilátoru přijal to, ale nyní kompilátor dává následující chybu:
 
     ```Output
     error C2071: 'S::r': illegal storage class
     ```
 
-   Chybu opravíte tak, že odeberete redundantní klíčové slovo **mutable** .
+   Chcete-li chybu opravit, odeberte redundantní **proměnlivé** klíčové slovo.
 
 - **char_16_t a char32_t**
 
-   Už nemůžete používat `char16_t` ani `char32_t` jako aliasy ve **typedef**, protože tyto typy se teď považují za předdefinované. Pro uživatele a autory knihovny bylo běžné definovat `char16_t` a `char32_t` jako aliasy `uint16_t` a `uint32_t`v uvedeném pořadí.
+   Již nelze použít `char16_t` `char32_t` nebo jako aliasy v **typedef**, protože tyto typy jsou nyní považovány za předdefinované. Bylo běžné, že uživatelé `char16_t` a `char32_t` autoři knihovny definovali a jako aliasy `uint16_t` a `uint32_t`, resp.
 
     ```cpp
     #include <cstdint>
@@ -489,11 +489,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li aktualizovat kód, odeberte deklarace **typedef** a přejmenujte všechny ostatní identifikátory, které s těmito názvy kolidují.
+   Chcete-li aktualizovat kód, odeberte deklarace **typedef** a přejmenujte všechny ostatní identifikátory, které se srazí s těmito názvy.
 
 - **Parametry šablony bez typu**
 
-   Určitý kód, který zahrnuje parametry šablony bez typu, je nyní správně zkontrolován na kompatibilitu typu při zadání explicitních argumentů šablony. Například následující kód byl zkompilován bez chyb v předchozích verzích sady Visual Studio.
+   Určitý kód, který zahrnuje parametry šablony bez typu, je nyní správně zkontrolován na kompatibilitu typů, když zadáte explicitní argumenty šablony. Například následující kód zkompilován bez chyby v předchozích verzích sady Visual Studio.
 
     ```cpp
     struct S1
@@ -514,27 +514,27 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Aktuální kompilátor správně poskytuje chybu, protože typ parametru šablony neodpovídá argumentu šablony (parametr je ukazatel na konstantní člen, ale funkce f není const):
+   Aktuální kompilátor správně poskytuje chybu, protože typ parametru šablony neodpovídá argumentu šablony (parametr je ukazatel na člen const, ale funkce f není const):
 
     ```Output
     error C2893: Failed to specialize function template 'void S2::f(void)'note: With the following template arguments:note: 'C=S1'note: 'Function=S1::f'
     ```
 
-   Chcete-li vyřešit tuto chybu ve vašem kódu, ujistěte se, že typ argumentu šablony, který použijete, odpovídá deklarovanému typu parametru šablony.
+   Chcete-li tuto chybu vyřešit v kódu, ujistěte se, že typ argumentu šablony, který používáte, odpovídá deklarovanému typu parametru šablony.
 
-- **__declspec (zarovnání)**
+- **__declspec(zarovnat)**
 
-   Kompilátor už nepřijímá `__declspec(align)` na funkcích. Tento konstruktor se vždycky ignoruje, ale teď vytvoří chybu kompilátoru.
+   Kompilátor již přijímá `__declspec(align)` funkce. Tato konstrukce byla vždy ignorována, ale nyní vytváří chybu kompilátoru.
 
     ```cpp
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations
     ```
 
-   Chcete-li tento problém vyřešit, odeberte `__declspec(align)` z deklarace funkce. Vzhledem k tomu, že nedošlo k žádnému vlivu, odebrání nemění nic.
+   Chcete-li tento `__declspec(align)` problém vyřešit, odeberte z deklarace funkce. Vzhledem k tomu, že to nemělo žádný účinek, jeho odstranění nic nemění.
 
 - **Zpracování výjimek**
 
-   Zpracovávání výjimek je několik změn. Nejprve objekty výjimky musí být buď kopírovací, nebo pohyblivý. Následující kód byl zkompilován v Visual Studio 2013, ale není zkompilován v aplikaci Visual Studio 2015:
+   Existuje několik změn zpracování výjimek. Za prvé, objekty výjimky musí být kopírovatelné nebo pohyblivé. Následující kód zkompilován ve Visual Studiu 2013, ale nekompiluje se v Sadě Visual Studio 2015:
 
     ```cpp
     struct S
@@ -551,7 +551,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Problémem je, že kopírovací konstruktor je privátní, takže objekt nelze zkopírovat, protože se stane v normálním průběhu zpracování výjimky. Totéž platí, pokud je kopírovací konstruktor deklarovaný jako **explicitní**.
+   Problém je, že konstruktor kopie je soukromý, takže objekt nelze zkopírovat, jak se stane v normálním průběhu zpracování výjimky. Totéž platí, když je konstruktor kopie **deklarován explicitní**.
 
     ```cpp
     struct S
@@ -566,9 +566,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li aktualizovat kód, ujistěte se, že kopírovací konstruktor pro objekt výjimky je **veřejný** a není označen jako **explicitní**.
+   Chcete-li aktualizovat kód, ujistěte se, že konstruktor kopie pro objekt výjimky je **veřejný** a není označen **explicitní**.
 
-   Zachycení výjimky podle hodnoty také vyžaduje zkopírování objektu výjimky. Následující kód byl zkompilován v Visual Studio 2013, ale není zkompilován v aplikaci Visual Studio 2015:
+   Zachycení výjimky podle hodnoty také vyžaduje, aby objekt výjimky byl kopírovatelný. Následující kód zkompilován ve Visual Studiu 2013, ale nekompiluje se v Sadě Visual Studio 2015:
 
     ```cpp
     struct B
@@ -592,7 +592,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Tento problém můžete vyřešit tak, že změníte typ parametru pro **catch** na odkaz.
+   Tento problém můžete vyřešit změnou typu parametru pro **catch** na odkaz.
 
     ```cpp
     catch (D& d)
@@ -602,7 +602,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 - **Řetězcové literály následované makry**
 
-   Kompilátor teď podporuje uživatelsky definované literály. V důsledku toho jsou řetězcové literály následované makry bez použití mezer interpretovány jako uživatelsky definované literály, což může způsobit chyby nebo neočekávané výsledky. Například v předchozích kompilátorech byl následující kód úspěšně zkompilován:
+   Kompilátor nyní podporuje literály definované uživatelem. V důsledku toho řetězcové literály následované makry bez jakýchkoli zasahujících mezer jsou interpretovány jako literály definované uživatelem, které mohou způsobit chyby nebo neočekávané výsledky. Například v předchozích kompilátorech byl úspěšně zkompilován následující kód:
 
     ```cpp
     #define _x "there"
@@ -616,57 +616,57 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Kompilátor interpretuje tento kód jako řetězcový literál "Hello" následovaný makrem, které je rozbaleno do "a", poté dva řetězcové literály byly zřetězeny do jednoho. V aplikaci Visual Studio 2015 Kompilátor interpretuje tuto sekvenci jako literál definovaný uživatelem, ale vzhledem k tomu, že není definována žádná vyhovující uživatelsky definovaná Literálová `_x` definovaná, obsahuje chybu.
+   Kompilátor interpretoval tento kód jako literál řetězce "hello" následovaný makry, které je rozbaleno do "tam", a pak byly dva literály řetězce zřetězeny do jednoho. V sadě Visual Studio 2015 kompilátor interpretuje tuto sekvenci jako literál `_x` definovaný uživatelem, ale protože neexistuje žádná odpovídající uživatelem definovaná literál defined, poskytuje chybu.
 
     ```Output
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found
     note: Did you forget a space between the string literal and the prefix of the following string literal?
     ```
 
-   Chcete-li tento problém vyřešit, přidejte mezeru mezi řetězcový literál a makro.
+   Chcete-li tento problém vyřešit, přidejte mezeru mezi literál řetězce a makro.
 
-- **Sousedící řetězcové literály**
+- **Sousední řetězcové literály**
 
-   Podobně jako v předchozím případě v důsledku souvisejících změn v analýze řetězců, sousedících řetězcových literálů (buď pro řetězce s velkým nebo úzkým znakem ") bez mezer byly interpretovány jako jeden zřetězený řetězec v C++předchozích verzích Visaul. V aplikaci Visual Studio 2015 je nyní nutné přidat prázdné znaky mezi dva řetězce. Například následující kód musí být změněn:
+   Podobně jako předchozí, z důvodu souvisejících změn v analýzě řetězců, sousední řetězcové literály (literály řetězce široký nebo úzký znak) bez jakýchkoli mezer byly interpretovány jako jeden zřetězený řetězec v předchozích verzích Visaul C++. V sadě Visual Studio 2015 je nyní nutné přidat mezery mezi dva řetězce. Například následující kód musí být změněn:
 
     ```cpp
     char * str = "abc""def";
     ```
 
-   Chcete-li tento problém vyřešit, přidejte mezi tyto dva řetězce mezeru:
+   Chcete-li tento problém vyřešit, přidejte mezeru mezi dva řetězce:
 
     ```cpp
     char * str = "abc" "def";
     ```
 
-- **Umístění – nové a odstranit**
+- **Umístění nové a odstranit**
 
-   Byl proveden pokus o změnu operátoru **Delete** , aby byl do souladu s c++ 14 standardem. Podrobnosti o změně standardů najdete v [ C++ podrobnostech o navracení velikosti](https://isocpp.org/files/papers/n3778.html). Změny přidají formu globálního operátoru **Delete** , který přijímá parametr velikosti. Zásadní změna znamená, že pokud jste předtím používali operátor **Delete** se stejnou signaturou (aby odpovídala **umístění New** operator), obdržíte chybu kompilátoru (C2956, ke které dojde v místě, kde se používá umístění New), protože to je pozice v kódu, kde se kompilátor pokusí identifikovat příslušný odpovídající operátor **Delete** .
+   Byla provedena změna operátoru **delete,** aby byl shodou se standardem C++ 14. Podrobnosti o změně standardů lze nalézt na [C ++ velikosti Deallocation](https://isocpp.org/files/papers/n3778.html). Změny přidat formu globální **delete** operátor, který má parametr velikosti. Narušující změna je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (aby **odpovídaly umístění nového** operátoru), obdržíte chybu kompilátoru (C2956, ke kterému dochází v místě, kde se používá umístění nové, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat odpovídající **operátor delete).**
 
-   Funkce `void operator delete(void *, size_t)`a umístění operátoru **Delete** , který odpovídá **umístění New** Function `void * operator new(size_t, size_t)` v c++ 11. Při dealokaci velikosti C++ 14 je tato funkce odstranění nyní *běžnou funkcí zrušení přidělení* (globální operátor **Delete** ). Standardně se vyžaduje, aby při použití umístění nový vyhledala odpovídající funkci DELETE a vyhledala obvyklou funkci zrušení přidělení, program je nesprávně vytvořen.
+   Funkce `void operator delete(void *, size_t)` byla operátor **odstranění umístění** odpovídající umístění **nové** funkce `void * operator new(size_t, size_t)` v C ++ 11. S C ++ 14 velikosti deallocation, tato funkce odstranění je nyní *obvyklé funkce mezera umístění* (globální operátor **odstranění).** Standard vyžaduje, aby v případě, že použití umístění nové vyhledá odpovídající odstranit funkci a najde obvyklou funkci deallocation, program je špatně-tvořil.
 
-   Předpokládejme například, že váš kód definuje **umístění nové** a **odstranění umístění**:
+   Předpokládejme například, že váš kód definuje **nové umístění** a **odstranění umístění**:
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   K tomuto problému dochází z důvodu shody v signaturách funkcí mezi uživatelem definovaným operátorem pro **odstranění umístění** a novým operátorem **odstranění** globální velikosti. Zvažte, zda můžete použít jiný typ než `size_t` pro všechny operátory **New** a **Delete** . Typ `size_t` **typedef** je závislý na kompilátoru; je to **definice** typu **unsigned int** v MSVC. Dobrým řešením je použít Výčtový typ, jako je například tento:
+   K problému dochází z důvodu shody v podpisech funkce mezi operátorem **odstranění umístění,** který jste definovali, a novým operátorem **odstranění** globální velikosti. Zvažte, zda můžete použít `size_t` jiný typ než pro **jakékoli umístění nové** a **odstranit** operátory. Typ `size_t` **typedef** je závislý na kompilátoru; je to **typedef** pro **nepodepsané int** v MSVC. Dobrým řešením je použít výčtový typ, jako je tento:
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   Pak změňte definici **umístění New** a **Delete** , aby se tento typ používal jako druhý argument místo `size_t`. Budete také muset aktualizovat volání do umístění New pro předání nového typu (například pomocí `static_cast<my_type>` pro převod z celočíselné hodnoty) a aktualizace definice **New** a **Delete** pro přetypování zpět na celočíselný typ. Pro tuto chybu nemusíte používat **výčet** . může fungovat i typ třídy s `size_t`ovým členem.
+   Potom změňte definici **umístění nové** a **odstranit** použít tento `size_t`typ jako druhý argument namísto . Budete také muset aktualizovat volání umístění nové předat nový typ (například `static_cast<my_type>` pomocí převést z celé číslo hodnoty) a aktualizovat definici **nové** a **odstranit** přetypování zpět na typ celé ho. Není nutné použít **výčtu** pro toto; typ třídy `size_t` s členem bude také fungovat.
 
-   Alternativním řešením je, že možná budete moct zcela úplně odstranit **nové umístění** . Pokud váš kód používá **nové umístění** k implementaci fondu paměti, kde argument umístění je velikost objektu, který je přidělen nebo odstraněn, může být funkce navrácení prostředků vhodná k nahrazení vlastního kódu vlastního fondu paměti a můžete se zbavit funkcí umístění a stačí použít vlastní operátor **Delete** dvou argumentů namísto funkcí umístění.
+   Alternativním řešením je, že byste mohli být schopni odstranit **umístění nové** úplně. Pokud váš kód používá **nové umístění** k implementaci fondu paměti, kde argument umístění je velikost objektu, který je přidělen nebo odstraněn, pak velikost imlokační funkce může být vhodné nahradit vlastní kód fondu paměti a můžete se zbavit umístění funkce a stačí použít vlastní dva **argumenty odstranit** operátor místo umístění funkce.
 
-   Pokud nechcete kód hned aktualizovat, můžete se vrátit k původnímu chování pomocí možnosti kompilátoru `/Zc:sizedDealloc-`. Použijete-li tuto možnost, funkce odstranění dvou argumentů neexistují a nezpůsobí konflikt s operátorem **odstranění umístění** .
+   Pokud nechcete aktualizovat kód okamžitě, můžete se vrátit ke starému chování pomocí `/Zc:sizedDealloc-`možnosti kompilátoru . Pokud použijete tuto možnost, funkce odstranění dvěma argumenty neexistují a nezpůsobí konflikt s operátorem **odstranění umístění.**
 
-- **Sjednocení datových členů**
+- **Členové dat Unie**
 
-   Datové členy sjednocení již nemohou mít odkazové typy. Následující kód byl úspěšně zkompilován v Visual Studio 2013, ale vyvolá chybu v aplikaci Visual Studio 2015.
+   Datové členy sjednocení již nemohou mít typy odkazů. Následující kód byl úspěšně zkompilován v sadě Visual Studio 2013, ale v sadě Visual Studio 2015 vytvoří chybu.
 
     ```cpp
     union U1
@@ -683,16 +683,16 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Předchozí kód vytvoří následující chyby:
+   Předchozí kód vytváří následující chyby:
 
     ```Output
     test.cpp(67): error C2625: 'U2::i': illegal union member; type 'int &' is reference type
     test.cpp(70): error C2625: 'U3::i': illegal union member; type 'int &' is reference type
     ```
 
-   Chcete-li tento problém vyřešit, změňte typ odkazu buď na ukazatel, nebo na hodnotu. Změna typu na ukazatel vyžaduje změny v kódu, který používá pole Union. Změna kódu na hodnotu by změnila data uložená ve sjednocení, která mají vliv na ostatní pole, protože pole v typech sjednocení sdílejí stejnou paměť. V závislosti na velikosti hodnoty může také dojít ke změně velikosti sjednocení.
+   Chcete-li tento problém vyřešit, změňte typy odkazů na ukazatel nebo hodnotu. Změna typu na ukazatel vyžaduje změny v kódu, který používá pole sjednocení. Změna kódu na hodnotu by změnila data uložená v unii, což má vliv na jiná pole, protože pole v typech sjednocení sdílejí stejnou paměť. V závislosti na velikosti hodnoty může také změnit velikost unie.
 
-- Anonymní sjednocení jsou nyní více vyhovující standardu. Předchozí verze kompilátoru vygenerovala explicitní konstruktor a destruktor pro anonymní sjednocení. Tyto funkce vygenerované kompilátorem jsou v aplikaci Visual Studio 2015 odstraněny.
+- Anonymní odbory jsou nyní více v souladu se standardem. Předchozí verze kompilátoru vygenerovaly explicitní konstruktor a destruktor pro anonymní sjednocení. Tyto funkce generované kompilátorem jsou odstraněny v sadě Visual Studio 2015.
 
     ```cpp
     struct S
@@ -709,14 +709,14 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     } u; // C2280
     ```
 
-   Předchozí kód generuje následující chybu v aplikaci Visual Studio 2015:
+   Předchozí kód generuje následující chybu v sadě Visual Studio 2015:
 
     ```cpp
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function
     note: compiler has generated '<unnamed-type-u>::<unnamed-type-u>' here
     ```
 
-   Chcete-li vyřešit tento problém, zadejte vlastní definice konstruktoru nebo destruktoru.
+   Chcete-li tento problém vyřešit, zadejte vlastní definice konstruktoru nebo destruktoru.
 
     ```cpp
     struct S
@@ -734,9 +734,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     } u;
     ```
 
-- **Sjednocení s anonymními strukturami**
+- **Odbory s anonymními strukturami**
 
-   Aby bylo možné v souladu se standardem, bylo chování modulu runtime změněno pro členy anonymních struktur ve sjednoceních. Konstruktor pro členy anonymní struktury ve sjednocení již není implicitně volán při vytvoření takového sjednocení. Také destruktor pro členy anonymní struktury ve sjednocení již není implicitně volán, když se sjednocení dostanou mimo rozsah. Vezměte v úvahu následující kód, ve kterém sjednocení U obsahuje anonymní strukturu, která obsahuje pojmenovanou strukturu členů S destruktorem.
+   Aby bylo možné v souladu se standardem, chování za běhu se změnilo pro členy anonymnístruktury v sjednocení. Konstruktor pro členy anonymní struktury v unii již není implicitně volána při vytvoření takového sjednocení. Destruktor pro členy anonymní struktury v unii již není implicitně volána, když unie přejde mimo rozsah. Vezměme si následující kód, ve kterém unie U obsahuje anonymní strukturu, která obsahuje strukturu pojmenovaný člen S, který má destruktor.
 
     ```cpp
     #include <stdio.h>
@@ -771,13 +771,13 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   V Visual Studio 2013 konstruktor pro S je volán při vytvoření sjednocení a destruktor pro S je volán, když je vyčištěn zásobník funkce f. Ale v aplikaci Visual Studio 2015 nejsou volány konstruktor a destruktor. Kompilátor poskytuje upozornění na tuto změnu chování.
+   V sadě Visual Studio 2013 je při vytvoření sjednocení volán konstruktor pro S a destruktor pro S je volán při vyčištění zásobníku pro funkci f. Ale v Sadě Visual Studio 2015 konstruktor a destruktor se nenazývají. Kompilátor poskytuje upozornění o této změně chování.
 
     ```Output
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called
     ```
 
-   Chcete-li obnovit původní chování, zadejte název anonymní struktury. Běhové chování neanonymních struktur je stejné, bez ohledu na verzi kompilátoru.
+   Chcete-li obnovit původní chování, pojmenujte anonymní strukturu. Chování runtime neanonymních struktur je stejné, bez ohledu na verzi kompilátoru.
 
     ```cpp
     #include <stdio.h>
@@ -813,7 +813,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Případně můžete zkusit přesunout konstruktor a kód destruktoru do nových funkcí a přidat volání těchto funkcí z konstruktoru a destruktoru pro sjednocení.
+   Případně zkuste přesunout kód konstruktoru a destruktoru do nových funkcí a přidat volání těchto funkcí z konstruktoru a destruktoru pro sjednocení.
 
     ```cpp
     #include <stdio.h>
@@ -849,11 +849,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Řešení šablony**
+- **Rozlišení šablony**
 
-   Byly provedeny změny překladu názvů pro šablony. V C++systému se při zvažování kandidátů na rozlišení názvu může jednat o případ, že jeden nebo více názvů, které se považují za potenciální shody, vytvoří neplatnou instanci šablony. Tyto neplatné instance obvykle nezpůsobují chyby kompilátoru, princip známý jako SFINAE (Chyba při nahrazování není chyba).
+   Byly provedeny změny překladu názvů šablon. V jazyce C++ při zvažování kandidátů pro rozlišení názvu může být případ, že jeden nebo více názvů v úvahu jako potenciální shody vytvoří neplatný vytvoření instance šablony. Tyto neplatné instance obvykle nezpůsobují chyby kompilátoru, což je princip známý jako SFINAE (Selhání nahrazení není chyba).
 
-   Pokud nyní SFINAE vyžaduje, aby kompilátor vytvořil instanci specializace šablony třídy, pak všechny chyby, ke kterým dojde během tohoto procesu, jsou chyby kompilátoru. V předchozích verzích kompilátor by tyto chyby ignoroval. Zvažte například následující kód:
+   Nyní pokud SFINAE vyžaduje kompilátor k vytvoření instance specializace šablony třídy, pak všechny chyby, ke kterým dojde během tohoto procesu jsou chyby kompilátoru. V předchozích verzích by kompilátor tyto chyby ignoroval. Zvažte například následující kód:
 
     ```cpp
     #include <type_traits>
@@ -892,7 +892,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Pokud kompilujete s aktuálním kompilátorem, zobrazí se následující chyba:
+   Pokud kompilujete s aktuálníkompilátor, zobrazí se následující chyba:
 
     ```Output
     type_traits(1110): error C2139: 'D': an undefined class is not allowed as an argument to compiler intrinsic type trait '__is_base_of'
@@ -905,19 +905,19 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     ]
     ```
 
-   Důvodem je, že v bodě prvního vyvolání is_base_of třída `D` ještě nebyla definována.
+   Důvodem je, že v okamžiku první vyvolání `D` is_base_of třída nebyla dosud definována.
 
-   V takovém případě oprava nepoužívá takové typové vlastnosti, dokud není definována třída. Pokud přesunete definice `B` a `D` na začátek souboru kódu, dojde k vyřešení chyby. Pokud jsou definice v hlavičkových souborech, zkontrolujte pořadí příkazů include pro hlavičkové soubory, abyste se ujistili, že všechny definice tříd jsou kompilovány před použitím problematických šablon.
+   V tomto případě je oprava není používat tyto vlastnosti typu, dokud třída byla definována. Pokud přesunete definice `B` a `D` na začátek souboru kódu, chyba je vyřešena. Pokud jsou definice v souborech hlaviček, zkontrolujte pořadí příkazů include pro soubory hlaviček a ujistěte se, že všechny definice tříd jsou zkompilovány před použitím problematických šablon.
 
-- **Kopírovací konstruktory**
+- **Kopírovat konstruktory**
 
-   V Visual Studio 2013 i Visual Studio 2015 kompilátor generuje kopírovací konstruktor pro třídu, pokud tato třída má uživatelsky definovaný konstruktor přesunu, ale neexistuje uživatelsky definovaný kopírovací konstruktor. V Dev14 je tento implicitně vygenerovaný kopírovací konstruktor označený také "= Delete".
+   V obou Visual Studio 2013 a Visual Studio 2015 kompilátor generuje konstruktor kopie pro třídu, pokud tato třída má uživatelem definovaný konstruktor přesunutí, ale žádný uživatelem definovaný konstruktor kopírování. V Dev14 je tento implicitně generovaný konstruktor kopie také označen "= delete".
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
-- **hlavní deklarovaný jako extern "C" nyní vyžaduje návratový typ.**
+- **main deklarované jako extern "C" nyní vyžaduje návratový typ.**
 
-   Následující kód teď vytvoří C4430.
+   Následující kód nyní vytváří C4430.
 
     ```cpp
     extern "C" __cdecl main(){} // C4430
@@ -929,9 +929,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     extern "C" int __cdecl main(){} // OK
     ```
 
-- **TypeName není povolený v inicializátoru členu.**
+- **typename není v inicializátoru člena povolen**
 
-   Následující kód teď vytvoří C2059:
+   Následující kód nyní vytváří C2059:
 
     ```cpp
     template<typename T>
@@ -949,16 +949,16 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     S1<S2> s;
     ```
 
-   Chcete-li chybu opravit, odeberte `typename` z inicializátoru:
+   Chcete-li chybu `typename` opravit, odeberte z inicializátoru:
 
     ```cpp
     S1() : T::type() // OK
     ...
     ```
 
-- **Třída úložiště v explicitních specializacích je ignorována.**
+- **Třída úložiště na explicitní specializace je ignorována.**
 
-   V následujícím kódu se specifikátor třídy statického úložiště ignoruje.
+   V následujícím kódu je specifikátor třídy statického úložiště ignorován.
 
     ```cpp
     template <typename T>
@@ -972,9 +972,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Konstanta použitá v static_assert uvnitř šablony třídy bude vždy neúspěšná.**
+- **Konstanta použitá v static_assert uvnitř šablony třídy se vždy nezdaří.**
 
-   Následující kód způsobí, že `static_assert` vždy selže:
+   Následující kód způsobí, `static_assert` že se vždy nezdaří:
 
     ```cpp
     template <size_t some_value>
@@ -987,7 +987,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     //other partial specializations here
     ```
 
-   Pokud chcete tento problém obejít, zabalte hodnotu ve **struktuře**:
+   Chcete-li tento problém vyřešit, zalomte hodnotu **do struktury**:
 
     ```cpp
     template <size_t some_value>
@@ -1004,9 +1004,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     //other partial specializations here
     ```
 
-- **Pravidla jsou vydaná pro dopředné deklarace. (Platí jenom pro C.)**
+- **Pravidla vynucená pro předávací prohlášení. (Platí pouze pro C.)**
 
-   Následující kód teď vytvoří C2065:
+   Následující kód nyní vytváří C2065:
 
     ```cpp
     struct token_s;
@@ -1016,7 +1016,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
     ```
 
-   Chcete-li tento problém vyřešit, přidejte správné deklarace dopředné:
+   Chcete-li tento problém vyřešit, přidejte správné dopředné deklarace:
 
     ```cpp
     struct token_s;
@@ -1030,9 +1030,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
     ```
 
-- **Jednotnější vynucování typů ukazatelů na funkce**
+- **Konzistentnější vynucení typů ukazatelů funkcí**
 
-   Následující kód teď vytvoří C2197:
+   Následující kód nyní vytváří C2197:
 
     ```cpp
     typedef int(*F1)(int);
@@ -1044,9 +1044,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Nejednoznačné volání přetížených funkcí**
+- **Nejednoznačná volání přetížených funkcí**
 
-   Následující kód teď vytvoří C266: ' N:: bind ': dvojznačné volání funkce přetížení
+   Následující kód nyní vytváří C266: 'N::bind': nejednoznačné volání přetížené funkce
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1072,13 +1072,13 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, můžete plně kvalifikovat volání `bind: N::bind(...)`. Nicméně pokud je tato změna v manifestu prostřednictvím nedeklarovaného identifikátoru (C2065), může být vhodné ji opravit **pomocí deklarace using** místo toho.
+   Chcete-li chybu opravit, můžete plně `bind: N::bind(...)`kvalifikovat volání . Pokud je však tato změna manifestprostředu nedeklarované identifikátor (C2065), pak může být vhodné opravit pomocí **pomocí** deklarace místo.
 
-   Tento vzor probíhá často s ComPtr a dalšími typy v oboru názvů `Microsoft::WRL`.
+   Tento vzor se stává často s ComPtr a další typy v oboru `Microsoft::WRL` názvů.
 
 - **Opravit nesprávnou adresu**
 
-   Následující kód nyní vytváří C2440: ' = ': nelze převést z ' type * ' na ' type '. Chcete-li chybu opravit, změňte & (typ) na (typ) a (& f ()) na (f ()).
+   Následující kód nyní vytváří C2440: '=': nelze převést z 'type *' na 'type'. Chcete-li chybu opravit, změňte &(typ) na (typ) a (&f()) na (f()).
 
     ```cpp
     // C
@@ -1104,9 +1104,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Řetězcový literál je konstantní pole.**
+- **Literál řetězce je konstantní pole**
 
-   Následující kód nyní vytváří upozornění C2664: ' void f (void *) ': argument 1 nelze převést z ' const char (* ) [2] ' na ' void * '
+   Následující kód nyní vytváří C2664: 'void f(void *)': nelze převést argument 1 z 'const char (*)[2]' na 'void *'
 
     ```cpp
     void f(void *);
@@ -1118,7 +1118,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, změňte typ parametru funkce na `const void*`nebo jinak změňte tělo `h` tak, aby vypadalo jako v tomto příkladu:
+   Chcete-li chybu opravit, změňte `const void*`typ parametru funkce `h` na , nebo změňte tělo aplikace tak, aby vypadalo takto:
 
     ```cpp
     void h(void)
@@ -1129,9 +1129,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Řetězce UDL v c++ 11**
+- **Řetězce UDL c++11**
 
-   Následující kód teď vytvoří chybu C3688: Neplatná přípona literálu L; operátor literálu nebo šablona operátoru literálu operator "" L "se nenašly.
+   Následující kód nyní vytváří chybu C3688: neplatná literálová přípona "L"; Literál operátor nebo literál operátor šablony "operátor "L" nebyl nalezen
 
     ```cpp
     #define MACRO
@@ -1147,7 +1147,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, změňte kód tak, aby přidal mezeru:
+   Chcete-li chybu opravit, změňte kód a přidejte mezeru:
 
     ```cpp
     #define MACRO
@@ -1165,13 +1165,13 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   V příkladu výše `MACRO` již není analyzován jako dvě tokeny (řetězec následovaný makrem). Teď se analyzuje jako UDL s jedním tokenem. Totéž platí pro L "" L ", který byl dříve analyzován jako L" "a L" "a je nyní analyzován jako L" "L a" ".
+   Ve výše uvedeném příkladu `MACRO` již není analyzovánjako dva tokeny (řetězec následovaný makra). Nyní je analyzován jako jeden token UDL. Totéž platí pro L""L"", který byl analyzován dříve jako L"" a L"", a je nyní analyzován jako L""L a "".
 
-   Pravidla zřetězení řetězců byla také uvedena v souladu se standardem, což znamená, že L "a" b "je ekvivalentem L" AB ". Předchozí edice sady Visual Studio nepřijaly zřetězení řetězců s jinou šířkou znaků.
+   Pravidla zřetězení řetězců byla rovněž uvedena do souladu s normou, což znamená, že L"a" "b" je ekvivalentní L"ab". Předchozí edice sady Visual Studio nepřijaly zřetězení řetězců s různou šířkou znaků.
 
-- **Odebraný prázdný znak c++ 11**
+- **Prázdný znak c++11 byl odebrán.**
 
-   Následující kód teď vytvoří chybu C2137: prázdná znaková konstanta
+   Následující kód nyní vytváří chybu C2137: konstanta prázdného znaku
 
     ```cpp
     bool check(wchar_t c){
@@ -1179,7 +1179,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, změňte kód tak, aby explicitně vytvářely hodnotu null:
+   Chcete-li chybu opravit, změňte kód tak, aby byl null explicitní:
 
     ```cpp
     bool check(wchar_t c){
@@ -1187,9 +1187,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Výjimky knihovny MFC nelze zachytit podle hodnoty, protože nejsou zkopírovány.**
+- **Výjimky knihovny MFC nemohou být zachyceny hodnotou, protože nejsou kopírovatelné**
 
-   Následující kód v aplikaci knihovny MFC nyní způsobuje chybu C2316: 'D ': nelze zachytit, protože destruktor nebo kopírovací konstruktor jsou nedostupné nebo odstraněné.
+   Následující kód v aplikaci knihovny MFC nyní způsobuje chybu C2316: 'D': nelze zachytit jako destruktor a/nebo konstruktor kopie jsou nepřístupné nebo odstraněné
 
     ```cpp
     struct B {
@@ -1213,31 +1213,31 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li opravit kód, můžete změnit blok catch na `catch (const D &)`, ale lepší řešení obvykle používá makra TRY/CATCH knihovny MFC.
+   Chcete-li opravit kód, můžete změnit `catch (const D &)` blok catch na, ale lepším řešením je obvykle použít makra MFC TRY/CATCH.
 
 - **alignof je nyní klíčové slovo**
 
-   Následující kód teď vytvoří chybu C2332: Class: chybí název značky. Chcete-li opravit kód, musíte přejmenovat třídu nebo, pokud třída provádí stejnou práci jako **alignof**, stačí nahradit třídu klíčovým slovem New.
+   Následující kód nyní vytváří chybu C2332: 'class': chybějící název značky. Chcete-li opravit kód, musíte přejmenovat třídu nebo, pokud třída provádí stejnou práci jako **alignof**, stačí nahradit třídu novým klíčovým slovem.
 
     ```cpp
     class alignof{}
     ```
 
-- **constexpr je nyní klíčové slovo.**
+- **constexpr je nyní klíčové slovo**
 
-   Následující kód nyní vytvoří chybu C2059: Chyba syntaxe: ') '. Chcete-li opravit kód, je nutné přejmenovat všechny funkce nebo názvy proměnných, které se nazývají constexpr.
+   Následující kód nyní vytváří chybu C2059: syntaktická chyba: ')'. Chcete-li opravit kód, je nutné přejmenovat všechny funkce nebo názvy proměnných, které se nazývají "constexpr".
 
     ```cpp
     int constexpr() {return 1;}
     ```
 
-- **Pohyblivé typy nemůžou být const.**
+- **Pohyblivé typy nemohou být const**
 
-   Když funkce vrátí typ, který je určen k přesunu, jeho návratový typ by neměl být **const**.
+   Pokud funkce vrátí typ, který je určen k přesunutí, jeho návratový typ by neměl být **const**.
 
-- **Odstraněné kopírovací konstruktory**
+- **Odstraněné konstruktory kopírování**
 
-   Následující kód nyní vytvoří C2280:: S (S & &) ': Probíhá pokus o odkaz na odstraněnou funkci:
+   Následující kód nyní vytváří C2280 'S:S(S &&)': pokus o odkaz na odstraněnou funkci:
 
     ```cpp
     struct S{
@@ -1249,7 +1249,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     S s2 = S(2, 3); //C2280
     ```
 
-   Chcete-li chybu opravit, použijte přímou inicializaci pro `S2`:
+   Chcete-li chybu opravit, použijte `S2`přímou inicializaci pro :
 
     ```cpp
     struct S{
@@ -1261,9 +1261,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     S s2 = {2,3}; //OK
     ```
 
-- **Převod na ukazatel funkce se vygeneroval jenom v případě, že není zachytávání lambda.**
+- **Převod na ukazatel funkce je generován pouze v případě, že nezachycuje lambda**
 
-   Následující kód vytvoří upozornění C2664 v aplikaci Visual Studio 2015.
+   Následující kód vytváří C2664 v sadě Visual Studio 2015.
 
     ```cpp
     void func(int(*)(int)) {}
@@ -1274,11 +1274,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, odeberte `=` ze seznamu zachycení.
+   Chcete-li chybu opravit, odeberte `=` ji ze seznamu zachycení.
 
-- **Dvojznačná volání zahrnující operátory převodu**
+- **Nejednoznačná volání zahrnující operátory převodu**
 
-   Následující kód teď vytvoří chybu C2440: přetypování typu: nejde převést z 2 na 1:
+   Následující kód nyní vytváří chybu C2440: 'typ přetypované': nelze převést z 'S2' na 'S1':
 
     ```cpp
     struct S1 {
@@ -1308,7 +1308,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Následující kód nyní vytvoří chybu C2593: ' operator = ' je dvojznačný:
+   Následující kód nyní vytváří chybu C2593: 'operátor =' je nejednoznačný:
 
     ```cpp
     struct S1 {};
@@ -1333,9 +1333,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Opravit neplatnou inicializaci kopírování při inicializaci nestatických datových členů (NSDMI)**
+- **Oprava neplatné inicializace kopírování v nestatické inicializaci datového prvku (NSDMI)**
 
-   Následující kód nyní vytvoří chybu upozornění C2664:1:: S1 (S1 & &): nelze převést Argument 1 z ' bool ' na ' const S1 & ':
+   Následující kód nyní vytváří chybu C2664: 'S1::S1(S1 &&)': nelze převést argument 1 z 'bool' na 'const S1 &':
 
     ```cpp
     struct S1 {
@@ -1357,7 +1357,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 - **Přístup k konstruktorům uvnitř příkazů decltype**
 
-   Následující kód teď vytvoří C2248::: S: nejde získat přístup k soukromému členu deklarovanému ve třídě:
+   Následující kód nyní vytváří C2248: 'S::S': nemůže získat přístup k soukromému členu deklarovanému ve třídě 'S':
 
     ```cpp
     class S {
@@ -1371,7 +1371,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, přidejte do `S`deklaraci typu Friend za `S2`:
+   Chcete-li chybu opravit, přidejte deklaraci přítele do `S2` : `S`
 
     ```cpp
     class S {
@@ -1382,9 +1382,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- **Výchozí ctor konstruktoru lambda se implicitně odstraní.**
+- **Výchozí ctor lambda je implicitně odstraněn**
 
-   Následující kód nyní vytvoří chybu C3497: nelze vytvořit instanci výrazu lambda:
+   Následující kód nyní vytváří chybu C3497: nelze vytvořit instanci lambda:
 
     ```cpp
     void func(){
@@ -1394,11 +1394,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, odeberte nutnost vyvolání výchozího konstruktoru. Pokud lambda nezachycuje cokoli, může být převeden na ukazatel na funkci.
+   Chcete-li chybu opravit, odeberte potřebu volání výchozího konstruktoru. Pokud lambda nezachytí nic, pak může být přetypována na ukazatel funkce.
 
-- **Výrazy lambda s odstraněným operátorem přiřazení**
+- **Lambdas s odstraněným operátorem přiřazení**
 
-   Následující kód teď vytvoří chybu C2280:
+   Následující kód nyní vytváří chybu C2280:
 
     ```cpp
     #include <memory>
@@ -1415,11 +1415,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li chybu opravit, nahraďte lambda třídou funktor nebo odeberte nutnost použití operátoru přiřazení.
+   Chcete-li chybu opravit, nahraďte lambda třídou functor nebo odeberte potřebu použít operátor přiřazení.
 
-- **Pokus o přesunutí objektu s odstraněným kopírovacím konstruktorem**
+- **Pokus o přesunutí objektu pomocí odstraněného konstruktoru kopie**
 
-   Následující kód teď vytvoří chybu C2280: "mobilní:: mobilní" (const &): pokus o odkaz na odstraněnou funkci
+   Následující kód nyní vytváří chybu C2280: 'pohyblivý::moveable(const movité &)': pokus o odkaz na odstraněnou funkci
 
     ```cpp
     struct moveable {
@@ -1437,16 +1437,16 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   K opravě chyby použijte `std::move` místo toho:
+   Chcete-li chybu `std::move` opravit, použijte místo toho:
 
     ```cpp
     S(moveable && m) :
         m_m(std::move(m))
     ```
 
-- **Lokální třída nemůže odkazovat na jinou místní třídu definovanou dále ve stejné funkci.**
+- **Místní třída nemůže odkazovat na jinou místní třídu definovanou později ve stejné funkci.**
 
-   Následující kód teď vytvoří chybu C2079: ' používá nedefinovanou strukturu ' Main:: S2 '
+   Následující kód nyní vytváří chybu C2079: 's' používá nedefinovanou strukturu 'main::S2'
 
     ```cpp
     int main()
@@ -1477,9 +1477,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **V těle odvozeného konstruktoru ctor nelze volat chráněný základní ctor.**
+- **Nelze volat chráněné základny ctor v těle odvozené ctor.**
 
-   Následující kód teď vytvoří chybu C2248:1:: S1: nejde získat přístup k chráněnému členu deklarovanému ve třídě 1.
+   Následující kód nyní vytváří chybu C2248: 'S1::S1': nelze získat přístup k chráněnému členu deklarovanému ve třídě S1.
 
     ```cpp
     struct S1 {
@@ -1494,11 +1494,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, v `S2` odeberte volání `S1()` z konstruktoru a v případě potřeby jej vložte do jiné funkce.
+   Chcete-li opravit `S2` chybu, v `S1()` odebrat volání z konstruktoru a v případě potřeby umístit do jiné funkce.
 
-- **{} brání konverzi na ukazatel**
+- **{}zabraňuje převodu na ukazatel**
 
-   Následující kód teď vytvoří C2439::p ': člen se nedal inicializovat.
+   Následující kód nyní vytváří C2439 'S::p': člen nelze inicializovat
 
     ```cpp
     struct S {
@@ -1507,7 +1507,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, odeberte závorky z okolí `0` nebo jinak místo toho použijte **nullptr** , jak je znázorněno v následujícím příkladu:
+   Chcete-li chybu opravit, odeberte `0` závorky z okolí nebo použijte **nullptr** místo, jak je znázorněno v tomto příkladu:
 
     ```cpp
     struct S {
@@ -1516,9 +1516,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- **Nesprávná definice a použití makra pomocí závorek**
+- **Nesprávné definice maker a použití s závorky**
 
-   Následující příklad nyní vytvoří chybu C2008: '; ': neočekáváno v definici makra
+   Následující příklad nyní vytváří chybu C2008: ';': neočekávané v definici makra
 
     ```cpp
     #define A; //cause of error
@@ -1528,9 +1528,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li tento problém vyřešit, změňte horní řádek na `#define A();`
+   Chcete-li problém vyřešit, změňte horní řádek na`#define A();`
 
-   Následující kód vytvoří chybu C2059: Chyba syntaxe: ') '
+   Následující kód vytváří chybu C2059: syntaktická chyba: ')'
 
     ```cpp
     //notice the space after 'A'
@@ -1541,9 +1541,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li opravit kód, odeberte prostor mezi a a ().
+   Chcete-li kód opravit, odeberte mezeru mezi a ().
 
-   Následující kód vytvoří chybu c2091: funkce vrací funkci:
+   Následující kód vytváří chybu C2091: funkce vrátí funkci:
 
     ```cpp
     #define DECLARE void f()
@@ -1553,9 +1553,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, odeberte závorky po DEKLARaci v S: `DECLARE;`.
+   Chcete-li chybu opravit, odeberte závorky po příkazu DECLARE v s: `DECLARE;`.
 
-   Následující kód vytvoří chybu C2062: typ int se neočekával.
+   Následující kód vytváří chybu C2062: zadejte 'int' neočekávané
 
     ```cpp
     #define A (int)
@@ -1565,15 +1565,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Pokud chcete problém vyřešit, definujte `A` takto:
+   Chcete-li problém `A` vyřešit, definujte takto:
 
     ```cpp
     #define A int
     ```
 
-- **Další Parens v deklaracích**
+- **Extra parens v prohlášeních**
 
-   Následující kód vytvoří chybu C2062: typ int se neočekával.
+   Následující kód vytváří chybu C2062: zadejte 'int' neočekávané
 
     ```cpp
     struct S {
@@ -1582,15 +1582,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, odeberte závorky kolem `j`. Pokud jsou závorky potřeba pro přehlednost, pak použijte **typedef**.
+   Chcete-li chybu opravit, odeberte `j`závorky kolem . Pokud jsou závorky potřebné pro přehlednost, použijte **typedef**.
 
-- **Konstruktory a __declspec generované kompilátorem (-vtable)**
+- **Konstruktory generované kompilátorem a __declspec(novtable)**
 
-   V aplikaci Visual Studio 2015 existuje větší pravděpodobnost, že vložené konstruktory, které jsou generovány kompilátorem, s virtuálními základními třídami, mohou vystavovat nesprávné použití `__declspec(novtable)` při použití v kombinaci s `__declspec(dllimport)`.
+   V sadě Visual Studio 2015 je zvýšená pravděpodobnost, že kompilátor generované vložkové konstruktory abstraktní třídy s virtuální základní třídy může vystavit nesprávné použití `__declspec(novtable)` při použití v kombinaci s `__declspec(dllimport)`.
 
-- **Automatický vyžaduje jeden výraz v inicializaci Direct-list.**
+- **auto vyžaduje jeden výraz v přímé inicializaci seznamu**
 
-   Následující kód teď vytvoří chybu C3518: ' testPositions ': v kontextu Direct-list-inicializace typ pro ' auto ' se dá odvodit jenom z výrazu s jedním inicializátorem.
+   Následující kód nyní vytváří chybu C3518: 'testPositions': v kontextu přímé inicializace seznamu typ pro 'auto' lze odvodit pouze z jednoho výrazu inicializátoru
 
     ```cpp
     auto testPositions{
@@ -1601,7 +1601,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li chybu opravit, jednu z možností je inicializovat `testPositions` následujícím způsobem:
+   Chcete-li chybu opravit, jednou z `testPositions` možností je inicializovat následujícím způsobem:
 
     ```cpp
     std::tuple<int, int> testPositions[]{
@@ -1612,7 +1612,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- **Kontrola typů vs. ukazatele na typy pro is_convertible**
+- **Kontrola typů vs. odkazy na typy pro is_convertible**
 
    Následující kód nyní způsobí selhání statického kontrolního výrazu.
 
@@ -1627,15 +1627,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     static_assert(std::is_convertible<D, B2>::value, "fail");
     ```
 
-   Chcete-li chybu opravit, změňte `static_assert` tak, aby porovnávána odkazy na `D` a `B2`:
+   Chcete-li chybu opravit, změňte `static_assert` tak, `D` aby `B2`porovnávala ukazatele a :
 
     ```cpp
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **deklarace __declspec (-vtable) musí být konzistentní.**
+- **__declspec (novtable) prohlášení musí být konzistentní**
 
-   deklarace `__declspec` musí být konzistentní napříč všemi knihovnami. Následující kód nyní vytvoří porušení pravidla s jednou definicí (ODR):
+   `__declspec`deklarace musí být konzistentní ve všech knihovnách. Následující kód nyní vytvoří pravidlo jedné definice (ODR) porušení:
 
     ```cpp
     //a.cpp
@@ -1697,11 +1697,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     C c;
     ```
 
-###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>Vylepšení shody v aktualizaci Update 1
+### <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>Vylepšení shody v aktualizaci 1
 
 - **Soukromé virtuální základní třídy a nepřímá dědičnost**
 
-   Předchozí verze kompilátoru povolily odvozenou třídu pro volání členských funkcí své nepřímo odvozené `private virtual` základní třídy. Toto staré chování nebylo správné a neodpovídá C++ standardu. Kompilátor již nepřijímá kód napsaný tímto způsobem a v důsledku toho vydává chybu kompilátoru C2280.
+   Předchozí verze kompilátoru povoleno odvozené třídy volat členské funkce `private virtual` jeho nepřímo odvozené základní třídy. Toto staré chování bylo nesprávné a neodpovídá standardu C++. Kompilátor již přijímá kód napsaný tímto způsobem a v důsledku toho vydává chybu kompilátoru C2280.
 
     ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -1739,7 +1739,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   \- nebo-
+   \-nebo -
 
     ```cpp
     class base;  // as above
@@ -1753,9 +1753,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Přetížený operátor New a operátor delete**
+- **Přetížený operátor nový a odstranit operátor**
 
-   Předchozí verze kompilátoru povolují nečlenský **operátor New** a nečlenský **operátor delete** , aby byly deklarované jako statické a deklarované v oborech názvů kromě globálního oboru názvů.  Toto staré chování vytvořilo riziko, že by program nevolal implementaci operátoru **New** nebo **Delete** , kterou programátor zamýšlel, a výsledkem je tiché chybné chování za běhu. Kompilátor již nepřijímá kód napsaný tímto způsobem a namísto toho vydá chybu kompilátoru C2323.
+   Předchozí verze kompilátoru povoleno nečlen **operátor nový** a nečlen operátor **odstranit deklarovat** statické a deklarovat v oborech názvů než globální obor názvů.  Toto staré chování vytvořilo riziko, že program nebude volat **novou** nebo **odstranit** implementaci operátoru, kterou programátor zamýšlel, což vedlo k tichému chybnému chování za běhu. Kompilátor již přijímá kód napsaný tímto způsobem a místo toho vydává chybu kompilátoru C2323.
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -1773,11 +1773,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   Kromě toho, i když kompilátor neposkytuje konkrétní diagnostiku, je vložený operátor **New** považován za nesprávně vytvořený.
+   Navíc i když kompilátor neposkytuje konkrétní diagnostiku, inline operátor **new** je považován za neutvářený.
 
-- **Volání operátoru ' *Type*() ' (uživatelsky definovaný převod) na typy bez třídy**
+- **Volání typu *operátoru*()" (uživatelem definovaný převod) u typů mimo třídu**
 
-   Předchozí verze povoleného kompilátoru ' operator *Type*() ', které mají být volány na typy bez třídy, zatímco jsou tiše ignorovány. Toto staré chování vytvořilo riziko tichého chybného generování kódu, což vede k nepředvídatelnému chování za běhu. Kompilátor již nepřijímá kód napsaný tímto způsobem a namísto toho vydá chybu kompilátoru C2228.
+   Předchozí verze kompilátoru povoleno *'typ*operátoru ()' být volána na typy mimo třídu, zatímco tiše ignoruje. Toto staré chování vytvořilo riziko tichého generování chybného kódu, což vedlo k nepředvídatelnému chování za běhu. Kompilátor již přijímá kód napsaný tímto způsobem a místo toho vydává chybu kompilátoru C2228.
 
     ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -1805,9 +1805,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- **Redundantní TypeName v propracované specifikátorech typu**
+- **Redundantní název typu v propracovaných specifikátorech typu**
 
-   Předchozí verze kompilátoru povolily **TypeName** ve vypracovaném specifikátoru typu, ale kód psaný tímto způsobem je sémanticky nesprávným. Kompilátor již nepřijímá kód napsaný tímto způsobem a namísto toho vydá chybu kompilátoru C3406.
+   Předchozí verze kompilátoru povolené **typename** v propracované matyonu typu, ale kód napsaný tímto způsobem je sémanticky nesprávné. Kompilátor již přijímá kód napsaný tímto způsobem a místo toho vydává chybu kompilátoru C3406.
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1827,17 +1827,17 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     class container;
     ```
 
-- **Typ srážek polí ze seznamu inicializátorů**
+- **Zadejte odpočet polí ze seznamu inicializačních zařízení**
 
-   Předchozí verze kompilátoru nepodporovaly typ srážek polí ze seznamu inicializátorů. Kompilátor teď podporuje tento typ odvození typu, a proto volání šablon funkcí pomocí seznamů inicializátorů teď může být dvojznačné nebo jiné přetížení může být zvolené než v předchozích verzích kompilátoru. Aby bylo možné tyto problémy vyřešit, musí nyní program explicitně určit přetížení, které programátor zamýšlel.
+   Předchozí verze kompilátoru nepodporovaly typ odpočtu polí ze seznamu inicializátoru. Kompilátor nyní podporuje tento formulář odpočtu typu a v důsledku toho volání šablon funkcí pomocí seznamů inicializátoru může být nyní nejednoznačné nebo může být vybráno jiné přetížení než v předchozích verzích kompilátoru. Chcete-li tyto problémy vyřešit, program musí nyní explicitně určit přetížení, které programátor zamýšlel.
 
-   V případě, že toto nové chování způsobí, že řešení přetížení považuje další kandidáty, které jsou stejně vhodné jako historické kandidáty, volání se nejednoznační a kompilátor vyvolá chybu kompilátoru C2668 v důsledku.
+   Když toto nové chování způsobí, že řešení přetížení zvážit další kandidát, který je stejně dobrý jako historický kandidát, volání se stane nejednoznačný a kompilátor problémy chyba kompilátoru C2668 jako výsledek.
 
     ```Output
     error C2668: 'function' : ambiguous call to overloaded function.
     ```
 
-   Příklad 1: dvojznačné volání funkce přetížení (před)
+   Příklad 1: Nejednoznačné volání přetížené funkce (před)
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1870,9 +1870,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Když toto nové chování způsobí, že řešení přetížení považuje další kandidáta, který je lepší, než historická kandidát, volání se jednoznačně vyřeší na novém kandidáta, což způsobí změnu v chování programu, která se pravděpodobně liší od zamýšlený programátor.
+   Když toto nové chování způsobí přetížení řešení zvážit další kandidát, který je lepší shoda než historický kandidát, volání jednoznačně řeší nového kandidáta, což způsobuje změnu chování programu, který je pravděpodobně jiný, než programátor zamýšlel.
 
-   Příklad 2: Změna v řešení přetížení (před)
+   Příklad 2: změna rozlišení přetížení (před)
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(S, Args...)
@@ -1895,7 +1895,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Příklad 2: Změna v řešení přetížení (po)
+   Příklad 2: změna rozlišení přetížení (po)
 
     ```cpp
     struct S;  // as before
@@ -1915,7 +1915,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 - **Obnovení upozornění příkazu switch**
 
-   Předchozí verze kompilátoru odebrala některá upozornění související s příkazy **Switch** ; Tato upozornění se teď obnovila. Kompilátor nyní vydá obnovená upozornění a upozornění související s konkrétními případy (včetně výchozího případu) jsou nyní vydány na řádku obsahujícím problematický případ, nikoli na posledním řádku příkazu switch. V důsledku toho, že se tato upozornění vydávají na různých řádcích než v minulosti, upozornění, která byla dříve potlačena pomocí `#pragma warning(disable:####)`, již nemusí být potlačena jako zamýšlená. Chcete-li potlačit tato upozornění jako zamýšlená, může být nutné přesunout direktivu `#pragma warning(disable:####)` na řádek nad první problematický případ. Obnoví se následující upozornění:
+   Předchozí verze kompilátoru odebrala některá upozornění týkající se **příkazy switch;** tato varování byla nyní obnovena. Kompilátor nyní vydává obnovená upozornění a upozornění týkající se konkrétních případů (včetně výchozího případu) jsou nyní vydávána na řádku obsahujícím problematický případ, nikoli na posledním řádku příkazu switch. V důsledku nyní vydávání těchto varování na různých řádcích než v `#pragma warning(disable:####)` minulosti, varování dříve potlačena pomocí již nemusí být potlačeny tak, jak bylo zamýšleno. Chcete-li potlačit tato varování, jak bylo `#pragma warning(disable:####)` zamýšleno, může být nutné přesunout směrnice na řádek nad první případ problematický. Následují obnovená upozornění:
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -1982,7 +1982,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Příklad C4063 (za)
+   Příklad C4063 (po)
 
     ```cpp
     class settings { ... };  // as above
@@ -2007,11 +2007,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Příklady dalších obnovených upozornění jsou uvedeny v dokumentaci.
+   Příklady dalších obnovených upozornění jsou uvedeny v jejich dokumentaci.
 
-- **#include: použití specifikátoru nadřazeného adresáře '.. ' v cestě** (týká se pouze `/Wall` `/WX`)
+- **#include: použití specifikátoru nadřazeného adresáře '..' v cestě (ovlivňuje** pouze `/Wall` `/WX`)
 
-   Předchozí verze kompilátoru nerozpoznaly použití specifikátoru nadřazeného adresáře... v cestě `#include` direktiv. Kód psaný tímto způsobem je obvykle určen pro zahrnutí hlaviček, které existují mimo projekt, pomocí nesprávného použití relativních cest projektu. Toto staré chování vytvořilo riziko, že program může být zkompilován zahrnutím jiného zdrojového souboru, než je programátor zamýšlen, nebo zda tyto relativní cesty nebudou přenosné do jiných prostředí pro sestavení. Kompilátor nyní detekuje a upozorňuje programátora kódu napsaného tímto způsobem a vydá volitelné C4464 upozornění kompilátoru, pokud je povoleno.
+   Předchozí verze kompilátoru nezjistily použití nadřazeného specifikátoru adresáře ... v názvu směrnic. `#include` Kód napsaný tímto způsobem je obvykle určen k zahrnutí záhlaví, které existují mimo projekt nesprávně pomocí cest relativní chod projektu. Toto staré chování vytvořilo riziko, že by program mohl být zkompilován zahrnutím jiného zdrojového souboru, než programátor zamýšlel, nebo že tyto relativní cesty nebudou přenosné do jiných prostředí sestavení. Kompilátor nyní detekuje a upozorní programátora napsaný takto a vydá volitelné upozornění kompilátoru C4464, pokud je povoleno.
 
     ```Output
     warning C4464: relative include path contains '..'
@@ -2029,11 +2029,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
     ```
 
-   I když kompilátor neposkytuje konkrétní diagnostiku, doporučujeme také, aby specifikátor nadřazeného adresáře ".." neměl být použit k určení adresáře include projektu.
+   Navíc i když kompilátor neposkytuje konkrétní diagnostiku, doporučujeme také, aby nadřazený specifikátor adresáře ".." by neměl být používán k určení adresářů zahrnutí projektu.
 
-- **#pragma optimize () rozšiřuje poslední konec souboru hlaviček** (týká se pouze `/Wall` `/WX`).
+- **#pragma optimize() rozšiřuje za konec souboru záhlaví** (týká se `/Wall` `/WX`pouze)
 
-   Předchozí verze kompilátoru nerozpoznaly změny nastavení příznaku optimalizace, které řídí hlavičkový soubor zahrnutý do jednotky překladu. Kompilátor nyní detekuje a upozorňuje programátora kódu napsaného tímto způsobem a vydá volitelné upozornění kompilátoru C4426 v umístění problematické `#include`, pokud je povoleno. Toto upozornění je vystaveno pouze v případě, že změny jsou v konfliktu s příznaky optimalizace nastavenými argumenty příkazového řádku pro kompilátor.
+   Předchozí verze kompilátoru nezjistily změny nastavení příznaku optimalizace, které unikly souboru záhlaví obsaženému v jednotce překladu. Kompilátor nyní detekuje a upozorní programátora na kód napsaný tímto způsobem a vydá volitelné upozornění kompilátoru C4426 v umístění problematicky `#include`, pokud je povoleno. Toto upozornění je vydáno pouze v případě, že změny v konfliktu s příznaky optimalizace nastavit argumenty příkazového řádku kompilátoru.
 
     ```Output
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()
@@ -2064,9 +2064,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     #include "C4426.h"
     ```
 
-- **Neshoda #pragma upozornění (push)** a **upozornění #pragma (pop)** (týká se pouze `/Wall` `/WX`)
+- **Neshoda #pragma varování (push)** a **#pragma warning(pop)** (týká se `/Wall` `/WX`pouze)
 
-   Předchozí verze kompilátoru nerozpoznaly změny stavu `#pragma warning(push)` spárované se změnami stavu `#pragma warning(pop)` v jiném zdrojovém souboru, což je zřídka zamýšlené. Toto staré chování vytvořilo riziko, že program bude zkompilován s jinou sadou upozornění, než je zamýšlený programátor, což může vést k tichému chybnému chování za běhu. Kompilátor nyní detekuje a upozorňuje programátora kódu napsaného tímto způsobem a vydá volitelné C5031 upozornění kompilátoru v umístění odpovídajícího `#pragma warning(pop)`, pokud je povoleno. Toto upozornění obsahuje poznámku odkazující na umístění odpovídajícího #pragma upozornění (push).
+   Předchozí verze kompilátoru nezjistily `#pragma warning(push)` změny `#pragma warning(pop)` stavu spárované se změnami stavu v jiném zdrojovém souboru, který je zřídka určen. Toto staré chování vytvořilo riziko, že program bude kompilován s jinou sadou upozornění povolenou, než programátor zamýšlel, což by mohlo vést k tichému špatnému chování za běhu. Kompilátor nyní detekuje a upozorní programátora napsaný takto a vydá volitelné upozornění kompilátoru C5031 v umístění odpovídající `#pragma warning(pop)`, pokud je povoleno. Toto upozornění zahrnuje poznámku odkazující na umístění odpovídajícího #pragma upozornění(push).
 
     ```Output
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file
@@ -2118,11 +2118,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     ...
     ```
 
-   I když je neobvyklá, kód napsaný tímto způsobem je někdy úmyslné. Kód psaný tímto způsobem je citlivý na změny v pořadí `#include`; Pokud je to možné, doporučujeme, aby soubory zdrojového kódu spravovaly stav upozornění v samostatném způsobu.
+   Ačkoli neobvyklé, kód napsaný tímto způsobem je někdy úmyslné. Takto napsaný kód je `#include` citlivý na změny v pořadí; pokud je to možné, doporučujeme, aby soubory zdrojového kódu spravovaly stav upozornění samostatným způsobem.
 
-- **Nespárované upozornění na #pragma (push)** (týká se pouze `/Wall` `/WX`)
+- **Bezkonkurenční #pragma varování (push)** (týká se `/Wall` `/WX`pouze )
 
-   Předchozí verze kompilátoru nezjistily na konci jednotky překladu neshodné změny stavu `#pragma warning(push)`. Kompilátor nyní detekuje a upozorňuje programátora kódu napsaného tímto způsobem a vydá volitelné C5032 upozornění kompilátoru v umístění neodpovídajícího `#pragma warning(push)`, pokud je povoleno. Toto upozornění je vystaveno pouze v případě, že v jednotce překladu nejsou žádné chyby kompilace.
+   Předchozí verze kompilátoru nezjistily `#pragma warning(push)` neodpovídající změny stavu na konci jednotky překladu. Kompilátor nyní detekuje a upozorní programátora kódu napsaného tímto způsobem a vydá volitelné upozornění kompilátoru `#pragma warning(push)`C5032 v umístění neodpovídající , pokud je povoleno. Toto upozornění je vydáno pouze v případě, že v jednotce překladu nejsou žádné chyby kompilace.
 
     ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -2159,21 +2159,21 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)
     ```
 
-- **Další upozornění můžou být vystavena v důsledku vylepšení sledování stavu upozornění #pragma**
+- **Další upozornění mohou být vydána v důsledku vylepšeného sledování stavu #pragma varování**
 
-   Předchozí verze kompilátoru sledovány #pragma změny stavu upozornění nedostatečně dobře vydávají všechna zamýšlená upozornění. Toto chování vytvořilo riziko, že určitá upozornění budou efektivně potlačena v jiných případech, než je programátor zamýšlen. Kompilátor nyní sleduje `#pragma warning` stav robustnější – obzvláště související se změnami stavu `#pragma warning` v rámci šablon – a volitelně vydá nová upozornění C5031 a C5032, která mají za cíl pomáhat programátorovi najít nezamýšlené použití `#pragma warning(push)` a `#pragma warning(pop)`.
+   Předchozí verze kompilátoru sledovány #pragma změny stavu upozornění nedostatečně dobře vydat všechna zamýšlená upozornění. Toto chování vytvořilo riziko, že některá upozornění budou účinně potlačena za jiných okolností, než programátor zamýšlel. Kompilátor nyní `#pragma warning` sleduje stav robustněji `#pragma warning` – zejména v souvislosti se změnami stavu uvnitř šablon – a volitelně vydává nová upozornění C5031 a C5032, která mají programátorovi pomoci najít nezamýšlené použití `#pragma warning(push)` a `#pragma warning(pop)`.
 
-   V důsledku vylepšení sledování změn stavu `#pragma warning` se teď můžou vystavovat upozornění, která se dřív nesprávně potlačila, nebo upozornění související s dříve nezjištěnými problémy.
+   V důsledku vylepšeného `#pragma warning` sledování změn stavu mohou být nyní vydána upozornění dříve nesprávně potlačená nebo upozornění týkající se problémů, které byly dříve chybně diagnostikovány.
 
-- **Vylepšená identifikace nedosažitelného kódu**
+- **Vylepšená identifikace nedostupného kódu**
 
-   C++Změny knihovny Standard a vylepšená možnost volání vložených funkcí v předchozích verzích kompilátoru může povolit, aby kompilátor prokázal, že určitý kód je nyní nedosažitelný. Toto nové chování může mít za následek nové a více často vydaných instancí upozornění C4720.
+   Změny standardní knihovny jazyka C++ a vylepšená možnost vsazených volání funkcí přes předchozí verze kompilátoru mohou kompilátoru umožnit, aby dokázal, že určitý kód je nyní nedostupný. Toto nové chování může mít za následek nové a častěji vydané instance upozornění C4720.
 
     ```Output
     warning C4720: unreachable code
     ```
 
-   V mnoha případech může být toto upozornění vystaveno pouze při kompilaci s povolenými optimalizacemi, protože optimalizace mohou vložit více volání funkce, eliminovat redundantní kód nebo jinak určit, že určitý kód je nedosažitelný. Zjistili jsme, že v blocích **try/catch** se často objevily nové instance varovných C4720, zejména ve vztahu k použití [std:: Find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
+   V mnoha případech toto upozornění může být vydáno pouze při kompilaci s povolené optimalizace, protože optimalizace může vložit více volání funkce, eliminovat redundantní kód nebo jinak umožnit určit, že určitý kód je nedostupný. Zjistili jsme, že nové instance varování C4720 se často vyskytují v **try/catch** bloky, zejména ve vztahu k použití [std::find](../standard-library/algorithm-functions.md#find).
 
    Příklad (před)
 
@@ -2201,13 +2201,13 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>Vylepšení shody v aktualizaci Update 2
+### <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>Vylepšení shody v aktualizaci 2
 
-- **Další upozornění a chyby mohou být vydány v důsledku částečné podpory pro Expression SFINAE**
+- **Další varování a chyby mohou být vydány v důsledku částečné podpory výrazu SFINAE**
 
-   Předchozí verze kompilátoru neanalyzovaly některé druhy výrazů uvnitř specifikátorů **decltype** z důvodu nedostatku podpory pro Expression SFINAE. Toto staré chování nebylo správné a neodpovídá C++ standardu. Kompilátor nyní analyzuje tyto výrazy a má částečnou podporu pro Expression SFINAE z důvodu probíhajících vylepšení dodržování shody. V důsledku toho kompilátor nyní vydá upozornění a chyby nalezené ve výrazech, které předchozí verze kompilátoru neanalyzovaly.
+   Předchozí verze kompilátoru neanalyzují určité druhy výrazů uvnitř specifikátorů **decltype** z důvodu nedostatečné podpory výrazu SFINAE. Toto staré chování bylo nesprávné a neodpovídá standardu C++. Kompilátor nyní analyzuje tyto výrazy a má částečnou podporu výrazu SFINAE z důvodu průběžné zlepšení shody. V důsledku toho kompilátor nyní vydává upozornění a chyby nalezené ve výrazech, které předchozí verze kompilátoru nebyly analyzovat.
 
-   Když toto nové chování analyzuje výraz **decltype** , který obsahuje typ, který dosud nebyl deklarován, kompilátor vyvolá chybu kompilátoru C2039 v důsledku.
+   Když toto nové chování analyzuje **decltype** výraz, který obsahuje typ, který ještě nebyl deklarován, kompilátor problémy chyba kompilátoru C2039 jako výsledek.
 
     ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -2226,7 +2226,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Příklad 1 (za)
+   Příklad 1 (po)
 
     ```cpp
     struct s1
@@ -2241,7 +2241,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Když toto nové chování analyzuje výraz **decltype** , u kterého chybí nezbytné použití klíčového slova **TypeName** k určení, že název závislého typu je typ, kompilátor vydává upozornění kompilátoru C4346 spolu s chybou kompilátoru C2923.
+   Když toto nové chování analyzuje **decltype** výraz, který chybí nezbytné použití klíčového slova **typename** k určení, že závislý název je typ, kompilátor vydá upozornění kompilátoru C4346 spolu s chybou kompilátoru C2923.
 
     ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -2251,7 +2251,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     error C2923: 's1': 'S2<T>::Type' is not a valid template type argument for parameter 'T'
     ```
 
-   Příklad 2: závislý název není typu (před)
+   Příklad 2: závislý název není typ (před)
 
     ```cpp
     template < typename T>
@@ -2292,9 +2292,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- `volatile` **proměnné členů zabraňují implicitně definovaným konstruktorům a operátorům přiřazení** .
+- `volatile`**členské proměnné brání implicitně definovaným konstruktorům a operátorům přiřazení**
 
-   Předchozí verze kompilátoru povolily třídu, která má **nestálé** členské proměnné, aby měly výchozí konstruktory Copy/Move a automaticky vygenerovaly výchozí operátory kopírování a přesunu. Toto staré chování nebylo správné a neodpovídá C++ standardu. Kompilátor nyní považuje třídu, která má **nestálé** členské proměnné pro konstruktory konstrukce a přiřazení, což brání automatickému generování výchozích implementací těchto operátorů. Když je taková třída členem sjednocení (nebo anonymního sjednocení uvnitř třídy), konstruktory Copy/Move a operátory přiřazení kopírování a přesunu (nebo třídy obsahující anonymní sjednocení) se implicitně definují jako odstraněné. Pokus o sestavení nebo zkopírování sjednocení (nebo třídy obsahující anonymní sjednocení) bez explicitního definování je chyba a kompilátor vyvolá chybu kompilátoru C2280, která je výsledkem.
+   Předchozí verze kompilátoru umožnily třídě, která má **nestálé** členské proměnné, aby byly automaticky generovány výchozí konstruktory kopírování/přesunutí a výchozí operátory přiřazení kopírování/přesunutí. Toto staré chování bylo nesprávné a neodpovídá standardu C++. Kompilátor nyní považuje třídu, která má **nestálé** členské proměnné, za netriviální operátory konstrukce a přiřazení, což zabraňuje automatickému generování výchozích implementací těchto operátorů. Pokud je taková třída členem unie (nebo anonymní unie uvnitř třídy), konstruktory copy/move a operátory přiřazení copy/move unie (nebo třídy obsahující anonymní sjednocení) budou implicitně definovány jako odstraněné. Pokus o vytvoření nebo zkopírování sjednocení (nebo třídy obsahující anonymní sjednocení) bez jejich explicitního definování je chyba a kompilátor vystaví chybu kompilátoru C2280 jako výsledek.
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2348,9 +2348,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     B b2(b1);  // error C2280
     ```
 
-- **Statické členské funkce nepodporují kvalifikátory cv.**
+- **Statické členské funkce nepodporují cv-qualifiers.**
 
-   Předchozí verze sady Visual Studio 2015 povolily statickým členským funkcí kvalifikátory cv. K tomuto chování dochází z důvodu regrese v rámci sady Visual Studio 2015 a Visual Studio 2015 Update 1; Visual Studio 2013 a předchozí verze kompilátoru zamítají kód zapsaný tímto způsobem. Chování sady Visual Studio 2015 a sady Visual Studio 2015 Update 1 je nesprávné a neodpovídá C++ standardu.  Visual Studio 2015 Update 2 odmítne kód napsaný tímto způsobem a místo toho vydá chybu kompilátoru C2511.
+   Předchozí verze Visual Studia 2015 povoleno statické členské funkce mít cv kvalifikátory. Toto chování je způsobeno regrese v Sadě Visual Studio 2015 a Visual Studio 2015 Update 1; Visual Studio 2013 a předchozí verze kompilátoru odmítnout kód napsaný tímto způsobem. Chování Visual Studio 2015 a Visual Studio 2015 Update 1 je nesprávné a neodpovídá standardu C++.  Visual Studio 2015 Update 2 odmítne kód napsaný tímto způsobem a problémy chyba kompilátoru C2511 místo.
 
     ```Output
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'
@@ -2367,7 +2367,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     void A::func() const {}  // C2511
     ```
 
-   Příklad (po)
+   Příklad(po)
 
     ```cpp
     struct A
@@ -2378,9 +2378,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     void A::func() {}  // removed const
     ```
 
-- **Dopředná deklarace výčtu není v kódu WinRT povolená** (týká se jenom `/ZW`).
+- **Dopředné prohlášení výčtu není v kódu WinRT povoleno** (týká se `/ZW`pouze)
 
-   Kód kompilovaný pro prostředí Windows Runtime (WinRT) neumožňuje dopředně deklarovat **výčtové** typy, podobně jako při kompilaci C++ spravovaného kódu pro rozhraní .NET Framework pomocí přepínače kompilátoru `/clr`. Toto chování zajistí, že velikost výčtu je vždy známá a lze jej správně promítnout do systému typů WinRT. Kompilátor odmítne kód napsaný tímto způsobem a vydá chybu kompilátoru C2599 spolu s chybou kompilátoru C3197.
+   Kód zkompilovaný pro prostředí Windows Runtime (WinRT) neumožňuje **předsunout typy výčtu** deklarované, podobně jako `/clr` při kompilaci spravovaného kódu Jazyka C++ pro rozhraní .Net Framework pomocí přepínače kompilátoru. Toto chování zajišťuje, že velikost výčtu je vždy známa a může být správně promítána do systému typu WinRT. Kompilátor odmítne kód napsaný tímto způsobem a vydá chybu kompilátoru C2599 spolu s chybou kompilátoru C3197.
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2435,9 +2435,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- **Přetížený operátor New a operátor delete se nedá deklarovat jako inline** (úroveň 1 (`/W1`) ve výchozím nastavení.)
+- **Přetížený operátor bez členů new a delete operátoru nemusí být deklarovány jako inline** (Úroveň 1 (`/W1`) ve výchozím nastavení)
 
-   Předchozí verze kompilátoru nevydá upozornění, když je nečlenský operátor New a funkce Delete operátora jsou deklarovány jako inline. Kód napsaný tímto způsobem je nesprávně vytvořen (bez diagnostiky není vyžadován) a může způsobit problémy s pamětí způsobenými neodpovídajícími operátory New a Delete (zejména při použití společně s velikostí dealokace), které mohou být obtížné diagnostikovat. Kompilátor nyní vydává upozornění kompilátoru C4595, aby mohl identifikovat kód napsaný tímto způsobem.
+   Předchozí verze kompilátoru nevydávají upozornění, když jsou funkce odstranění operátoru, které nejsou členy, deklarovány jako vepříné. Kód napsaný tímto způsobem je špatně tvarované (není vyžadována žádná diagnostika) a může způsobit problémy s pamětí vyplývající z neshody nové a odstranit operátory (zejména při použití společně s velikosti deallocation), které může být obtížné diagnostikovat. Kompilátor nyní vydává upozornění kompilátoru C4595, který pomáhá identifikovat kód napsaný tímto způsobem.
 
     ```Output
     warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
@@ -2461,15 +2461,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Oprava kódu, který je napsán tímto způsobem, může vyžadovat, aby definice operátora byly přesunuty ze souboru hlaviček a do odpovídajícího zdrojového souboru.
+   Oprava kódu, který je napsán tímto způsobem může vyžadovat, aby definice operátoru byly přesunuty ze souboru záhlaví do odpovídajícího zdrojového souboru.
 
-###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>Vylepšení shody v aktualizaci Update 3
+### <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>Vylepšení shody v aktualizaci 3
 
-- **std:: is_convertable nyní detekuje samostatné přiřazení** (standardní knihovna)
+- **std::is_convertable nyní detekuje vlastní přiřazení** (standardní knihovna)
 
-   Předchozí verze `std::is_convertable` typu-vlastnost nerozpoznaly správně vlastní přiřazení typu třídy, pokud je jeho kopírovací konstruktor odstraněný nebo soukromý. Nyní je `std::is_convertable<>::value` správně nastaveno na **hodnotu false** při použití na typ třídy s odstraněným nebo soukromým kopírovacím konstruktorem.
+   Předchozí verze vlastnosti `std::is_convertable` typu nezjistily správně vlastní přiřazení typu třídy při odstranění jeho konstruktoru kopie nebo soukromé. Nyní `std::is_convertable<>::value` je správně nastavena na **false** při použití na typ třídy s odstraněné nebo soukromé kopie konstruktoru.
 
-   K této změně není přidružená žádná Diagnostika kompilátoru.
+   K této změně není přidružena žádná diagnostika kompilátoru.
 
    Příklad
 
@@ -2491,11 +2491,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   V předchozích verzích kompilátoru byly statické kontrolní výrazy ve spodní části tohoto příkladu passované, protože `std::is_convertable<>::value` nebylo nesprávně nastaveno na **hodnotu true**. Nyní je `std::is_convertable<>::value` správně nastaven na **hodnotu false**, což způsobí selhání statických kontrolních výrazů.
+   V předchozích verzích kompilátoru statické kontrolní výrazy v `std::is_convertable<>::value` dolní části tohoto příkladu předat, protože byla nesprávně nastavena na **hodnotu true**. Nyní `std::is_convertable<>::value` je správně nastavena na **false**, což způsobuje statické kontrolní výrazy nezdaří.
 
-- **Přednastavené nebo odstraněné konstruktory triviálního kopírování a přesunu respektují specifikátory přístupu.**
+- **Výchozí nebo odstraněné triviální kopírování a přesouvání konstruktorů respektuje specifikátory přístupu**
 
-   Předchozí verze kompilátoru nekontrolovaly specifikátor přístupu u výchozích nebo odstraněných konstruktorů triviální kopie a přemístění, než je povolí volání. Toto staré chování nebylo správné a neodpovídá C++ standardu. V některých případech toto staré chování vytvořilo riziko tichého chybného generování kódu, což vede k nepředvídatelnému chování za běhu. Kompilátor nyní kontroluje specifikátor přístupu u výchozích nebo odstraněných konstruktorů triviální kopie a přesunutí, aby bylo možné určit, zda je lze volat, a pokud ne, vystaví se v důsledku upozornění kompilátoru C2248.
+   Předchozí verze kompilátoru nezkontrolovaly specifikátor přístupu výchozí nebo odstraněné triviální kopie a přesunout konstruktory před jejich voláním. Toto staré chování bylo nesprávné a neodpovídá standardu C++. V některých případech toto staré chování vytvořilo riziko tichého generování chybného kódu, což vedlo k nepředvídatelnému chování za běhu. Kompilátor nyní zkontroluje specifikátor přístupu výchozí nebo odstraněné triviální kopie a přesunout konstruktory k určení, zda může být volána, a pokud ne, vydá upozornění kompilátoru C2248 jako výsledek.
 
     ```Output
     error C2248: 'S::S' cannot access private member declared in class 'S'
@@ -2539,15 +2539,15 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- Vyřazení **podpory kódu ATL s atributy** (ve výchozím nastavení úroveň 1 (`/W1`))
+- **Vyřazení podpory přiřazeného kódu KNIHOVNY ATL** (úroveň 1 (`/W1`) ve výchozím nastavení)
 
-   Předchozí verze kompilátoru podporovaly atribut ATL kódu. Jako další fáze odebrání podpory pro kód ATL s atributy, který [začala v aplikaci Visual Studio 2008](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008), je kód ATL s atributy zastaralý. Kompilátor nyní vydává upozornění kompilátoru C4467, aby mohl identifikovat tento druh zastaralého kódu.
+   Předchozí verze kompilátoru podporované přiřazený kód KNIHOVNY ATL. Jako další fáze odebrání podpory pro přiřazený kód KNIHOVNY ATL, který [začal v sadě Visual Studio 2008](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008), byl přiřazen kód KNIHOVNY ATL zastaral. Kompilátor nyní vydává upozornění kompilátoru C4467, který pomáhá identifikovat tento druh zastaralého kódu.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
     ```
 
-   Pokud chcete pokračovat v používání kódu ATL s atributy, dokud není podpora odebrána z kompilátoru, můžete toto upozornění zakázat předáním `/Wv:18` nebo `/wd:4467` argumentů příkazového řádku kompilátoru nebo přidáním `#pragma warning(disable:4467)` do zdrojového kódu.
+   Pokud chcete pokračovat v používání přiřazeného kódu KNIHOVNY ATL, dokud nebude podpora `/Wv:18` odebrána z kompilátoru, můžete toto upozornění zakázat předáním argumentů nebo `/wd:4467` příkazového řádku kompilátoru nebo přidáním `#pragma warning(disable:4467)` zdrojového kódu.
 
    Příklad 1 (před)
 
@@ -2556,13 +2556,13 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     class A {};
     ```
 
-   Příklad 1 (za)
+   Příklad 1 (po)
 
     ```cpp
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};
     ```
 
-   Někdy možná budete potřebovat nebo chcete vytvořit soubor IDL, abyste se vyhnuli použití zastaralých atributů ATL, jako v následujícím příkladu kódu.
+   Někdy můžete potřebovat nebo chcete vytvořit soubor IDL, abyste se vyhnuli použití zastaralých atributů KNIHOVNY ATL, jako v příkladu níže
 
    Příklad 2 (před)
 
@@ -2583,9 +2583,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Nejprve vytvořte soubor *. idl; soubor vygenerovaný pomocí vc140. idl lze použít k získání \*souboru. idl obsahujícího rozhraní a poznámky.
+   Nejprve vytvořte soubor *.idl; generovaný soubor vc140.idl lze použít \*k získání souboru .idl obsahujícího rozhraní a poznámky.
 
-   Dále přidejte do sestavení krok MIDL, abyste se ujistili, že jsou C++ vygenerovány definice rozhraní.
+   Dále přidejte krok MIDL do sestavení a ujistěte se, že jsou generovány definice rozhraní Jazyka C++.
 
    Příklad 2 IDL (po)
 
@@ -2617,9 +2617,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Pak použijte ATL přímo v implementačním souboru, jako v následujícím příkladu kódu.
+   Potom použijte ATL přímo v souboru implementace, jako v příkladu kódu níže.
 
-   Příklad 2 implementace (za)
+   Příklad implementace 2 (po)
 
     ```cpp
     #include <idl.header.h>
@@ -2636,9 +2636,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- **Soubory předkompilovaných hlaviček (PCH) a neodpovídající direktivy #include** (týká se pouze `/Wall` `/WX`)
+- **Předkompilované soubory záhlaví (PCH) a neodpovídající #include direktivy** (týká se `/Wall` `/WX`pouze)
 
-   Předchozí verze kompilátoru přijaly neshodné direktivy `#include` ve zdrojových souborech mezi `-Yc` a `-Yu` kompilací při použití souborů předkompilované hlavičky (PCH). Kód napsaný tímto způsobem již není kompilátorem přijat.   Kompilátor nyní vydává upozornění kompilátoru CC4598, aby při použití souborů PCH mohla identifikovat neshodné direktivy `#include`.
+   Předchozí verze kompilátoru přijaly `#include` neodpovídající direktivy ve zdrojových souborech mezi `-Yc` a `-Yu` kompilacemi při použití předkompilovaných souborů záhlaví (PCH). Kód napsaný tímto způsobem již není kompilátorem akceptován.   Kompilátor nyní vydává upozornění kompilátoru CC4598, aby pomohl identifikovat neodpovídající `#include` direktivy při použití souborů PCH.
 
     ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -2646,7 +2646,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
    Příklad (před):
 
-   X. cpp (-YCC. h)
+   X.cpp (-Ycc.h)
 
     ```cpp
     #include "a.h"
@@ -2654,7 +2654,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     #include "c.h"
     ```
 
-   Z. cpp (-Yuc. h)
+   Z.cpp (-Yuc.h)
 
     ```cpp
     #include "b.h"
@@ -2664,7 +2664,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
    Příklad (po)
 
-   X. cpp (-YCC. h)
+   X.cpp (-Ycc.h)
 
     ```cpp
     #include "a.h"
@@ -2672,7 +2672,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     #include "c.h"
     ```
 
-   Z. cpp (-Yuc. h)
+   Z.cpp (-Yuc.h)
 
     ```cpp
     #include "a.h"
@@ -2680,9 +2680,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     #include "c.h"
     ```
 
-- **Soubory předkompilovaných hlaviček (PCH) a neodpovídající adresáře zahrnutí** (týká se pouze `/Wall` `/WX`)
+- **Předkompilované soubory záhlaví (PCH) a neodpovídající zahrnují adresáře** (týká se `/Wall` `/WX`pouze)
 
-   Předchozí verze kompilátoru přijaly neodpovídající argumenty příkazového řádku Directory (`-I`) pro kompilátor mezi `-Yc` a `-Yu` kompilací při použití souborů předkompilované hlavičky (PCH). Kód napsaný tímto způsobem již není kompilátorem přijat. Kompilátor nyní vystavuje upozornění kompilátoru CC4599, aby při použití souborů PCH mohla identifikovat neodpovídající argumenty příkazového řádku pro zahrnutí (`-I`).
+   Předchozí verze přijatého kompilátoru neodpovídající`-I`zahrnují argumenty příkazového řádku adresáře ( ) do kompilátoru mezi `-Yc` a `-Yu` kompilace při použití předkompilovaných souborů záhlaví (PCH). Kód napsaný tímto způsobem již není kompilátorem akceptován. Kompilátor nyní vydává upozornění kompilátoru CC4599, aby`-I`pomohl identifikovat neodpovídající argumenty příkazového řádku zahrnutí adresáře ( ) při použití souborů PCH.
 
     ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -2702,11 +2702,11 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     cl /c /Wall /Yuc.h -I.. Z.cpp
     ```
 
-## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 změny shody
+## <a name="visual-studio-2013-conformance-changes"></a>Změny shody sady Visual Studio 2013
 
-### <a name="compiler"></a>Compiler
+### <a name="compiler"></a>Kompilátoru
 
-- **Konečné** klíčové slovo nyní vygeneruje nevyřešenou chybu symbolu, kde by předtím byla zkompilována:
+- **Konečné** klíčové slovo nyní generuje nevyřešenou chybu symbolu, kde by bylo dříve zkompilován:
 
     ```cpp
     struct S1 {
@@ -2723,9 +2723,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   V dřívějších verzích nebyla chyba vyvolána, protože volání bylo **virtuální** volání; program by však při běhu znamenal chybu. Nyní je přiřazena chyba linkeru, protože třída je nyní označena jako konečná. V tomto příkladu, chcete-li opravit chybu, byste propojíte s obj, který obsahuje definici `S2::f`.
+   V dřívějších verzích nebyla vydána chyba, protože volání bylo **virtuální** volání; nicméně, program by se zhroutí za běhu. Nyní je přiřazena chyba linkeru, protože třída je nyní označena jako konečná. V tomto příkladu chcete-li opravit chybu, by odkaz proti `S2::f`obj, který obsahuje definici .
 
-- Pokud používáte funkce Friend v oborech názvů, musíte znovu deklarovat funkci Friend předtím, než na ni kliknete, nebo se zobrazí chyba, protože kompilátor nyní odpovídá standardu ISO C++ . Například tento příklad již není zkompilován:
+- Při použití friend funkce v oborech názvů, je nutné znovu deklarovat přítele funkce před odkazovat na něj nebo se zobrazí chyba, protože kompilátor nyní odpovídá ISO C ++ Standard. Například tento příklad již nekompiluje:
 
     ```cpp
     namespace NS {
@@ -2740,7 +2740,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   Chcete-li tento kód opravit, Deklarujte funkci **Friend** :
+   Chcete-li opravit tento kód, deklarujte funkci **friend:**
 
     ```cpp
     namespace NS {
@@ -2756,7 +2756,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
         }
     ```
 
-- C++ Standard nepovoluje explicitní specializaci ve třídě. I když v C++ některých případech kompilátor společnosti Microsoft to umožňuje, v případech, jako je následující příklad, je nyní generována chyba, protože kompilátor nebere v úvahu druhou funkci jako specializaci první.
+- Standard Jazyka C++ neumožňuje explicitní specializaci ve třídě. Přestože kompilátor Microsoft C++ umožňuje v některých případech, v případech, jako je například v následujícím příkladu, je nyní generována chyba, protože kompilátor nepovažuje druhou funkci za specializaci první.
 
     ```cpp
     template < int N>
@@ -2775,7 +2775,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     template <> void f(char& val);
     ```
 
-- Kompilátor se již nesnaží odstranit tyto dvě funkce v následujícím příkladu a nyní generuje chybu:
+- Kompilátor se již nepokouší rozptýlit dvě funkce v následujícím příkladu a nyní vydává chybu:
 
     ```cpp
     template< typename T> void Func(T* t = nullptr);
@@ -2797,21 +2797,21 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-- Předtím, než byl kompilátor kompatibilní s ISO C++ 11, byl zkompilován následující kód a způsobil, že `x` přeložit na typ **int**:
+- Před kompilátor byl proveden v souladu s ISO C ++ 11, následující kód by zkompiloval a způsobil `x` přeložit zadejte **int**:
 
     ```cpp
     auto x = {0};
     int y = x;
     ```
 
-   Tento kód nyní překládá `x` na typ `std::initializer_list<int>` a způsobí chybu na dalším řádku, který se pokusí přiřadit `x` k typu **int**. (Ve výchozím nastavení neexistuje žádný převod.) Chcete-li tento kód opravit, použijte **int** k nahrazení hodnoty **auto**:
+   Tento kód nyní `x` překládá `std::initializer_list<int>` na typ a způsobí chybu na `x` dalším řádku, který se pokusí přiřadit k typu **int**. (Ve výchozím nastavení neexistuje žádný převod.) Chcete-li tento kód opravit, použijte **int** nahradit **auto**:
 
     ```cpp
     int x = {0};
     int y = x;
     ```
 
-- Inicializace agregace již není povolena, když typ pravé hodnoty neodpovídá typu levé hodnoty, která je inicializována, a dojde k chybě, protože Standard ISO C++ 11 vyžaduje jednotnou inicializaci pro práci bez zužující převody. Pokud byl dříve k dispozici zužující převod, upozornění [kompilátoru (úroveň 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) bylo vydáno namísto chyby C4242.
+- Agregace inicializace již není povolena, pokud typ hodnoty na pravé straně neodpovídá typu levé hodnoty, která je inicializována, a je vydána chyba, protože standard ISO C ++ 11 vyžaduje jednotnou inicializaci, aby fungovalbez zúžení převodů. Dříve, pokud zužující převod byl k dispozici, [upozornění kompilátoru (úroveň 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) by byly vydány namísto chyby.
 
     ```cpp
     int i = 0;
@@ -2839,7 +2839,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     void *p = {0};
     ```
 
-- Vyhledávání názvu bylo změněno. Následující kód je vyřešen odlišně v C++ kompilátoru v aplikaci Visual Studio 2012 a Visual Studio 2013:
+- Vyhledávání názvů bylo změněno. Následující kód je vyřešen odlišně v kompilátoru C++ v Sadě Visual Studio 2012 a Visual Studio 2013:
 
     ```cpp
     enum class E1 { a };
@@ -2852,9 +2852,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   V aplikaci Visual Studio 2012 se `E1` ve výrazu `E1::b` přeložila na `::E1` v globálním oboru. V Visual Studio 2013 `E1` ve výrazu `E1::b` překládá na definici `typedef E2` v `main()` a má typ `::E2`.
+   V sadě Visual Studio 2012 výraz `E1` `E1::b` in vyřešen `::E1` v globálním oboru. V sadě Visual Studio `E1` 2013 `E1::b` ve `typedef E2` výrazu překládá na definici v `main()` a má typ `::E2`.
 
-- Rozložení objektů se změnilo. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má **virtuální** funkci, ale nemá základní třídu, která má **virtuální** funkci, objektový model kompilátoru vloží ukazatel na tabulku **virtuální** funkce za rozložení datového člena. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích se optimalizace pro platformu x64 snaží vylepšit rozložení za vás, ale vzhledem k tomu, že se nezdařilo správně pracovat v situacích složitých kódů, byla odebrána v Visual Studio 2013. Podívejte se například na tento kód:
+- Rozložení objektu se změnilo. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má **virtuální** funkci, ale nemá základní třídu, která má **virtuální** funkci, objektový model kompilátoru vloží ukazatel do tabulky **virtuálních** funkcí za rozložení datového člena. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích optimalizace pro x64 by se pokusí zlepšit rozložení pro vás, ale protože se nepodařilo pracovat správně v situacích složitého kódu, byl odebrán v sadě Visual Studio 2013. Podívejte se například na tento kód:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2867,7 +2867,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-- V Visual Studio 2013 výsledek `sizeof(S2)` na platformě x64 je 48, ale v předchozích verzích se vyhodnocuje na 32. Chcete-li tuto hodnotu vyhodnotit na C++ 32 v kompilátoru Visual Studio 2013 pro platformu x64, přidejte fiktivní základní třídu, která má **virtuální** funkci:
+- V Sadě Visual Studio 2013 výsledek `sizeof(S2)` na x64 je 48, ale v předchozích verzích se vyhodnotí na 32. Chcete-li to vyhodnotit na 32 v kompilátoru Visual Studio 2013 C++ pro x64, přidejte fiktivní základní třídu, která má **virtuální** funkci:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Například:
+   Chcete-li najít místa v kódu, které dřívější verze by se pokusili `/W3` optimalizovat, použijte kompilátor z této verze spolu s možností kompilátoru a zapněte upozornění C4370. Příklad:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2898,9 +2898,9 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Před Visual Studio 2013 tento kód obsahuje tuto zprávu: "upozornění C4370:2": rozložení třídy se od předchozí verze kompilátoru změnilo kvůli lepšímu balení ".
+   Před Visual Studio 2013 tento kód výstupy tuto zprávu: "upozornění C4370: 'S2' : rozložení třídy se změnila z předchozí verze kompilátoru z důvodu lepší balení".
 
-   Kompilátor x86 má stejný problém s podideálním rozložením ve všech verzích kompilátoru. Pokud je například tento kód je zkompilován pro platformu x86:
+   Kompilátor x86 má stejný problém s neoptimálním rozložením ve všech verzích kompilátoru. Pokud je například tento kód je zkompilován pro platformu x86:
 
     ```cpp
     struct S {
@@ -2910,7 +2910,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Výsledek `sizeof(S)` je 24. Dá se ale snížit na 16, pokud použijete alternativní řešení uvedené pro x64:
+   Výsledkem `sizeof(S)` je 24. Pokud však použijete řešení uvedené pro x64, může být snížena na 16:
 
     ```cpp
     struct dummy {
@@ -2926,33 +2926,33 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, které byly implementovány v aplikaci Visual Studio 2010, a RuntimeLibrary neshody. K těmto neshodě dojde, pokud možnosti kompilátoru `/MT` (statická verze), `/MTd` (statické ladění), `/MD` (dynamická verze) a `/MDd` (dynamický ladění) jsou smíšené.
+Kompilátor Jazyka C++ ve Visual Studiu 2013 detekuje neshody v _ITERATOR_DEBUG_LEVEL, který byl implementován v sadě Visual Studio 2010 a neshody runtimelibrary. K těmto neshodám dochází, `/MT` když jsou `/MTd` smíšené možnosti `/MD` kompilátoru `/MDd` (statické vydání), (statické ladění), (dynamické vydání) a (dynamické ladění).
 
-- Pokud váš kód potvrdí šablony simulovaného aliasu předchozí verze, je nutné ji změnit. Například místo `allocator_traits<A>::rebind_alloc<U>::other`, nyní musíte vyslovit `allocator_traits<A>::rebind_alloc<U>`. I když `ratio_add<R1, R2>::type` již není nutné a teď doporučujeme, abyste si vyřekli `ratio_add<R1, R2>`, předchozí kompilace bude stále zkompilována, protože `ratio<N, D>` je nutné, aby měl "Type" typedef pro snížený poměr, který bude stejný typ, pokud již byl zmenšen.
+- Pokud váš kód potvrdí simulované aliasšablony předchozí verze, musíte je změnit. Například místo `allocator_traits<A>::rebind_alloc<U>::other`, nyní musíte `allocator_traits<A>::rebind_alloc<U>`říct . I `ratio_add<R1, R2>::type` když již není nutné a `ratio_add<R1, R2>`nyní doporučujeme, abyste `ratio<N, D>` řekli , první bude stále kompilovat, protože je nutné mít "typ" typedef pro snížený poměr, který bude stejný typ, pokud je již snížena.
 
-- Při volání `std::min()` nebo `std::max()`je nutné použít `#include <algorithm>`.
+- Musíte použít `#include <algorithm>` při `std::min()` volání `std::max()`nebo .
 
-- Pokud váš stávající kód používá simulované rozsahy v předchozím vydání – tradiční výčty bez oboru, které jsou zabaleny v oborech názvů – je třeba je změnit. Pokud jste například odkazovali na typ `std::future_status::future_status`, nyní musíte vyslovit `std::future_status`. Většina kódu však není ovlivněna, například `std::future_status::ready` stále kompiluje.
+- Pokud váš existující kód používá předchozí verze simulované rozsahové výčty – tradiční unscoped výčty zabalené v oborech názvů – musíte změnit. Například pokud jste odkazoval `std::future_status::future_status`se na typ `std::future_status`, nyní musíte říct . Většina kódu však není ovlivněna – například `std::future_status::ready` stále zkompiluje.
 
-- `explicit operator bool()` je přísnější než nespecifikovaný operátor-bool-Type (). `explicit operator bool()` povoluje explicitní převod na logickou hodnotu, například v případě, že se jedná o `shared_ptr<X> sp`, `static_cast<bool>(sp)` i `bool b(sp)` jsou platné – a Boolean-testovatelné "kontextové převody" na bool, například `if (sp)`, `!sp``sp &&` jakékoli. `explicit operator bool()` však zakáže implicitní převod na bool, takže nemůžete vyslovit `bool b = sp;` a s ohledem na návratový typ bool nemůžete vyslovit `return sp`.
+- `explicit operator bool()`je přísnější než operátor nespecifikovaný-bool type(). `explicit operator bool()`umožňuje explicitní převody bool – `shared_ptr<X> sp`například `static_cast<bool>(sp)` `bool b(sp)` dané , a jsou platné – a boolean-testable "kontextové `if (sp)` `!sp`převody" bool –například , , , `sp &&` cokoliv. Nicméně, `explicit operator bool()` zakazuje implicitní převody bool, takže nemůžete `bool b = sp;` říct, a vzhledem k bool `return sp`návratový typ, nemůžete říct .
 
-- Nyní jsou implementovány reálné šablony variadické, _VARIADIC_MAX a související makra nemají žádný vliv. Pokud stále definujete _VARIADIC_MAX, ignoruje se. Je-li potvrzen náš nástroj maker určený k podpoře simulovaných variadic šablon jiným způsobem, je nutné změnit váš kód.
+- Nyní, když jsou implementovány skutečné variadické šablony, _VARIADIC_MAX a související makra nemají žádný vliv. Pokud stále definujete _VARIADIC_MAX, je ignorována. Je-li potvrzen náš nástroj maker určený k podpoře simulovaných variadic šablon jiným způsobem, je nutné změnit váš kód.
 
-- Kromě běžných klíčových slov hlavičky C++ standardní knihovny teď neumožňují nahradit makro přepsání kontextově závislého klíčového slova **override** a **Final**.
+- Kromě běžných klíčových slov nyní záhlaví standardní knihovny jazyka C++ zakazují nahrazení maker kontextově **citlivými** klíčovými slovy a **konečná**.
 
-- `reference_wrapper`, `ref()`a `cref()` nyní zakazují vytvoření vazby na dočasné objekty.
+- `reference_wrapper`, `ref()`a `cref()` nyní zakázat vazbu na dočasné objekty.
 
-- \<náhodný > nyní striktně vynutila podmínky při kompilaci.
+- \<random> nyní přísně vynucuje své předpoklady kompilace.
 
-- U C++ různých vlastností typu standardní knihovny je předběžná podmínka "T" úplným typem ". I když kompilátor nyní vynutil tuto předběžnou podmínku striktně, nemusí ji vyhovět ve všech situacích. (Protože C++ porušení předběžných podmínek standardní knihovny spustí nedefinované chování, Standard nezaručuje vynucení.)
+- Různé znaky typu standardní knihovny c++ mají předpoklad "T musí být úplný typ". Přestože kompilátor nyní vynucuje tuto podmínku přísněji, nemusí vynutit ve všech situacích. (Vzhledem k tomu, že porušení podmínky standardní knihovny jazyka C++ aktivuje nedefinované chování, standard nezaručuje vynucení.)
 
-- C++ Standardní knihovna nepodporuje `/clr:oldSyntax`.
+- Standardní knihovna jazyka C++ `/clr:oldSyntax`nepodporuje .
 
-- Specifikace C++ 11 pro common_type < > měla neočekávané a nežádoucí následky; Konkrétně to dělá common_type\<int, int >:: Type Return int & &. Proto kompilátor implementuje navrhované řešení problému pracovní skupiny knihovny 2141, který umožňuje common_type\<int, int = "" >:: Type Return int.
+- Specifikace C++11 pro common_type<> měla neočekávané a nežádoucí důsledky; zejména provede common_type\<int, int>::type return int&&. Proto kompilátor implementuje navrhované řešení pro knihovnu pracovní skupiny\<problém 2141, který umožňuje common_type int= """>::type return int.
 
-   Vzhledem k tomu, že se jedná o vedlejší účinky této změny, nebude mít případ identity nadále fungovat (common_type\<T > nevede vždy jako typ T). Toto chování vyhovuje navrženému řešení, ale přerušuje jakýkoliv kód, který se spoléhal na předchozí chování.
+   Jako vedlejší účinek této změny případ identity již\<nefunguje (common_type T> nemusí vždy mít za následek typ T). Toto chování je v souladu s navrhované řešení, ale přeruší jakýkoli kód, který spoléhal na předchozí chování.
 
-   Pokud požadujete vlastnost typu identita, nepoužívejte nestandardní `std::identity` definované v \<type_traits >, protože nebude fungovat pro \<void >. Místo toho implementujte vlastní typovou vlastnost identity tak, aby vyhovovala vašim potřebám. Tady je příklad:
+   Pokud požadujete znak typu identity, nepoužívejte nestandardní, `std::identity` který je \<definován v type_traits> \<protože to nebude fungovat pro prázdné>. Místo toho implementujte vlastní typovou vlastnost identity tak, aby vyhovovala vašim potřebám. Tady je příklad:
 
     ```cpp
     template < typename T> struct Identity {
@@ -2962,47 +2962,47 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 ### <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
-- **Pouze Visual Studio 2013**: knihovna MFC MBCS není obsažena v sadě Visual Studio, protože kódování Unicode je oblíbené a používání znakové sady MBCS bylo významně odmítnuto. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Pokud však musíte nadále používat knihovnu MFC MBCS, můžete ji stáhnout z webu MSDN Download Center na [vícebajtové knihovně MFC pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: knihovna DLL znakové sady MBCS je obsažena v součástech pro C++ instalaci v aplikaci Visual Studio 2015 a novější).
+- **Pouze Visual Studio 2013**: Knihovna mbcs knihovny mfc není součástí sady Visual Studio, protože Unicode je tak populární a použití MBCS výrazně snížila. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Pokud však musíte pokračovat v používání knihovny mbcs knihovny knihovny MFC, můžete ji stáhnout ze služby Stažení softwaru MSDN v [knihovně Knihovny mfc multibyte pro sadu Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: Knihovna DLL mbcs je součástí součástí nastavení c++ v sadě Visual Studio 2015 a novější).
 
-- Přístupnost pásu karet MFC se změnila.  Místo architektury s jednou úrovní je teď Hierarchická architektura. Staré chování můžete i nadále používat voláním `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
+- Usnadnění přístupu na pás u pásu karet knihovny MFC se změní.  Namísto jednoúrovňové architektury je nyní hierarchická architektura. Staré chování můžete stále používat `CRibbonBar::EnableSingleLevelAccessibilityMode()`voláním .
 
-- Metoda `CDatabase::GetConnect` je odebrána. Pro zlepšení zabezpečení je připojovací řetězec nyní uložen zašifrovaný a je dešifrován pouze v případě potřeby; nedá se vrátit jako prostý text.  Řetězec lze získat pomocí metody `CDatabase::Dump`.
+- `CDatabase::GetConnect`metoda je odstraněna. Pro zlepšení zabezpečení je připojovací řetězec nyní uložen zašifrován a dešifrován pouze podle potřeby. nelze jej vrátit jako prostý text.  Řetězec lze získat pomocí `CDatabase::Dump` metody.
 
-- Podpis `CWnd::OnPowerBroadcast` se změnil. Podpis tohoto popisovače zprávy se změní na LPARAM jako druhý parametr.
+- Podpis `CWnd::OnPowerBroadcast` společnosti se změní. Podpis tohoto popisovače zprávy se změní na LPARAM jako druhý parametr.
 
-- Signatury se mění tak, aby vyhovovaly obslužným rutinám zpráv. Seznamy parametrů u následujících funkcí se změnily a používají nově přidané popisovače zpráv ON_WM_ *:
+- Podpisy jsou změněny tak, aby vyhovovaly obslužné rutiny zpráv. Seznamy parametrů u následujících funkcí se změnily a používají nově přidané popisovače zpráv ON_WM_ *:
 
-   - `CWnd::OnDisplayChange` změněno na (UINT, int, int) namísto (WPARAM, LPARAM), aby bylo možné použít nové makro ON_WM_DISPLAYCHANGE v mapě zpráv.
+  - `CWnd::OnDisplayChange`změněnna (UINT, int, int) namísto (WPARAM, LPARAM) tak, aby nové ON_WM_DISPLAYCHANGE makro lze použít v mapě zpráv.
 
-   - `CFrameWnd::OnDDEInitiate` změněno na (CWnd *, UINT, UNIT) namísto (WPARAM, LPARAM), aby bylo možné použít nové makro ON_WM_DDE_INITIATE v mapě zpráv.
+  - `CFrameWnd::OnDDEInitiate`změněnna (CWnd*, UINT, UNIT) namísto (WPARAM, LPARAM) tak, aby bylo možné nové ON_WM_DDE_INITIATE makro použít v mapě zpráv.
 
-   - `CFrameWnd::OnDDEExecute` změnit na (CWnd *, HANDLE) místo (WPARAM, LPARAM), aby bylo možné použít nové makro ON_WM_DDE_EXECUTE v mapě zpráv.
+  - `CFrameWnd::OnDDEExecute`změněnna (CWnd*, HANDLE) namísto (WPARAM, LPARAM) tak, aby bylo možné použít nové makro ON_WM_DDE_EXECUTE v mapě zpráv.
 
-   - `CFrameWnd::OnDDETerminate` změnit na (CWnd *) jako parametr namísto (WPARAM, LPARAM), aby bylo možné použít nové makro ON_WM_DDE_TERMINATE v mapě zpráv.
+  - `CFrameWnd::OnDDETerminate`změněnna (CWnd*) jako parametr namísto (WPARAM, LPARAM) tak, aby nové makro ON_WM_DDE_TERMINATE bylo možné použít v mapě zpráv.
 
-   - místo (WPARAM, LPARAM) se nezmění `CMFCMaskedEdit::OnCut`, aby bylo možné použít nové makro ON_WM_CUT v mapě zpráv.
+  - `CMFCMaskedEdit::OnCut`změněnna žádné parametry namísto (WPARAM, LPARAM), takže nové makro ON_WM_CUT lze použít v mapě zpráv.
 
-   - místo (WPARAM, LPARAM) se nezmění `CMFCMaskedEdit::OnClear`, aby bylo možné použít nové makro ON_WM_CLEAR v mapě zpráv.
+  - `CMFCMaskedEdit::OnClear`změněnna žádné parametry namísto (WPARAM, LPARAM), takže nové ON_WM_CLEAR makro lze použít v mapě zpráv.
 
-   - místo (WPARAM, LPARAM) se nezmění `CMFCMaskedEdit::OnPaste`, aby bylo možné použít nové makro ON_WM_PASTE v mapě zpráv.
+  - `CMFCMaskedEdit::OnPaste`změněnna žádné parametry namísto (WPARAM, LPARAM), takže nové makro ON_WM_PASTE lze použít v mapě zpráv.
 
-- direktivy `#ifdef` v hlavičkových souborech knihovny MFC jsou odebrány. V hlavičkových souborech knihovny MFC, které souvisejí s nepodporovanými verzemi Windows (WINVER &lt; 0x0501), se odebralo mnoho direktiv `#ifdef`.
+- `#ifdef`direktivy v hlavičkových souborech knihovny MFC jsou odebrány. Mnoho `#ifdef` direktiv v souborech hlaviček knihovny MFC související s nepodporovanými verzemi systému Windows (WINVER &lt; 0x0501) jsou odebrány.
 
-- Knihovna ATL DLL (atl120. dll) je odebrána. Knihovna ATL je nyní poskytována jako záhlaví a statická knihovna (atls.lib).
+- Atl DLL (atl120.dll) je odebrána. Knihovna ATL je nyní poskytována jako záhlaví a statická knihovna (atls.lib).
 
-- Knihovny Atlsd. lib, atlsn. lib a atlsnd. lib se odeberou. Knihovna Atls.lib již nemá závislosti na znakové sadě ani kód specifický pro ladění/vydání. Protože princip funkce je stejný pro Unicode/ANSI i ladění/vydání, je vyžadována pouze jedna verze knihovny.
+- Atlsd.lib, atlsn.lib a atlsnd.lib jsou odebrány. Knihovna Atls.lib již nemá závislosti na znakové sadě ani kód specifický pro ladění/vydání. Protože princip funkce je stejný pro Unicode/ANSI i ladění/vydání, je vyžadována pouze jedna verze knihovny.
 
-- Trasovací nástroj ATL nebo MFC je odebrán společně s knihovnou ATL DLL a mechanismus trasování je zjednodušen. Konstruktor `CTraceCategory` nyní přijímá jeden parametr (název kategorie) a makra trasování volají funkce vytváření sestav ladění CRT.
+- Nástroj trasování KNIHOVNY ATL/MFC je odebrán společně s knihovnou DLL knihovny ATL a mechanismus trasování je zjednodušen. Konstruktor `CTraceCategory` nyní přebírá jeden parametr (název kategorie) a makra TRACE volání funkce zasílání ladicích protokolů CRT.
 
-## <a name="visual-studio-2012-breaking-changes"></a>Nejnovější změny sady Visual Studio 2012
+## <a name="visual-studio-2012-breaking-changes"></a>Visual Studio 2012 Nejnovější změny
 
-### <a name="compiler"></a>Compiler
+### <a name="compiler"></a>Kompilátoru
 
-- Možnost kompilátoru `/Yl` se změnila. Ve výchozím nastavení kompilátor používá tuto možnost, což může vést k LINKERŮ LNK2011 chyb za určitých podmínek. Další informace naleznete v tématu [/yl (vložení referenčního souboru PCH pro knihovnu ladění)](../build/reference/yl-inject-pch-reference-for-debug-library.md).
+- Možnost `/Yl` kompilátoru byla změněna. Ve výchozím nastavení používá kompilátor tuto možnost, což může za určitých podmínek vést k chybám LNK2011. Další informace naleznete v tématu [/Yl (Inject PCH Reference for Debug Library).](../build/reference/yl-inject-pch-reference-for-debug-library.md)
 
-- V kódu, který je kompilován pomocí `/clr`, klíčové slovo class **výčtu** definuje výčet c++ 11, nikoli výčet modulu CLR (Common Language Runtime). Chcete-li definovat výčet CLR, musíte být explicitní o jeho přístupnost.
+- V kódu, který je `/clr`kompilován pomocí , **výčtu** třídy klíčové slovo definuje C ++ 11 výčtu, nikoli běžný jazyk runtime (CLR) výčtu. Chcete-li definovat výčtu CLR, musíte být explicitní o jeho usnadnění přístupu.
 
-- Pomocí klíčového slova Template můžete explicitně určit závislý název (C++ standardní dodržování předpisů v jazyce). V následujícím příkladu je zvýrazněné klíčové slovo šablony povinno vyřešit nejednoznačnost. Další informace najdete v tématu [překlad názvů pro závislé typy](../cpp/name-resolution-for-dependent-types.md).
+- Pomocí klíčového slova šablony explicitně rozptýlá tezávislí název závislý (dodržování předpisů jazyka C++). V následujícím příkladu je zvýrazněné klíčové slovo šablony povinné k vyřešení nejednoznačnosti. Další informace naleznete v [tématu Překlad názvů pro závislé typy](../cpp/name-resolution-for-dependent-types.md).
 
     ```cpp
     template < typename X = "", typename = "" AY = "">
@@ -3016,512 +3016,512 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
     struct B {};  // error C2993: 'float': illegal type for non-type template parameter 'n'
     ```
 
-- Kód, který je zkompilován pomocí možnosti příkazového řádku `/GS` a který má ohrožení zabezpečení po jedné, může vést k ukončení zpracování za běhu, jak je znázorněno v následujícím příkladu pseudokódu.
+- Kód, který je kompilován pomocí možnosti `/GS` příkazového řádku a který má chybu zabezpečení mimo jednu, může vést k ukončení procesu za běhu, jak je znázorněno v následujícím příkladu pseudokódu.
 
     ```cpp
     char buf[MAX]; int cch; ManipulateString(buf, &cch); // ... buf[cch] = '\0'; // if cch >= MAX, process will terminate
     ```
 
-- Výchozí architektura pro sestavení x86 se změní na SSE2; Kompilátor proto může vygenerovat instrukce SSE a použije registry XMM k provádění výpočtů s plovoucí desetinnou čárkou. Pokud se chcete vrátit k předchozímu chování, použijte příznak kompilátoru `/arch:IA32` k určení architektury jako IA32.
+- Výchozí architektura pro sestavení x86 se změní na SSE2; proto kompilátor může vyzařovat sa pokyny a bude používat xmm registry k provádění výpočtů s plovoucí desetinnou desetinnou desetinnou desetinnou tálicí. Pokud se chcete vrátit k předchozímu `/arch:IA32` chování, použijte příznak kompilátoru k určení architektury jako IA32.
 
-- Kompilátor může vystavit [Upozornění kompilátoru upozornění (úroveň 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) a C4701, kde dříve to nevedlo. Kompilátor aplikuje silnější kontroly pro použití neinicializovaných lokálních proměnných typu ukazatele.
+- Kompilátor může vydávat upozornění [Compiler Warning (úroveň 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) a C4701, kde dříve nebyl. Kompilátor použije silnější kontroly pro použití neinicializovaných místních proměnných typu ukazatele.
 
-- Je-li zadán nový příznak linkeru `/HIGHENTROPYVA`, systém Windows 8 obvykle způsobí, že přidělení paměti vrátí 64 bitovou adresu. (Před Windows 8 takové přidělení častěji vrací adresy, které byly méně než 2 GB.) Tato změna může vystavit chyby zkrácení ukazatele v existujícím kódu. Ve výchozím nastavení je tento přepínač zapnutý. Chcete-li toto chování zakázat, zadejte `/HIGHENTROPYVA:NO`.
+- Když je zadán `/HIGHENTROPYVA` nový příznak propojovacího programu, systém Windows 8 obvykle způsobí, že přidělení paměti vrátí 64bitovou adresu. (Před Windows 8, tyto přidělení častěji vráceny adresy, které byly menší než 2 GB.) Tato změna může vystavit chyby zkrácení ukazatele v existujícím kódu. Ve výchozím nastavení je tento přepínač zapnutý. Chcete-li toto `/HIGHENTROPYVA:NO`chování zakázat, zadejte .
 
-- Spravovaný kompilátor (Visual Basic/C#) také podporuje `/HIGHENTROPYVA` pro spravovaná sestavení.  V tomto případě je však `/HIGHENTROPYVAswitch` ve výchozím nastavení vypnutá.
+- Spravovaný kompilátor (Visual Basic/C#) také podporuje `/HIGHENTROPYVA` pro spravované sestavení.  V tomto případě je `/HIGHENTROPYVAswitch` však vypnuto ve výchozím nastavení.
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
-- I když doporučujeme, abyste v C++/CLI nevytvořili model Windows Formsé aplikace, bude se C++podporovat údržba stávajících aplikací uživatelského rozhraní/CLI. Pokud je nutné vytvořit aplikaci model Windows Forms nebo jinou aplikaci uživatelského rozhraní .NET, použijte C# nebo Visual Basic. Použijte C++/CLI jenom pro účely interoperability.
+- Přestože doporučujeme nevytvářet aplikace windows forms v jazyce C++/CLI, je podporována údržba existujících aplikací ui jazyka C++/CLI. Pokud máte k vytvoření aplikace Windows Forms nebo jiné aplikace rozhraní .NET, použijte C# nebo Visual Basic. C++/CLI používejte pouze pro účely interoperability.
 
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Knihovna paralelních vzorů a knihovna Concurrency Runtime
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Knihovna paralelních vzorů a souběžná doba běhu
 
-`SchedulerType` výčet `UmsThreadDefault` je zastaralý. Specifikace `UmsThreadDefault` vytváří zastaralé upozornění a interně se mapuje zpět na `ThreadScheduler`.
+Výčet `SchedulerType` `UmsThreadDefault` je zastaralé. Specifikace `UmsThreadDefault` vytvoří zastaralé varování a interně mapuje zpět `ThreadScheduler`na rozhraní .
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-- Po zásadní změně mezi standardy C++ 98/03 a C++ 11 pomocí explicitních argumentů šablony pro volání `make_pair()` – jako v `make_pair<int, int>(x, y)` – obvykle není kompilována v vizuálu C++ v aplikaci visual Studio 2012. Řešením je vždy volat `make_pair()` bez explicitních argumentů šablony – jako v `make_pair(x, y)`. Zadání explicitních argumentů šablony zaruší účel funkce. Pokud potřebujete přesnou kontrolu nad výsledným typem, použijte místo `make_pair` `pair`, jako v `pair<short, short>(int1, int2)`.
+- Po přerušení změny mezi Standardy C ++ 98/03 a C++ 11 pomocí explicitní šablony argumenty volat `make_pair()` – jako v `make_pair<int, int>(x, y)` – obvykle nekompiluje v jazyce Visual C++ v sadě Visual Studio 2012. Řešením je vždy `make_pair()` volat bez explicitní šablony `make_pair(x, y)`argumenty – jako v . Poskytnutí argumentů explicitní šablony poráží účel funkce. Pokud požadujete přesnou kontrolu nad `pair` výsledným `make_pair` typem, použijte místo – jako v `pair<short, short>(int1, int2)`.
 
-- Další zásadní změna mezi standardy C++ 98/03 a C++ 11: Pokud je implicitně převoditelná na B a B, implicitně převoditelné na C, ale není implicitně převoditelná na C, C++ 98/03 a Visual Studio `pair<A, X>` 2010, aby bylo možné `pair<C, X>`převést (implicitně nebo explicitně). (Druhý typ, X, není zde důležité a není specifický pro první typ v páru.) C++ Kompilátor v aplikaci Visual Studio 2012 detekuje, že není možné implicitně převést na jazyk C a odebírá dvojici převodů z řešení přetížení. Tato změna je pro mnoho scénářů pozitivní. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` budou kompilována s touto změnou. Tato změna však přerušuje kód, který se opírá o agresivní převody párů. Takový kód může být obvykle vyřešen prováděním jedné části převodu explicitně – například předáním `make_pair(static_cast<B>(a), x)` funkci, která očekává `pair<C, X>`.
+- Další zlomová změna mezi standardy C++98/03 a C++11: Pokud je A implicitně převoditelná na B a B, je implicitně převoditelná na C, `pair<A, X>` a není implicitně převoditelná `pair<C, X>`na C, C ++ 98/03 a Visual Studio 2010 povoleno převést (implicitně nebo explicitně) na . (Jiný typ, X, není zajímavé zde a není specifické pro první typ v páru.) Kompilátor Jazyka C++ v sadě Visual Studio 2012 zjistí, že A není implicitně konvertibilní na C a odebere převod dvojice z rozlišení přetížení. Tato změna je pozitivní pro mnoho scénářů. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`, `func()` a `pair<const char *, const char *>` volání s bude zkompilovat s touto změnou. Tato změna však přeruší kód, který se spoléhal na agresivní převody párů. Takový kód lze obvykle opravit provedením jedné části převodu explicitně `make_pair(static_cast<B>(a), x)` – například `pair<C, X>`předáním funkce, která očekává .
 
-- Sady Visual Studio 2010 simulované variadické šablony – například `make_shared<T>(arg1, arg2, argN)`– až do limitu 10 argumentů, pomocí razítka přetížení a specializace s využitím strojového stroje preprocesoru. V aplikaci Visual Studio 2012 se toto omezení omezuje na pět argumentů, aby se zlepšila doba kompilace a spotřeba paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit tak, že explicitně definujete _VARIADIC_MAX jako 10, projektově v rámci.
+- Visual Studio 2010 simulované variadické `make_shared<T>(arg1, arg2, argN)`šablony – například – až do limitu 10 argumentů, potlačením přetížení a specializací s preprocesorové stroje. V sadě Visual Studio 2012 je tento limit snížen na pět argumentů pro zlepšení doby kompilace a spotřeby paměti kompilátoru pro většinu uživatelů. Předchozí limit však můžete nastavit explicitním definováním _VARIADIC_MAX jako 10 celoprojektových.
 
-- C++ 11 17.6.4.3.1 [makro. Names]/2 zakazuje nahrazení klíčových slov makrem C++ při zahrnutí standardních hlaviček knihovny. Hlavičky nyní generují chyby kompilátoru, pokud zjišťují klíčová slova nahrazená makrem. (Definování _ALLOW_KEYWORD_MACROS umožňuje zkompilovat tento kód, ale důrazně na něj nemůžeme.) Jako výjimka je ve výchozím nastavení povolená forma `new` makra, protože hlavičky se samyně chrání pomocí `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW přesně s tím, co jeho název implikuje.
+- C++ 11 17.6.4.3.1 [macro.names]/2 zakazuje nahrazení maker klíčových slov, pokud jsou zahrnuty hlavičky standardní knihovny jazyka C++. Záhlaví nyní vyzařují chyby kompilátoru, pokud zjistí klíčová slova nahrazená makry. (Definování _ALLOW_KEYWORD_MACROS umožňuje takový kód ke kompilaci, ale důrazně nedoporučujeme, že použití.) `new` Jako výjimku je ve výchozím nastavení povolena forma makra, protože `#pragma push_macro("new")` / `#undef new` /záhlaví se komplexně brání pomocí `#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW dělá přesně to, co jeho název napovídá.
 
-- Chcete-li implementovat různé optimalizace a kontroly ladění, C++ implementace standardní knihovny úmyslně přerušuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití C++ standardní knihovny zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí do jednoho binárního souboru (exe nebo DLL), a zakazuje předávání objektů C++ standardních knihoven mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí sady visual Studio 2010 s těmi, které byly zkompilovány C++ pomocí kompilátoru v aplikaci Visual Studio 2012, generuje chyby linkeru o neshodu _MSC_VER, kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru ( C++ 1700 pro vizuál v aplikaci Visual Studio 2012). Tato kontrola nedokáže detekovat kombinování knihoven DLL a nemůže detekovat kombinování, které zahrnuje Visual Studio 2008 nebo starší.
+- Chcete-li implementovat různé optimalizace a kontroly ladění, implementace standardní knihovny jazyka C++záměrně přeruší binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití standardní knihovny Jazyka C++ zakazuje míchání objektových souborů a statických knihoven, které jsou kompilovány pomocí různých verzí do jednoho binárního souboru (EXE nebo DLL), a zakazuje předávání objektů standardní knihovny jazyka C++ mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Míchání objektových souborů a statických knihoven (pomocí standardní knihovny Jazyka C++, které byly zkompilovány pomocí sady Visual Studio 2010 s těmi, které byly zkompilovány pomocí kompilátoru Jazyka C++ v sadě Visual Studio 2012, vydává chyby propojovacího programu o neshodě _MSC_VER, kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru (1700 pro Visual C++ v sadě Visual Studio 2012). Tato kontrola nemůže rozpoznat míchání dll a nelze zjistit míchání, které zahrnuje Visual Studio 2008 nebo starší.
 
-- Kromě zjištění _ITERATOR_DEBUG_LEVEL neshody, které byly implementovány v aplikaci Visual Studio 2010, C++ kompilátor v aplikaci visual Studio 2012 detekuje neshody běhové knihovny. K těmto neshoděm dochází, když jsou možnosti kompilátoru `/MT` (statická verze), `/MTd` (statický ladicí program), `/MD` (dynamická verze) a `/MDd` (dynamický ladění), jsou smíšené.
+- Kromě zjišťování neshod _ITERATOR_DEBUG_LEVEL, který byl implementován v sadě Visual Studio 2010, kompilátor jazyka C++ v sadě Visual Studio 2012 detekuje neshody knihovny runtime. K těmto neshodám dochází, `/MT` když jsou `/MTd` smíšené možnosti `/MD` kompilátoru `/MDd` (statické vydání), (statické ladění), (dynamické vydání) a (dynamické ladění).
 
-- `operator<()`, `operator>()`, `operator<=()`a `operator>=()` byly dříve k dispozici pro `std::unordered_map` a `stdext::hash_map` řady kontejnerů, i když jejich implementace nejsou užitečné. Tyto nestandardní operátory byly odebrány v jazyce Visual C++ Studio 2012. Kromě toho byla rozšířená implementace `operator==()` a `operator!=()` pro rodinu `std::unordered_map` rozšířena tak, aby kryla `stdext::hash_map` rodinu. (Doporučujeme, abyste se vyhnuli použití `stdext::hash_map` řady v novém kódu.)
+- `operator<()`, `operator>()` `operator<=()`, `operator>=()` a byly dříve `std::unordered_map` `stdext::hash_map` k dispozici pro a rodiny kontejnerů, i když jejich implementace nebyly užitečné. Tyto nestandardní operátory byly odebrány v jazyce Visual C++ v sadě Visual Studio 2012. Kromě toho, provádění `operator==()` `operator!=()` a `std::unordered_map` pro rodinu byla rozšířena na `stdext::hash_map` rodinu. (Doporučujeme, abyste se vyhýbali použití rodiny `stdext::hash_map` v novém kódu.)
 
-- C++ 11 22.4.1.4 [locale. codecvt] Určuje, že `codecvt::length()` a `codecvt::do_length()` by měly mít upravitelný `stateT&` parametr, ale Visual Studio 2010 převzal `const stateT&`. C++ Kompilátor v aplikaci Visual Studio 2012 přebírá `stateT&` pověřením standardem. Tento rozdíl je důležitý pro všechny uživatele, kteří se snaží přepsat virtuální funkci `do_length()`.
+- C++ 11 22.4.1.4 [locale.codecvt] `codecvt::length()` `codecvt::do_length()` určuje, že `stateT&` a měl by mít upravitelné `const stateT&`parametry, ale Visual Studio 2010 trvalo . Kompilátor Jazyka C++ v sadě `stateT&` Visual Studio 2012 trvá podle pověření standardu. Tento rozdíl je významný pro každého, kdo se `do_length()`pokouší přepsat virtuální funkci .
 
 ### <a name="crt"></a>CRT
 
-- Halda jazyka C runtime (CRT), která se používá pro New a hodnotu (), již není soukromá. CRT nyní používá haldu procesu. To znamená, že halda není zničena při uvolnění knihovny DLL, takže knihovny DLL, které jsou staticky propojeny s CRT, musí zajistit, aby paměť, která je přidělena kódem knihovny DLL, byla vyčištěna před uvolněním.
+- Halda C Runtime (CRT), která se používá pro nové a malloc(), již není soukromá. CRT nyní používá haldy procesu. To znamená, že halda není zničena při uvolnění knihovny DLL, takže knihovny DLL, které se staticky propojují s CRT, musí zajistit, aby paměť přidělená kódem Knihovny DLL byla vyčištěna před jeho uvolněním.
 
-- Funkce `iscsymf()` vyhodnotí záporné hodnoty.
+- Funkce `iscsymf()` uplatňuje se zápornými hodnotami.
 
-- Struktura `threadlocaleinfostruct` se změnila tak, aby odpovídala změnám funkcí národního prostředí.
+- Struktura `threadlocaleinfostruct` byla změněna tak, aby vyhovovala změnám funkcí národního prostředí.
 
-- Funkce CRT, které mají odpovídající vnitřní prvky jako `memxxx()`, `strxxx()` jsou odebrány z intrin. h. Pokud jste zahrnuli intrin. h jenom pro tyto funkce, musíte teď zahrnout odpovídající hlavičky CRT.
+- Crt funkce, které mají odpovídající vnitřní, jako `memxxx()`je například , `strxxx()` jsou odebrány z intrin.h. Pokud jste zahrnuli intrin.h pouze pro tyto funkce, musíte nyní zahrnout odpovídající crt záhlaví.
 
 ### <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
-- Odebrala se podpora fúze (afxcomctl32. h); Proto byly odebrány všechny metody definované v \<afxcomctl32. h >. Hlavičkové soubory \<afxcomctl32. h > a \<afxcomctl32. inl > byly odstraněny.
+- Odebrána podpora Fusion (afxcomctl32.h); proto všechny metody, které \<jsou definovány v afxcomctl32.h> byly odebrány. Soubory \<hlaviček afxcomctl32.h> a \<afxcomctl32.inl> byly odstraněny.
 
-- Změnili jste název `CDockablePane::RemoveFromDefaultPaneDividier` na `CDockablePane::RemoveFromDefaultPaneDivider`.
+- Název byl `CDockablePane::RemoveFromDefaultPaneDividier` změněn `CDockablePane::RemoveFromDefaultPaneDivider`na .
 
-- Změnili jste podpis `CFileDialog::SetDefExt` pro použití LPCTSTR; Proto jsou sestavení v kódování Unicode ovlivněna.
+- Byl změněn `CFileDialog::SetDefExt` podpis pro použití lPCTSTR; proto jsou ovlivněny sestavení Unicode.
 
-- Byly odebrány zastaralé kategorie trasování knihovny ATL.
+- Byly odebrány zastaralé kategorie trasování seznamu ATL.
 
-- Byl změněn podpis `CBasePane::MoveWindow`, aby bylo možné provést `const CRect`.
+- Změněn podpis `CBasePane::MoveWindow` na soubor `const CRect`.
 
-- Změnili jste podpis `CMFCEditBrowseCtrl::EnableBrowseButton`.
+- Byl změněn `CMFCEditBrowseCtrl::EnableBrowseButton`podpis souboru .
 
 - Byly odebrány vlastnosti `m_fntTabs` a `m_fntTabsBold` ze třídy `CMFCBaseTabCtrl`.
 
-- Byl přidán parametr do konstruktorů `CMFCRibbonStatusBarPane`. (Jedná se o výchozí parametr, a proto se nejedná o derozdělení do zdrojového kódu.)
+- Byl přidán parametr `CMFCRibbonStatusBarPane` do konstruktorů. (Je to výchozí parametr, a proto není zdroj-lámání.)
 
-- Byl přidán parametr do konstruktoru `CMFCRibbonCommandsListBox`. (Jedná se o výchozí parametr, a proto se nejedná o derozdělení do zdrojového kódu.)
+- Do konstruktoru `CMFCRibbonCommandsListBox` byl přidán parametr. (Je to výchozí parametr, a proto není zdroj-lámání.)
 
-- Odebrali jsme rozhraní `AFXTrackMouse` API (a související procedura časovače). Místo toho použijte rozhraní Win32 `TrackMouseEvent` API.
+- Odebráno `AFXTrackMouse` rozhraní API (a související časovač proc). Místo toho použijte `TrackMouseEvent` rozhraní API Win32.
 
-- Byl přidán parametr do konstruktoru `CFolderPickerDialog`. (Jedná se o výchozí parametr, a proto se nejedná o derozdělení do zdrojového kódu.)
+- Do konstruktoru `CFolderPickerDialog` byl přidán parametr. (Je to výchozí parametr, a proto není zdroj-lámání.)
 
-- změnila se velikost `CFileStatus` struktury: člen `m_attribute` se změnil z hodnoty BYTE na DWORD (tak, aby odpovídal hodnotě vrácené z `GetFileAttributes`).
+- `CFileStatus`velikost struktury změněna: Člen `m_attribute` se změnil z BYTE na DWORD `GetFileAttributes`(tak, aby odpovídal hodnotě vrácené z ).
 
-- `CRichEditCtrl` a `CRichEditView` použít MSFTEDIT_CLASS (RichEdit 4,1 Control) místo RICHEDIT_CLASS (RichEdit 3,0 Control) v sestaveních Unicode.
+- `CRichEditCtrl`a `CRichEditView` používat MSFTEDIT_CLASS (RichEdit 4.1 řízení) namísto RICHEDIT_CLASS (RichEdit 3.0 řízení) v sestavení unicode.
 
-- Odebrané `AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground`, protože je vždycky TRUE v systémech Windows Vista, Windows 7 a Windows 8.
+- Odstraněno, `AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground` protože je vždy TRUE v systémech Windows Vista, Windows 7 a Windows 8.
 
-- Odebrané `AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable`, protože je vždycky TRUE v systémech Windows Vista, Windows 7 a Windows 8.
+- Odstraněno, `AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable` protože je vždy TRUE v systémech Windows Vista, Windows 7 a Windows 8.
 
-- Odebrání `AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea`. Rozhraní API systému Windows volejte přímo v systémech Windows Vista, Windows 7 a Windows 8.
+- Odebráno `AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea`. Volejte rozhraní Windows API přímo ve Windows Vista, Windows 7 a Windows 8.
 
-- Odebrání `AFX_GLOBAL_DATA::DwmDefWindowProc`. Rozhraní API systému Windows volejte přímo v systémech Windows Vista, Windows 7 a Windows 8.
+- Odebráno `AFX_GLOBAL_DATA::DwmDefWindowProc`. Volejte rozhraní Windows API přímo ve Windows Vista, Windows 7 a Windows 8.
 
-- Přejmenování `AFX_GLOBAL_DATA::DwmIsCompositionEnabled` na `IsDwmCompositionEnabled`, aby se vyloučila kolize názvů.
+- `AFX_GLOBAL_DATA::DwmIsCompositionEnabled` Přejmenována `IsDwmCompositionEnabled` tak, aby eliminovala kolizi názvů.
 
-- Změněné identifikátory pro určitý počet interních časovačů MFC a přesunuly definice na AFXRES. h (AFX_TIMER_ID_ *).
+- Změněny identifikátory pro řadu interních časovačů knihovny MFC a přesunuly definice na soubor afxres.h (AFX_TIMER_ID_*).
 
-- Změnila se signatura `OnExitSizeMove` metody tak, aby souhlasila s ON_WM_EXITSIZEMOVEm makrem:
+- Změněn podpis `OnExitSizeMove` metody tak, aby souhlasil s ON_WM_EXITSIZEMOVE makro:
 
-   - `CFrameWndEx`
+  - `CFrameWndEx`
 
-   - `CMDIFrameWndEx`
+  - `CMDIFrameWndEx`
 
-   - `CPaneFrameWnd`
+  - `CPaneFrameWnd`
 
-- Změnil se název a podpis `OnDWMCompositionChanged` k vyjádření souhlasu s ON_WM_DWMCOMPOSITIONCHANGEDm makrem:
+- Změněn název a `OnDWMCompositionChanged` podpis, aby bylo ON_WM_DWMCOMPOSITIONCHANGED makro:
 
-   - `CFrameWndEx`
+  - `CFrameWndEx`
 
-   - `CMDIFrameWndEx`
+  - `CMDIFrameWndEx`
 
-   - `CPaneFrameWnd`
+  - `CPaneFrameWnd`
 
-- Změnila se signatura `OnMouseLeave` metody tak, aby souhlasila s ON_WM_MOUSELEAVEm makrem:
+- Změněn podpis `OnMouseLeave` metody tak, aby souhlasil s ON_WM_MOUSELEAVE makro:
 
-   - `CMFCCaptionBar`
+  - `CMFCCaptionBar`
 
-   - `CMFCColorBar`
+  - `CMFCColorBar`
 
-   - `CMFCHeaderCtrl`
+  - `CMFCHeaderCtrl`
 
-   - `CMFCProperySheetListBox`
+  - `CMFCProperySheetListBox`
 
-   - `CMFCRibbonBar`
+  - `CMFCRibbonBar`
 
-   - `CMFCRibbonPanelMenuBar`
+  - `CMFCRibbonPanelMenuBar`
 
-   - `CMFCRibbonRichEditCtrl`
+  - `CMFCRibbonRichEditCtrl`
 
-   - `CMFCSpinButtonCtrl`
+  - `CMFCSpinButtonCtrl`
 
-   - `CMFCToolBar` ReplaceThisText
+  - `CMFCToolBar`NahraditTento text
 
-   - `CMFCToolBarComboBoxEdit`
+  - `CMFCToolBarComboBoxEdit`
 
-   - `CMFCToolBarEditCtrl`
+  - `CMFCToolBarEditCtrl`
 
-   - `CMFCAutoHideBar`
+  - `CMFCAutoHideBar`
 
-- Byl změněn podpis `OnPowerBroadcast` k vyjádření souhlasu s ON_WM_POWERBROADCASTm makrem:
+- Byl změněn `OnPowerBroadcast` podpis ON_WM_POWERBROADCAST:
 
-   - `CFrameWndEx`
+  - `CFrameWndEx`
 
-   - `CMDIFrameWndEx`
+  - `CMDIFrameWndEx`
 
-- Byl změněn podpis `OnStyleChanged` k vyjádření souhlasu s ON_WM_STYLECHANGEDm makrem:
+- Byl změněn `OnStyleChanged` podpis ON_WM_STYLECHANGED:
 
-   - `CMFCListCtrl`
+  - `CMFCListCtrl`
 
-   - `CMFCStatusBar`
+  - `CMFCStatusBar`
 
-- Přejmenujte `FontFamalyProcFonts` interní metody na `FontFamilyProcFonts`.
+- Interní metodu `FontFamalyProcFonts` bylo `FontFamilyProcFonts`přejmenováno na .
 
-- Bylo odebráno množství globálních statických `CString` objektů, které eliminují nevracení paměti v některých situacích (nahrazeno #defines), a následující proměnné členů třídy:
+- Byly odebrány `CString` četné globální statické objekty, aby se v některých situacích eliminovaly nevracení paměti (nahrazeny #defines) a následující proměnné členů třídy:
 
-   - `CKeyBoardManager::m_strDelimiter`
+  - `CKeyBoardManager::m_strDelimiter`
 
-   - `CMFCPropertyGridProperty::m_strFormatChar`
+  - `CMFCPropertyGridProperty::m_strFormatChar`
 
-   - `CMFCPropertyGridProperty::m_strFormatShort`
+  - `CMFCPropertyGridProperty::m_strFormatShort`
 
-   - `CMFCPropertyGridProperty::m_strFormatLong`
+  - `CMFCPropertyGridProperty::m_strFormatLong`
 
-   - `CMFCPropertyGridProperty::m_strFormatUShort`
+  - `CMFCPropertyGridProperty::m_strFormatUShort`
 
-   - `CMFCPropertyGridProperty::m_strFormatULong`
+  - `CMFCPropertyGridProperty::m_strFormatULong`
 
-   - `CMFCPropertyGridProperty::m_strFormatFloat`
+  - `CMFCPropertyGridProperty::m_strFormatFloat`
 
-   - `CMFCPropertyGridProperty::m_strFormatDouble`
+  - `CMFCPropertyGridProperty::m_strFormatDouble`
 
-   - `CMFCToolBarImages::m_strPngResType`
+  - `CMFCToolBarImages::m_strPngResType`
 
-   - `CMFCPropertyGridProperty::m_strFormat`
+  - `CMFCPropertyGridProperty::m_strFormat`
 
-- Změnili jste podpis `CKeyboardManager::ShowAllAccelerators` a odebrali jste parametr oddělovače akcelerátoru.
+- Byl změněn `CKeyboardManager::ShowAllAccelerators` podpis a byl odebrán parametr oddělovače akcelerátoru.
 
-- Přidejte `CPropertyPage::GetParentSheet`a ve třídě `CPropertyPage` zavolejte místo `GetParent`, abyste získali správné okno nadřazeného okna, což může být nadřazené nebo při`CPropertyPage`okno. Je možné, že budete muset změnit kód pro volání `GetParentSheet` místo `GetParent`.
+- Přidáno `CPropertyPage::GetParentSheet`, `CPropertyPage` a ve třídě, `GetParent` volání namísto získat správné okno nadřazeného listu, které může být nadřazené nebo prarodiče okno `CPropertyPage`. Možná budete muset změnit kód `GetParentSheet` pro `GetParent`volání namísto .
 
-- Opravené nevyrovnané #pragma upozornění (push) v ATLBASE. H, což způsobilo nesprávné zakázání upozornění Tato upozornění jsou teď po ATLBASE povolená správně. H byla analyzována.
+- Opravena nevyvážená #pragma varování(push) v ATLBASE. H, který způsobil, že upozornění byla nesprávně zakázána. Tato upozornění jsou nyní správně povolena po ATLBASE. H byl analyzován.
 
-- Přesunuly se metody související s D2D z AFX_GLOBAL_DATA do _AFX_D2D_STATE:
+- Metody související s D2D byly přesunuty z AFX_GLOBAL_DATA na _AFX_D2D_STATE:
 
-   - `GetDirectD2dFactory`
+  - `GetDirectD2dFactory`
 
-   - `GetWriteFactory`
+  - `GetWriteFactory`
 
-   - `GetWICFactory`
+  - `GetWICFactory`
 
-   - `InitD2D`
+  - `InitD2D`
 
-   - `ReleaseD2DRefs`
+  - `ReleaseD2DRefs`
 
-   - `IsD2DInitialized`
+  - `IsD2DInitialized`
 
-   - `D2D1MakeRotateMatrix`
+  - `D2D1MakeRotateMatrix`
 
-   - Místo volání, například `afxGlobalData.IsD2DInitialized`, volejte `AfxGetD2DState->IsD2DInitialized`.
+  - Místo volání, například `afxGlobalData.IsD2DInitialized`, `AfxGetD2DState->IsD2DInitialized`volejte .
 
-- Odebrala se zastaralá knihovna ATL *. Soubory CPP ze složky \atlmfc\include
+- Odstraněno zastaralé ATL*. Soubory CPP ze složky \atlmfc\include\.
 
-- Pro splnění `DLLMain` požadavků byla přesunuta `afxGlobalData` inicializace na vyžádání místo v čase inicializace CRT.
+- Přesunul `afxGlobalData` inicializace na on-demand namísto v `DLLMain` době inicializace CRT, aby byly splněny požadavky.
 
-- Do `CMFCOutlookBarPane` třídy byla přidána metoda `RemoveButtonByIndex`.
+- Byla `RemoveButtonByIndex` přidána `CMFCOutlookBarPane` metoda do třídy.
 
-- Oprava `CMFCCmdUsageCount::IsFreqeuntlyUsedCmd` k `IsFrequentlyUsedCmd`.
+- Opraveno `CMFCCmdUsageCount::IsFreqeuntlyUsedCmd` `IsFrequentlyUsedCmd`na .
 
-- Pro `RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane)`byla opravena několik instancí `RestoreOriginalstate`.
+- Opraveno několik instancí na `RestoreOriginalstate` . `RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane)`
 
-- Nepoužívané metody se odebraly z `CDockablePane`: `SetCaptionStyle`, `IsDrawCaption`, `IsHideDisabledButtons`, `GetRecentSiblingPaneInfo`a `CanAdjustLayout`.
+- Byly odebrány `CDockablePane`nepoužívané metody `GetRecentSiblingPaneInfo`z `CanAdjustLayout`: `SetCaptionStyle`, `IsDrawCaption`, `IsHideDisabledButtons`, a .
 
-- Byly odebrány `CDockablePane` statické členské proměnné `m_bCaptionText` a `m_bHideDisabledButtons`.
+- Byly `CDockablePane` odebrány `m_bCaptionText` statické `m_bHideDisabledButtons`členské proměnné a .
 
-- Do `CMFCFontComboBox`se přidala metoda override `DeleteString`.
+- Do aplikace `DeleteString` byla `CMFCFontComboBox`přidána metoda přepsání.
 
-- Z `CPane`se odebraly nepoužívané metody: `GetMinLength` a `IsLastPaneOnLastRow`.
+- Byly z `CPane`: `GetMinLength` a `IsLastPaneOnLastRow`.
 
-- Přejmenování `CPane::GetDockSiteRow(CDockingPanesRow *)` na `CPane::SetDockSiteRow`.
+- `CPane::GetDockSiteRow(CDockingPanesRow *)` Přejmenováno `CPane::SetDockSiteRow`na .
 
-## <a name="visual-studio-2010-breaking-changes"></a>Nejnovější změny sady Visual Studio 2010
+## <a name="visual-studio-2010-breaking-changes"></a>Visual Studio 2010 Nejnovější změny
 
-### <a name="compiler"></a>Compiler
+### <a name="compiler"></a>Kompilátoru
 
-- Klíčové slovo **auto** má nový výchozí význam. Vzhledem k tomu, že použití starého významu je vzácné, většina aplikací nebude touto změnou ovlivněná.
+- Klíčové slovo **auto** má nový výchozí význam. Vzhledem k tomu, že použití starého významu je vzácné, většina aplikací nebude touto změnou ovlivněna.
 
-- Nové klíčové slovo **static_assert** je zavedeno, což způsobí konflikt názvů, pokud v kódu již existuje identifikátor s tímto názvem.
+- Nové **klíčové** slovo static_assert je zavedeno, což způsobí konflikt názvů, pokud již v kódu existuje identifikátor s tímto názvem.
 
-- Podpora pro nový zápis lambda vylučuje podporu pro kódování identifikátoru GUID bez uvozovek v atributu UUID IDL.
+- Podpora pro nový zápis lambda vylučuje podporu pro kódování nekotovanéguid v atributu IDL uuid.
 
-- .NET Framework 4 zavádí koncept poškozených výjimek stavu, což jsou výjimky, které ponechávají proces v neopravitelném poškozeném stavu. Ve výchozím nastavení nemůžete zachytit poškozenou výjimku stavu, a to ani pomocí možnosti kompilátoru/EHa, která zachycuje všechny ostatní výjimky.                 Chcete-li explicitně zachytit výjimku poškozeného stavu, použijte příkazy __try-\__except. Nebo použijte atribut [HandledProcessCorruptedStateExceptions], aby funkce mohla zachytit poškozené výjimky stavu.  Tato změna ovlivňuje hlavně systémové programátory, kteří by museli zachytit výjimku poškozeného stavu. Osm výjimek je STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION EXCEPTION_NONCONTINUABLE_EXCEPTION EXCEPTION_PRIV_INSTRUCTION STATUS_ UNWIND_CONSOLIDATE.                 Další informace o těchto výjimkách naleznete v makru [GetExceptionCode](/windows/win32/Debug/getexceptioncode) .
+- Rozhraní .NET Framework 4 zavádí koncept výjimky poškozeného stavu, které jsou výjimky, které ponechávají proces v neopravitelném poškozeném stavu. Ve výchozím nastavení nelze zachytit výjimku poškozeného stavu, a to ani s možností kompilátoru /EHa, která zachycuje všechny ostatní výjimky.                 Chcete-li explicitně zachytit výjimku\_poškozeného stavu, použijte příkazy __try- _except. Nebo použijte atribut [HandledProcessCorruptedStateExceptions], abyste umožnili funkci zachytit výjimky poškozeného stavu.  Tato změna se týká především programátorů systému, kteří mohou mít zachytit výjimku poškozeného stavu. Osm výjimek je STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION STATUS_UNWIND_CONSOLIDATE.                 Další informace o těchto výjimkách naleznete v makru [GetExceptionCode.](/windows/win32/Debug/getexceptioncode)
 
-- Revidovaná možnost kompilátoru `/GS` chrání proti přetečení vyrovnávací paměti před více komplexními verzemi než v předchozích verzích. Tato verze může do zásobníku vložit další kontroly zabezpečení, které by mohly snížit výkon. Pomocí nového klíčového slova `__declspec(safebuffers)` instruujte kompilátor, že nevloží kontroly zabezpečení pro konkrétní funkci.
+- Revidovaná `/GS` možnost kompilátoru chrání proti přetečení vyrovnávací paměti komplexněji než v předchozích verzích. Tato verze může vložit další kontroly zabezpečení v zásobníku, které mohou snížit výkon. Pomocí nového `__declspec(safebuffers)` klíčového slova můžete kompilátoru dát pokyn, aby nevkládal bezpečnostní kontroly pro určitou funkci.
 
-- Pokud kompilujete s možnostmi kompilátoru `/GL` (celková optimalizace programu) a `/clr` (kompilace modulu Common Language Runtime), možnost `/GL` je ignorována. Tato změna byla provedena, protože kombinace možností kompilátoru poskytuje málo výhod. V důsledku této změny dojde k vylepšení výkonu sestavení.
+- Pokud kompilujete s možnostmi kompilátoru (Optimalizace celého `/GL` programu) a `/clr` (Kompilace běžného jazykového prostředí), `/GL` bude tato možnost ignorována. Tato změna byla provedena, protože kombinace možností kompilátoru poskytla malou výhodu. V důsledku této změny je lepší výkon sestavení.
 
-- Ve výchozím nastavení je podpora pro trigraphs ve Visual Studiu 2010 zakázaná. Pokud chcete povolit podporu trigraphs, použijte možnost kompilátoru `/Zc:trigraphs`. Trigraph se skládá ze dvou po sobě jdoucích otazníků ("??") následovaný jedinečným třetím znakem. Kompilátor nahradí trigraph odpovídajícím znakem interpunkce. Kompilátor například nahradí `??=` trigraph znakem "#". Použijte trigraphs ve zdrojových souborech jazyka C, které používají znakovou sadu, která neobsahuje vhodné grafické reprezentace pro některé znaky interpunkce.
+- Ve výchozím nastavení je v sadě Visual Studio 2010 zakázána podpora trigrafů. Pomocí `/Zc:trigraphs` možnosti kompilátoru povolte podporu trigrafů. Trigraph se skládá ze dvou po sobě jdoucích otazníků ("??") následovaných jedinečným třetím znakem. Kompilátor nahradí trigraph odpovídajícím interpunkčním znakem. Například kompilátor nahradí `??=` trigraph znakem #. Použijte trigrafy ve zdrojových souborech Jazyka C, které používají znakovou sadu, která neobsahuje pohodlné grafické znázornění některých interpunkčních znaků.
 
-- Linker již nepodporuje optimalizaci pro systém Windows 98. Pokud zadáte `/OPT:WIN98` nebo `/OPT:NOWIN98`, možnost `/OPT` (optimalizace) vytvoří chybu při kompilaci.
+- Propojovací program již nepodporuje optimalizaci pro systém Windows 98. Možnost `/OPT` (Optimalizace) vytvoří chybu času kompilace, pokud zadáte `/OPT:WIN98` nebo `/OPT:NOWIN98`.
 
-- Výchozí možnosti kompilátoru, které jsou určeny vlastnostmi systému sestavení RuntimeLibrary a DebugInformationFormat, byly změněny. Ve výchozím nastavení jsou tyto vlastnosti sestavení určeny v projektech, které jsou vytvořeny pomocí C++ sady Visual Release 7,0 až 10,0. Pokud migrujete projekt, který byl vytvořen pomocí sady C++ Visual 6,0, zvažte, zda chcete zadat hodnotu pro tyto vlastnosti.
+- Výchozí možnosti kompilátoru, které jsou určeny vlastnostmi systému sestavení RuntimeLibrary a DebugInformationFormat, byly změněny. Ve výchozím nastavení jsou tyto vlastnosti sestavení určeny v projektech, které jsou vytvořeny visual c++ verze 7.0 až 10.0. Pokud migrujete projekt, který byl vytvořen visual c++ 6.0, zvažte, zda určit hodnotu pro tyto vlastnosti.
 
-- V aplikaci Visual Studio 2010, RuntimeLibrary = vícevláknové (`/MD`) a DebugInformationFormat = ProgramDatabase (`/Zi`). V jazyce C++ Visual 9,0 RuntimeLibrary = vícevláknové (`/MT`) a DebugInformationFormat = Disabled.
+- V sadě Visual Studio 2010 RuntimeLibrary`/MD`= MultiThreaded ( )`/Zi`a DebugInformationFormat = ProgramDatabase ( ). V jazyce Visual C++ 9.0 je`/MT`runtimelibrary = MultiThreaded ( ) a DebugInformationFormat = Zakázáno.
 
 ### <a name="clr"></a>CLR
 
-- Kompilátory C# Microsoft a Visual Basic teď můžou vytvořit primární spolupracující sestavení (no-PIA). Sestavení bez PIA může používat typy COM bez nasazení příslušného primárního definičního sestavení (PIA). Při využívání sestavení bez PIA vytvořených pomocí jazyka Visual C# nebo Visual Basic musíte odkazovat na sestavení PIA v příkazu Compile předtím, než budete odkazovat na jakékoli sestavení bez PIA, které používá knihovnu.
+- Kompilátory Jazyka Microsoft C# a Visual Basic nyní mohou vytvořit žádné primární sestavení interop (no-PIA). Sestavení no-PIA můžete použít typy COM bez nasazení příslušné ho primárního sestavení interop (PIA). Při spotřebě sestavení bez PIA vytvořených jazykem Visual C# nebo Visual Basic musíte odkazovat na sestavení PIA na příkazu kompilace, než na něj odkazujete na sestavení no-PIA, které používá knihovnu.
 
-### <a name="visual-studio-c-projects-and-msbuild"></a>Projekty a C++ MSBuild sady Visual Studio
+### <a name="visual-studio-c-projects-and-msbuild"></a>Projekty Visual Studio C++ a MSBuild
 
-- Projekty sady C++ Visual Studio jsou nyní založeny na nástroji MSBuild. V důsledku toho soubory projektu používají nový formát souboru XML a příponu. vcxproj. Visual Studio 2010 automaticky převede soubory projektu z dřívějších verzí sady Visual Studio do nového formátu souboru. Existující projekt je ovlivněn, pokud závisí na předchozím nástroji pro sestavení, VCBUILD. exe nebo příponě souboru projektu,. vcproj.
+- Projekty Visual Studio C++ jsou teď založené na nástroji MSBuild. V důsledku toho soubory projektu používají nový formát souboru XML a příponu souboru .vcxproj. Visual Studio 2010 automaticky převede soubory projektu z dřívějších verzí sady Visual Studio do nového formátu souboru. Existující projekt je ovlivněna, pokud závisí na předchozí nástroj sestavení, VCBUILD.exe nebo příponu souboru projektu.
 
-- V dřívějších verzích vizuál C++ podporoval pozdní vyhodnocení seznamů vlastností. Nadřazený seznam vlastností může například importovat podřízený seznam vlastností a nadřízený může použít proměnnou definovanou v podřízeném prvku k definování dalších proměnných. Pozdní vyhodnocení povoluje nadřazenému objektu používat podřízenou proměnnou, a to i před importem podřízeného seznamu vlastností. V aplikaci Visual Studio 2010 nelze použít proměnnou listu projektu předtím, než je definována, protože nástroj MSBuild podporuje pouze prvotní vyhodnocení.
+- V dřívějších verzích visual c++ podporoval pozdní vyhodnocení seznamů vlastností. Nadřazený seznam vlastností může například importovat podřízený seznam vlastností a nadřazený objekt může použít proměnnou definovanou v podřízeném objektu k definování dalších proměnných. Pozdní vyhodnocení umožnilo nadřazené mu použít podřízenou proměnnou ještě před importem podřízeného seznamu vlastností. V sadě Visual Studio 2010 nelze použít proměnnou listu projektu před definovanou, protože MSBuild podporuje pouze včasné vyhodnocení.
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
-- Dialogové okno ukončení aplikace již nekončí aplikací. V předchozích verzích, když funkce `abort()` nebo `terminate()` zavřela maloobchodní sestavení aplikace, knihovna run-time jazyka C zobrazila zprávu ukončení aplikace v okně konzoly nebo dialogovém okně. Zpráva uvedená v části "Tato aplikace požádala modul runtime o jeho ukončení neobvyklým způsobem. Další informace získáte od týmu podpory aplikace. " Zpráva ukončení aplikace byla redundantní, protože v systému Windows se následně zobrazila aktuální obslužná rutina ukončení, což byl obvykle dialogové okno Zasílání zpráv o chybách systému Windows (Dr. Watson) nebo ladicí program sady Visual Studio. Počínaje verzí Visual Studio 2010 se v knihovně run-time jazyka C nezobrazí zpráva. Kromě toho modul runtime zabraňuje aplikaci v ukončení před spuštěním ladicího programu. Toto je zásadní změna pouze v případě, že závisíte na předchozím chování zprávy ukončení aplikace.
+- Dialogové okno ukončení aplikace již nekončí aplikaci. V předchozích verzích, když funkce `abort()` nebo `terminate()` zavřela maloobchodní sestavení aplikace, knihovna run-time c zobrazí zprávu o ukončení aplikace v okně konzoly nebo dialogovém okně. Zpráva částečně říká: "Tato aplikace požádala runtime, aby ji ukončil neobvyklým způsobem. Další informace získáte od týmu podpory aplikace." Zpráva o ukončení aplikace byla nadbytečná, protože systém Windows následně zobrazil aktuální obslužnou rutinu ukončení, což bylo obvykle dialogové okno Zasílání zpráv o chybách systému Windows (Dr. Watson) nebo ladicí program sady Visual Studio. Počínaje Visual Studio 2010, C Run-Time Library nezobrazí zprávu. Kromě toho zaběhu zabrání ukončení aplikace před spuštěním ladicího programu. Toto je narušující změna pouze v případě, že závisí na předchozí chování zprávy o ukončení aplikace.
 
-- Konkrétně pro Visual Studio 2010, IntelliSense nefunguje pro C++kód nebo atributy/CLI, **Najít všechny odkazy** nefungují pro lokální proměnné a model kódu nenačte názvy typů z importovaných sestavení nebo vyhodnotí typy na jejich plně kvalifikované názvy.
+- Konkrétně pro Visual Studio 2010, IntelliSense nefunguje pro kód C++/CLI kód nebo atributy, **najít všechny odkazy** nefunguje pro místní proměnné a model kódu nenačítá názvy typů z importovaných sestavení nebo přeložit typy jejich plně kvalifikované názvy.
 
 ### <a name="libraries"></a>Knihovny
 
-- Třída SafeInt je obsažena ve vizuálu C++ a již není v samostatném stažení. Toto je zásadní změna pouze v případě, že jste vytvořili třídu, která je také pojmenována "SafeInt".
+- Třída SafeInt je součástí visual c++ a již není v samostatném stahování. Toto je narušující změna pouze v případě, že jste vyvinuli třídu, která je také s názvem "SafeInt".
 
-- Model nasazení knihoven již nepoužívá manifesty k nalezení konkrétní verze dynamické knihovny. Místo toho název každé knihovny DLL obsahuje číslo verze a vy použijete tento název k vyhledání knihovny.
+- Model nasazení knihoven již nepoužívá manifesty k nalezení konkrétní verze knihovny dynamických odkazů. Místo toho název každé knihovny dynamických odkazů obsahuje číslo verze a tento název použijete k vyhledání knihovny.
 
-- V předchozích verzích sady Visual Studio bylo možné znovu sestavit knihovny run time. Visual Studio 2010 již nepodporuje vytváření vlastních kopií souborů běhové knihovny jazyka C.
+- V předchozích verzích sady Visual Studio můžete znovu sestavit knihovny běhu. Visual Studio 2010 již nepodporuje vytváření vlastních kopií souborů knihovny běhu Jazyka C.
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-- Hlavička \<iterátoru > již není automaticky obsažena v mnoha dalších hlavičkových souborech. Místo toho zahrňte tuto hlavičku explicitně, pokud požadujete podporu pro samostatné iterátory definované v hlavičce. Existující projekt je ovlivněn, pokud závisí na předchozím nástroji pro sestavení, souboru VCBUILD. exe nebo příponě souboru projektu,. vcproj. iterátor.
+- Hlavička \<> iterátoru již není automaticky zahrnuta mnoha dalšími soubory hlaviček. Místo toho zahrnout toto záhlaví explicitně, pokud potřebujete podporu pro samostatné iterátory definované v záhlaví. Existující projekt je ovlivněna, pokud závisí na předchozí nástroj sestavení, VCBUILD.exe nebo příponu souboru projektu, .vcproj.iterator.
 
-- V hlavičce \<algoritmu > jsou odebrány checked_ * a unchecked_\* funkce. A v hlavičce \<iterátoru > > je třída `checked_iterator` odebrána a přidala se třída `unchecked_array_iterator`.
+- V \<záhlaví> algoritmu jsou odebrány funkce checked_* a unchecked_.\* A v \<záhlaví iterátoru `checked_iterator`>> je třída `unchecked_array_iterator` odebrána a třída byla přidána.
 
-- Byl odebrán konstruktor `CComPtr::CComPtr(int)`. Tento konstruktor povolil objekt `CComPtr`, který se má vytvořit z makra NULL, ale byl zbytečný a povolený nesmyslná konstrukce z nenulových celých čísel.
+- Konstruktor `CComPtr::CComPtr(int)` je odebrán. Tento konstruktor `CComPtr` povolil vytvoření objektu z makra NULL, ale byl zbytečný a umožňoval nesmyslné konstrukce z nenulových celočísel.
 
-   `CComPtr` lze stále vytvořit z hodnoty NULL, která je definována jako 0, ale selže, pokud je vytvořena z celého čísla jiného než literál 0. Místo toho použijte **nullptr** .
+   A `CComPtr` může být stále vytvořena z NULL, která je definována jako 0, ale nezdaří, pokud je vytvořena z celé hozinu než literál 0. Místo toho použijte **nullptr.**
 
-- Odebraly se následující `ctype` členské funkce: `ctype::_Do_narrow_s`, `ctype::_Do_widen_s`, `ctype::_narrow_s`, `ctype::_widen_s`. Pokud aplikace používá jednu z těchto členských funkcí, je nutné ji nahradit odpovídající nezabezpečenou verzí: `ctype::do_narrow`, `ctype::do_widen`, `ctype::narrow`, `ctype::widen`.
+- Byly `ctype` odebrány následující `ctype::_Do_narrow_s`členské `ctype::_Do_widen_s` `ctype::_narrow_s`funkce: , , . `ctype::_widen_s`. Pokud aplikace používá některou z těchto členských funkcí, je nutné `ctype::do_narrow`ji `ctype::do_widen` `ctype::narrow`nahradit `ctype::widen`odpovídající nezabezpečenou verzí: , , .
 
 ### <a name="crt-mfc-and-atl-libraries"></a>Knihovny CRT, MFC a ATL
 
-- Byla odebrána podpora pro uživatele, aby mohli vytvářet knihovny CRT, MFC a ATL. Například není k dispozici žádný odpovídající soubor NMAKE. Uživatelé však stále mají přístup ke zdrojovému kódu pro tyto knihovny. Dokument, který popisuje možnosti nástroje MSBuild, které Microsoft používá k vytváření těchto knihoven, bude pravděpodobně zveřejněn na blogu Visual C++ týmu.
+- Podpora byla odebrána pro uživatele k vytvoření knihoven CRT, MFC a ATL. Například není k dispozici žádný vhodný soubor NMAKE. Uživatelé však stále mají přístup ke zdrojovému kódu pro tyto knihovny. A dokument, který popisuje možnosti MSBuild, které společnost Microsoft používá k vytvoření těchto knihoven, bude pravděpodobně publikován v blogu týmu Visual C++.
 
-- Byla odebrána podpora knihovny MFC pro IA64. Nicméně podpora pro CRT a ATL na IA64 je stále k dispozici.
+- Podpora knihovny MFC pro IA64 byla odebrána. Podpora pro CRT a ATL na IA64 je však stále k dispozici.
 
-- Řadové číslovky již nejsou znovu používány v souborech definice modulu MFC (. def). Tato změna znamená, že pořadí se nebude lišit mezi podverzemi a binární kompatibilita pro aktualizace Service Pack a rychlé opravy technických vydání se zlepší.
+- Počet néřů se již znovu nepoužije v souborech definice modulu knihovny MFC (.def). Tato změna znamená, že se ordinální verze nebudou lišit mezi dílčími verzemi a zlepší se binární kompatibilita aktualizací Service Pack a technických verzí rychlé opravy.
 
-- Do třídy `CDocTemplate` byla přidána nová virtuální funkce. Tato nová virtuální funkce je [třídou CDocTemplate –](../mfc/reference/cdoctemplate-class.md). Předchozí verze `OpenDocumentFile` obsahovala dva parametry. Nová verze má tři parametry. Pro podporu správce restartování musí jakákoli třída odvozená z `CDocTemplate` implementovat verzi, která má tři parametry. Nový parametr je `bAddToMRU`.
+- Do třídy byla přidána `CDocTemplate` nová virtuální funkce. Tato nová virtuální funkce je [CDocTemplate Class](../mfc/reference/cdoctemplate-class.md). Předchozí verze `OpenDocumentFile` měla dva parametry. Nová verze má tři parametry. Pro podporu správce restartování musí každá `CDocTemplate` třída odvozená z implementovat verzi, která má tři parametry. Nový parametr `bAddToMRU`je .
 
 ### <a name="macros-and-environment-variables"></a>Makra a proměnné prostředí
 
-- Proměnná prostředí __MSVCRT_HEAP_SELECT už není podporovaná. Tato proměnná prostředí je odebrána a neexistuje žádná náhrada.
+- Proměnná prostředí __MSVCRT_HEAP_SELECT již není podporována. Tato proměnná prostředí je odebrána a neexistuje žádná náhrada.
 
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 
-- Z referenčního kompilátoru Microsoft Macro assembleru bylo odebráno několik direktiv. Odebrané direktivy jsou `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`a `.NO87`.
+- Z kompilátoru Microsoft Macro Assembler Reference bylo odebráno několik direktiv. Odebrané směrnice `.186`jsou `.286` `.286P`, `.287` `.8086`, `.8087`, `.NO87`, , a .
 
-## <a name="visual-studio-2008-breaking-changes"></a>Nejnovější změny sady Visual Studio 2008
+## <a name="visual-studio-2008-breaking-changes"></a>Visual Studio 2008 Nejnovější změny
 
-### <a name="compiler"></a>Compiler
+### <a name="compiler"></a>Kompilátoru
 
-- Platformy Windows 95, Windows 98, Windows MILLENNIUM a Windows NT již nejsou podporovány. Tyto operační systémy byly ze seznamu cílových platforem odebrány.
+- Platformy Windows 95, Windows 98, Windows ME a Windows NT již nejsou podporovány. Tyto operační systémy byly odebrány ze seznamu cílových platforem.
 
-- Kompilátor již nepodporuje více atributů, které byly přímo přidruženy k serveru ATL. Následující atributy již nejsou podporovány:
+- Kompilátor již nepodporuje více atributů, které byly přímo spojeny se serverem ATL. Následující atributy již nejsou podporovány:
 
-   - perf_counter
+  - perf_counter
 
-   - perf_object
+  - perf_object
 
-   - Perfmon
+  - Perfmon
 
-   - request_handler
+  - request_handler
 
-   - soap_handler
+  - soap_handler
 
-   - soap_header
+  - soap_header
 
-   - soap_method
+  - soap_method
 
-   - tag_name
+  - tag_name
 
-### <a name="visual-studio-c-projects"></a>Projekty sady C++ Visual Studio
+### <a name="visual-studio-c-projects"></a>Projekty Visual Studia C++
 
-- Při upgradu projektů z předchozích verzí sady Visual Studio může být nutné upravit makra WINVER a _WIN32_WINNT tak, aby byla větší než nebo rovna 0x0500.
+- Při inovaci projektů z předchozích verzí sady Visual Studio bude pravděpodobně nutné upravit makra WINVER a _WIN32_WINNT tak, aby byla větší nebo rovna 0x0500.
 
-- Počínaje sadou Visual Studio 2008, Průvodce vytvořením nového projektu nemá možnost vytvořit projekt C++ SQL Server. SQL Server projekty vytvořené pomocí starší verze sady Visual Studio budou i nadále kompilovány a fungovat správně.
+- Počínaje Visual Studio 2008, nový průvodce projektu nemá možnost vytvořit projekt C++ SQL Server. Sql Server projekty vytvořené pomocí starší verze sady Visual Studio bude stále kompilovat a pracovat správně.
 
-- Odebral se soubor hlaviček rozhraní Windows API Winable. h. Místo toho použijte Winuser. h.
+- Soubor záhlaví rozhraní API systému Windows Winable.h byl odebrán. Místo toho zahrňte soubor Winuser.h.
 
-- Knihovna rozhraní API systému Windows Rpcndr. lib byla odebrána. Místo toho připojte pomocí rpcrt4. lib.
+- Knihovna rozhraní API systému Windows Rpcndr.lib byla odebrána. Místo toho spojte s rpcrt4.lib.
 
 ### <a name="crt"></a>CRT
 
-- Odebrala se podpora pro Windows 95, Windows 98, Windows Millennium Edition a Windows NT 4,0.
+- Byla odebrána podpora pro systémy Windows 95, Windows 98, Windows Millennium Edition a Windows NT 4.0.
 
 - Byly odebrány následující globální proměnné:
 
-   - _osplatform
+  - _osplatform
 
-   - _osver
+  - _osver
 
-   - _winmajor
+  - _winmajor
 
-   - _winminor
+  - _winminor
 
-   - _winver
+  - _winver
 
-- Následující funkce byly odebrány. Místo toho použijte `GetVersion` nebo `GetVersionEx` funkce rozhraní API systému Windows:
+- Následující funkce byly odebrány. Použijte funkce `GetVersion` rozhraní `GetVersionEx` API systému Windows nebo místo toho:
 
-   - _get_osplatform
+  - _get_osplatform
 
-   - _get_osver
+  - _get_osver
 
-   - _get_winmajor
+  - _get_winmajor
 
-   - _get_winminor
+  - _get_winminor
 
-   - _get_winver
+  - _get_winver
 
-- Syntaxe poznámek SAL se změnila. Další informace najdete v tématu [poznámky SAL](../c-runtime-library/sal-annotations.md).
+- Syntaxe poznámky SAL se změnila. Další informace naleznete [v tématu Poznámky SAL](../c-runtime-library/sal-annotations.md).
 
-- Filtr IEEE teď podporuje instrukční sady SSE 4,1. Další informace najdete v tématu [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.
+- Filtr IEEE nyní podporuje instrukční sadu SSE 4.1. Další informace naleznete [v tématu _fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.
 
-- Běhové knihovny jazyka C, dodávané se sadou Visual Studio, již nejsou závislé na systémové knihovně DLL Msvcrt. dll.
+- Knihovny C Run-Time, které jsou dodávány s visual studio již nejsou závislé na systémové knihovně DLL msvcrt.dll.
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-- Odebrala se podpora pro Windows 95, Windows 98, Windows Millennium Edition a Windows NT 4,0.
+- Byla odebrána podpora pro systémy Windows 95, Windows 98, Windows Millennium Edition a Windows NT 4.0.
 
-- Když kompilujete v režimu ladění s definovaným _HAS_ITERATOR_DEBUGGING (nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studiu 2010), aplikace nyní vyhodnotí, kdy se iterátor pokusí zvýšit nebo snížit hodnoty za hranicemi podkladového kontejneru.
+- Při kompilaci v režimu ladění s _HAS_ITERATOR_DEBUGGING definován [(nahrazen_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010), aplikace bude nyní uplatnit, když iterátor pokusí o zvýšení nebo snížení za hranice podkladového kontejneru.
 
-- Členská proměnná c třídy zásobníku je teď deklarovaná jako chráněná. Dříve byla tato proměnná členů deklarována jako veřejná.
+- Členská proměnná c třídy zásobníku je nyní deklarována jako chráněná. Dříve byla tato členská proměnná deklarována jako veřejná.
 
-- Chování `money_get::do_get` se změnilo. Dříve při analýze peněžních částek s více číslicemi zlomků, než jsou volány `frac_digits``do_get` použity pro jejich spotřebování. Nyní `do_get` zastaví analýzu po obnově `frac_digits` znaků.
+- Chování `money_get::do_get` se změnilo. Dříve při analýzě peněžní částky s více zlomkových `frac_digits` `do_get` číslic, než je požadováno , slouží ke spotřebě je všechny. Nyní `do_get` přestane analyzovat po konzumaci `frac_digits` na většině znaků.
 
 ### <a name="atl"></a>ATL
 
-- Knihovnu ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio můžete použít #define ATL_MIN_CRT a vytvořit tak projekt ATL na základě minima na CRT. V aplikaci Visual Studio 2008 jsou všechny projekty ATL na CRT závislé, bez ohledu na to, zda je definována ATL_MIN_CRT.
+- Atl nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio můžete použít #define ATL_MIN_CRT k tomu, aby projekt ATL byl minimálně závislý na CRT. V sadě Visual Studio 2008 jsou všechny projekty ATL minimálně závislé na CRT bez ohledu na to, zda je definovánATL_MIN_CRT
 
-- Základ kódu ATL serveru byl vydán jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Třídy kódování a dekódování dat z atlenc. h a funkce nástrojů a třídy z atlutil. h a atlpath. h jsou zachované a teď jsou součástí knihovny ATL. Několik souborů přidružených k serveru ATL již nejsou součástí sady Visual Studio.
+- Atl Server codebase byl vydán jako sdílený zdrojový projekt na CodePlex a není nainstalován jako součást sady Visual Studio. Třídy kódování a dekódování dat z atlenc.h a užitné funkce a třídy z atlutil.h a atlpath.h byly zachovány a jsou nyní součástí knihovny ATL. Několik souborů přidružených ke serveru ATL již není součástí sady Visual Studio.
 
-- Některé funkce již nejsou zahrnuty v knihovně DLL. Pořád se nacházejí v knihovně importů. Nebude to mít vliv na kód, který funkce používá staticky. Bude mít vliv pouze na kód, který tyto funkce používá dynamicky.
+- Některé funkce již nejsou součástí dll. Jsou stále umístěny v knihovně importu. To nebude mít vliv na kód, který používá funkce staticky. Bude mít vliv pouze na kód, který používá tyto funkce dynamicky.
 
-- Makra PROP_ENTRY a PROP_ENTRY_EX jsou zastaralá a v případech zabezpečení nahrazena makry PROP_ENTRY_TYPE a PROP_ENTRY_TYPE_EX.
+- Makra PROP_ENTRY a PROP_ENTRY_EX byla z bezpečnostních důvodů zastaralá a nahrazena makrami PROP_ENTRY_TYPE a PROP_ENTRY_TYPE_EX.
 
 ### <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
 
-- Knihovnu ATL nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual Studio můžete použít `#define ATL_MIN_CRT`, aby projekt knihovny ATL byl na CRT závislý. V aplikaci Visual Studio 2008 jsou všechny projekty ATL na CRT závislé, bez ohledu na to, zda je definována ATL_MIN_CRT.
+- Atl nelze sestavit bez závislosti na CRT. V dřívějších verzích sady Visual `#define ATL_MIN_CRT` Studio můžete použít k tomu, aby projekt ATL byl minimálně závislý na CRT. V sadě Visual Studio 2008 jsou všechny projekty ATL minimálně závislé na CRT bez ohledu na to, zda je definovánATL_MIN_CRT
 
-- Základ kódu ATL serveru byl vydán jako sdílený zdrojový projekt na webu CodePlex a není nainstalován jako součást sady Visual Studio. Třídy kódování a dekódování dat z atlenc. h a funkce nástrojů a třídy z atlutil. h a atlpath. h jsou zachované a teď jsou součástí knihovny ATL. Několik souborů přidružených k serveru ATL již nejsou součástí sady Visual Studio.
+- Atl Server codebase byl vydán jako sdílený zdrojový projekt na CodePlex a není nainstalován jako součást sady Visual Studio. Třídy kódování a dekódování dat z atlenc.h a užitné funkce a třídy z atlutil.h a atlpath.h byly zachovány a jsou nyní součástí knihovny ATL. Několik souborů přidružených ke serveru ATL již není součástí sady Visual Studio.
 
-- Některé funkce již nejsou zahrnuty v knihovně DLL. Pořád se nacházejí v knihovně importů. Nebude to mít vliv na kód, který funkce používá staticky. Bude mít vliv pouze na kód, který tyto funkce používá dynamicky.
+- Některé funkce již nejsou součástí dll. Jsou stále umístěny v knihovně importu. To nebude mít vliv na kód, který používá funkce staticky. Bude mít vliv pouze na kód, který používá tyto funkce dynamicky.
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` třída: třída `CTime` nyní přijímá data začínající od 1/1/1900 0001 místo 1/1/1970 0001
+- `CTime`Třída: `CTime` Třída nyní přijímá data od 1/1/1900 CE místo 1/1/1970 CE
 
-- Pořadí ovládacích prvků v dialogových oknech knihovny MFC: správné pořadí tabulátoru více ovládacích prvků v dialogovém okně knihovny MFC je narušeno, pokud je ovládací prvek ActiveX knihovny MFC vložen do pořadí prvků. Tato změna opravuje tento problém.
+- Pořadí ovládacích prvků v dialogových oknech knihovny MFC: Správné pořadí polí více ovládacích prvků v dialogovém okně knihovny MFC je narušeno, pokud je v pořadí polí vložen ovládací prvek ActiveX knihovny MFC. Tato změna tento problém opraví.
 
-   Například vytvořte dialog knihovny MFC, který obsahuje ovládací prvek ActiveX a několik ovládacích prvků pro úpravy. Umístěte ovládací prvek ActiveX uprostřed pořadí ovládacích prvků pro úpravy. Spusťte aplikaci, klikněte na ovládací prvek pro úpravy, jehož pořadí karet je za ovládacím prvkem ActiveX a pak tabulátor. před touto změnou se fokus přistoupí k ovládacímu prvku pro úpravy, který následuje po ovládacím prvku ActiveX, a ne na následujícím ovládacím prvku pro úpravy v pořadí prvků.
+   Můžete například vytvořit aplikaci dialogového okna knihovny MFC, která má ovládací prvek ActiveX a několik ovládacích prvků pro úpravy. Umístěte ovládací prvek ActiveX doprostřed pořadí ovládacích prvků úprav. Spusťte aplikaci, klepněte na ovládací prvek pro úpravy, jehož pořadí polí je za ovládacím prvkem ActiveX, a potom na kartě.
 
-- `CFileDialog` třída: vlastní šablony pro `CFileDialog` třídu nelze automaticky přenést do systému Windows Vista. Jsou pořád použitelné, ale nebudou mít další funkce ani vzhled dialogových oken ve stylu Windows Vista.
+- `CFileDialog`Třída: Vlastní šablony `CFileDialog` pro třídu nelze automaticky přenést do systému Windows Vista. Jsou stále použitelné, ale nebudou mít další funkce nebo vzhled dialogových oken stylu systému Windows Vista.
 
-- `CWnd` třídy a `CFrameWnd` třídy: metoda `CWnd::GetMenuBarInfo` byla odebrána.
+- `CWnd`Třída `CFrameWnd` a třída: Metoda `CWnd::GetMenuBarInfo` byla odebrána.
 
-   Metoda `CFrameWnd::GetMenuBarInfo` je nyní nevirtuální metodou. Další informace naleznete v tématu **funkce GetMenuBarInfo** v Windows SDK.
+   Metoda `CFrameWnd::GetMenuBarInfo` je nyní nevirtuální metoda. Další informace naleznete v **tématu GetMenuBarInfo Function** v sadě Windows SDK.
 
-- Podpora MFC ISAPI: knihovna MFC již nepodporuje vytváření aplikací s rozhraním ISAPI (Internet Server Application Programming Interface). Pokud chcete sestavit aplikaci ISAPI, zavolejte rozšíření ISAPI přímo.
+- Podpora rozhraní MFC ISAPI: Knihovna MFC již nepodporuje vytváření aplikací pomocí rozhraní ISAPI (Internet Server Application Programming Interface). Pokud chcete vytvořit aplikaci ISAPI, zavolejte přímo rozšíření ISAPI.
 
-- Zastaralá rozhraní API ANSI: verze ANSI několika metod MFC jsou zastaralé. Ve svých budoucích aplikacích použijte verze Unicode těchto metod. Další informace najdete v tématu **požadavky na sestavení pro běžné ovládací prvky systému Windows Vista**.
+- Zastaralá api ANSI: Verze ANSI několika metod knihovny MFC jsou zastaralé. Použijte unicode verze těchto metod v budoucích aplikacích. Další informace naleznete v **tématu Build Requirements for Windows Vista Common Controls**.
 
-## <a name="visual-studio-2005-breaking-changes"></a>Nejnovější změny sady Visual Studio 2005
+## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 Nejnovější změny
 
 ### <a name="crt"></a>CRT
 
-- Mnoho funkcí se už nepoužívá. Viz **zastaralé funkce CRT**.
+- Mnoho funkcí bylo zastaralé. Viz **Zastaralé funkce CRT**.
 
-- Mnoho funkcí nyní ověřuje jejich parametry a zastavuje provádění, pokud byly zadány neplatné parametry. Toto ověření může přerušit kód, který předává neplatné parametry a spoléhá na to, že je funkce ignoruje, nebo pouze vracet kód chyby. Viz **ověření parametru**.
+- Mnoho funkcí nyní ověřuje jejich parametry a zastavuje provádění, pokud jsou dány neplatné parametry. Toto ověření může přerušit kód, který předává neplatné parametry a spoléhá na funkci, která je ignoruje nebo pouze vrací kód chyby. Viz **Ověření parametru**.
 
-- Hodnota popisovače souboru – 2 se nyní používá k označení toho, že `stdout` a `stderr` nejsou k dispozici pro výstup, například v aplikaci systému Windows, která nemá žádné okno konzoly. Použila se předchozí hodnota-1. Další informace najdete v tématu [_fileno](../c-runtime-library/reference/fileno.md).
+- Hodnota popisovače souboru -2 se nyní `stdout` `stderr` používá k označení, že a nejsou k dispozici pro výstup, například v aplikaci systému Windows, která nemá žádné okno konzoly. Předchozí použitá hodnota byla -1. Další informace naleznete [v tématu _fileno](../c-runtime-library/reference/fileno.md).
 
-- Byly odebrány knihovny CRT s jedním vláknem (LIBC. lib a LIBCD. lib). Používejte vícevláknové knihovny CRT. Příznak kompilátoru `/ML` již není podporován. Neuzamykání verzí některých funkcí byly přidány v případech, kdy rozdíl výkonu mezi vícevláknovým kódem a kódem s jedním vláknem je potenciálně významný.
+- Knihovny CRT s jedním podprocesem (libc.lib a libcd.lib) byly odebrány. Použijte vícevláknové knihovny CRT. Příznak `/ML` kompilátoru již není podporován. Non-locking verze některých funkcí byly přidány v případech, kdy rozdíl výkonu mezi vícevláknový kód a jednovláknový kód je potenciálně významné.
 
-- Bylo odebráno přetížení metody POW, Double POW (int, int), aby bylo lépe v souladu se standardem.
+- Přetížení pow, double pow (int, int), bylo odstraněno, aby lépe odpovídalo standardu.
 
-- Specifikátor formátu% n již není ve výchozím nastavení podporován v žádné printf rodině funkcí, protože je podstatou nezabezpečený. Pokud dojde k% n, výchozí chování je vyvolat neplatnou obslužnou rutinu parametru. Pokud chcete povolit podporu% n, použijte `_set_printf_count_output` (viz také `_get_printf_count_output`).
+- Specifikátor formátu %n již není ve výchozím nastavení podporován v žádné z řady funkcí printf, protože je ze své podstaty nezabezpečený. Pokud je zjištěn %n, výchozí chování je vyvolat neplatnou obslužnou rutinu parametru. Chcete-li povolit `_set_printf_count_output` %n `_get_printf_count_output`podporu, použijte (viz také).
 
-- `sprintf` nyní vytiskne záporné znaménko nuly se znaménkem.
+- `sprintf`nyní vytiskne záporné znaménko podepsané nuly.
 
-- `swprintf` byl změněn tak, aby odpovídal standardu; nyní vyžaduje parametr velikosti. Forma `swprintf` bez parametru size je zastaralá.
+- `swprintf`byla změněna tak, aby odpovídala normě; nyní vyžaduje parametr velikosti. Forma `swprintf` bez parametru velikosti byla zastaralá.
 
-- `_set_security_error_handler` byla odebrána. Odeberte všechna volání této funkce; výchozí obslužná rutina je mnohem bezpečnější způsob, jak řešit chyby zabezpečení.
+- `_set_security_error_handler`byla odebrána. Odeberte všechna volání této funkce; výchozí obslužná rutina je mnohem bezpečnější způsob, jak řešit chyby zabezpečení.
 
-- `time_t` je teď 64 hodnota (Pokud není definovaná _USE_32BIT_TIME_T).
+- `time_t`je nyní 64bitová hodnota (pokud není definován_USE_32BIT_TIME_T).
 
-- `_spawn``_wspawn` Functions nyní opouští `errno` bez dotyku, jak je určeno standardem C.
+- `_spawn`Funkce `_wspawn` , funkce `errno` nyní ponechat nedotčené na úspěch, jak je uvedeno standardu C.
 
-- RTC teď ve výchozím nastavení používá velké znaky.
+- RTC nyní používá široké znaky ve výchozím nastavení.
 
-- Funkce podpory řídicího slova s plovoucí desetinnou čárkou jsou pro aplikace zkompilované pomocí `/CLR` nebo `/CLR:PURE`zastaralé. Zasažené funkce jsou `_clear87`, `_clearfp`, `_control87``_controlfp`, `_fpreset``_status87``_statusfp`. Upozornění na vyřazení můžete zakázat definováním _CRT_MANAGED_FP_NO_DEPRECATE, ale použití těchto funkcí ve spravovaném kódu je nepředvídatelné a nepodporované.
+- Funkce podpory slov s plovoucí desetinnou desetinnou `/CLR` desetinnou táhou byly zastaralé pro aplikace kompilované pomocí aplikace nebo `/CLR:PURE`. Ovlivněné funkce `_clear87` `_clearfp`jsou `_control87` `_controlfp`, `_fpreset` `_status87`, `_statusfp`, , , . . Upozornění na vyřazení můžete zakázat definováním _CRT_MANAGED_FP_NO_DEPRECATE, ale použití těchto funkcí ve spravovaném kódu je nepředvídatelné a nepodporované.
 
-- Některé funkce nyní vracejí ukazatele const. Staré chování, které neconst, lze obnovit definováním _CONST_RETURN. Ovlivněné funkce jsou
+- Některé funkce nyní vrátí const ukazatele. Staré, non-const chování může být obnovena definováním _CONST_RETURN. Ovlivněné funkce jsou
 
-   - memchr, wmemchr
+  - memchr, wmemchr
 
-   - strchr, wcschr, _mbschr, _mbschr_l
+  - strchr, wcschr, _mbschr, _mbschr_l
 
-   - strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+  - strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
-   - strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
+  - strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
-   - strstr, wcsstr, _mbsstr, _mbsstr_l
+  - strstr, wcsstr, _mbsstr, _mbsstr_l
 
-- Při propojování s setargv. obj nebo wsetargv. obj již není možné potlačit rozšíření zástupného znaku na příkazovém řádku jeho uzavřením do dvojitých uvozovek. Další informace najdete v tématu [rozšíření argumentů zástupného znaku](../c-language/expanding-wildcard-arguments.md).
+- Při propojení s Setargv.obj nebo Wsetargv.obj již není možné potlačit rozšíření zástupného znaku na příkazovém řádku jeho uzavřením v uvozovkách. Další informace naleznete v [tématu Rozbalení zástupných argumentů](../c-language/expanding-wildcard-arguments.md).
 
 ### <a name="standard-library-2005"></a>Standardní knihovna (2005)
 
-- Třída výjimky (umístěná v hlavičce \<výjimky >) byla přesunuta do oboru názvů `std`. V předchozích verzích byla tato třída v globálním oboru názvů. Chcete-li vyřešit všechny chyby, které signalizují, že třídu výjimky nelze nalézt, přidejte následující příkaz using do kódu: `using namespace std;`
+- Třída výjimky (umístěná v záhlaví výjimky \< `std`>) byla přesunuta do oboru názvů. V předchozích verzích byla tato třída v globálním oboru názvů. Chcete-li vyřešit všechny chyby označující, že třída výjimky nebyla nalezena, přidejte do kódu následující příkaz using:`using namespace std;`
 
-- Při volání `valarray::resize()`bude obsah `valarray` ztracen a bude nahrazen výchozími hodnotami. Metoda `resize()` je určena k opětovné inicializaci `valarray` místo toho, aby se dynamicky narůsta jako vektor.
+- Při `valarray::resize()`volání `valarray` bude obsah tohoto dokumentu ztracen a bude nahrazen výchozími hodnotami. Metoda `resize()` je určena k reinicializaci `valarray` spíše než růst dynamicky jako vektor.
 
-- Vyladit iterátory: aplikace sestavené pomocí ladicí verze knihovny C-Runtime, které používají iterátory nesprávně, mohou začít zobrazit výrazy Assert za běhu. Chcete-li zakázat tyto kontrolní výrazy, je nutné definovat _HAS_ITERATOR_DEBUGGING (nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po aplikaci Visual Studio 2010) na hodnotu 0. Další informace najdete v tématu [Podpora ladění iterátoru](../standard-library/debug-iterator-support.md) .
+- Ladění iterátorů: Aplikace vytvořené s ladicí verzí knihovny C-Runtime a které používají iterátory nesprávně může začít vidět nepodmíněných výrazů za běhu. Chcete-li zakázat tyto nepodmíněných výrazů, musíte definovat _HAS_ITERATOR_DEBUGGING (nahrazen_ITERATOR_DEBUG_LEVEL [po](../standard-library/iterator-debug-level.md) Visual Studio 2010) na 0. Další informace naleznete v tématu [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 
-## <a name="visual-c-net-2003-breaking-changes"></a>Nejnovější C++ změny v jazyce Visual .NET 2003
+## <a name="visual-c-net-2003-breaking-changes"></a>Vizuální c++ .NET 2003 Nejnovější změny
 
-### <a name="compiler"></a>Compiler
+### <a name="compiler"></a>Kompilátoru
 
-- Pravé kulaté závorky se teď vyžadují pro definovanou direktivu preprocesoru (c2004).
+- Uzavírací závorky, které jsou nyní vyžadovány pro definovanou direktivu preprocesoru (C2004).
 
 - Explicitní specializace již nenaleznou parametry šablony z primární šablony ([Chyba kompilátoru C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).
 
-- K chráněnému členu (n) lze přistupovat pouze prostřednictvím členské funkce třídy (B), která dědí z třídy (A), z níž je (n) členem ([Chyba kompilátoru C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).
+- Chráněný člen (n) lze přistupovat pouze prostřednictvím členské funkce třídy (B), která dědí z třídy (A), z nichž (n) je členem ([Chyba kompilátoru C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).
 
-- Vylepšené kontroly dostupnosti v kompilátoru teď zjišťují nepřístupné základní třídy ([Chyba kompilátoru C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).
+- Vylepšené kontroly usnadnění v kompilátoru nyní zjišťují nepřístupné základní třídy[(Chyba kompilátoru C2248).](../error-messages/compiler-errors-1/compiler-error-c2248.md)
 
-- Výjimka nemůže být zachycena v případě, že destruktor nebo kopírovací konstruktor je nepřístupný (C2316).
+- Výjimku nelze zachytit, pokud je destruktor nebo konstruktor kopie nepřístupný (C2316).
 
-- Výchozí argumenty u ukazatelů na funkce už nejsou povolené ([Chyba kompilátoru C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).
+- Výchozí argumenty na odkazy na funkce již nejsou povoleny ([Chyba kompilátoru C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).
 
-- Statický datový člen nejde inicializovat prostřednictvím odvozené třídy ([Chyba kompilátoru C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).
+- Statický datový člen nelze inicializovat prostřednictvím odvozené třídy[(Chyba kompilátoru C2477).](../error-messages/compiler-errors-1/compiler-error-c2477.md)
 
-- Inicializace **typedef** není povolená standardem a teď generuje chybu kompilátoru ([Chyba kompilátoru C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
+- Inicializace **typedef** není povolena standardem a nyní generuje chybu kompilátoru ([Chyba kompilátoru C2513).](../error-messages/compiler-errors-2/compiler-error-c2513.md)
 
-- hodnota **bool** je nyní správného typu ([Chyba kompilátoru C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
+- **bool** je nyní správný typ ([Chyba kompilátoru C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
 
-- UDC teď může vytvořit nejednoznačnost pomocí přetížených operátorů ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
+- UDC nyní může vytvářet nejednoznačnost s přetíženými operátory ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
 
-- Další výrazy se teď považují za platné konstanty ukazatele s hodnotou null ([Chyba kompilátoru C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).
+- Další výrazy jsou nyní považovány za platné konstanty ukazatele null ([Chyba kompilátoru C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).
 
-- Šablona < > nyní vyžaduje umístění, kde by ji kompilátor dřív znamenal ([Chyba kompilátoru C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).
+- šablona<> je nyní vyžadována v místech, kde by to kompilátor dříve naznačoval ([Chyba kompilátoru C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).
 
-- Explicitní specializace členské funkce mimo třídu není platná, pokud již byla funkce explicitně specializovaná prostřednictvím specializace třídy šablony ([Chyba kompilátoru C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).
+- Explicitní specializace členské funkce mimo třídu není platná, pokud již byla funkce explicitně specializována prostřednictvím specializace třídy šablony ([Chyba kompilátoru C2910).](../error-messages/compiler-errors-2/compiler-error-c2910.md)
 
-- Parametry šablony bez typu s plovoucí desetinnou čárkou již nejsou povoleny ([Chyba kompilátoru C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).
+- Parametry netextové šablony s plovoucí desetinnou tázkem již nejsou povoleny[(Chyba kompilátoru C2993).](../error-messages/compiler-errors-2/compiler-error-c2993.md)
 
-- Šablony třídy nejsou povoleny jako argumenty typu šablony (C3206).
+- Šablony tříd nejsou povoleny jako argumenty typu šablony (C3206).
 
 - Názvy funkcí Friend již nejsou zavedeny do obsahujícího oboru názvů ([Chyba kompilátoru C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).
 
-- Kompilátor již nebude v makru (C4002) přijímat nadbytečné čárky.
+- Kompilátor již nebude přijímat další čárky v makru (C4002).
 
-- Objekt POD typu konstruovaný s inicializátorem formuláře () bude inicializován jako výchozí (C4345).
+- Objekt typu POD vytvořený s inicializátorem formuláře () bude výchozí inicializován (C4345).
 
-- TypeName se nyní vyžaduje, pokud je závislý název považován za typ ([Upozornění kompilátoru (úroveň 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).
+- typename je nyní vyžadován, pokud má být závislý název považován za typ ([Upozornění kompilátoru (úroveň 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).
 
-- Funkce, které byly nesprávně považovány za specializace šablon, již nejsou považovány za (C4347).
+- Funkce, které byly nesprávně považovány za specializace šablony již nejsou považovány za tak (C4347).
 
 - Statické datové členy nelze inicializovat prostřednictvím odvozené třídy (C4356).
 
-- Specializace šablony třídy musí být definovaná dřív, než se použije v návratovém typu ([Upozornění kompilátoru (úroveň 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).
+- Specializace šablony třídy musí být definována před použitím v návratovém typu[(Upozornění kompilátoru (úroveň 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).
 
-- Kompilátor nyní hlásí nedosažitelný kód (C4702).
+- Kompilátor nyní hlásí nedostupný kód (C4702).
 
 ## <a name="see-also"></a>Viz také
 
-[Novinky pro vizuál C++ v aplikaci Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
+[Co je nového pro Visual C++ v Visual Studiu](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

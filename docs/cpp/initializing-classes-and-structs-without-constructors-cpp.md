@@ -1,18 +1,18 @@
 ---
-title: Inicializace složené závorky pro třídy, struktury a sjednocení
-description: Použití inicializace složené závorky s C++ libovolnou třídou, strukturou nebo sjednocením
+title: Inicializace ortézy pro třídy, struktury a sjednocení
+description: Použití inicializace složených závorek s libovolnou třídou, strukturou nebo sjednocením jazyka C++
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075884"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374077"
 ---
 # <a name="brace-initialization"></a>Inicializace složenými závorkami
 
-Není vždy nutné definovat konstruktor pro třídu, zejména ty, které jsou relativně jednoduché. Uživatelé mohou inicializovat objekty třídy nebo struktury pomocí jednotné inicializace, jak je znázorněno v následujícím příkladu:
+Není vždy nutné definovat konstruktor pro třídu, zejména ty, které jsou poměrně jednoduché. Uživatelé mohou inicializovat objekty třídy nebo struktury pomocí jednotné inicializace, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Všimněte si, že pokud třída nebo struktura nemá žádný konstruktor, zadejte prvky seznamu v pořadí, ve kterém jsou členy deklarovány ve třídě. Pokud třída má konstruktor, poskytněte prvky v pořadí parametrů. Pokud má typ výchozí konstruktor, buď implicitně nebo explicitně deklarovaný, můžete použít výchozí inicializaci složené závorky (s prázdnými závorkami). Například následující třída může být inicializována pomocí výchozí a nevýchozí inicializace složené závorky:
+Všimněte si, že když třída nebo struktura nemá žádný konstruktor, zadáte prvky seznamu v pořadí, ve které jsou členové deklarováni ve třídě. Pokud třída má konstruktor, zadejte prvky v pořadí parametrů. Pokud má typ výchozí konstruktor, implicitně nebo explicitně deklarovaný, můžete použít výchozí inicializaci závorky (s prázdnými závorkami). Například následující třída může být inicializována pomocí výchozí i nevýchozí inicializace závorky:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-Pokud třída obsahuje jiné než výchozí konstruktory, pořadí, ve kterém jsou členy třídy zobrazeny v inicializátoru závorky, je pořadí, ve kterém jsou příslušné parametry zobrazeny v konstruktoru, nikoli pořadí, ve kterém jsou členy deklarovány (stejně jako u `class_a` v předchozím příkladu). V opačném případě, pokud typ nemá žádný deklarovaný konstruktor, pořadí, ve kterém se členy objeví v inicializátoru závorky, je stejné jako pořadí, ve kterém jsou deklarovány. v tomto případě můžete inicializovat libovolný počet veřejných členů, jak si přejete, ale nemůžete přeskočit žádného člena. Následující příklad ukazuje pořadí, které je použito při inicializaci závorky, pokud neexistuje žádný deklarovaný konstruktor:
+Pokud třída má nevýchozí konstruktory, pořadí, ve kterém se členové třídy zobrazují v inicializátoru závorky, je pořadí, `class_a` ve kterém se odpovídající parametry zobrazují v konstruktoru, nikoli pořadí, ve kterém jsou členy deklarovány (jako v předchozím příkladu). V opačném případě, pokud typ nemá deklarovaný konstruktor, pořadí, ve kterém se členy zobrazí v inicializátoru závorky, je stejné jako pořadí, ve kterém jsou deklarovány; V takovém případě můžete inicializovat libovolný počet veřejných členů, ale nelze přeskočit žádného člena. Následující příklad ukazuje pořadí, které se používá v inicializaci závorky, pokud neexistuje žádný deklarovaný konstruktor:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-Pokud je výchozí konstruktor explicitně deklarován, ale označen jako odstraněný, nelze použít výchozí inicializaci složené závorky:
+Pokud je výchozí konstruktor explicitně deklarován, ale označen jako odstraněný, nelze použít výchozí inicializaci složených závorek:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-Inicializaci složené závorky můžete použít všude, kde se obvykle provádí inicializace – například jako parametr funkce nebo návratová hodnota nebo s klíčovým slovem **New** :
+Inicializaci složených závorek můžete použít kdekoli, kde obvykle inicializaci provést – například jako parametr funkce nebo vrácenou hodnotu nebo s **novým** klíčovým slovem:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-V **/std: režim c++ 17** jsou pravidla pro prázdnou inicializaci složené závorky poněkud přísnější. Viz [odvozené konstruktory a rozšířená agregovaná inicializace](constructors-cpp.md#extended_aggregate).
+V režimu **/std:c++17** jsou pravidla pro inicializaci prázdné závorky o něco restriktivnější. Viz [Odvozené konstruktory a rozšířené agregace inicializace](constructors-cpp.md#extended_aggregate).
 
 ## <a name="initializer_list-constructors"></a>initializer_list konstruktory
 
-[Třída initializer_list](../standard-library/initializer-list-class.md) představuje seznam objektů zadaného typu, které lze použít v konstruktoru, a v jiných kontextech. Initializer_list lze vytvořit pomocí inicializace závorky:
+[Initializer_list Class](../standard-library/initializer-list-class.md) představuje seznam objektů zadaného typu, které lze použít v konstruktoru a v jiných kontextech. Initializer_list můžete vytvořit pomocí inicializace závorky:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Chcete-li použít tuto třídu, je nutné zahrnout hlavičku [\<initializer_list >](../standard-library/initializer-list.md) .
+> Chcete-li použít tuto třídu, [ \<](../standard-library/initializer-list.md) musíte zahrnout initializer_list>záhlaví.
 
-`initializer_list` lze zkopírovat. V tomto případě jsou členové nového seznamu odkazy na členy původního seznamu:
+A `initializer_list` lze zkopírovat. V tomto případě jsou členy nového seznamu odkazy na členy původního seznamu:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-Třídy kontejnerů standardní knihovny a také `string`, `wstring`a `regex`, mají `initializer_list` konstruktory. Následující příklady ukazují, jak provést inicializaci složené závorky pomocí těchto konstruktorů:
+Standardní třídy kontejnerů `string`knihovny `regex`a `initializer_list` také , `wstring`a , mají konstruktory. Následující příklady ukazují, jak provést inicializaci svorek s těmito konstruktory:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

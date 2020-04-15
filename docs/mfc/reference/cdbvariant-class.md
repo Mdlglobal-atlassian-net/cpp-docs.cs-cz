@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253319"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376456"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
-Představuje je odlišný datový typ pro třídy knihovny MFC rozhraní ODBC.
+Představuje typ dat varianty pro třídy Knihovny MFC ODBC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,45 +55,45 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDBVariant::CDBVariant](#cdbvariant)|Vytvoří `CDBVariant` objektu.|
+|[CDBVariant::CDBVariant](#cdbvariant)|Vytvoří `CDBVariant` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDBVariant::Clear](#clear)|Vymaže `CDBVariant` objektu.|
+|[CDBVariant::Vymazat](#clear)|Vymaže `CDBVariant` objekt.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDBVariant::m_dwType](#m_dwtype)|Obsahuje datový typ aktuálně uložené hodnoty. Typ `DWORD`.|
+|[CDBVariant::m_dwType](#m_dwtype)|Obsahuje datový typ aktuálně uložené hodnoty. Zadejte `DWORD`.|
 
-### <a name="public-union-members"></a>Veřejné členy sjednocení.
+### <a name="public-union-members"></a>Členové veřejných odborů
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Obsahuje hodnotu typu **BOOL**.|
-|[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **unsigned char**.|
+|[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **nepodepsaný znak**.|
 |[CDBVariant::m_dblVal](#m_dblval)|Obsahuje hodnotu typu **double**.|
 |[CDBVariant::m_fltVal](#m_fltval)|Obsahuje hodnotu typu **float**.|
-|[CDBVariant::m_iVal](#m_ival)|Obsahuje hodnotu typu **krátký**.|
-|[CDBVariant::m_lVal](#m_lval)|Obsahuje hodnotu typu **dlouhé**.|
-|[CDBVariant::m_pbinary](#m_pbinary)|Obsahuje ukazatel na objekt typu `CLongBinary`.|
-|[CDBVariant::m_pdate](#m_pdate)|Obsahuje ukazatel na objekt typu **TIMESTAMP_STRUCT z**.|
-|[CDBVariant::m_pstring](#m_pstring)|Obsahuje ukazatel na objekt typu `CString`.|
-|[CDBVariant::m_pstringA](#m_pstringa)|Uchovává ukazatel na ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.|
-|[CDBVariant::m_pstringW](#m_pstringw)|Uchovává ukazatel na široké [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.|
+|[CDBVariant::m_iVal](#m_ival)|Obsahuje hodnotu typu **short**.|
+|[CDBVariant::m_lVal](#m_lval)|Obsahuje hodnotu typu **long**.|
+|[CDBVariant::m_pbinary](#m_pbinary)|Obsahuje ukazatel na objekt `CLongBinary`typu .|
+|[CDBVariant::m_pdate](#m_pdate)|Obsahuje ukazatel na objekt typu **TIMESTAMP_STRUCT**.|
+|[CDBVariant::m_pstring](#m_pstring)|Obsahuje ukazatel na objekt `CString`typu .|
+|[CDBVariant::m_pstringA](#m_pstringa)|Ukládá ukazatel na objekt ASCII [CString.](../../atl-mfc-shared/reference/cstringt-class.md)|
+|[CDBVariant::m_pstringW](#m_pstringw)|Ukládá ukazatel na široký [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CDBVariant` nemá základní třídu.
+`CDBVariant`nemá základní třídu.
 
-`CDBVariant` je podobný [COleVariant](../../mfc/reference/colevariant-class.md), nicméně `CDBVariant` nepoužívá OLE. `CDBVariant` Umožňuje uložit hodnotu bez starostí o datový typ hodnoty. `CDBVariant` sleduje datový typ aktuální hodnotu, která je uložena ve sjednocení.
+`CDBVariant`je podobný [COleVariant](../../mfc/reference/colevariant-class.md); však `CDBVariant` nepoužívá OLE. `CDBVariant`umožňuje uložit hodnotu bez obav o datový typ hodnoty. `CDBVariant`sleduje datový typ aktuální hodnoty, která je uložena v unii.
 
-Třída [CRecordset](../../mfc/reference/crecordset-class.md) využívá `CDBVariant` objekty ve třech členské funkce: `GetFieldValue`, `GetBookmark`, a `SetBookmark`. Například `GetFieldValue` umožňuje dynamicky načíst data ve sloupci. Vzhledem k tomu, že datový typ sloupce nemusí být známá v době běhu `GetFieldValue` používá `CDBVariant` objekt pro uložení dat sloupce.
+Třída [CRecordset](../../mfc/reference/crecordset-class.md) `CDBVariant` využívá objekty ve `GetFieldValue` `GetBookmark`třech `SetBookmark`členských funkcích: , a . Umožňuje například `GetFieldValue` dynamicky načítat data ve sloupci. Vzhledem k tomu, že datový typ sloupce `GetFieldValue` nemusí `CDBVariant` být znám za běhu, používá objekt k uložení dat sloupce.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -103,9 +103,9 @@ Třída [CRecordset](../../mfc/reference/crecordset-class.md) využívá `CDBVar
 
 **Záhlaví:** afxdb.h
 
-##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant
+## <a name="cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDBVariant::CDBVariant
 
-Vytvoří hodnotu NULL `CDBVariant` objektu.
+Vytvoří objekt `CDBVariant` NULL.
 
 ```
 CDBVariant();
@@ -113,11 +113,11 @@ CDBVariant();
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví [m_dwType](#m_dwtype) datový člen do DBVT_NULL.
+Nastaví datový člen [m_dwType](#m_dwtype) na DBVT_NULL.
 
-##  <a name="clear"></a>  CDBVariant::Clear
+## <a name="cdbvariantclear"></a><a name="clear"></a>CDBVariant::Vymazat
 
-Voláním této členské funkce zrušte `CDBVariant` objektu.
+Volání této členské funkce `CDBVariant` vymazat objekt.
 
 ```
 void Clear();
@@ -125,45 +125,45 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud hodnota [m_dwType](#m_dwtype) datový člen je DBVT_DATE, DBVT_STRING nebo DBVT_BINARY, `Clear` uvolní paměť spojených se členem Unie ukazatele. `Clear` Nastaví `m_dwType` k DBVT_NULL.
+Pokud je hodnota [datového](#m_dwtype) člena m_dwType DBVT_DATE, `Clear` DBVT_STRING nebo DBVT_BINARY, uvolní paměť přidruženou k členu ukazatele unie. `Clear`nastaví `m_dwType` na DBVT_NULL.
 
-`CDBVariant` Volání destruktoru `Clear`.
+Destruktor `CDBVariant` `Clear`volá .
 
-##  <a name="m_boolval"></a>  CDBVariant::m_boolVal
+## <a name="cdbvariantm_boolval"></a><a name="m_boolval"></a>CDBVariant::m_boolVal
 
-Uloží hodnotu typu BOOL.
-
-### <a name="remarks"></a>Poznámky
-
-`m_boolVal` Patří datový člen sjednocení. Před použitím `m_boolVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_BOOL, pak `m_boolVal` bude obsahovat platnou hodnotu; v opačném případě přístupu k `m_boolVal` vytvoří nespolehlivé výsledky.
-
-##  <a name="m_chval"></a>  CDBVariant::m_chVal
-
-Ukládá hodnotu typu **unsigned char**.
+Ukládá hodnotu typu BOOL.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_chVal` Patří datový člen sjednocení. Před použitím `m_chVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_UCHAR, pak `m_chVal` obsahuje platnou hodnotu; v opačném případě přístupu k `m_chVal` vytvoří nespolehlivé výsledky.
+Datový `m_boolVal` člen patří do unie. Před přístupem `m_boolVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_boolVal` na DBVT_BOOL, pak bude obsahovat platnou hodnotu; v opačném `m_boolVal` případě bude přístup k nespolehlivé výsledky.
 
-##  <a name="m_dblval"></a>  CDBVariant::m_dblVal
+## <a name="cdbvariantm_chval"></a><a name="m_chval"></a>CDBVariant::m_chVal
+
+Ukládá hodnotu typu **nepodepsané char**.
+
+### <a name="remarks"></a>Poznámky
+
+Datový `m_chVal` člen patří do unie. Před přístupem `m_chVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_chVal` na DBVT_UCHAR, pak obsahuje platnou hodnotu; v opačném `m_chVal` případě bude přístup k nespolehlivé výsledky.
+
+## <a name="cdbvariantm_dblval"></a><a name="m_dblval"></a>CDBVariant::m_dblVal
 
 Ukládá hodnotu typu **double**.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_dblVal` Patří datový člen sjednocení. Před použitím `m_dblVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_DOUBLE, pak `m_dblVal` obsahuje platnou hodnotu; v opačném případě přístupu k `m_dblVal` vytvoří nespolehlivé výsledky.
+Datový `m_dblVal` člen patří do unie. Před přístupem `m_dblVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_dblVal` na DBVT_DOUBLE, pak obsahuje platnou hodnotu; v opačném `m_dblVal` případě bude přístup k nespolehlivé výsledky.
 
-##  <a name="m_dwtype"></a>  CDBVariant::m_dwType
+## <a name="cdbvariantm_dwtype"></a><a name="m_dwtype"></a>CDBVariant::m_dwType
 
-Tomuto datovému členu obsahuje typ dat pro hodnotu, která je aktuálně uloženo v `CDBVariant` sjednocení datový člen objektu.
+Tento datový člen obsahuje datový typ pro hodnotu, `CDBVariant` která je aktuálně uložena v datovém členu sjednocení objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Před použitím této sjednocení, musíte zkontrolovat hodnoty `m_dwType` aby bylo možné určit, které sjednocení datový člen pro přístup k. V následující tabulce jsou uvedeny možné hodnoty pro `m_dwType` a odpovídající sjednocení datových členů.
+Před přístupem k této unie, je `m_dwType` nutné zkontrolovat hodnotu, aby bylo možné určit, který člen dat unie pro přístup. V následující tabulce jsou `m_dwType` uvedeny možné hodnoty pro a odpovídající datový člen unie.
 
-|m_dwType|Sjednocení datový člen|
+|m_dwType|Datový člen Unie|
 |---------------|-----------------------|
-|DBVT_NULL|Žádný člen sjednocení je platný pro přístup.|
+|DBVT_NULL|Žádný člen unie není platný pro přístup.|
 |DBVT_BOOL|[m_boolVal](#m_boolval)|
 |DBVT_UCHAR|[m_chVal](#m_chval)|
 |DBVT_SHORT|[m_iVal](#m_ival)|
@@ -176,73 +176,73 @@ Před použitím této sjednocení, musíte zkontrolovat hodnoty `m_dwType` aby 
 |DBVT_ASTRING|[m_pstringA](#m_pstringa)|
 |DBVT_WSTRING|[m_pstringW](#m_pstringw)|
 
-##  <a name="m_fltval"></a>  CDBVariant::m_fltVal
+## <a name="cdbvariantm_fltval"></a><a name="m_fltval"></a>CDBVariant::m_fltVal
 
 Ukládá hodnotu typu **float**.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_fltVal` Patří datový člen sjednocení. Před použitím `m_fltVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_SINGLE, pak `m_fltVal` obsahuje platnou hodnotu; v opačném případě přístupu k `m_fltVal` vytvoří nespolehlivé výsledky.
+Datový `m_fltVal` člen patří do unie. Před přístupem `m_fltVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_fltVal` na DBVT_SINGLE, pak obsahuje platnou hodnotu; v opačném `m_fltVal` případě bude přístup k nespolehlivé výsledky.
 
-##  <a name="m_ival"></a>  CDBVariant::m_iVal
+## <a name="cdbvariantm_ival"></a><a name="m_ival"></a>CDBVariant::m_iVal
 
-Ukládá hodnotu typu **krátký**.
-
-### <a name="remarks"></a>Poznámky
-
-`m_iVal` Patří datový člen sjednocení. Před použitím `m_iVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_SHORT, pak `m_iVal` obsahuje platnou hodnotu; v opačném případě přístupu k `m_iVal` vytvoří nespolehlivé výsledky.
-
-##  <a name="m_lval"></a>  CDBVariant::m_lVal
-
-Ukládá hodnotu typu **dlouhé**.
+Ukládá hodnotu typu **short**.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_lVal` Patří datový člen sjednocení. Před použitím `m_lVal`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_LONG, pak `m_lVal` obsahuje platnou hodnotu; v opačném případě přístupu k `m_lVal` vytvoří nespolehlivé výsledky.
+Datový `m_iVal` člen patří do unie. Před přístupem `m_iVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_iVal` na DBVT_SHORT, pak obsahuje platnou hodnotu; v opačném `m_iVal` případě bude přístup k nespolehlivé výsledky.
 
-##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary
+## <a name="cdbvariantm_lval"></a><a name="m_lval"></a>CDBVariant::m_lVal
 
-Uchovává ukazatel na objekt typu [CLongBinary](../../mfc/reference/clongbinary-class.md).
-
-### <a name="remarks"></a>Poznámky
-
-`m_pbinary` Patří datový člen sjednocení. Před použitím `m_pbinary`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_BINARY, pak `m_pbinary` obsahuje platný ukazatel; v opačném případě přístupu k `m_pbinary` vytvoří nespolehlivé výsledky.
-
-##  <a name="m_pdate"></a>  CDBVariant::m_pdate
-
-Uchovává ukazatel na objekt typu TIMESTAMP_STRUCT z.
+Ukládá hodnotu typu **long**.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_pdate` Patří datový člen sjednocení. Před použitím `m_pdate`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_DATE, pak `m_pdate` obsahuje platný ukazatel; v opačném případě přístupu k `m_pdate` vytvoří nespolehlivé výsledky.
+Datový `m_lVal` člen patří do unie. Před přístupem `m_lVal`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_lVal` na DBVT_LONG, pak obsahuje platnou hodnotu; v opačném `m_lVal` případě bude přístup k nespolehlivé výsledky.
 
-Další informace o typu TIMESTAMP_STRUCT z dat, naleznete v tématu [datové typy jazyka C](/sql/odbc/reference/appendixes/c-data-types) v dodatku D *ODBC programátora* v sadě Windows SDK.
+## <a name="cdbvariantm_pbinary"></a><a name="m_pbinary"></a>CDBVariant::m_pbinary
 
-##  <a name="m_pstring"></a>  CDBVariant::m_pstring
-
-Uchovává ukazatel na objekt typu [CString](../../atl-mfc-shared/reference/cstringt-class.md).
+Ukládá ukazatel na objekt typu [CLongBinary](../../mfc/reference/clongbinary-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
-`m_pstring` Patří datový člen sjednocení. Před použitím `m_pstring`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_STRING, pak `m_pstring` obsahuje platný ukazatel; v opačném případě přístupu k `m_pstring` vytvoří nespolehlivé výsledky.
+Datový `m_pbinary` člen patří do unie. Před přístupem `m_pbinary`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_pbinary` na DBVT_BINARY, pak obsahuje platný ukazatel; v opačném `m_pbinary` případě bude přístup k nespolehlivé výsledky.
 
-##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA
+## <a name="cdbvariantm_pdate"></a><a name="m_pdate"></a>CDBVariant::m_pdate
 
-Uchovává ukazatel na ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.
-
-### <a name="remarks"></a>Poznámky
-
-`m_pstringA` Patří datový člen sjednocení. Před použitím `m_pstringA`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_ASTRING, pak `m_pstringA` obsahuje platný ukazatel; v opačném případě přístupu k `m_pstringA` vytvoří nespolehlivé výsledky.
-
-##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW
-
-Uchovává ukazatel na široké [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.
+Uloží ukazatel na objekt typu TIMESTAMP_STRUCT.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_pstringW` Patří datový člen sjednocení. Před použitím `m_pstringW`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_WSTRING, pak `m_pstringW` obsahuje platný ukazatel; v opačném případě přístupu k `m_pstringW` vytvoří nespolehlivé výsledky.
+Datový `m_pdate` člen patří do unie. Před přístupem `m_pdate`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_pdate` na DBVT_DATE, pak obsahuje platný ukazatel; v opačném `m_pdate` případě bude přístup k nespolehlivé výsledky.
 
-## <a name="see-also"></a>Viz také:
+Další informace o datovém typu TIMESTAMP_STRUCT naleznete v tématu [Datové typy C](/sql/odbc/reference/appendixes/c-data-types) v dodatku D odkazu *programátora ODBC* v sadě Windows SDK.
+
+## <a name="cdbvariantm_pstring"></a><a name="m_pstring"></a>CDBVariant::m_pstring
+
+Ukládá ukazatel na objekt typu [CString](../../atl-mfc-shared/reference/cstringt-class.md).
+
+### <a name="remarks"></a>Poznámky
+
+Datový `m_pstring` člen patří do unie. Před přístupem `m_pstring`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_pstring` na DBVT_STRING, pak obsahuje platný ukazatel; v opačném `m_pstring` případě bude přístup k nespolehlivé výsledky.
+
+## <a name="cdbvariantm_pstringa"></a><a name="m_pstringa"></a>CDBVariant::m_pstringA
+
+Ukládá ukazatel na objekt ASCII [CString.](../../atl-mfc-shared/reference/cstringt-class.md)
+
+### <a name="remarks"></a>Poznámky
+
+Datový `m_pstringA` člen patří do unie. Před přístupem `m_pstringA`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_pstringA` na DBVT_ASTRING, pak obsahuje platný ukazatel; v opačném `m_pstringA` případě bude přístup k nespolehlivé výsledky.
+
+## <a name="cdbvariantm_pstringw"></a><a name="m_pstringw"></a>CDBVariant::m_pstringW
+
+Ukládá ukazatel na široký [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.
+
+### <a name="remarks"></a>Poznámky
+
+Datový `m_pstringW` člen patří do unie. Před přístupem `m_pstringW`nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` je nastavena `m_pstringW` na DBVT_WSTRING, pak obsahuje platný ukazatel; v opačném `m_pstringW` případě bude přístup k nespolehlivé výsledky.
+
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)

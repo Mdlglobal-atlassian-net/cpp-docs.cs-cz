@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonminitoolbar – třída
+title: CmFCRibbonRibbonMiniToolBar třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonMiniToolBar
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151887"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375092"
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar – třída
+# <a name="cmfcribbonminitoolbar-class"></a>CmFCRibbonRibbonMiniToolBar třída
 
-Implementuje kontextovou nabídku nástrojů.
+Implementuje kontextový rozbalovací panel nástrojů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,42 +37,42 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Výchozí konstruktor.|
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCRibbonMiniToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|`CMFCRibbonMiniToolBar::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
+|`CMFCRibbonMiniToolBar::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCRibbonMiniToolBar::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Přepíše `CMFCPopupMenu::IsRibbonMiniToolBar`.)|
-|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Nastaví seznam příkazů, který se má zobrazit na panelu nástrojů.|
-|[CMFCRibbonMiniToolBar::Show](#show)|Zobrazí mini nástrojů na souřadnicích zadanou obrazovku.|
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Zobrazí mini nástrojů spolu s místní nabídkou.|
+|[CMFCRibbonRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Přepíše `CMFCPopupMenu::IsRibbonMiniToolBar`.)|
+|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Nastaví seznam příkazů, které se mají zobrazit na panelu nástrojů.|
+|[CMFCRibbonMiniToolBar::Zobrazit](#show)|Zobrazí mini panel nástrojů na určených souřadnicích obrazovky.|
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Zobrazí mini panel nástrojů spolu s místní nabídkou.|
 
 ## <a name="remarks"></a>Poznámky
 
-Mini nástrojů se obvykle zobrazí, když uživatele vybere objekt v dokumentu. Když uživatele vybere blok textu v textovém editoru, například aplikace zobrazí mini nástrojů, který obsahuje příkazy pro formátování textu.
+Mini panel nástrojů se obvykle zobrazí poté, co uživatel vybere objekt v dokumentu. Například poté, co uživatel vybere blok textu v textovém editoru, aplikace zobrazí mini panel nástrojů, který obsahuje příkazy pro formátování textu.
 
-Mini nástrojů viditelný, když ukazatel myši je mimo rozsah mini nástrojů.
+Mini panel nástrojů se stane průhledným, když je ukazatel myši mimo hranice mini panelu nástrojů.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
+[CmFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
 `CMFCRibbonPanelMenu`
 
@@ -82,9 +82,9 @@ Mini nástrojů viditelný, když ukazatel myši je mimo rozsah mini nástrojů.
 
 **Záhlaví:** afxRibbonMiniToolBar.h
 
-##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands
+## <a name="cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands
 
-Nastaví seznam příkazů, který se má zobrazit na panelu nástrojů.
+Nastaví seznam příkazů, které se mají zobrazit na panelu nástrojů.
 
 ```
 void SetCommands(
@@ -94,25 +94,25 @@ void SetCommands(
 
 ### <a name="parameters"></a>Parametry
 
-*pRibbonBar*<br/>
-[in] Na panelu pásu karet, která hledá mini nástrojů pro tlačítka pro zobrazení.
+*pPruh*<br/>
+[v] Pruh pásu karet, na který mini panel nástrojů vyhledá tlačítka, která se mají zobrazit.
 
-*lstCommands*<br/>
-[in] Seznam příkazů, který se má zobrazit na panelu nástrojů mini. Najít související tlačítka jsou prohledány všechny kategorie pásu karet.
+*příkazy lst*<br/>
+[v] Seznam příkazů, které mají být zobrazeny na mini panelu nástrojů. Všechny kategorie pásu karet jsou vyhledány a vyhledávají přidružená tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce můžete nastavit seznam příkazů, který se má zobrazit na panelu nástrojů zkrácené.
+Tato funkce slouží k nastavení seznamu příkazů, které se mají zobrazit v mini panelu nástrojů.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `SetCommands` metodu `CMFCRibbonMiniToolBar` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `SetCommands` používat metodu třídy. `CMFCRibbonMiniToolBar` Tento fragment kódu je součástí [ukázky ukázky ukázky ukázky ms office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 
-##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show
+## <a name="cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Zobrazit
 
-Zobrazí mini nástrojů na souřadnicích zadanou obrazovku.
+Zobrazí mini panel nástrojů na určených souřadnicích obrazovky.
 
 ```
 BOOL Show(
@@ -122,19 +122,19 @@ BOOL Show(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-[in] Určuje vodorovná pozice mini nástrojů v souřadnicovém systému obrazovky.
+*X*<br/>
+[v] Určuje vodorovnou polohu minipanelu nástrojů v souřadnicích obrazovky.
 
-*y*<br/>
-[in] Určuje svislé umístění mini nástrojů v souřadnicovém systému obrazovky.
+*Y*<br/>
+[v] Určuje svislou polohu minipanelu nástrojů v souřadnicích obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně; zobrazí mini panel nástrojů v opačném případě hodnota FALSE.
+PRAVDA, pokud byl mini panel nástrojů úspěšně zobrazen; jinak NEPRAVDA.
 
-##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu
+## <a name="cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu
 
-Zobrazí mini nástrojů spolu s místní nabídkou.
+Zobrazí mini panel nástrojů spolu s místní nabídkou.
 
 ```
 BOOL ShowWithContextMenu(
@@ -146,29 +146,29 @@ BOOL ShowWithContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-[in] Určuje vodorovné umístění v místní nabídce v souřadnicovém systému obrazovky.
+*X*<br/>
+[v] Určuje vodorovnou polohu kontextové nabídky v souřadnicích obrazovky.
 
-*y*<br/>
-[in] Určuje svislé umístění v místní nabídce v souřadnicovém systému obrazovky.
+*Y*<br/>
+[v] Určuje svislou polohu kontextové nabídky v souřadnicích obrazovky.
 
 *uiMenuResID*<br/>
-[in] Určuje ID prostředku v místní nabídce pro zobrazení.
+[v] Určuje ID prostředku kontextové nabídky, které se má zobrazit.
 
-*pWndOwner*<br/>
-[in] Identifikuje okna, která přijímá zprávy z kontextové nabídky.
+*pWndVlastník*<br/>
+[v] Identifikuje okno, ve kterém jsou přijímá zprávy z místní nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně; zobrazí místní nabídka v opačném případě hodnota FALSE.
+PRAVDA, pokud byla místní nabídka úspěšně zobrazena; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte, chcete-li zobrazit mini nástrojů, který má místní nabídka. V místní nabídce je umístěné 15 pixelů pod mini nástrojů.
+Tato funkce slouží k zobrazení mini panelu nástrojů, který má místní nabídku. Místní nabídka je umístěna 15 pixelů pod mini panelem nástrojů.
 
-##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode
+## <a name="cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 BOOL IsContextMenuMode() const;
@@ -178,9 +178,9 @@ BOOL IsContextMenuMode() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+## <a name="cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonRibbonMiniToolBar::IsRibbonMiniToolBar
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 virtual BOOL IsRibbonMiniToolBar() const;
@@ -190,7 +190,7 @@ virtual BOOL IsRibbonMiniToolBar() const;
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

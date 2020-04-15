@@ -1,5 +1,5 @@
 ---
-title: Cdockstate – třída
+title: Třída CDockState
 ms.date: 11/04/2016
 f1_keywords:
 - CDockState
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375552"
 ---
-# <a name="cdockstate-class"></a>Cdockstate – třída
+# <a name="cdockstate-class"></a>Třída CDockState
 
-Serializovaný seznam `CObject` panely třídu, která načte, uvolní nebo vymaže stav jednoho nebo více prvků ukotvení v trvalé paměti (soubor).
+Serializovaná `CObject` třída, která načte, uvolní nebo vymaže stav jednoho nebo více řídicích panelů ukotvení v trvalé paměti (souboru).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,42 +37,42 @@ class CDockState : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDockState::Clear](#clear)|Vymaže informace o stavu ukotvení.|
-|[CDockState::GetVersion](#getversion)|Získá číslo verze uložené panelu stavu.|
-|[CDockState::LoadState](#loadstate)|Načte informace z registru stavu nebo. Soubor INI.|
-|[CDockState::SaveState](#savestate)|Uloží informace o stavu do registru nebo soubor INI.|
+|[CDockState::Vymazat](#clear)|Vymaže informace o stavu doku.|
+|[CDockState::GetVersion](#getversion)|Načte číslo verze uloženého stavu pruhu.|
+|[CDockState::LoadState](#loadstate)|Načte informace o stavu z registru nebo . INI.|
+|[CDockState::Uložitstav](#savestate)|Uloží informace o stavu do registru nebo souboru INI.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Pole ukazatelů na uloženou ukotvit informace o stavu s jednou položkou pro každý ovládací prvek panel.|
+|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Pole ukazatelů na uložené informace o stavu doku s jednou položkou pro každý ovládací panel.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ukotvit stavu zahrnuje velikost a umístění panelu a určuje, jestli je ukotven. Při načítání uložený stav, ukotvit `CDockState` kontroluje na panelu umístění a pokud není viditelná s aktuálním nastavením obrazovky, na panelu `CDockState` škáluje na panelu umístění tak, aby byl viditelný. Hlavním účelem `CDockState` je k uložení stavu celou řadu ovládacích pruhů a umožňují tento stav se má uložit a načíst do registru, aplikaci prvku. Soubor INI, nebo v binárním formátu jako součást `CArchive` obsah objektu.
+Stav ukotvení zahrnuje velikost a umístění panelu a zda je ukotven. Při načítání uloženého stavu `CDockState` ukotvení zkontroluje pozici panelu a pokud pruh není `CDockState` viditelný s aktuálním nastavením obrazovky, změní velikost polohy panelu tak, aby byl viditelný. Hlavním účelem `CDockState` je držet celý stav počtu ovládacích panelů a umožnit, aby tento stav byl uložen a načten buď do registru, aplikace . INI nebo v binární podobě jako `CArchive` součást obsahu objektu.
 
-Na panelu může být libovolný ukotvitelné ovládací prvek řádku, včetně nástrojů, stavovém řádku nebo panel dialogového okna. `CDockState` Zapisovat a číst do nebo ze souboru prostřednictvím objektů `CArchive` objektu.
+Panel může být libovolný ovládací panel, včetně panelu nástrojů, stavového řádku nebo dialogového panelu. `CDockState`objekty jsou zapsány a čteny `CArchive` do nebo ze souboru prostřednictvím objektu.
 
-[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) načte informace o stavu ze všech rámce okna `CControlBar` objekty a umístí jej do `CDockState` objektu. Pak můžou zapisovat obsah `CDockState` objektu k úložišti s [serializace](../../mfc/reference/cobject-class.md#serialize) nebo [CDockState::SaveState](#savestate). Pokud chcete později obnovit stav ovládací pruhy v okně rámce, můžete načíst stav s `Serialize` nebo [CDockState::LoadState](#loadstate), pak použijte [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) použít uložené Stav má okno rámce ovládací panely.
+[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) načte informace o stavu všech `CControlBar` objektů okna rámce `CDockState` a vloží je do objektu. Obsah `CDockState` objektu pak můžete zapsat do úložiště pomocí [Serialize](../../mfc/reference/cobject-class.md#serialize) nebo [CDockState::SaveState](#savestate). Pokud později chcete obnovit stav ovládacích panelů v okně rámce, `Serialize` můžete načíst stav s nebo [CDockState::LoadState](#loadstate), pak použijte [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) použít uložený stav na ovládací panely okna rámce.
 
-Další informace o ukotvení ovládacích panelů, najdete v článcích [ovládací pruhy](../../mfc/control-bars.md), [panelů nástrojů: Ukotvitelné a plovoucí](../../mfc/docking-and-floating-toolbars.md), a [rámce Windows](../../mfc/frame-windows.md).
+Další informace o ovládacích panelech ukotvení naleznete v článcích [Ovládací panely ovládacích panelů](../../mfc/control-bars.md), [Panely nástrojů: Ukotvení a plovoucí](../../mfc/docking-and-floating-toolbars.md)a Okna [rámů](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CDockState`
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxadv.h
+**Záhlaví:** afxadv.h
 
-##  <a name="clear"></a>  CDockState::Clear
+## <a name="cdockstateclear"></a><a name="clear"></a>CDockState::Vymazat
 
-Voláním této funkce, které chcete vymazat všechny dokovací informace uložené v `CDockState` objektu.
+Voláním této funkce vymažte `CDockState` všechny informace o ukotvení uložené v objektu.
 
 ```
 void Clear();
@@ -80,11 +80,11 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-To zahrnuje nejen, zda je panel ukotven nebo Ne, ale velikost a umístění na panelu, a jestli je viditelný.
+To zahrnuje nejen to, zda je lišta ukotvena nebo ne, ale velikost a umístění lišty a zda je či není viditelná.
 
-##  <a name="getversion"></a>  CDockState::GetVersion
+## <a name="cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion
 
-Voláním této funkce načtete číslo verze uložené panelu stavu.
+Volání této funkce načíst číslo verze uloženého stavu panelu.
 
 ```
 DWORD GetVersion();
@@ -92,15 +92,15 @@ DWORD GetVersion();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-1, pokud panel uložené informace je starší než aktuální panelu stavu; 2 if panelu uložené informace je stejný jako aktuální stav panelu.
+1 pokud jsou uložené informace o pruhu starší než aktuální stav pruhu; 2 pokud jsou uložené informace o pruhu stejné jako aktuální stav pruhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Podpora verzí umožňuje revidované řádku a přidat nové vlastnosti trvalé stále moct zjišťovat a načíst trvalý stav vytvořena pomocí starší verze panelu.
+Podpora verzí umožňuje revidovaným pruhům přidat nové trvalé vlastnosti a stále schopen rozpoznat a načíst trvalý stav vytvořený starší verzí panelu.
 
-##  <a name="loadstate"></a>  CDockState::LoadState
+## <a name="cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState
 
-Volání této funkce načtete informace o stavu z registru nebo. Soubor INI.
+Volání této funkce k načtení informací o stavu z registru nebo . INI.
 
 ```
 void LoadState(LPCTSTR lpszProfileName);
@@ -109,23 +109,23 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-Odkazuje na hodnotu null teminated řetězec určující název oddílu v souboru inicializace nebo klíče v registru Windows ukládat informace o stavu.
+Odkazuje na řetězec s nulovým teminovaným teminovaným kódem, který určuje název oddílu v inicializačním souboru nebo klíče v registru systému Windows, kde jsou uloženy informace o stavu.
 
 ### <a name="remarks"></a>Poznámky
 
-Název profilu je část vaší aplikace. Soubor INI nebo registru, který obsahuje informace o stavu na pruhy. Ovládací prvek panelu informací o stavu můžete uložit do registru nebo. Soubor INI s `SaveState`.
+Název profilu je část aplikace . INI nebo registru, který obsahuje informace o stavu pruhů. Informace o stavu řídicího panelu můžete uložit do registru nebo . INI soubor `SaveState`s .
 
-##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo
+## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo
 
-A `CPtrArray` objekt, který je pole ukazatelů na uložené řídicí panel informace pro každý ovládací panel, který se má uložit informace o stavu v `CDockState` objektu.
+Objekt, `CPtrArray` který je pole ukazatele na uložené informace ovládacího panelu pro každý `CDockState` ovládací panel, který má uloženy informace o stavu v objektu.
 
 ```
 CPtrArray m_arrBarInfo;
 ```
 
-##  <a name="savestate"></a>  CDockState::SaveState
+## <a name="cdockstatesavestate"></a><a name="savestate"></a>CDockState::Uložitstav
 
-Voláním této funkce se uložit informace o stavu do registru nebo. Soubor INI.
+Voláním této funkce uložíte informace o stavu do registru nebo . INI.
 
 ```
 void SaveState(LPCTSTR lpszProfileName);
@@ -134,13 +134,13 @@ void SaveState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-Odkazuje na hodnotu null teminated řetězec určující název oddílu v souboru inicializace nebo klíče v registru Windows ukládat informace o stavu.
+Odkazuje na řetězec s nulovým teminovaným teminovaným kódem, který určuje název oddílu v inicializačním souboru nebo klíče v registru systému Windows, kde jsou uloženy informace o stavu.
 
 ### <a name="remarks"></a>Poznámky
 
-Název profilu je část vaší aplikace. Soubor INI nebo registru, který obsahuje informace o stavu ovládacím panelu. `SaveState` také ukládá aktuální velikost obrazovky. Řídicí panel Informace můžete načíst z registru nebo. Soubor INI s `LoadState`.
+Název profilu je část aplikace . INI nebo registru, který obsahuje informace o stavu ovládacího panelu. `SaveState`také uloží aktuální velikost obrazovky. Informace o ovládacím panelu můžete načíst z registru nebo . INI soubor `LoadState`s .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

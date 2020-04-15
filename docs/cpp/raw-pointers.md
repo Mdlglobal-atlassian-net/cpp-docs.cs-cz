@@ -1,21 +1,21 @@
 ---
 title: Nezpracované ukazatele (C++)
-description: Používání nezpracovaných ukazatelů v nástrojiC++
+description: Jak používat nezpracované ukazatele v jazyce C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374669"
 ---
 # <a name="raw-pointers-c"></a>Nezpracované ukazatele (C++)
 
-Ukazatel je typ proměnné, která ukládá adresu objektu v paměti a slouží k přístupu k tomuto objektu. *Nezpracovaný ukazatel* je ukazatel, jehož doba života není ovládána zapouzdřeným objektem, jako je [inteligentní ukazatel](smart-pointers-modern-cpp.md). Nezpracovanému ukazateli se dá přiřadit adresa jiné proměnné bez ukazatele, nebo se mu dá přiřadit hodnota [nullptr](nullptr.md). Ukazatel, kterému nebyla přiřazena hodnota, obsahuje náhodná data.
+Ukazatel je typ proměnné, která ukládá adresu objektu v paměti a slouží k přístupu k tomuto objektu. Nezpracovaný *ukazatel* je ukazatel, jehož životnost není řízena zapouzdřením objektu, jako je inteligentní [ukazatel](smart-pointers-modern-cpp.md). Nezpracovaný ukazatel může být přiřazena adresa jiné proměnné bez ukazatele, nebo může být přiřazena hodnota [nullptr](nullptr.md). Ukazatel, kterému nebyla přiřazena hodnota, obsahuje náhodná data.
 
-Ukazatel lze také *odkázat* , aby se načetla hodnota objektu, na který odkazuje. *Operátor přístupu členů* poskytuje přístup k členům objektu.
+Ukazatel může být také *odkazováno* načíst hodnotu objektu, který odkazuje na. *Operátor přístupu člena* poskytuje přístup k členům objektu.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ Ukazatel lze také *odkázat* , aby se načetla hodnota objektu, na který odkaz
 
 ```
 
-Ukazatel může ukazovat na typový objekt nebo na **typ void**. Když program přidělí novému objektu [haldě](https://wikipedia.org/wiki/Heap) v paměti, obdrží adresu tohoto objektu ve formě ukazatele. Tyto ukazatele se nazývají *vlastnící ukazatele*; vlastnící ukazatel (nebo jeho kopie) se musí použít k explicitnímu odstranění objektu, který je přidělen haldě, pokud již není potřeba. Při odstranění paměti dojde k *nevrácení paměti* z důvodu nedostupnosti paměti pro žádný jiný program v počítači. Další informace najdete v tématu [operátory New a DELETE](new-and-delete-operators.md).
+Ukazatel může ukazovat na zadaný objekt nebo **na void**. Když program přidělí nový objekt na [haldě](https://wikipedia.org/wiki/Heap) v paměti, obdrží adresu tohoto objektu ve formě ukazatele. Tyto ukazatele se nazývají *vlastnící ukazatele*; vlastnící ukazatel (nebo jeho kopie) musí být použit k explicitnímu odstranění objektu přiděleného haldou, pokud již není potřeba. Pokud neodstraníte paměť, bude *nevracení paměti* k dispozici žádnému jinému programu v počítači. Další informace naleznete v [tématu new and delete operators](new-and-delete-operators.md).
 
 ```cpp
 
@@ -35,7 +35,7 @@ Ukazatel může ukazovat na typový objekt nebo na **typ void**. Když program p
     delete mc; // delete object (please don't forget!)
 ```
 
-Ukazatel (Pokud není deklarován jako **const**) lze zvýšit nebo snížit tak, aby odkazoval na nové umístění v paměti. Tato metoda se nazývá *aritmetický ukazatel* a používá se v programování ve stylu C k iterování nad prvky v polích nebo v jiných datových strukturách. Ukazatel **const** nelze nastavit tak, aby odkazoval na jiné umístění v paměti a v tomto smyslu je velmi podobný [odkazu](references-cpp.md). Další informace naleznete v tématu [const a volatile ukazatele](const-and-volatile-pointers.md).
+Ukazatel (pokud není deklarován jako **const)** může být zpřísňován nebo snížen tak, aby odkazuje na nové umístění v paměti. To se nazývá *aritmetika ukazatele* a používá se v programování ve stylu C k iteřovat přes prvky v polích nebo jiných datových struktur. **Const** ukazatel nelze provést přejděte na jiné umístění paměti a v tomto smyslu je velmi podobný [odkaz](references-cpp.md). Další informace naleznete [v tématu const a volatile ukazatele](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ Ukazatel (Pokud není deklarován jako **const**) lze zvýšit nebo snížit tak
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-V 64 operačních systémech má ukazatel velikost 64 bitů; velikost ukazatele systému určuje, kolik paměti může mít. Všechny kopie ukazatele ukazují do stejného umístění v paměti. Ukazatele (spolu s referencemi) se často používají C++ k předávání větších objektů do a z funkcí, protože je obvykle mnohem efektivnější zkopírovat 64 bitovou adresu objektu, než zkopírovat celý objekt. Při definování funkce zadejte parametry ukazatele jako **const** , pokud nechcete, aby funkce změnila objekt. Obecně platí, že odkazy **const** jsou preferovaným způsobem, jak předat objekty funkcím, pokud hodnota objektu může být **nullptr**.
+V 64bitových operačních systémech má ukazatel velikost 64 bitů. Velikost ukazatele systému určuje, kolik adresovatelné paměti může mít. Všechny kopie ukazatele odkazují na stejné umístění v paměti. Ukazatele (spolu s odkazy) se používají značně v jazyce C++ předat větší objekty do a z funkcí, protože je obvykle mnohem efektivnější kopírovat 64bitovou adresu objektu, než kopírovat celý objekt. Při definování funkce zadejte parametry ukazatele jako **const,** pokud nechcete, aby funkce upravovala objekt. Obecně **platí const** odkazy jsou upřednostňovaný způsob, jak předat objekty funkce, pokud hodnota objektu může být případně **nullptr**.
 
-[Ukazatelé na funkce](#pointers_to_functions) povolují předání funkcí do jiných funkcí a používají se pro "zpětná volání" v programování ve stylu jazyka C. Moderní C++ používá pro tento účel [výrazy lambda](lambda-expressions-in-cpp.md) .
+[Ukazatele na funkce](#pointers_to_functions) umožňují, aby funkce byly předány jiným funkcím, a používají se pro "zpětná volání" v programování ve stylu Jazyka C. Moderní C++ používá [lambda výrazy](lambda-expressions-in-cpp.md) pro tento účel.
 
-## <a name="initialization-and-member-access"></a>Inicializace a přístup ke členu
+## <a name="initialization-and-member-access"></a>Inicializace a přístup k členům
 
-Následující příklad ukazuje, jak deklarovat nezpracovaný ukazatel a inicializovat jej s objektem přiděleným pro haldu a poté, jak jej použít. Zobrazuje také několik rizik spojených s nezpracovanými ukazateli. (Pamatujte na to, že se jedná o programování ve stylu C++C a ne moderní!)
+Následující příklad ukazuje, jak deklarovat nezpracovaný ukazatel a inicializovat jej s objektem přiděleným na haldě a pak jak ho použít. To také ukazuje několik nebezpečí spojených s syrové ukazatele. (Pamatujte si, že je to C-styl programování a ne moderní C ++!)
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Aritmetické operace s ukazateli a pole
+## <a name="pointer-arithmetic-and-arrays"></a>Aritmetika ukazatele a pole
 
-Ukazatele a pole spolu úzce souvisejí. Když je pole předáno hodnotou do funkce, je předáno jako ukazatel na první prvek. Následující příklad ukazuje následující důležité vlastnosti ukazatelů a polí:
+Ukazatele a pole jsou úzce související. Když je pole předáno hodnotou funkci, je předáno jako ukazatel na první prvek. Následující příklad ukazuje následující důležité vlastnosti ukazatelů a polí:
 
-- operátor `sizeof` vrací celkovou velikost pole v bajtech.
-- Chcete-li určit počet prvků, vydělte celkový počet bajtů velikostí jednoho elementu
-- Když se předává pole do funkce, *Decays* se na typ ukazatele.
-- operátor `sizeof`, když se aplikuje na ukazatel, vrátí velikost ukazatele, 4 bajty na platformě x86 nebo 8 bajtů na platformě x64.
+- `sizeof` operátor vrátí celkovou velikost v bajtech pole
+- pro určení počtu prvků vydělte celkový počet bajtů velikostí jednoho prvku
+- když je pole předáno funkci, *rozkládá* se na typu ukazatele
+- Operátor `sizeof` při použití na ukazatel vrátí velikost ukazatele, 4 bajty na x86 nebo 8 bajtů na x64
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Některé aritmetické operace lze provést na nekonstantních ukazatelích, aby odkazovaly na nové umístění v paměti. Ukazatel lze zvýšit a snížit pomocí operátorů **++** , **+=** , **-=** a **--** . Tato technika se dá použít v polích a je obzvláště užitečná ve vyrovnávací paměti netypových dat. **Typ void\*** zvyšuje velikost **znaku** (1 bajt). Zadaný ukazatel se zvyšuje podle velikosti typu, na který odkazuje.
+Některé aritmetické operace lze provádět na neconst ukazatele, aby byly přejděte na nové umístění paměti. Ukazatel může být zpřísněn a snížen **++** **+=** pomocí **-=** **--** , a operátory. Tento postup lze použít v polích a je zvláště užitečné ve vyrovnávacích paměti netypových dat. **Neplatné\* ** přírůstky podle velikosti **char** (1 bajt). Zadaný ukazatel se zvětšuje podle velikosti typu, na který odkazuje.
 
-Následující příklad ukazuje, jak lze použít aritmetický ukazatel pro přístup k jednotlivým pixelům v rastrovém obrázku v systému Windows. Všimněte si použití **New** a **Delete**a operátoru dereference.
+Následující příklad ukazuje, jak lze aritmetiku ukazatele použít pro přístup k jednotlivým obrazovým bodům v bitmapě v systému Windows. Všimněte si použití **new** and **delete**a operátordereference.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void * ukazatele
+## <a name="void-pointers"></a>void* ukazatele
 
-Ukazatel na **void** jednoduše odkazuje na umístění nezpracované paměti. Někdy je nutné použít ukazatele **void\*** , například při předávání mezi C++ kódem a funkcemi jazyka C.
+Ukazatel **void** jednoduše odkazuje na umístění nezpracované paměti. Někdy je nutné použít **void\* ** ukazatele, například při předávání mezi c++ kód a C funkce.
 
-Když je typový ukazatel přetypování na ukazatel typu void, obsah umístění v paměti se nemění, ale informace o typu jsou ztraceny, takže nemůžete provádět operace zvýšení nebo snížení. Umístění paměti lze přetypovat například z MyClass * na void * a zpět na MyClass *. Tyto operace jsou v podstatě náchylné k chybám a vyžadují Skvělé opatrnosti, aby se předešlo chybám. Moderní C++ nedoporučuje použití ukazatelů typu void, pokud není nezbytně nutné.
+Pokud je zadaný ukazatel přetypován na ukazatel void, obsah umístění paměti se nezmění, ale informace o typu se ztratí, takže nelze provádět operace přírůstek nebo snížení. Umístění paměti může být přetypována, například z MyClass* pro void* a zpět na MyClass*. Tyto operace jsou ze své podstaty náchylné k chybám a vyžadují velkou péči, aby se zabránilo chybám. Moderní C++ nedoporučuje použití void ukazatele, pokud to není nezbytně nutné.
 
 ```cpp
 
@@ -279,7 +279,8 @@ int main()
 
     // use operator new to allocate untyped memory block
     void* pvoid = operator new(1000);
-    for(char* c = static_cast<char*>(pvoid); pvoid < &pvoid + 1000; ++c)
+    char* pchar = static_cast<char*>(pvoid);
+    for(char* c = pchar; c < pchar + 1000; ++c)
     {
         *c = 0x00;
     }
@@ -292,9 +293,9 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Ukazatele na funkce
 
-V programování ve stylu jazyka C jsou ukazatele funkcí používány primárně pro předávání funkcí jiným funkcím. V tomto scénáři volající může přizpůsobit chování funkce beze změny. V moderních C++ [výrazech lambda](lambda-expressions-in-cpp.md) poskytují stejnou schopnost s vyšším zabezpečením typu a dalšími výhodami.
+V programování ve stylu Jazyka C se ukazatele funkcí používají především k předání funkcí jiným funkcím. V tomto scénáři volající můžete přizpůsobit chování funkce bez úpravy. V moderním jazyce C++ [poskytují výrazy lambda](lambda-expressions-in-cpp.md) stejnou schopnost s větší bezpečností typů a dalšími výhodami.
 
-Deklarace ukazatele na funkci určuje signaturu, kterou musí mít ukazatel na odkaz na funkci:
+Deklarace ukazatele funkce určuje podpis, který musí mít funkce špičatá:
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +311,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-Následující příklad ukazuje funkci `combine`, která přijímá jako parametr jakoukoliv funkci, která přijímá `std::string` a vrací `std::string`. V závislosti na funkci, která je předána `combine`, buď dopřed nebo přiřaďte řetězec.
+Následující příklad ukazuje `combine` funkci, která bere jako parametr `std::string` libovolnou `std::string`funkci, která přijímá a vrátí . V závislosti na funkci, `combine` která je předána bude buď předřadit nebo připojit řetězec.
 
 ```cpp
 #include <iostream>
@@ -345,6 +346,6 @@ int main()
 ## <a name="see-also"></a>Viz také
 
 [Inteligentní ukazatele](smart-pointers-modern-cpp.md)
-[operátora dereference: *](indirection-operator-star.md)<br/>
+[Dedirection Operátor: *](indirection-operator-star.md)<br/>
 [Operátor address-of: &](address-of-operator-amp.md)</br>
-[Vítejte zpět naC++](welcome-back-to-cpp-modern-cpp.md)
+[Vítejte zpět v C++](welcome-back-to-cpp-modern-cpp.md)

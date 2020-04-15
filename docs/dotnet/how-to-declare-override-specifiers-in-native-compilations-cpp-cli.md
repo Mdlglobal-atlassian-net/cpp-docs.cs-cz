@@ -1,30 +1,30 @@
 ---
-title: 'Postupy: Deklarace specifikátorů Override (C++vyhodnocovací)'
+title: 'Postup: Deklarovat deklarátory přepsání (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387419"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374454"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Postupy: Deklarace specifikátorů Override v nativních kompilacích (C++vyhodnocovací)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Postupy: Deklarace specifikátorů override v nativní kompilaci (C++/CLI)
 
-[zapečetěné](../extensions/sealed-cpp-component-extensions.md), [abstraktní](../extensions/abstract-cpp-component-extensions.md), a [přepsat](../extensions/override-cpp-component-extensions.md) jsou k dispozici v kompilaci, které nepoužívají **/ZW** nebo [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[zapečetěné](../extensions/sealed-cpp-component-extensions.md), [abstraktní](../extensions/abstract-cpp-component-extensions.md)a [přepsat](../extensions/override-cpp-component-extensions.md) jsou k dispozici v kompilacích, které nepoužívají **/ZW** nebo [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
->  C ++ 11 jazyka podle standardu ISO má [přepsat](../cpp/override-specifier.md) identifikátor a [konečné](../cpp/final-specifier.md) identifikátor a obě jsou podporovány v aplikaci Visual Studio pomocí `final` místo `sealed` v kódu, který slouží k zkompilovat jako nativní.
+> Standardní jazyk ISO C++11 má identifikátor [přepsání](../cpp/override-specifier.md) a [konečný](../cpp/final-specifier.md) identifikátor a `final` oba `sealed` jsou podporovány v sadě Visual Studio Použití namísto v kódu, který je určen k kompilaci jako nativní pouze.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje, že `sealed` je platný v nativních kompilacích.
+Následující příklad ukazuje, že `sealed` je platný v nativní kompilace.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // sealed_native_keyword.cpp
@@ -51,9 +51,9 @@ public:
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje, že `override` je platný v nativních kompilacích.
+Následující příklad ukazuje, že `override` je platný v nativní kompilace.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // override_native_keyword.cpp
@@ -73,9 +73,9 @@ public:
 
 ### <a name="description"></a>Popis
 
-Tento příklad ukazuje, že `abstract` je platný v nativních kompilacích.
+Tento příklad `abstract` ukazuje, že je platný v nativní kompilace.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // abstract_native_keyword.cpp
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [override – specifikátory](../extensions/override-specifiers-cpp-component-extensions.md)

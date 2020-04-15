@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376544"
 ---
-# <a name="syncperthread-class"></a>sync_per_thread – třída
+# <a name="sync_per_thread-class"></a>sync_per_thread – třída
 
-Popisuje [filtr synchronizace](../standard-library/allocators-header.md) , který poskytuje samostatný objekt mezipaměti pro každé vlákno.
+Popisuje [filtr synchronizace,](../standard-library/allocators-header.md) který poskytuje samostatný objekt mezipaměti pro každé vlákno.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,27 +34,27 @@ class sync_per_thread
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Mezipaměť*|Typ mezipaměti přidružený k synchronizačnímu filtru. To může být [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)nebo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Mezipaměť*|Typ mezipaměti přidružené k filtru synchronizace. To může být [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)nebo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Alokátory, které `sync_per_thread` používají, můžou porovnat stejně, i když bloky přidělené v jednom vlákně nejde uvolnit z jiného vlákna. Při použití jednoho z těchto bloků paměti přidělování, které jsou přiděleny v jednom vláknu, by neměly být viditelné pro ostatní vlákna. V praxi to znamená, že kontejner, který používá jedno z těchto přidělování, by měl být k dispozici pouze v jednom vlákně.
+Alokátory, které `sync_per_thread` používají můžete porovnat stejné i v případě, že bloky přidělené v jednom vlákně nelze deallocated z jiného vlákna. Při použití jednoho z těchto alokátorů paměti bloky přidělené v jednom vlákně by neměly být viditelné pro jiné podprocesy. V praxi to znamená, že kontejner, který používá jeden z těchto alokátorů by měl y přistupovat pouze jedním podprocesem.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přidělí blok paměti.|
-|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
+|[Navrátit](#deallocate)|Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.|
 |[equals](#equals)|Porovná dvě mezipaměti pro rovnost.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> přidělování
+**Záhlaví:** \<alokátory>
 
 **Obor názvů:** stdext
 
-## <a name="allocate"></a>sync_per_thread:: allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::přidělit
 
 Přidělí blok paměti.
 
@@ -66,15 +66,15 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí výsledek volání do `cache::allocate(count)` objektu Cache patřícího k aktuálnímu vláknu. Pokud není k dispozici žádný objekt mezipaměti pro aktuální vlákno, bude nejprve přiděleno.
+Členská funkce vrátí výsledek volání `cache::allocate(count)` na objekt mezipaměti, který patří k aktuálnímu vláknu. Pokud pro aktuální vlákno nebyl přidělen žádný objekt mezipaměti, nejprve jej přidělí.
 
-## <a name="deallocate"></a>sync_per_thread::d eallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::deallocate
 
-Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
+Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
-|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
+|*Ptr*|Ukazatel na první objekt, který má být deallocated z úložiště.|
+|*Počet*|Počet objektů, které mají být deallocated z úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá `deallocate` objekt mezipaměti patřící k aktuálnímu vláknu. Pokud není k dispozici žádný objekt mezipaměti pro aktuální vlákno, bude nejprve přiděleno.
+Členská funkce `deallocate` volá objekt mezipaměti patřící do aktuálního vlákna. Pokud pro aktuální vlákno nebyl přidělen žádný objekt mezipaměti, nejprve jej přidělí.
 
-## <a name="equals"></a>sync_per_thread:: Equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::rovná se
 
 Porovná dvě mezipaměti pro rovnost.
 
@@ -104,14 +104,14 @@ bool equals(const sync<Cache>& Other) const;
 |Parametr|Popis|
 |---------------|-----------------|
 |*Mezipaměť*|Objekt mezipaměti filtru synchronizace.|
-|*Jiné*|Objekt mezipaměti, který se má porovnat s rovností.|
+|*Další*|Objekt mezipaměti porovnat rovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**false** , pokud není pro tento objekt přidělen žádný objekt mezipaměti nebo pro *jiný* v aktuálním vlákně. V opačném případě vrátí výsledek použití `operator==` na dva objekty mezipaměti.
+**false,** pokud žádný objekt mezipaměti byla přidělena pro tento objekt nebo pro *jiné* v aktuálním vlákně. V opačném případě vrátí `operator==` výsledek použití na dva objekty mezipaměti.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alokátory>](../standard-library/allocators-header.md)

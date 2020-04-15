@@ -1,5 +1,5 @@
 ---
-title: CEditView – třída
+title: Třída CEditView
 ms.date: 11/04/2016
 f1_keywords:
 - CEditView
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e9b7dea980e607c776e2d50c679042c765080fdb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373969"
 ---
-# <a name="ceditview-class"></a>CEditView – třída
+# <a name="ceditview-class"></a>Třída CEditView
 
-Typ třídy zobrazení, která poskytuje funkce ovládacího prvku Windows Edit a lze jej použít k implementaci jednoduchých funkcí editoru textu.
+Typ třídy zobrazení, která poskytuje funkce ovládacího prvku pro úpravy systému Windows a lze ji použít k implementaci jednoduchých funkcí textového editoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,40 +61,40 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEditView:: CEditView](#ceditview)|Vytvoří objekt typu `CEditView`.|
+|[CEditView::CEditView](#ceditview)|Vytvoří objekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEditView:: hledán FindText](#findtext)|Vyhledá řetězec v rámci textu.|
-|[CEditView:: GetBufferLength](#getbufferlength)|Získá délku vyrovnávací paměti znaků.|
-|[CEditView:: GetEditCtrl](#geteditctrl)|Poskytuje přístup k `CEdit` část objektu `CEditView` (ovládací prvek Windows Edit).|
-|[CEditView:: GetPrinterFont](#getprinterfont)|Načte aktuální písmo tiskárny.|
-|[CEditView:: GetSelectedText](#getselectedtext)|Načte aktuální výběr textu.|
-|[CEditView:: LockBuffer](#lockbuffer)|Zamkne vyrovnávací paměť.|
-|[CEditView::P rintInsideRect](#printinsiderect)|Vykreslí text uvnitř daného obdélníku.|
-|[CEditView:: SerializeRaw](#serializeraw)|Serializace objektu `CEditView` na disk jako nezpracovaný text.|
-|[CEditView:: SetPrinterFont](#setprinterfont)|Nastaví nové písmo tiskárny.|
-|[CEditView:: SetTabStops](#settabstops)|Nastaví zarážky tabulátoru pro zobrazení a tisk obrazovky.|
-|[CEditView:: UnlockBuffer](#unlockbuffer)|Odemkne vyrovnávací paměť.|
+|[CEditView::FindText](#findtext)|Vyhledá řetězec v textu.|
+|[CEditView::GetBufferLength](#getbufferlength)|Získá délku vyrovnávací paměti znaků.|
+|[CEditView::GetEditCtrl](#geteditctrl)|Poskytuje přístup `CEdit` k části `CEditView` objektu (ovládací prvek pro úpravy systému Windows).|
+|[CEditView::GetPrinterFont](#getprinterfont)|Načte aktuální písmo tiskárny.|
+|[CEditView::GetSelectedText](#getselectedtext)|Načte aktuální výběr textu.|
+|[CEditView::LockBuffer](#lockbuffer)|Zamkne vyrovnávací paměť.|
+|[CEditView::PrintInsideRect](#printinsiderect)|Vykreslí text uvnitř daného obdélníku.|
+|[CEditView::SerializeRaw](#serializeraw)|Serializuje `CEditView` objekt na disk jako nezpracovaný text.|
+|[CEditView::SetPrinterFont](#setprinterfont)|Nastaví nové písmo tiskárny.|
+|[CEditView::SetTabstops](#settabstops)|Nastaví zarážky tabulátorů jak pro zobrazení na obrazovce, tak pro tisk.|
+|[CEditView::Odemknoutvyrovnávací paměť](#unlockbuffer)|Odemkne vyrovnávací paměť.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEditView:: OnFindNext](#onfindnext)|Najde další výskyt textového řetězce.|
-|[CEditView:: OnReplaceAll](#onreplaceall)|Nahradí všechny výskyty daného řetězce novým řetězcem.|
-|[CEditView:: OnReplaceSel](#onreplacesel)|Nahradí aktuální výběr.|
-|[CEditView:: OnTextNotFound](#ontextnotfound)|Volá se, když operace Find nevyhovuje žádnému dalšímu textu.|
+|[CeditView::OnFindNext](#onfindnext)|Vyhledá další výskyt textového řetězce.|
+|[CeditView::OnReplaceAll](#onreplaceall)|Nahradí všechny výskyty daného řetězce novým řetězcem.|
+|[CEditView::OnReplaceSel](#onreplacesel)|Nahradí aktuální výběr.|
+|[CeditView::OnTextNotFound](#ontextnotfound)|Volána, když operace hledání se nezdaří odpovídat žádné další text.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEditView::d wStyleDefault](#dwstyledefault)|Výchozí styl pro objekty typu `CEditView`.|
+|[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro `CEditView`objekty typu .|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -102,41 +102,41 @@ Třída `CEditView` poskytuje následující další funkce:
 
 - Tisk.
 
-- Vyhledejte a nahraďte.
+- Najít a nahradit.
 
-Vzhledem k tomu, že třída `CEditView` je odvozenou třídou `CView`, objekty třídy `CEditView` lze použít s dokumenty a šablonami dokumentů.
+Protože `CEditView` třída je odvozenina třídy `CView`, objekty třídy `CEditView` lze použít s dokumenty a šablony dokumentů.
 
-Každý text ovládacího prvku `CEditView` je uložen ve vlastním globálním objektu paměti. Vaše aplikace může mít libovolný počet `CEditView` objektů.
+Každý `CEditView` ovládací prvek text je uložen ve svém vlastním objektu globální paměti. Aplikace může mít libovolný `CEditView` počet objektů.
 
-Vytvořte objekty typu `CEditView`, pokud chcete upravit okno s přidanými funkcemi, nebo pokud chcete funkce jednoduchého textového editoru. Objekt `CEditView` může zabírat celou klientskou oblast okna. Odvodit vlastní třídy z `CEditView` k přidání nebo změně základních funkcí nebo k deklaraci tříd, které lze přidat do šablony dokumentu.
+Vytvořte objekty typu, `CEditView` pokud chcete upravit okno s přidanou funkcí uvedenou výše, nebo pokud chcete jednoduché funkce textového editoru. Objekt `CEditView` může zabírat celou klientskou oblast okna. Odvodit `CEditView` vlastní třídy z přidat nebo upravit základní funkce nebo deklarovat třídy, které lze přidat do šablony dokumentu.
 
 Výchozí implementace třídy `CEditView` zpracovává následující příkazy: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT a ID_FILE_PRINT.
 
-Výchozí omezení počtu znaků pro `CEditView` je (1024 \* 1024-1 = 1048575). To lze změnit voláním funkce EM_LIMITTEXT podkladového ovládacího prvku pro úpravy. Omezení se však liší v závislosti na operačním systému a typu ovládacího prvku pro úpravy (jedna nebo víceřádková). Další informace o těchto omezeních najdete v tématu [EM_LIMITTEXT](/windows/win32/Controls/em-limittext).
+Výchozí limit znaků `CEditView` je (1024 \* 1024 - 1 = 1048575). To lze změnit voláním EM_LIMITTEXT funkce základního ovládacího prvku úprav. Limity se však liší v závislosti na operačním systému a typu ovládacího prvku úprav (jeden nebo víceřádkový). Další informace o těchto omezeních naleznete [v tématu EM_LIMITTEXT](/windows/win32/Controls/em-limittext).
 
-Chcete-li změnit toto omezení v ovládacím prvku, přepište funkci `OnCreate()` pro třídu `CEditView` a vložte následující řádek kódu:
+Chcete-li změnit tento limit v `OnCreate()` ovládacím `CEditView` prvku, přepište funkci pro vaši třídu a vložte následující řádek kódu:
 
 [!code-cpp[NVC_MFCDocView#65](../../mfc/codesnippet/cpp/ceditview-class_1.cpp)]
 
-Objekty typu `CEditView` (nebo z typů odvozených z `CEditView`) mají následující omezení:
+Objekty `CEditView` typu (nebo typů `CEditView`odvozených z ) mají následující omezení:
 
-- `CEditView` neimplementuje hodnotu true, kterou vidíte, co se vám bude upravovat (WYSIWYG). Kde je volba mezi možnostmi čitelnosti na obrazovce a porovnávacím výstupem tisku, `CEditView` výslovný pro čitelnost obrazovky.
+- `CEditView`neimplementuje pravda, co vidíte, je to, co dostanete (WYSIWYG) editace. Pokud je na obrazovce na výběr mezi čitelností `CEditView` na obrazovce a odpovídajícím tištěným výstupem, zvolí tesek čitelnost obrazovky.
 
-- `CEditView` může zobrazit text pouze v jednom písmu. Není podporováno žádné speciální formátování znaků. Další možnosti najdete v tématu Třída [CRichEditView –](../../mfc/reference/cricheditview-class.md) .
+- `CEditView`může zobrazovat text pouze v jednom písmu. Není podporováno žádné speciální formátování znaků. Viz třída [CRichEditView](../../mfc/reference/cricheditview-class.md) pro větší možnosti.
 
-- Množství textu, které může `CEditView` obsahovat, je omezené. Omezení jsou stejná jako u ovládacího prvku `CEdit`.
+- Množství textu, `CEditView` který může obsahovat, je omezené. Limity jsou stejné jako `CEdit` pro ovládací prvek.
 
-Další informace o `CEditView`naleznete v tématu [odvozené třídy zobrazení dostupné v knihovně MFC](../../mfc/derived-view-classes-available-in-mfc.md).
+Další informace `CEditView`o tématu naleznete [v tématu Odvozené třídy zobrazení dostupné v knihovně MFC](../../mfc/derived-view-classes-available-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CCtrlView](../../mfc/reference/cctrlview-class.md)
 
@@ -144,9 +144,9 @@ Další informace o `CEditView`naleznete v tématu [odvozené třídy zobrazení
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxext. h
+**Záhlaví:** afxext.h
 
-##  <a name="ceditview"></a>CEditView:: CEditView
+## <a name="ceditviewceditview"></a><a name="ceditview"></a>CEditView::CEditView
 
 Vytvoří objekt typu `CEditView`.
 
@@ -156,11 +156,11 @@ CEditView();
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení objektu je nutné zavolat funkci [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) před použitím ovládacího prvku pro úpravy. Pokud třídu odvozujete od `CEditView` a přidáte ji do šablony pomocí `CWinApp::AddDocTemplate`, rozhraní zavolá jak tento konstruktor, tak funkci `Create`.
+Po vytvoření objektu musíte volat funkci [CWnd::Create](../../mfc/reference/cwnd-class.md#create) před použitím ovládacího prvku pro úpravy. Pokud odvodit `CEditView` třídu z a `CWinApp::AddDocTemplate`přidat ji do šablony pomocí `Create` , rozhraní framework volá tento konstruktor a funkce.
 
-##  <a name="dwstyledefault"></a>CEditView::d wStyleDefault
+## <a name="ceditviewdwstyledefault"></a><a name="dwstyledefault"></a>CEditView::dwStyleDefault
 
-Obsahuje výchozí styl objektu `CEditView`.
+Obsahuje výchozí styl `CEditView` objektu.
 
 ```
 static const DWORD dwStyleDefault;
@@ -168,11 +168,11 @@ static const DWORD dwStyleDefault;
 
 ### <a name="remarks"></a>Poznámky
 
-Předejte tomuto statickému členu parametr *dwStyle* funkce `Create`, aby se získal výchozí styl pro objekt `CEditView`.
+Předajte tento statický člen jako parametr *dwStyle* `Create` funkce, abyste získali `CEditView` výchozí styl pro objekt.
 
-##  <a name="findtext"></a>CEditView:: hledán FindText
+## <a name="ceditviewfindtext"></a><a name="findtext"></a>CEditView::FindText
 
-Voláním funkce `FindText` vyhledejte v textovém vyrovnávací paměti objektu `CEditView`.
+Volání `FindText` funkce prohledávat vyrovnávací paměti `CEditView` textu objektu.
 
 ```
 BOOL FindText(
@@ -183,28 +183,28 @@ BOOL FindText(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Text, který se má najít
+*lpszNajít*<br/>
+Text, který má být nalezen.
 
-*bNext*<br/>
-Určuje směr hledání. Při hodnotě TRUE je směr hledání na konci vyrovnávací paměti. Pokud je hodnota FALSE, směr hledání je na začátku vyrovnávací paměti.
+*bDalší*<br/>
+Určuje směr hledání. Pokud TRUE, směr hledání je směrem ke konci vyrovnávací paměti. Pokud false, směr hledání je směrem k začátku vyrovnávací paměti.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena. Pokud je nastaveno na TRUE, hledání rozlišuje malá a velká písmena. Pokud je nastaveno na FALSE, hledání nerozlišuje velká a malá písmena.
+Určuje, zda hledání rozlišuje malá a velká písmena. Pokud true, hledání je rozlišování velkých a malých písmen. Pokud false, hledání není malá a velká písmena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud je nalezen hledaný text; v opačném případě 0.
+Nenulová, pokud je nalezen hledaný text; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vyhledá text ve vyrovnávací paměti pro text určený parametrem *lpszFind*počínaje aktuálním výběrem ve směru určeném parametrem *bNext*a rozlišuje velká a malá písmena zadaná v *bCase*. Pokud je text nalezen, nastaví výběr na nalezený text a vrátí nenulovou hodnotu. Pokud text není nalezen, funkce vrátí 0.
+Tato funkce prohledá text ve vyrovnávací paměti pro text určený *lpszFind*, počínaje aktuálním výběrem, ve směru určeném *bNext*a s rozlišením velkých a malých písmen určených *bCase*. Pokud je text nalezen, nastaví výběr na nalezený text a vrátí nenulovou hodnotu. Pokud text nebyl nalezen, funkce vrátí 0.
 
-Obvykle není nutné volat funkci `FindText`, Pokud nepřepíšete `OnFindNext`, která volá `FindText`.
+Obvykle není nutné volat `FindText` funkci, pokud `OnFindNext`přepsat , `FindText`který volá .
 
-##  <a name="getbufferlength"></a>CEditView:: GetBufferLength
+## <a name="ceditviewgetbufferlength"></a><a name="getbufferlength"></a>CEditView::GetBufferLength
 
-Zavolejte tuto členskou funkci, aby se získal počet znaků, které jsou aktuálně ve vyrovnávací paměti ovládacího prvku pro úpravy, včetně ukončovacího znaku null.
+Volání této členské funkce získat počet znaků aktuálně ve vyrovnávací paměti ovládacího prvku úpravy, bez zahrnutí zakončení null.
 
 ```
 UINT GetBufferLength() const;
@@ -214,9 +214,9 @@ UINT GetBufferLength() const;
 
 Délka řetězce ve vyrovnávací paměti.
 
-##  <a name="geteditctrl"></a>CEditView:: GetEditCtrl
+## <a name="ceditviewgeteditctrl"></a><a name="geteditctrl"></a>CEditView::GetEditCtrl
 
-Voláním `GetEditCtrl` získáte odkaz na ovládací prvek pro úpravy, který používá zobrazení pro úpravy.
+Volání `GetEditCtrl` pro získání odkazu na ovládací prvek úprav používaný v zobrazení úprav.
 
 ```
 CEdit& GetEditCtrl() const;
@@ -224,22 +224,22 @@ CEdit& GetEditCtrl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt `CEdit`.
+Odkaz na `CEdit` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento ovládací prvek je typu [CEdit](../../mfc/reference/cedit-class.md), takže můžete manipulovat s ovládacím prvkem Windows Edit přímo pomocí `CEdit` členských funkcí.
+Tento ovládací prvek je typu [CEdit](../../mfc/reference/cedit-class.md), takže můžete manipulovat `CEdit` s ovládacím prvkem pro úpravy systému Windows přímo pomocí členských funkcí.
 
 > [!CAUTION]
->  Použití objektu `CEdit` může změnit stav podkladového ovládacího prvku Windows Edit. Například byste neměli měnit nastavení tabulátoru pomocí funkce [CEdit:: SetTabStops](../../mfc/reference/cedit-class.md#settabstops) , protože `CEditView` ukládá do mezipaměti tato nastavení pro použití v ovládacím prvku pro úpravy i v tisku. Místo toho použijte [CEditView:: SetTabStops](#settabstops).
+> Použití `CEdit` objektu může změnit stav podkladového ovládacího prvku pro úpravy systému Windows. Například byste neměli měnit nastavení tabulátoru pomocí funkce `CEditView` [CEdit::SetTabStops,](../../mfc/reference/cedit-class.md#settabstops) protože tato nastavení ukládá do mezipaměti pro použití v ovládacím prvku pro úpravy i při tisku. Místo toho použijte [CEditView::SetTabStops](#settabstops).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]
 
-##  <a name="getprinterfont"></a>CEditView:: GetPrinterFont
+## <a name="ceditviewgetprinterfont"></a><a name="getprinterfont"></a>CEditView::GetPrinterFont
 
-Voláním `GetPrinterFont` získáte ukazatel na objekt [CFont –](../../mfc/reference/cfont-class.md) , který popisuje aktuální písmo tiskárny.
+Volání `GetPrinterFont` získat ukazatel na [cfont](../../mfc/reference/cfont-class.md) objekt, který popisuje aktuální písmo tiskárny.
 
 ```
 CFont* GetPrinterFont() const;
@@ -247,17 +247,17 @@ CFont* GetPrinterFont() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CFont`, který určuje aktuální písmo tiskárny; Hodnota NULL, pokud písmo tiskárny nebylo nastaveno. Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
+Ukazatel na `CFont` objekt, který určuje aktuální písmo tiskárny; Null, pokud písmo tiskárny nebyla nastavena. Ukazatel může být dočasné a by neměly být uloženy pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud písmo tiskárny nebylo nastaveno, je výchozím chováním `CEditView` třídy tisk pomocí stejného písma použitého k zobrazení.
+Pokud písmo tiskárny nebylo nastaveno, je `CEditView` výchozím chováním tisku třídy tisk pomocí stejného písma, které bylo použito pro zobrazení.
 
-Pomocí této funkce lze určit aktuální písmo tiskárny. Pokud se nejedná o požadované písmo tiskárny, změňte jej pomocí [CEditView:: SetPrinterFont](#setprinterfont) .
+Tato funkce slouží k určení aktuálního písma tiskárny. Pokud není požadované písmo tiskárny, změňte jej pomocí [ceditview::SetPrinterFont.](#setprinterfont)
 
-##  <a name="getselectedtext"></a>CEditView:: GetSelectedText
+## <a name="ceditviewgetselectedtext"></a><a name="getselectedtext"></a>CEditView::GetSelectedText
 
-Volání `GetSelectedText` pro zkopírování vybraného textu do objektu `CString`, až po konec výběru nebo znak předchozí znak pro návrat na začátek řádku ve výběru.
+Volání `GetSelectedText` zkopírovat vybraný text `CString` do objektu, až do konce výběru nebo znak předcházející první znak carriage-return ve výběru.
 
 ```
 void GetSelectedText(CString& strResult) const;
@@ -265,12 +265,12 @@ void GetSelectedText(CString& strResult) const;
 
 ### <a name="parameters"></a>Parametry
 
-*strResult*<br/>
-Odkaz na objekt `CString`, který má přijmout vybraný text.
+*strVýsledek*<br/>
+Odkaz na `CString` objekt, který má přijmout vybraný text.
 
-##  <a name="lockbuffer"></a>CEditView:: LockBuffer
+## <a name="ceditviewlockbuffer"></a><a name="lockbuffer"></a>CEditView::LockBuffer
 
-Chcete-li získat ukazatel na vyrovnávací paměť, zavolejte tuto členskou funkci. Vyrovnávací paměť by se neměla upravovat.
+Volání této členské funkce získat ukazatel vyrovnávací paměti. Vyrovnávací paměť by neměla být změněna.
 
 ```
 LPCTSTR LockBuffer() const;
@@ -280,9 +280,9 @@ LPCTSTR LockBuffer() const;
 
 Ukazatel na vyrovnávací paměť ovládacího prvku pro úpravy.
 
-##  <a name="onfindnext"></a>CEditView:: OnFindNext
+## <a name="ceditviewonfindnext"></a><a name="onfindnext"></a>CeditView::OnFindNext
 
-Vyhledá v textu ve vyrovnávací paměti text určený parametrem *lpszFind*ve směru určeném parametrem *bNext*a rozlišuje velká a malá písmena určená v *bCase*.
+Prohledá text ve vyrovnávací paměti pro text určený *lpszFind*, ve směru určeném *bNext*, s rozlišování velkých a malých písmen určených *bCase*.
 
 ```
 virtual void OnFindNext(
@@ -293,24 +293,24 @@ virtual void OnFindNext(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Text, který se má najít
+*lpszNajít*<br/>
+Text, který má být nalezen.
 
-*bNext*<br/>
-Určuje směr hledání. Při hodnotě TRUE je směr hledání na konci vyrovnávací paměti. Pokud je hodnota FALSE, směr hledání je na začátku vyrovnávací paměti.
+*bDalší*<br/>
+Určuje směr hledání. Pokud TRUE, směr hledání je směrem ke konci vyrovnávací paměti. Pokud false, směr hledání je směrem k začátku vyrovnávací paměti.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena. Pokud je nastaveno na TRUE, hledání rozlišuje malá a velká písmena. Pokud je nastaveno na FALSE, hledání nerozlišuje velká a malá písmena.
+Určuje, zda hledání rozlišuje malá a velká písmena. Pokud true, hledání je rozlišování velkých a malých písmen. Pokud false, hledání není malá a velká písmena.
 
 ### <a name="remarks"></a>Poznámky
 
-Hledání začíná na začátku aktuálního výběru a je provedeno prostřednictvím volání [hledán FindText](#findtext). Ve výchozí implementaci `OnFindNext` volá [OnTextNotFound](#ontextnotfound) , pokud text nebyl nalezen.
+Hledání začíná na začátku aktuálního výběru a je provedeno prostřednictvím volání [FindText](#findtext). Ve výchozí implementaci `OnFindNext` volá [OnTextNotFound,](#ontextnotfound) pokud text nebyl nalezen.
 
-Přepsat `OnFindNext` pro změnu způsobu, jakým objekt odvozený `CEditView`vyhledává text. `CEditView` volá `OnFindNext`, když uživatel zvolí tlačítko Najít další v dialogovém okně standardní hledání.
+Přepsáním `OnFindNext` změníte `CEditView`způsob, jakým odvozený objekt prohledává text. `CEditView`hovory, `OnFindNext` když uživatel ve standardním dialogovém okně Najít zvolí tlačítko Najít další.
 
-##  <a name="onreplaceall"></a>CEditView:: OnReplaceAll
+## <a name="ceditviewonreplaceall"></a><a name="onreplaceall"></a>CeditView::OnReplaceAll
 
-`CEditView` volá `OnReplaceAll`, když uživatel vybere tlačítko Nahradit vše v dialogovém okně standardní nahrazení.
+`CEditView`volání, `OnReplaceAll` když uživatel vybere tlačítko Nahradit vše ve standardním dialogovém okně Nahradit.
 
 ```
 virtual void OnReplaceAll(
@@ -321,26 +321,26 @@ virtual void OnReplaceAll(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Text, který se má najít
+*lpszNajít*<br/>
+Text, který má být nalezen.
 
-*lpszReplace*<br/>
-Text, který má nahradit hledaný text
+*lpszNahradit*<br/>
+Text, který má nahradit hledaný text.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena. Pokud je nastaveno na TRUE, hledání rozlišuje malá a velká písmena. Pokud je nastaveno na FALSE, hledání nerozlišuje velká a malá písmena.
+Určuje, zda hledání rozlišuje malá a velká písmena. Pokud true, hledání je rozlišování velkých a malých písmen. Pokud false, hledání není malá a velká písmena.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnReplaceAll` hledá text ve vyrovnávací paměti pro text určený parametrem *lpszFind*a rozlišuje velká a malá písmena zadaná v *bCase*. Hledání začne na začátku aktuálního výběru. Pokaždé, když se hledaný text najde, tato funkce nahradí tento výskyt textu textem zadaným parametrem *lpszReplace*. Hledání je provedeno prostřednictvím volání [hledán FindText](#findtext). Ve výchozí implementaci je volána metoda [OnTextNotFound](#ontextnotfound) , pokud text nebyl nalezen.
+`OnReplaceAll`prohledá text ve vyrovnávací paměti pro text určený *lpszFind*, s rozlišování velkých a malých písmen zadaných *bCase*. Hledání začíná na začátku aktuálního výběru. Při každém nalezení hledaného textu nahradí tato funkce výskyt textu textem určeným *lpszReplace*. Hledání se provádí prostřednictvím volání [FindText](#findtext). Ve výchozí implementaci [OnTextNotFound](#ontextnotfound) se nazývá, pokud text nebyl nalezen.
 
-Pokud aktuální výběr neodpovídá *lpszFind*, je výběr aktualizován na první výskyt textu zadaného parametrem *lpszFind* a není provedena náhrada. To uživateli umožňuje potvrdit, že se jedná o to, co chtějí udělat, když výběr neodpovídá textu, který má být nahrazen.
+Pokud aktuální výběr neodpovídá *lpszFind*, výběr je aktualizován na první výskyt textu určeného *lpszFind* a nahrazení není provedeno. To umožňuje uživateli potvrdit, že je to, co chtějí dělat, když výběr neodpovídá textu, který má být nahrazen.
 
-Přepsat `OnReplaceAll` pro změnu způsobu, jakým objekt odvozený od `CEditView`nahradí text.
+Přepsáním `OnReplaceAll` změníte `CEditView`způsob, jakým odvozený objekt nahradí text.
 
-##  <a name="onreplacesel"></a>CEditView:: OnReplaceSel
+## <a name="ceditviewonreplacesel"></a><a name="onreplacesel"></a>CEditView::OnReplaceSel
 
-`CEditView` volá `OnReplaceSel`, když uživatel vybere tlačítko Nahradit v dialogovém okně standardní nahrazení.
+`CEditView`volání, `OnReplaceSel` když uživatel vybere tlačítko Nahradit ve standardním dialogovém okně Nahradit.
 
 ```
 virtual void OnReplaceSel(
@@ -352,27 +352,27 @@ virtual void OnReplaceSel(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Text, který se má najít
+*lpszNajít*<br/>
+Text, který má být nalezen.
 
-*bNext*<br/>
-Určuje směr hledání. Při hodnotě TRUE je směr hledání na konci vyrovnávací paměti. Pokud je hodnota FALSE, směr hledání je na začátku vyrovnávací paměti.
+*bDalší*<br/>
+Určuje směr hledání. Pokud TRUE, směr hledání je směrem ke konci vyrovnávací paměti. Pokud false, směr hledání je směrem k začátku vyrovnávací paměti.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena. Pokud je nastaveno na TRUE, hledání rozlišuje malá a velká písmena. Pokud je nastaveno na FALSE, hledání nerozlišuje velká a malá písmena.
+Určuje, zda hledání rozlišuje malá a velká písmena. Pokud true, hledání je rozlišování velkých a malých písmen. Pokud false, hledání není malá a velká písmena.
 
-*lpszReplace*<br/>
-Text, který má nahradit nalezený text
+*lpszNahradit*<br/>
+Text, který má nahradit nalezený text.
 
 ### <a name="remarks"></a>Poznámky
 
-Po nahrazení výběru Tato funkce vyhledá v textu ve vyrovnávací paměti další výskyt textu určeného funkcí *lpszFind*ve směru určeném parametrem *bNext*a rozlišuje velká a malá písmena zadaná v *bCase*. Hledání je provedeno prostřednictvím volání [hledán FindText](#findtext). Pokud text není nalezen, je volána metoda [OnTextNotFound](#ontextnotfound) .
+Po nahrazení výběru tato funkce prohledá text ve vyrovnávací paměti pro další výskyt textu určeného *lpszFind*ve směru určeném *písmenem bNext*, s rozlišením velkých a malých písmen určených *písmenem bCase*. Hledání se provádí prostřednictvím volání [FindText](#findtext). Pokud text nebyl nalezen, [OnTextNotFound](#ontextnotfound) se nazývá.
 
-Přepsat `OnReplaceSel` pro změnu způsobu, jakým objekt odvozený `CEditView`nahradí vybraný text.
+Přepsáním `OnReplaceSel` změníte `CEditView`způsob, jakým odvozený objekt nahradí vybraný text.
 
-##  <a name="ontextnotfound"></a>CEditView:: OnTextNotFound
+## <a name="ceditviewontextnotfound"></a><a name="ontextnotfound"></a>CeditView::OnTextNotFound
 
-Přepsáním této funkce změníte výchozí implementaci, která volá `MessageBeep`funkce systému Windows.
+Přepsáním této funkce změníte výchozí implementaci, která volá funkci `MessageBeep`systému Windows .
 
 ```
 virtual void OnTextNotFound(LPCTSTR lpszFind);
@@ -380,12 +380,12 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Text, který se má najít
+*lpszNajít*<br/>
+Text, který má být nalezen.
 
-##  <a name="printinsiderect"></a>CEditView::P rintInsideRect
+## <a name="ceditviewprintinsiderect"></a><a name="printinsiderect"></a>CEditView::PrintInsideRect
 
-Zavolejte `PrintInsideRect` k vytištění textu v obdélníku určeném parametrem *rectLayout*.
+Volání `PrintInsideRect` pro tisk textu v obdélníku *určeném rectLayout*.
 
 ```
 UINT PrintInsideRect(
@@ -397,31 +397,31 @@ UINT PrintInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na kontext zařízení tiskárny.
 
 *rectLayout*<br/>
-Odkaz na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) určující obdélník, ve kterém má být vykreslen text.
+Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT struktury](/windows/win32/api/windef/ns-windef-rect) určující obdélník, ve kterém má být vykreslen text.
 
 *nIndexStart*<br/>
-Index v rámci vyrovnávací paměti prvního znaku, který má být vykreslen.
+Index ve vyrovnávací paměti první znak, který má být vykreslen.
 
 *nIndexStop*<br/>
-Index v rámci vyrovnávací paměti znaku za posledním znakem, který se má vykreslit
+Index ve vyrovnávací paměti znaku následující poslední znak, který má být vykreslen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index dalšího znaku, který má být vytištěn (tj. znak za posledním vykresleným znakem).
+Index dalšího znaku, který má být vytištěn (to znamená znak za posledním vykresleným znakem).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud ovládací prvek `CEditView` nemá ES_AUTOHSCROLL stylu, text je zabalen do obdélníku vykreslování. Pokud ovládací prvek má ES_AUTOHSCROLL stylu, text se ořízne na pravém okraji obdélníku.
+Pokud `CEditView` ovládací prvek nemá styl ES_AUTOHSCROLL, text je zabalen v obdélníku vykreslování. Pokud ovládací prvek má styl ES_AUTOHSCROLL, text je oříznut na pravém okraji obdélníku.
 
-Prvek `rect.bottom` objektu *rectLayout* je změněn tak, aby rozměry obdélníku definovaly část původního obdélníku, který je obsazen textem.
+Prvek `rect.bottom` *rectLayout* objektu se změní tak, aby rozměry obdélníku definovat část původní obdélník, který je obsazený text.
 
-##  <a name="serializeraw"></a>CEditView:: SerializeRaw
+## <a name="ceditviewserializeraw"></a><a name="serializeraw"></a>CEditView::SerializeRaw
 
-Zavolejte `SerializeRaw`, aby objekt `CArchive` četl nebo napsal text v objektu `CEditView` do textového souboru.
+Volání `SerializeRaw` objektu `CArchive` číst nebo zapsat `CEditView` text v objektu do textového souboru.
 
 ```
 void SerializeRaw(CArchive& ar);
@@ -429,16 +429,16 @@ void SerializeRaw(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*snížen*<br/>
-Odkaz na objekt `CArchive`, který ukládá serializovaný text.
+*ar*<br/>
+Odkaz na `CArchive` objekt, který ukládá serializovaný text.
 
 ### <a name="remarks"></a>Poznámky
 
-`SerializeRaw` se liší od vnitřní implementace `Serialize` `CEditView`v tom, že čte a zapisuje pouze text, aniž by došlo k předchozím datům objektu-Description.
+`SerializeRaw`se liší `CEditView`od interní `Serialize` implementace programu v tom, že čte a zapisuje pouze text bez předchozích dat popisu objektu.
 
-##  <a name="setprinterfont"></a>CEditView:: SetPrinterFont
+## <a name="ceditviewsetprinterfont"></a><a name="setprinterfont"></a>CEditView::SetPrinterFont
 
-Zavolejte `SetPrinterFont` pro nastavení písma tiskárny na písmo určené parametrem *pFont*.
+Voláním `SetPrinterFont` nastavte písmo tiskárny na písmo určené *příkazem pFont*.
 
 ```
 void SetPrinterFont(CFont* pFont);
@@ -446,16 +446,16 @@ void SetPrinterFont(CFont* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
-Ukazatel na objekt typu `CFont`. Pokud má hodnotu NULL, písmo použité pro tisk vychází z písma zobrazení.
+*písmo*<br/>
+Ukazatel na objekt typu `CFont`. Pokud null, písmo použité pro tisk je založena na písmu zobrazení.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li, aby zobrazení vždy používalo konkrétní písmo pro tisk, zahrňte volání `SetPrinterFont` do funkce `OnPreparePrinting` vaší třídy. Tato virtuální funkce se volá před tím, než dojde k tisku, takže Změna písma proběhne před vytištěním obsahu zobrazení.
+Pokud chcete, aby zobrazení vždy používalo určité písmo `SetPrinterFont` pro tisk, `OnPreparePrinting` zahrňte volání do funkce třídy. Tato virtuální funkce je volána před tiskem, takže změna písma probíhá před tiskem obsahu zobrazení.
 
-##  <a name="settabstops"></a>CEditView:: SetTabStops
+## <a name="ceditviewsettabstops"></a><a name="settabstops"></a>CEditView::SetTabstops
 
-Voláním této funkce nastavíte zarážky tabulátoru používané pro zobrazení a tisk.
+Voláním této funkce nastavte zarážky tabulátoru používané pro zobrazení a tisk.
 
 ```
 void SetTabStops(int nTabStops);
@@ -464,23 +464,23 @@ void SetTabStops(int nTabStops);
 ### <a name="parameters"></a>Parametry
 
 *nTabStops*<br/>
-Šířka jednotlivých zarážek tabulátoru v jednotkách dialogového okna.
+Šířka každé zarážky tabulátoru v dialogových jednotkách.
 
 ### <a name="remarks"></a>Poznámky
 
-Je podporována pouze jedna šířka zarážky tabulátoru. (`CEdit` objekty podporují více šířek karet.) Šířky jsou v jednotkách dialogových oken, které se rovnají jedné čtvrtine průměrné šířky znaků (na základě velkých a malých písmen abeced) písma použitého v době tisku nebo zobrazení. Nepoužívejte `CEdit::SetTabStops`, protože `CEditView` musí ukládat do mezipaměti hodnotu zastavení tabulátoru.
+Je podporována pouze jedna šířka zarážky tabulátoru. (objekty `CEdit` podporují více šířek tabulátoru.) Šířky jsou v dialogových jednotkách, které se rovnají jedné čtvrtině průměrné šířky znaků (pouze na základě velkých a malých abecedních znaků) písma použitého v době tisku nebo zobrazení. Neměli byste `CEdit::SetTabStops` `CEditView` používat, protože musí ukládat do mezipaměti hodnotu stop tabulátoru.
 
-Tato funkce upraví pouze karty objektu, pro které je volána. Chcete-li změnit zarážky tabulátoru pro každý objekt `CEditView` v aplikaci, zavolejte funkci `SetTabStops` jednotlivých objektů.
+Tato funkce upravuje pouze karty objektu, pro který je volána. Chcete-li změnit zarážky tabulátoru pro `CEditView` `SetTabStops` každý objekt v aplikaci, volání funkce každého objektu.
 
 ### <a name="example"></a>Příklad
 
-Tento fragment kódu nastaví zarážky tabulátoru v ovládacím prvku na každý čtvrtý znak tím, že pečlivě vyměří písmo, které ovládací prvek používá.
+Tento fragment kódu nastaví zarážky tabulátoru v ovládacím prvku na každý čtvrtý znak pečlivým měřením písma, které ovládací prvek používá.
 
 [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]
 
-##  <a name="unlockbuffer"></a>CEditView:: UnlockBuffer
+## <a name="ceditviewunlockbuffer"></a><a name="unlockbuffer"></a>CEditView::Odemknoutvyrovnávací paměť
 
-Chcete-li odemknout vyrovnávací paměť, zavolejte tuto členskou funkci.
+Volání této členské funkce odemknout vyrovnávací paměti.
 
 ```
 void UnlockBuffer() const;
@@ -488,15 +488,15 @@ void UnlockBuffer() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Po dokončení použijte ukazatel vrácený funkcí [LockBuffer](#lockbuffer)a volejte `UnlockBuffer`.
+Volání `UnlockBuffer` po dokončení použití ukazatele vráceného [LockBuffer](#lockbuffer).
 
 ## <a name="see-also"></a>Viz také
 
-[SUPERPAD Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek mfc SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CEdit – třída](../../mfc/reference/cedit-class.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)

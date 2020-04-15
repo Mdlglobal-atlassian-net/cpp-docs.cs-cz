@@ -1,5 +1,5 @@
 ---
-title: Převody uživatelem definovaných typů (C++)
+title: Převody typů definovaných uživatelem (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - explicit_cpp
@@ -22,58 +22,58 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-ms.openlocfilehash: 055b5bd5c82e4f0be449d548de25267eabef47bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e74d5b3a748a9aab22a6a9d83c4d6c4bd3379df4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374678"
 ---
-# <a name="user-defined-type-conversions-c"></a>Převody uživatelem definovaných typů (C++)
+# <a name="user-defined-type-conversions-c"></a>Převody typů definovaných uživatelem (C++)
 
-*Převod* vytváří novou hodnotu určitého typu z hodnoty jiného typu. *Standardní převody* jsou integrovány do C++ jazyka a podporují integrované typy a můžete vytvořit *uživatelsky definované převody* k provádění převodů na, z nebo mezi uživatelsky definovanými typy.
+Převod *conversion* vytvoří novou hodnotu nějakého typu z hodnoty jiného typu. *Standardní převody* jsou integrovány do jazyka C++ a podporují jeho předdefinované typy a můžete vytvořit *uživatelem definované převody* k provádění převodů do, z nebo mezi typy definovanými uživatelem.
 
-Standardní převody provádějí převody mezi vestavěnými typy, mezi ukazateli nebo odkazy na typy související dědičností, na a z ukazatelů void a na ukazatel s hodnotou null. Další informace najdete v tématu [standardní převody](../cpp/standard-conversions.md). Uživatelsky definované převody provádějí převody mezi uživatelsky definovanými typy nebo mezi uživatelsky definovanými typy a vestavěnými typy. Můžete je implementovat jako [konstruktory převodu](#ConvCTOR) nebo jako [funkce pro převod](#ConvFunc).
+Standardní převody provádět převody mezi předdefinované typy, mezi odkazy nebo odkazy na typy související dědičnosti, do a z void ukazatele a na ukazatel null. Další informace naleznete v tématu [Standardní převody](../cpp/standard-conversions.md). Uživatelem definované převody provádějí převody mezi typy definovanými uživatelem nebo mezi typy definovanými uživatelem a předdefinovanými typy. Můžete je implementovat jako [konstruktory převodu](#ConvCTOR) nebo jako [funkce převodu](#ConvFunc).
 
-Převody mohou být buď explicitní – Pokud programátor volá jeden typ, který se má převést na jiný typ, jako v přetypování nebo přímé inicializaci – nebo implicitní – při volání jazyka nebo programu na jiný typ než ten, který je dán programátorem.
+Převody mohou být explicitní – když programátor volá jeden typ, který má být převeden na jiný, jako v přetypování nebo přímé inicializace – nebo implicitní – když jazyk nebo program vyžaduje jiný typ, než je daný programátorem.
 
-Implicitní převody se pokoušejí v těchto případech:
+O implicitní převody se pokusíte v:Implicitní conversions are attemptd when:
 
-- Argument dodaný funkci nemá stejný typ jako shodný parametr.
+- Argument zadaný funkci nemá stejný typ jako odpovídající parametr.
 
-- Hodnota vrácená funkcí není stejného typu jako návratový typ funkce.
+- Hodnota vrácená z funkce nemá stejný typ jako návratový typ funkce.
 
-- Inicializátorový výraz nemá stejný typ jako objekt, který inicializuje.
+- Výraz inicializátoru nemá stejný typ jako objekt, který inicializuje.
 
-- Výraz, který ovládá podmíněný příkaz, konstruktor smyčky nebo přepínač, nemá typ výsledku, který je požadován pro jeho řízení.
+- Výraz, který řídí podmíněný příkaz, opakování konstrukce nebo přepínač nemá typ výsledku, který je nutný k jeho řízení.
 
-- Operand dodaný operátorovi nemá stejný typ jako shodný parametr operandu. Pro předdefinované operátory musí mít oba operandy stejný typ a jsou převedeny na společný typ, který může představovat obojí. Další informace najdete v tématu [standardní převody](standard-conversions.md). Pro operátory definované uživatelem musí mít každý operand stejný typ jako shodný parametr operandu.
+- Operand dodaný operátoru nemá stejný typ jako odpovídající operand-parametr. Pro předdefinované operátory musí mít oba operandy stejný typ a jsou převedeny na běžný typ, který může představovat obojí. Další informace naleznete v tématu [Standardní převody](standard-conversions.md). Pro uživatelem definované operátory musí mít každý operand stejný typ jako odpovídající parametr operand.
 
-Pokud jeden standardní převod nemůže dokončit implicitní převod, kompilátor může použít uživatelem definovaný převod, za nímž následuje volitelně dodatečný standardní převod, k jeho dokončení.
+Pokud jeden standardní převod nemůže dokončit implicitní převod, kompilátor může k jeho dokončení použít uživatelem definovaný převod následovaný volitelně dalším standardním převodem.
 
-V případě, že dva nebo více uživatelsky definovaných převodů, které provádějí stejný převod, jsou k dispozici v rámci konverze webu, převod je označován jako nejednoznačný. Takové nejednoznačnosti představují chybu, protože kompilátor nemůže určit, který z dostupných převodů by měl zvolit. Nejedná se však o chybu pouze k definování více způsobů provádění stejného převodu, protože sada dostupných převodů může být odlišná na různých umístěních ve zdrojovém kódu – například v závislosti na tom, které hlavičkové soubory jsou obsaženy ve zdrojovém souboru. Pokud je v lokalitě pro převod k dispozici pouze jeden převod, nedochází k nejednoznačnosti. Existuje několik způsobů, jak mohou nastat dvojznačné převody, ale nejběžnější jsou:
+Pokud jsou na konverzním webu k dispozici dva nebo více uživatelem definovaných konverzí, které provádějí stejný převod, převod je považován za nejednoznačný. Takové nejasnosti jsou chyba, protože kompilátor nemůže určit, který z dostupných převodů by měl zvolit. Není však chybou pouze definovat více způsobů provedení stejného převodu, protože sada dostupných konverzí se může lišit na různých místech ve zdrojovém kódu – například v závislosti na tom, které soubory hlaviček jsou zahrnuty do zdrojového souboru. Dokud je na konverzním webu k dispozici pouze jedna konverze, neexistuje žádná nejednoznačnost. Existuje několik způsobů, jak mohou vzniknout nejednoznačné převody, ale nejběžnější jsou:
 
 - Vícenásobná dědičnost. Převod je definován ve více než jedné základní třídě.
 
-- Nejednoznačné volání funkce Převod je definován jako převodní konstruktor cílového typu a jako převodní funkce typu zdroje. Další informace najdete v tématu [funkce pro převod](#ConvFunc).
+- Nejednoznačné volání funkce. Převod je definován jako konstruktor převodu cílového typu a jako funkce převodu typu zdroje. Další informace naleznete v [tématu Funkce převodu](#ConvFunc).
 
-Nejednoznačnost můžete obvykle vyřešit tak, že název daného typu zadáte mnohem více nebo pomocí explicitního přetypování k objasnění svého záměru.
+Nejednoznačnost můžete obvykle vyřešit pouze tím, že kvalifikuje název zúčastněného typu úplněji nebo provedením explicitní hodování k objasnění vašeho záměru.
 
-Konstruktory převodu i převodní funkce dodržují pravidla řízení přístupu členů, ale přístupnost převodů je považována pouze za if a v případě, že lze určit jednoznačnou konverzi. To znamená, že převod může být nejednoznačný i v případě, že úroveň přístupu konkurenčního převodu by zabránila použití. Další informace o přístupnost členů naleznete v tématu [member Access Control](../cpp/member-access-control-cpp.md).
+Konstruktory převodu i funkce převodu dodržují pravidla řízení přístupu členů, ale přístupka převodů se zvažuje pouze tehdy, pokud a kdy lze určit jednoznačný převod. To znamená, že převod může být nejednoznačný i v případě, že úroveň přístupu konkurenčního převodu by zabránila jeho použití. Další informace o usnadnění přístupu členů naleznete [v tématu Řízení přístupu členů](../cpp/member-access-control-cpp.md).
 
-## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>Explicitní klíčové slovo a problémy s implicitním převodem
+## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>Explicitní klíčové slovo a problémy s implicitní převod
 
-Ve výchozím nastavení, když vytvoříte uživatelem definovaný převod, ho kompilátor může použít k provádění implicitních převodů. V některých případech se jedná o to, co chcete, ale v některých případech jednoduchá pravidla, která jsou vodítkem kompilátoru při vytváření implicitních převodů, mohou vést k tomu, aby mohl přijímat kód, který nechcete.
+Ve výchozím nastavení při vytváření uživatelem definovaného převodu jej kompilátor může použít k provádění implicitních převodů. Někdy je to, co chcete, ale jindy jednoduchá pravidla, která řídí kompilátor při vytváření implicitních převodů, může vést k přijetí kódu, který nechcete.
 
-Jeden dobře známý příklad implicitního převodu, který může způsobit problémy, je převod na **bool**. Existuje mnoho důvodů, proč je vhodné vytvořit typ třídy, který lze použít v logickém kontextu, například, aby jej bylo možné použít k řízení příkazu **if** nebo smyčky, ale pokud kompilátor provede uživatelem definovaný převod na předdefinovaný typ, kompilátor může následně použít další standardní převod. Účelem tohoto dalšího standardního převodu je povolit pro věci, jako je povýšení z **krátkých** na **int**, ale také otevře dvířka pro méně zřejmé převody – například z **bool** na **int**, což umožňuje, aby byl typ třídy použit v celočíselných kontextech, které nikdy nezamýšlelte. Tento konkrétní problém se označuje jako *bezpečný problém bool*. Tento druh problému je tam, kde může klíčové slovo **Explicit** pomáhat.
+Jeden dobře známý příklad implicitní převod, který může způsobit problémy, je převod **bool**. Existuje mnoho důvodů, proč můžete chtít vytvořit typ třídy, který lze použít v booleovském kontextu – například tak, aby jej bylo možné použít k řízení **příkazu nebo** smyčky if – ale když kompilátor provede uživatelem definovaný převod na předdefinovaný typ, kompilátor může později použít další standardní převod. Záměrem této další standardní konverze je umožnit věci, jako je propagace z **krátké** **na int**, ale také otevírá dveře pro méně zřejmé konverze – například z **bool** na **int**, který umožňuje typ třídy, které mají být použity v celočíselné kontexty jste nikdy nezamýšleli. Tento konkrétní problém se označuje jako *problém bezpečného bool*. Tento druh problému je místo, kde **explicitní** klíčové slovo může pomoci.
 
-Klíčové slovo **Explicit** instruuje kompilátor, že zadaný převod nelze použít k provádění implicitních převodů. Pokud jste chtěli syntaktickou pohodlí implicitních převodů před zavedením **explicitního** klíčového slova, museli byste přijmout nezamýšlené důsledky, které implicitní převod někdy vytvoří, nebo použít méně pohodlné a pojmenované převodní funkce jako alternativní řešení. Teď můžete pomocí klíčového slova **Explicit** vytvořit pohodlný převod, který se dá použít jenom k provedení explicitního přetypování nebo přímé inicializace, a to nevede k druhům problémů exemplified pomocí bezpečného problému bool.
+Explicitní **explicit** klíčové slovo říká kompilátoru, že zadaný převod nelze použít k provedení implicitní převody. Pokud jste chtěli syntaktické pohodlí implicitních převodů před explicitní **klíčové** slovo bylo zavedeno, museli jste buď přijmout nezamýšlené důsledky, které implicitní převod někdy vytvořil, nebo použít méně pohodlné funkce s názvem převodu jako řešení. Nyní pomocí **explicitního** klíčového slova můžete vytvořit pohodlné konverze, které lze použít pouze k explicitnímu přetypování nebo přímé inicializaci, a které nevedou k problémům, které ilustruje problém safe bool.
 
-**Explicitní** klíčové slovo lze použít na konstruktory převodu od c++ 98 a k funkcím pro převod od c++ 11. Následující části obsahují další informace o použití klíčového slova **Explicit** .
+Explicitní **explicit** klíčové slovo lze použít pro konstruktory převodu od C ++ 98 a na funkce převodu od C ++ 11. Následující části obsahují další informace o použití **explicitního** klíčového slova.
 
 ## <a name="conversion-constructors"></a><a name="ConvCTOR"></a>Konstruktory převodu
 
-Konstruktory převodu definují převody z uživatelsky definovaných nebo předdefinovaných typů na uživatelsky definovaný typ. Následující příklad ukazuje konstruktor převodu, který je převeden z vestavěného typu **Double** na uživatelsky definovaný typ `Money`.
+Konstruktory převodu definují převody z uživatelem definovaných nebo předdefinovaných typů na typ definovaný uživatelem. Následující příklad ukazuje konstruktor převodu, který převádí z předdefinovaného typu **double** na uživatelem definovaný typ `Money`.
 
 ```cpp
 #include <iostream>
@@ -104,23 +104,23 @@ int main(int argc, char* argv[])
 }
 ```
 
-Všimněte si, že první volání funkce `display_balance`, které přebírá argument typu `Money`, nevyžaduje převod, protože jeho argument je správného typu. Při druhém volání `display_balance`však je nutný převod, protože typ argumentu, **Double** s hodnotou `49.95`, není to, co funkce očekává. Funkce nemůže tuto hodnotu použít přímo, ale vzhledem k tomu, že existuje převod z typu argumentu –**Double**– na typ odpovídajícího parametru –`Money`– dočasná hodnota typu `Money` je vytvořená z argumentu a používá se k dokončení volání funkce. Ve třetím volání `display_balance`si všimněte, že argument není **Double**, ale je místo typu **float** s hodnotou `9.99`– a přesto může být volání funkce dokončeno, protože kompilátor může provést standardní převod – v tomto případě z **float** na **Double**– a poté provést převod definovaný uživatelem z **Double** na `Money` k dokončení nezbytné konverze.
+Všimněte si, že `display_balance`první volání funkce , `Money`která přebírá argument typu , nevyžaduje převod, protože jeho argument je správný typ. Však při druhém `display_balance`volání , převod je potřeba, protože typ argumentu, `49.95` **double** s hodnotou , není co funkce očekává. Funkce nelze použít tuto hodnotu přímo, ale protože je převod z typu argumentu –**double**–na typ odpovídající parametr–`Money`– dočasná hodnota typu `Money` je vytvořena z argumentu a slouží k dokončení volání funkce. Ve třetí volání `display_balance`na , všimněte si, že argument není **double** `9.99`, ale je **float** s hodnotou – a přesto volání funkce lze stále dokončit, protože kompilátor může provést `Money` standardní převod – v tomto případě z **float** na **double**– a potom provést uživatelem definovaný převod z **double** k dokončení potřebného převodu.
 
-### <a name="declaring-conversion-constructors"></a>Deklarace konstruktorů převodu
+### <a name="declaring-conversion-constructors"></a>Deklarování konstruktorů převodu
 
-Následující pravidla platí pro deklaraci konstruktoru převodu:
+Následující pravidla platí pro deklarování konstruktoru převodu:
 
-- Cílový typ převodu je uživatelsky definovaný typ, který je sestaven.
+- Cílový typ převodu je uživatelem definovaný typ, který je vytvářen.
 
-- Konstruktory převodu obvykle přebírají přesně jeden argument, který je typu zdroje. Konstruktor převodu však může určit další parametry, pokud má každý další parametr výchozí hodnotu. Typ zdroje zůstává typ prvního parametru.
+- Převod ní konstruktory obvykle trvat přesně jeden argument, který je typu zdroje. Konstruktor převodu však může zadat další parametry, pokud má každý další parametr výchozí hodnotu. Typ zdroje zůstává typem prvního parametru.
 
-- Konstruktory převodu, jako jsou všechny konstruktory, nespecifikují návratový typ. Zadání návratového typu v deklaraci je chyba.
+- Převodní konstruktory, stejně jako všechny konstruktory, neurčují návratový typ. Zadání návratového typu v deklaraci je chyba.
 
-- Konstruktory převodu můžou být explicitní.
+- Převodníky mohou být explicitní.
 
-### <a name="explicit-conversion-constructors"></a>Explicitní konstruktory převodu
+### <a name="explicit-conversion-constructors"></a>Konstruktory explicitní převodu
 
-Deklarací konstruktoru převodu, který má být **explicitní**, lze použít pouze k provedení přímé inicializace objektu nebo k provedení explicitního přetypování. Tím zabráníte funkcím, které přijímají argument typu třídy z zároveň implicitně přijímá argumenty typu zdroje převodu a brání v kopírování typu třídy z hodnoty zdrojového typu. Následující příklad ukazuje, jak definovat explicitní konstruktor převodu a vliv na to, jaký kód je ve správném formátu.
+Deklarováním konstruktoru převodu jako **explicitního**lze jej použít pouze k provedení přímé inicializace objektu nebo k explicitnímu přetypování. Tím zabráníte, aby funkce, které přijímají argument typu třídy, také implicitně přijímaly argumenty zdrojového typu konstruktoru převodu a zabránily kopírování typu třídy z hodnoty typu zdroje. Následující příklad ukazuje, jak definovat konstruktor explicitní převod a vliv, který má na jaký kód je ve správném formátu.
 
 ```cpp
 #include <iostream>
@@ -151,13 +151,13 @@ int main(int argc, char* argv[])
 }
 ```
 
-V tomto příkladu si všimněte, že stále můžete použít explicitní konstruktor převodu k provedení přímé inicializace `payable`. Pokud místo toho jste chtěli kopírovat-inicializovat `Money payable = 79.99;`, bude to chyba. První volání `display_balance` není ovlivněno, protože argument je správného typu. Druhé volání `display_balance` je chyba, protože konstruktor převodu nelze použít k provádění implicitních převodů. Třetí volání `display_balance` je platné z důvodu explicitního přetypování na `Money`, ale Všimněte si, že kompilátor stále pomáhá dokončit přetypování vložením implicitního přetypování z **float** na **Double**.
+V tomto příkladu všimněte si, že stále můžete použít `payable`konstruktor explicitní převod provést přímou inicializaci . Pokud byste místo toho měli `Money payable = 79.99;`zkopírovat-inicializovat , bylo by chyba. První volání `display_balance` není ovlivněna, protože argument je správný typ. Druhé volání `display_balance` je chyba, protože konstruktor převodu nelze použít k provedení implicitní převody. Třetí volání `display_balance` je legální z důvodu `Money`explicitní přetypování do , ale všimněte si, že kompilátor stále pomohl dokončit přetypování vložením implicitního přetypování z **float** na **double**.
 
-I když pohodlí při povolování implicitních převodů může proniknout, může to vést k obtížně nalezeným chybám. Pravidlem pro palec je vytvořit všechny konstruktory převodu s výjimkou případů, kdy jste si jisti, že chcete, aby konkrétní konverze probíhala implicitně.
+Přestože pohodlí povolení implicitní převody může být lákavé, přitom může zavést těžko najít chyby. Pravidlem je, aby všechny konstruktory převodu explicitní, s výjimkou případů, kdy jste si jisti, že chcete, aby konkrétní převod dojít implicitně.
 
-##  <a name="conversion-functions"></a><a name="ConvFunc"></a>Převodní funkce
+## <a name="conversion-functions"></a><a name="ConvFunc"></a>Funkce převodu
 
-Převodní funkce definují převody z uživatelsky definovaného typu na jiné typy. Tyto funkce jsou někdy označovány jako "operátory přetypování", protože jsou společně s konstruktory převodu volány, když je hodnota převedena na jiný typ. Následující příklad ukazuje funkci převodu, která je převedena z uživatelsky definovaného typu, `Money`na předdefinovaný typ **Double**:
+Funkce převodu definují převody z uživatelem definovaného typu na jiné typy. Tyto funkce jsou někdy označovány jako "operátory přetypovacího vysílání", protože spolu s konstruktory převodu jsou volány při přetypováno hodnota na jiný typ. Následující příklad ukazuje funkci převodu, `Money`která se převádí z uživatelem definovaného typu , na předdefinovaný typ **double**:
 
 ```cpp
 #include <iostream>
@@ -179,31 +179,31 @@ void display_balance(const Money balance)
 }
 ```
 
-Všimněte si, že členská proměnná `amount` je soukromá a že funkce veřejné konverze pro typ **Double** je zavedená pouze k vrácení hodnoty `amount`. Ve `display_balance`funkce se implicitní převod vyskytne v případě, že je hodnota `balance` streamovaná na standardní výstup pomocí `<<`operátoru vložení datového proudu. Vzhledem k tomu, že pro uživatelsky definovaný typ `Money`není definován žádný operátor vkládání datových proudů, ale existuje jeden pro vestavěný typ **Double**, kompilátor může použít funkci převodu z `Money` ke **zdvojnásobení** pro splnění operátoru vkládání datových proudů.
+Všimněte si, `amount` že členská proměnná je soukromá a že je zavedena funkce veřejného převodu typu **double** pouze pro vrácení hodnoty `amount`. Ve funkci `display_balance`dojde k implicitnímu převodu, když `balance` je hodnota streamována na `<<`standardní výstup pomocí operátoru vložení datového proudu . Vzhledem k tomu, že pro uživatelem definovaný `Money`typ není definován žádný operátor vkládání datového proudu , ale `Money` je k dispozici jeden pro předdefinovaný typ **double**, může kompilátor použít funkci převodu z **double** ke splnění operátoru vkládání datového proudu.
 
-Převodní funkce jsou zděděny odvozenými třídami. Funkce převodu v odvozené třídě přepíší zděděnou funkci převodu pouze při převodu na naprosto stejný typ. Například uživatelsky definovaná převodní funkce **operátoru** odvozené třídy int nepřepisuje nebo ani neovlivňuje – uživatelsky definovaná převodní funkce **operátoru**základní třídy, i když standardní převody definují vztah konverze mezi **int** a **short**.
+Funkce převodu jsou zděděny odvozenými třídami. Funkce převodu v odvozené třídě pouze přepsat zděděné funkce převodu při jejich převodu na přesně stejný typ. Například uživatelem definovaná funkce převodu operátoru odvozené třídy **int** nepřepíše nebo ani neovlivní uživatelem definovanou funkci převodu **operátoru**základní třídy , která je krátká , i když standardní převody definují vztah převodu mezi **int** a **short**.
 
-### <a name="declaring-conversion-functions"></a>Deklarace funkcí převodu
+### <a name="declaring-conversion-functions"></a>Deklarování funkcí převodu
 
-Následující pravidla platí pro deklaraci funkce pro převod:
+Pro deklarování funkce převodu platí následující pravidla:
 
-- Cílový typ převodu musí být deklarován před deklarací funkce pro převod. Třídy, struktury, výčty a definice typedef nelze deklarovat v rámci deklarace funkce pro převod.
+- Cílový typ převodu musí být deklarován před deklarací funkce převodu. Třídy, struktury, výčty a typedefs nelze deklarovat v rámci deklarace funkce převodu.
 
     ```cpp
     operator struct String { char string_storage; }() // illegal
     ```
 
-- Funkce převodu nepřijímají argumenty. Zadání jakýchkoli parametrů v deklaraci je chyba.
+- Funkce převodu nepřijímají argumenty. Zadání všech parametrů v deklaraci je chyba.
 
-- Funkce pro převod mají návratový typ, který je určen názvem funkce pro převod, což je také název cílového typu převodu. Zadání návratového typu v deklaraci je chyba.
+- Funkce převodu mají návratový typ, který je určen názvem funkce převodu, což je také název cílového typu převodu. Zadání návratového typu v deklaraci je chyba.
 
-- Převodní funkce můžou být virtuální.
+- Funkce převodu mohou být virtuální.
 
-- Převodní funkce můžou být explicitní.
+- Funkce převodu může být explicitní.
 
-### <a name="explicit-conversion-functions"></a>Funkce explicitního převodu
+### <a name="explicit-conversion-functions"></a>Explicitní funkce převodu
 
-Je-li funkce převodu deklarována jako explicitní, může být použita pouze k provedení explicitního přetypování. To brání funkcím, které přijímají argument cílového typu funkce převodu, a zároveň implicitně přijímá argumenty typu třídy a zabraňuje kopírování instancí cílového typu z hodnoty typu třídy. Následující příklad ukazuje, jak definovat explicitní funkci převodu a vliv na to, jaký kód je ve správném formátu.
+Pokud je funkce převodu prohlášena za explicitní, lze ji použít pouze k provedení explicitního přetypování. Tím zabráníte, aby funkce, které přijímají argument cílového typu funkce převodu, také implicitně přijímaly argumenty typu třídy a zabránily tomu, aby instance cílového typu byly inicializovány z hodnoty typu třídy. Následující příklad ukazuje, jak definovat explicitní funkce převodu a vliv, který má na jaký kód je ve správném formátu.
 
 ```cpp
 #include <iostream>
@@ -225,4 +225,4 @@ void display_balance(const Money balance)
 }
 ```
 
-V tomto příkladu byla explicitně provedena **dvojice operátora** funkce převodu a ve funkci `display_balance` k provedení převodu byla zavedena explicitní přetypování na typ **Double** . Pokud bylo toto přetypování vynecháno, kompilátor nebude schopen najít vhodný operátor vložení datového proudu `<<` pro typ `Money` a dojde k chybě.
+Zde byl operátor funkce převodu **double** explicitní a ve funkci `display_balance` pro provedení převodu bylo zavedeno explicitní přetypování typu **double.** Pokud toto přetypování byly vynechány, kompilátor by nelze `<<` najít `Money` vhodný operátor vložení datového proudu pro typ a došlo by k chybě.

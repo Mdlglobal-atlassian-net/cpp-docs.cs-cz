@@ -1,5 +1,5 @@
 ---
-title: CFont – – třída
+title: CFont – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CFont
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 36fd469b182d5f3e0d3449112d04c1a8623d7526
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373833"
 ---
-# <a name="cfont-class"></a>CFont – – třída
+# <a name="cfont-class"></a>CFont – třída
 
-Zapouzdřuje písmo rozhraní grafického zařízení (GDI) systému Windows a poskytuje členské funkce pro manipulaci s písmem.
+Zapouzdřuje písmo rozhraní grafického zařízení systému Windows (GDI) a poskytuje členské funkce pro manipulaci s písmem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,50 +41,50 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFont –:: CFont –](#cfont)|Vytvoří objekt `CFont`.|
+|[CFont::CFont](#cfont)|Vytvoří `CFont` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFont –:: CreateFont](#createfont)|Inicializuje `CFont` se zadanými charakteristikami.|
-|[CFont –:: CreateFontIndirect](#createfontindirect)|Inicializuje objekt `CFont` s charakteristikami, které jsou zadány ve struktuře `LOGFONT`.|
-|[CFont –:: CreatePointFont](#createpointfont)|Inicializuje `CFont` se zadanou výškou měřenou desetinnou čárkou a typem písma.|
-|[CFont –:: CreatePointFontIndirect](#createpointfontindirect)|Stejné jako `CreateFontIndirect` s tím rozdílem, že výška písma je měřena v desetinách bodu a nikoli v logických jednotkách.|
-|[CFont –:: FromHandle](#fromhandle)|Vrací ukazatel na objekt `CFont` v případě, že se předali Windows HFONT.|
-|[CFont –:: GetLogFont](#getlogfont)|Vyplní `LOGFONT` informacemi o logickém písmu připojeném k objektu `CFont`.|
+|[CFont::CreateFont](#createfont)|Inicializuje `CFont` a se zadanými vlastnostmi.|
+|[CFont::CreateFontIndirect](#createfontindirect)|Inicializuje `CFont` objekt s charakteristikami `LOGFONT` uvedenými ve struktuře.|
+|[CFont::CreatePointFont](#createpointfont)|Inicializuje `CFont` a se zadanou výškou, měřenou v desetinách bodu, a písmem.|
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|Stejné `CreateFontIndirect` jako s tím rozdílem, že výška písma se měří v desetinách bodu, nikoli v logických jednotkách.|
+|[CFont::FromHandle](#fromhandle)|Vrátí ukazatel na `CFont` objekt při dané Windows HFONT.|
+|[CFont::GetLogFont](#getlogfont)|Vyplní `LOGFONT` informace o logickém písmu `CFont` připojeném k objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFont –:: operator HFONT](#operator_hfont)|Vrátí popisovač písma GDI systému Windows připojený k objektu `CFont`.|
+|[CFont::operátor HFONT](#operator_hfont)|Vrátí popisovač písma Windows GDI připojený k objektu. `CFont`|
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li použít objekt `CFont`, Sestavte objekt `CFont` a k němu připojte písmo systému Windows s [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont)nebo [CreatePointFontIndirect](#createpointfontindirect)a pak použijte členské funkce objektu pro manipulaci s písmem.
+Chcete-li `CFont` `CFont` použít objekt, vytvořte objekt a připojte k němu písmo systému Windows pomocí [createfontu](#createfont), [createfontu nepřímého](#createfontindirect) [písma , createpointfontu](#createpointfont)nebo [objektu CreatePointFontIndirect](#createpointfontindirect)a potom pomocí členských funkcí objektu manipulujte s písmem.
 
-Funkce `CreatePointFont` a `CreatePointFontIndirect` často usnadňují použití než `CreateFont` nebo `CreateFontIndirect`, protože provádějí převod výšky písma z velikosti bodu na logické jednotky automaticky.
+Funkce `CreatePointFont` `CreatePointFontIndirect` a jsou často jednodušší `CreateFont` `CreateFontIndirect` než nebo od té doby, než provádějí převod výšky písma z velikosti bodu na logické jednotky automaticky.
 
-Další informace o `CFont`naleznete v tématu [Graphics Objects](../../mfc/graphic-objects.md).
+Další informace `CFont`naleznete v tématu [Grafické objekty](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CGdiObject](../../mfc/reference/cgdiobject-class.md)
+[Objekt CGdi](../../mfc/reference/cgdiobject-class.md)
 
 `CFont`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="cfont"></a>CFont –:: CFont –
+## <a name="cfontcfont"></a><a name="cfont"></a>CFont::CFont
 
-Vytvoří objekt `CFont`.
+Vytvoří `CFont` objekt.
 
 ```
 CFont();
@@ -92,15 +92,15 @@ CFont();
 
 ### <a name="remarks"></a>Poznámky
 
-Výsledný objekt musí být inicializován pomocí `CreateFont`, `CreateFontIndirect`, `CreatePointFont`nebo `CreatePointFontIndirect` předtím, než je možné jej použít.
+Výsledný objekt musí být inicializován pomocí `CreateFont` `CreateFontIndirect`, , `CreatePointFont`nebo `CreatePointFontIndirect` před jeho použitím.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>CFont –:: CreateFont
+## <a name="cfontcreatefont"></a><a name="createfont"></a>CFont::CreateFont
 
-Inicializuje objekt `CFont` se zadanými charakteristikami.
+Inicializuje `CFont` objekt se zadanými vlastnostmi.
 
 ```
 BOOL CreateFont(
@@ -122,79 +122,79 @@ BOOL CreateFont(
 
 ### <a name="parameters"></a>Parametry
 
-*nHeight*<br/>
-Určuje požadovanou výšku (v logických jednotkách) písma. Popis najdete v části `lfHeight` člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)v Windows SDK. Absolutní hodnota *nHeight* nesmí po převedení překročit 16 384 jednotek zařízení. U všech porovnání výškou vyhledá Mapovač písma největší písmo, které nepřekračuje požadovanou velikost, nebo nejmenší písmo, pokud všechna písma překračují požadovanou velikost.
+*nVýška*<br/>
+Určuje požadovanou výšku (v logických jednotkách) písma. Popis `lfHeight` naleznete v části Člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)v sadě Windows SDK. Absolutní hodnota *nHeight* nesmí po převodu překročit 16 384 jednotek zařízení. Pro všechna porovnání výšky mapovač písma hledá největší písmo, které nepřesahuje požadovanou velikost nebo nejmenší písmo, pokud všechna písma překročí požadovanou velikost.
 
-*nWidth*<br/>
-Určuje průměrnou šířku (v logických jednotkách) znaků písma. Pokud je *nWidth* 0, poměr stran zařízení se bude shodovat s poměrem stran podle počtu dostupných písem, aby bylo možné najít nejbližší shodu, který je určený absolutní hodnotou rozdílu.
+*nŠířka*<br/>
+Určuje průměrnou šířku (v logických jednotkách) znaků v písmu. Pokud *nWidth* je 0, poměr stran zařízení bude porovnán s poměrem stran digitalizace dostupných písem najít nejbližší shodu, která je určena absolutní hodnotou rozdílu.
 
-*nEscapement*<br/>
-Určuje úhel (ve stupních 0,1 jednotek) mezi vektorem řídicího panelu a osou x zobrazované plochy. Vektor řídicí sekvence je řádek od začátku prvního a posledního znaku na řádku. Úhel se měří po směru hodinových ručiček od osy x. Další informace najdete v části `lfEscapement` člen ve struktuře `LOGFONT` v Windows SDK.
+*nÚtěk*<br/>
+Určuje úhel (v jednotkách 0,1 stupně) mezi vektorem escapement unikače a osou x zobrazovací plochy. Vektor escapement je čára přes počátky prvního a posledního znaku na řádku. Úhel se měří proti směru hodinových ručiček od osy x. Další `lfEscapement` informace naleznete `LOGFONT` v části Člen ve struktuře sady Windows SDK.
 
-*nOrientation*<br/>
-Určuje úhel (v jednotkách úrovně 0,1) mezi účaří znaku a osou x. Úhel se měří po směru hodinových ručiček od osy x pro systémy souřadnic, ve kterých je směr y dolů a od osy x pro systémy souřadnic, ve kterých je směr y.
+*nOrientace*<br/>
+Určuje úhel (v jednotkách 0,1 stupně) mezi účaří znaku a osou x. Úhel se měří proti směru hodinových ručiček od osy x pro souřadné systémy, ve kterých je směr y dolů, a ve směru hodinových ručiček od osy x pro souřadnicové systémy, ve kterých je směr y nahoru.
 
-*nWeight*<br/>
-Určuje tloušťku písma (v Inked pixelech na 1000). Další informace najdete v části člen *lfWeight* ve struktuře `LOGFONT` v Windows SDK. Popsané hodnoty jsou přibližné. skutečný vzhled závisí na řezu písma. Některá písma mají jenom FW_NORMAL, FW_REGULAR a FW_BOLD váhy. Je-li zadán FW_DONTCARE, je použita výchozí váha.
+*nHmotnost*<br/>
+Určuje tloušťku písma (v barvených obrazových bodech na 1000). Další informace naleznete v `LOGFONT` členu *lfWeight* ve struktuře sady Windows SDK. Popsané hodnoty jsou přibližné; skutečný vzhled závisí na písmu. Některá písma mají pouze FW_NORMAL, FW_REGULAR a FW_BOLD hmotnosti. Pokud je zadán FW_DONTCARE, použije se výchozí hmotnost.
 
 *bItalic*<br/>
 Určuje, zda je písmo kurzívou.
 
-*bUnderline*<br/>
-Určuje, zda je písmo podtržené.
+*bPodtržení*<br/>
+Určuje, zda je písmo podtrženo.
 
 *cStrikeOut*<br/>
-Určuje, zda jsou znaky v písmu potaženy. Určuje přeškrtnutí písma, pokud je nastaveno na nenulovou hodnotu.
+Určuje, zda jsou znaky v písmu vyškrtnuty. Určuje přeškrtávací písmo, pokud je nastaveno na nenulovou hodnotu.
 
-*nCharSet*<br/>
-Určuje znak písma setSee člena `lfCharSet` ve struktuře `LOGFONT` v Windows SDK pro seznam hodnot.
+*nSada char*<br/>
+Určuje znakovou sadu písma: `lfCharSet` Seznam `LOGFONT` hodnot naleznete v sadě Windows SDK ve struktuře systému Windows.
 
 Znaková sada OEM je závislá na systému.
 
-V systému mohou existovat písma s jinými znakovými sadami. Aplikace, která používá písmo s neznámou znakovou sadou nesmí zkoušet nebo interpretovat řetězce, které mají být vykresleny s tímto písmem. Místo toho by se měly řetězce předat přímo do ovladače výstupního zařízení.
+Písma s jinými znakovými sadami mohou v systému existovat. Aplikace, která používá písmo s neznámou znakovou sadou, se nesmí pokoušet překládat nebo interpretovat řetězce, které mají být vykresleny pomocí tohoto písma. Místo toho řetězce by měly být předány přímo ovladač výstupního zařízení.
 
-Mapovač písem nepoužívá hodnotu DEFAULT_CHARSET. Aplikace může tuto hodnotu použít, pokud chcete, aby název a velikost písma byly plně popsány u logického písma. Pokud písmo se zadaným názvem neexistuje, může být pro zadané písmo nahrazeno písmo z libovolné znakové sady. Aby nedocházelo k neočekávaným výsledkům, aplikace by měly DEFAULT_CHARSET hodnotu používat zřídka.
+Mapovač písem nepoužívá hodnotu DEFAULT_CHARSET. Aplikace může tuto hodnotu použít k tomu, aby název a velikost písma plně popsala logické písmo. Pokud písmo se zadaným názvem neexistuje, může být zadaným písmem nahrazeno písmo z libovolné znakové sady. Aby se zabránilo neočekávaným výsledkům, aplikace by měly používat DEFAULT_CHARSET hodnotu střídmě.
 
 *nOutPrecision*<br/>
-Určuje požadovanou přesnost výstupu. Přesnost výstupu definuje, jak blízko musí výstup odpovídat požadované výšce písma, šířku, orientaci znaků, řídicímu znaku a rozteči. Seznam hodnot a další informace najdete v části `lfOutPrecision` člen ve struktuře `LOGFONT` v Windows SDK.
+Určuje požadovanou výstupní přesnost. Přesnost výstupu definuje, jak přesně musí výstup odpovídat výšce, šířce, orientaci znaku, úniku a rozteči požadovaného písma. Seznam `lfOutPrecision` hodnot a `LOGFONT` další informace naleznete v členu ve struktuře sady Windows SDK.
 
-*nClipPrecision*<br/>
-Určuje požadovanou přesnost oříznutí. Přesnost oříznutí definuje, jak se mají vystřihnout znaky částečně mimo oblast oříznutí. Seznam hodnot naleznete v části `lfClipPrecision` člen ve struktuře `LOGFONT` v Windows SDK.
+*nPřesnostklipů*<br/>
+Určuje požadovanou přesnost oříznutí. Přesnost oříznutí definuje, jak oříznout znaky, které jsou částečně mimo oblast oříznutí. Seznam `lfClipPrecision` hodnot naleznete `LOGFONT` v seznamu členů ve struktuře sady Windows SDK.
 
-Chcete-li použít vložené písmo jen pro čtení, musí aplikace zadat CLIP_ENCAPSULATE.
+Chcete-li použít vložené písmo jen pro čtení, musí aplikace určit CLIP_ENCAPSULATE.
 
-Aby bylo možné zajistit konzistentní rotaci písem zařízení, TrueType a vektoru, může aplikace pomocí operátoru OR kombinovat CLIP_LH_ANGLES hodnotu s jakoukoliv jinou hodnotou *nClipPrecision* . Pokud je nastaven bit CLIP_LH_ANGLES, bude rotace všech písem závislá na tom, zda je orientace systému souřadnic nastavena na levou stranu nebo pravá. (Další informace o orientaci systémů souřadnic naleznete v popisu parametru *nOrientation* .) Pokud CLIP_LH_ANGLES není nastavená, písma zařízení vždycky otočí po směru hodinových ručiček, ale rotace jiných písem závisí na orientaci systému souřadnic.
+Chcete-li dosáhnout konzistentní otočení zařízení, TrueType a vektorová písma, aplikace můžete použít operátor OR kombinovat CLIP_LH_ANGLES hodnotu s některou z ostatních hodnot *nClipPrecision.* Pokud je nastaven CLIP_LH_ANGLES bit, otočení pro všechna písma závisí na tom, zda je orientace souřadnicového systému levák nebo pravák. (Další informace o orientaci souřadnicových systémů naleznete v popisu parametru *nOrientation.)* Pokud CLIP_LH_ANGLES není nastavena, písma zařízení se vždy otáčejí proti směru hodinových ručiček, ale otočení jiných písem závisí na orientaci souřadnicového systému.
 
-*nQuality*<br/>
-Určuje kvalitu výstupu písma, která definuje, jak se musí rozhraní GDI pokusit vyhledat shodu s atributy logického písma na základě skutečného fyzického písma. Seznam hodnot naleznete v části `lfQuality` člen ve struktuře `LOGFONT` v Windows SDK.
+*nKvalita*<br/>
+Určuje kvalitu výstupu písma, která definuje, jak pečlivě se gdi musí pokoušet spárovat atributy logického písma s atributy skutečného fyzického písma. Seznam `lfQuality` hodnot naleznete `LOGFONT` v seznamu členů ve struktuře sady Windows SDK.
 
 *nPitchAndFamily*<br/>
-Určuje rozteč a rodinu písma. Seznam hodnot a další informace najdete v části `lfPitchAndFamily` člen ve struktuře `LOGFONT` v Windows SDK.
+Určuje výšku a rodinu písma. Seznam `lfPitchAndFamily` hodnot a `LOGFONT` další informace naleznete v členu ve struktuře sady Windows SDK.
 
 *lpszFacename*<br/>
-`CString` nebo ukazatel na řetězec zakončený hodnotou null, který určuje název řezu písma. Délka tohoto řetězce nesmí přesáhnout 30 znaků. Funkci Windows [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) lze použít k zobrazení výčtu všech aktuálně dostupných písem. Pokud má *lpszFacename* hodnotu null, používá GDI řez písma nezávislý na zařízení.
+A `CString` nebo ukazatel na řetězec s nulovým ukončením, který určuje název písma. Délka tohoto řetězce nesmí přesáhnout 30 znaků. Funkce Windows [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) lze použít k vytvoření výčtu všech aktuálně dostupných písem. Pokud *lpszFacename* je NULL, GDI používá písmo nezávislé na zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Písmo lze následně vybrat jako písmo pro libovolný kontext zařízení.
 
-Funkce `CreateFont` nevytvoří nové písmo GDI systému Windows. Pouze vybere nejbližší shodu od fyzických písem dostupných pro GDI.
+Funkce `CreateFont` nevytvoří nové písmo GDI systému Windows. Pouze vybere nejbližší shodu z fyzických písem, které jsou k dispozici pro GDI.
 
-Aplikace mohou při vytváření logického písma použít výchozí nastavení pro většinu parametrů. Parametry, které by měly vždy mít konkrétní hodnoty, jsou *nHeight* a *lpszFacename*. Pokud aplikace *nHeight* a *lpszFacename* nenastaví, logické písmo, které je vytvořeno, je závislé na zařízení.
+Aplikace mohou při vytváření logického písma používat výchozí nastavení pro většinu parametrů. Parametry, které by měly být vždy uvedeny konkrétní hodnoty jsou *nHeight* a *lpszFacename*. Pokud *nHeight* a *lpszFacename* nejsou nastaveny aplikací, logické písmo, které je vytvořeno je závislé na zařízení.
 
-Až skončíte s objektem `CFont` vytvořeným funkcí `CreateFont`, použijte `CDC::SelectObject` k výběru jiného písma do kontextu zařízení a pak odstraňte objekt `CFont`, který už není potřeba.
+Po dokončení s `CFont` objektem `CreateFont` vytvořeným `CDC::SelectObject` funkcí použijte k výběru jiného písma do kontextu zařízení a odstraňte `CFont` objekt, který již není potřeba.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>CFont –:: CreateFontIndirect
+## <a name="cfontcreatefontindirect"></a><a name="createfontindirect"></a>CFont::CreateFontIndirect
 
-Inicializuje objekt `CFont` s charakteristikami, které jsou zadány ve struktuře [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw).
+Inicializuje `CFont` objekt s vlastnostmi uvedenými ve struktuře [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 ```
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -203,27 +203,27 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-Odkazuje na strukturu `LOGFONT` definující charakteristiky logického písma.
+Odkazuje na `LOGFONT` strukturu, která definuje charakteristiky logického písma.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Písmo lze následně vybrat jako aktuální písmo libovolného zařízení.
+Písmo lze následně vybrat jako aktuální písmo pro libovolné zařízení.
 
-Toto písmo má vlastnosti zadané ve struktuře [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) . Při výběru písma pomocí členské funkce [CDC:: VybratObjekt](../../mfc/reference/cdc-class.md#selectobject) se MAPOVAČ písem GDI pokusí vyhledat logické písmo s existujícím fyzickým fontem. Pokud se mapovači písem nenajde přesnou shodu pro logické písmo, poskytne to alternativní písmo, jehož charakteristiky odpovídají toliku požadovaných vlastností.
+Toto písmo má vlastnosti zadané ve struktuře [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw) Pokud je písmo vybráno pomocí členské funkce [CDC::SelectObject,](../../mfc/reference/cdc-class.md#selectobject) mapovač písem GDI se pokusí porovnat logické písmo s existujícím fyzickým písmem. Pokud mapovač písma nenalezne přesnou shodu pro logické písmo, poskytuje alternativní písmo, jehož vlastnosti odpovídají co nejvíce požadovaným charakteristikám.
 
-Pokud již nepotřebujete objekt `CFont` vytvořený funkcí `CreateFontIndirect`, použijte `CDC::SelectObject` k výběru jiného písma do kontextu zařízení a pak odstraňte `CFont` objekt, který již není potřeba.
+Pokud již nepotřebujete `CFont` objekt vytvořený `CreateFontIndirect` funkcí, `CDC::SelectObject` použijte k výběru jiného písma `CFont` do kontextu zařízení a odstraňte objekt, který již není potřeba.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
-##  <a name="createpointfont"></a>CFont –:: CreatePointFont
+## <a name="cfontcreatepointfont"></a><a name="createpointfont"></a>CFont::CreatePointFont
 
-Tato funkce poskytuje jednoduchý způsob, jak vytvořit písmo zadaného řezu a velikosti bodu.
+Tato funkce poskytuje jednoduchý způsob, jak vytvořit písmo zadaného písma a velikost bodu.
 
 ```
 BOOL CreatePointFont(
@@ -235,31 +235,31 @@ BOOL CreatePointFont(
 ### <a name="parameters"></a>Parametry
 
 *nPointSize*<br/>
-Požadovaná výška písma v desetinách bodu (Například Pass 120 pro vyžádání písma o 12 bodů.)
+Požadovaná výška písma v desetinách bodu. (Například předavte 120 požádat o 12bodové písmo.)
 
 *lpszFaceName*<br/>
-`CString` nebo ukazatel na řetězec zakončený hodnotou null, který určuje název řezu písma. Délka tohoto řetězce nesmí přesáhnout 30 znaků. Funkce EnumFontFamilies systému Windows se dá použít k zobrazení výčtu všech aktuálně dostupných písem. Pokud má *lpszFaceName* hodnotu null, používá GDI řez písma nezávislý na zařízení.
+A `CString` nebo ukazatel na řetězec s nulovým ukončením, který určuje název písma. Délka tohoto řetězce nesmí přesáhnout 30 znaků. Funkce Windows 'EnumFontFamilies lze použít k vytvoření výčtu všech aktuálně dostupných písem. Pokud *lpszFaceName* je NULL, GDI používá písmo nezávislé na zařízení.
 
-*Emulátor*<br/>
-Ukazatel na objekt [CDC](../../mfc/reference/cdc-class.md) , který se použije k převedení výšky v *nPointSize* na logické jednotky. Pokud má hodnotu NULL, je pro převod použit kontext zařízení obrazovky.
+*Pdc*<br/>
+Ukazatel na [cdc](../../mfc/reference/cdc-class.md) objekt, který má být použit k převodu výšky v *nPointSize* na logické jednotky. Pokud null, kontext zařízení obrazovky se používá pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné, jinak 0.
+Nenulová, pokud je úspěšná, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Automaticky převede výšku v *nPointSize* na logické jednotky pomocí objektu CDC, na který odkazuje *primární řadič domény*.
+Automaticky převede výšku v *nPointSize* na logické jednotky pomocí objektu CDC, na který se vztahuje *bod pDC*.
 
-Až skončíte s objektem `CFont` vytvořeným funkcí `CreatePointFont`, nejdřív vyberte písmo z kontextu zařízení a pak odstraňte objekt `CFont`.
+Po dokončení s `CFont` objektem `CreatePointFont` vytvořeným funkcí nejprve vyberte písmo z `CFont` kontextu zařízení a odstraňte objekt.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]
 
-##  <a name="createpointfontindirect"></a>CFont –:: CreatePointFontIndirect
+## <a name="cfontcreatepointfontindirect"></a><a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect
 
-Tato funkce je stejná jako [CreateFontIndirect](#createfontindirect) s tím rozdílem, že `lfHeight` člen `LOGFONT` je interpretována desetinami bodu místo jednotek zařízení.
+Tato funkce je stejná jako [CreateFontIndirect](#createfontindirect) s tím rozdílem, `lfHeight` že člen `LOGFONT` člen je interpretován v desetinách bodu, nikoli jednotky zařízení.
 
 ```
 BOOL CreatePointFontIndirect(
@@ -270,28 +270,28 @@ BOOL CreatePointFontIndirect(
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-Odkazuje na strukturu [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , která definuje charakteristiky logického písma. `lfHeight` člen struktury `LOGFONT` se měří v desetinách bodu místo logických jednotek. (Například nastavte `lfHeight` na 120 pro vyžádání písma na 12 bodů.)
+Odkazuje na strukturu [LOGFONT,](/windows/win32/api/wingdi/ns-wingdi-logfontw) která definuje charakteristiky logického písma. Člen `lfHeight` struktury `LOGFONT` se měří v desetinách bodu, nikoli v logických jednotkách. (Například nastavte `lfHeight` na 120 požádat o 12bodové písmo.)
 
-*Emulátor*<br/>
-Ukazatel na objekt [CDC](../../mfc/reference/cdc-class.md) , který se použije k převedení výšky v `lfHeight` na logické jednotky. Pokud má hodnotu NULL, je pro převod použit kontext zařízení obrazovky.
+*Pdc*<br/>
+Ukazatel na objekt [CDC,](../../mfc/reference/cdc-class.md) který má `lfHeight` být použit k převodu výšky na logické jednotky. Pokud null, kontext zařízení obrazovky se používá pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné, jinak 0.
+Nenulová, pokud je úspěšná, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce automaticky převede výšku v `lfHeight` na logické jednotky pomocí objektu CDC, na který odkazuje *primární řadič domény* , před předáním struktury `LOGFONT` do systému Windows.
+Tato funkce automaticky převede `lfHeight` výšku do logické jednotky pomocí CDC objekt `LOGFONT` upozorňovaný *pDC* před předáním struktury na Windows.
 
-Až skončíte s objektem `CFont` vytvořeným funkcí `CreatePointFontIndirect`, nejdřív vyberte písmo z kontextu zařízení a pak odstraňte objekt `CFont`.
+Po dokončení s `CFont` objektem `CreatePointFontIndirect` vytvořeným funkcí nejprve vyberte písmo z `CFont` kontextu zařízení a odstraňte objekt.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]
 
-##  <a name="fromhandle"></a>CFont –:: FromHandle
+## <a name="cfontfromhandle"></a><a name="fromhandle"></a>CFont::FromHandle
 
-Vrací ukazatel na objekt `CFont`, pokud je předána obslužná rutina HFONT objektu Font systému Windows GDI.
+Vrátí ukazatel na `CFont` objekt, když je daný popisovač HFONT na objekt písma Windows GDI.
 
 ```
 static CFont* PASCAL FromHandle(HFONT hFont);
@@ -299,24 +299,24 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 
 ### <a name="parameters"></a>Parametry
 
-*hFont*<br/>
-HFONT popisovač písma systému Windows.
+*hPísmo*<br/>
+Popisovač HFONT písma systému Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CFont` v případě úspěchu; jinak NULL.
+Ukazatel na `CFont` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt `CFont` již není k popisovači připojen, je vytvořen a připojen dočasný objekt `CFont`. Tento dočasný `CFont` objekt je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné grafické objekty. Dalším způsobem, jak to vyjádřit, je, že dočasný objekt je platný pouze během zpracování jedné zprávy okna.
+Pokud `CFont` objekt ještě není připojen k popisovač, dočasný `CFont` objekt je vytvořen a připojen. Tento `CFont` dočasný objekt je platný pouze do příště aplikace má nečinnosti čas ve smyčce událostí, kdy jsou odstraněny všechny dočasné grafické objekty. Dalším způsobem, jak to říct, je, že dočasný objekt je platný pouze při zpracování jedné zprávy okna.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]
 
-##  <a name="getlogfont"></a>CFont –:: GetLogFont
+## <a name="cfontgetlogfont"></a><a name="getlogfont"></a>CFont::GetLogFont
 
-Voláním této funkce načtete kopii `LOGFONT` struktury pro `CFont`.
+Volání této funkce načíst `LOGFONT` kopii `CFont`struktury pro .
 
 ```
 int GetLogFont(LOGFONT* pLogFont);
@@ -325,19 +325,19 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="parameters"></a>Parametry
 
 *pLogFont*<br/>
-Ukazatel na strukturu [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , aby se zobrazily informace o písmech.
+Ukazatel na strukturu [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) přijímat informace o písmu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná, jinak 0.
+Nenulová, pokud je funkce úspěšná, jinak 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]
 
-##  <a name="operator_hfont"></a>CFont –:: operator HFONT
+## <a name="cfontoperator-hfont"></a><a name="operator_hfont"></a>CFont::operátor HFONT
 
-Tento operátor použijte k získání popisovače Windows GDI písma připojeného k objektu `CFont`.
+Pomocí tohoto operátoru získáte popisovač GDI systému `CFont` Windows písma připojeného k objektu.
 
 ```
 operator HFONT() const;
@@ -345,13 +345,13 @@ operator HFONT() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač objektu písma GDI systému Windows připojeného k `CFont` v případě úspěchu; jinak NULL.
+Popisovač objektu písma Windows GDI připojeného k `CFont` if successful; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že tento operátor je automaticky použit pro převody z `CFont` na [písma a text](/windows/win32/gdi/fonts-and-text), můžete předat objekty `CFont` funkcím, které očekávají HFONTs.
+Vzhledem k tomu, že `CFont` tento operátor se automaticky používá `CFont` pro převody z [písma a text](/windows/win32/gdi/fonts-and-text), můžete předat objekty funkce, které očekávají HfONTs.
 
-Další informace o použití grafických objektů naleznete v tématu [Graphics Objects](/windows/win32/gdi/graphic-objects) in Windows SDK.
+Další informace o používání grafických objektů naleznete v [tématu Grafické objekty](/windows/win32/gdi/graphic-objects) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -359,6 +359,6 @@ Další informace o použití grafických objektů naleznete v tématu [Graphics
 
 ## <a name="see-also"></a>Viz také
 
-[HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

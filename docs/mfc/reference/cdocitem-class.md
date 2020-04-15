@@ -1,5 +1,5 @@
 ---
-title: Cdocitem – třída
+title: CDocItem – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDocItem
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168190"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375626"
 ---
-# <a name="cdocitem-class"></a>Cdocitem – třída
+# <a name="cdocitem-class"></a>CDocItem – třída
 
 Základní třída pro položky dokumentu, které jsou součástí dat dokumentu.
 
@@ -31,22 +31,22 @@ class CDocItem : public CCmdTarget
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CDocItem::GetDocument](#getdocument)|Vrátí dokument, který obsahuje položku.|
-|[CDocItem::IsBlank](#isblank)|Určuje, zda položka obsahuje všechny informace.|
+|[CDocItem::IsBlank](#isblank)|Určuje, zda položka obsahuje nějaké informace.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CDocItem` objekty se používají pro reprezentaci položky OLE v dokumentech klienta i serveru.
+`CDocItem`objekty se používají k reprezentaci položek OLE v klientských i serverových dokumentech.
 
-Další informace najdete v článku [kontejnerů: Implementace kontejneru](../../mfc/containers-implementing-a-container.md).
+Další informace naleznete v článku [Kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
 `CDocItem`
 
@@ -54,9 +54,9 @@ Další informace najdete v článku [kontejnerů: Implementace kontejneru](../.
 
 **Záhlaví:** afxole.h
 
-##  <a name="getdocument"></a>  CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument
 
-Voláním této funkce získáte dokumentu, který obsahuje položku.
+Volání této funkce získat dokument, který obsahuje položku.
 
 ```
 CDocument* GetDocument() const;
@@ -64,15 +64,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na dokument, který obsahuje položky; Hodnota NULL, pokud položka není součástí dokumentu.
+Ukazatel na dokument, který obsahuje položku; NULL, pokud položka není součástí dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je v odvozených třídách přepsána [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [odvozenou třídu COleServerItem](../../mfc/reference/coleserveritem-class.md), vrací ukazatel na buď [coledocument –](../../mfc/reference/coledocument-class.md), [ Colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md), nebo [coleserverdoc –](../../mfc/reference/coleserverdoc-class.md) objektu.
+Tato funkce je přepsána v odvozených třídách [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [COleServerItem](../../mfc/reference/coleserveritem-class.md), vrací ukazatel buď [cOleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objektu.
 
-##  <a name="isblank"></a>  CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank
 
-Volá se rozhraním, když dojde k výchozí serializace.
+Volat v rámci při výchozí serializace dojde.
 
 ```
 virtual BOOL IsBlank() const;
@@ -80,18 +80,18 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud položka neobsahuje žádné informace o; jinak 0.
+Nenulová, pokud položka neobsahuje žádné informace; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `CDocItem` objekty nejsou prázdné. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objekty jsou prázdné někdy, protože vyplývají přímo ze `CDocItem`. Ale [odvozenou třídu COleServerItem](../../mfc/reference/coleserveritem-class.md) objekty jsou vždy prázdná. Ve výchozím nastavení, OLE – aplikace, který obsahuje `COleClientItem` objekty, které mají žádné x nebo y rozsahu se serializují. To se provádí tak, že vrací hodnotu TRUE z přepsání `IsBlank` Pokud položka neobsahuje žádné x nebo y rozsahu.
+Ve výchozím `CDocItem` nastavení nejsou objekty prázdné. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objekty jsou někdy prázdné, protože jsou odvozeny přímo z `CDocItem`. Objekty [COleServerItem](../../mfc/reference/coleserveritem-class.md) jsou však vždy prázdné. Ve výchozím nastavení jsou `COleClientItem` aplikace OLE obsahující objekty, které nemají rozsah x nebo y, serializovány. To se provádí vrácením TRUE z `IsBlank` přepsání, pokud položka nemá žádný rozsah x nebo y.
 
-Tato funkce přepište, pokud chcete provádět další akce během serializace.
+Přepsat tuto funkci, pokud chcete implementovat další akce během serializace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>
+[Třída COleDocument](../../mfc/reference/coledocument-class.md)<br/>
 [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)

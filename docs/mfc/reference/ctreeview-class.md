@@ -1,5 +1,5 @@
 ---
-title: CTreeView – – třída
+title: CTreeView – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CTreeView
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2ef93152c83d3bbec2b89ada0596ee612b24701b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373291"
 ---
-# <a name="ctreeview-class"></a>CTreeView – – třída
+# <a name="ctreeview-class"></a>CTreeView – třída
 
-Zjednodušuje použití ovládacího prvku stromu a třídy [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), třída, která zapouzdřuje funkce ovládacího prvku stromu s architekturou zobrazení dokumentů a knihovny MFC.
+Zjednodušuje použití stromového ovládacího prvku a [ctreectrl](../../mfc/reference/ctreectrl-class.md), třídy, která zapouzdřuje funkce řízení stromu, s architekturou zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,29 +31,29 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTreeView –:: CTreeView –](#ctreeview)|Vytvoří objekt `CTreeView`.|
+|[CTreeView::CTreeView](#ctreeview)|Vytvoří `CTreeView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTreeView –:: GetTreeCtrl](#gettreectrl)|Vrátí ovládací prvek stromu přidružený k zobrazení.|
+|[CTreeView::GetTreeCtrl](#gettreectrl)|Vrátí ovládací prvek stromu přidružený k zobrazení.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace o této architektuře naleznete v přehledu třídy [CView](../../mfc/reference/cview-class.md) a křížových odkazů, které jsou zde uvedeny.
+Další informace o této architektuře naleznete v přehledu pro [CView](../../mfc/reference/cview-class.md) třídy a křížové odkazy citované zde.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CCtrlView](../../mfc/reference/cctrlview-class.md)
 
@@ -61,19 +61,19 @@ Další informace o této architektuře naleznete v přehledu třídy [CView](..
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcview. h
+**Záhlaví:** afxcview.h
 
-##  <a name="ctreeview"></a>CTreeView –:: CTreeView –
+## <a name="ctreeviewctreeview"></a><a name="ctreeview"></a>CTreeView::CTreeView
 
-Vytvoří objekt `CTreeView`.
+Vytvoří `CTreeView` objekt.
 
 ```
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>CTreeView –:: GetTreeCtrl
+## <a name="ctreeviewgettreectrl"></a><a name="gettreectrl"></a>CTreeView::GetTreeCtrl
 
-Vrátí odkaz na ovládací prvek stromu přidružený k zobrazení.
+Vrátí odkaz na stromový ovládací prvek přidružený k zobrazení.
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
@@ -83,6 +83,6 @@ CTreeCtrl& GetTreeCtrl() const;
 
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CView – třída](../../mfc/reference/cview-class.md)<br/>
+[Třída CView](../../mfc/reference/cview-class.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md)
