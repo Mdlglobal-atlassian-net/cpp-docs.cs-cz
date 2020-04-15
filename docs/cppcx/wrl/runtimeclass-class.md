@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: d45fe7c6d794f216da93ffbd95dbb7058d3336f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b4124ba3c60fdcb53fc29c7b791c0f73a49579
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376237"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
 
-Představuje třídu WinRT nebo COM, která dědí zadaných rozhraní a poskytuje zadaného modulu Windows Runtime, klasické rozhraní COM a slabou podporu odkazu.
+Představuje třídu WinRT nebo COM, která dědí zadaná rozhraní a poskytuje zadanou modul Windows Runtime, klasickou podporu com a slabé reference.
 
-Tato třída poskytuje standardní implementace WinRT a com. tříd, poskytuje implementaci `QueryInterface`, `AddRef`, `Release` atd., spravuje referenčního počtu modulu a obsahuje podporu pro poskytuje objekt pro vytváření tříd pro aktivovatelné objekty.
+Tato třída poskytuje často používané implementace WinRT a COM `QueryInterface` `AddRef`třídy, poskytující implementaci , , atd., `Release` spravuje počet odkazů modulu a má podporu pro poskytování factory třídy pro aktivovatelné objekty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,58 +52,58 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ### <a name="parameters"></a>Parametry
 
 *classFlags*<br/>
-Volitelný parametr. Kombinace jedné nebo více [runtimeclasstype –](runtimeclasstype-enumeration.md) hodnot výčtu. `__WRL_CONFIGURATION_LEGACY__` Makra lze definovat za účelem změnit výchozí hodnotu classFlags pro všechny třídy modulu runtime v projektu. Pokud definována, RuntimeClass instance jsou mimo agilní ve výchozím nastavení. Pokud není definován, RuntimeClass instance jsou agilní ve výchozím nastavení. Aby se zabránilo nejednoznačnosti vždy zadávat `Microsoft::WRL::FtmBase` v `TInterfaces` nebo `RuntimeClassType::InhibitFtmBase`. Poznámka: Pokud jsou obě používají objekt InhibitFtmBase a ftmbase – bude agile.
+Volitelný parametr. Kombinace jedné nebo více hodnot výčtu [Typu RuntimeClassType.](runtimeclasstype-enumeration.md) Makro `__WRL_CONFIGURATION_LEGACY__` lze definovat pro změnu výchozí hodnoty classFlags pro všechny runtime třídy v projektu. Pokud je definováno, instance RuntimeClass jsou ve výchozím nastavení neagilní. Pokud není definována, RuntimeClass instance jsou agilní ve výchozím nastavení. Chcete-li se vyhnout `Microsoft::WRL::FtmBase` nejednoznačnosti, vždy zadejte v `TInterfaces` nebo `RuntimeClassType::InhibitFtmBase`. Všimněte si, pokud InhibitFtmBase a FtmBase jsou použity objekt bude agilní.
 
-*TInterfaces*<br/>
-Seznam rozhraní objekt implementuje nad rámec `IUnknown`, `IInspectable` nebo jiných rozhraní řídí [runtimeclasstype –](runtimeclasstype-enumeration.md). Je také může seznam jiných tříd nelze odvodit z, zejména `Microsoft::WRL::FtmBase` vytvořit objekt agilní a způsobit, že k implementaci `IMarshal`.
+*TRozhraní*<br/>
+Seznam rozhraní, které objekt implementuje mimo , `IUnknown` `IInspectable` nebo jiná rozhraní řízená [typem RuntimeClassType](runtimeclasstype-enumeration.md). Může také seznam dalších tříd, které `Microsoft::WRL::FtmBase` mají být odvozeny z, zejména `IMarshal`aby objekt agilní a způsobit jeho implementaci .
 
 ## <a name="members"></a>Členové
 
 `RuntimeClassInitialize`<br/>
-Funkce, která inicializuje objekt, pokud `MakeAndInitialize` šablony funkce se používá ke konstrukci objektu. Vrátí hodnotu S_OK, pokud objekt byl úspěšně inicializován nebo kód chyby modelu COM. Pokud inicializace se nezdařila. Kód chyby modelu COM je postoupena jako návratovou hodnotu `MakeAndInitialize`. Všimněte si, že `RuntimeClassInitialize` metoda není volána, pokud `Make` šablony funkce se používá ke konstrukci objektu.
+Funkce, která inicializuje objekt, `MakeAndInitialize` pokud je funkce šablony použita k vytvoření objektu. Vrátí S_OK, pokud byl objekt úspěšně inicializován, nebo kód chyby COM, pokud se inicializace nezdařila. Kód chyby COM je rozšířen jako vrácená hodnota . `MakeAndInitialize` Všimněte `RuntimeClassInitialize` si, že metoda `Make` není volána, pokud je funkce šablony použita k vytvoření objektu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Název                                               | Popis                                                     |
+| Name (Název)                                               | Popis                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
-| [Runtimeclass::runtimeclass –](#runtimeclass)        | Inicializuje aktuální instanci aplikace `RuntimeClass` třídy.   |
-| [RuntimeClass:: ~ runtimeclass –](#tilde-runtimeclass) | Zruší inicializaci aktuální instance `RuntimeClass` třídy. |
+| [RuntimeClass::RuntimeClass](#runtimeclass)        | Inicializuje aktuální instanci třídy. `RuntimeClass`   |
+| [RuntimeClass::~RuntimeClass](#tilde-runtimeclass) | Deinitializes aktuální instance `RuntimeClass` třídy. |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-| Název                                                      | Popis                                                                                        |
+| Name (Název)                                                      | Popis                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [Runtimeclass::addref –](#addref)                           | Zvýší počet odkazů pro aktuální `RuntimeClass` objektu.                              |
-| [Runtimeclass::decrementreference –](#decrementreference)   | Sníží počet odkaz pro aktuální `RuntimeClass` objektu.                              |
-| [Runtimeclass::getiids –](#getiids)                         | Získává pole, která může obsahovat rozhraní implementované aktuální ID `RuntimeClass` objektu. |
-| [Runtimeclass::getruntimeclassname –](#getruntimeclassname) | Získá název třídy runtime aktuálního `RuntimeClass` objektu.                                  |
-| [Runtimeclass::gettrustlevel –](#gettrustlevel)             | Získá aktuální úroveň důvěryhodnosti `RuntimeClass` objektu.                                         |
-| [Runtimeclass::getweakreference –](#getweakreference)       | Získá ukazatel na objekt nestálý odkaz pro aktuální `RuntimeClass` objektu.                 |
-| [Runtimeclass::internaladdref –](#internaladdref)           | Zvýší počet odkazů na aktuální `RuntimeClass` objektu.                               |
-| [RuntimeClass::QueryInterface](#queryinterface)           | Načte ukazatel na ID zadané rozhraní.                                                 |
-| [Runtimeclass::Release –](#release)                         | Provádí operaci vydání COM v aktuálním `RuntimeClass` objektu.                             |
+| [RuntimeClass::AddRef](#addref)                           | Zintáží počet odkazů `RuntimeClass` pro aktuální objekt.                              |
+| [RuntimeClass::DecrementReference](#decrementreference)   | Sníží počet odkazů pro aktuální `RuntimeClass` objekt.                              |
+| [RuntimeClass::GetIIds](#getiids)                         | Získá pole, které může obsahovat ID `RuntimeClass` rozhraní implementované aktuálním objektem. |
+| [RuntimeClass::GetRuntimeClassName](#getruntimeclassname) | Získá název třídy runtime `RuntimeClass` aktuálního objektu.                                  |
+| [RuntimeClass::GetTrustLevel](#gettrustlevel)             | Získá úroveň důvěryhodnosti `RuntimeClass` aktuálního objektu.                                         |
+| [RuntimeClass::GetWeakReference](#getweakreference)       | Získá ukazatel na slabý referenční objekt `RuntimeClass` pro aktuální objekt.                 |
+| [RuntimeClass::InternalAddRef](#internaladdref)           | Zintáží počet odkazů `RuntimeClass` na aktuální objekt.                               |
+| [RuntimeClass::QueryInterface](#queryinterface)           | Načte ukazatel na zadané ID rozhraní.                                                 |
+| [RuntimeClass::Vydání](#release)                         | Provede operaci vydání com `RuntimeClass` na aktuální objekt.                             |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-Toto je podrobnost implementace.
+Toto je detail implementace.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ runtimeclass –
+## <a name="runtimeclassruntimeclass"></a><a name="tilde-runtimeclass"></a>RuntimeClass::~RuntimeClass
 
-Zruší inicializaci aktuální instance `RuntimeClass` třídy.
+Deinitializes aktuální instance `RuntimeClass` třídy.
 
 ```cpp
 virtual ~RuntimeClass();
 ```
 
-## <a name="addref"></a>Runtimeclass::addref –
+## <a name="runtimeclassaddref"></a><a name="addref"></a>RuntimeClass::AddRef
 
-Zvýší počet odkazů pro aktuální `RuntimeClass` objektu.
+Zintáží počet odkazů `RuntimeClass` pro aktuální objekt.
 
 ```cpp
 STDMETHOD_(
@@ -114,11 +114,11 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
-## <a name="decrementreference"></a>Runtimeclass::decrementreference –
+## <a name="runtimeclassdecrementreference"></a><a name="decrementreference"></a>RuntimeClass::DecrementReference
 
-Sníží počet odkaz pro aktuální `RuntimeClass` objektu.
+Sníží počet odkazů pro aktuální `RuntimeClass` objekt.
 
 ```cpp
 ULONG DecrementReference();
@@ -126,11 +126,11 @@ ULONG DecrementReference();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
-## <a name="getiids"></a>Runtimeclass::getiids –
+## <a name="runtimeclassgetiids"></a><a name="getiids"></a>RuntimeClass::GetIIds
 
-Získává pole, která může obsahovat rozhraní implementované aktuální ID `RuntimeClass` objektu.
+Získá pole, které může obsahovat ID `RuntimeClass` rozhraní implementované aktuálním objektem.
 
 ```cpp
 STDMETHOD(
@@ -143,18 +143,18 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *iidCount*<br/>
-Pokud tato operace dokončí, celkový počet prvků v poli *IID*.
+Po dokončení této operace, celkový počet prvků v poli *IID .*
 
-*iids*<br/>
-Když tato operace dokončí, ukazatel na pole ID rozhraní.
+*IIDs*<br/>
+Po dokončení této operace ukazatel na pole ID rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě E_OUTOFMEMORY.
+S_OK v případě úspěchu; jinak E_OUTOFMEMORY.
 
-## <a name="getruntimeclassname"></a>Runtimeclass::getruntimeclassname –
+## <a name="runtimeclassgetruntimeclassname"></a><a name="getruntimeclassname"></a>RuntimeClass::GetRuntimeClassName
 
-Získá název třídy runtime aktuálního `RuntimeClass` objektu.
+Získá název třídy runtime `RuntimeClass` aktuálního objektu.
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -165,19 +165,19 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parametry
 
 *runtimeName*<br/>
-Po dokončení této operace, název třídy runtime.
+Po dokončení této operace název třídy runtime.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Chyba vyhodnocení je vygenerován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` není definován.
+Chyba assert je emitován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` není definována.
 
-## <a name="gettrustlevel"></a>Runtimeclass::gettrustlevel –
+## <a name="runtimeclassgettrustlevel"></a><a name="gettrustlevel"></a>RuntimeClass::GetTrustLevel
 
-Získá aktuální úroveň důvěryhodnosti `RuntimeClass` objektu.
+Získá úroveň důvěryhodnosti `RuntimeClass` aktuálního objektu.
 
 ```cpp
 STDMETHOD(GetTrustLevel)(
@@ -187,20 +187,20 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Parametry
 
-*trustLvl*<br/>
-Když tato operace dokončí, aktuální úroveň důvěryhodnosti `RuntimeClass` objektu.
+*důvěraLvl*<br/>
+Po dokončení této operace úroveň důvěryhodnosti `RuntimeClass` aktuálního objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy S_OK.
+Vždycky S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chyba vyhodnocení je vygenerován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` není definován.
+Chyba assert je emitován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` není definována.
 
-## <a name="getweakreference"></a>Runtimeclass::getweakreference –
+## <a name="runtimeclassgetweakreference"></a><a name="getweakreference"></a>RuntimeClass::GetWeakReference
 
-Získá ukazatel na objekt nestálý odkaz pro aktuální `RuntimeClass` objektu.
+Získá ukazatel na slabý referenční objekt `RuntimeClass` pro aktuální objekt.
 
 ```cpp
 STDMETHOD(
@@ -210,16 +210,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*weakreference –*<br/>
-Když tato operace dokončí, ukazatel na objekt nestálý odkaz.
+*slabýReference*<br/>
+Po dokončení této operace ukazatel na slabý referenční objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy S_OK.
+Vždycky S_OK.
 
-## <a name="internaladdref"></a>Runtimeclass::internaladdref –
+## <a name="runtimeclassinternaladdref"></a><a name="internaladdref"></a>RuntimeClass::InternalAddRef
 
-Zvýší počet odkazů na aktuální `RuntimeClass` objektu.
+Zintáží počet odkazů `RuntimeClass` na aktuální objekt.
 
 ```cpp
 ULONG InternalAddRef();
@@ -229,9 +229,9 @@ ULONG InternalAddRef();
 
 Výsledný počet odkazů.
 
-## <a name="queryinterface"></a>RuntimeClass::QueryInterface
+## <a name="runtimeclassqueryinterface"></a><a name="queryinterface"></a>RuntimeClass::QueryInterface
 
-Načte ukazatel na ID zadané rozhraní.
+Načte ukazatel na zadané ID rozhraní.
 
 ```cpp
 STDMETHOD(
@@ -243,19 +243,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ppvObject*<br/>
-Když tento opereation se dokončí, ukazatel na rozhraní určené typem *riid* parametru.
+*ppvObjekt*<br/>
+Po dokončení tohoto opereation, ukazatel na rozhraní určené *riid* parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
-## <a name="release"></a>Runtimeclass::Release –
+## <a name="runtimeclassrelease"></a><a name="release"></a>RuntimeClass::Vydání
 
-Provádí operaci vydání COM v aktuálním `RuntimeClass` objektu.
+Provede operaci vydání com `RuntimeClass` na aktuální objekt.
 
 ```cpp
 STDMETHOD_(
@@ -266,15 +266,15 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud klesne na nulu, počet odkazů `RuntimeClass` objekt odstranit.
+Pokud se počet odkazů `RuntimeClass` stane nulou, objekt se odstraní.
 
-## <a name="runtimeclass"></a>Runtimeclass::runtimeclass –
+## <a name="runtimeclassruntimeclass"></a><a name="runtimeclass"></a>RuntimeClass::RuntimeClass
 
-Inicializuje aktuální instanci aplikace `RuntimeClass` třídy.
+Inicializuje aktuální instanci třídy. `RuntimeClass`
 
 ```cpp
 RuntimeClass();

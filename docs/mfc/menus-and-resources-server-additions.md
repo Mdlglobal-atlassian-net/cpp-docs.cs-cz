@@ -15,58 +15,58 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: c1dfd059572c433e8fd7ccaf6e5c48e880f59cad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8366cd8b0376766b7914c94a24cef6598761a805
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375978"
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 
-Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalších prostředcích v aplikaci pro vizuální úpravu serveru (komponenty). Serverová aplikace vyžaduje mnoho dalších přidání do struktury nabídky a další prostředky, protože je možné ji spustit v jednom ze tří režimů: samostatné, vložené nebo na místě. Jak je popsáno v článku [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) , existuje maximálně čtyři sady nabídek. Všechny čtyři se používají pro aplikaci MDI s celými servery, zatímco pro miniserver se používají jenom tři. Průvodce aplikací vytvoří rozložení nabídky potřebné pro typ serveru, který chcete. Může být nutné provést některé vlastní úpravy.
+Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalších prostředcích v aplikaci pro vizuální úpravy serveru (součást). Serverová aplikace vyžaduje mnoho dodatků ke struktuře nabídky a další prostředky, protože lze spustit v jednom ze tří režimů: samostatně, vložené nebo na místě. Jak je popsáno v článku [Nabídky a prostředky (OLE),](../mfc/menus-and-resources-ole.md) existují maximálně čtyři sady nabídek. Všechny čtyři se používají pro aplikaci MDI full-server, zatímco pouze tři se používají pro miniserver. Průvodce aplikací vytvoří rozložení nabídky nezbytné pro požadovaný typ serveru. Některé přizpůsobení může být nezbytné.
 
-Pokud nepoužíváte průvodce aplikací, možná se budete chtít podívat na HIERSVR. RC, skript prostředků pro ukázkovou aplikaci knihovny MFC [HIERSVR](../overview/visual-cpp-samples.md), aby bylo možné zjistit, jak jsou tyto změny implementovány.
+Pokud nepoužijete průvodce aplikací, můžete se podívat na HIERSVR. RC, skript prostředků pro ukázkovou aplikaci knihovny MFC [HIERSVR](../overview/visual-cpp-samples.md), zobrazíte způsob implementace těchto změn.
 
-Témata, která jsou popsaná v tomto článku, zahrnují:
+Témata uvedená v tomto článku zahrnují:
 
 - [Přidání nabídky serveru](#_core_server_menu_additions)
 
-- [Přidání tabulky akcelerátorů](#_core_server_application_accelerator_table_additions)
+- [Doplňky tabulek akcelerátoru](#_core_server_application_accelerator_table_additions)
 
 - [Přidání tabulky řetězců](../mfc/menus-and-resources-container-additions.md)
 
-- [Miniserver přidání](#_core_mini.2d.server_additions)
+- [Doplňky miniserverů](#_core_mini.2d.server_additions)
 
-##  <a name="_core_server_menu_additions"></a>Přidání nabídky serveru
+## <a name="server-menu-additions"></a><a name="_core_server_menu_additions"></a>Přidání nabídky serveru
 
-Aplikace serveru (komponenty) musí mít přidané prostředky nabídky pro podporu úprav vizuálů OLE. Nabídky používané při spuštění aplikace v samostatném režimu není nutné měnit, ale před sestavením aplikace je nutné přidat dva nové prostředky nabídky: jednu pro podporu místní aktivace a jednu pro podporu plně otevřeného serveru. Oba prostředky se používají v aplikacích s úplnými a miniserver aplikacemi.
+Serverové (komponentové) aplikace musí mít přidány prostředky nabídky pro podporu vizuálních úprav OLE. Nabídky používané při spuštění aplikace v samostatném režimu není nutné měnit, ale před sestavením aplikace je nutné přidat dva nové prostředky nabídky: jeden pro podporu aktivace na místě a jeden pro podporu plně otevřeného serveru. Oba zdroje nabídky jsou využívány full- a miniserveraplikacemi.
 
-- Pro podporu místní aktivace musíte vytvořit prostředek nabídky, který je velmi podobný jako prostředek nabídky, který se používá při spuštění v samostatném režimu. Rozdíl v této nabídce je, že položky souborů a oken (a všechny ostatní položky nabídky, které se týkají aplikace, a ne data) chybí. Aplikace kontejneru dodá tyto položky nabídky. Další informace o nástroji a příkladech této nabídky, kterou slučujete, najdete v článcích [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
+- Chcete-li podporovat aktivaci na místě, musíte vytvořit prostředek nabídky, který je velmi podobný prostředku nabídky používanému při spuštění v samostatném režimu. Rozdíl v této nabídce je, že chybí položky souboru a okna (a všechny ostatní položky nabídky, které se zabývají aplikací, a nikoli data). Kontejner aplikace bude dodávat tyto položky nabídky. Další informace o této technice slučování nabídek a jeho příklad naleznete v článku [Nabídky a zdroje: Sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
 
-- Pro zajištění plné otevřené aktivace je nutné vytvořit prostředek nabídky skoro stejně jako prostředek nabídky, který se používá při spuštění v samostatném režimu. Jedinou úpravou tohoto prostředku nabídky je, že některé položky jsou předané, aby odrážely skutečnost, že server pracuje na položce vložené do složeného dokumentu.
+- Chcete-li podporovat plně otevřenou aktivaci, musíte vytvořit prostředek nabídky téměř totožný s prostředkem nabídky používaným při spuštění v samostatném režimu. Jedinou úpravou tohoto prostředku nabídky je, že některé položky jsou přeformulovány tak, aby odrážely skutečnost, že server pracuje s položkou vloženou do složeného dokumentu.
 
-Kromě změn uvedených v tomto článku musí váš soubor prostředků zahrnovat AFXOLESV. RC, který je požadován pro implementaci knihovna Microsoft Foundation Class. Tento soubor je v podadresáři MFC\Include.
+Kromě změn uvedených v tomto článku musí soubor prostředků zahrnout AFXOLESV. RC, který je vyžadován pro implementaci knihovny tříd Microsoft Foundation. Tento soubor je v podadresáři Knihovna MFC\Zahrnout.
 
-##  <a name="_core_server_application_accelerator_table_additions"></a>Přidání tabulky akcelerátoru serverové aplikace
+## <a name="server-application-accelerator-table-additions"></a><a name="_core_server_application_accelerator_table_additions"></a>Přidání tabulek akcelerátoru aplikací serveru
 
-Do serverových aplikací musí být přidány dva nové prostředky tabulky akcelerátoru. odpovídají přímo dříve popsaným prostředkům v nabídce. První tabulka akcelerátorů se použije, když se serverová aplikace aktivuje. Skládá se ze všech položek v tabulce akcelerátorů zobrazení s výjimkou těch, které jsou vázané na nabídky soubor a okno.
+Do serverových aplikací musí být přidány dva nové prostředky tabulky akcelerátoru. odpovídají přímo novým dříve popsaným zdrojům nabídky. První tabulka akcelerátoru se používá při aktivaci serverové aplikace na místě. Skládá se ze všech položek v tabulce akcelerátoru zobrazení s výjimkou těch, které jsou vázány na nabídky Soubor a Okno.
 
-Druhá tabulka je skoro přesná kopie tabulky akcelerátorů zobrazení. Všechny rozdíly mezi paralelními změnami provedenými v nabídce úplné otevření, které jsou uvedeny v části [Přidání nabídky serveru](#_core_server_menu_additions).
+Druhá tabulka je téměř přesnou kopií tabulky akcelerátorů zobrazení. Jakékoli rozdíly paralelní změny provedené v plně otevřené nabídce uvedené v [menu Server Dodatky](#_core_server_menu_additions).
 
-Pokud se například tyto změny v tabulce akcelerátorů změní, porovnejte IDR_HIERSVRTYPE_SRVR_IP a IDR_HIERSVRTYPE_SRVR_EMB tabulky akcelerátorů pomocí IDR_MAINFRAME v HIERSVR. Soubor RC zahrnutý v ukázce [HIERSVR](../overview/visual-cpp-samples.md)knihovny MFC OLE. V vložené tabulce chybí akcelerátory souborů a oken a přesné kopie jsou v vložené tabulce.
+Příklad těchto změn v tabulce akcelerátoru porovnejte tabulky IDR_HIERSVRTYPE_SRVR_IP a IDR_HIERSVRTYPE_SRVR_EMB akcelerátoru s IDR_MAINFRAME v HIERSVR. RC soubor obsažený ve vzorku KNIHOVNY OLE [HIERSVR](../overview/visual-cpp-samples.md). V tabulce na místě chybí akcelerátory souborů a oken a jejich přesné kopie jsou v vložené tabulce.
 
-##  <a name="_core_string_table_additions_for_server_applications"></a>Přidání tabulkového řetězce pro serverové aplikace
+## <a name="string-table-additions-for-server-applications"></a><a name="_core_string_table_additions_for_server_applications"></a>Přidání tabulky řetězců pro serverové aplikace
 
-V serverové aplikaci je nutné přidat pouze jednu tabulku řetězců – řetězec, který označuje, že inicializace OLE se nezdařila. Příklad: Zde je položka řetězcové tabulky, kterou průvodce aplikací generuje:
+Pouze jeden řetězec tabulka sčítání je nutné v aplikaci serveru – řetězec znamenat, že inicializace OLE se nezdařilo. Zde je zde položka tabulky řetězců, kterou generuje průvodce aplikací:
 
 |ID|Řetězec|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|Inicializace technologie OLE se nezdařila. Ujistěte se, že jsou knihovny OLE správné verze.|
+|IDP_OLE_INIT_FAILED|Inicializace OLE se nezdařila. Ujistěte se, že knihovny OLE jsou správná verze.|
 
-##  <a name="_core_mini.2d.server_additions"></a>Miniserver přidání
+## <a name="miniserver-additions"></a><a name="_core_mini.2d.server_additions"></a>Doplňky miniserverů
 
-Stejné dodatky platí pro miniservers, které jsou uvedené výše pro úplné servery. Vzhledem k tomu, že miniserver nelze spustit v samostatném režimu, je jeho hlavní nabídka mnohem menší. Hlavní nabídka vytvořená Průvodcem aplikací obsahuje jenom nabídku soubor, která obsahuje jenom položky Exit a About. Vložené a místní nabídky a akcelerátory pro miniservers jsou stejné jako u úplných serverů.
+Stejné dodatky platí pro miniservery jako ty, které jsou uvedeny výše pro full-servery. Vzhledem k tomu, že miniserver nelze spustit v samostatném režimu, jeho hlavní nabídka je mnohem menší. Hlavní nabídka vytvořená průvodcem aplikací obsahuje pouze nabídku Soubor, která obsahuje pouze položky Exit a About. Integrované a místní nabídky a akcelerátory pro miniservery jsou stejné jako u full-servers.
 
 ## <a name="see-also"></a>Viz také
 

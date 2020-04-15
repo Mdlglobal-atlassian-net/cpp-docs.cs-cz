@@ -1,5 +1,5 @@
 ---
-title: CMFCSpinButtonCtrl Class
+title: Třída CMFCSpinButtonCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376180"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl Class
+# <a name="cmfcspinbuttonctrl-class"></a>Třída CMFCSpinButtonCtrl
 
-`CMFCSpinButtonCtrl` Třída podporuje vizuálního správce, který vykreslí ovládací prvek číselníku.
+Třída `CMFCSpinButtonCtrl` podporuje vizuální manažer, který kreslí ovládací prvek číselníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,34 +29,34 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Výchozí konstruktor.|
 |`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Překreslí aktuální ovládací prvek typu číselník tlačítko.|
+|[CMFCSpinButtonCtrl::Ondraw](#ondraw)|Překreslí aktuální ovládací prvek číselníku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Nakreslete ovládací prvek číselníku ve vaší aplikaci pomocí Správce vzhledu, nahraďte všechny výskyty `CSpinButtonCtrl` třídy s `CMFCSpinButtonCtrl` třídy.
+Chcete-li použít vizuální manažer k nakreslení ovládacího prvku číselníku ve vaší aplikaci, nahraďte všechny instance `CSpinButtonCtrl` třídy třídou. `CMFCSpinButtonCtrl`
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCSpinButtonCtrl` třídy a použít jeho `Create` metoda.
+Následující příklad ukazuje, jak vytvořit objekt `CMFCSpinButtonCtrl` třídy `Create` a použít jeho metodu.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)
 
@@ -64,11 +64,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCSpinButtonCtrl` tř�
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxspinbuttonctrl.h
+**Záhlaví:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::Ondraw
 
-Překreslí aktuální ovládací prvek typu číselník tlačítko.
+Překreslí aktuální ovládací prvek číselníku.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -76,14 +76,14 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-Rámec volá `CMFCSpinButtonCtrl::OnPaint` metodu ke zpracování [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) zprávu, a že metoda volá to `CMFCSpinButtonCtrl::OnDraw` metody. Přepsáním této metody můžete přizpůsobit tak, jak rozhraní nakreslí otočný ovládací prvek tlačítko.
+Framework volá `CMFCSpinButtonCtrl::OnPaint` metodu pro zpracování [cWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) zprávy a tato `CMFCSpinButtonCtrl::OnDraw` metoda zase volá tuto metodu. Přepsat tuto metodu přizpůsobit způsob, jakým rámec kreslí ovládací prvek číselníku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

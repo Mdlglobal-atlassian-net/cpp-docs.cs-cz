@@ -2,22 +2,22 @@
 title: Operátory oboru názvů Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419236"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376294"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operátory oboru názvů Concurrency (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[podnikatel](#operator_mod)|[podnikatel](#operator_star)|
-|[operator + – operátor](#operator_add)|[podnikatel](#operator-)|[podnikatel](#operator_div)|
-|[operator = = – operátor](#operator_eq_eq)|
+|[operátor!=](#operator_neq)|[operátor%](#operator_mod)|[operátor*](#operator_star)|
+|[operátor+](#operator_add)|[operátor-](#operator-)|[operátor/](#operator_div)|
+|[operátor==](#operator_eq_eq)|
 
-## <a name="operator_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="operator_eq_eq"></a>operátor==
 
 Určuje, zda jsou zadané argumenty stejné.
 
@@ -37,16 +37,16 @@ bool operator== (
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jedna z řazených kolekcí členů k porovnání
+Jeden z n-tic porovnat.
 
 *_Rhs*<br/>
-Jedna z řazených kolekcí členů k porovnání
+Jeden z n-tic porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se řazené kolekce členů rovnají; v opačném případě **false**.
+**true** v případě, že řazené kolekce členů jsou stejné; jinak **false**.
 
-## <a name="operator_neq"></a>! = – operátor
+## <a name="operator"></a><a name="operator_neq"></a>operátor!=
 
 Určuje, zda zadané argumenty nejsou stejné.
 
@@ -66,18 +66,18 @@ bool operator!= (
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jedna z řazených kolekcí členů k porovnání
+Jeden z n-tic porovnat.
 
 *_Rhs*<br/>
-Jedna z řazených kolekcí členů k porovnání
+Jeden z n-tic porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud řazené kolekce členů nejsou stejné; v opačném případě **false**.
+**true** v případě, že řazené kolekce členů nejsou stejné; jinak **false**.
 
-## <a name="operator_add"></a>operator + – operátor
+## <a name="operator"></a><a name="operator_add"></a>operátor+
 
-Vypočítá součet zadaných argumentů ze součásti.
+Vypočítá součet komponent zadaných argumentů.
 
 ```cpp
 template <
@@ -111,18 +111,18 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jeden z argumentů, které mají být přidány.
+Jeden z argumentů přidat.
 
 *_Rhs*<br/>
-Jeden z argumentů, které mají být přidány.
+Jeden z argumentů přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Součet zadaných argumentů ze součásti.
+Součet komponent y zadané argumenty.
 
-## <a name="operator-"></a>podnikatel
+## <a name="operator-"></a><a name="operator-"></a>operátor-
 
-Vypočítá rozdíl mezi zadanými argumenty v rámci součásti.
+Vypočítá rozdíl komponenty mezi zadanými argumenty.
 
 ```cpp
 template <
@@ -156,18 +156,18 @@ _Tuple_type<_Rank>   operator-(
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Argument, od kterého má být odečtena.
+Argument, od který má být odečten.
 
 *_Rhs*<br/>
-Argument, který má být odečten.
+Argument odečíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozdíl mezi zadanými argumenty v součásti.
+Komponenta moudrý rozdíl mezi zadané argumenty.
 
-## <a name="operator_star"></a>podnikatel
+## <a name="operator"></a><a name="operator_star"></a>operátor*
 
-Vypočítá produkt určený argumenty v rámci součásti.
+Vypočítá komponenty z hlediska složky zadané argumenty.
 
 ```cpp
 template <
@@ -193,18 +193,18 @@ _Tuple_type<_Rank>   operator*(
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jedna z řazených kolekcí členů k násobení.
+Jeden z n-tic množí.
 
 *_Rhs*<br/>
-Jedna z řazených kolekcí členů k násobení.
+Jeden z n-tic množí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Produkt, který je součástí zadaných argumentů.
+Komponenta moudrý produkt zadané argumenty.
 
-## <a name="operator_div"></a>podnikatel
+## <a name="operator"></a><a name="operator_div"></a>operátor/
 
-Vypočítá podíl zadaných argumentů v rámci součásti.
+Vypočítá kvocient zadaného argumentu z hlediska komponenty.
 
 ```cpp
 template <
@@ -230,18 +230,18 @@ _Tuple_type<_Rank>   operator/(
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Řazená kolekce členů k rozdělení.
+N-tice, která má být rozdělena.
 
 *_Rhs*<br/>
-Řazená kolekce členů k rozdělení.
+Řazená kolekce členů, kterou chcete rozdělit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podíl zadaných argumentů v rámci součásti.
+Kvocient zadaného argumentu z hlediska komponenty.
 
-## <a name="operator_mod"></a>podnikatel
+## <a name="operator"></a><a name="operator_mod"></a>operátor%
 
-Vypočítá zbytky prvního zadaného argumentu druhým zadaným argumentem.
+Vypočítá modul prvního zadaného argumentu druhým zadaným argumentem.
 
 ```cpp
 template <
@@ -267,15 +267,15 @@ _Tuple_type<_Rank>   operator%(
 Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Řazená kolekce členů, ze které se počítá modulo.
+Řazená kolekce členů, ze kterého je vypočítáno modulo.
 
 *_Rhs*<br/>
-Řazená kolekce členů do modulo podle.
+N-tice na modulo by.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledkem prvního zadaného argumentu je druhý zadaný argument.
+Výsledek prvního zadaného modulu argumentu druhý zadaný argument.
 
 ## <a name="see-also"></a>Viz také
 
-[Concurrency – obor názvů](concurrency-namespace-cpp-amp.md)
+[Obor názvů souběžnosti](concurrency-namespace-cpp-amp.md)

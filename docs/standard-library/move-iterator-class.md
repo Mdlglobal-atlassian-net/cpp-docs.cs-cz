@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 17af246a85c4e3f1e0c7eb9d387161ad7b5123a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377411"
 ---
 # <a name="move_iterator-class"></a>move_iterator – třída
 
-Šablona třídy `move_iterator` je obálkou pro iterátor. Iterátor move_iterator poskytuje stejné chování jako iterátor, kterého zabalí (uloží). Výjimkou je, že operátor přesměrování uloženého iterátoru mění na odkaz hodnoty rvalue a kopírování se tak mění na přesunutí. Další informace o rvalue naleznete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Šablona `move_iterator` třídy je obálka pro iterátor. Iterátor move_iterator poskytuje stejné chování jako iterátor, kterého zabalí (uloží). Výjimkou je, že operátor přesměrování uloženého iterátoru mění na odkaz hodnoty rvalue a kopírování se tak mění na přesunutí. Další informace o rvalues naleznete v tématu [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,56 +39,56 @@ class move_iterator;
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje objekt, který se chová jako iterátor s výjimkou případů, kdy došlo k jeho zpětnému odkazování. Ukládá iterátor náhodného přístupu typu `Iterator`, k němuž přistupuje prostřednictvím členské funkce `base()`. Všechny operace na `move_iterator` jsou prováděny přímo na uloženém iterátoru s tím rozdílem, že výsledek `operator*` je implicitně převeden na `value_type&&`, aby odkazoval na odkaz rvalue.
+Šablona třídy popisuje objekt, který se chová jako iterátor, s výjimkou případů, kdy je odkazováno. Ukládá random-access iterátor typu `Iterator`, přístup prostřednictvím členské `base()`funkce . Všechny operace `move_iterator` na a jsou prováděny přímo na uložené iterátoru, s tím rozdílem, že výsledek `operator*` je implicitně `value_type&&` přetypován, aby se odkazovat na rvalue.
 
-@No__t_0 může být schopen operací, které nejsou definovány zabalením iterátoru. Tyto operace by neměly být použity.
+A `move_iterator` může být schopen operací, které nejsou definovány zabalené iterátoru. Tyto operace by neměly být použity.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[move_iterator](#move_iterator)|Konstruktor pro objekty typu `move_iterator`.|
+|[move_iterator](#move_iterator)|Konstruktor pro objekty `move_iterator`typu .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[iterator_type](#iterator_type)|Synonymum pro parametr šablony `RandomIterator`.|
-|[iterator_category](#iterator_category)|Synonymum pro delší výraz **TypeName** stejného názvu, `iterator_category` určuje obecné možnosti iterátoru.|
-|[value_type](#value_type)|Synonymum pro delší výraz **TypeName** stejného názvu, `value_type` popisuje typ prvků iterátoru.|
-|[difference_type](#difference_type)|Synonymum pro delší výraz **TypeName** stejného názvu, `difference_type` popisuje celočíselný typ vyžadovaný pro vyjádření rozdílových hodnot mezi prvky.|
-|[ukazatele](#pointer)|Synonymum pro parametr šablony `RandomIterator`.|
-|[odkaz](#reference)|Synonymum pro odkaz na `rvalue` `value_type&&`.|
+|[iterator_type](#iterator_type)|Synonymum pro `RandomIterator`parametr šablony .|
+|[iterator_category](#iterator_category)|Synonymum pro výraz delší **název** typu `iterator_category` se stejným názvem identifikuje obecné schopnosti iterátoru.|
+|[value_type](#value_type)|Synonymum pro výraz delší **název** typu `value_type` se stejným názvem, popisuje, jaký typ iterátoru prvky jsou.|
+|[difference_type](#difference_type)|Synonymum pro výraz delší **název** typu `difference_type` se stejným názvem, popisuje integrální typ potřebný k vyjádření rozdílové hodnoty mezi prvky.|
+|[ukazatel](#pointer)|Synonymum pro `RandomIterator`parametr šablony .|
+|[Odkaz](#reference)|Synonymum `rvalue` pro `value_type&&`odkaz .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[base](#base)|Členská funkce vrátí uložený iterátor uzavřený tímto `move_iterator`.|
+|[base](#base)|Členská funkce vrátí uložený iterátor `move_iterator`zabalený tímto .|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[move_iterator:: operator * – operátor](#op_star)|Vrátí `(reference)*base().`|
-|[move_iterator:: operator + +](#op_add_add)|Zvýší uložený iterátor. Přesné chování závisí na tom, zda se jedná o operaci před přírůstkem nebo po přírůstku.|
-|[move_iterator:: operator--](#operator--)|Sníží uložený iterátor. Přesné chování závisí na tom, zda se jedná o operaci před snížením nebo po snížení.|
-|[move_iterator:: operator-&gt;](#op_arrow)|Vrátí `&**this`.|
-|[move_iterator:: operator-](#operator-)|Vrátí `move_iterator(*this) -=` tím, že nejprve odečte hodnotu vpravo od aktuální pozice.|
-|[move_iterator:: operator [] – operátor](#op_at)|Vrátí `(reference)*(*this + off)`. Umožňuje určit posun od aktuálního základu k získání hodnoty v tomto umístění.|
-|[move_iterator:: operator + – operátor](#op_add)|Vrátí `move_iterator(*this) +=` hodnotu. Umožňuje přidat posun k základu k získání hodnoty v tomto umístění.|
-|[move_iterator:: operator + =](#op_add_eq)|Přidá hodnotu na pravé straně k uloženému iterátoru a vrátí `*this`.|
-|[move_iterator:: operator-=](#operator-_eq)|Odečte pravou hodnotu od uloženého iterátoru a vrátí `*this`.|
+|[move_iterator::operátor*](#op_star)|Vrátí`(reference)*base().`|
+|[move_iterator::operátor++](#op_add_add)|Zvýší uložený iterátor. Přesné chování závisí na tom, zda se jedná o operaci před přírůstkem nebo po přírůstku.|
+|[move_iterator::operátor--](#operator--)|Sníží uložený iterátor. Přesné chování závisí na tom, zda se jedná o operaci před snížením nebo po snížení.|
+|[move_iterator::operátor-&gt;](#op_arrow)|Vrací objekt `&**this`.|
+|[move_iterator::operátor-](#operator-)|Vrátí `move_iterator(*this) -=` nejprve odečtením pravé hodnoty od aktuální pozice.|
+|[move_iterator::operátor[]](#op_at)|Vrací objekt `(reference)*(*this + off)`. Umožňuje určit posun od aktuálního základu k získání hodnoty v tomto umístění.|
+|[move_iterator::operátor+](#op_add)|Vrátí `move_iterator(*this) +=` hodnotu. Umožňuje přidat posun k základu k získání hodnoty v tomto umístění.|
+|[move_iterator::operátor+=](#op_add_eq)|Přidá hodnotu vpravo do uloženého iterátoru a vrátí `*this`.|
+|[move_iterator::operátor-=](#operator-_eq)|Odečte pravostrannou hodnotu od uloženého iterátoru a vrátí `*this`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<> iterátoru
 
 **Obor názvů:** std
 
-## <a name="base"></a>move_iterator:: Base
+## <a name="move_iteratorbase"></a><a name="base"></a>move_iterator::základna
 
-Vrátí uložený iterátor pro tento `move_iterator`.
+Vrátí uložený iterátor `move_iterator`pro tento .
 
 ```cpp
 RandomIterator base() const;
@@ -98,9 +98,9 @@ RandomIterator base() const;
 
 Členská funkce vrátí uložený iterátor.
 
-## <a name="difference_type"></a>move_iterator::d ifference_type
+## <a name="move_iteratordifference_type"></a><a name="difference_type"></a>move_iterator::difference_type
 
-Typ `difference_type` je `move_iterator` `typedef` na základě vlastnosti iterátoru `difference_type` a dá se k němu zaměnit.
+Typ `difference_type` je `move_iterator` `typedef` založen na vlastnosti `difference_type`iterátoru a může být s ním zaměnitelně použit.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::difference_type difference_type;
@@ -108,11 +108,11 @@ typedef typename iterator_traits<RandomIterator>::difference_type difference_typ
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro vlastnost iterátoru `typename iterator_traits<RandomIterator>::pointer`.
+Typ je synonymem pro iterátor `typename iterator_traits<RandomIterator>::pointer`znak .
 
-## <a name="iterator_category"></a>move_iterator::iterator_category
+## <a name="move_iteratoriterator_category"></a><a name="iterator_category"></a>move_iterator::iterator_category
 
-Typ `iterator_category` je `move_iterator` `typedef` na základě vlastnosti iterátoru `iterator_category` a dá se k němu zaměnit.
+Typ `iterator_category` je `move_iterator` `typedef` založen na vlastnosti `iterator_category`iterátoru a může být s ním zaměnitelně použit.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_category;
@@ -120,11 +120,11 @@ typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_ca
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro vlastnost iterátoru `typename iterator_traits<RandomIterator>::iterator_category`.
+Typ je synonymem pro iterátor `typename iterator_traits<RandomIterator>::iterator_category`znak .
 
-## <a name="iterator_type"></a>move_iterator::iterator_type
+## <a name="move_iteratoriterator_type"></a><a name="iterator_type"></a>move_iterator::iterator_type
 
-Typ `iterator_type` je založen na parametru šablony `RandomIterator` pro šablonu třídy `move_iterator` a lze jej v místě použít zaměnitelné.
+Typ `iterator_type` je založen na `RandomIterator` parametru šablony `move_iterator`šablony třídy a lze jej použít zaměnitelně na jeho místě.
 
 ```cpp
 typedef RandomIterator iterator_type;
@@ -132,11 +132,11 @@ typedef RandomIterator iterator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `RandomIterator`.
+Typ je synonymem pro `RandomIterator`parametr šablony .
 
-## <a name="move_iterator"></a>move_iterator::move_iterator
+## <a name="move_iteratormove_iterator"></a><a name="move_iterator"></a>move_iterator::move_iterator
 
-Vytvoří iterátor přesunutí. Použije parametr jako uložený iterátor.
+Vytvoří iterátor move. Použije parametr jako uložený iterátor.
 
 ```cpp
 move_iterator();
@@ -147,16 +147,16 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
-Iterátor, který se má použít jako uložený iterátor.
+*Právo*\
+Iterátor použít jako uložený iterátor.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje uložený iterátor s jeho výchozím konstruktorem. Zbývající konstruktory inicializují uložený iterátor pomocí `base.base()`.
+První konstruktor inicializuje uložený iterátor s jeho výchozí konstruktor. Zbývající konstruktory inicializovat uložené iterátor `base.base()`s .
 
-## <a name="op_add_eq"></a>move_iterator:: operator + =
+## <a name="move_iteratoroperator"></a><a name="op_add_eq"></a>move_iterator::operátor+=
 
-Přidá posun k uloženému iterátoru, aby uložené iterátory odkazovaly na element v novém aktuálním umístění. Operátor pak přesune nový aktuální prvek.
+Přidá posun do uloženého iterátoru tak, aby uložený iterátor odkazuje na prvek v novém aktuálním umístění. Operátor pak přesune nový aktuální prvek.
 
 ```cpp
 move_iterator& operator+=(difference_type _Off);
@@ -164,8 +164,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* \
-Posun, který má být přidán na aktuální pozici pro určení nové aktuální pozice.
+*_Off*\
+Posun, který chcete přidat k aktuální pozici k určení nové aktuální pozice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -173,11 +173,11 @@ Vrátí nový aktuální prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přidá *_Off* k uloženému iterátoru. Pak vrátí `*this`.
+Operátor přidává *_Off* do uloženého iterátoru. Pak `*this`vrátí .
 
-## <a name="operator-_eq"></a>move_iterator:: operator-=
+## <a name="move_iteratoroperator-"></a><a name="operator-_eq"></a>move_iterator::operátor-=
 
-Přesune se přes zadaný počet předchozích prvků. Tento operátor odečte posun od uloženého iterátoru.
+Přesune přes zadaný počet předchozích prvků. Tento operátor odečte posun od uloženého iterátoru.
 
 ```cpp
 move_iterator& operator-=(difference_type _Off);
@@ -187,11 +187,11 @@ move_iterator& operator-=(difference_type _Off);
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vyhodnocuje `*this += -_Off`. Pak vrátí `*this`.
+Operátor vyhodnotí `*this += -_Off`. Pak `*this`vrátí .
 
-## <a name="op_add_add"></a>move_iterator:: operator + +
+## <a name="move_iteratoroperator"></a><a name="op_add_add"></a>move_iterator::operátor++
 
-Zvýší uložený iterátor, který patří k tomuto `move_iterator.` k aktuálnímu prvku se přistupoval pomocí operátoru postinkrement. K dalšímu prvku se dostanete pomocí operátoru "Increment".
+Přírůstky uložené iterátor, který patří `move_iterator.` k tomuto Aktuální prvek je přístupný operátor postincrement. K dalšímu prvku přistupuje operátor preincrement.
 
 ```cpp
 move_iterator& operator++();
@@ -202,13 +202,13 @@ move_iterator operator++(int);
 
 ### <a name="remarks"></a>Poznámky
 
-První (přírůstkový) operátor zvýší uložený iterátor. Pak vrátí `*this`.
+První (preincrement) operátor zinkrí uložené iterátor. Pak `*this`vrátí .
 
-Druhý operátor (postinkrement) vytvoří kopii `*this`, vyhodnotí `++*this`. Pak vrátí kopii.
+Druhý operátor (postincrement) vytvoří `*this`kopii `++*this`, vyhodnotí . Potom vrátí kopii.
 
-## <a name="op_add"></a>move_iterator:: operator + – operátor
+## <a name="move_iteratoroperator"></a><a name="op_add"></a>move_iterator::operátor+
 
-Vrátí pozici iterátoru rozšířenou libovolným počtem prvků.
+Vrátí pozici iterátoru upřesňující libovolný počet prvků.
 
 ```cpp
 move_iterator operator+(difference_type _Off) const;
@@ -218,11 +218,11 @@ move_iterator operator+(difference_type _Off) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrací `move_iterator(*this) +=` `_Off`.
+Operátor vrátí `move_iterator(*this) +=` `_Off`.
 
-## <a name="op_at"></a>move_iterator:: operator [] – operátor
+## <a name="move_iteratoroperator"></a><a name="op_at"></a>move_iterator::operátor[]
 
-Umožňuje přístup k indexu pole prvkům v rozsahu `move iterator`.
+Umožňuje přístup k prvkům indexu `move iterator`pole v rozsahu rozhraní .
 
 ```cpp
 reference operator[](difference_type _Off) const;
@@ -232,11 +232,11 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrací `(reference)*(*this + _Off)`.
+Operátor vrátí `(reference)*(*this + _Off)`.
 
-## <a name="operator--"></a>move_iterator:: operator--
+## <a name="move_iteratoroperator--"></a><a name="operator--"></a>move_iterator::operátor--
 
-Postdekrement členské operátory provádějí na uložené iterátory snížení.
+Pre- a postdecrement členské operátory provést snížení na uložené iterátoru.
 
 ```cpp
 move_iterator& operator--();
@@ -247,13 +247,13 @@ move_iterator operator--();
 
 ### <a name="remarks"></a>Poznámky
 
-První operátor členu (předsnížení) snižuje uložený iterátor. Pak vrátí `*this`.
+První operátor člena (predecrement) sníží uložené iterátor. Pak `*this`vrátí .
 
-Druhý operátor (postdekrement) vytvoří kopii `*this`, vyhodnotí `--*this`. Pak vrátí kopii.
+Druhý operátor (postdecrement) vytvoří `*this`kopii `--*this`, vyhodnotí . Potom vrátí kopii.
 
-## <a name="operator-"></a>move_iterator:: operator-
+## <a name="move_iteratoroperator-"></a><a name="operator-"></a>move_iterator::operátor-
 
-Sníží uložený iterátor a vrátí určenou hodnotu.
+Sníží uložených iterátora a vrátí uvedenou hodnotu.
 
 ```cpp
 move_iterator operator-(difference_type _Off) const;
@@ -263,11 +263,11 @@ move_iterator operator-(difference_type _Off) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrací `move_iterator(*this) -= _Off`.
+Operátor vrátí `move_iterator(*this) -= _Off`.
 
-## <a name="op_star"></a>move_iterator:: operator * – operátor
+## <a name="move_iteratoroperator"></a><a name="op_star"></a>move_iterator::operátor*
 
-Ododkazuje na uložený iterátor a vrátí hodnotu. Ta se chová jako `rvalue reference` a provádí přiřazení přesunutí. Operátor převede aktuální prvek ze základního iterátoru. Prvek, který následuje, se stal novým aktuálním prvkem.
+Dereferences uložené iterátor a vrátí hodnotu. To se chová `rvalue reference` jako a provádí přiřazení přesunutí. Operátor převede aktuální prvek ze základního iterátoru. Následující prvek se stane novým aktuálním prvkem.
 
 ```cpp
 reference operator*() const;
@@ -275,11 +275,11 @@ reference operator*() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrací `(reference)*base()`.
+Operátor vrátí `(reference)*base()`.
 
-## <a name="op_arrow"></a>move_iterator:: operator-&gt;
+## <a name="move_iteratoroperator-gt"></a><a name="op_arrow"></a>move_iterator::operátor-&gt;
 
-Podobně jako normální `RandomIterator` `operator->` poskytuje přístup k polím, která patří do aktuálního prvku.
+Jako normální `RandomIterator` `operator->`, poskytuje přístup k polím, která patří k aktuálnímu prvku.
 
 ```cpp
 pointer operator->() const;
@@ -287,11 +287,11 @@ pointer operator->() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrací `&**this`.
+Operátor vrátí `&**this`.
 
-## <a name="pointer"></a>move_iterator::p ointer
+## <a name="move_iteratorpointer"></a><a name="pointer"></a>move_iterator::pointer
 
-Typ `pointer` je typu **typedef** na základě `RandomIterator` náhodného iterátoru pro `move_iterator` a lze jej použít zaměnitelné.
+Typ `pointer` je **typedef** na základě náhodného `RandomIterator` iterátoru pro `move_iterator`, a lze jej zaměnit.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -299,11 +299,11 @@ typedef RandomIterator  pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `RandomIterator`.
+Typ je synonymem `RandomIterator`pro .
 
-## <a name="reference"></a>move_iterator:: Reference
+## <a name="move_iteratorreference"></a><a name="reference"></a>move_iterator::odkaz
 
-Typ `reference` je typu **typedef** založeného na `value_type&&` pro `move_iterator` a lze jej použít zaměnitelné v `value_type&&`.
+Typ `reference` je **typedef** založené `value_type&&` `move_iterator`na for , a lze `value_type&&`použít zaměnitelně s .
 
 ```cpp
 typedef value_type&& reference;
@@ -313,9 +313,9 @@ typedef value_type&& reference;
 
 Typ je synonymum pro `value_type&&`, což je odkaz rvalue.
 
-## <a name="value_type"></a>move_iterator::value_type
+## <a name="move_iteratorvalue_type"></a><a name="value_type"></a>move_iterator::value_type
 
-Typ `value_type` je `move_iterator` `typedef` na základě vlastnosti iterátoru `value_type` a dá se k němu zaměnit.
+Typ `value_type` je `move_iterator` `typedef` založen na vlastnosti `value_type`iterátoru a může být s ním zaměnitelně použit.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::value_type   value_type;
@@ -323,11 +323,11 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro vlastnost iterátoru `typename iterator_traits<RandomIterator>::value_type`.
+Typ je synonymem pro iterátor `typename iterator_traits<RandomIterator>::value_type`znak .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<iterator >](../standard-library/iterator.md) \
-[Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) \
-[Konstruktory přesunutí a operátory přiřazení přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md) \
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[\<>iterátoru](../standard-library/iterator.md)\
+[Lhodnoty a Hodnoty R](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[Přesunout konstruktory a přesunout operátory přiřazení (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,56 +1,56 @@
 ---
-title: Spolupráce s Live Share pro C++ v aplikaci Visual Studio
-description: Pomocí Live Share pro C++ v aplikaci Visual Studio můžete spolupracovat a sdílet kód v reálném čase.
+title: Spolupráce s live share pro C++ v Visual Studiu
+description: Pomocí živého sdílení pro C++ ve Visual Studiu můžete spolupracovat a sdílet kód v reálném čase.
 ms.date: 05/24/2019
-ms.openlocfilehash: e8202cefb7f7d762e2736edcd5fa3c6127b4affa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0ebdd77d0e277778b48cf69024b24841f775d968
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171915"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377289"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>Spolupráce přes Live Share pro C++
 
-V aplikaci Visual Studio 2019 a Visual Studio Code můžete pomocí **Live Share** spolupracovat na C++ projektech v reálném čase. **Live Share** může jiný uživatel upravovat a ladit váš kód, aniž by musel instalovat svůj projekt nebo žádnou z jeho závislostí. Uvidíte, jak se upravují změny, a každá úprava je označena jménem osoby, která ji vytvořila.
+V Sadě Visual Studio 2019 a Visual Studio Code můžete pomocí **live share** spolupracovat na projektech C++ v reálném čase. S **Live Share** může jiný člověk upravovat a ladit váš kód bez nutnosti instalace projektu nebo některé z jeho závislostí. Při jejich výskytu se zobrazují úpravy ostatních a každá úprava je označena jménem osoby, která je provedla.
 
-![Úpravy&#43; &#43; v jazyce C Live Share](../ide/media/live-share-edit-cpp.png "Live Share úpravy vC++")
+![C&#43;&#43; Live Share Úpravy](../ide/media/live-share-edit-cpp.png "Živé úpravy sdílení v jazyce C++")
 
-## <a name="live-share-host-and-guests"></a>Live Share hostitel a hosty
+## <a name="live-share-host-and-guests"></a>Live Share hostitele a hosty
 
-V Live Share relace je hostitelem a jedním nebo více hostů. Hostitel i hosté můžou použít buď Visual Studio, nebo Visual Studio Code. Hostitel sady Visual Studio 2019 ve Windows může sdílet s Visual Studio Code hostem v systému Linux.
+V relaci Live Share je hostitel a jeden nebo více hostů. Hostitel i hosté mohou používat visual studio nebo kód sady Visual Studio. Hostitel Visual Studia 2019 v systému Windows může sdílet s hostem kódu Visual Studia na Linuxu.
 
-Hostitel poskytuje hostům všechno, co potřebují k zajištění produktivity. Pro hosty není nutné mít zdrojový kód, kompilátor, externí závislosti ani stejné nainstalované součásti.
+Hostitel poskytuje hostům vše, co potřebují, aby byli produktivní. Hosté nemusí mít zdrojový kód, kompilátor, externí závislosti nebo dokonce stejné nainstalované součásti.
 
-Hostitelé a hosté můžou tyto funkce IntelliSense použít:
+Hostitel a hosté mohou používat tyto funkce Technologie IntelliSense:
 
 - Seznam členů
-- Help – parametr
+- Nápověda k parametrům
 - Rychlé informace
 - Ladění/zarážky
 - Najít všechny odkazy
-- Přejít k definici
-- Hledání symbolů (CTRL + T)
-- Zvýrazňování odkazů
-- Diagnostika/chyby/vlnovky
+- Přejít na definici
+- Hledání symbolů (Ctrl+T)
+- Zvýraznění odkazů
+- Diagnostika/Chyby/Vlnky
 
-![Ladění&#43; &#43; v jazyce C Live Share](../ide/media/live-share-debug-cpp.png "Live Share ladění vC++")
+![C&#43;&#43; Živé ladění sdílení](../ide/media/live-share-debug-cpp.png "Živé ladění sdílení v jazyce C++")
 
-## <a name="start-and-end-a-live-share-session"></a>Spuštění a ukončení relace Live Share
+## <a name="start-and-end-a-live-share-session"></a>Zahájení a ukončení relace živého sdílení
 
-Pokud chcete spustit relaci Live Share v aplikaci Visual Studio, klikněte na tlačítko sdílet v pravém horním rohu nebo přejděte na **soubor** > **spustit relaci spolupráce**. Tím se vygeneruje odkaz, který můžete sdílet s vašimi spolupracovníky.
+Chcete-li zahájit relaci živého sdílení v sadě Visual Studio, klepněte na tlačítko Sdílet v pravém horním rohu nebo přejděte na**Relaci spolupráce při zahájení** **souborů** > . Tím se vygeneruje odkaz, který můžete sdílet se svými spolupracovníky.
 
-![Tlačítko&#43; &#43; Live Share jazyka C](../ide/media/live-share-button-cpp.png "Live Share – tlačítko")
+![C&#43;&#43; tlačítko Živé sdílení](../ide/media/live-share-button-cpp.png "Tlačítko Živé sdílení")
 
-Chcete-li ukončit relaci, vyberte možnost **ukončit relaci spolupráce** v rozevíracím seznamu **sdílení** .
+Chcete-li ukončit relaci, vyberte v rozevíracím souboru **Sdílení** možnost **Ukončit relaci spolupráce.**
 
-![Tlačítko&#43; &#43; Live Share jazyka C](../ide/media/live-share-end-session-cpp.png "Live Share – tlačítko")
+![C&#43;&#43; tlačítko Živé sdílení](../ide/media/live-share-end-session-cpp.png "Tlačítko Živé sdílení")
 
 ## <a name="for-more-information"></a>Další informace
 
-Další informace o **Live Share** v aplikaci Visual Studio najdete v tématu [co je Visual Studio Live Share?](/visualstudio/liveshare/). Další informace o Live Share v Visual Studio Code najdete v tématu [Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare).
+Další informace o **živé sdílení** ve Visual Studiu najdete v tématu Co je Visual Studio [Live Share?](/visualstudio/liveshare/). Další informace o živé sdílení v kódu sady Visual Studio najdete v tématu [Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare).
 
 ## <a name="see-also"></a>Viz také
 
-[Upravit a Refaktorovat kód (C++)](writing-and-refactoring-code-cpp.md)</br>
-[Procházení základu C++ kódu v aplikaci Visual Studio](navigate-code-cpp.md)</br>
-[Čtení a pochopení C++ kódu](read-and-understand-code-cpp.md)</br>
+[Upravit a refaktorovat kód (C++)](writing-and-refactoring-code-cpp.md)</br>
+[Navigace v základu kódu Jazyka C++ v sadě Visual Studio](navigate-code-cpp.md)</br>
+[Čtení a pochopení kódu C++](read-and-understand-code-cpp.md)</br>

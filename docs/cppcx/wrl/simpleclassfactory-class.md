@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 9a4c169944d56b693efa681bf7089636477012ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373552"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory – třída
 
@@ -29,14 +29,14 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parametry
 
-*základ*<br/>
+*Základní*<br/>
 Základní třída.
 
 ## <a name="remarks"></a>Poznámky
 
-Základní třída musí poskytovat konstruktor default.
+Základní třída musí poskytnout výchozí konstruktor.
 
-Následující příklad kódu ukazuje, jak používat `SimpleClassFactory` s [ActivatableClassWithFactoryEx](activatableclass-macros.md) – makro.
+Následující příklad kódu ukazuje, `SimpleClassFactory` jak používat s macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -44,7 +44,7 @@ Následující příklad kódu ukazuje, jak používat `SimpleClassFactory` s [A
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[SimpleClassFactory::CreateInstance – metoda](#createinstance)|Vytvoří instanci zadaného rozhraní.|
 
@@ -76,9 +76,9 @@ Následující příklad kódu ukazuje, jak používat `SimpleClassFactory` s [A
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="createinstance"></a>Simpleclassfactory::CreateInstance – metoda
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory::Metoda CreateInstance
 
 Vytvoří instanci zadaného rozhraní.
 
@@ -93,20 +93,20 @@ STDMETHOD( CreateInstance )(
 #### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-Musí být `nullptr`; v opačném případě je vrácená hodnota CLASS_E_NOAGGREGATION.
+Musí `nullptr`být ; v opačném případě je CLASS_E_NOAGGREGATION vrácená hodnota.
 
-Simpleclassfactory – nepodporuje agregace. Pokud byly podporovány agregace a součást agregace, byl tento objekt vytváří *pUnkOuter* bude ukazatel řízení `IUnknown` rozhraní agregace.
+SimpleClassFactory nepodporuje agregaci. Pokud agregace byly podporovány a objekt, který je vytvořen byl součástí agregace, *pUnkOuter* by ukazatel na řídící `IUnknown` rozhraní agregace.
 
-*riid*<br/>
-ID objektu pro vytváření rozhraní.
+*riid řekl:*<br/>
+ID rozhraní objektu, který chcete vytvořit.
 
-*ppvObject*<br/>
-Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem *riid* parametru.
+*ppvObjekt*<br/>
+Po dokončení této operace ukazatel na instanci objektu určené *riid* parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](runtimeclass-class.md), nebo nemá nakonfigurovanou ClassicCom nebo WinRtClassicComMix [ Runtimeclasstype –](runtimeclasstype-enumeration.md) hodnota výčtu.
+Pokud `__WRL_STRICT__` je definována, chyba assert je vyzařována, pokud základní třída zadaná v parametru šablony třídy není odvozena z [RuntimeClass](runtimeclass-class.md), nebo není nakonfigurována s hodnotou výčtu ClassicCom nebo WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)

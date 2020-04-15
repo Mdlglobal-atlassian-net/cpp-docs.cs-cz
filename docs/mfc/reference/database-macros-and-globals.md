@@ -13,37 +13,37 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4e9700311bbc20ea017675357a91a56813cc4bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376965"
 ---
 # <a name="database-macros-and-globals"></a>Databázová makra a globální prvky
 
-Níže uvedená makra a globální parametry se vztahují na databázové aplikace založené na rozhraní ODBC. Nepoužívají se pro aplikace založené na rozhraní DAO.
+Níže uvedená makra a globální soubory platí pro databázové aplikace založené na rozhraní ODBC. Nepoužívají se s aplikacemi založenými na DAO.
 
-Před knihovnou MFC 4,2 makra `AFX_SQL_ASYNC` a `AFX_SQL_SYNC` předávaly asynchronní operace k získání času pro jiné procesy. Počínaje verzí MFC 4,2 se implementace těchto maker změnila, protože třídy knihovny MFC rozhraní ODBC používaly pouze synchronní operace. Makro `AFX_ODBC_CALL` bylo v knihovně MFC 4,2 nové.
+Před knihovnou MFC 4.2 poskytla makra `AFX_SQL_ASYNC` a `AFX_SQL_SYNC` asynchronní operace příležitost získat čas jiným procesům. Počínaje knihovnou MFC 4.2 se implementace těchto maker změnila, protože třídy Rozhraní MFC ODBC používaly pouze synchronní operace. Makro `AFX_ODBC_CALL` bylo pro knihovnu MFC 4.2 nové.
 
-### <a name="database-macros"></a>Databázová makra
-
-|||
-|-|-|
-|[AFX_ODBC_CALL](#afx_odbc_call)|Volá funkci rozhraní ODBC API, která vrací `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` bude funkci volat opakovaně, dokud již nevrátí `SQL_STILL_EXECUTING`.|
-|[AFX_SQL_ASYNC](#afx_sql_async)|Volá `AFX_ODBC_CALL`.|
-|[AFX_SQL_SYNC](#afx_sql_sync)|Volá funkci rozhraní ODBC API, která nevrací `SQL_STILL_EXECUTING`.|
-
-### <a name="database-globals"></a>Databáze Globals
+### <a name="database-macros"></a>Makra databáze
 
 |||
 |-|-|
-|[AfxDbInitModule](#afxdbinitmodule)|Přidá podporu databáze pro regulární knihovnu MFC DLL, která je dynamicky propojena s knihovnou MFC.|
-|[AfxGetHENV](#afxgethenv)|Načte popisovač do prostředí ODBC, které aktuálně používá knihovna MFC. Tento popisovač můžete použít v přímém volání ODBC.|
+|[AFX_ODBC_CALL](#afx_odbc_call)|Volá funkci rozhraní API `SQL_STILL_EXECUTING`ROZHRANÍ ODBC, která vrací . `AFX_ODBC_CALL`opakovaně volá funkci, dokud se `SQL_STILL_EXECUTING`již nevrátí .|
+|[AFX_SQL_ASYNC](#afx_sql_async)|Volání `AFX_ODBC_CALL`.|
+|[AFX_SQL_SYNC](#afx_sql_sync)|Volá funkci rozhraní API ROZHRANÍ `SQL_STILL_EXECUTING`ODBC, která se nevrátí .|
 
-## <a name="afxdbinitmodule"></a>AfxDbInitModule
+### <a name="database-globals"></a>Globální databáze
 
-Pro podporu databáze knihovny MFC (nebo rozhraní DAO) z běžné knihovny MFC DLL, která je dynamicky propojena s knihovnou MFC, přidejte volání této funkce ve vaší běžné funkci `CWinApp::InitInstance` knihovny MFC DLL pro inicializaci knihovny MFC databáze knihovny MFC.
+|||
+|-|-|
+|[Modul AfxDbInit](#afxdbinitmodule)|Přidá podporu databáze pro běžnou knihovnu DLL knihovny MFC, která je dynamicky propojena s knihovnou MFC.|
+|[AfxGetHENV](#afxgethenv)|Načte popisovač do prostředí ROZHRANÍ ODBC aktuálně používá knihovna MFC. Tento popisovač můžete použít v přímých voláních ROZHRANÍ ODBC.|
+
+## <a name="afxdbinitmodule"></a><a name="afxdbinitmodule"></a>Modul AfxDbInit
+
+Pro podporu databáze Knihovny MFC (nebo DAO) z běžné knihovny DLL knihovny MFC, která je dynamicky propojena s knihovnou MFC, přidejte volání této funkce v běžné funkci knihovny `CWinApp::InitInstance` MFC DLL pro inicializaci knihovny DLL databáze knihovny MFC.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -53,15 +53,15 @@ void AFXAPI AfxDbInitModule( );
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že k tomuto volání dojde před jakýmkoli voláním základní třídy nebo jakýmkoli přidaným kódem, který přistupuje k databázové knihovně MFC DLL. Knihovna DLL databáze knihovny MFC je rozšiřující knihovna DLL knihovny MFC; aby knihovna DLL rozšíření knihovny MFC mohla být zapojená do `CDynLinkLibrary`ho řetězce, musí vytvořit objekt `CDynLinkLibrary` v kontextu každého modulu, který ho bude používat. `AfxDbInitModule` vytvoří objekt `CDynLinkLibrary` v regulárním kontextu knihovny MFC DLL tak, aby byl připojen do `CDynLinkLibrary`ho řetězu objektů běžné knihovny MFC DLL.
+Ujistěte se, že k tomuto volání dojde před voláním základní třídy nebo libovolným přidaným kódem, který přistupuje k knihovně DLL databáze knihovny MFC. Knihovna DLL databáze knihovny MFC je knihovna DLL rozšíření knihovny MFC. V pořadí pro rozšíření knihovny MFC `CDynLinkLibrary` DLL získat kabelové `CDynLinkLibrary` do řetězce, musí vytvořit objekt v kontextu každého modulu, který bude používat. `AfxDbInitModule`vytvoří `CDynLinkLibrary` objekt v kontextu běžné knihovny MFC DLL tak, aby se dostal do řetězce `CDynLinkLibrary` objektů běžné knihovny MFC DLL.
 
 ### <a name="requirements"></a>Požadavky
 
-**Header:** \<AFXDLL_. h >
+**Záhlaví:** \<afxdll_.h>
 
-##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL
+## <a name="afx_odbc_call"></a><a name="afx_odbc_call"></a>AFX_ODBC_CALL
 
-Toto makro použijte k volání libovolné funkce rozhraní ODBC API, která může vracet `SQL_STILL_EXECUTING`.
+Toto makro slouží k volání libovolné `SQL_STILL_EXECUTING`funkce rozhraní API ROZHRANÍ ODBC, která může vrátit .
 
 ```
 AFX_ODBC_CALL(SQLFunc)
@@ -70,29 +70,29 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="parameters"></a>Parametry
 
 *SQLFunc*<br/>
-Funkce rozhraní API ODBC. Další informace o funkcích rozhraní API ODBC najdete v Windows SDK.
+Funkce ROZHRANÍ API ROZHRANÍ ODBC. Další informace o funkcích rozhraní API rozhraní ODBC naleznete v části Sada Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-`AFX_ODBC_CALL` opakovaně volá funkci, dokud již nevrátí `SQL_STILL_EXECUTING`.
+`AFX_ODBC_CALL`opakovaně volá funkci, dokud se `SQL_STILL_EXECUTING`již nevrátí .
 
-Před vyvoláním `AFX_ODBC_CALL`musíte deklarovat proměnnou `nRetCode`typu RETCODE.
+Před vyvoláním `AFX_ODBC_CALL`je nutné deklarovat proměnnou `nRetCode`typu RETCODE.
 
-Všimněte si, že třídy knihovny MFC rozhraní ODBC nyní používají pouze synchronní zpracování. Aby bylo možné provést asynchronní operaci, je nutné zavolat funkci rozhraní ODBC API `SQLSetConnectOption`. Další informace naleznete v tématu "asynchronní spouštění funkcí" v Windows SDK.
+Všimněte si, že třídy Rozhraní MFC ODBC nyní používají pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musíte volat funkci `SQLSetConnectOption`ROZHRANÍ API ROZHRANÍ ODBC . Další informace naleznete v tématu "Provádění funkcí asynchronně" v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá `AFX_ODBC_CALL` k volání funkce rozhraní ODBC API `SQLColumns`, která vrátí seznam sloupců v tabulce s názvem `strTableName`. Všimněte si deklarace `nRetCode` a použití datových členů sady záznamů k předání parametrů do funkce. Příklad také znázorňuje kontrolu výsledků volání s `Check`, členskou funkcí třídy `CRecordset`. Proměnná `prs` je ukazatel na objekt `CRecordset` deklarovaný jinde.
+Tento příklad `AFX_ODBC_CALL` používá `SQLColumns` k volání funkce ROZHRANÍ API ROZHRANÍ ODBC, která `strTableName`vrací seznam sloupců v tabulce s názvem . Všimněte si `nRetCode` deklarace a použití datových členů sady záznamů k předání parametrů funkci. Příklad také znázorňuje kontrolu výsledků volání `Check`s , členské `CRecordset`funkce třídy . Proměnná `prs` je ukazatel `CRecordset` na objekt, deklarovaný jinde.
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC
+## <a name="afx_sql_async"></a><a name="afx_sql_async"></a>AFX_SQL_ASYNC
 
-Implementace tohoto makra se změnila v knihovně MFC 4,2.
+Implementace tohoto makra se změnila v knihovně MFC 4.2.
 
 ```
 AFX_SQL_ASYNC(prs, SQLFunc)
@@ -100,26 +100,26 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Parametry
 
-*PR*<br/>
-Ukazatel na objekt `CRecordset` nebo objekt `CDatabase`. Počínaje verzí MFC 4,2 je tato hodnota parametru ignorována.
+*prs*<br/>
+Ukazatel na `CRecordset` objekt nebo `CDatabase` objekt. Počínaje mfc 4.2, tato hodnota parametru je ignorována.
 
 *SQLFunc*<br/>
-Funkce rozhraní API ODBC. Další informace o funkcích rozhraní API ODBC najdete v Windows SDK.
+Funkce ROZHRANÍ API ROZHRANÍ ODBC. Další informace o funkcích rozhraní API rozhraní ODBC naleznete v části Sada Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-`AFX_SQL_ASYNC` jednoduše volá makro [AFX_ODBC_CALL](#afx_odbc_call) a ignoruje parametr *PR* . Ve verzích knihovny MFC starších než 4,2 byla `AFX_SQL_ASYNC` použita k volání funkcí rozhraní ODBC API, které mohou vracet `SQL_STILL_EXECUTING`. Pokud funkce rozhraní ODBC API vrátila hodnotu `SQL_STILL_EXECUTING`, `AFX_SQL_ASYNC` by zavolala `prs->OnWaitForDataSource`.
+`AFX_SQL_ASYNC`jednoduše zavolá makro [AFX_ODBC_CALL](#afx_odbc_call) a ignoruje parametr *prs.* Ve verzích knihovny MFC před `AFX_SQL_ASYNC` verzí 4.2 byl použit `SQL_STILL_EXECUTING`k volání funkcí rozhraní API ROZHRANÍ ODBC, které se mohou vrátit . Pokud se funkce rozhraní `SQL_STILL_EXECUTING`API `AFX_SQL_ASYNC` ROZHRANÍ `prs->OnWaitForDataSource`ODBC vrátila , pak by volala .
 
 > [!NOTE]
->  Třídy knihovny MFC rozhraní ODBC nyní používají pouze synchronní zpracování. Aby bylo možné provést asynchronní operaci, je nutné zavolat funkci rozhraní ODBC API `SQLSetConnectOption`. Další informace naleznete v tématu "asynchronní spouštění funkcí" v Windows SDK.
+> Třídy Rozhraní MFC ODBC nyní používají pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musíte volat funkci `SQLSetConnectOption`ROZHRANÍ API ROZHRANÍ ODBC . Další informace naleznete v tématu "Provádění funkcí asynchronně" v sadě Windows SDK.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** AFXDB. h
+  **Záhlaví** afxdb.h
 
-##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC
+## <a name="afx_sql_sync"></a><a name="afx_sql_sync"></a>AFX_SQL_SYNC
 
-Makro `AFX_SQL_SYNC` jednoduše volá `SQLFunc`funkce.
+Makro `AFX_SQL_SYNC` jednoduše volá `SQLFunc`funkci .
 
 ```
 AFX_SQL_SYNC(SQLFunc)
@@ -128,29 +128,29 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="parameters"></a>Parametry
 
 *SQLFunc*<br/>
-Funkce rozhraní API ODBC. Další informace o těchto funkcích naleznete v Windows SDK.
+Funkce ROZHRANÍ API ROZHRANÍ ODBC. Další informace o těchto funkcích naleznete v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí tohoto makra můžete volat funkce rozhraní ODBC API, které nebudou vracet `SQL_STILL_EXECUTING`.
+Toto makro slouží k volání funkcí `SQL_STILL_EXECUTING`rozhraní API ROZHRANÍ ODBC, které se nevrátí .
 
-Před voláním `AFX_SQL_SYNC`musíte deklarovat proměnnou `nRetCode`typu RETCODE. Můžete kontrolovat hodnotu `nRetCode` po volání makra.
+Před `AFX_SQL_SYNC`voláním je nutné `nRetCode`deklarovat proměnnou typu RETCODE. Můžete zkontrolovat hodnotu `nRetCode` po volání makra.
 
-Všimněte si, že implementace `AFX_SQL_SYNC` změněna v knihovně MFC 4,2. Vzhledem k tomu, že kontrola stavu serveru už není nutná, `AFX_SQL_SYNC` jednoduše přiřadí hodnotu `nRetCode`. Například místo provedení volání
+Všimněte si, `AFX_SQL_SYNC` že implementace změněna v knihovně MFC 4.2. Vzhledem k tomu, že kontrola `AFX_SQL_SYNC` stavu serveru již `nRetCode`nebyla vyžadována, jednoduše přiřadí hodnotu společnosti . Například místo volání
 
 [!code-cpp[NVC_MFCDatabase#40](../../mfc/codesnippet/cpp/database-macros-and-globals_2.cpp)]
 
-můžete jednoduše provést přiřazení.
+můžete jednoduše provést zadání
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** AFXDB. h
+  **Záhlaví** afxdb.h
 
-##  <a name="afxgethenv"></a>AfxGetHENV
+## <a name="afxgethenv"></a><a name="afxgethenv"></a>AfxGetHENV
 
-Vrácený popisovač můžete použít v přímém volání rozhraní ODBC, ale nesmíte zavřít popisovač nebo předpokládat, že popisovač je stále platný a dostupný po zničení všech existujících objektů odvozených `CDatabase`nebo `CRecordset`.
+Vrácený popisovač můžete použít v přímé masce ODBC, ale nesmíte zavřít popisovač `CDatabase`nebo `CRecordset`předpokládat, že popisovač je stále platný a dostupný po zničení všech existujících nebo odvozených objektů.
 
 ```
 HENV AFXAPI AfxGetHENV();
@@ -158,12 +158,12 @@ HENV AFXAPI AfxGetHENV();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač prostředí ODBC aktuálně používaného knihovnou MFC. Může být `SQL_HENV_NULL`, pokud neexistují žádné objekty [CDatabase](../../mfc/reference/cdatabase-class.md) a nejsou používány žádné objekty [CRecordset](../../mfc/reference/crecordset-class.md) .
+Popisovač prostředí ROZHRANÍ ODBC aktuálně používán knihovnou MFC. Může `SQL_HENV_NULL` být, pokud neexistují žádné [cdatabase](../../mfc/reference/cdatabase-class.md) objekty a žádné [CRecordset](../../mfc/reference/crecordset-class.md) objekty v použití.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** AFXDB. h
+  **Záhlaví** afxdb.h
 
 ## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální](../../mfc/reference/mfc-macros-and-globals.md)

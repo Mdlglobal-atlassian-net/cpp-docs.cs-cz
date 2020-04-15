@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f2d0facd92e0ef1935f8218a6d323a62edb81e5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376786"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream – třída
 
-Popisuje objekt, který řídí vložení prvků a zakódovaných objektů do vyrovnávací paměti datového proudu třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, s prvky typu `Elem`, jejichž charakteristické znaky jsou určeny třídou `Tr`.
+Popisuje objekt, který řídí vkládání prvků a kódovaných objektů do [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`vyrovnávací `Tr` paměti datového proudu `Elem`třídy basic_filebuf ,> `Tr`s prvky typu , jejichž znakové znaky jsou určeny třídou .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,17 +40,17 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 Základní prvek vyrovnávací paměti souboru.
 
 *Tr*\
-Vlastnosti základního prvku vyrovnávací paměti souboru (obvykle `char_traits`< `Elem`>).
+Vlastnosti základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **wchar_t** specializace `basic_ofstream` zapisuje do souboru, pokud je soubor otevřen v textovém režimu, zápis sekvence znakové sady MBCS. Interní reprezentace bude používat vyrovnávací paměť `wchar_t`ch znaků.
+Když **wchar_t** specializace `basic_ofstream` zápisů do souboru, pokud je soubor otevřen v textovém režimu, napíše sekvenci MBCS. Vnitřní reprezentace bude používat `wchar_t` vyrovnávací paměť znaků.
 
-Objekt ukládá objekt třídy `basic_filebuf`< `Elem`, `Tr`>.
+Objekt ukládá objekt třídy `basic_filebuf` <  `Elem`, `Tr`>.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `basic_ofstream` a zapsat do něj text.
+Následující příklad ukazuje, jak `basic_ofstream` vytvořit objekt a napsat do něj text.
 
 ```cpp
 // basic_ofstream_class.cpp
@@ -80,25 +80,25 @@ int main(int argc, char **argv)
 
 |Členská funkce|Popis|
 |-|-|
-|[close](#close)|Zavře soubor.|
-|[is_open](#is_open)|Určuje, zda je soubor otevřen.|
-|[open](#open)|Otevře soubor.|
-|[rdbuf](#rdbuf)|Vrátí adresu vyrovnávací paměti uloženého datového proudu.|
-|[adresu](#swap)|Vymění obsah tohoto `basic_ofstream` obsahu poskytnuté `basic_ofstream`.|
+|[Zavřete](#close)|Zavře soubor.|
+|[is_open](#is_open)|Určuje, zda je soubor otevřený.|
+|[Otevřít](#open)|Otevře soubor.|
+|[rdbuf](#rdbuf)|Vrátí adresu uložené vyrovnávací paměti datového proudu.|
+|[Swap](#swap)|Vyměňte jejich `basic_ofstream` obsah za obsah poskytnutého `basic_ofstream`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Přiřadí obsah tohoto objektu streamu. Jedná se o přiřazení přesunutí zahrnující `rvalue reference`, která neopouští kopii.|
+|[operátor =](#op_eq)|Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí `rvalue reference` přiřazení zahrnující, který nezanechává kopii za sebou.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<fstream – >
+**Záhlaví:** \<fstream>
 
 **Obor názvů:** std
 
-## <a name="basic_ofstream"></a>basic_ofstream:: basic_ofstream
+## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream::basic_ofstream
 
 Vytvoří objekt typu `basic_ofstream`.
 
@@ -122,28 +122,28 @@ basic_ofstream(
 ### <a name="parameters"></a>Parametry
 
 *_Filename*\
-Název souboru, který se má otevřít
+Název souboru, který chcete otevřít.
 
 *_Mode*\
-Jeden z výčtů ve [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
+Jeden z výčtů v [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
-Výchozí ochrana při otevírání souborů, která odpovídá parametru `shflag` v [_fsopen _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+Výchozí ochrana při otevírání `shflag` souborů, která odpovídá parametru v [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-*pravé*\
-Odkaz rvalue na objekt `basic_ofstream`, který se používá k inicializaci tohoto objektu `basic_ofstream`.
+*Právo*\
+Rvalue odkaz na `basic_ofstream` objekt, který se `basic_ofstream` používá k inicializaci tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje základní třídu voláním [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), kde `sb` je uložený objekt třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem``Tr`>. Inicializuje také `sb` voláním `basic_filebuf`< `Elem``Tr`>.
+První konstruktor inicializuje základní třídu`sb`voláním `sb` [basic_ostream](../standard-library/basic-ostream-class.md)( ), kde `Tr` je uložený objekt třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`,>. Inicializuje se `sb` také `basic_filebuf` <  `Elem` `Tr` voláním ,>.
 
-Druhý a třetí konstruktor inicializuje základní třídu voláním `basic_ostream`( **SB**). Inicializuje taky `sb` voláním `basic_filebuf`< `Elem`, `Tr`> a pak `sb`. [Open](../standard-library/basic-filebuf-class.md#open)(`_Filename``_Mode` &#124; `ios_base::out`). Pokud druhá funkce vrátí ukazatel s hodnotou null, volá konstruktor [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Druhý a třetí konstruktory inicializuje základní `basic_ostream`třídy voláním ( **sb**). Také inicializuje `sb` `basic_filebuf` <  `Elem`voláním `Tr` , `sb`> a potom . [otevřeno](../standard-library/basic-filebuf-class.md#open) `_Filename`( `_Mode` `ios_base::out`, &#124; ). Pokud druhá funkce vrátí ukazatel null, konstruktor`failbit`volá [setstate](../standard-library/basic-ios-class.md#setstate)( ).
 
-Čtvrtý konstruktor je funkce kopírování. Inicializuje objekt s obsahem *vpravo*, který se považuje za odkaz rvalue.
+Čtvrtý konstruktor je funkce kopírování. Inicializuje objekt s obsahem *right*, považován za rvalue odkaz.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `basic_ofstream` a zapsat do něj text.
+Následující příklad ukazuje, jak `basic_ofstream` vytvořit objekt a napsat do něj text.
 
 ```cpp
 // basic_ofstream_ctor.cpp
@@ -163,7 +163,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="close"></a>basic_ofstream:: Close
+## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream::zavřít
 
 Zavře soubor.
 
@@ -173,13 +173,13 @@ void close();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
+Členská funkce volá [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Příklad
 
-Příklad, který používá `close`, naleznete v tématu [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) .
+Viz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `close`.
 
-## <a name="is_open"></a>basic_ofstream:: is_open
+## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream::is_open
 
 Označuje, zda je soubor otevřen.
 
@@ -189,11 +189,11 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je soubor otevřený, jinak **false** .
+**true,** pokud je soubor otevřený, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
+Členská funkce vrátí [funkci rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Příklad
 
@@ -217,7 +217,7 @@ int main( )
 }
 ```
 
-## <a name="open"></a>basic_ofstream:: Open
+## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream::otevřít
 
 Otevře soubor.
 
@@ -244,25 +244,25 @@ void open(
 ### <a name="parameters"></a>Parametry
 
 *_Filename*\
-Název souboru, který se má otevřít
+Název souboru, který chcete otevřít.
 
 *_Mode*\
-Jeden z výčtů ve [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
+Jeden z výčtů v [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
-Výchozí ochrana při otevírání souborů, která odpovídá parametru `shflag` v [_fsopen _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+Výchozí ochrana při otevírání `shflag` souborů, která odpovídá parametru v [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [rdbuf](#rdbuf) **->** [otevřít](../standard-library/basic-filebuf-class.md#open)(_ *filename*, `_Mode` &#124; `ios_base::out`). Pokud tato funkce vrací ukazatel s hodnotou null, funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Členská funkce volá [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Název souboru*, `_Mode` &#124; `ios_base::out`). Pokud tato funkce vrátí ukazatel null, funkce`failbit`volá [setstate](../standard-library/basic-ios-class.md#setstate)( ).
 
 ### <a name="example"></a>Příklad
 
-Příklad, který používá `open`, naleznete v tématu [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
+Viz [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) pro příklad, který používá `open`.
 
-## <a name="op_eq"></a>basic_ofstream:: operator =
+## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream::operátor=
 
-Přiřadí obsah tohoto objektu streamu. Jedná se o přiřazení přesunutí zahrnující `rvalue reference`, která neopouští kopii.
+Přiřadí obsah tohoto objektu datového proudu. Jedná se o přesunutí `rvalue reference` přiřazení zahrnující, který nezanechává kopii za sebou.
 
 ```cpp
 basic_ofstream& operator=(basic_ofstream&& right);
@@ -270,8 +270,8 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Odkaz rvalue na objekt `basic_ofstream`.
+*Právo*\
+Rvalue odkaz na `basic_ofstream` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -279,11 +279,11 @@ Vrací objekt `*this`.
 
 ### <a name="remarks"></a>Poznámky
 
-Členský operátor nahradí obsah objektu pomocí obsahu *vpravo*, který se považuje za odkaz rvalue.
+Operátor člena nahradí obsah objektu pomocí obsahu *right*, považovaného za odkaz na rvalue.
 
-## <a name="rdbuf"></a>basic_ofstream:: rdbuf
+## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream::rdbuf
 
-Vrátí adresu vyrovnávací paměti uloženého datového proudu.
+Vrátí adresu uložené vyrovnávací paměti datového proudu.
 
 ```cpp
 basic_filebuf<Elem, Tr> *rdbuf() const
@@ -291,15 +291,15 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí adresu vyrovnávací paměti uloženého datového proudu.
+Vrátí adresu uložené vyrovnávací paměti datového proudu.
 
 ### <a name="example"></a>Příklad
 
-Příklad, který používá `rdbuf`, naleznete v tématu [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) .
+Viz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `rdbuf`.
 
-## <a name="swap"></a>basic_ofstream:: swap
+## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream::swap
 
-Vyměňuje obsah dvou `basic_ofstream` objektů.
+Vyměňuje obsah `basic_ofstream` dvou objektů.
 
 ```cpp
 void swap(basic_ofstream& right);
@@ -307,16 +307,16 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-`lvalue` odkaz na jiný objekt `basic_ofstream`.
+*Právo*\
+Odkaz `lvalue` na `basic_ofstream` jiný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vyměňuje obsah tohoto objektu pro obsah *vpravo*.
+Členská funkce vyměňuje obsah tohoto objektu za obsah *right*.
 
 ## <a name="see-also"></a>Viz také
 
-[basic_ostream\ třídy](../standard-library/basic-ostream-class.md)
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream – programování](../standard-library/iostream-programming.md)\
-[iostreams – konvence](../standard-library/iostreams-conventions.md)
+[basic_ostream třída](../standard-library/basic-ostream-class.md)\
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[programování iostreamu](../standard-library/iostream-programming.md)\
+[iostreams úmluvy](../standard-library/iostreams-conventions.md)

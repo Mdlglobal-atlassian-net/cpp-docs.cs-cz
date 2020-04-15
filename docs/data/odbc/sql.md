@@ -7,78 +7,78 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 58c0267728f2b26cf81d048fcf02edd8fc4909ec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5ab824f850b6050e11c10734dd709330af416b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212562"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376445"
 ---
 # <a name="sql"></a>SQL
 
-SQL (jazyk SQL (Structured Query Language)) je způsob, jak komunikovat s relační databází, která umožňuje definovat, dotazovat, upravovat a řídit data. Pomocí syntaxe SQL můžete vytvořit příkaz, který extrahuje záznamy podle vámi zadaných kritérií.
+SQL (Strukturovaný dotazovací jazyk) je způsob komunikace s relační databáze, která umožňuje definovat, dotaz, upravit a řídit data. Pomocí syntaxe SQL můžete vytvořit příkaz, který extrahuje záznamy podle zadaných kritérií.
 
 > [!NOTE]
->  Tyto informace se vztahují na třídy knihovny MFC rozhraní ODBC. Pokud pracujete s třídami knihovny MFC DAO, přečtěte si téma porovnání řešení Microsoft Jet Database Engine SQL a ANSI SQL v nápovědě pro rozhraní DAO.
+> Tyto informace platí pro třídy Knihovny MFC ODBC. Pokud pracujete s třídami MFC DAO, podívejte se na téma Porovnání Microsoft Jet Database Engine SQL a ANSI SQL v nápovědě DAO.
 
-Příkazy SQL začínají na klíčovém slově, jako je například **Create** nebo **Select**. SQL je velmi výkonný jazyk; jeden příkaz může mít vliv na celou tabulku.
+Příkazy SQL začínají slovesem klíčového **slova,** například CREATE nebo **SELECT**. SQL je velmi silný jazyk; jeden příkaz může ovlivnit celou tabulku.
 
-Existuje spousta verzí SQL, z nichž každá se vyvinula s konkrétními systémy DBMS. Třídy databáze knihovny MFC rozpoznávají sadu příkazů SQL, které odpovídají specifikaci SQL konceptu konceptu X/Open a SQL Access Group Common Applications (1991). Informace o syntaxi těchto příkazů naleznete v příloze C v *Referenční příručce programátora* *sady ODBC SDK* na webu MSDN Library.
+Existuje mnoho verzí SQL, z nichž každá byla vyvinuta s ohledem na konkrétní DBMS. Třídy databáze knihovny MFC rozpoznají sadu příkazů SQL, která odpovídá specifikaci konceptu SQL (X/Open and SQL Access Group Common Applications Environment( CAE) (1991). Informace o syntaxi těchto příkazů naleznete v dodatku C v *odkazu programátora* *sady ODBC SDK* na disku CD-ROM knihovny MSDN.
 
 Toto téma vysvětluje:
 
-- [Vztah mezi rozhraním ODBC a SQL](#_core_open_database_connectivity_.28.odbc.29).
+- [Vztah mezi rozhraním ODBC a sql](#_core_open_database_connectivity_.28.odbc.29).
 
-- [Nejběžnější klíčová slova jazyka SQL používaná třídami databáze](#_core_the_database_classes).
+- [Nejběžnější klíčová slova SQL používaná třídami databáze](#_core_the_database_classes).
 
 - [Jak třídy databáze používají SQL](#_core_how_the_database_classes_use_sql).
 
-##  <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Připojení Open Database (ODBC)
+## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Připojení k otevřené databázi (ODBC)
 
-Třídy databáze jsou implementovány pomocí rozhraní ODBC, které používá SQL v rozhraní na úrovni volání namísto vkládání příkazů SQL do kódu. Rozhraní ODBC používá SQL ke komunikaci se [zdrojem dat](../../data/odbc/data-source-odbc.md) prostřednictvím ovladačů rozhraní ODBC. Tyto ovladače interpretují SQL a v případě potřeby ho přeloží pro použití s konkrétním formátem databáze, jako je například Microsoft Access. Další informace o tom, jak rozhraní ODBC používá SQL, najdete v tématu [rozhraní ODBC](../../data/odbc/odbc-basics.md) a *Příručka PROGRAMÁTORA* sady ODBC SDK na disku CD knihovny MSDN.
+Třídy databáze jsou implementovány pomocí rozhraní ODBC, které používá SQL v rozhraní na úrovni volání, nikoli vkládání příkazů SQL do kódu. Rozhraní ODBC používá sql ke komunikaci se [zdrojem dat](../../data/odbc/data-source-odbc.md) prostřednictvím ovladačů ODBC. Tyto ovladače interpretovat SQL a přeložit jej, v případě potřeby pro použití s určitým formátem databáze, jako je například Microsoft Access. Další informace o tom, jak rozhraní ODBC používá SQL, naleznete [v tématu ODBC](../../data/odbc/odbc-basics.md) a *reference programátora* sady ODBC SDK na disku CD-ROM knihovny MSDN.
 
-##  <a name="database-classes"></a><a name="_core_the_database_classes"></a>Databázové třídy
+## <a name="database-classes"></a><a name="_core_the_database_classes"></a>Třídy databáze
 
 > [!NOTE]
-> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
+> Průvodce příjemcem knihovny MFC ODBC není k dispozici v sadě Visual Studio 2019 a novějších. Stále můžete vytvořit příjemce ručně.
 
-Třídy databáze jsou navržené tak, aby vám umožnily manipulovat a aktualizovat data v existujícím [zdroji dat](../../data/odbc/data-source-odbc.md). [Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Průvodce příjemcem knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (k dispozici prostřednictvím příkazu **Přidat třídu**) a databázové třídy sestavují většinu příkazů SQL za vás.
+Třídy databáze jsou navrženy tak, aby vám umožňují manipulovat s daty v existujícím [zdroji dat](../../data/odbc/data-source-odbc.md)a aktualizovat je . [Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Průvodce vytvořením knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (přístupný prostřednictvím **add class**) a třídy databáze vytvoří většinu příkazů SQL za vás.
 
-Třídy databáze používají část SQL známou jako jazyk manipulace s daty (DML). Tyto příkazy umožňují pracovat se všemi nebo částmi zdroje dat, přidávat nové záznamy, upravovat záznamy a odstraňovat záznamy. Následující tabulka uvádí nejběžnější klíčová slova jazyka SQL a způsoby, jak je používají databázové třídy.
+Třídy databáze používají část SQL známou jako jazyk pro manipulaci s daty (DML). Tyto příkazy umožňují pracovat s celým zdrojem dat nebo jeho částí, přidávat nové záznamy, upravovat záznamy a odstraňovat záznamy. V následující tabulce jsou uvedena nejběžnější klíčová slova SQL a způsoby, jakými je používají třídy databáze.
 
-### <a name="some-common-sql-keywords"></a>Některá společná klíčová slova SQL
+### <a name="some-common-sql-keywords"></a>Některá běžná klíčová slova SQL
 
-|Klíčové slovo SQL|Průvodci a databázové třídy ho používají|
+|Klíčové slovo SQL|Používají je průvodci a třídy databáze|
 |-----------------|---------------------------------------------|
-|**SELECT**|Chcete-li určit, které tabulky a sloupce ve zdroji dat mají být použity.|
-|**WHERE**|Chcete-li použít filtr, který zúží výběr.|
-|**ORDER BY**|Chcete-li použít pořadí řazení pro sadu záznamů.|
-|**INSERT**|K přidání nových záznamů do sady záznamů.|
-|**DELETE**|Odstranění záznamů ze sady záznamů.|
-|**UPDATE**|Úprava polí záznamu.|
+|**Vyberte**|Chcete-li zjistit, které tabulky a sloupce ve zdroji dat mají být použity.|
+|**WHERE**|Použití filtru, který výběr zužuje.|
+|**ORDER BY**|Použití pořadí řazení na sadu záznamů.|
+|**Vložit**|Přidání nových záznamů do sady záznamů.|
+|**Odstranit**|Odstranění záznamů ze sady záznamů.|
+|**Aktualizace**|Chcete-li upravit pole záznamu.|
 
-Kromě toho třídy databáze rozpoznávají příkazy **volání** rozhraní ODBC, které lze použít k volání předdefinovaného dotazu (nebo uložené procedury) v některých zdrojích dat. Ovladač databáze rozhraní ODBC tyto příkazy interpretuje a nahrazuje příkaz vhodný pro každý systém DBMS.
+Kromě toho třídy databáze rozpoznat PŘÍKAZY ODBC **CALL,** které můžete použít k volání předdefinovaný dotaz (nebo uložená procedura) na některé zdroje dat. Ovladač databáze ROZHRANÍ ODBC interpretuje tyto příkazy a nahrazuje příkaz vhodný pro každý dbms.
 
 > [!NOTE]
->  Ne všechny systémy DBMS podporují příkazy **volání** .
+> Ne všechny dbmss podporují **příkazy CALL.**
 
-Pokud třídy nerozpoznají uživatelem zadaný příkaz v `CRecordset::Open`, je interpretován jako název tabulky.
+Pokud třídy nemohou rozpoznat příkaz `CRecordset::Open`dodaný uživatelem v aplikaci , je interpretován jako název tabulky.
 
-Vysvětlení způsobu konstrukce příkazů SQL naleznete v tématu [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) a [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Vysvětlení, jak rozhraní framework vytváří příkazy SQL, naleznete v [tématu Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) a [SQL: Customizing Your Recordset's SQL Statement (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Databáze SQL používají datové typy podobné těm, které se používají v C++C a. Diskuzi o těchto podobnostech najdete v tématu [SQL: SQL a C++ datové typy (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Databáze SQL používají datové typy podobné těm, které se používají v jazycích C a C++. Diskuse o těchto podobností naleznete v tématu [SQL: SQL a C++ datové typy (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-Další informace o SQL, včetně seznamu podporovaných příkazů SQL, datových typů, gramatiky SQL Core a seznamu pro čtení doporučených publikací o SQL, najdete v tématu *programátor* *sady ODBC SDK* na disku CD knihovny MSDN.
+Další informace o SQL, včetně seznamu podporovaných příkazů SQL, datových typů, základní gramatiky SQL a seznamu doporučených publikací o SQL, naleznete v *odkazu programátora* *SADY ODBC SDK* na disku CD-ROM knihovny MSDN.
 
-##  <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a>Jak třídy databáze používají SQL
+## <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a>Jak databázové třídy používají SQL
 
-Sady záznamů, které jsou odvozeny z tříd databáze, používají rozhraní ODBC ke komunikaci se zdrojem dat a rozhraní ODBC načte záznamy ze zdroje dat odesláním příkazů jazyka SQL. Toto téma vysvětluje vztah mezi databázovými třídami a SQL.
+Sady záznamů odvozené z tříd databáze používají ke komunikaci se zdrojem dat rozhraní ODBC a rozhraní ODBC načítá záznamy ze zdroje dat odesláním příkazů SQL. Toto téma vysvětluje vztah mezi třídami databáze a SQL.
 
-Sada záznamů vytvoří příkaz SQL sestavením částí příkazu SQL do `CString`. Řetězec je vytvořen jako příkaz **Select** , který vrací sadu záznamů.
+Sada záznamů vytvoří příkaz SQL tím, že vytvoří části `CString`příkazu SQL do . Řetězec je vytvořen jako **příkaz SELECT,** který vrací sadu záznamů.
 
-Když sada záznamů volá rozhraní ODBC k odeslání příkazu SQL do zdroje dat, správce ovladačů ODBC předá příkaz ovladači ODBC a ovladač ho pošle základnímu systému DBMS. DBMS vrátí sadu výsledků záznamů a ovladač ODBC vrátí záznamy do aplikace. Třídy databáze umožňují vašemu programu přístup k sadě výsledků v typově bezpečné C++ třídě odvozené z `CRecordset`.
+Když sada záznamů volá odbc k odeslání příkazu SQL do zdroje dat, Správce ovladačů ODBC předá příkaz ovladači ODBC a ovladač jej odešle podkladovému systému DBMS. DbMS vrátí sadu výsledků záznamů a ovladač ODBC vrátí záznamy do aplikace. Třídy databáze umožňují programu přístup k sadě výsledků ve třídě C++ typu bezpečné z aplikace `CRecordset`.
 
-Následující témata obsahují další informace o tom, jak třídy databáze používají SQL:
+Následující témata poskytují další informace o tom, jak třídy databáze používají SQL:
 
 - [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
@@ -88,5 +88,5 @@ Následující témata obsahují další informace o tom, jak třídy databáze 
 
 ## <a name="see-also"></a>Viz také
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[ODBC – základy](../../data/odbc/odbc-basics.md)
+[Připojení k otevřené databázi (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Základy rozhraní ODBC](../../data/odbc/odbc-basics.md)

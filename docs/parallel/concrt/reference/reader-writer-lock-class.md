@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 13b44387f3e9489090ec31345fe4347ff5f205ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376245"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock – třída
 
-Zámek zapisovače založený na frontě pro zapisovače, který se zakládá jenom s místním odstřeďováním Zámek uděluje při průběžném načítání zapisovačů přístup FIFO k modulům pro zápis a starves.
+Zámek pro zápisdo fronty a zapisovače předvoleb pro zápis do fronty s místním pouze předení. Zámek uděluje první in - první ven (FIFO) přístup k zapisovače a hladovění čtenáři pod nepřetržité zatížení zapisovače.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,31 +36,31 @@ class reader_writer_lock;
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[reader_writer_lock:: scoped_lock – třída](#scoped_lock_class)|Bezpečnostní obálka RAII, která se dá použít k získání `reader_writer_lock` objektů zámku jako zapisovače.|
-|[reader_writer_lock:: scoped_lock_read – třída](#scoped_lock_read_class)|Bezpečnostní obálka RAII, která se dá použít k získání `reader_writer_lock` objektů zámku jako čtecího zařízení.|
+|[reader_writer_lock::scoped_lock třída](#scoped_lock_class)|Výjimka bezpečné RAII obálka, která `reader_writer_lock` může být použita k získání objektů zámku jako zapisovač.|
+|[reader_writer_lock::scoped_lock_read třída](#scoped_lock_read_class)|Výjimka bezpečné RAII obálka, která `reader_writer_lock` může být použita k získání objektů zámku jako čtečka.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[reader_writer_lock](#ctor)|Vytvoří nový objekt `reader_writer_lock`.|
-|[~ reader_writer_lock destruktor](#dtor)|Odstraní objekt `reader_writer_lock`.|
+|[reader_writer_lock](#ctor)|Vytvoří nový `reader_writer_lock` objekt.|
+|[~reader_writer_lock Destruktor](#dtor)|Zničí `reader_writer_lock` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[lock](#lock)|Získá zámek zapisovače čtenářů jako zapisovače.|
-|[lock_read](#lock_read)|Získá zámek zapisovače pro čtení a čtení. Pokud existují moduly pro zápis, musí aktivní čtenáři počkat, než se dokončí. Čtecí modul jednoduše zaregistruje zájem v zámku a počká, až ho zapisovač vypustí.|
-|[try_lock](#try_lock)|Pokusí se získat zámek zapisovače pro čtení ve formě zapisovače bez blokování.|
-|[try_lock_read](#try_lock_read)|Pokusí se získat zámek zapisovače pro čtení ve formě čtecího modulu bez blokování.|
-|[Uzamknout](#unlock)|Odemkne zámek zapisovače pro čtení na základě toho, kdo ho uzamkl, čtenář nebo zapisovač.|
+|[Zámek](#lock)|Získá zámek reader-writer jako zapisovač.|
+|[lock_read](#lock_read)|Získá zámek čtečky a zapisovače jako čtenář. Pokud existují spisovatelé, aktivní čtenáři musí počkat, až budou hotovi. Čtenář jednoduše zaregistruje zájem o zámek a čeká na autory, aby jej vydali.|
+|[try_lock](#try_lock)|Pokusí se získat zámek pro zápis čtenáře jako zapisovač bez blokování.|
+|[try_lock_read](#try_lock_read)|Pokusí se získat zámek pro zápis čtenáře jako čtečku bez blokování.|
+|[Odemknout](#unlock)|Odemkne zámek čtečky a zapisovače podle toho, kdo jej uzamkl, čtečku nebo zapisovač.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [Synchronizace datových struktur](../../../parallel/concrt/synchronization-data-structures.md).
+Další informace naleznete [v tématu Synchronizační datové struktury](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -68,13 +68,13 @@ Další informace najdete v tématu [Synchronizace datových struktur](../../../
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
 **Obor názvů:** souběžnost
 
-## <a name="lock"></a>získáte
+## <a name="lock"></a><a name="lock"></a>Zámek
 
-Získá zámek zapisovače čtenářů jako zapisovače.
+Získá zámek reader-writer jako zapisovač.
 
 ```cpp
 void lock();
@@ -82,17 +82,17 @@ void lock();
 
 ### <a name="remarks"></a>Poznámky
 
-Je často bezpečnější využít [scoped_lock](#scoped_lock_class) konstrukce k získání a uvolnění `reader_writer_lock` objektu jako zapisovače bezpečným způsobem.
+Je často bezpečnější využít [scoped_lock](#scoped_lock_class) konstrukce získat `reader_writer_lock` a uvolnit objekt jako zapisovač e-mailem v bezpečném způsobem výjimky.
 
-Jakmile se zapisovač pokusí získat zámek, všechna budoucí čtenáři budou blokovat až do úspěšného získání a uvolnění zámku. Tento zámek se posune k modulům pro zápis a může omezují čtenáři za průběžné načítání zapisovačů.
+Poté, co se zapisovatel pokusí získat zámek, všechny budoucí čtenáři budou blokovat, dokud autoři úspěšně získali a neuvolnili zámek. Tento zámek je zaujatý vůči spisovatelům a může hladovět čtenáře pod nepřetržitým zatížením spisovatelů.
 
-Moduly pro zápis jsou zřetězené tak, že zapisovač ukončí zámek uvolnění dalšího zapisovače na řádku.
+Zapisovače jsou zřetězené tak, aby zapisovač ukončení zámku uvolní další zapisovač v řádku.
 
-Pokud je zámek již držen volajícím kontextem, bude vyvolána výjimka [improper_lock](improper-lock-class.md) .
+Pokud zámek je již v držení kontextu volání, improper_lock [výjimka](improper-lock-class.md) bude vyvolána.
 
-## <a name="lock_read"></a>lock_read
+## <a name="lock_read"></a><a name="lock_read"></a>lock_read
 
-Získá zámek zapisovače pro čtení a čtení. Pokud existují moduly pro zápis, musí aktivní čtenáři počkat, než se dokončí. Čtecí modul jednoduše zaregistruje zájem v zámku a počká, až ho zapisovač vypustí.
+Získá zámek čtečky a zapisovače jako čtenář. Pokud existují spisovatelé, aktivní čtenáři musí počkat, až budou hotovi. Čtenář jednoduše zaregistruje zájem o zámek a čeká na autory, aby jej vydali.
 
 ```cpp
 void lock_read();
@@ -100,21 +100,21 @@ void lock_read();
 
 ### <a name="remarks"></a>Poznámky
 
-Je často bezpečnější využít [scoped_lock_read](#scoped_lock_read_class) konstrukce pro získání a uvolnění `reader_writer_lock`ho objektu jako čtecího zařízení bezpečným způsobem.
+Je často bezpečnější využít [scoped_lock_read](#scoped_lock_read_class) konstrukce získat `reader_writer_lock` a uvolnit objekt jako čtenář v výjimky bezpečným způsobem.
 
-Pokud na zámek čekají moduly pro zápis, čtečka počká, dokud všichni autoři na řádku nezískají a neuvolní zámek. Tento zámek se posune k modulům pro zápis a může omezují čtenáři za průběžné načítání zapisovačů.
+Pokud existují autoři čekají na zámek, bude čtenář čekat, dokud všechny autory v řádku získali a uvolní zámek. Tento zámek je zaujatý vůči spisovatelům a může hladovět čtenáře pod nepřetržitým zatížením spisovatelů.
 
-## <a name="ctor"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="ctor"></a>reader_writer_lock
 
-Vytvoří nový objekt `reader_writer_lock`.
+Vytvoří nový `reader_writer_lock` objekt.
 
 ```cpp
 reader_writer_lock();
 ```
 
-## <a name="dtor"></a>~ reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="dtor"></a>~reader_writer_lock
 
-Odstraní objekt `reader_writer_lock`.
+Zničí `reader_writer_lock` objekt.
 
 ```cpp
 ~reader_writer_lock();
@@ -122,19 +122,19 @@ Odstraní objekt `reader_writer_lock`.
 
 ### <a name="remarks"></a>Poznámky
 
-Očekává se, že zámek již není držen při spuštění destruktoru. Díky tomu, aby zámek zapisovače čtenářů destrukci s zámkem, se pořád drží výsledky v nedefinovaném chování.
+Očekává se, že zámek již není držen při spuštění destruktoru. Povolení zámek zapisovače čtečky zničit se zámkem stále držené výsledky v nedefinované chování.
 
-## <a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock – třída
+## <a name="reader_writer_lockscoped_lock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock::scoped_lock třída
 
-Bezpečnostní obálka RAII, která se dá použít k získání `reader_writer_lock` objektů zámku jako zapisovače.
+Výjimka bezpečné RAII obálka, která `reader_writer_lock` může být použita k získání objektů zámku jako zapisovač.
 
 ```cpp
 class scoped_lock;
 ```
 
-## <a name="scoped_lock_ctor"></a>scoped_lock:: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock
 
-Vytvoří objekt `scoped_lock` a získá `reader_writer_lock` objekt předaný v parametru `_Reader_writer_lock` jako zapisovač. Pokud je zámek držen jiným vláknem, toto volání bude zablokováno.
+Vytvoří `scoped_lock` objekt a získá `reader_writer_lock` objekt předaný v parametru `_Reader_writer_lock` jako zapisovatel. Pokud je zámek držen jiným vláknem, toto volání bude blokovat.
 
 ```cpp
 explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
@@ -143,27 +143,27 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ### <a name="parameters"></a>Parametry
 
 *_Reader_writer_lock*<br/>
-Objekt `reader_writer_lock`, který se má načíst jako zapisovač.
+Objekt `reader_writer_lock` získat jako zapisovatel.
 
-## <a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_dtor"></a>scoped_lock::~scoped_lock
 
-Odstraní objekt `reader_writer_lock` a uvolní zámek dodaný v jeho konstruktoru.
+Zničí `reader_writer_lock` objekt a uvolní zámek dodaný v jeho konstruktoru.
 
 ```cpp
 ~scoped_lock();
 ```
 
-## <a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read – třída
+## <a name="reader_writer_lockscoped_lock_read-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock::scoped_lock_read třída
 
-Bezpečnostní obálka RAII, která se dá použít k získání `reader_writer_lock` objektů zámku jako čtecího zařízení.
+Výjimka bezpečné RAII obálka, která `reader_writer_lock` může být použita k získání objektů zámku jako čtečka.
 
 ```cpp
 class scoped_lock_read;
 ```
 
-## <a name="scoped_lock_read_ctor"></a>scoped_lock_read:: scoped_lock_read
+## <a name="scoped_lock_readscoped_lock_read"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read
 
-Vytvoří objekt `scoped_lock_read` a získá `reader_writer_lock` objekt předaný v parametru `_Reader_writer_lock` jako čtecí modul. Pokud je zámek držen jiným vláknem jako modul pro zápis nebo čekají na zapisovače, toto volání bude zablokováno.
+Vytvoří `scoped_lock_read` objekt a získá `reader_writer_lock` objekt předaný v parametru `_Reader_writer_lock` jako čtenář. Pokud zámek je držen jiným vláknem jako zapisovač nebo jsou čekající autoři, toto volání bude blokovat.
 
 ```cpp
 explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
@@ -172,19 +172,19 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ### <a name="parameters"></a>Parametry
 
 *_Reader_writer_lock*<br/>
-Objekt `reader_writer_lock`, který se má načíst jako čtecí modul.
+Objekt `reader_writer_lock` získat jako čtenář.
 
-## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor"> reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read destruktor
+## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock::scoped_lock_read:~scoped_lock_read Destruktor
 
-Odstraní objekt `scoped_lock_read` a uvolní zámek dodaný v jeho konstruktoru.
+Zničí `scoped_lock_read` objekt a uvolní zámek dodaný v jeho konstruktoru.
 
 ```cpp
 ~scoped_lock_read();
 ```
 
-## <a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
-Pokusí se získat zámek zapisovače pro čtení ve formě zapisovače bez blokování.
+Pokusí se získat zámek pro zápis čtenáře jako zapisovač bez blokování.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -194,11 +194,11 @@ bool try_lock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud byl zámek získán, hodnota **true**; v opačném případě hodnota **false**.
+Pokud byl zámek získán, hodnota **true**; jinak hodnota **false**.
 
-## <a name="try_lock_read"></a>try_lock_read
+## <a name="try_lock_read"></a><a name="try_lock_read"></a>try_lock_read
 
-Pokusí se získat zámek zapisovače pro čtení ve formě čtecího modulu bez blokování.
+Pokusí se získat zámek pro zápis čtenáře jako čtečku bez blokování.
 
 ```cpp
 bool try_lock_read();
@@ -206,11 +206,11 @@ bool try_lock_read();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud byl zámek získán, hodnota **true**; v opačném případě hodnota **false**.
+Pokud byl zámek získán, hodnota **true**; jinak hodnota **false**.
 
-## <a name="unlock"></a>Uzamknout
+## <a name="unlock"></a><a name="unlock"></a>Odemknout
 
-Odemkne zámek zapisovače pro čtení na základě toho, kdo ho uzamkl, čtenář nebo zapisovač.
+Odemkne zámek čtečky a zapisovače podle toho, kdo jej uzamkl, čtečku nebo zapisovač.
 
 ```cpp
 void unlock();
@@ -218,9 +218,9 @@ void unlock();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud na zámek čekají moduly pro zápis, bude verze zámku vždycky přejít k dalšímu zapisovači v pořadí FIFO. Tento zámek se posune k modulům pro zápis a může omezují čtenáři za průběžné načítání zapisovačů.
+Pokud jsou autoři čekají na zámek, uvolnění zámku bude vždy přejít na další zapisovač v pořadí FIFO. Tento zámek je zaujatý vůči spisovatelům a může hladovět čtenáře pod nepřetržitým zatížením spisovatelů.
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)<br/>
+[obor názvů souběžnosti](concurrency-namespace.md)<br/>
 [critical_section – třída](critical-section-class.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 035cc4e7b9cfac262979509bf7b4570e2c55336c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689306"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377431"
 ---
 # <a name="money_put-class"></a>money_put – třída
 
-Šablona třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převodu peněžních hodnot na sekvence typu `CharType`.
+Šablona třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí `CharType`pro řízení převodů peněžních hodnot na sekvence typu .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,21 +37,21 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*Typ znaku*\
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*OutputIterator* \
+*Výstupní iterátor*\
 Typ iterátoru, do kterého finanční funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v ID jedinečnou kladnou hodnotu **.**
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k jeho uložená hodnota ukládá jedinečnou kladnou hodnotu v **id.**
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[money_put](#money_put)|Konstruktor pro objekty typu `money_put`.|
+|[money_put](#money_put)|Konstruktor pro objekty `money_put`typu .|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -59,22 +59,22 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
 |[iter_type](#iter_type)|Typ, který popisuje výstupní iterátor.|
-|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky `CharType`typu .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[do_put](#do_put)|Virtuální funkce volaná k převodu buď čísla, nebo řetězce na sekvenci znaků, která představuje finanční hodnotu.|
-|[převést](#put)|Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.|
+|[Dát](#put)|Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<> národního prostředí
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>money_put::char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a>money_put::char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -84,9 +84,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **CharType**.
+Typ je synonymem pro parametr šablony **CharType**.
 
-## <a name="do_put"></a>money_put::d o_put
+## <a name="money_putdo_put"></a><a name="do_put"></a>money_put::do_put
 
 Virtuální funkce volaná k převodu buď čísla, nebo řetězce na sekvenci znaků, která představuje finanční hodnotu.
 
@@ -108,68 +108,68 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*další* \
-Iterátor adresující první prvek vloženého řetězce.
+*Další*\
+Iterátor adresování první prvek vloženého řetězce.
 
-*_Intl* \
-Logická hodnota označující typ symbolu měny očekávaný v sekvenci: **true** , pokud mezinárodní, **false** , pokud je tuzemsko.
+*_Intl*\
+Logická hodnota označující typ symbolu měny očekávanév pořadí: **true** if international, **false** if domestic.
 
-*_Iosbase* \
-Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
+*_Iosbase*\
+Příznak formátu, který při nastavení označuje, že symbol měny je volitelný; v opačném případě je nutné
 
-*_Fill* \
+*_Fill*\
 Znak, který se používá pro mezery.
 
-\ *Val*
-Objekt String, který má být převeden.
+*Val*\
+Objekt řetězce, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresuje umístění, které je umístěno na jednom za posledním vytvořeným prvkem.
+Výstupní iterátor adresy pozici jeden za poslední prvek vyrobené.
 
 ### <a name="remarks"></a>Poznámky
 
-První virtuální chráněná členská funkce vytvoří sekvenční prvky začínající na *Další* pro vytvoření pole peněžního výstupu z [string_type](#string_type) objektu *Val*. Sekvence řízená pomocí *Val* musí začínat jednou nebo více desítkovými číslicemi, volitelně předcházet znaménkem mínus (-), které představuje množství. Funkce vrátí iterátor, který určuje první prvek za generovaným polem s peněžním výstupem.
+První virtuální chráněná členská funkce generuje sekvenční prvky začínající *vedle* vytvoření měnového výstupního pole z [string_type](#string_type) *objektu val*. Sekvence řízená *val* musí začínat jednou nebo více desetinnými číslicemi, které volitelně předchází znaménko mínus (-), které představuje částku. Funkce vrátí iterátor označující první prvek za generované měnové výstupní pole.
 
-Druhá funkce Virtual Protected member se chová stejně jako první, s tím rozdílem, že efektivně nejprve převede hodnotu *Val* na posloupnost desítkových číslic, volitelně předchází znaménkem mínus a následně převádí tuto sekvenci nahoru.
+Druhá virtuální chráněná členská funkce se chová stejně jako první, s tím rozdílem, že nejprve nejprve převede *val* na posloupnost desetinných míst, volitelně předchází znaménko mínus, pak převede tuto sekvenci, jak je uvedeno výše.
 
-Formát pole s peněžním výstupem je určen FAC [vlastnostmi národního prostředí](../standard-library/locale-class.md#facet_class) vráceným (platným) voláním [use_facet](../standard-library/locale-functions.md#use_facet)  < [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **mezinárodní**> > ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
+Formát pole měnového výstupu je určen [fac národního prostředí](../standard-library/locale-class.md#facet_class) , který je vrácen (efektivním) voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
-Určen
+Konkrétně:
 
-- **FAC**. [pos_format](../standard-library/moneypunct-class.md#pos_format) určuje pořadí, ve kterém jsou komponenty pole generovány pro nezáporné hodnoty.
+- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) určuje pořadí, ve kterém jsou komponenty pole generovány pro nezápornou hodnotu.
 
-- **FAC**. [neg_format](../standard-library/moneypunct-class.md#neg_format) určuje pořadí, ve kterém jsou komponenty pole generovány pro zápornou hodnotu.
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) určuje pořadí, ve kterém jsou komponenty pole generovány pro zápornou hodnotu.
 
-- **FAC**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) určuje posloupnost prvků, které mají být generovány pro symbol měny.
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) určuje posloupnost prvků, které mají být generovány pro symbol měny.
 
-- **FAC**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) Určuje sekvenci prvků, které mají být generovány pro kladné znaménko.
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) určuje posloupnost prvků generovat pro kladné znaménko.
 
-- **FAC**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) Určuje sekvenci prvků, které mají být generovány pro záporné znaménko.
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) určuje posloupnost prvků, které mají být generovány pro záporné znaménko.
 
-- **FAC**. [seskupení](../standard-library/moneypunct-class.md#grouping) určuje, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
+- **fac**. [seskupení](../standard-library/moneypunct-class.md#grouping) určuje, jak jsou číslice seskupeny nalevo od jakékoli desetinné čárky.
 
-- **FAC**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) určuje prvek, který odděluje skupiny číslic nalevo od libovolné desetinné čárky.
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) určuje prvek, který odděluje skupiny číslic nalevo od jakékoli desetinné čárky.
 
-- **FAC**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) určuje prvek, který odděluje celočíselné číslice od číslic zlomků.
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) určuje prvek, který odděluje celé číslice od všech zlomků číslic.
 
-- **FAC**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) určuje počet významných číslic zlomku napravo od desetinné čárky.
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) určuje počet číslic významného zlomku vpravo od jakékoli desetinné čárky.
 
-Pokud se podepisuje řetězec ( **FAC**. `negative_sign` nebo **FAC**. `positive_sign`) obsahuje více než jeden prvek, je vygenerován pouze první prvek, kde se element ve vzoru Format ( **FAC**) zobrazí v elementu, který se rovná **money_base:: Sign** . `neg_format` nebo **FAC**. `pos_format`). Všechny zbývající prvky jsou generovány na konci pole s peněžním výstupem.
+Pokud znakový řetězec ( **fac**. `negative_sign`nebo **fac**. `positive_sign`) má více než jeden prvek, pouze první prvek je generován, kde se prvek rovný **money_base::sign** zobrazí ve vzoru formátu ( **fac**. `neg_format`nebo **fac**. `pos_format`). Všechny zbývající prvky jsou generovány na konci pole měnového výstupu.
 
-IF **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags)  & [showbase](../standard-library/ios-functions.md#showbase) jsou nenulové, řetězec **FAC**. `curr_symbol` je vygenerováno, kde se ve vzoru formátu zobrazí element, který se rovná **money_base:: symbol** . V opačném případě se negeneruje žádný symbol měny.
+Pokud **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) je nenulová, řetězec **fac**. `curr_symbol`je generován, kde se ve vzorovém formátu zobrazí prvek rovný **money_base::symbol.** V opačném případě není generován žádný symbol měny.
 
-Pokud **FAC**žádné omezení seskupení neukládá. **seskupení** (jeho první prvek má hodnotu CHAR_MAX), pak žádné instance **FAC**. `thousands_sep` jsou generovány v hodnotě pole s peněžním výstupem (kde se element rovnají **money_base:: Value** ve vzoru formátu). IF **FAC**. `frac_digits` je nula, pak žádná instance třídy **FAC**. `decimal_point` se vygeneruje za desítkovou číslicí. V opačném případě výsledné pole s peněžním výstupem umístí **FAC**na nižší objednávku. `frac_digits` desítkové číslice napravo od desetinné čárky.
+Pokud **fac**neukládají žádná omezení seskupení . **seskupení** (jeho první prvek má hodnotu CHAR_MAX), pak žádné instance **fac**. `thousands_sep`jsou generovány v hodnotové části pole peněžního výstupu (kde se prvek rovný **money_base::hodnota** zobrazí ve formátu vzoru). Pokud **fac**. `frac_digits`je nula, pak žádná instance **fac**. `decimal_point`je generována za desetinnými číslicemi. V opačném případě výsledné pole peněžního výstupu umístí **fac**nižšího řádu . `frac_digits`desetinná místa napravo od desetinné čárky.
 
-K odsazení dochází jako pro jakékoliv číselné pole Output, s výjimkou případů, kdy je **iosbase**. **příznaky**  & **iosbase**. [interní](../standard-library/ios-functions.md#internal) je nenulový, jakékoli vnitřní odsazení je vygenerováno, kde se element, který se rovná **money_base:: Space** , se zobrazí ve vzoru formátu, pokud se zobrazí. V opačném případě dojde k vnitřnímu odsazení před vygenerovanou sekvencí. Znak odsazení je **Fill**.
+K odsazení dochází jako u libovolného číselného výstupního pole s tím rozdílem, že pokud **iosbase**. **příznaky** & **iosbase**. [vnitřní](../standard-library/ios-functions.md#internal) je nenulová, je generováno jakékoli vnitřní odsazení, kde se prvek rovný **money_base::space** zobrazí ve vzoru formátu, pokud se zobrazí. V opačném případě dojde k interní odsazení před generované sekvence. Znak odsazení je **výplň**.
 
-Funkce volá **iosbase**. **Width**(0) pro obnovení šířky pole na nulu
+Funkce volá **iosbase**. **šířku**(0) pro obnovení šířky pole na nulu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [vložení](#put), kde je virtuální členská funkce volána funkcí **Put**.
+Viz příklad pro [put](#put), kde je virtuální členská funkce volána **put**.
 
-## <a name="iter_type"></a>money_put::iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put::iter_type
 
 Typ, který popisuje výstupní iterátor.
 
@@ -179,11 +179,11 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **OutputIterator.**
+Typ je synonymem pro parametr šablony **OutputIterator.**
 
-## <a name="money_put"></a>money_put::money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put::money_put
 
-Konstruktor pro objekty typu `money_put`.
+Konstruktor pro objekty `money_put`typu .
 
 ```cpp
 explicit money_put(size_t _Refs = 0);
@@ -191,24 +191,24 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
-Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
+*_Refs*\
+Celá hodnota používaná k určení typu správy paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
+Možné hodnoty parametru *_Refs* a jejich význam jsou:
 
-- 0: životnost objektu je spravována místními objekty, které jej obsahují.
+- 0: životnost objektu je spravována národními prostředími, které jej obsahují.
 
-- 1: životnost objektu musí být ručně spravovaná.
+- 1: životnost objektu musí být spravována ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \>1: tyto hodnoty nejsou definovány.
 
-Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
+Nejsou možné žádné přímé příklady, protože destruktor je chráněn.
 
-Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicializuje svůj základní objekt pomocí **národního prostředí::**[omezující stolku](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="put"></a>money_put::p UT
+## <a name="money_putput"></a><a name="put"></a>money_put::put
 
 Převede buď číslo, nebo řetězec na sekvenci znaků, která představuje finanční hodnotu.
 
@@ -230,28 +230,28 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*další* \
-Iterátor adresující první prvek vloženého řetězce.
+*Další*\
+Iterátor adresování první prvek vloženého řetězce.
 
-*_Intl* \
-Logická hodnota označující typ symbolu měny očekávaný v sekvenci: **true** , pokud mezinárodní, **false** , pokud je tuzemsko.
+*_Intl*\
+Logická hodnota označující typ symbolu měny očekávanév pořadí: **true** if international, **false** if domestic.
 
-*_Iosbase* \
-Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
+*_Iosbase*\
+Příznak formátu, který při nastavení označuje, že symbol měny je volitelný; v opačném případě je nutné
 
-*_Fill* \
+*_Fill*\
 Znak, který se používá pro mezery.
 
-\ *Val*
-Objekt String, který má být převeden.
+*Val*\
+Objekt řetězce, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresuje umístění, které je umístěno na jednom za posledním vytvořeným prvkem.
+Výstupní iterátor adresy pozici jeden za poslední prvek vyrobené.
 
 ### <a name="remarks"></a>Poznámky
 
-Oba členské funkce vrací [do_put](#do_put)(`next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).
+Obě členské funkce `next`vrátí `_Intl` `_Iosbase`do_put `_Fill` `val`( , , , ). [do_put](#do_put)
 
 ### <a name="example"></a>Příklad
 
@@ -281,9 +281,9 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="string_type"></a>money_put::string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a>money_put::string_type
 
-Typ, který popisuje řetězec obsahující znaky typu `CharType`.
+Typ, který popisuje řetězec obsahující znaky `CharType`typu .
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -291,10 +291,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat sekvence prvků ze zdrojové sekvence.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jehož objekty mohou ukládat sekvence prvků ze zdrojové sekvence.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
-\ [třídy omezující vlastnosti](../standard-library/locale-class.md#facet_class)
+[\<>národního prostředí](../standard-library/locale.md)\
+[fazeta třídy](../standard-library/locale-class.md#facet_class)\
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f53d3bd55fbff45257c06af2ab11f066d421a54
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376102"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile – třída
 
-Představuje datový proud dat (`IStream`) ve složeném souboru jako součást strukturovaného úložiště OLE.
+Představuje datový proud`IStream`( ) ve složeném souboru jako součást strukturovaného úložiště OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,46 +41,46 @@ class COleStreamFile : public CFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleStreamFile::COleStreamFile](#colestreamfile)|`COleStreamFile` Vytvoří objekt.|
+|[COleStreamFile::COleStreamFile](#colestreamfile)|Vytvoří `COleStreamFile` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|Přidruží datový proud k objektu.|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Vytvoří datový proud z globální paměti a přidruží ho k objektu.|
-|[COleStreamFile::CreateStream](#createstream)|Vytvoří datový proud a přidruží ho k objektu.|
-|[COleStreamFile::Detach](#detach)|Zruší přidružení datového proudu k objektu.|
+|[COleStreamFile::Připojit](#attach)|Přidruží datový proud k objektu.|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Vytvoří datový proud z globální paměti a přidruží jej k objektu.|
+|[COleStreamFile::CreateStream](#createstream)|Vytvoří datový proud a přidruží jej k objektu.|
+|[COleStreamFile::Detach](#detach)|Odpojí datový proud od objektu.|
 |[COleStreamFile::GetStream](#getstream)|Vrátí aktuální datový proud.|
-|[COleStreamFile::OpenStream](#openstream)|Bezpečně otevře datový proud a přidruží ho k objektu.|
+|[COleStreamFile::OpenStream](#openstream)|Bezpečně otevře datový proud a přidruží jej k objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Aby bylo možné datový proud otevřít nebo vytvořit, musí existovat objekt,pokudsenejednáoproudpaměti.`IStorage`
+Objekt `IStorage` musí existovat před otevřením nebo vytvořením datového proudu, pokud se nejedná o datový proud paměti.
 
-`COleStreamFile`objekty jsou manipulovány přesně jako objekty [CFile –](../../mfc/reference/cfile-class.md) .
+`COleStreamFile`s objekty se manipuluje přesně jako s objekty [CFile.](../../mfc/reference/cfile-class.md)
 
-Další informace o manipulaci s datovými proudy a úložišti najdete v kontejnerech článků [: Složené soubory](../../mfc/containers-compound-files.md)...
+Další informace o manipulaci s datovými proudy a úložišti naleznete v článku [Kontejnery: Složené soubory](../../mfc/containers-compound-files.md)..
 
-Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objidl-istream) a [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) v Windows SDK.
+Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objidl-istream) a [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) v sadě Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CFile –](../../mfc/reference/cfile-class.md)
+[Soubor C](../../mfc/reference/cfile-class.md)
 
 `COleStreamFile`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXOLE. h
+**Záhlaví:** afxole.h
 
-##  <a name="attach"></a>COleStreamFile:: Attach
+## <a name="colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Připojit
 
-Přidruží zadaný datový proud OLE k `COleStreamFile` objektu.
+Přidruží k `COleStreamFile` objektu zadaný datový proud OLE.
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -89,17 +89,17 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>Parametry
 
 *lpStream*<br/>
-Odkazuje na datový proud OLE (`IStream`), který má být přidružen k objektu. Nemůže mít hodnotu NULL.
+Odkazuje na datový`IStream`proud OLE ( ) a které mají být přidruženy k objektu. Nemůže být null.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt již nesmí být přidružen ke streamu OLE.
+Objekt již nesmí být přidružen k datovému proudu OLE.
 
-Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objidl-istream) v Windows SDK.
+Další informace naleznete v [tématu IStream](/windows/win32/api/objidl/nn-objidl-istream) v sadě Windows SDK.
 
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile
+## <a name="colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile
 
-`COleStreamFile` Vytvoří objekt.
+Vytvoří `COleStreamFile` objekt.
 
 ```
 COleStreamFile(LPSTREAM lpStream = NULL);
@@ -112,13 +112,13 @@ Ukazatel na datový proud OLE, který má být přidružen k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *LPSTREAM* hodnotu null, objekt není přidružen ke streamu OLE, v opačném případě je objekt přidružen k dodanému streamu OLE.
+Pokud *lpStream* je NULL, objekt není spojen s datovým proudem OLE, jinak objekt je přidružen k zadanému datovému proudu OLE.
 
-Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objidl-istream) v Windows SDK.
+Další informace naleznete v [tématu IStream](/windows/win32/api/objidl/nn-objidl-istream) v sadě Windows SDK.
 
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream
+## <a name="colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream
 
-Bezpečně vytvoří nový Stream z globální sdílené paměti, kde selhání je normální, očekávaná podmínka.
+Bezpečně vytvoří nový datový proud z globální sdílené paměti, kde selhání je normální, očekávaný stav.
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -126,22 +126,22 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pError*<br/>
-Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo hodnotu null, která označuje stav dokončení operace vytvoření. Zadejte tento parametr, pokud chcete monitorovat možné výjimky vygenerované při pokusu o vytvoření datového proudu.
+*chyba*<br/>
+Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo NULL, který označuje stav dokončení operace vytvoření. Zadejme tento parametr, pokud chcete sledovat možné výjimky generované pokusem o vytvoření datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je datový proud úspěšně vytvořen; v opačném případě 0.
+Nenulová, pokud je datový proud úspěšně vytvořen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Paměť přiděluje Podsystém OLE.
+Paměť je přidělena subsystémem OLE.
 
-Další informace najdete v tématu [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) v Windows SDK.
+Další informace naleznete v tématu [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) v sadě Windows SDK.
 
-##  <a name="createstream"></a>COleStreamFile:: CreateStream –
+## <a name="colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream
 
-Bezpečně vytvoří nový datový proud v zadaném objektu úložiště, ve kterém je selhání normální, očekávaná podmínka.
+Bezpečně vytvoří nový datový proud v zadaném objektu úložiště, kde selhání je normální, očekávaný stav.
 
 ```
 BOOL CreateStream(
@@ -154,30 +154,30 @@ BOOL CreateStream(
 ### <a name="parameters"></a>Parametry
 
 *lpStorage*<br/>
-Odkazuje na objekt úložiště OLE, který obsahuje datový proud, který má být vytvořen. Nemůže mít hodnotu NULL.
+Odkazuje na objekt úložiště OLE, který obsahuje datový proud, který má být vytvořen. Nemůže být null.
 
 *lpszStreamName*<br/>
-Název streamu, který se má vytvořit Nemůže mít hodnotu NULL.
+Název datového proudu, který má být vytvořen. Nemůže být null.
 
 *nOpenFlags*<br/>
-Režim přístupu, který se má použít při otevírání streamu. Ve výchozím nastavení se používají exkluzivní režimy pro čtení a zápis a vytváření. Úplný seznam dostupných režimů najdete v tématu [CFile –:: CFile –](../../mfc/reference/cfile-class.md#cfile).
+Přístup ový režim, který se má použít při otevírání datového proudu. Ve výchozím nastavení se používají výhradní režimy pro čtení a zápis a vytváření. Úplný seznam dostupných režimů naleznete v tématu [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
 
-*pError*<br/>
-Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo na hodnotu null. Zadejte tento parametr, pokud chcete monitorovat možné výjimky vygenerované při pokusu o vytvoření datového proudu.
+*chyba*<br/>
+Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo NULL. Zadejme tento parametr, pokud chcete sledovat možné výjimky generované pokusem o vytvoření datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je datový proud úspěšně vytvořen; v opačném případě 0.
+Nenulová, pokud je datový proud úspěšně vytvořen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se otevření nezdaří a *pError* nemá hodnotu null, bude vyvolána výjimka souboru.
+Výjimka souboru bude vyvolána, pokud se open nezdaří a *chyba pError* není null.
 
-Další informace naleznete v tématu [IStorage:: CreateStream –](/windows/win32/api/objidl/nf-objidl-istorage-createstream) v Windows SDK.
+Další informace naleznete v [tématu IStorage::CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) v sadě Windows SDK.
 
-##  <a name="detach"></a>COleStreamFile::D etach
+## <a name="colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach
 
-Zruší přidružení datového proudu k objektu bez zavření datového proudu.
+Odpojí datový proud od objektu bez zavření datového proudu.
 
 ```
 LPSTREAM Detach();
@@ -185,17 +185,17 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na datový proud (`IStream`), který byl přidružen k objektu.
+Ukazatel na datový`IStream`proud ( ), který byl přidružen k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Před ukončením programu musí být datový proud uzavřen jiným způsobem.
+Datový proud musí být před ukončením programu uzavřen jiným způsobem.
 
-Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objidl-istream) v Windows SDK.
+Další informace naleznete v [tématu IStream](/windows/win32/api/objidl/nn-objidl-istream) v sadě Windows SDK.
 
-##  <a name="getstream"></a>COleStreamFile:: GetStream
+## <a name="colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream
 
-Voláním této funkce vrátíte ukazatel na aktuální datový proud.
+Volání této funkce vrátit ukazatel na aktuální datový proud.
 
 ```
 IStream* GetStream() const;
@@ -205,7 +205,7 @@ IStream* GetStream() const;
 
 Ukazatel na aktuální rozhraní datového proudu ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
-##  <a name="openstream"></a>COleStreamFile::OpenStream
+## <a name="colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream
 
 Otevře existující datový proud.
 
@@ -220,28 +220,28 @@ BOOL OpenStream(
 ### <a name="parameters"></a>Parametry
 
 *lpStorage*<br/>
-Odkazuje na objekt úložiště OLE, který obsahuje datový proud, který má být otevřen. Nemůže mít hodnotu NULL.
+Odkazuje na objekt úložiště OLE, který obsahuje datový proud, který má být otevřen. Nemůže být null.
 
 *lpszStreamName*<br/>
-Název datového proudu, který se má otevřít Nemůže mít hodnotu NULL.
+Název datového proudu, který má být otevřen. Nemůže být null.
 
 *nOpenFlags*<br/>
-Režim přístupu, který se má použít při otevírání streamu. Ve výchozím nastavení se používají výhradně režimy čtení a zápis. Úplný seznam dostupných režimů naleznete v tématu [CFile –:: CFile –](../../mfc/reference/cfile-class.md#cfile).
+Přístup ový režim, který se má použít při otevírání datového proudu. Ve výchozím nastavení se používají exkluzivní režimy a režimy čtení a zápisu. Úplný seznam dostupných režimů naleznete v tématu [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
 
-*pError*<br/>
-Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo na hodnotu null. Zadejte tento parametr, pokud chcete monitorovat možné výjimky vygenerované při pokusu o otevření streamu.
+*chyba*<br/>
+Odkazuje na objekt [CFileException](../../mfc/reference/cfileexception-class.md) nebo NULL. Zadejme tento parametr, pokud chcete sledovat možné výjimky generované pokusem o otevření datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se datový proud úspěšně otevřel; v opačném případě 0.
+Nenulová, pokud je datový proud úspěšně otevřen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se otevření nezdaří a *pError* nemá hodnotu null, bude vyvolána výjimka souboru.
+Výjimka souboru bude vyvolána, pokud se open nezdaří a *chyba pError* není null.
 
-Další informace naleznete v tématu [IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) v Windows SDK.
+Další informace naleznete v [tématu IStorage::OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

@@ -1,69 +1,69 @@
 ---
-title: Čtení a pochopení C++ kódu v aplikaci Visual Studio
-description: Použijte Editor C++ kódu v aplikaci Visual Studio k formátování a pochopení kódu.
+title: Čtení a pochopení kódu Jazyka C++ v sadě Visual Studio
+description: Pomocí editoru kódu C++ ve Visual Studiu naformátujte a pochopte svůj kód.
 ms.date: 05/28/2019
-ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9ed0a20fb73e4cc976392bc5e5f698f9658a0b48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377292"
 ---
-# <a name="read-and-understand-c-code-in-visual-studio"></a>Čtení a pochopení C++ kódu v aplikaci Visual Studio
+# <a name="read-and-understand-c-code-in-visual-studio"></a>Čtení a pochopení kódu Jazyka C++ v sadě Visual Studio
 
-Editor C++ kódu a integrované vývojové prostředí sady Visual Studio poskytují mnoho pomůcek pro kódování. Některé jsou jedinečné pro C++a některé jsou v podstatě stejné pro všechny jazyky sady Visual Studio. Další informace o sdílených funkcích naleznete v tématu [psaní kódu v editoru kódu a textu](/visualstudio/ide/writing-code-in-the-code-and-text-editor).  
+Editor kódu Jazyka C++ a ide sady Visual Studio poskytují mnoho kódovacích pomůcek. Některé jsou jedinečné pro C++ a některé jsou v podstatě stejné pro všechny jazyky sady Visual Studio. Další informace o sdílených funkcích naleznete [v tématu Zápis kódu v kódu a textovém editoru](/visualstudio/ide/writing-code-in-the-code-and-text-editor).  
 
-## <a name="colorization"></a>Zabarvení
+## <a name="colorization"></a>Colorization
 
-Prvky syntaxe sady Visual Studio vybarvuje k rozlišení mezi typy symbolů, jako jsou klíčová slova jazyka, názvy typů, názvy proměnných, parametry funkce, řetězcové literály a tak dále.
+Visual Studio vybarví prvky syntaxe a rozlišuje mezi typy symbolů, jako jsou klíčová slova jazyka, názvy typů, názvy proměnných, parametry funkce, řetězcové literály a tak dále.
 
-![Barevné zabarvení kódu](../ide/media/code-outline-colorization.png "C++zabarvení")
+![Zbarvení kódu](../ide/media/code-outline-colorization.png "C++ vybarvení")
 
-Nepoužitý kód (například kód pod #if 0) je barevně vybledlější.
+Nepoužívaný kód (například kód pod #if 0) je více vybledlé barvy.
 
-![Neaktivní kód](../ide/media/inactive-code-cpp.png "C++Neaktivní kód")
+![Neaktivní kód](../ide/media/inactive-code-cpp.png "Neaktivní kód jazyka C++")
 
-Barvy můžete přizpůsobit tak, že v okně **Snadné spuštění**zadáte "písma" a pak zvolíte **písma a barvy**. V dialogovém okně **písma a barvy** se posuňte dolů k možnostem C/C++ a pak zvolte vlastní písmo a barvu.
+Barvy můžete přizpůsobit zadáním "Písma" v **okně Snadné spuštění**a výběrem **možnosti Písma a barvy**. V dialogovém okně **Písma a barvy** přejděte dolů na volby C/C++ a pak zvolte vlastní písmo nebo barvu.
 
 ## <a name="outlining"></a>Sbalování
 
-Kliknutím pravým tlačítkem myši kdekoli v souboru zdrojového kódu a **výběrem možnosti sbalení** sbalíte nebo rozbalíte bloky kódu a/nebo vlastní oblasti. Tím usnadníte procházení pouze kódu, který vás zajímá. Další informace najdete v tématu [popisujícím sbalení](/visualstudio/ide/outlining).
+Klikněte pravým tlačítkem myši na libovolné místo v souboru zdrojového kódu a zvolte **Osnova** sbalit nebo rozbalit bloky kódu nebo vlastní oblasti, abyste usnadnili procházení pouze kódu, který vás zajímá. Další informace naleznete [v tématu Osnova](/visualstudio/ide/outlining).
 
-![Osnova jazyka C&#43; &#43;](../ide/media/vs2015_cpp_outlining.png "Sbalování")
+![C&#43;&#43; Osnova](../ide/media/vs2015_cpp_outlining.png "Sbalování")
 
-Když umístíte kurzor před složenou závorku, "{" nebo "}", Editor zvýrazní svůj odpovídající protějšek.
+Když umístíte kurzor před složenou složenou závorku ,{nebo '}', editor zvýrazní svůj odpovídající protějšek.
 
-Další možnosti sbalení najdete v části **upravit** > **sbalení** v hlavní nabídce.
+Další možnosti osnovy jsou umístěny v části **Upravit** > **osnovu** v hlavní nabídce.
 
 ## <a name="line-numbers"></a>Čísla řádků
 
-Čísla řádků do projektu můžete přidat tak, že přejdete na **nástroje** > možnosti > **textový editor** > **všechny jazyky** > **Obecné** nebo vyhledáte "číslo řádku" s **možností** **snadného spuštění (CTRL + Q)** . Čísla řádků můžete nastavit pro všechny jazyky nebo jenom pro konkrétní jazyky, včetně C++.
+Čísla řádků můžete do projektu přidat tak, že přejdete do**textového editoru** > **možnosti** >  **nástrojů** > **Všechny jazyky** > **obecné** nebo vyhledáte "číslo řádku" pomocí funkce Snadné **spuštění (Ctrl + Q).** Čísla řádků lze nastavit pouze pro všechny jazyky nebo pro určité jazyky, včetně jazyka C++.
 
-## <a name="scroll-and-zoom"></a>Posouvání a přiblížení
+## <a name="scroll-and-zoom"></a>Posouvání a zvětšování
 
-V editoru můžete přiblížit nebo oddálit stisknutím klávesy **CTRL** a posouváním kolečkem myši. Můžete také zvětšit pomocí nastavení přiblížení v levém dolním rohu.
+Přiblížení nebo oddálení editoru můžete přiblížit stisknutím **klávesy Ctrl** a posouváním kolečkem myši. Zvětšení můžete také pomocí nastavení lupy v levém dolním rohu.
 
-![Ovládací&#43; &#43; prvek lupy v jazyce C](../ide/media/zoom-control.png "Ovládací prvek Lupa")
+![C&#43;&#43; Ovládání přiblížení](../ide/media/zoom-control.png "Ovládací prvek Lupa")
 
-**Režim mapy** ScrollBar umožňuje rychle procházet a procházet soubor kódu, aniž byste opustili aktuální polohu. Kliknutím kamkoli na mapu kódu můžete přejít přímo do tohoto umístění.
+Režim **mapy** posuvníku umožňuje rychle procházet soubor kódu a procházet jej, aniž byste museli opustit aktuální umístění. Můžete kliknout kdekoli na mapě kódu a přejít přímo na toto místo.
 
-![Mapa kódu v jazyce C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa kódu")
+![Mapa kódu v&#43;&#43;C](../ide/media/vs2015-cpp-code-map.png "Mapa kódu")
 
-Pokud chcete zapnout **režim mapování**, zadejte do pole **Snadné spuštění** na hlavním panelu nástrojů "map" a vyberte **použít režim posouvání mapy**. Další informace najdete v tématu [Postupy: sledování kódu přizpůsobením posuvníku](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Chcete-li zapnout **režim mapy**, zadejte do vyhledávacího pole **Snadné spuštění** na hlavním panelu nástrojů příkaz "mapa" a zvolte Použít režim **mapy posouvání**. Další informace najdete v [tématu Postup: Sledování kódu přizpůsobením posuvníku](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
-Když je **režim mapování** vypnutý, posuvník stále zvýrazní změny, které jste udělali v souboru. Zelená označuje uložené změny a žlutá indikuje neuložené změny.
+Když je **režim mapy** vypnutý, posuvník stále zvýrazní změny, které jste v souboru provedli. Zelená označuje uložené změny a žlutá neuložené změny.
 
 ## <a name="quick-info-and-parameter-info"></a>Rychlé informace a informace o parametrech
 
-Najeďte myší na jakoukoli proměnnou, funkci nebo jiný symbol, abyste získali informace o tom, včetně deklarace, a všech komentářů, které se nachází těsně před ní.
+Najeďte na libovolnou proměnnou, funkci nebo jiný symbol, abyste získali informace o ní, včetně deklarace, a všechny komentáře, které jsou umístěny těsně před ním.
 
 ::: moniker range="vs-2019"
 
-![Rychlé informace v jazyce C&#43;&#43;](../ide/media/quick-info-vs2019.png "Rychlé informace")
+![Rychlé informace v c&#43;&#43;](../ide/media/quick-info-vs2019.png "Rychlé informace")
 
-Popis **rychlá informace** obsahuje online odkaz pro **hledání** . Chcete-li zadat poskytovatele vyhledávání, použijte možnost **C++** **nástroje** > **možnosti** > **textový editor** >  > **zobrazení** .
+Popisek **Rychlých informací** má odkaz **Online vyhledávání.** Přejděte na**možnosti** >  **nástrojů** > **Textové editoru** > **C++** > **Zobrazení** určit poskytovatele vyhledávání.
 
-Pokud v kódu dojde k chybě, můžete na něj umístit ukazatel myši a **rychlé informace** zobrazí chybovou zprávu. Chybovou zprávu můžete najít také v okně Seznam chyb.
+Pokud je v kódu chyba, můžete na něj najet najet a **rychlé informace** se zobrazí chybová zpráva. Chybovou zprávu najdete také v okně Seznam chyb.
 
 ![Rychlé informace o chybě](../ide/media/quickinfo-on-error.png "Rychlé informace o chybě")
 
@@ -71,48 +71,48 @@ Pokud v kódu dojde k chybě, můžete na něj umístit ukazatel myši a **rychl
 
 ::: moniker range="<=vs-2017"
 
-![Rychlé informace v jazyce C&#43;&#43;](../ide/media/quick-info.png "Rychlé informace")
+![Rychlé informace v c&#43;&#43;](../ide/media/quick-info.png "Rychlé informace")
 
-Pokud v kódu dojde k chybě, můžete na něj umístit ukazatel myši a **rychlé informace** zobrazí chybovou zprávu. Chybovou zprávu můžete najít také v okně **Seznam chyb** .
+Pokud je v kódu chyba, můžete na něj najet najet a **rychlé informace** se zobrazí chybová zpráva. Chybovou zprávu najdete také v okně **Seznam chyb.**
 
 ![Rychlé informace o chybě](../ide/media/quickinfo-on-error.png "Rychlé informace o chybě")
 
 ::: moniker-end
 
-Při volání funkce jsou v **informacích o parametrech** zobrazeny typy parametrů a pořadí, ve kterém jsou očekávány.
+Při volání **funkce, Informace o parametrech** zobrazuje typy parametrů a pořadí, ve kterém jsou očekávány.
 
-![Informace o parametrech v jazyce C&#43;&#43;](../ide/media/parameter-info.png "Informace o parametrech")
+![Informace o parametrech v&#43;&#43;C](../ide/media/parameter-info.png "Informace o parametrech")
 
 ## <a name="peek-definition"></a>Náhled definice
 
-Najeďte myší na proměnnou nebo deklaraci funkce, kliknutím pravým tlačítkem myši a zvolením možnosti **Náhled definice** zobrazíte vložené zobrazení jeho definice bez přechodu z aktuálního umístění. Další informace najdete v tématu [Náhled definice (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
+Najeďte přes proměnnou nebo deklaraci funkce, klikněte pravým tlačítkem myši a pak zvolte **Náhled Definice** zobrazíte včleněné zobrazení jeho definice, aniž byste se museli vzdalovat od aktuální polohy. Další informace naleznete v [tématu Náhled Definice (Alt+ F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
-![Náhled&#43; &#43; definice jazyka C](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![C&#43;&#43; náhled definice](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-##  <a name="f1-help"></a>F1 – nápověda
+## <a name="f1-help"></a>F1 – nápověda
 
-Umístěte kurzor na nebo hned za libovolný typ, klíčové slovo nebo funkci a stisknutím klávesy **F1** přejděte přímo k příslušnému referenčnímu tématu v docs.Microsoft.com. **F1** také funguje na položkách v seznamu chyb a v mnoha dialogových oknech.
+Umístěte kurzor na nebo těsně za libovolný typ, klíčové slovo nebo funkci a stisknutím **klávesy F1** přejděte přímo k příslušnému referenčnímu tématu na docs.microsoft.com. **F1** funguje také na položkách v seznamu chyb a v mnoha dialogových oknech.
 
 ## <a name="class-view"></a>zobrazení tříd
 
-**Zobrazení tříd** zobrazuje sadu stromů všech symbolů kódu a jejich rozsah a hierarchie nadřazených a podřízených prvků uspořádaných podle jednotlivých projektů. Můžete nakonfigurovat, co **zobrazení tříd** zobrazovat z **Nastavení zobrazení tříd** (klikněte na ikonu ozubeného kolečka v horní části okna).
+**Zobrazení tříd** zobrazuje prohledávatelnou sadu stromů všech symbolů kódu a jejich obora a nadřazené/podřízené hierarchie uspořádané na základě jednotlivého projektu. **Zobrazení tříd** můžete nakonfigurovat v nastavení **zobrazení třídy** (klikněte na ikonu pole ozubeného kola v horní části okna).
 
-![Zobrazení tříd v jazyce C&#43;&#43;](../ide/media/class-view.png "zobrazení tříd")
+![Zobrazení tříd v&#43;&#43;C](../ide/media/class-view.png "zobrazení tříd")
 
-## <a name="generate-graph-of-include-files"></a>Generovat graf souborů zahrnutí
+## <a name="generate-graph-of-include-files"></a>Generovat graf zahrnutí souborů
 
-Klikněte pravým tlačítkem na soubor kódu v projektu a vyberte možnost **Generovat graf souborů k zahrnutí** . zobrazí se graf, ve kterém jsou soubory zahrnuté do jiných souborů.
+Klikněte pravým tlačítkem myši na soubor kódu v projektu a zvolte **Generovat graf zahrnout souborů** zobrazíte graf, které soubory jsou zahrnuty do jiných souborů.
 
-![Graf&#43; &#43; souborů zahrnutí v jazyce C](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![C&#43;&#43; graf zahrnutí souborů](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
 ## <a name="view-call-hierarchy"></a>Zobrazit hierarchii volání
 
-Klikněte pravým tlačítkem na libovolné volání funkce a zobrazte rekurzivní seznam všech funkcí, které volá, a všechny funkce, které ji volají. Jednotlivé funkce v seznamu lze rozbalí stejným způsobem. Další informace najdete v tématu věnovaném [hierarchii volání](/visualstudio/ide/reference/call-hierarchy).
+Klikněte pravým tlačítkem myši na libovolné volání funkce a zobrazte rekurzivní seznam všech funkcí, které volá, a všech funkcí, které jej volají. Každá funkce v seznamu může být rozbalena stejným způsobem. Další informace naleznete v [tématu Call Hierarchy](/visualstudio/ide/reference/call-hierarchy).
 
-![Hierarchie&#43; &#43; volání jazyka C](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![C&#43;&#43; hierarchie volání](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="see-also"></a>Viz také
 
-[Upravit a Refaktorovat kód (C++)](writing-and-refactoring-code-cpp.md)</br>
-[Procházení základu C++ kódu v aplikaci Visual Studio](navigate-code-cpp.md)</br>
-[Spolupráce s Live Share proC++](live-share-cpp.md)
+[Upravit a refaktorovat kód (C++)](writing-and-refactoring-code-cpp.md)</br>
+[Navigace v základu kódu Jazyka C++ v sadě Visual Studio](navigate-code-cpp.md)</br>
+[Spolupráce s live share pro C++](live-share-cpp.md)

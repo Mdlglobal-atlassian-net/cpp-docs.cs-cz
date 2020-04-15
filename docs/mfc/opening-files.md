@@ -16,40 +16,40 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394478"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375964"
 ---
 # <a name="opening-files"></a>Otevírání souborů
 
-Nejběžnější způsob otevření souboru v knihovně MFC, je dvoustupňový proces.
+V knihovně MFC je nejběžnějším způsobem otevření souboru dvoustupňový proces.
 
-#### <a name="to-open-a-file"></a>Pro otevření souboru
+#### <a name="to-open-a-file"></a>Otevření souboru
 
-1. Vytvořte soubor objektu bez zadání příznaky cestu nebo oprávnění.
+1. Vytvořte objekt souboru bez zadání cesty nebo příznaků oprávnění.
 
-   Obvykle vytvoříte soubor objekt deklarací [cfile –](../mfc/reference/cfile-class.md) proměnné v bloku zásobníku.
+   Objekt souboru se obvykle vytvoří deklarováním proměnné [CFile](../mfc/reference/cfile-class.md) v rámci zásobníku.
 
-1. Volání [otevřít](../mfc/reference/cfile-class.md#open) členské funkce objektu soubor zadáním cesty a oprávnění příznaky.
+1. Volání [Open](../mfc/reference/cfile-class.md#open) členské funkce pro objekt souboru, zadání cesty a příznaky oprávnění.
 
-   Návratová hodnota pro `Open` bude nenulové, pokud soubor byl úspěšně otevřen nebo 0. Pokud zadaný soubor nelze otevřít. `Open` Členská funkce je prototypem následujícím způsobem:
+   Vrácená hodnota `Open` pro bude nenulová, pokud byl soubor úspěšně otevřen, nebo 0, pokud zadaný soubor nelze otevřít. Členská `Open` funkce je prototypována takto:
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-   Otevřít příznaky zadejte například jaká oprávnění jen pro čtení, má k souboru. Příznak možné hodnoty jsou definované jako konstanty výčtu v rámci `CFile` třídy, takže jsou kvalifikována "`CFile::`" jako v `CFile::modeRead`. Použití `CFile::modeCreate` příznak, pokud chcete vytvořit soubor.
+   Otevřené příznaky určují, která oprávnění, například jen pro čtení, chcete pro soubor. Možné hodnoty příznaku jsou definovány jako konstanty ve výčtu v rámci `CFile` třídy, takže jsou kvalifikovány "`CFile::`" jako v `CFile::modeRead`. Příznak `CFile::modeCreate` použijte, pokud chcete soubor vytvořit.
 
-Následující příklad ukazuje, jak vytvořit nový soubor s oprávněním pro čtení/zápis (nahrazuje jakékoli předchozí soubor se stejnou cestou):
+Následující příklad ukazuje, jak vytvořit nový soubor s oprávněním ke čtení a zápisu (nahrazení předchozího souboru stejnou cestou):
 
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  Tento příklad vytvoří a otevře soubor. Pokud dojde k problémům, se `Open` volání můžete vrátit `CFileException` objektu v jeho posledního parametru, jak je znázorněno zde. TRACE – makro vytiskne název souboru a kódem, který označuje důvod selhání. Můžete volat `AfxThrowFileException` fungovat, pokud požadujete podrobnější zpráv o chybách.
+> Tento příklad vytvoří a otevře soubor. Pokud dojde k `Open` potížím, `CFileException` volání může vrátit objekt v jeho poslední parametr, jak je znázorněno zde. Makro TRACE vytiskne název souboru i kód označující důvod selhání. Funkci můžete `AfxThrowFileException` volat, pokud požadujete podrobnější hlášení chyb.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CFile – třída](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[CFile::Otevřít](../mfc/reference/cfile-class.md#open)<br/>
 [Soubory](../mfc/files-in-mfc.md)

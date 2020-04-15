@@ -1,5 +1,5 @@
 ---
-title: Colecmdui – třída
+title: COleCmdUI – třída
 ms.date: 09/12/2018
 f1_keywords:
 - COleCmdUI
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7a6b21a3ad778b4a5ca345b1aaf42875810e4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376268"
 ---
-# <a name="colecmdui-class"></a>Colecmdui – třída
+# <a name="colecmdui-class"></a>COleCmdUI – třída
 
-Implementuje metodu knihovny MFC pro aktualizaci stavu objektů uživatelského rozhraní související s `IOleCommandTarget`-driven funkce vaší aplikace.
+Implementuje metodu knihovny MFC aktualizovat stav objektů `IOleCommandTarget`uživatelského rozhraní souvisejících s -řízený funkce aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,25 +35,25 @@ class COleCmdUI : public CCmdUI
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleCmdUI::COleCmdUI](#colecmdui)|Vytvoří `COleCmdUI` objektu.|
+|[COleCmdUI::COleCmdUI](#colecmdui)|Vytvoří `COleCmdUI` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleCmdUI::Enable](#enable)|Nastaví nebo vymaže příznak povolení příkazu.|
-|[COleCmdUI::SetCheck](#setcheck)|Nastaví stav přepínacího zapnuto/vypnuto příkazu.|
-|[COleCmdUI::SetText](#settext)|Vrátí textový řetězec názvu nebo stavu pro příkaz.|
+|[COleCmdUI::Povolit](#enable)|Nastaví nebo vymaže příkaz ový příznak příkazu.|
+|[COleCmdUI::SetCheck](#setcheck)|Nastaví stav přepínače zapnutí/vypnutí.|
+|[COleCmdUI::SetText](#settext)|Vrátí textový název nebo stavový řetězec příkazu.|
 
 ## <a name="remarks"></a>Poznámky
 
-V aplikaci, která není povolená pro DocObjects, když uživatel zobrazí v nabídce v aplikaci MFC zpracovává UPDATE_COMMAND_UI generovaná. Jednotlivým oznámením je uveden [ccmdui –](../../mfc/reference/ccmdui-class.md) objekt, který lze ovládat tak, aby odrážely stavu ke konkrétnímu příkazu. Nicméně pokud vaše aplikace je povolené pro DocObjects, knihovny MFC zpracovává UPDATE_OLE_COMMAND_UI oznámení a přiřadí `COleCmdUI` objekty.
+V aplikaci, která není povolena pro DocObjects, když uživatel zobrazí nabídku v aplikaci, knihovna MFC zpracuje UPDATE_COMMAND_UI notifcations. Každé oznámení je uveden [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt, který lze manipulovat tak, aby odrážely stav určitého příkazu. Pokud je však aplikace povolena pro docobjects, knihovna `COleCmdUI` MFC zpracuje UPDATE_OLE_COMMAND_UI oznámení a přiřadí objekty.
 
-`COleCmdUI` Umožňuje DocObject přijímají příkazy, které pocházejí z příslušného kontejneru uživatelského rozhraní (například funkci FileNew, otevřít, tisk a tak dále), a kontejner pro příjem příkazy, které pocházejí z uživatelského rozhraní DocObject. I když `IDispatch` může použít k odesílání stejných příkazů `IOleCommandTarget` nabízí jednodušší způsob, jak dotazovat a provést, protože závisí na standardní sadu příkazů, obvykle bez argumentů, a je součástí žádné informace o typu. `COleCmdUI` slouží k povolení, aktualizovat a nastavit další vlastnosti DocObject uživatelských rozhraní příkazů. Pokud chcete vyvolat příkaz, volání [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).
+`COleCmdUI`umožňuje DocObject přijímat příkazy, které pocházejí z uživatelského rozhraní jeho kontejneru (například FileNew, Open, Print a tak dále) a umožňuje kontejneru přijímat příkazy, které pocházejí z uživatelského rozhraní DocObject. Ačkoli `IDispatch` lze použít k odeslání stejné `IOleCommandTarget` příkazy, poskytuje jednodušší způsob dotazování a spuštění, protože spoléhá na standardní sadu příkazů, obvykle bez argumentů a žádné informace o typu je zapojen. `COleCmdUI`lze povolit, aktualizovat a nastavit další vlastnosti příkazů uživatelského rozhraní DocObject. Chcete-li příkaz vyvolat, zavolejte [cOleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).
 
-Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mfc/reference/cdocobjectserver-class.md) a [cdocobjectserveritem –](../../mfc/reference/cdocobjectserveritem-class.md).
+Další informace o docobjects naleznete v tématech [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) a [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,9 +65,9 @@ Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mf
 
 **Záhlaví:** afxdocobj.h
 
-##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI
+## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI
 
-Vytvoří `COleCmdUI` objekt přidružený k příkazu konkrétního uživatelského rozhraní.
+Vytvoří `COleCmdUI` objekt přidružený k určitému příkazu uživatelského rozhraní.
 
 ```
 COleCmdUI(
@@ -79,21 +79,21 @@ COleCmdUI(
 ### <a name="parameters"></a>Parametry
 
 *rgCmds*<br/>
-Seznam podporovaných příkazů, které jsou přidružené k zadaným identifikátorem GUID. `OLECMD` Struktura přidruží příkazy pomocí příznaků příkazů.
+Seznam podporovaných příkazů přidružených k danému identifikátoru GUID. Struktura `OLECMD` přidruží příkazy k příznakům příkazu.
 
 *cCmds*<br/>
 Počet příkazů v *rgCmds*.
 
-*pGroup*<br/>
+*pSkupina*<br/>
 Ukazatel na identifikátor GUID, který identifikuje sadu příkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-`COleCmdUI` Objekt poskytuje programové rozhraní pro aktualizace objektů uživatelského rozhraní DocObject. například položky nabídky nebo tlačítka ovládacích panelů. Objektů uživatelského rozhraní může být povolené, zakázané, zaškrtnuto nebo odbavení `COleCmdUI` objektu.
+Objekt `COleCmdUI` poskytuje programové rozhraní pro aktualizaci objektů uživatelského rozhraní DocObject, jako jsou položky nabídky nebo tlačítka ovládacího panelu. Objekty uživatelského rozhraní lze povolit, zakázat, zkontrolovat a/nebo vymazat prostřednictvím objektu. `COleCmdUI`
 
-##  <a name="enable"></a>  COleCmdUI::Enable
+## <a name="colecmduienable"></a><a name="enable"></a>COleCmdUI::Povolit
 
-Voláním této funkce nastavit příznak příkaz `COleCmdUI` objektu OLECOMDF_ENABLED, který informuje rozhraní příkaz je k dispozici a povolená, nebo zrušte příznak příkazu.
+Voláním této funkce nastavte příznak `COleCmdUI` příkazu objektu na OLECOMDF_ENABLED, který informuje rozhraní, že příkaz je k dispozici a povolen, nebo chcete vymazat příznak příkazu.
 
 ```
 virtual void Enable(BOOL bOn);
@@ -101,12 +101,12 @@ virtual void Enable(BOOL bOn);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozvánka*<br/>
-Určuje, zda příkaz přidružené `COleCmdUI` objektu by měla být povolena nebo zakázána. NonZero umožňuje příkazu; Hodnota 0 zakáže příkazu.
+*Bon*<br/>
+Označuje, zda má `COleCmdUI` být povolen nebo zakázán příkaz přidružený k objektu. Nenulová umožňuje příkaz; 0 zakáže příkaz.
 
-##  <a name="setcheck"></a>  COleCmdUI::SetCheck
+## <a name="colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck
 
-Voláním této funkce pro nastavení stavu přepínač zapnuto/vypnuto příkazu.
+Voláním této funkce nastavte stav příkazu zapnutí/vypnutí.
 
 ```
 virtual void SetCheck(int nCheck);
@@ -114,18 +114,18 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parametry
 
-*nZkontrolujte*<br/>
-Hodnota určující stav, který má nastavte přepínač zapnuto/vypnuto příkazu. Hodnoty jsou:
+*nKontrola*<br/>
+Hodnota určující stav pro nastavení příkazu zapnutí/vypnutí. Hodnoty jsou:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|**1**|Příkaz nastaví na hodnotu on.|
-|**2**|Nastaví příkaz do neurčitého; Stav nelze určit, protože atribut tento příkaz je v obou zapnutí a vypnutí státy v příslušné skupině.|
-|jakákoli jiná hodnota|Nastavuje příkaz, který vypnuté.|
+|**1**|Nastaví příkaz na zapnuto.|
+|**2**|Nastaví příkaz na neurčitý; stav nelze určit, protože atribut tohoto příkazu je v zapnutém i vypnutém stavu v příslušném výběru.|
+|jakákoli jiná hodnota|Nastaví vypnutý příkaz.|
 
-##  <a name="settext"></a>  COleCmdUI::SetText
+## <a name="colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText
 
-Voláním této funkce vrátí textový řetězec názvu nebo stavu pro příkaz.
+Volánítéto funkce vrátí textový název nebo stavový řetězec pro příkaz.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -134,9 +134,9 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Ukazatel na text, který se použije příkaz.
+Ukazatel na text, který má být použit s příkazem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

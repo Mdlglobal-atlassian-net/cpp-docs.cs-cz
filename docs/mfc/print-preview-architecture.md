@@ -8,56 +8,56 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-ms.openlocfilehash: ea80b67b3f6bb6980e4e8f7f12a967cb7bb5b6c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5943edc22cd48ed10d152f72624467ff87104b96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375948"
 ---
 # <a name="print-preview-architecture"></a>Architektura náhledu tisku
 
-Tento článek vysvětluje, jak rozhraní MFC framework implementuje funkce náhledu. Probíraná témata zahrnují:
+Tento článek vysvětluje, jak rozhraní Knihovny MFC implementuje funkce náhledu tisku. Probíraná témata zahrnují:
 
 - [Proces náhledu tisku](#_core_the_print_preview_process)
 
-- [Úpravy náhledu tisku](#_core_modifying_print_preview)
+- [Úprava náhledu tisku](#_core_modifying_print_preview)
 
-Náhled je poněkud liší od obrazovky a tisk, protože místo přímo kreslení obrázku na zařízení, musí aplikace simulovat tiskárny na obrazovce. K tomuto účelu knihovny Microsoft Foundation Class definuje speciální (nedokumentované) třídy odvozené od [třída CDC](../mfc/reference/cdc-class.md), označované jako `CPreviewDC`. Všechny `CDC` objekty obsahují dva kontexty zařízení, ale obvykle jsou identické. V `CPreviewDC` objektu, jsou odlišné: tiskárny se simulované představuje první a druhý představuje obrazovku, na kterém je ve skutečnosti zobrazí výstup.
+Náhled tisku se poněkud liší od zobrazení obrazovky a tisku, protože namísto přímého kreslení obrazu na zařízení musí aplikace simulovat tiskárnu pomocí obrazovky. Aby tomu bylo možné vyhovět, definuje knihovna tříd Microsoft Foundation speciální (nezdokumentovaná) třídu odvozenou z [třídy CDC](../mfc/reference/cdc-class.md), nazvanou `CPreviewDC`. Všechny `CDC` objekty obsahují dva kontexty zařízení, ale obvykle jsou identické. V `CPreviewDC` objektu se liší: první představuje simulovanou tiskárnu a druhá představuje obrazovku, na které je výstup skutečně zobrazen.
 
-##  <a name="_core_the_print_preview_process"></a> Proces náhledu tisku
+## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a>Proces náhledu tisku
 
-Když uživatel vybere příkaz Náhled tisku z **souboru** vytvoří rámci nabídky, `CPreviewDC` objektu. Pokaždé, když se vaše aplikace provádí operaci, která nastaví vlastnost kontextu zařízení tiskárny, rozhraní také provádí operaci podobně jako na obrazovce kontextu zařízení. Například pokud vaše aplikace vybere písmo pro tisk, rozhraní vybere písmo pro obrazovku, která simuluje písmo tiskárny. Pokaždé, když se vaše aplikace bude posílat výstup na tiskárnu, rozhraní místo toho odesílá výstup na obrazovce.
+Když uživatel vybere příkaz Náhled z nabídky **Soubor,** rozhraní `CPreviewDC` vytvoří objekt. Vždy, když vaše aplikace provede operaci, která nastaví charakteristiku kontextu zařízení tiskárny, rozhraní také provede podobnou operaci v kontextu zařízení obrazovky. Pokud například aplikace vybere písmo pro tisk, rozhraní framework vybere písmo pro zobrazení na obrazovce, které simuluje písmo tiskárny. Vždy, když aplikace odešle výstup do tiskárny, rozhraní místo toho odešle výstup na obrazovku.
 
-Náhled se také liší od tisk v pořadí, že každý nakreslí stránky z dokumentu. Během tisku, pokračuje rozhraní tisku smyčky, dokud poskytla určitý rozsah stránek. Během náhledu tisku jednu nebo dvě stránky se zobrazí v každém okamžiku a počká aplikace; dokud uživatel neodpoví, se nezobrazí žádné další stránky. Během náhledu musí aplikace také reagovat na zprávy WM_PAINT, stejně jako při běžné displejem.
+Náhled tisku se také liší od tisku v pořadí, v jakém každý kreslí stránky dokumentu. Během tisku bude rozhraní pokračovat v tiskové smyčce, dokud nebude vykreslen určitý rozsah stránek. Během náhledu tisku se kdykoli zobrazí jedna nebo dvě stránky a aplikace čeká; nezobrazí se žádné další stránky, dokud uživatel neodpoví. Během náhledu tisku musí aplikace také reagovat na WM_PAINT zprávy, stejně jako při běžném zobrazení obrazovky.
 
-[CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) funkce se volá, když je vyvolána režimu náhledu, stejně, jako je na začátku tiskové úlohy. [Cprintinfo – struktura](../mfc/reference/cprintinfo-structure.md) struktura předaná funkci obsahuje několik členů, jejichž hodnoty lze nastavit na upravit některé vlastnosti operace náhledu tisku. Například můžete nastavit *m_nNumPreviewPages* člen k určení, zda chcete zobrazit náhled dokumentu v režimu jednu nebo dvě stránky.
+[CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) funkce je volána při vyvolání režimu náhledu, stejně jako je na začátku tiskové úlohy. Struktura [struktury CPrintInfo](../mfc/reference/cprintinfo-structure.md) předaná funkci obsahuje několik členů, jejichž hodnoty můžete nastavit pro úpravu určitých charakteristik operace náhledu tisku. Můžete například nastavit *m_nNumPreviewPages* člen, aby určil, zda chcete zobrazit náhled dokumentu v jednostránkovém nebo dvoustránkovém režimu.
 
-##  <a name="_core_modifying_print_preview"></a> Úpravy náhledu tisku
+## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a>Úprava náhledu tisku
 
-Chování a vzhled náhledu různými způsoby, jak můžete místo toho snadno upravit. Například je to možné, mimo jiné:
+Chování a vzhled náhledu tisku můžete poměrně snadno upravit několika způsoby. Můžete například:
 
-- Způsobit, že okno náhledu zobrazí posuvník pro zajištění snadného přístupu pro všechny stránky dokumentu.
+- Způsobí, že okno náhledu tisku zobrazí posuvník pro snadný přístup k libovolné stránce dokumentu.
 
-- Náhled tisku příčina zachovat pozici uživatele v dokumentu podle od jeho zobrazení na aktuální stránce.
+- Způsobit, aby náhled tisku zachoval pozici uživatele v dokumentu tím, že začnete jeho zobrazení na aktuální stránce.
 
-- Způsobit různé inicializace mají být provedeny pro náhled tisku a tisk.
+- Způsobte provedení jiné inicializace pro náhled a tisk tisku.
 
-- Náhled tisku příčina zobrazíte čísla stránky ve vlastních formátů.
+- Způsobí, že náhled tisku zobrazí čísla stránek ve vlastních formátech.
 
-Pokud víte, jak dlouho trvá dokumentu a volání `SetMaxPage` s odpovídající hodnotou rozhraní tyto informace můžete použít v režimu náhledu, stejně jako při tisku. Jakmile rozhraní zná délku dokumentu, může poskytnout okno náhledu se posuvník, které uživateli umožňují stránce vpřed a zpět v dokumentu v režimu náhledu. Pokud jste nenastavili délku dokumentu, rozhraní framework nelze umístit posuvníku označující aktuální pozici, aby rozhraní nepřidává posuvníku. Uživatel v tomto případě musí používat další stránky a předchozí stránky, tlačítka na panelu ovládacího prvku okno náhledu na stránku v dokumentu.
+Pokud víte, jak dlouhý je `SetMaxPage` dokument a voláte s příslušnou hodnotou, může rozhraní použít tyto informace v režimu náhledu i během tisku. Jakmile rozhraní dokumentu zná délku dokumentu, může poskytnout oknu náhledu posuvník, který uživateli umožňuje stránkovat dokument v režimu náhledu. Pokud jste nenastavili délku dokumentu, rozhraní framework nemůže umístit posuvník označující aktuální pozici, takže rozhraní nepřidá posuvník. V takovém případě musí uživatel procházet dokumentem pomocí tlačítek Další stránka a Předchozí stránka na ovládacím panelu okna náhledu.
 
-Pro náhled tisku, možná bude užitečné pro přiřazení hodnoty k *m_nCurPage* člen `CPrintInfo`, i když by nikdy uděláte pro běžné tisk. Tento člen během běžné tisk, přenáší informace z architektury do vaší třídy zobrazení. To je, jak rozhraní informuje zobrazení, na stránce, které by měl vytisknout.
+Pro náhled tisku může být užitečné přiřadit hodnotu *m_nCurPage* členovi `CPrintInfo`aplikace , i když byste to nikdy neudělali pro běžný tisk. Během běžného tisku tento člen nese informace z frameworku do třídy zobrazení. To je, jak rozhraní framework sděluje zobrazení, které stránky by měly být vytištěny.
 
-Naopak při režim náhledu tisku spuštění, *m_nCurPage* člen přenáší informace v opačném směru: od zobrazení rozhraní framework. Rozhraní používá k určení, na stránce, které by měl být zobrazen nejprve hodnotu tohoto člena. Výchozí hodnota tohoto člena je 1, takže se zpočátku zobrazí první stránka dokumentu. Můžete přepsat `OnPreparePrinting` nastavit na číslo stránky zobrazení v době byla vyvolána příkaz Náhled tohoto člena. Díky tomu aplikace udržuje aktuální pozici uživatele při přesunu z režimu normálního zobrazení na režim náhledu.
+Naproti tomu při spuštění režimu náhledu tisku *m_nCurPage* člen nese informace v opačném směru: z pohledu do rámce. Rozhraní framework používá hodnotu tohoto člena k určení, která stránka by měla být zobrazena jako první. Výchozí hodnota tohoto člena je 1, takže první stránka dokumentu se zobrazí zpočátku. Přepsáním `OnPreparePrinting` můžete nastavit tento člen na číslo stránky, která se zobrazuje v době vyvolání příkazu Náhled. Tímto způsobem aplikace udržuje aktuální pozici uživatele při přechodu z normálního režimu zobrazení do režimu náhledu tisku.
 
-Někdy můžete chtít `OnPreparePrinting` k provádění různých inicializace v závislosti na tom, jestli je volána pro tiskové úlohy nebo náhledu tisku. Této služby můžete zjistit kontrolou *m_bPreview* členské proměnné v `CPrintInfo` struktury. Tento člen je nastavený na **TRUE** při vyvolala náhled tisku.
+Někdy můžete `OnPreparePrinting` chtít provést jinou inicializaci v závislosti na tom, zda se nazývá tisková úloha nebo náhled. Můžete to určit kontrolou *proměnné m_bPreview* člena `CPrintInfo` ve struktuře. Tento člen je nastaven na **hodnotu TRUE** při vyvolání náhledu tisku.
 
-`CPrintInfo` Struktura také obsahuje člen s názvem *m_strPageDesc*, který se používá k formátování řetězce zobrazí v dolní části obrazovky v režimech jednostránkové a více stránek. Ve výchozím nastavení jsou tyto řetězce ve tvaru "stránka *n*" a "stránky *n* - *m*,", ale můžete upravit *m_strPageDesc* z v rámci `OnPreparePrinting` a nastavený řetězce na číslo komplikovanějších. Zobrazit [cprintinfo – struktura](../mfc/reference/cprintinfo-structure.md) v *odkaz knihovny MFC* Další informace.
+Struktura `CPrintInfo` také obsahuje člen s názvem *m_strPageDesc*, který se používá k formátování řetězců zobrazených v dolní části obrazovky v jednostránkovém a vícestránkovém režimu. Ve výchozím nastavení jsou tyto řetězce ve tvaru "Stránka *n*" a "Stránky *n* - *m*", ale můžete upravit *m_strPageDesc* zevnitř `OnPreparePrinting` a nastavit řetězce na něco složitějšího. Další informace naleznete v [tématu CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) in the *MFC Reference.*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Tisk a náhled tisku](../mfc/printing-and-print-preview.md)<br/>
 [Tisk](../mfc/printing.md)<br/>
-[CView – třída](../mfc/reference/cview-class.md)<br/>
-[CDC – třída](../mfc/reference/cdc-class.md)
+[Třída CView](../mfc/reference/cview-class.md)<br/>
+[Třída CDC](../mfc/reference/cdc-class.md)

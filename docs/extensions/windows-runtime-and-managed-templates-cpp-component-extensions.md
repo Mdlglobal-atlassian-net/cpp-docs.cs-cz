@@ -1,46 +1,46 @@
 ---
-title: Prostředí Windows Runtime a spravované šablony (C++/CLI a C++/CX)
+title: Windows Runtime a spravované šablony (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376310"
 ---
-# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Prostředí Windows Runtime a spravované šablony (C++/CLI a C++/CX)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime a spravované šablony (C++/CLI a C++/CX)
 
-Šablony umožňují definovat prototyp typu prostředí Windows Runtime nebo modulu CLR (Common Language Runtime) a pak vytvořit instanci variací tohoto typu pomocí různých parametrů typu šablony.
+Šablony umožňují definovat prototyp typu prostředí Windows Runtime nebo common language runtime a potom vytvořit instanci variant tohoto typu pomocí různých parametrů typu šablony.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Můžete vytvářet šablony z typů hodnot nebo odkazů.  Další informace o vytváření hodnotových nebo referenčních typů naleznete v tématu [třídy a struktury](classes-and-structs-cpp-component-extensions.md).
+Šablony můžete vytvářet z typů hodnot nebo odkazů.  Další informace o vytváření typů hodnot nebo odkazů naleznete v [tématu Třídy a struktury](classes-and-structs-cpp-component-extensions.md).
 
-Další informace o šablonách C++ standardních tříd naleznete v tématu [šablony tříd](../cpp/class-templates.md).
+Další informace o standardních šablonách tříd jazyka C++ naleznete [v tématu Šablony tříd](../cpp/class-templates.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-(Pro tuto funkci jazyka neexistují žádné poznámky, které platí jenom pro prostředí Windows Runtime.)
+(Pro tuto jazykovou funkci nejsou k dispozici žádné poznámky, které by se vztahovaly pouze na prostředí Windows Runtime.)
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Existují určitá omezení pro vytváření šablon třídy ze spravovaných typů, které jsou znázorněny v následujících příkladech kódu.
+Existují určitá omezení pro vytváření šablon tříd ze spravovaných typů, které jsou demonstrovány v následujících příkladech kódu.
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ### <a name="examples"></a>Příklady
 
-Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci spravované šablony s parametrem šablony obecného typu. Důvodem je, že obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [Obecné typy a šablony (C++/CLI)](generics-and-templates-visual-cpp.md).
+Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci spravované šablony s parametrem šablony obecného typu. Důvodem je, že obecné typy jsou vyřešeny za běhu. Další informace naleznete [v tématu Obecné typy a šablony (C++/CLI)](generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -62,7 +62,7 @@ ref class R {
 };
 ```
 
-Obecný typ nebo funkce nemohou být vnořeny do spravované šablony.
+Obecný typ nebo funkci nelze vnořit do spravované šablony.
 
 ```cpp
 // managed_templates_2.cpp
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-Nemůžete získat přístup k šablonám definovaným C++v odkazovaném sestavení pomocí jazykové syntaxe/CLI, ale můžete použít reflexi. Pokud není vytvořena instance šablony, není generována v metadatech. Pokud je vytvořena instance šablony, v metadatech se zobrazí pouze odkazované členské funkce.
+Nelze získat přístup k šablonám definovaným v odkazovaném sestavení se syntaxí jazyka C++/CLI, ale můžete použít reflexi. Pokud šablona není vytvořena instance, není vyzařována v metadatech. Pokud je vytvořena instance šablony, zobrazí se v metadatech pouze odkazované členské funkce.
 
 ```cpp
 // managed_templates_3.cpp

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376716"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution – třída
 
@@ -71,34 +71,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* \
-Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*IntType*\
+Typ výsledku celé číslo, výchozí **int**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
-*URNG* \
-Jednotný modul generátoru náhodných čísel. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*URNG*\
+Jednotný generátor náhodných čísel. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem, nebo typ **int** , pokud není k dispozici, distribuované podle funkce rozdělení diskrétní distribuce. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem zadaného integrálního typu, nebo typ **int,** pokud není k dispozici žádný, distribuovaný podle funkce diskrétní pravděpodobnosti binomické distribuce. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Členy vlastnosti `t()` a `p()` vrátí aktuálně uložené hodnoty distribučního parametru *t* a *p* .
+Členové `t()` vlastnosti `p()` a vrátí aktuálně uložené hodnoty parametrů distribuce *t* a *p* v uvedeném pořadí.
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o funkci rozdělení binomické distribuce, která je diskrétní, najdete v článku [binomické rozdělení](https://go.microsoft.com/fwlink/p/?linkid=398469)Wolfram MathWorld.
+Podrobné informace o funkci diskrétní pravděpodobnosti binomické distribuce naleznete v článku [Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=398469)ve Wolfram MathWorld .
 
 ## <a name="example"></a>Příklad
 
@@ -227,13 +227,13 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit binomial_distribution(result_type t = 1, double p = 0.5);
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*t* \
-Parametr distribuce `t`.
+*T*\
+Parametr `t` distribuce.
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*parametr* \
-Struktura `param_type` používaná k sestavení distribuce.
+*parm*\
+Struktura `param_type` slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0 ≤ t` a `0.0 ≤ p ≤ 1.0`
+**Předpokladem:** `0 ≤ t` a`0.0 ≤ p ≤ 1.0`
 
-První konstruktor vytvoří objekt, jehož uložená hodnota *p* obsahuje hodnotu *p* a jehož uložená hodnota *t* obsahuje hodnotu *t*.
+První konstruktor zkonstruoval objekt, jehož uložená hodnota *p* obsahuje hodnotu *p* a jejíž uložená hodnota *t* obsahuje hodnotu *t*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::param_type
 
 Ukládá všechny parametry distribuce.
 
@@ -277,21 +277,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*t* \
-Parametr distribuce `t`.
+*T*\
+Parametr `t` distribuce.
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*pravé* \
-Objekt `param_type`, který se má porovnat.
+*Právo*\
+Objekt `param_type` porovnat s tímto.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0 ≤ t` a `0.0 ≤ p ≤ 1.0`
+**Předpokladem:** `0 ≤ t` a`0.0 ≤ p ≤ 1.0`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

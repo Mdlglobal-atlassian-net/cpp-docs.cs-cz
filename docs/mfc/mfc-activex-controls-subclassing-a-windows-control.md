@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows'
+title: 'MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,85 +16,85 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccebbad22be92b84fa2fd84434f788484d332cce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376001"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows
 
-Tento článek popisuje postup pro vytvoření podtřídy ovládacího prvku běžné Windows k vytvoření ovládacího prvku ActiveX. Existující Windows vytvoření podtřídy ovládacího prvku je rychlý způsob, jak vyvinout ovládací prvek ActiveX. Nový ovládací prvek bude mít na schopnosti rozčleněné ovládací prvek Windows, jako je vykreslování a reakce na kliknutí myší. Ukázka ovládací prvky MFC ActiveX [tlačítko](../overview/visual-cpp-samples.md) je příklad vytvoření podtřídy ovládacího prvku Windows.
+Tento článek popisuje proces podřazení společného ovládacího prvku systému Windows k vytvoření ovládacího prvku ActiveX. Podřazení existujícího ovládacího prvku systému Windows je rychlý způsob, jak vyvinout ovládací prvek ActiveX. Nový ovládací prvek bude mít schopnosti podtřídy ovládacího prvku systému Windows, jako je například malování a reakce na kliknutí myší. [Tlačítko](../overview/visual-cpp-samples.md) ukázky ovládacích prvků ActiveX knihovny MFC je příkladem podřadného nastavení ovládacího prvku systému Windows.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-Pokud chcete podtřídy ovládacího prvku Windows proveďte následující úlohy:
+Chcete-li podtřídovat ovládací prvek systému Windows, proveďte následující úkoly:
 
-- [Členské funkce IsSubclassedControl a PreCreateWindow COleControl – přepsat](#_core_overriding_issubclassedcontrol_and_precreatewindow)
+- [Přepsat členské funkce IsSubclassedControl a PreCreateWindow cOleControl](#_core_overriding_issubclassedcontrol_and_precreatewindow)
 
-- [Upravit OnDraw členská funkce](#_core_modifying_the_ondraw_member_function)
+- [Změna členské funkce OnDraw](#_core_modifying_the_ondraw_member_function)
 
-- [Zpracovat všechny ActiveX ovládacího prvku zprávy (OCM) odrazí na ovládacím prvku](#_core_handling_reflected_window_messages)
+- [Zpracování všech zpráv ovládacího prvku ActiveX (OCM), které se projeví v ovládacím prvku](#_core_handling_reflected_window_messages)
 
    > [!NOTE]
-   > Velká část této práce se provádí za vás Průvodce ovládacím prvkem ActiveX Pokud vyberete ovládací prvek má rozčlenit do podtříd pomocí **vyberte nadřazené třídu okna** rozevíracího seznamu na **nastavení** stránky.
+   > Velká část této práce se provádí za vás Průvodcem ovládacím prvkem ActiveX, pokud vyberete ovládací prvek, který má být podtřídou pomocí rozevíracího seznamu **Vybrat nadřazenou třídu okna** na stránce **Nastavení ovládacího prvku.**
 
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Přepsání IsSubclassedControl a PreCreateWindow
+## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Přepsání IsSubclassedControl a PreCreateWindow
 
-K přepsání `PreCreateWindow` a `IsSubclassedControl`, přidejte následující řádky kódu, který **chráněné** části deklarace třídy ovládacího prvku:
+Chcete-li `PreCreateWindow` `IsSubclassedControl`přepsat a , přidejte následující řádky kódu do **chráněné** části deklarace třídy ovládacího prvku:
 
 [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 
-V souboru implementace ovládacího prvku (. CPP), přidejte následující řádky kódu implementovat dvě přepsaná funkce:
+V souboru implementace ovládacího prvku (. CPP), přidejte následující řádky kódu k implementaci dvou potlačených funkcí:
 
 [!code-cpp[NVC_MFC_AxSub#2](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_2.cpp)]
 
-Všimněte si, že v tomto příkladu Windows ovládacímu prvku tlačítko je zadán v `PreCreateWindow`. Však může být rozčlenění všechny standardní ovládací prvky Windows. Další informace o standardní ovládací prvky Windows najdete v tématu [ovládací prvky](../mfc/controls-mfc.md).
+Všimněte si, že v tomto příkladu `PreCreateWindow`je ovládací prvek tlačítka systému Windows určen v aplikaci . Všechny standardní ovládací prvky systému Windows však mohou být podtřídy. Další informace o standardních ovládacích prvcích systému Windows naleznete v [tématu Controls](../mfc/controls-mfc.md).
 
-Při vytvoření podtřídy ovládacího prvku Windows, můžete zadat konkrétní okno Styl (WS_) nebo rozšířené okno příznaky styl (WS_EX_) který se má použít při vytváření okna ovládacího prvku. Můžete nastavit hodnoty těchto parametrů v `PreCreateWindow` členskou funkci tak, že upravíte `cs.style` a `cs.dwExStyle` struktury pole. By měl být provedeny změny těchto polí pomocí **nebo** operace, chcete-li zachovat výchozí příznaky, které jsou nastaveny podle třídy `COleControl`. Například pokud ovládací prvek je vytvoření podtřídy ovládacího prvku tlačítko a ovládací prvek se zobrazí jako zaškrtávací políčko, vložte následující řádek kódu do implementace `CSampleCtrl::PreCreateWindow`, před příkaz return:
+Při podřadné třídě ovládacího prvku systému Windows můžete chtít zadat konkrétní styl okna (WS_) nebo příznaky rozšířeného stylu okna (WS_EX_), které se mají použít při vytváření okna ovládacího prvku. Hodnoty těchto parametrů můžete nastavit `PreCreateWindow` v členské funkci `cs.style` úpravou `cs.dwExStyle` polí a struktura. Změny těchto polí by měly být provedeny pomocí operace **OR,** aby `COleControl`se zachovaly výchozí příznaky, které jsou nastaveny třídou . Například pokud ovládací prvek je podtřídy button ovládacího prvku a chcete, aby ovládací prvek se `CSampleCtrl::PreCreateWindow`zobrazí jako zaškrtávací políčko, vložte následující řádek kódu do implementace , před příkaz return:
 
 [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]
 
-Tato operace přidá příznak stylu BS_CHECKBOX nechejte výchozí styl příznak (WS_CHILD) třídy `COleControl` beze změn.
+Tato operace přidá příznak stylu BS_CHECKBOX, přičemž výchozí příznak `COleControl` stylu (WS_CHILD) třídy zůstane beze změny.
 
-##  <a name="_core_modifying_the_ondraw_member_function"></a> Úprava OnDraw členská funkce
+## <a name="modifying-the-ondraw-member-function"></a><a name="_core_modifying_the_ondraw_member_function"></a>Úprava členské funkce OnDraw
 
-Pokud chcete zachovat stejné vzhled jako odpovídající ovládací prvek Windows, váš ovládací prvek rozčleněný `OnDraw` členské funkce pro ovládací prvek by měl obsahovat pouze volání `DoSuperclassPaint` členská funkce, jako v následujícím příkladu:
+Pokud chcete, aby ovládací prvek podtřídy zachovat stejný vzhled `OnDraw` jako odpovídající ovládací prvek systému `DoSuperclassPaint` Windows, členská funkce pro ovládací prvek by měla obsahovat pouze volání členské funkce, jako v následujícím příkladu:
 
 [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]
 
-`DoSuperclassPaint` Členské funkce implementované `COleControl`, používá proceduru okna ovládacího prvku Windows nakreslete ovládací prvek v rámci zadané zařízení v rámci ohraničující obdélník. Díky tomu ovládací prvek viditelný i v případě, že není aktivní.
+Členská `DoSuperclassPaint` funkce implementovaná aplikací `COleControl`, používá proceduru okna ovládacího prvku systému Windows k nakreslení ovládacího prvku v kontextu zadaného zařízení v rámci ohraničovacího obdélníku. Díky ovládacímu prvku viditelné i v případě, že není aktivní.
 
 > [!NOTE]
->  `DoSuperclassPaint` Členská funkce, které budou fungovat jenom s typy ovládacích prvků, které umožňují kontextu zařízení mají být předány jako *wParam* WM_PAINT zprávy. To zahrnuje některé standardní ovládací prvky Windows, jako je například POSUVNÍK a tlačítko a všechny běžné ovládací prvky. Pro ovládací prvky, které nepodporují toto chování budete muset poskytnout vlastní kód pro správné zobrazení ovládacího prvku neaktivní.
+> Členská `DoSuperclassPaint` funkce bude pracovat pouze s těmi typy ovládacích prvku, které umožňují kontext zařízení, které mají být předány jako *wParam* zprávy WM_PAINT. To zahrnuje některé standardní ovládací prvky systému Windows, například SCROLLBAR a BUTTON a všechny běžné ovládací prvky. Pro ovládací prvky, které nepodporují toto chování, budete muset zadat vlastní kód správně zobrazit neaktivní ovládací prvek.
 
-##  <a name="_core_handling_reflected_window_messages"></a> Zpracování Reflektovaných zpráv oken
+## <a name="handling-reflected-window-messages"></a><a name="_core_handling_reflected_window_messages"></a>Zpracování zpráv odraženého okna
 
-Ovládací prvky Windows obvykle odesílají některé okno zprávy do své nadřazené okno. Některé z následujících zpráv, jako je například wm_command –, poskytují oznámení o akci uživatele. Jiné, jako je například WM_CTLCOLOR –, se používají k získání informací z nadřazené okno. Ovládací prvek ActiveX je obvykle komunikuje s nadřazené okno jiným způsobem. Oznámení jsou předány podle vyvolává události (odesílání oznámení událostí), a informace o kontejneru ovládacího prvku se získá přístup k vedlejším vlastnostem kontejneru. Vzhledem k tomu, že existují tyto postupy komunikace nepředpokládá zpracovávat všechny zprávy okna zaslaná z ovládacího prvku ActiveX – kontejnery ovládacích prvků.
+Ovládací prvky systému Windows obvykle odesílají určité zprávy okna do nadřazeného okna. Některé z těchto zpráv, například WM_COMMAND, poskytují oznámení o akci uživatele. Jiné, například WM_CTLCOLOR, se používají k získání informací z nadřazeného okna. Ovládací prvek ActiveX obvykle komunikuje s nadřazeným oknem jinými prostředky. Oznámení jsou sdělovány spouštění událostí (odesílání oznámení událostí) a informace o kontejneru ovládacího prvku se získá přístup k vlastnostem okolí kontejneru. Vzhledem k tomu, že tyto komunikační techniky existují, neočekává se, že kontejnery ovládacího prvku ActiveX budou zpracovávat všechny zprávy okna odeslané ovládacím prvkem.
 
-Aby se zabránilo kontejneru příjem okno zprávy odesílané rozčleněné ovládací prvek Windows, `COleControl` vytvoří okno navíc sloužit jako nadřazeného ovládacího prvku. Toto okno navíc nazývá "reflector", je vytvořen pouze pro ovládací prvek ActiveX, podtřídy Windows, řídit a má stejnou velikost a umístění jako okno ovládacího prvku. V okně reflector zachycuje některé zprávy okna a odešle zpět do ovládacího prvku. Ovládacího prvku, v jeho proceduru okna můžete následně zpracovat tyto reflektované zprávy provedením akce, které jsou vhodné pro ovládací prvek ActiveX (například aktivaci události). Zobrazit [projeví identifikátory zpráv oken](../mfc/reflected-window-message-ids.md) seznam windows zachycené zprávy a jejich odpovídající reflektovaných zpráv.
+Chcete-li zabránit kontejneru přijímat zprávy okna odeslané `COleControl` podtřídou ovládacího prvku systému Windows, vytvoří další okno sloužit jako nadřazený ovládacíprvek. Toto další okno, nazývané "reflektor", je vytvořeno pouze pro ovládací prvek ActiveX, který podřizuje ovládací prvek systému Windows a má stejnou velikost a umístění jako ovládací okno. Okno reflektoru zachytí určité zprávy okna a odešle je zpět do ovládacího prvku. Ovládací prvek v jeho okno postup pak můžete zpracovat tyto odražené zprávy tím, že akce vhodné pro ovládací prvek ActiveX (například spuštění události). Seznam zachycených zpráv systému Windows a odpovídajících odražených zpráv naleznete v [tématu ID zpráv s odraženým oknem.](../mfc/reflected-window-message-ids.md)
 
-Kontejneru ovládacího prvku ActiveX mohou být určené k provádění reflexe zprávy, samostatně, což eliminuje potřebu `COleControl` k vytvoření okna reflector a zkrácení doby spuštění režie pro ovládací prvek rozčleněný Windows. `COleControl` zjistí, zda kontejner podporuje tuto funkci tak, že zkontrolujete vlastnost MessageReflect okolí s hodnotou **TRUE**.
+Kontejner ovládacího prvku ActiveX může být navržen tak, `COleControl` aby prováděl samotný odraz zpráv, což eliminuje potřebu vytvořit okno reflektoru a snižuje režii za běhu pro ovládací prvek systému Windows s podtřídou. `COleControl`zjistí, zda kontejner podporuje tuto schopnost kontrolou vlastnosti ambient MessageReflect s hodnotou **TRUE**.
 
-Aby se zpracovala zpráva reflektovaný okna, přidejte záznam do mapování ovládacích prvků zprávu a implementovat funkci obslužné rutiny. Protože reflektované zprávy, které nejsou součástí standardní sadu zpráv, které jsou definované ve Windows, zobrazení tříd nepodporuje přidávání tyto obslužné rutiny zpráv. To však není obtížné ruční přidání obslužné rutiny.
+Chcete-li zpracovat zprávu s odraženým oknem, přidejte položku na mapu řídicí zprávy a implementujte funkci obslužné rutiny. Vzhledem k tomu, že odražené zprávy nejsou součástí standardní sady zpráv definovaných systémem Windows, zobrazení tříd nepodporuje přidání těchto obslužných rutin zpráv. Však není obtížné přidat obslužnou rutinu ručně.
 
-Chcete-li přidat obslužné rutiny zpráv pro zprávu reflektovaný okna ručně takto:
+Chcete-li přidat obslužnou rutinu zprávy pro zprávu s odraženým oknem ručně, postupujte takto:
 
-- Ve třídě ovládacího prvku. Soubor H, deklarujte funkci obslužné rutiny. Funkce by měla mít typ vrácené hodnoty **LRESULT** a dva parametry s typy **WPARAM** a **LPARAM**v uvedeném pořadí. Příklad:
+- V kontrolní třídě . H, deklarujte funkci obslužné rutiny. Funkce by měla mít návratový typ **LRESULT** a dva parametry s typy **WPARAM** a **LPARAM**, resp. Příklad:
 
    [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
-- Ve třídě ovládacího prvku. CPP soubor, přidejte záznam ON_MESSAGE v mapování zprávy. Parametry této položky by měl být identifikátor zprávy a název obslužné rutiny. Příklad:
+- V kontrolní třídě . cpp, přidejte položku ON_MESSAGE do mapy zpráv. Parametry této položky by měly být identifikátor zprávy a název funkce obslužné rutiny. Příklad:
 
    [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
-- Také v. Soubor CPP implementovat `OnOcmCommand` členskou funkci ke zpracování reflektovaných zpráv. *WParam* a *lParam* parametry jsou stejné jako původní zprávy okna.
+- Také v . CPP, implementujte `OnOcmCommand` členní funkci ke zpracování odražené zprávy. Parametry *wParam* a *lParam* jsou stejné jako u původní zprávy okna.
 
-Pro příklad, jak projeví zpracování zpráv, najdete ukázky ovládacích prvků ActiveX knihovny MFC [tlačítko](../overview/visual-cpp-samples.md). Ukazuje `OnOcmCommand` obslužná rutina, která kód upozornění BN_CLICKED detekuje hrozby a reaguje tak ohlásí (odesílání) `Click` událostí.
+Příklad zpracování odražených zpráv naleznete v části Ovládací prvek ActiveX knihovny MFC [– ukázkový panel BUTTON](../overview/visual-cpp-samples.md). Ukazuje obslužnou rutinu, `OnOcmCommand` která detekuje BN_CLICKED kódu oznámení `Click` a reaguje spuštěním (odesláním) události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)

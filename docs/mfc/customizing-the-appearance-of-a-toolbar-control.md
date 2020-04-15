@@ -11,48 +11,48 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9f4f9d90113d5074555d1b0cc411f854abc67fe5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377465"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Přizpůsobení vzhledu ovládacího prvku panel nástrojů
 
-Třída `CToolBarCtrl` poskytuje mnoho stylů ovlivňujících vzhled (a občas i chování) objektu Toolbar. Upravte objekt Toolbar nastavením `dwCtrlStyle` parametru `CToolBarCtrl::Create` členské funkce (nebo `CToolBar::CreateEx`), při prvním vytvoření ovládacího prvku ToolBar.
+Třída `CToolBarCtrl` poskytuje mnoho stylů, které ovlivňují vzhled (a občas i chování) objektu panelu nástrojů. Upravte objekt panelu `dwCtrlStyle` nástrojů nastavením `CToolBarCtrl::Create` `CToolBar::CreateEx`parametru členské funkce (nebo) při prvním vytvoření ovládacího prvku panelu nástrojů.
 
-Následující styly mají vliv na prostor "3D" tlačítek panelu nástrojů a umístění textu tlačítka:
+Následující styly ovlivňují "3D" aspekt tlačítek panelu nástrojů a umístění textu tlačítka:
 
-- **TBSTYLE_FLAT** Vytvoří plochý panel nástrojů, kde jsou transparentní panely nástrojů i tlačítka. Text tlačítka se zobrazí v části rastry tlačítek. Při použití tohoto stylu je automaticky zvýrazněno tlačítko pod kurzorem.
+- **TBSTYLE_FLAT** Vytvoří plochý panel nástrojů, kde je pruh nástrojů i tlačítka průhledná. Text tlačítka se zobrazí pod bitmapami tlačítek. Při použití tohoto stylu se tlačítko pod kurzorem automaticky zvýrazní.
 
-- **TBSTYLE_TRANSPARENT** Vytvoří transparentní panel nástrojů. V transparentním panelu nástrojů je panel nástrojů transparentní, ale tlačítka nejsou. Text tlačítka se zobrazí v části rastry tlačítek.
+- **TBSTYLE_TRANSPARENT** Vytvoří průhledný panel nástrojů. Na průhledném panelu nástrojů je panel nástrojů průhledný, ale tlačítka nikoli. Text tlačítka se zobrazí pod bitmapami tlačítek.
 
-- **TBSTYLE_LIST** Umístí text tlačítka vpravo od rastrových obrázků tlačítek.
+- **TBSTYLE_LIST** Umístí text tlačítka napravo od bitmap tlačítek.
 
 > [!NOTE]
->  Aby nedocházelo k potížím s překreslením, měly by být nastaveny styly **TBSTYLE_FLAT** a **TBSTYLE_TRANSPARENT** před tím, než je objekt Toolbar viditelný.
+> Aby se zabránilo problémům s překreslením, měly by být před viditelným objektem panelu nástrojů nastaveny styly **TBSTYLE_FLAT** a **TBSTYLE_TRANSPARENT.**
 
-Následující styly určují, zda panel nástrojů umožní uživateli přemístit jednotlivá tlačítka v rámci objektu Toolbar pomocí přetažení:
+Následující styly určují, zda panel nástrojů umožňuje uživateli změnit umístění jednotlivých tlačítek v objektu panelu nástrojů pomocí přetažení:
 
-- **TBSTYLE_ALTDRAG** Umožňuje uživatelům změnit polohu tlačítka panelu nástrojů přetažením při stisknutí klávesy ALT. Pokud tento styl není zadaný, musí uživatel při přetahování tlačítka držet klávesu SHIFT.
+- **TBSTYLE_ALTDRAG** Umožňuje uživatelům změnit polohu tlačítka panelu nástrojů přetažením při podržení klávesy ALT. Pokud tento styl není zadán, musí uživatel při přetahování tlačítka podržet klávesu SHIFT.
 
     > [!NOTE]
-    >  Aby bylo možné přetahovat tlačítka panelu nástrojů, je nutné zadat styl **CCS_ADJUSTABLE** .
+    >  Chcete-li povolit přetahování tlačítek panelu nástrojů, musí být zadán styl **CCS_ADJUSTABLE.**
 
-- **TBSTYLE_REGISTERDROP** Generuje zprávy s oznámením **TBN_GETOBJECT** k vyžádání objektů cíle přetažení, když ukazatel myši projde tlačítky na panelu nástrojů.
+- **TBSTYLE_REGISTERDROP** Generuje **TBN_GETOBJECT** oznamovací zprávy k vyžádání cílových objektů přetažení, když ukazatel myši předává tlačítka panelu nástrojů.
 
-Zbývající styly ovlivňují vizuální a nevizuální aspekty objektu Toolbar:
+Zbývající styly ovlivňují vizuální a nevizuální aspekty objektu panelu nástrojů:
 
-- **TBSTYLE_WRAPABLE** Vytvoří panel nástrojů, který může mít více řádků tlačítek. Tlačítka panelu nástrojů lze zabalit na další řádek, pokud je panel nástrojů příliš úzký na to, aby obsahoval všechna tlačítka na stejném řádku. Obtékání probíhá na hranicích oddělení a Neseskupení.
+- **TBSTYLE_WRAPABLE** Vytvoří panel nástrojů, který může mít více řádků tlačítek. Tlačítka panelu nástrojů mohou "zalomit" na další řádek, když se panel nástrojů stane příliš úzkým, aby zahrnoval všechna tlačítka na stejném řádku. K obtékání dochází na hranicích oddělení a mimo skupiny.
 
-- **TBSTYLE_CUSTOMERASE** Generuje zprávy s oznámením **NM_CUSTOMDRAW** při zpracování zpráv **WM_ERASEBKGND** .
+- **TBSTYLE_CUSTOMERASE** Generuje **NM_CUSTOMDRAW** oznámení, když zpracovává **WM_ERASEBKGND** zprávy.
 
-- **TBSTYLE_TOOLTIPS** Vytvoří ovládací prvek popis tlačítka, který může aplikace použít k zobrazení popisného textu pro tlačítka na panelu nástrojů.
+- **TBSTYLE_TOOLTIPS** Vytvoří ovládací prvek špičky nástroje, který může aplikace použít k zobrazení popisného textu tlačítek na panelu nástrojů.
 
-Úplný seznam stylů panelů nástrojů a rozšířených stylů najdete v tématu [ovládací prvky panelu nástrojů a styly tlačítek](/windows/win32/Controls/toolbar-control-and-button-styles) a [panely nástrojů rozšířené styly](/windows/win32/Controls/toolbar-extended-styles) v Windows SDK.
+Úplný seznam stylů panelů nástrojů a rozšířených stylů naleznete v [tématu Ovládací prvek panelu nástrojů a Styly tlačítek](/windows/win32/Controls/toolbar-control-and-button-styles) a [Rozšířené styly panelu nástrojů](/windows/win32/Controls/toolbar-extended-styles) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

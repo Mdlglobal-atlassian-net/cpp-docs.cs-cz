@@ -1,5 +1,5 @@
 ---
-title: Atributy příjemce OLE DB (C++ com)
+title: Atributy příjemce technologie OLE DB (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], database
@@ -9,23 +9,24 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 67f58d6dd32360248c6437f66fa7042871bc4ea6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9147d80e87e23a754043a29eb3d15570e85aec0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214678"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377107"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
-Atributy příjemce OLE DB vloží kód založený na [šablonách spotřebitelů OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)a vytvoří pracovní OLE DB příjemce, který provádí úkoly, jako je například otevírání tabulek, spouštění příkazů a přístup k datům.
+
+Atributy příjemce technologie OLE DB vkládají kód založený na [šablonách příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)a vytvářejí tak funkčního příjemce technologie OLE DB, který provádí úlohy, jako je například otevírání tabulek, provádění příkazů a přístup k datům.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[db_accessor](db-accessor.md)|Vytvoří vazby sloupců v sadě řádků a vytvoří jejich vazby k odpovídajícím mapám přistupujícímu objektu.|
-|[db_column](db-column.md)|Váže zadaný sloupec na sadu řádků.|
-|[db_command](db-command.md)|Spustí příkaz OLE DB.|
-|[db_param](db-param.md)|Přidruží zadanou členskou proměnnou ke vstupnímu nebo výstupnímu parametru.|
-|[db_source](db-source.md)|Vytvoří a zapouzdří připojení prostřednictvím poskytovatele ke zdroji dat.|
+|[db_accessor](db-accessor.md)|Sváže sloupce v sadě řádků a váže je na odpovídající mapy přistupujícího pole.|
+|[db_column](db-column.md)|Sváže zadaný sloupec se sadou řádků.|
+|[db_command](db-command.md)|Provede příkaz TECHNOLOGIE OLE DB.|
+|[db_param](db-param.md)|Přidruží zadanou členovou proměnnou ke vstupnímu nebo výstupnímu parametru.|
+|[db_source](db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím zprostředkovatele ke zdroji dat.|
 |[db_table](db-table.md)|Otevře tabulku OLE DB.|
 
 ## <a name="see-also"></a>Viz také

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 4e6bdef10d5747abd344750c888cf6726c47d99e
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929935"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377367"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog – třída
 
-Dialogové okno nemodální karty ( [Třída CPropertySheet –](../../mfc/reference/cpropertysheet-class.md)), které umožňuje uživateli přizpůsobit panely nástrojů, nabídky, klávesové zkratky, uživatelsky definované nástroje a vizuální styl v aplikaci. Uživatel obvykle přistupuje k tomuto dialogovému oknu výběrem možnosti **přizpůsobit** v nabídce **nástroje** .
+Nemodlavé dialogové okno karty [(CPropertySheet Class),](../../mfc/reference/cpropertysheet-class.md)které umožňuje uživateli přizpůsobit panely nástrojů, nabídky, klávesové zkratky, uživatelem definované nástroje a vizuální styl v aplikaci. Uživatel obvykle přistupuje k tomuto dialogovému oknu výběrem **možnosti Přizpůsobit** z nabídky **Nástroje.**
 
-Dialogové okno **přizpůsobit** má šest karet: **Příkazy**, **panely nástrojů**, **nástroje**, **klávesnice**, **Nabídka**a **Možnosti**.
+Dialogové okno **Přizpůsobit** obsahuje šest karet: **Příkazy**, **Panely nástrojů**, **Nástroje**, **Klávesnice**, **Nabídka**a **Možnosti**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,66 +47,66 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|`CMFCToolBarsCustomizeDialog` Vytvoří objekt.|
+|[CmFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Vytvoří `CMFCToolBarsCustomizeDialog` objekt.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **příkazy** .|
-|[CMFCToolBarsCustomizeDialog:: PřidatNabídku](#addmenu)|Načte nabídku z prostředků a volá [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **příkazy** .|
-|[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Načte nabídku z prostředků a volá [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **příkazy** .|
-|[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Načte panel nástrojů z prostředků. Potom pro každý příkaz v nabídce zavolá metodu [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) pro vložení tlačítka do seznamu příkazů na stránce **příkazy** v rámci zadané kategorie.|
-|[CMFCToolBarsCustomizeDialog:: Create](#create)|Zobrazí dialogové okno **vlastní nastavení** .|
+|[CmFCToolBarsCustomizeDialog::Tlačítko Přidat](#addbutton)|Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **Příkazy.**|
+|[CmFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Načte nabídku z prostředků a zavolá [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **Příkazy.**|
+|[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Načte nabídku z prostředků a zavolá [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **Příkazy.**|
+|[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Načte panel nástrojů ze zdrojů. Potom pro každý příkaz v nabídce volá [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metoda vložit tlačítko v seznamu příkazů na stránce **Příkazy** v zadané kategorii.|
+|[CmFCToolBarsCustomizeDialog::Vytvořit](#create)|Zobrazí dialogové okno **Přizpůsobení.**|
 |`CMFCToolBarsCustomizeDialog::EnableTools`|Vyhrazeno pro budoucí použití.|
-|[CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Povolí nebo zakáže vytváření nových panelů nástrojů pomocí dialogového okna **přizpůsobit** .|
-|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Naplní zadaný `CListBox` objekt příkazy z kategorie **všechny příkazy** .|
-|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Naplní zadaný `CComboBox` objekt názvem každé kategorie příkazů v dialogovém okně **přizpůsobit** .|
-|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Naplní zadaný `CListBox` objekt názvem každé kategorie příkazů v dialogovém okně **přizpůsobit** .|
-|[CMFCToolBarsCustomizeDialog:: GetCommand](#getcommandname)|Načte název, který je přidružený k danému ID příkazu.|
-|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Načte počet položek v zadaném seznamu, které mají daný textový popisek.|
-|[CMFCToolBarsCustomizeDialog:: GetFlags](#getflags)|Načte sadu příznaků, které mají vliv na chování dialogového okna.|
-|`CMFCToolBarsCustomizeDialog::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
-|[CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Spustí editor obrázků, aby uživatel mohl přizpůsobit tlačítko panelu nástrojů nebo ikonu položky nabídky.|
-|[CMFCToolBarsCustomizeDialog:: OnInitDialog](#oninitdialog)|Přepsání pro rozšíření Inicializace seznamu vlastností. (Overrides [CPropertySheet –:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
-|[CMFCToolBarsCustomizeDialog::P ostNcDestroy](#postncdestroy)|Volá se rozhraním po zničení okna. (Overrides `CPropertySheet::PostNcDestroy`.)|
-|[CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Odebere tlačítko se zadaným ID příkazu ze zadané kategorie nebo ze všech kategorií.|
-|[CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Přejmenuje kategorii do pole se seznamem kategorií na kartě **příkazy** .|
-|[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Nahrazuje tlačítko v seznamu příkazů na kartě **příkazy** pomocí nového objektu tlačítka panelu nástrojů.|
-|[CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Přidá kategorii do seznamu kategorií, které se zobrazí na kartě **příkazy** .|
+|[CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Povolí nebo zakáže vytváření nových panelů nástrojů pomocí dialogového okna **Přizpůsobit.**|
+|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Naplní zadaný `CListBox` objekt příkazy v kategorii **Všechny příkazy.**|
+|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Naplní poskytnutý `CComboBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**|
+|[CmFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Naplní poskytnutý `CListBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**|
+|[CmFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|Načte název, který je přidružen k dané ID příkazu.|
+|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Načte počet položek v poskytnutém seznamu, které mají daný textový popisek.|
+|[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Načte sadu příznaků, které ovlivňují chování dialogového okna.|
+|`CMFCToolBarsCustomizeDialog::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
+|[CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Spustí editor obrázků, aby si uživatel mohl přizpůsobit tlačítko panelu nástrojů nebo ikonu položky nabídky.|
+|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Přepíše pro zvětšení inicializace seznamu vlastností. (Přepíše [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
+|[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|Volat rámci po okno bylo zničeno. (Přepíše `CPropertySheet::PostNcDestroy`.)|
+|[CmFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Odebere tlačítko se zadaným ID příkazu ze zadané kategorie nebo ze všech kategorií.|
+|[CMFCToolBarsCustomizeDialog::Přejmenovatkategorie](#renamecategory)|Přejmenuje kategorii v seznamu kategorií na kartě **Příkazy.**|
+|[CmFCToolBarsCustomizeDialog::Příkaz Nahradit](#replacebutton)|Nahradí tlačítko v seznamu příkazů na kartě **Příkazy** novým objektem tlačítka panelu nástrojů.|
+|[CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Přidá kategorii do seznamu kategorií, které budou zobrazeny na kartě **Příkazy.**|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Volá se rozhraním, aby se určilo, jestli je seznam uživatelsky definovaných nástrojů platný.|
-|[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Volá se rozhraním, když se změní vlastnosti uživatelsky definovaného nástroje.|
+|[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Volat rámci k určení, zda je platný seznam uživatelem definovaných nástrojů.|
+|[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Volat rámci při změně vlastností uživatelem definovaného nástroje.|
 |[CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|Určuje, zda lze k akci přiřadit zadanou klávesovou zkratku.|
-|[CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Určuje, zda lze změnit uživatelsky definovaný nástroj.|
-|[CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Volá se rozhraním, když uživatel zvolí kartu **nástroje** .|
+|[CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Určuje, zda lze změnit nástroj definovaný uživatelem.|
+|[CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Volána rámci, když uživatel zvolí **karty Nástroje** je požadováno.|
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit dialogové okno **přizpůsobit** , vytvořte `CMFCToolBarsCustomizeDialog` objekt a zavolejte metodu [CMFCToolBarsCustomizeDialog:: Create](#create) .
+Chcete-li zobrazit dialogové okno `CMFCToolBarsCustomizeDialog` **Přizpůsobit,** vytvořte objekt a zavolejte metodu [CMFCToolBarsCustomizeDialog::Create.](#create)
 
-I když je dialogové okno **přizpůsobit** aktivní, aplikace funguje ve speciálním režimu, který omezuje uživatele na úlohy přizpůsobení.
+Když je dialogové okno **Přizpůsobit** aktivní, aplikace pracuje ve speciálním režimu, který omezuje uživatele na úkoly přizpůsobení.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody ve `CMFCToolBarsCustomizeDialog` třídě. Tento příklad ukazuje, jak nahradit tlačítko panelu nástrojů v seznamu příkazů na stránce **příkazy** , povolit vytváření nových panelů nástrojů pomocí dialogového okna **přizpůsobit** a zobrazení dialogového okna **přizpůsobení** . Tento fragment kódu je součástí ukázky [Ukázka IE](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCToolBarsCustomizeDialog` metody ve třídě. Příklad ukazuje, jak nahradit tlačítko panelu nástrojů v seznamu příkazů na stránce **Příkazy,** povolit vytváření nových panelů nástrojů pomocí dialogového okna **Přizpůsobit** a zobrazit dialogové okno **Přizpůsobení.** Tento fragment kódu je součástí [ukázky ukázky aplikace IE .](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
 
@@ -114,11 +114,11 @@ Následující příklad ukazuje, jak použít různé metody ve `CMFCToolBarsCu
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxToolBarsCustomizeDialog. h
+**Záhlaví:** afxToolBarsCustomizeDialog.h
 
-##  <a name="addbutton"></a>CMFCToolBarsCustomizeDialog::AddButton
+## <a name="cmfctoolbarscustomizedialogaddbutton"></a><a name="addbutton"></a>CmFCToolBarsCustomizeDialog::Tlačítko Přidat
 
-Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **příkazy** .
+Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **Příkazy.**
 
 ```
 void AddButton(
@@ -135,36 +135,36 @@ void AddButton(
 ### <a name="parameters"></a>Parametry
 
 *uiCategoryId*<br/>
-pro Určuje ID kategorie, do které se má tlačítko Vložit.
+[v] Určuje ID kategorie, do které chcete tlačítko vložit.
 
-*tlačítko*<br/>
-pro Určuje tlačítko, které má být vloženo.
+*Tlačítko*<br/>
+[v] Určuje tlačítko, které chcete vložit.
 
 *iInsertBefore*<br/>
-pro Určuje index tlačítka panelu nástrojů vycházející od nuly, před kterým bylo tlačítko vloženo.
+[v] Určuje nulový index tlačítka panelu nástrojů, před kterým je tlačítko vloženo.
 
-*lpszCategory*<br/>
-pro Určuje řetězec kategorie pro vložení tlačítka.
+*lpszKategorie*<br/>
+[v] Určuje řetězec kategorie pro vložení tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda ignoruje tlačítka, která mají standardní ID příkazů (například ID_FILE_MRU_FILE1), příkazy, které nejsou povoleny (viz [CMFCToolBar:: IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) a zástupné tlačítka. `AddButton`
+Metoda `AddButton` ignoruje tlačítka, která mají standardní id příkazů (například ID_FILE_MRU_FILE1), příkazy, které nejsou povoleny (viz [CMFCToolBar::IsCommandPermitted)](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)a fiktivní tlačítka.
 
-Tato metoda vytvoří nový objekt stejného typu jako `button` (obvykle [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) pomocí třídy runtime tlačítka. Pak zavolá [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) pro zkopírování datových členů tlačítka a vloží kopii do určené kategorie.
+Tato metoda vytvoří nový objekt stejného typu jako `button` (obvykle [CMFCToolBarButton Class)](../../mfc/reference/cmfctoolbarbutton-class.md)pomocí runtime třídy tlačítka. Potom volá [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) zkopírovat datové členy tlačítka a vloží kopii do zadané kategorie.
 
-Po vložení tlačítka Nový obdrží `OnAddToCustomizePage` oznámení.
+Po vložení nového tlačítka obdrží `OnAddToCustomizePage` oznámení.
 
-Pokud `iInsertBefore` je-1, tlačítko je připojeno k seznamu kategorií; v opačném případě je vloženo před položkou se zadaným indexem.
+Pokud `iInsertBefore` je -1, tlačítko je připojen o seznam kategorií; v opačném případě je vložen před položku se zadaným indexem.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `AddButton` metodu `CMFCToolBarsCustomizeDialog` třídy. Tento fragment kódu je součástí [ukázky posuvníku](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `AddButton` používat metodu třídy. `CMFCToolBarsCustomizeDialog` Tento fragment kódu je součástí [ukázky slideru](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
-##  <a name="addmenu"></a>CMFCToolBarsCustomizeDialog:: PřidatNabídku
+## <a name="cmfctoolbarscustomizedialogaddmenu"></a><a name="addmenu"></a>CmFCToolBarsCustomizeDialog::AddMenu
 
-Načte nabídku z prostředků a volá [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **příkazy** .
+Načte nabídku z prostředků a zavolá [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **Příkazy.**
 
 ```
 BOOL AddMenu(UINT uiMenuResId);
@@ -173,19 +173,19 @@ BOOL AddMenu(UINT uiMenuResId);
 ### <a name="parameters"></a>Parametry
 
 *uiMenuResId*<br/>
-pro Určuje ID prostředku nabídky, která se má načíst.
+[v] Určuje ID prostředku nabídky, kterou chcete načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se nabídka úspěšně přidala; v opačném případě FALSE.
+PRAVDA, pokud byla nabídka přidána úspěšně; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-V volání `AddMenuCommands` *bPopup* je hodnota false. V důsledku toho tato metoda nepřidá položky nabídky, které obsahují podnabídky, do seznamu příkazů. Tato metoda přidá položky nabídky do podnabídek do seznamu příkazů.
+Ve volání `AddMenuCommands`je *bPopup* nepravda. V důsledku toho tato metoda nepřidává položky nabídky, které obsahují podnabídky do seznamu příkazů. Tato metoda přidá položky nabídky v podnabídkách do seznamu příkazů.
 
-##  <a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog::AddMenuCommands
+## <a name="cmfctoolbarscustomizedialogaddmenucommands"></a><a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog::AddMenuCommands
 
-Přidá položky do seznamu příkazů na stránce **příkazy** , které reprezentují všechny položky v zadané nabídce.
+Přidá položky do seznamu příkazů na stránce **Příkazy,** aby reprezentovaly všechny položky v zadané nabídce.
 
 ```
 void AddMenuCommands(
@@ -197,27 +197,27 @@ void AddMenuCommands(
 
 ### <a name="parameters"></a>Parametry
 
-*pMenu*<br/>
-pro Ukazatel na objekt CMenu –, který chcete přidat.
+*pNabídka*<br/>
+[v] Ukazatel na cmenu objekt upřidat.
 
 *bPopup*<br/>
-pro Určuje, zda se mají vložit položky místní nabídky do seznamu příkazů.
+[v] Určuje, zda mají být položky místní nabídky vloženy do seznamu příkazů.
 
-*lpszCategory*<br/>
-pro Název kategorie pro vložení nabídky
+*lpszKategorie*<br/>
+[v] Název kategorie pro vložení nabídky.
 
 *lpszMenuPath*<br/>
-pro Předpona, která je přidána k názvu při zobrazení příkazu v seznamu **všechny kategorie** .
+[v] Předpona, která je přidána do názvu, když je příkaz zobrazen v seznamu **Všechny kategorie.**
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda `AddMenuCommands` se cykluje u všech položek nabídky *pMenu*. Pro každou položku nabídky, která neobsahuje podnabídku, tato metoda vytvoří objekt [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a zavolá metodu [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) pro přidání položky nabídky jako tlačítka panelu nástrojů do seznamu příkazů na  **Stránka příkazy** . Oddělovače jsou v tomto procesu ignorovány.
+Metoda `AddMenuCommands` se smyčku přes všechny položky nabídky *pMenu*. Pro každou položku nabídky, která neobsahuje podnabídku, tato metoda vytvoří objekt [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a zavolá metodu [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) a přidá položku nabídky jako tlačítko panelu nástrojů do seznamu příkazů na stránce **Příkazy.** Oddělovače jsou v tomto procesu ignorovány.
 
-Pokud má *bPopup* hodnotu true, pro každou položku nabídky, která obsahuje podnabídku, tato metoda vytvoří objekt [třídy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) a vloží jej do seznamu příkazů voláním `AddButton`. Jinak se položky nabídky, které obsahují podnabídky, nezobrazí v seznamu příkazů. V obou případech při výskytu položky nabídky s podnabídkou, která volá sama sebe, předává `AddMenuCommands` ukazatel do podnabídky jako parametr *pMenu* a připojuje popisek podnabídky k *lpszMenuPath*.
+Pokud je *bPopup* TRUE, pro každou položku nabídky, která obsahuje podnabídku, tato metoda vytvoří objekt [třídy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) a vloží jej do seznamu příkazů voláním `AddButton`. V opačném případě nejsou položky nabídky, které obsahují podnabídky, zobrazeny v seznamu příkazů. V obou případech, když `AddMenuCommands` narazí na položku nabídky s podnabídkou volá sám rekurzivně, předání ukazatele do podnabídky jako parametr *pMenu* a připojení popisku podnabídky k *lpszMenuPath*.
 
-##  <a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog::AddToolBar
+## <a name="cmfctoolbarscustomizedialogaddtoolbar"></a><a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog::AddToolBar
 
-Načte panel nástrojů z prostředků. Potom pro každý příkaz v nabídce zavolá metodu [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) pro vložení tlačítka do seznamu příkazů na stránce **příkazy** v rámci zadané kategorie.
+Načte panel nástrojů ze zdrojů. Potom pro každý příkaz v nabídce volá [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metoda vložit tlačítko v seznamu příkazů na stránce **Příkazy** v zadané kategorii.
 
 ```
 BOOL AddToolBar(
@@ -232,29 +232,29 @@ BOOL AddToolBar(
 ### <a name="parameters"></a>Parametry
 
 *uiCategoryId*<br/>
-pro Určuje ID prostředku kategorie, do které chcete přidat panel nástrojů.
+[v] Určuje ID prostředku kategorie, do které chcete panel nástrojů přidat.
 
 *uiToolbarResId*<br/>
-pro Určuje ID prostředku panelu nástrojů, jehož příkazy jsou vloženy do seznamu příkazů.
+[v] Určuje ID prostředku panelu nástrojů, jehož příkazy jsou vloženy do seznamu příkazů.
 
-*lpszCategory*<br/>
-pro Určuje název kategorie, do které se má panel nástrojů přidat.
+*lpszKategorie*<br/>
+[v] Určuje název kategorie, do které chcete panel nástrojů přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je metoda úspěšná; jinak FALSE.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `AddToolBar` metodu `CMFCToolBarsCustomizeDialog` ve třídě. Tento fragment kódu je součástí ukázky panelu [aplikace Word](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `AddToolBar` používat metodu ve `CMFCToolBarsCustomizeDialog` třídě. Tento fragment kódu je součástí [ukázky aplikace Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek, který se používá k reprezentaci každého příkazu, je objekt [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) . Po přidání panelu nástrojů lze tlačítko Nahradit ovládacím prvkem odvozeného typu voláním [CMFCToolBarsCustomizeDialog:: ReplaceButton](#replacebutton).
+Ovládací prvek, který se používá k reprezentaci každého příkazu je [CMFCToolBarButton class objektu.](../../mfc/reference/cmfctoolbarbutton-class.md) Po přidání panelu nástrojů můžete nahradit tlačítko ovládacím prvkem odvozeného typu voláním [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton).
 
-##  <a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog::CheckToolsValidity
+## <a name="cmfctoolbarscustomizedialogchecktoolsvalidity"></a><a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog::CheckToolsValidity
 
 Ověří platnost seznamu uživatelských nástrojů.
 
@@ -264,22 +264,22 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 
 ### <a name="parameters"></a>Parametry
 
-*lstTools*<br/>
-pro Seznam uživatelsky definovaných nástrojů, které se mají kontrolovat.
+*lstNástroje*<br/>
+[v] Seznam uživatelem definovaných nástrojů ke kontrole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud je seznam uživatelsky definovaných nástrojů platný. v opačném případě FALSE. Výchozí implementace vždy vrátí hodnotu TRUE.
+Vrátí hodnotu PRAVDA, pokud je seznam uživatelem definovaných nástrojů platný. jinak FALSE. Výchozí implementace vždy vrátí hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu pro ověření platnosti objektů, které reprezentují uživatelsky definované nástroje vrácené funkcí [CMFCToolBarsCustomizeDialog:: CheckToolsValidity](#checktoolsvalidity).
+Rámec volá tuto metodu k ověření platnosti objektů, které představují uživatelem definované nástroje vrácené [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity).
 
-Přepsat metodu ve třídě odvozené z `CMFCToolBarsCustomizeDialog` , pokud chcete ověřit uživatelské nástroje před tím, než uživatel zavře dialogové okno. `CheckToolsValidity` Pokud tato metoda vrátí hodnotu FALSE, když uživatel klikne buď na tlačítko **Zavřít** v pravém horním rohu dialogového okna, nebo na tlačítko s popiskem **Zavřít** v pravém dolním rohu dialogového okna, dialogové okno zobrazí kartu **nástroje** místo ukončuje. Pokud tato metoda vrátí hodnotu FALSE, pokud uživatel klikne na kartu a opustíte kartu **nástroje** , navigace neproběhne. Měli byste zobrazit příslušné okno se zprávou pro informování uživatele o problému, který způsobil selhání ověřování.
+Přepište `CheckToolsValidity` metodu ve třídě `CMFCToolBarsCustomizeDialog` odvozené z, pokud chcete ověřit uživatelské nástroje před uživatelem zavře dialogové okno. Pokud tato metoda vrátí hodnotu NEPRAVDA, když uživatel klepne na tlačítko **Zavřít** v pravém horním rohu dialogového okna nebo na tlačítko označené **Zavřít** v pravém dolním rohu dialogového okna, zobrazí se v dialogovém okně místo zavření karta **Nástroje.** Pokud tato metoda vrátí hodnotu NEPRAVDA, když uživatel klepne na kartu a přejde z karty **Nástroje,** navigace se neuskuteční. Měli byste zobrazit příslušné okno se zprávou informovat uživatele o problému, který způsobil selhání ověření.
 
-##  <a name="cmfctoolbarscustomizedialog"></a>CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog
+## <a name="cmfctoolbarscustomizedialogcmfctoolbarscustomizedialog"></a><a name="cmfctoolbarscustomizedialog"></a>CmFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog
 
-`CMFCToolBarsCustomizeDialog` Vytvoří objekt.
+Vytvoří `CMFCToolBarsCustomizeDialog` objekt.
 
 ```
 CMFCToolBarsCustomizeDialog(
@@ -292,13 +292,13 @@ CMFCToolBarsCustomizeDialog(
 ### <a name="parameters"></a>Parametry
 
 *pWndParentFrame*<br/>
-pro Ukazatel na nadřazený rámec. Tento parametr nesmí mít hodnotu NULL.
+[v] Ukazatel na nadřazený rámec. Tento parametr nesmí mít hodnotu NULL.
 
 *bAutoSetFromMenus*<br/>
-pro Logická hodnota, která určuje, zda se mají přidat příkazy nabídky ze všech nabídek do seznamu příkazů na stránce **příkazy** . Pokud má tento parametr hodnotu TRUE, přidají se příkazy nabídky. V opačném případě se příkazy nabídky nepřidaly.
+[v] Logická hodnota, která určuje, zda mají být příkazy nabídky ze všech nabídek uvedeny do seznamu příkazů na stránce **Příkazy.** Pokud je tento parametr TRUE, budou přidány příkazy nabídky. V opačném případě nejsou přidány příkazy nabídky.
 
 *uiFlags*<br/>
-pro Kombinace příznaků, které mají vliv na chování dialogového okna. Tento parametr může být jednou nebo více z následujících hodnot:
+[v] Kombinace příznaků, které ovlivňují chování dialogového okna. Tento parametr může být jedna nebo více z následujících hodnot:
 
 - AFX_CUSTOMIZE_MENU_SHADOWS
 
@@ -317,13 +317,13 @@ pro Kombinace příznaků, které mají vliv na chování dialogového okna. Ten
 - AFX_CUSTOMIZE_NO_LARGE_ICONS
 
 *plistCustomPages*<br/>
-pro Ukazatel na seznam `CRuntimeClass` objektů, které určují další vlastní stránky.
+[v] Ukazatel na seznam `CRuntimeClass` objektů, které určují další vlastní stránky.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *plistCustomPages* odkazuje na seznam `CRuntimeClass` objektů, které určují další vlastní stránky. Konstruktor přidá do dialogového okna více stránek pomocí metody [CRuntimeClass:: CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) . Příklad, který do dialogového okna **přizpůsobit** přidá další stránky, najdete v ukázce CustomPages.
+Parametr *plistCustomPages* odkazuje na seznam `CRuntimeClass` objektů, které určují další vlastní stránky. Konstruktor přidá do dialogového okna další stránky pomocí metody [CRuntimeClass::CreateObject.](../../mfc/reference/cruntimeclass-structure.md#createobject) Příklad, který přidává další stránky do dialogového okna **Přizpůsobit,** najdete v příkladu ukázku vlastních stránek.
 
-Další informace o hodnotách, které lze předat v parametru *uiFlags* , naleznete v tématu [CMFCToolBarsCustomizeDialog:: GetFlags](#getflags).
+Další informace o hodnotách, které můžete předat v parametru *uiFlags,* naleznete v tématu [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).
 
 ### <a name="example"></a>Příklad
 
@@ -331,9 +331,9 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarsCustomizeDia
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
-##  <a name="create"></a>CMFCToolBarsCustomizeDialog:: Create
+## <a name="cmfctoolbarscustomizedialogcreate"></a><a name="create"></a>CmFCToolBarsCustomizeDialog::Vytvořit
 
-Zobrazí dialogové okno **vlastní nastavení** .
+Zobrazí dialogové okno **Přizpůsobení.**
 
 ```
 virtual BOOL Create();
@@ -341,15 +341,15 @@ virtual BOOL Create();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, je-li úspěšně vytvořen seznam vlastností přizpůsobení; v opačném případě FALSE.
+PRAVDA, pokud je seznam vlastností vlastního nastavení úspěšně vytvořen; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`Create` Volejte metodu až po úplné inicializaci třídy.
+Volání `Create` metody pouze po úplné inicializaci třídy.
 
-##  <a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars
+## <a name="cmfctoolbarscustomizedialogenableuserdefinedtoolbars"></a><a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars
 
-Povolí nebo zakáže vytváření nových panelů nástrojů pomocí dialogového okna **přizpůsobit** .
+Povolí nebo zakáže vytváření nových panelů nástrojů pomocí dialogového okna **Přizpůsobit.**
 
 ```
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
@@ -358,17 +358,17 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-pro TRUE, pokud chcete povolit uživatelsky definované panely nástrojů; FALSE, pokud chcete zakázat panely nástrojů.
+[v] TRUE pro povolení uživatelem definovaných panelů nástrojů; Nepravda pro zakázání panelů nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *bEnable* hodnotu true, **tlačítka Nový**, **Přejmenovat** a **Odstranit** se zobrazí na stránce **panely nástrojů** .
+Pokud je *bEnable* TRUE, zobrazí se na stránce **Panely nástrojů** tlačítka **Nový**, **Přejmenovat** a **Odstranit.**
 
-Ve výchozím nastavení, nebo pokud má *bEnable* hodnotu false, tato tlačítka se nezobrazí a uživatel nemůže definovat nové panely nástrojů.
+Ve výchozím nastavení, nebo pokud *bEnable* je FALSE, tato tlačítka nejsou zobrazeny a uživatel nemůže definovat nové panely nástrojů.
 
-##  <a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog::FillAllCommandsList
+## <a name="cmfctoolbarscustomizedialogfillallcommandslist"></a><a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog::FillAllCommandsList
 
-Naplní zadaný `CListBox` objekt příkazy z kategorie **všechny příkazy** .
+Naplní zadaný `CListBox` objekt příkazy v kategorii **Všechny příkazy.**
 
 ```
 virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
@@ -377,19 +377,19 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 ### <a name="parameters"></a>Parametry
 
 *wndListOfCommands*<br/>
-mimo Odkaz na `CListBox` objekt, který se má naplnit
+[out] Odkaz na `CListBox` objekt, který má být naplněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Kategorie **všechny příkazy** obsahuje příkazy všech kategorií. Metoda [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) přidá příkaz, který je přidružen k uvedenému tlačítku, do kategorie **všechny příkazy** .
+Kategorie **Všechny příkazy** obsahuje příkazy všech kategorií. Metoda [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) přidá příkaz, který je přidružen k poskytnutému tlačítku, do kategorie **Všechny příkazy** za vás.
 
-Tato metoda vymaže obsah zadaného `CListBox` objektu před jeho naplnění příkazy z kategorie **všechny příkazy** .
+Tato metoda vymaže `CListBox` obsah zadaný objekt před vyplněním příkazy v kategorii **Všechny příkazy.**
 
-`CMFCMousePropertyPage` Třída používá tuto metodu k naplnění seznamu událostí dvojitého kliknutí.
+Třída `CMFCMousePropertyPage` používá tuto metodu k naplnění seznamu událostí poklepání.
 
-##  <a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesComboBox
+## <a name="cmfctoolbarscustomizedialogfillcategoriescombobox"></a><a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesComboBox
 
-Naplní zadaný `CComboBox` objekt názvem každé kategorie příkazů v dialogovém okně **přizpůsobit** .
+Naplní poskytnutý `CComboBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**
 
 ```
 void FillCategoriesComboBox(
@@ -399,25 +399,25 @@ void FillCategoriesComboBox(
 
 ### <a name="parameters"></a>Parametry
 
-*wndCategory*<br/>
-mimo Odkaz na `CComboBox` objekt, který se má naplnit
+*wndKategorie*<br/>
+[out] Odkaz na `CComboBox` objekt, který má být naplněn.
 
-*bAddEmpty*<br/>
-pro Logická hodnota určující, zda mají být přidány kategorie do pole se seznamem, které nemají příkazy. Pokud má tento parametr hodnotu TRUE, do pole se seznamem se přidají prázdné kategorie. V opačném případě se prázdné kategorie nepřidaly.
+*bPřidatprázdné*<br/>
+[v] Logická hodnota, která určuje, zda se mají přidat kategorie do pole se seznamem, které nemají příkazy. Pokud je tento parametr TRUE, prázdné kategorie jsou přidány do pole se seznamem. V opačném případě nebudou přidány prázdné kategorie.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je podobná metodě [CMFCToolBarsCustomizeDialog:: FillCategoriesListBox](#fillcategorieslistbox) s tím rozdílem, že tato `CComboBox` metoda funguje s objektem.
+Tato metoda je jako [metoda CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) s `CComboBox` tím rozdílem, že tato metoda pracuje s objektem.
 
-Tato metoda nevymaže obsah `CComboBox` objektu před jeho naplnění. Zaručuje, že kategorie **všechny příkazy** je poslední položkou v poli se seznamem.
+Tato metoda nevymaže `CComboBox` obsah objektu před jeho naplněním. Zaručuje, že kategorie **Všechny příkazy** je poslední položkou v poli se seznamem.
 
-Nové kategorie příkazů můžete přidat pomocí metody [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) . Název existující kategorie můžete změnit pomocí metody [CMFCToolBarsCustomizeDialog:: RenameCategory](#renamecategory) .
+Nové kategorie příkazů můžete přidat pomocí metody [CMFCToolBarsCustomizeDialog::AddButton.](#addbutton) Název existující kategorie můžete změnit pomocí metody [CMFCToolBarsCustomizeDialog::RenameCategory.](#renamecategory)
 
-Třídy `CMFCToolBarsKeyboardPropertyPage` a`CMFCKeyMapDialog` používají tuto metodu ke kategorizaci mapování klávesnice.
+`CMFCToolBarsKeyboardPropertyPage` Třídy `CMFCKeyMapDialog` a používají tuto metodu ke kategorizaci mapování klávesnice.
 
-##  <a name="fillcategorieslistbox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesListBox
+## <a name="cmfctoolbarscustomizedialogfillcategorieslistbox"></a><a name="fillcategorieslistbox"></a>CmFCToolBarsCustomizeDialog::FillCategoriesListBox
 
-Naplní zadaný `CListBox` objekt názvem každé kategorie příkazů v dialogovém okně **přizpůsobit** .
+Naplní poskytnutý `CListBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**
 
 ```
 void FillCategoriesListBox(
@@ -427,25 +427,25 @@ void FillCategoriesListBox(
 
 ### <a name="parameters"></a>Parametry
 
-*wndCategory*<br/>
-mimo Odkaz na `CListBox` objekt, který se má naplnit
+*wndKategorie*<br/>
+[out] Odkaz na `CListBox` objekt, který má být naplněn.
 
-*bAddEmpty*<br/>
-pro Logická hodnota, která určuje, zda mají být do seznamu přidány kategorie, které nemají příkazy. Pokud je tento parametr TRUE, do pole se seznamem se přidají prázdné kategorie. V opačném případě se prázdné kategorie nepřidaly.
+*bPřidatprázdné*<br/>
+[v] Logická hodnota, která určuje, zda má být do seznamu přidat kategorie, které nemají příkazy. Pokud je tento parametr TRUE, budou do seznamu přidány prázdné kategorie. V opačném případě nebudou přidány prázdné kategorie.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je podobná metodě [CMFCToolBarsCustomizeDialog:: FillCategoriesComboBox](#fillcategoriescombobox) s tím rozdílem, že tato `CListBox` metoda funguje s objektem.
+Tato metoda je jako [METODA CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) s `CListBox` tím rozdílem, že tato metoda pracuje s objektem.
 
-Tato metoda nevymaže obsah `CListBox` objektu před jeho naplnění. Zaručuje, že kategorie **všechny příkazy** je poslední položkou v seznamu.
+Tato metoda nevymaže `CListBox` obsah objektu před jeho naplněním. Zaručuje, že kategorie **Všechny příkazy** je poslední položkou v seznamu.
 
-Nové kategorie příkazů můžete přidat pomocí metody [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) . Název existující kategorie můžete změnit pomocí metody [CMFCToolBarsCustomizeDialog:: RenameCategory](#renamecategory) .
+Nové kategorie příkazů můžete přidat pomocí metody [CMFCToolBarsCustomizeDialog::AddButton.](#addbutton) Název existující kategorie můžete změnit pomocí metody [CMFCToolBarsCustomizeDialog::RenameCategory.](#renamecategory)
 
-`CMFCToolBarsCommandsPropertyPage` Třída používá tuto metodu k zobrazení seznamu příkazů, které jsou přidruženy k jednotlivým kategoriím příkazů.
+Třída `CMFCToolBarsCommandsPropertyPage` používá tuto metodu k zobrazení seznamu příkazů, které jsou přidruženy ke každé kategorii příkazů.
 
-##  <a name="getcommandname"></a>CMFCToolBarsCustomizeDialog:: GetCommand
+## <a name="cmfctoolbarscustomizedialoggetcommandname"></a><a name="getcommandname"></a>CmFCToolBarsCustomizeDialog::GetCommandName
 
-Načte název, který je přidružený k danému ID příkazu.
+Načte název, který je přidružen k dané ID příkazu.
 
 ```
 LPCTSTR GetCommandName(UINT uiCmd) const;
@@ -454,15 +454,15 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-pro ID příkazu, který se má načíst
+[v] ID příkazu k načtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název, který je přidružen k danému ID příkazu, nebo hodnotu NULL, pokud příkaz neexistuje.
+Název, který je přidružen k danému ID příkazu, nebo NULL, pokud příkaz neexistuje.
 
-##  <a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog::GetCountInCategory
+## <a name="cmfctoolbarscustomizedialoggetcountincategory"></a><a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog::GetCountInCategory
 
-Načte počet položek v zadaném seznamu, které mají daný textový popisek.
+Načte počet položek v poskytnutém seznamu, které mají daný textový popisek.
 
 ```
 int GetCountInCategory(
@@ -473,22 +473,22 @@ int GetCountInCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszItemName*<br/>
-pro Textový popisek, který se má shodovat.
+[v] Textový popisek, který má odpovídat.
 
-*lstCommands*<br/>
-pro Odkaz na seznam, který obsahuje `CMFCToolBarButton` objekty.
+*příkazy lst*<br/>
+[v] Odkaz na seznam, `CMFCToolBarButton` který obsahuje objekty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v zadaném seznamu, jejichž textový popisek se rovná *lpszItemName*.
+Počet položek v poskytnutém seznamu, jehož textový popisek se rovná *lpszItemName*.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý prvek v seznamu poskytnutých objektů musí být typu `CMFCToolBarButton`. Tato metoda porovnává *lpszItemName* s datovým členem [CMFCToolBarButton:: m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) .
+Každý prvek v seznamu zadaných objektů `CMFCToolBarButton`musí být typu . Tato metoda porovnává *lpszItemName* s datovým členem [CMFCToolBarButton::m_strText.](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)
 
-##  <a name="getflags"></a>CMFCToolBarsCustomizeDialog:: GetFlags
+## <a name="cmfctoolbarscustomizedialoggetflags"></a><a name="getflags"></a>CMFCToolBarsCustomizeDialog::GetFlags
 
-Načte sadu příznaků, které mají vliv na chování dialogového okna.
+Načte sadu příznaků, které ovlivňují chování dialogového okna.
 
 ```
 UINT GetFlags() const;
@@ -496,28 +496,28 @@ UINT GetFlags() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sada příznaků ovlivňujících chování dialogového okna.
+Sada příznaků, které ovlivňují chování dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda načte hodnotu parametru *uiFlags* , která je předána konstruktoru. Návratovou hodnotou může být jedna nebo více z následujících hodnot:
+Tato metoda načte hodnotu parametru *uiFlags,* který je předán konstruktoru. Vrácená hodnota může být jedna nebo více z následujících hodnot:
 
 |||
 |-|-|
-|AFX_CUSTOMIZE_MENU_SHADOWS|Umožňuje uživateli zadat vzhled nabídky.  |
-|AFX_CUSTOMIZE_TEXT_LABELS|Umožňuje uživateli určit, zda budou textové popisky zobrazeny pod obrázky tlačítek panelu nástrojů.  |
+|AFX_CUSTOMIZE_MENU_SHADOWS|Umožňuje uživateli určit vzhled stínu nabídky.  |
+|AFX_CUSTOMIZE_TEXT_LABELS|Umožňuje uživateli určit, zda jsou textové popisky zobrazeny pod obrazy tlačítek panelu nástrojů.  |
 |AFX_CUSTOMIZE_MENU_ANIMATIONS|Umožňuje uživateli zadat styl animace nabídky.  |
-|AFX_CUSTOMIZE_NOHELP|Odebere tlačítko Help v dialogovém okně přizpůsobení.  |
-|AFX_CUSTOMIZE_CONTEXT_HELP|Povolí vizuální styl WS_EX_CONTEXTHELP.  |
-|AFX_CUSTOMIZE_NOTOOLS|Odebere stránku **nástroje** z dialogového okna přizpůsobení. Tento příznak je platný, pokud vaše aplikace používá `CUserToolsManager` třídu.  |
-|AFX_CUSTOMIZE_MENUAMPERS|Umožňuje titulkům tlačítek obsahovat znak ampersand ( **&** ).  |
-|AFX_CUSTOMIZE_NO_LARGE_ICONS|Odebere možnost **velké ikony** z dialogového okna přizpůsobení.  |
+|AFX_CUSTOMIZE_NOHELP|Odebere tlačítko nápovědy z dialogového okna přizpůsobení.  |
+|AFX_CUSTOMIZE_CONTEXT_HELP|Umožňuje WS_EX_CONTEXTHELP vizuální styl.  |
+|AFX_CUSTOMIZE_NOTOOLS|Odebere stránku **Nástroje** z dialogového okna přizpůsobení. Tento příznak je platný, `CUserToolsManager` pokud vaše aplikace používá třídu.  |
+|AFX_CUSTOMIZE_MENUAMPERS|Umožňuje titulkům tlačítka, aby obsahovaly znak ampersand ( **&**).  |
+|AFX_CUSTOMIZE_NO_LARGE_ICONS|Odebere možnost **Velké ikony** z dialogového okna přizpůsobení.  |
 
-Další informace o vizuálním stylu WS_EX_CONTEXTHELP naleznete v tématu [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+Další informace o vizuálním stylu WS_EX_CONTEXTHELP naleznete v [tématu Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-##  <a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog::OnAfterChangeTool
+## <a name="cmfctoolbarscustomizedialogonafterchangetool"></a><a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog::OnAfterChangeTool
 
-Reaguje na změnu v uživatelském nástroji hned po jejím výskytu.
+Reaguje na změnu v uživatelském nástroji ihned po jeho výskytu.
 
 ```
 virtual void OnAfterChangeTool(CUserTool* pSelTool);
@@ -525,16 +525,16 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 
 ### <a name="parameters"></a>Parametry
 
-*pSelTool*<br/>
-[in, out] Ukazatel na objekt uživatelského nástroje, který byl změněn.
+*pSelNástroj*<br/>
+[dovnitř, ven] Ukazatel na objekt nástroje uživatele, který byl změněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když uživatel změní vlastnosti uživatelsky definovaného nástroje. Výchozí implementace neprovádí žádnou akci. Přepište tuto metodu ve třídě odvozené z `CMFCToolBarsCustomizeDialog` k provedení zpracování po provedení změny v uživatelském nástroji.
+Tato metoda je volána rámci při uživatel změní vlastnosti uživatelem definované ho nástroje. Výchozí implementace neprovede žádné provádění. Přepsat tuto metodu ve třídě `CMFCToolBarsCustomizeDialog` odvozené od provádět zpracování po změně uživatelského nástroje dojde.
 
-##  <a name="onassignkey"></a>CMFCToolBarsCustomizeDialog::OnAssignKey
+## <a name="cmfctoolbarscustomizedialogonassignkey"></a><a name="onassignkey"></a>CMFCToolBarsCustomizeDialog::OnAssignKey
 
-Ověří klávesové zkratky podle jejich definování uživatelem.
+Ověřuje klávesové zkratky podle toho, jak je uživatel definuje.
 
 ```
 virtual BOOL OnAssignKey(ACCEL* pAccel);
@@ -542,20 +542,20 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 
 ### <a name="parameters"></a>Parametry
 
-*pAccel*<br/>
-[in, out] Ukazatel na navrhovanou klávesnici přiřazení, která je vyjádřena jako struktura [akcelerace](/windows/win32/api/winuser/ns-winuser-accel) .
+*cAccel*<br/>
+[dovnitř, ven] Ukazatel na navrhované klávesnice assigment, který je vyjádřen jako [struktura ACCEL.](/windows/win32/api/winuser/ns-winuser-accel)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se klíč dá přiřadit, nebo FALSE, pokud se klíč nedá přiřadit. Výchozí implementace vždy vrátí hodnotu TRUE.
+TRUE, pokud klíč lze přiřadit, nebo NEPRAVDA, pokud klíč nelze přiřadit. Výchozí implementace vždy vrátí hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tuto metodu v odvozené třídě, aby provedlo dodatečné zpracování, když uživatel přiřadí novou klávesovou zkratku, nebo ověří klávesové zkratky, jak je definuje uživatel. Chcete-li zabránit přiřazení zástupce, vraťte hodnotu FALSE. Měli byste také zobrazit okno se zprávou nebo jinak informovat uživatele o příčině, proč se klávesová zkratka zamítla.
+Přepsat tuto metodu v odvozené třídě provádět další zpracování, když uživatel přiřadí novou klávesovou zkratku, nebo ověřit klávesové zkratky podle definice uživatele. Chcete-li zabránit přiřazení zástupce, vraťte hodnotu NEPRAVDA. Měli byste také zobrazit okno se zprávou nebo jinak informovat uživatele o důvodu, proč byla klávesová zkratka odmítnuta.
 
-##  <a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog::OnBeforeChangeTool
+## <a name="cmfctoolbarscustomizedialogonbeforechangetool"></a><a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog::OnBeforeChangeTool
 
-Provádí vlastní zpracování, když se uživatel chystá použít změnu v uživatelském nástroji.
+Provádí vlastní zpracování při změně uživatelského nástroje, když se uživatel chystá použít změnu.
 
 ```
 virtual void OnBeforeChangeTool(CUserTool* pSelTool);
@@ -563,16 +563,16 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 
 ### <a name="parameters"></a>Parametry
 
-*pSelTool*<br/>
-[in, out] Ukazatel na objekt uživatelského nástroje, který má být nahrazen.
+*pSelNástroj*<br/>
+[dovnitř, ven] Ukazatel na objekt nástroje uživatele, který má být nahrazen.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když se chystá Změna vlastností uživatelsky definovaného nástroje. Výchozí implementace neprovádí žádnou akci. Přepsat metodu ve třídě odvozené z `CMFCToolBarsCustomizeDialog` , pokud chcete provést zpracování, než dojde ke změně uživatelského nástroje, například uvolnění prostředků, které pSelTool používá. `OnBeforeChangeTool`
+Tato metoda je volána rámci při změně vlastností uživatelem definovaného nástroje. Výchozí implementace neprovede žádné provádění. Přepsat metodu `OnBeforeChangeTool` ve třídě odvozené z, `CMFCToolBarsCustomizeDialog` pokud chcete provést zpracování před dojde ke změně uživatelského nástroje, jako je například uvolnění prostředků, které používá *pSelTool.*
 
-##  <a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage
+## <a name="cmfctoolbarscustomizedialogonedittoolbarmenuimage"></a><a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage
 
-Spustí editor obrázků, aby uživatel mohl přizpůsobit tlačítko panelu nástrojů nebo ikonu položky nabídky.
+Spustí editor obrázků, aby si uživatel mohl přizpůsobit tlačítko panelu nástrojů nebo ikonu položky nabídky.
 
 ```
 virtual BOOL OnEditToolbarMenuImage(
@@ -584,25 +584,25 @@ virtual BOOL OnEditToolbarMenuImage(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-pro Ukazatel na nadřazené okno.
+[v] Ukazatel na nadřazené okno.
 
-*bitmap*<br/>
-pro Odkaz na objekt rastrového obrázku, který má být upraven.
+*Bitmapové*<br/>
+[v] Odkaz na bitmapový objekt, který má být upraven.
 
 *nBitsPerPixel*<br/>
-pro Rozlišení barvy rastrového obrázku v bitech na pixel.
+[v] Bitmapové rozlišení barev v bitech na pixel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, je-li potvrzena změna; v opačném případě FALSE. Výchozí implementace zobrazí dialogové okno a vrátí hodnotu TRUE, pokud uživatel klikne na tlačítko **OK**, nebo na hodnotu NEPRAVDA, pokud uživatel klikne na tlačítko **Storno** nebo na tlačítko **Zavřít** .
+TRUE, pokud je změna potvrzena; jinak FALSE. Výchozí implementace zobrazí dialogové okno a vrátí hodnotu PRAVDA, pokud uživatel klepne na **tlačítko OK**, nebo NEPRAVDA, pokud uživatel klepne na tlačítko **Storno** nebo **Zavřít.**
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když uživatel spustí editor obrázků. Výchozí implementace zobrazí dialogové okno [třídy CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md) . Přepsat `OnEditToolbarMenuImage` v odvozené třídě, aby používala vlastní editor obrázků.
+Tato metoda je volána rámci při spuštění editoru obrázků uživatelem. Výchozí implementace zobrazí dialogové okno [třídy CMFCImageEditorDialog.](../../mfc/reference/cmfcimageeditordialog-class.md) Přepište `OnEditToolbarMenuImage` v odvozené třídě použít vlastní editor obrázků.
 
-##  <a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog:: OnInitDialog
+## <a name="cmfctoolbarscustomizedialogoninitdialog"></a><a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog::OnInitDialog
 
-Přepsání pro rozšíření Inicializace seznamu vlastností.
+Přepíše pro zvětšení inicializace seznamu vlastností.
 
 ```
 virtual BOOL OnInitDialog();
@@ -610,15 +610,15 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek volání metody [CPropertySheet –:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) .
+Výsledek volání metody [CPropertySheet::OnInitDialog.](../../mfc/reference/cpropertysheet-class.md#oninitdialog)
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda rozšiřuje implementaci základní třídy, [CPropertySheet –:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog), zobrazením tlačítka **Zavřít** tím, že zajistí, že dialogové okno odpovídá aktuální velikosti obrazovky, a přesunutím tlačítka **nápovědy** do levého dolního rohu. z dialogového okna.
+Tato metoda rozšiřuje implementaci základní třídy [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)zobrazením tlačítka **Zavřít,** tím, že se ujistíte, že dialogové okno odpovídá aktuální velikosti obrazovky, a přesunutím tlačítka **Nápověda** do levého dolního rohu dialogového okna.
 
-##  <a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog::OnInitToolsPage
+## <a name="cmfctoolbarscustomizedialogoninittoolspage"></a><a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog::OnInitToolsPage
 
-Zpracovává oznámení z rozhraní, které se chystá inicializovat stránku **nástrojů** .
+Zpracovává oznámení z rozhraní, které **tools** stránka se chystá inicializovat.
 
 ```
 virtual void OnInitToolsPage();
@@ -626,11 +626,11 @@ virtual void OnInitToolsPage();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace neprovádí žádnou akci. Tuto metodu lze pro zpracování tohoto oznámení přepsat v odvozené třídě.
+Výchozí implementace neprovede žádné provádění. Přepsat tuto metodu v odvozené třídě zpracovat toto oznámení.
 
-##  <a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::P ostNcDestroy
+## <a name="cmfctoolbarscustomizedialogpostncdestroy"></a><a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::PostNcDestroy
 
-Volá se rozhraním po zničení okna.
+Volat rámci po okno bylo zničeno.
 
 ```
 virtual void PostNcDestroy();
@@ -638,11 +638,11 @@ virtual void PostNcDestroy();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda rozšiřuje implementaci základní třídy, `CPropertySheet::PostNcDestroy`a to obnovením aplikace do předchozího režimu.
+Tato metoda rozšiřuje implementaci základní `CPropertySheet::PostNcDestroy`třídy , obnovením aplikace do předchozího režimu.
 
-Metoda [CMFCToolBarsCustomizeDialog:: Create](#create) vloží aplikaci do speciálního režimu, který omezí uživatele na úlohy přizpůsobení.
+[CmFCToolBarsCustomizeDialog::Create](#create) Metoda umístí aplikaci do speciálního režimu, který omezuje uživatele na úkoly přizpůsobení.
 
-##  <a name="removebutton"></a>CMFCToolBarsCustomizeDialog::RemoveButton
+## <a name="cmfctoolbarscustomizedialogremovebutton"></a><a name="removebutton"></a>CmFCToolBarsCustomizeDialog::RemoveButton
 
 Odebere tlačítko se zadaným ID příkazu ze zadané kategorie nebo ze všech kategorií.
 
@@ -659,25 +659,25 @@ int RemoveButton(
 ### <a name="parameters"></a>Parametry
 
 *uiCategoryId*<br/>
-pro Určuje ID kategorie, ze které se má tlačítko Odebrat.
+[v] Určuje ID kategorie, ze které má být tlačítko odebráno.
 
 *uiCmdId*<br/>
-pro Určuje ID příkazu pro tlačítko.
+[v] Určuje ID příkazu tlačítka.
 
-*lpszCategory*<br/>
-pro Určuje název kategorie, ze které se má tlačítko Odebrat.
+*lpszKategorie*<br/>
+[v] Určuje název kategorie, ze které má být tlačítko odebráno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index tlačítka odebraného od nuly nebo hodnota-1, pokud zadané ID příkazu nebylo v zadané kategorii nalezeno. Pokud je *uiCategoryId* -1, návratová hodnota je 0.
+Nulový index odebraného tlačítka nebo -1, pokud zadané ID příkazu nebylo v zadané kategorii nalezeno. Pokud *uiCategoryId* je -1, vrácená hodnota je 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li odebrat tlačítko ze všech kategorií, zavolejte první přetížení této metody a nastavte *uiCategoryId* na hodnotu-1.
+Chcete-li odebrat tlačítko ze všech kategorií, zavolejte první přetížení této metody a nastavte *uiCategoryId* na -1.
 
-##  <a name="renamecategory"></a>CMFCToolBarsCustomizeDialog::RenameCategory
+## <a name="cmfctoolbarscustomizedialogrenamecategory"></a><a name="renamecategory"></a>CMFCToolBarsCustomizeDialog::Přejmenovatkategorie
 
-Přejmenuje kategorii do pole se seznamem kategorií na stránce **příkazy** .
+Přejmenuje kategorii v seznamu kategorií na stránce **Příkazy.**
 
 ```
 BOOL RenameCategory(
@@ -687,23 +687,23 @@ BOOL RenameCategory(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCategoryOld*<br/>
-pro Název kategorie, který se má změnit
+*lpszKategorieStaré*<br/>
+[v] Název kategorie změnit.
 
-*lpszCategoryNew*<br/>
-pro Název nové kategorie
+*lpszCategoryNovinka*<br/>
+[v] Nový název kategorie.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud byla metoda úspěšná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 Název kategorie musí být jedinečný.
 
-##  <a name="replacebutton"></a>CMFCToolBarsCustomizeDialog::ReplaceButton
+## <a name="cmfctoolbarscustomizedialogreplacebutton"></a><a name="replacebutton"></a>CmFCToolBarsCustomizeDialog::Příkaz Nahradit
 
-Nahrazuje tlačítko panelu nástrojů v seznamu příkazů na stránce **příkazy** .
+Nahradí tlačítko panelu nástrojů v seznamu příkazů na stránce **Příkazy.**
 
 ```
 void ReplaceButton(
@@ -714,24 +714,24 @@ void ReplaceButton(
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-pro Určuje příkaz, který má být nahrazen.
+[v] Určuje příkaz tlačítka, které má být nahrazeno.
 
-*tlačítko*<br/>
-pro Odkaz **const** na objekt tlačítka panelu nástrojů, který nahrazuje staré tlačítko.
+*Tlačítko*<br/>
+[v] **Odkaz na** objekt tlačítka panelu nástrojů, který nahrazuje staré tlačítko.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [CMFCToolBarsCustomizeDialog:: PřidatNabídku](#addmenu), [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands)nebo [CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar) přidá příkaz na stránku **příkazy** , tento příkaz je ve formě [ Objekt třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) (nebo objekt [třídy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) pro položku nabídky, která obsahuje podnabídku, kterou `AddMenuCommands`přidal). Rozhraní také volá tyto tři metody pro automatické přidávání příkazů. Pokud chcete místo toho použít příkaz, který je reprezentován odvozeným typem, zavolejte `ReplaceButton` a předejte tlačítko odvozeného typu.
+Když [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog:::AddMenuCommands](#addmenucommands)nebo [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) přidá příkaz na stránku **Příkazy,** tento příkaz je ve formě objektu [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) (nebo [objektu třídy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) pro položku nabídky, která obsahuje podnabídku přidanou ). `AddMenuCommands` Rozhraní Framework také volá tyto tři metody přidat příkazy automaticky. Pokud chcete, aby příkaz byl reprezentován odvozeným `ReplaceButton` typem, volání a předání tlačítka odvozeného typu.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `ReplaceButton` metodu `CMFCToolBarsCustomizeDialog` ve třídě. Tento fragment kódu je součástí [ukázkového vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `ReplaceButton` používat metodu ve `CMFCToolBarsCustomizeDialog` třídě. Tento fragment kódu je součástí [ukázky ukázky aplikace Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 
-##  <a name="setusercategory"></a>CMFCToolBarsCustomizeDialog::SetUserCategory
+## <a name="cmfctoolbarscustomizedialogsetusercategory"></a><a name="setusercategory"></a>CMFCToolBarsCustomizeDialog::SetUserCategory
 
-Určuje kategorii uživatele v seznamu kategorií na stránce **příkazy** . Tuto funkci je nutné volat před voláním [CMFCToolBarsCustomizeDialog:: Create](#create).
+Určuje, která kategorie v seznamu kategorií na stránce **Příkazy** je kategorie uživatele. Tuto funkci je nutné volat před voláním [CMFCToolBarsCustomizeDialog::Create](#create).
 
 ```
 BOOL SetUserCategory(LPCTSTR lpszCategory);
@@ -739,18 +739,18 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCategory*<br/>
-pro Název kategorie
+*lpszKategorie*<br/>
+[v] Název kategorie.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je metoda úspěšná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastavení kategorie uživatele není aktuálně používáno rozhraním Framework.
+Nastavení kategorie uživatele není aktuálně používáno v rámci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -62,16 +62,16 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377118"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace – třída
 
-Spravuje pojmenovanou relaci databáze chráněnou heslem od přihlášení po odhlášení jedním uživatelem. Rozhraní DAO je podporováno prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
+Spravuje pojmenované, heslem chráněné relace databáze od přihlášení k odhlášení, jedním uživatelem. DAO je podporováno prostřednictvím Office 2013. DAO 3.6 je konečná verze, a to je považováno za zastaralé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,119 +83,119 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Vytvoří objekt pracovního prostoru. Následně zavolejte `Create` nebo `Open`.|
+|[CDaoPracovní prostor::CDaoPracovní prostor](#cdaoworkspace)|Vytvoří objekt pracovního prostoru. Poté `Create` zavolejte `Open`nebo .|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDaoWorkspace:: Append](#append)|Připojí nově vytvořený pracovní prostor ke kolekci pracovních prostorů databázového stroje.|
-|[CDaoWorkspace::BeginTrans](#begintrans)|Spustí novou transakci, která se vztahuje na všechny databáze otevřené v pracovním prostoru.|
-|[CDaoWorkspace:: Close](#close)|Zavře pracovní prostor a všechny objekty, které obsahuje. Transakce, které čekají na vyřízení, se vrátí zpět.|
-|[CDaoWorkspace:: CommitTrans](#committrans)|Dokončí aktuální transakci a uloží změny.|
-|[CDaoWorkspace::CompactDatabase](#compactdatabase)|Komprimuje (nebo duplikuje) databázi.|
-|[CDaoWorkspace:: Create](#create)|Vytvoří nový objekt pracovního prostoru rozhraní DAO.|
-|[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Vrátí počet databázových objektů DAO v kolekci databází v pracovním prostoru.|
-|[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Vrátí informace o zadané databázi DAO definované v kolekci databází v pracovním prostoru.|
-|[CDaoWorkspace::GetIniPath](#getinipath)|Vrátí umístění inicializačního nastavení databázového stroje Microsoft Jet v registru systému Windows.|
-|[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|Vrátí hodnotu, která označuje, zda více transakcí zahrnující stejný zdroj dat ODBC jsou izolované prostřednictvím vynuceného více připojení ke zdroji dat.|
-|[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|Vrátí počet sekund, než dojde k chybě, když se uživatel pokusí přihlásit k databázi ODBC.|
-|[CDaoWorkspace:: GetName](#getname)|Vrátí uživatelsky definovaný název objektu pracovního prostoru.|
-|[CDaoWorkspace:: getuživatelské_jméno](#getusername)|Vrátí uživatelské jméno zadané při vytvoření pracovního prostoru. Toto je jméno vlastníka pracovního prostoru.|
-|[CDaoWorkspace:: GetVersion](#getversion)|Vrátí řetězec, který obsahuje verzi databázového stroje přidruženého k pracovnímu prostoru.|
+|[CDaoWorkspace::Připojit](#append)|Připojí nově vytvořený pracovní prostor do kolekce pracovních prostorů databázového stroje.|
+|[CDaoWorkspace::BeginTrans](#begintrans)|Zahájí novou transakci, která platí pro všechny databáze otevřené v pracovním prostoru.|
+|[CDaoWorkspace::Zavřít](#close)|Zavře pracovní prostor a všechny objekty, které obsahuje. Čekající transakce jsou vráceny zpět.|
+|[CDaoWorkspace::CommitTrans](#committrans)|Dokončí aktuální transakci a uloží změny.|
+|[Prostor CDaoWorkspace::CompactDatabase](#compactdatabase)|Komprimuje (nebo duplikáty) databáze.|
+|[CDaoWorkspace::Vytvořit](#create)|Vytvoří nový objekt pracovního prostoru DAO.|
+|[Prostor CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Vrátí počet databázových objektů DAO v kolekci databáze pracovního prostoru.|
+|[Prostor CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Vrátí informace o zadané databázi DAO definované v kolekci databází pracovního prostoru.|
+|[CDaoWorkspace::GetIniPath](#getinipath)|Vrátí umístění nastavení inicializace databázového stroje Microsoft Jet v registru systému Windows.|
+|[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|Vrátí hodnotu, která označuje, zda je více transakcí, které se týkají stejného zdroje dat ROZHRANÍ ODBC, izolováno prostřednictvím vynuceného více připojení ke zdroji dat.|
+|[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|Vrátí počet sekund před výskytem chyby, když se uživatel pokusí přihlásit k databázi ODBC.|
+|[CDaoPracovní prostor::GetName](#getname)|Vrátí uživatelem definovaný název objektu pracovního prostoru.|
+|[Prostor CDaoWorkspace::GetUserName](#getusername)|Vrátí uživatelské jméno určené při vytvoření pracovního prostoru. Toto je název vlastníka pracovního prostoru.|
+|[CDaoWorkspace::GetVersion](#getversion)|Vrátí řetězec, který obsahuje verzi databázového stroje přidruženého k pracovnímu prostoru.|
 |[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|Vrátí počet objektů pracovního prostoru DAO v kolekci pracovních prostorů databázového stroje.|
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|Vrátí informace o zadaném pracovním prostoru DAO definovaném v kolekci pracovních prostorů databázového stroje.|
-|[CDaoWorkspace:: Idle](#idle)|Umožňuje databázovému stroji provádět úlohy na pozadí.|
-|[CDaoWorkspace:: Open](#isopen)|Vrátí nenulovou hodnotu, pokud je pracovní prostor otevřen.|
-|[CDaoWorkspace:: Open](#open)|Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru rozhraní DAO.|
-|[CDaoWorkspace::RepairDatabase](#repairdatabase)|Pokusí se opravit poškozenou databázi.|
-|[CDaoWorkspace:: Rollback](#rollback)|Ukončí aktuální transakci a změny neuloží.|
-|[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|Nastaví heslo, které databázový stroj používá, když se vytvoří objekt pracovního prostoru bez konkrétního hesla.|
-|[CDaoWorkspace::SetDefaultUser](#setdefaultuser)|Nastaví uživatelské jméno, které databázový stroj používá, když se vytvoří objekt pracovního prostoru bez konkrétního uživatelského jména.|
-|[CDaoWorkspace::SetIniPath](#setinipath)|Nastaví umístění inicializačního nastavení databázového stroje Microsoft Jet v registru systému Windows.|
-|[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|Určuje, zda více transakcí zahrnujících stejný zdroj dat ODBC jsou izolované tím, že vynutí více připojení ke zdroji dat.|
-|[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|Nastaví počet sekund, než dojde k chybě, když se uživatel pokusí přihlásit ke zdroji dat ODBC.|
+|[CDaoPracovní prostor::Nečinnosti](#idle)|Umožňuje databázový stroj provádět úlohy na pozadí.|
+|[CDaoWorkspace::IsOpen](#isopen)|Vrátí nenulovou, pokud je pracovní prostor otevřený.|
+|[CDaoPracovní prostor::Otevřít](#open)|Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru DAO.|
+|[CDaoWorkspace::Opravadatabáze](#repairdatabase)|Pokusí se opravit poškozenou databázi.|
+|[CDaoWorkspace::Vrácení zpět](#rollback)|Ukončí aktuální transakci a neuloží změny.|
+|[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|Nastaví heslo, které databázový stroj používá při vytvoření objektu pracovního prostoru bez určitého hesla.|
+|[Prostor CDaoWorkspace::SetDefaultUser](#setdefaultuser)|Nastaví uživatelské jméno, které databázový stroj používá při vytvoření objektu pracovního prostoru bez určitého uživatelského jména.|
+|[CDaoWorkspace::SetIniPath](#setinipath)|Nastaví umístění nastavení inicializace databázového stroje Microsoft Jet v registru systému Windows.|
+|[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|Určuje, zda je více transakcí, které se týkají stejného zdroje dat ROZHRANÍ ODBC, izolováno vynucením více připojení ke zdroji dat.|
+|[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|Nastaví počet sekund před výskytem chyby, když se uživatel pokusí přihlásit ke zdroji dat ODBC.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Odkazuje na podkladový objekt pracovního prostoru DAO.|
+|[CDaoPracovní prostor::m_pDAOWorkspace](#m_pdaoworkspace)|Odkazuje na základní objekt pracovního prostoru DAO.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ve většině případů nebudete potřebovat více pracovních prostorů a nebudete muset vytvářet explicitní objekty pracovního prostoru. Když otevřete databázi a objekty sady záznamů, používají výchozí pracovní prostor rozhraní DAO. V případě potřeby však můžete najednou spustit více relací vytvořením dalších objektů pracovního prostoru. Každý objekt pracovního prostoru může obsahovat více objektů Open Database v kolekci vlastních databází. V knihovně MFC je pracovní prostor primárně správce transakcí, přičemž určení sady otevřených databází je vše ve stejném "prostoru transakce".
+Ve většině případů nebudete potřebovat více pracovních prostorů a nebudete muset vytvářet explicitní objekty pracovního prostoru; když otevřete databázi a objekty sady záznamů, používají výchozí pracovní prostor DAO. V případě potřeby však můžete spustit více relací najednou vytvořením dalších objektů pracovního prostoru. Každý objekt pracovního prostoru může obsahovat více otevřených databázových objektů ve vlastní kolekci databází. V knihovně MFC je pracovní prostor především správce transakcí, který specifikuje sadu otevřených databází ve stejném "transakčním prostoru".
 
 > [!NOTE]
->  Databázové třídy DAO se liší od databázových tříd knihovny MFC založených na rozhraní ODBC (Open Database Connectivity). Všechny názvy databázových tříd DAO mají předponu "CDao". Obecně jsou třídy knihovny MFC založené na rozhraní DAO větší, než třídy knihovny MFC založené na rozhraní ODBC. Třídy založené na rozhraní DAO mají přístup k datům prostřednictvím databázového stroje Microsoft Jet, včetně ovladačů ODBC. Podporují také operace DDL (Data Definition Language), jako je vytváření databází a přidávání tabulek a polí přes třídy, aniž by museli volat rozhraní DAO přímo.
+> Třídy databáze DAO se liší od tříd y databáze knihovny MFC na základě připojení k otevřené databázi (ODBC). Všechny názvy tříd databáze DAO mají předponu "CDao". Obecně platí, že třídy Knihovny MFC založené na DAO jsou schopnější než třídy Knihovny MFC založené na rozhraní ODBC. Třídy založené na DAO přístup k datům prostřednictvím databázového stroje Microsoft Jet, včetně ovladačů ODBC. Podporují také operace jazyka DDL (Data Definition Language), jako je vytváření databází a přidávání tabulek a polí prostřednictvím tříd, aniž by bylo třeba volat DAO přímo.
 
-## <a name="capabilities"></a>Schopnosti
+## <a name="capabilities"></a>Možnosti
 
-`CDaoWorkspace` třídy poskytuje následující:
+Třída `CDaoWorkspace` poskytuje následující:
 
-- V případě potřeby explicitní přístup k výchozímu pracovnímu prostoru vytvořenému inicializací databázového stroje. Obvykle se výchozí pracovní prostor pro rozhraní DAO používá implicitně vytvořením objektu databáze a sady záznamů.
+- Explicitní přístup, v případě potřeby k výchozímu pracovnímu prostoru, vytvořené inicializací databázového stroje. Obvykle používáte výchozí pracovní prostor DAO implicitně vytvořením objektů databáze a sady záznamů.
 
-- Místo transakce, ve kterém se transakce vztahují na všechny databáze otevřené v pracovním prostoru. Můžete vytvořit další pracovní prostory pro správu oddělených prostorů transakcí.
+- Transakční prostor, ve kterém se transakce vztahují na všechny databáze otevřené v pracovním prostoru. Můžete vytvořit další pracovní prostory pro správu samostatných transakčních prostorů.
 
-- Rozhraní pro mnoho vlastností základního databázového stroje Microsoft Jet (viz statické členské funkce). Otevřením nebo vytvořením pracovního prostoru nebo voláním statické členské funkce před otevřením nebo vytvořením inicializujete databázový stroj.
+- Rozhraní pro mnoho vlastností základního databázového stroje Microsoft Jet (viz statické členské funkce). Otevření nebo vytvoření pracovního prostoru nebo volání statické členské funkce před otevřením nebo vytvořením inicializuje databázový stroj.
 
-- Přístup ke kolekci pracovních prostorů databázového stroje, ve kterém jsou uloženy všechny aktivní pracovní prostory, které jsou k ní připojeny. Můžete také vytvořit pracovní prostory a pracovat s nimi bez jejich připojení ke kolekci.
+- Přístup ke kolekci pracovních prostorů databázového stroje, ve které jsou uloženy všechny aktivní pracovní prostory, které k němu byly připojeny. Můžete také vytvářet a pracovat s pracovními prostory bez jejich připojení ke sbírce.
 
 ## <a name="security"></a>Zabezpečení
 
-Knihovna MFC neimplementuje kolekce uživatelů a skupin v rozhraní DAO, které se používají pro řízení zabezpečení. Pokud potřebujete tyto aspekty rozhraní DAO, je nutné je naprogramovat prostřednictvím přímých volání rozhraní DAO. Informace najdete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+Knihovna MFC neimplementuje kolekce Users and Groups v DAO, které se používají pro řízení zabezpečení. Pokud potřebujete tyto aspekty DAO, musíte je naprogramovat sami prostřednictvím přímých volání do rozhraní DAO. Další informace naleznete [v technické poznámce 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
 ## <a name="usage"></a>Využití
 
-`CDaoWorkspace` třídy můžete použít k těmto akcím:
+Třídu `CDaoWorkspace` můžete použít k:
 
 - Explicitně otevřete výchozí pracovní prostor.
 
-   Obvykle je používání výchozího pracovního prostoru implicitní – když otevřete nové objekty [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) . K tomu ale budete muset přistupovat explicitně – například pro přístup k vlastnostem databázového stroje nebo ke kolekci pracovních prostorů. Viz téma implicitní použití výchozího pracovního prostoru.
+   Obvykle je použití výchozího pracovního prostoru implicitní – při otevření nových objektů [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) nebo [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md) Ale možná budete muset získat přístup explicitně – například pro přístup k vlastnostem databázového stroje nebo pracovní prostory kolekce. Viz "Implicitní použití výchozího pracovního prostoru" níže.
 
-- Vytvořte nové pracovní prostory. Pokud je chcete přidat do kolekce pracovních prostorů, zavolejte [připojit](#append) .
+- Vytvořte nové pracovní prostory. Volání [Připojit,](#append) pokud chcete přidat do kolekce pracovních prostorů.
 
-- V kolekci pracovních prostorů otevřete existující pracovní prostor.
+- Otevřete existující pracovní prostor v kolekci pracovních prostorů.
 
-Vytvoření nového pracovního prostoru, který ještě neexistuje v kolekci pracovních prostorů, je popsán v části [Vytvoření](#create) členské funkce. Objekty pracovního prostoru nezůstávají mezi relacemi datababase Engine jakýmkoli způsobem. Pokud vaše aplikace propojuje knihovnu MFC staticky, aplikace ukončí inicializaci databázového stroje. Pokud je aplikace propojena s knihovnou MFC dynamicky, databázový stroj není inicializován při uvolnění knihovny MFC DLL.
+Vytvoření nového pracovního prostoru, který ještě neexistuje v kolekci pracovních prostorů, je popsáno v části [Vytvořit](#create) členovou funkci. Objekty pracovního prostoru nepřetrvávají žádným způsobem mezi relacemi modulu datababase. Pokud vaše aplikace propojí knihovnu MFC staticky, ukončení aplikace uninitializes databázového stroje. Pokud vaše aplikace souvisí s knihovnou MFC dynamicky, databázový stroj je neinicializovánpři uvolnění knihovny DLL knihovny MFC.
 
-Explicitní otevření výchozího pracovního prostoru nebo otevření existujícího pracovního prostoru v kolekci pracovních prostorů je popsáno v části [otevřená](#open) členská funkce.
+Explicitní otevření výchozího pracovního prostoru nebo otevření existujícího pracovního prostoru v kolekci pracovních prostorů je popsáno v rámci funkce [Otevřít](#open) člen.
 
-Ukončení relace pracovního prostoru zavřením pracovního prostoru pomocí členské funkce [Close](#close) . `Close` zavře všechny databáze, které jste předtím nezavřeli, vraťte všechny nepotvrzené transakce.
+Ukončit relaci pracovního prostoru zavřením pracovního prostoru pomocí funkce [Zavřít](#close) člena. `Close`zavře všechny databáze, které jste dříve nezavřeli, vrácení zpět všechny nepotvrzené transakce.
 
 ## <a name="transactions"></a>Transakce
 
-Rozhraní DAO spravuje transakce na úrovni pracovního prostoru. Proto se transakce v pracovním prostoru s více otevřenými databázemi vztahují na všechny databáze. Například pokud mají dvě databáze nepotvrzené aktualizace a zavoláte [CommitTrans](#committrans), všechny aktualizace se potvrdí. Pokud chcete omezit transakce na izolovanou databázi, potřebujete pro ni samostatný objekt pracovní prostor.
+DAO spravuje transakce na úrovni pracovního prostoru; proto transakce na pracovním prostoru s více otevřenými databázemi platí pro všechny databáze. Například pokud dvě databáze mají nepotvrzené aktualizace a volání [CommitTrans](#committrans), všechny aktualizace jsou potvrzeny. Pokud chcete omezit transakce na jednu databázi, potřebujete pro ni samostatný objekt pracovního prostoru.
 
 ## <a name="implicit-use-of-the-default-workspace"></a>Implicitní použití výchozího pracovního prostoru
 
-Knihovna MFC používá implicitně výchozí pracovní prostor rozhraní DAO za následujících okolností:
+Knihovna MFC používá výchozí pracovní prostor DAO implicitně za následujících okolností:
 
-- Pokud vytvoříte nový objekt `CDaoDatabase`, ale neuděláte to prostřednictvím existujícího objektu `CDaoWorkspace`, knihovna MFC vytvoří pro vás dočasný objekt pracovního prostoru, který odpovídá výchozímu pracovnímu prostoru rozhraní DAO. Pokud tak učiníte pro více databází, všechny databázové objekty jsou přidruženy k výchozímu pracovnímu prostoru. K pracovnímu prostoru databáze můžete přistupovat prostřednictvím datového členu `CDaoDatabase`.
+- Pokud vytvoříte `CDaoDatabase` nový objekt, ale neprovedete tak prostřednictvím existujícího `CDaoWorkspace` objektu, knihovna MFC vytvoří dočasný objekt pracovního prostoru pro vás, který odpovídá výchozí pracovní prostor DAO. Pokud tak učiníte pro více databází, všechny databázové objekty jsou přidruženy k výchozímu pracovnímu prostoru. K pracovnímu prostoru databáze můžete `CDaoDatabase` přistupovat prostřednictvím datového člena.
 
-- Podobně pokud vytvoříte objekt `CDaoRecordset` bez zadání ukazatele na objekt `CDaoDatabase`, knihovna MFC vytvoří dočasný objekt databáze a pomocí rozšíření objekt dočasného pracovního prostoru. Můžete přistupovat k databázi sady záznamů a nepřímo její pracovní prostor prostřednictvím `CDaoRecordset` datového člena.
+- Podobně pokud vytvoříte `CDaoRecordset` objekt bez poskytnutí ukazatele `CDaoDatabase` na objekt, knihovna MFC vytvoří dočasný databázový objekt a potažmo dočasný objekt pracovního prostoru. Můžete přistupovat k databázi sady záznamů a nepřímo k `CDaoRecordset` jejímu pracovnímu prostoru prostřednictvím datového člena.
 
-## <a name="other-operations"></a>Jiné operace
+## <a name="other-operations"></a>Ostatní operace
 
 K dispozici jsou také další databázové operace, například oprava poškozené databáze nebo komprimace databáze.
 
-Informace o přímém volání rozhraní DAO a o zabezpečení rozhraní DAO najdete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+Informace o přímém volání dao a o zabezpečení DAO naleznete [v technické poznámce 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CDaoWorkspace`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-##  <a name="append"></a>CDaoWorkspace:: Append
+## <a name="cdaoworkspaceappend"></a><a name="append"></a>CDaoWorkspace::Připojit
 
-Po volání metody [Create](#create)volejte tuto členskou funkci.
+Volání této členské funkce po volání [Vytvořit](#create).
 
 ```
 virtual void Append();
@@ -203,15 +203,15 @@ virtual void Append();
 
 ### <a name="remarks"></a>Poznámky
 
-`Append` připojí nově vytvořený objekt pracovního prostoru ke kolekci pracovních prostorů databázového stroje. Pracovní prostory nemusíte zachovávat mezi relacemi databázového stroje. jsou uloženy pouze v paměti, nikoli na disku. Nemusíte připojovat pracovní prostor. Pokud to neuděláte, můžete ho dál používat.
+`Append`připojí nově vytvořený objekt pracovního prostoru do kolekce pracovních prostorů databázového stroje. Pracovní prostory nepřetrvávají mezi relacemi databázového stroje; jsou uloženy pouze v paměti, nikoli na disku. Není třeba připojit pracovní prostor; Pokud tak neučiníte, můžete jej stále používat.
 
-Připojený pracovní prostor zůstane v kolekci pracovních prostorů v aktivním otevřeném stavu, dokud nebudete volat jeho členskou funkci [Close](#close) .
+Připojený pracovní prostor zůstane v kolekci pracovních prostorů v aktivním otevřeném stavu, dokud nezavoláte jeho člennou funkci [Close.](#close)
 
-Související informace naleznete v tématu "připojit metodu" v nápovědě k rozhraní DAO.
+Související informace naleznete v tématu "Append Method" v nápovědě DAO.
 
-##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans
+## <a name="cdaoworkspacebegintrans"></a><a name="begintrans"></a>CDaoWorkspace::BeginTrans
 
-Zavolejte tuto členskou funkci pro zahájení transakce.
+Volání této členské funkce k zahájení transakce.
 
 ```
 void BeginTrans();
@@ -219,19 +219,19 @@ void BeginTrans();
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `BeginTrans`se změny provedené v datech nebo struktuře databáze projeví po potvrzení transakce. Vzhledem k tomu, že pracovní prostor definuje jeden transakční prostor, transakce se vztahuje na všechny otevřené databáze v pracovním prostoru. Existují dva způsoby, jak transakci dokončit:
+Po volání `BeginTrans`se aktualizace dat nebo struktury databáze projeví při potvrzení transakce. Vzhledem k tomu, že pracovní prostor definuje jeden transakční prostor, transakce se vztahuje na všechny otevřené databáze v pracovním prostoru. Transakci lze dokončit dvěma způsoby:
 
-- Zavolejte členskou funkci [CommitTrans](#committrans) a potvrďte transakci a uložte změny do zdroje dat.
+- Volání [CommitTrans](#committrans) členské funkce potvrdit transakci a uložit změny do zdroje dat.
 
-- Nebo zavolejte členskou funkci [vrácení zpět](#rollback) pro zrušení transakce.
+- Nebo volání [rollback](#rollback) členské funkce zrušit transakci.
 
-Zavřením objektu pracovního prostoru nebo databázového objektu v době, kdy transakce čeká na vyřízení, se vrátí všechny probíhající transakce.
+Zavření objektu pracovního prostoru nebo databázového objektu v době, kdy transakce čeká na vyřízení, vrátí všechny čekající transakce.
 
-Pokud potřebujete izolovat transakce v jednom zdroji dat ODBC od těch na jiném zdroji dat ODBC, přečtěte si část členská funkce [SetIsolateODBCTrans](#setisolateodbctrans) .
+Pokud potřebujete izolovat transakce na jednom zdroji dat ODBC od transakcí na jiném zdroji dat ODBC, přečtěte si viz členská funkce [SetIsolateODBCTrans.](#setisolateodbctrans)
 
-##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace
+## <a name="cdaoworkspacecdaoworkspace"></a><a name="cdaoworkspace"></a>CDaoPracovní prostor::CDaoPracovní prostor
 
-Vytvoří objekt `CDaoWorkspace`.
+Vytvoří `CDaoWorkspace` objekt.
 
 ```
 CDaoWorkspace();
@@ -239,19 +239,19 @@ CDaoWorkspace();
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení C++ objektu máte dvě možnosti:
+Po vytvoření objektu C++ máte dvě možnosti:
 
-- Voláním [otevřené](#open) členské funkce objektu otevřete výchozí pracovní prostor nebo otevřete existující objekt v kolekci pracovních prostorů.
+- Volání objektu [Open](#open) členská funkce otevřít výchozí pracovní prostor nebo otevřít existující objekt v kolekci pracovních prostorů.
 
-- Nebo zavolejte funkci [Vytvoření](#create) členské funkce objektu pro vytvoření nového objektu pracovního prostoru DAO. Tím se explicitně spustí nová relace pracovního prostoru, na kterou můžete odkazovat prostřednictvím objektu `CDaoWorkspace`. Po volání `Create`můžete zavolat příkaz [Append](#append) , pokud chcete přidat pracovní prostor do kolekce pracovních prostorů databázového stroje.
+- Nebo volání objektu [Vytvořit](#create) členská funkce vytvořit nový objekt pracovního prostoru DAO. To explicitně spustí novou relaci pracovního prostoru, `CDaoWorkspace` na kterou můžete odkazovat prostřednictvím objektu. Po `Create`volání můžete volat [Append,](#append) pokud chcete přidat pracovní prostor do kolekce pracovních prostorů databázového stroje.
 
-Informace o tom, kdy potřebujete explicitně vytvořit objekt `CDaoWorkspace`, najdete v přehledu třídy pro [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) . Běžně se používají pracovní prostory vytvořené implicitně při otevření objektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) bez zadání pracovního prostoru nebo při otevření objektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) bez zadání databázového objektu. Objekty knihovny MFC DAO vytvořené tímto způsobem používají výchozí pracovní prostor rozhraní DAO, který je vytvořen jednou a znovu použit.
+Informace o tom, kdy potřebujete explicitně vytvořit `CDaoWorkspace` objekt, najdete v přehledu tříd pro [CDaoWorkspace.](../../mfc/reference/cdaoworkspace-class.md) Pracovní prostory vytvořené implicitně při otevření objektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) bez zadání pracovního prostoru nebo při otevření objektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) bez zadání databázového objektu. Objekty DAO knihovny MFC vytvořené tímto způsobem používají výchozí pracovní prostor DAO, který je vytvořen jednou a znovu použit.
 
-Chcete-li uvolnit pracovní prostor a jeho obsažené objekty, zavolejte členskou funkci [Close](#close) objektu pracovního prostoru.
+Chcete-li uvolnit pracovní prostor a jeho obsažené objekty, zavolejte člennou funkci [Close](#close) objektu pracovního prostoru.
 
-##  <a name="close"></a>CDaoWorkspace:: Close
+## <a name="cdaoworkspaceclose"></a><a name="close"></a>CDaoWorkspace::Zavřít
 
-Chcete-li zavřít objekt pracovního prostoru, zavolejte tuto členskou funkci.
+Volánítéto členské funkce zavřete objekt pracovního prostoru.
 
 ```
 virtual void Close();
@@ -259,18 +259,18 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Zavřením otevřeného objektu pracovního prostoru uvolníte základní objekt DAO a, pokud je pracovní prostor členem kolekce pracovních prostorů, odeberete jej z kolekce. Volání `Close` je dobrým postupem programování.
+Zavření objektu otevřeného pracovního prostoru uvolní základní objekt DAO a pokud je pracovní prostor členem kolekce Pracovní prostory, odebere ho z kolekce. Volání `Close` je dobrá programovací praxe.
 
 > [!CAUTION]
->  Při zavření objektu pracovního prostoru se zavře všechny otevřené databáze v pracovním prostoru. To vede k tomu, že všechny sady záznamů jsou otevřeny i v zavřených databázích a všechny probíhající úpravy nebo aktualizace se vrátí zpět. Související informace naleznete v tématu [CDaoDatabase:: Close](../../mfc/reference/cdaodatabase-class.md#close), [CDaoRecordset:: Close](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef:: Close](../../mfc/reference/cdaotabledef-class.md#close)a [CDaoQueryDef:: Close](../../mfc/reference/cdaoquerydef-class.md#close) Member functions.
+> Zavřením objektu pracovního prostoru zavřete všechny otevřené databáze v pracovním prostoru. Výsledkem jsou všechny sady záznamů otevřené v databázích, které jsou také uzavřeny, a všechny čekající úpravy nebo aktualizace jsou vráceny zpět. Související informace naleznete v [tématech CDaoDatabase::Close](../../mfc/reference/cdaodatabase-class.md#close), [CDaoRecordset::Close](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef::Close](../../mfc/reference/cdaotabledef-class.md#close), a [CDaoQueryDef::Close](../../mfc/reference/cdaoquerydef-class.md#close) member functions.
 
-Objekty pracovního prostoru nejsou trvalé; Existují pouze v případě, že existují odkazy na ně. To znamená, že v případě, že dojde k ukončení relace databázového stroje, pracovní prostor a kolekce jeho databází nezůstanou zachovány. Pro další relaci je třeba je znovu vytvořit tak, že znovu otevřete pracovní prostor a databázi.
+Objekty pracovního prostoru nejsou trvalé. existují pouze v době, kdy na ně existují odkazy. To znamená, že po ukončení relace databázového stroje pracovní prostor a jeho databáze kolekce nepřetrvávají. Je nutné je znovu vytvořit pro další relaci opětovným otevřením pracovního prostoru a databází.
 
-Související informace naleznete v nápovědě k rozhraní DAO v tématu "Close Method".
+Související informace naleznete v tématu "Close Method" v nápovědě dao.
 
-##  <a name="committrans"></a>CDaoWorkspace:: CommitTrans
+## <a name="cdaoworkspacecommittrans"></a><a name="committrans"></a>CDaoWorkspace::CommitTrans
 
-Zavolejte tuto členskou funkci pro potvrzení transakce – uložte skupinu úprav a aktualizací do jedné nebo více databází v pracovním prostoru.
+Volání této členské funkce k potvrzení transakce – uložení skupiny úprav a aktualizací do jedné nebo více databází v pracovním prostoru.
 
 ```
 void CommitTrans();
@@ -278,19 +278,19 @@ void CommitTrans();
 
 ### <a name="remarks"></a>Poznámky
 
-Transakce se skládá z řady změn dat databáze nebo její struktury, počínaje voláním [BeginTrans](#begintrans). Po dokončení transakce ji buď potvrďte, nebo vraťte zpět (změny) s [vrácením](#rollback)zpět. Ve výchozím nastavení bez transakcí jsou aktualizace záznamů potvrzeny okamžitě. Volání `BeginTrans` způsobí, že budou aktualizace zpožděny, dokud nebudete volat `CommitTrans`.
+Transakce se skládá z řady změn dat databáze nebo její struktury, počínaje [voláním BeginTrans](#begintrans). Po dokončení transakce ji potvrdíte nebo vraťte zpět (zrušíte změny) pomocí [vrácení zpět](#rollback). Ve výchozím nastavení bez transakcí jsou aktualizace záznamů potvrzeny okamžitě. Volání `BeginTrans` způsobí, že závazek aktualizací `CommitTrans`bude zpožděn, dokud nezavoláte .
 
 > [!CAUTION]
->  V rámci jednoho pracovního prostoru jsou transakce vždy globální k pracovnímu prostoru a nejsou omezeny pouze na jednu databázi nebo sadu záznamů. Pokud provádíte operace s více než jednou databází nebo sadou záznamů v rámci transakce pracovního prostoru, `CommitTrans` potvrdí všechny probíhající aktualizace a `Rollback` obnoví všechny operace na těchto databázích a sadách záznamů.
+> V rámci jednoho pracovního prostoru jsou transakce vždy globální pro pracovní prostor a nejsou omezeny pouze na jednu databázi nebo sadu záznamů. Pokud provádíte operace s více než jednou databází nebo `CommitTrans` sadou záznamů v `Rollback` rámci transakce pracovního prostoru, potvrdíte všechny čekající aktualizace a obnovíte všechny operace v těchto databázích a sadách záznamů.
 
-Když zavřete databázi nebo pracovní prostor s nevyřízenými transakcemi, všechny transakce se vrátí zpět.
+Když zavřete databázi nebo pracovní prostor s čekajícími transakcemi, všechny transakce jsou vráceny zpět.
 
 > [!NOTE]
->  Toto není dvoufázové mechanizmus potvrzení. V případě, že se jedna aktualizace nepodaří potvrdit, ostatní budou i nadále potvrzeny.
+> Nejedná se o dvoufázový mechanismus potvrzení. Pokud se jedna aktualizace nepodaří potvrdit, ostatní se stále potvrdí.
 
-##  <a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase
+## <a name="cdaoworkspacecompactdatabase"></a><a name="compactdatabase"></a>Prostor CDaoWorkspace::CompactDatabase
 
-Zavolejte tuto členskou funkci pro komprimaci zadaného Microsoft Jet (. MDB) databáze.
+Volání této členské funkce komprimovat zadaný Microsoft Jet (. MDB).
 
 ```
 static void PASCAL CompactDatabase(
@@ -309,83 +309,83 @@ static void PASCAL CompactDatabase(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSrcName*<br/>
-Název existující uzavřené databáze. Může se jednat o úplnou cestu a název souboru, například "C:\\\MYDB. MDB ". Pokud má název souboru příponu, je nutné ji zadat. Pokud vaše síť podporuje konvence UNC (Uniform Naming Convention), můžete také zadat síťovou cestu, například "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (V řetězcích cesty jsou vyžadovány dvojité zpětné lomítko, protože "\\" C++ je řídicí znak.)
+*lpszSrcNázev*<br/>
+Název existující uzavřené databáze. Může to být úplná cesta a název\\souboru, například "C: \MYDB. MDB". Pokud má název souboru příponu, musíte ji zadat. Pokud vaše síť podporuje jednotnou konvenci pojmenování (UNC),\\\\\\můžete\\také zadat\\síťovou\\cestu, například " \MYSERVER \MYSHARE \MYDIR \MYDB. MDB". (Dvojitá zpětná lomítka jsou\\vyžadována v řetězcích cesty, protože " " je řídicí znak jazyka C++.)
 
 *lpszDestName*<br/>
-Úplná cesta zkomprimované databáze, kterou vytváříte. Můžete také zadat síťovou cestu jako s *lpszSrcName*. Argument *lpszDestName* nelze použít k určení stejného databázového souboru jako *lpszSrcName*.
+Úplná cesta k zkomprimované databázi, kterou vytváříte. Můžete také zadat síťovou cestu jako *u lpszSrcName*. Argument *lpszDestName* nelze použít k určení stejného databázového souboru jako *lpszSrcName*.
 
 *lpszPassword*<br/>
-Heslo, které se používá, když chcete zkomprimovat databázi chráněnou heslem. Všimněte si, že pokud používáte verzi `CompactDatabase`, která používá heslo, musíte zadat všechny parametry. Vzhledem k tomu, že se jedná o parametr připojení, vyžaduje speciální formátování následujícím způsobem:; PWD = *lpszPassword*. Příklad:; PWD = "veselé". (Je vyžadován hlavní středník.)
+Heslo, které se používá, pokud chcete komprimovat databázi chráněnou heslem. Všimněte si, `CompactDatabase` že pokud používáte verzi, která má heslo, musíte zadat všechny parametry. Také proto, že se jedná o parametr connect, vyžaduje speciální formátování, a to následovně: ; PWD = *lpszPassword*. Například: ; PWD="Šťastný". (Je vyžadován úvodní středník.)
 
 *lpszLocale*<br/>
-Řetězcový výraz, který slouží k zadání pořadí řazení pro vytváření *lpszDestName*. Pokud tento argument vynecháte přijetím výchozí hodnoty `dbLangGeneral` (viz níže), národní prostředí nové databáze je stejné jako u staré databáze. Možné hodnoty:
+Řetězec výraz používaný k určení pořadí řazení pro vytváření *lpszDestName*. Pokud tento argument vynesete přijetím výchozí hodnoty `dbLangGeneral` (viz níže), národní prostředí nové databáze je stejné jako u staré databáze. Možné hodnoty:
 
-- `dbLangGeneral` angličtinu, němčinu, francouzštině, portugalštině, italštině a moderní španělštině
+- `dbLangGeneral`angličtina, němčina, francouzština, portugalština, italština a moderní španělština
 
-- `dbLangArabic` Arabština
+- `dbLangArabic`Arabština
 
-- `dbLangCyrillic` Ruština
+- `dbLangCyrillic`Ruština
 
-- `dbLangCzech` Čeština
+- `dbLangCzech`Čeština
 
-- `dbLangDutch` holandština
+- `dbLangDutch`Holandština
 
-- `dbLangGreek` Řečtina
+- `dbLangGreek`Řečtina
 
-- `dbLangHebrew` Hebrejština
+- `dbLangHebrew`Hebrejština
 
-- `dbLangHungarian` Maďarština
+- `dbLangHungarian`Maďarština
 
-- `dbLangIcelandic` Island
+- `dbLangIcelandic`Islandština
 
-- `dbLangNordic` Severské jazyky (jenom Microsoft Jet Database Engine verze 1,0)
+- `dbLangNordic`Severské jazyky (pouze databázový stroj Microsoft Jet verze 1.0)
 
-- `dbLangNorwdan` norština a Dánština
+- `dbLangNorwdan`norština a dánština
 
-- `dbLangPolish` Polština
+- `dbLangPolish`Polština
 
-- `dbLangSpanish` tradiční španělština
+- `dbLangSpanish`Tradiční španělština
 
-- `dbLangSwedfin` švédština a finština
+- `dbLangSwedfin`švédština a finština
 
-- `dbLangTurkish` turecké
+- `dbLangTurkish`Turečtina
 
-*nOptions*<br/>
-Označuje jednu nebo více možností pro cílovou databázi *lpszDestName*. Pokud tento argument vynecháte přijetím výchozí hodnoty, bude mít *lpszDestName* stejné šifrování a stejnou verzi jako *lpszSrcName*. Možnost `dbEncrypt` nebo `dbDecrypt` můžete kombinovat s jednou z možností verze pomocí bitového operátoru OR. Možné hodnoty, které určují formát databáze, nikoli verzi databázového stroje, jsou:
+*nMožnosti*<br/>
+Označuje jednu nebo více možností pro cílovou databázi *lpszDestName*. Pokud tento argument vynecháte přijetím výchozí hodnoty, *lpszDestName* bude mít stejné šifrování a stejnou verzi jako *lpszSrcName*. Můžete kombinovat `dbEncrypt` možnost `dbDecrypt` nebo s jednou z možností verze pomocí operátoru Bitwise-OR. Možné hodnoty, které určují formát databáze, nikoli verzi databázového stroje, jsou:
 
-- `dbEncrypt` šifrování databáze během komprimace.
+- `dbEncrypt`Šifrujte databázi při komprimaci.
 
-- `dbDecrypt` dešifrovat databázi během komprimace.
+- `dbDecrypt`Dešifrujte databázi při komprimaci.
 
-- `dbVersion10` vytvořit databázi, která při komprimaci používá databázový stroj Microsoft Jet verze 1,0.
+- `dbVersion10`Vytvořte databázi, která používá databázový stroj Microsoft Jet verze 1.0 při komprimaci.
 
-- `dbVersion11` vytvořit databázi, která při komprimaci používá databázový stroj Microsoft Jet verze 1,1.
+- `dbVersion11`Vytvořte databázi, která používá databázový stroj Microsoft Jet verze 1.1 při komprimaci.
 
-- `dbVersion20` vytvořit databázi, která při komprimaci používá databázový stroj Microsoft Jet verze 2,0.
+- `dbVersion20`Vytvořte databázi, která používá databázový stroj Microsoft Jet verze 2.0 při komprimaci.
 
-- `dbVersion30` vytvořit databázi, která při komprimaci používá databázový stroj Microsoft Jet verze 3,0.
+- `dbVersion30`Vytvořte databázi, která používá databázový stroj Microsoft Jet verze 3.0 při komprimaci.
 
-Pomocí `dbEncrypt` nebo `dbDecrypt` v argumentu Options můžete určit, jestli se má šifrovat nebo dešifrovat databáze během komprimace. Pokud vynecháte šifrovací konstantu nebo pokud zahrnete `dbDecrypt` i `dbEncrypt`, bude mít *lpszDestName* stejné šifrování jako *lpszSrcName*. K určení verze formátu dat pro zkomprimovanou databázi můžete použít jednu z konstant verze v argumentu Options. Tato konstanta má vliv pouze na verzi formátu dat *lpszDestName*. Můžete zadat jenom jednu konstantu verze. Pokud vynecháte konstantu verze, *lpszDestName* bude mít stejnou verzi jako *lpszSrcName*. *LpszDestName* lze zkomprimovat pouze na verzi, která je stejná nebo vyšší než u *lpszSrcName*.
+Můžete použít `dbEncrypt` `dbDecrypt` nebo v argumentu možnosti určit, zda chcete šifrovat nebo dešifrovat databázi při komprimaci. Pokud vynecháte šifrovací konstantu nebo pokud zahrnete `dbDecrypt` obě `dbEncrypt`a , *lpszDestName* bude mít stejné šifrování jako *lpszSrcName*. Můžete použít jednu z konstant verze v argumentu options k určení verze formátu dat pro zkomprimovnětenou databázi. Tato konstanta ovlivňuje pouze verzi datového formátu *lpszDestName*. Můžete zadat pouze jednu konstantu verze. Pokud vynecháte konstantu verze, *lpszDestName* bude mít stejnou verzi jako *lpszSrcName*. Můžete *komprimovat lpszDestName* pouze na verzi, která je stejná nebo novější než *lpszSrcName*.
 
 > [!CAUTION]
->  Pokud není databáze šifrována, je možné, že i když implementujete zabezpečení uživatele nebo hesla, můžete přímo číst soubor binárního disku, který tvoří databázi.
+> Pokud databáze není šifrována, je možné, i když implementujete zabezpečení uživatele/hesla, přímo číst binární soubor disku, který tvoří databázi.
 
 ### <a name="remarks"></a>Poznámky
 
-Když měníte data v databázi, může se soubor databáze fragmentovat a použít více místa na disku, než je potřeba. Pravidelně byste měli zkomprimovat databázi pro defragmentaci databázového souboru. Zkomprimovaná databáze je obvykle menší. Můžete také změnit pořadí řazení, šifrování nebo verzi formátu dat při kopírování a komprimaci databáze.
+Při změně dat v databázi může být soubor databáze fragmentován a využívat více místa na disku, než je nutné. Pravidelně byste měli komprimovat databázi defragmentaci databázového souboru. Komprimovaná databáze je obvykle menší. Můžete také změnit pořadí řazení, šifrování nebo verzi formátu dat při kopírování a komprimaci databáze.
 
 > [!CAUTION]
->  Členská funkce `CompactDatabase` nebude správně převádět kompletní databázi aplikace Microsoft Access z jedné verze na jinou. Převede se jenom datový formát. Objekty definované Microsoft Accessem, jako jsou například formuláře a sestavy, nejsou převedeny. Data jsou však správně převedena.
+> Členská `CompactDatabase` funkce nebude správně převést úplnou databázi aplikace Microsoft Access z jedné verze na jinou. Je převeden pouze formát dat. Objekty definované aplikací Microsoft Access, například formuláře a sestavy, nejsou převedeny. Data jsou však správně převedena.
 
 > [!TIP]
->  K zkopírování souboru databáze můžete použít také `CompactDatabase`.
+> Můžete také `CompactDatabase` zkopírovat soubor databáze.
 
-Další informace o komprimaci databází naleznete v tématu "metoda CompactDatabase" v nápovědě pro rozhraní DAO.
+Další informace o komprimaci databází naleznete v tématu "CompactDatabase Method" v nápovědě DAO.
 
-##  <a name="create"></a>CDaoWorkspace:: Create
+## <a name="cdaoworkspacecreate"></a><a name="create"></a>CDaoWorkspace::Vytvořit
 
-Zavolejte tuto členskou funkci pro vytvoření nového objektu pracovního prostoru DAO a přidružte jej k objektu knihovny MFC `CDaoWorkspace`.
+Volání této členské funkce k vytvoření nového objektu pracovního `CDaoWorkspace` prostoru DAO a přidružit jej k objektu knihovny MFC.
 
 ```
 virtual void Create(
@@ -396,30 +396,30 @@ virtual void Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
-Řetězec s maximálně 14 znaky, který jedinečně pojmenovává nový objekt pracovního prostoru. Je nutné, abyste zadali jméno. Související informace najdete v tématu "vlastnost Name" v nápovědě k rozhraní DAO.
+*název lpsz*<br/>
+Řetězec s až 14 znaky, který jedinečně pojmenuje nový objekt pracovního prostoru. Musíte zadat jméno. Související informace naleznete v tématu "Name Property" v nápovědě dao.
 
 *lpszUserName*<br/>
-Uživatelské jméno vlastníka pracovního prostoru Požadavky naleznete v parametru *lpszDefaultUser* členské funkce [SetDefaultUser](#setdefaultuser) . Související informace najdete v nápovědě k rozhraní DAO v tématu vlastnost UserName.
+Uživatelské jméno vlastníka pracovního prostoru. Požadavky naleznete v parametru *lpszDefaultUser* na členské funkci [SetDefaultUser.](#setdefaultuser) Související informace naleznete v tématu "Vlastnost uživatelského_jména" v nápovědě dao.
 
 *lpszPassword*<br/>
-Heslo nového objektu pracovního prostoru Heslo může mít délku až 14 znaků a může obsahovat libovolný znak kromě ASCII 0 (null). V heslech se rozlišují malá a velká písmena. Související informace naleznete v tématu "vlastnost hesla" v nápovědě k rozhraní DAO.
+Heslo pro nový objekt pracovního prostoru. Heslo může mít až 14 znaků a může obsahovat libovolný znak kromě ASCII 0 (null). Hesla rozlišují malá a velká písmena. Související informace naleznete v tématu "Vlastnost hesla" v nápovědě dao.
 
 ### <a name="remarks"></a>Poznámky
 
-Celkový proces tvorby:
+Celkový proces vytváření je:
 
-1. Sestavte objekt [CDaoWorkspace](#cdaoworkspace) .
+1. Vytvořte objekt [CDaoWorkspace.](#cdaoworkspace)
 
-1. Chcete-li vytvořit základní pracovní prostor DAO, zavolejte `Create` členská funkce objektu. Je nutné zadat název pracovního prostoru.
+1. Volání `Create` členské funkce objektu k vytvoření základního pracovního prostoru DAO. Je nutné zadat název pracovního prostoru.
 
-1. Volitelně můžete zavolat [připojit](#append) , pokud chcete přidat pracovní prostor do kolekce pracovních prostorů databázového stroje. Pracovní prostor můžete pracovat bez jeho připojení.
+1. Volitelně volat [Append,](#append) pokud chcete přidat pracovní prostor do kolekce pracovních prostorů databázového stroje. S pracovním prostorem můžete pracovat, aniž byste ho připojováli.
 
-Po volání `Create` je objekt pracovního prostoru v otevřeném stavu připravený k použití. Po `Create`Nevolejte `Open`. Pokud pracovní prostor už existuje v kolekci pracovních prostorů, Nevolejte `Create`. `Create` inicializuje databázový stroj, pokud ještě není pro vaši aplikaci inicializovaný.
+Po `Create` volání je objekt pracovního prostoru v otevřeném stavu, připraven k použití. Nemusíte volat `Open` po `Create`. Nevolat, `Create` pokud pracovní prostor již existuje v kolekci pracovních prostorů. `Create`inicializuje databázový stroj, pokud již nebyl inicializován pro vaši aplikaci.
 
-##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount
+## <a name="cdaoworkspacegetdatabasecount"></a><a name="getdatabasecount"></a>Prostor CDaoWorkspace::GetDatabaseCount
 
-Voláním této členské funkce načtěte počet objektů databáze DAO v kolekci databází v pracovním prostoru – počet otevřených databází v pracovním prostoru.
+Volání této členské funkce načíst počet databázových objektů DAO v kolekci databáze pracovního prostoru – počet otevřených databází v pracovním prostoru.
 
 ```
 short GetDatabaseCount();
@@ -431,11 +431,11 @@ Počet otevřených databází v pracovním prostoru.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetDatabaseCount` je užitečné v případě, že potřebujete projít všechny definované databáze v kolekci databází v pracovním prostoru. Informace o dané databázi v kolekci najdete v tématu [GetDatabaseInfo](#getdatabaseinfo). Typické použití je volání `GetDatabaseCount` pro počet otevřených databází a pak toto číslo použít jako index smyčky pro opakovaná volání `GetDatabaseInfo`.
+`GetDatabaseCount`je užitečné, pokud potřebujete procházet všechny definované databáze v kolekci databáze pracovního prostoru. Informace o dané databázi v kolekci získáte v tématu [GetDatabaseInfo](#getdatabaseinfo). Typické použití je `GetDatabaseCount` volání počtu otevřených databází, pak použít toto číslo `GetDatabaseInfo`jako index smyčky pro opakované volání .
 
-##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo
+## <a name="cdaoworkspacegetdatabaseinfo"></a><a name="getdatabaseinfo"></a>Prostor CDaoWorkspace::GetDatabaseInfo
 
-Tuto členskou funkci volejte pro získání různých druhů informací o databázi otevřené v pracovním prostoru.
+Volání této členské funkce získat různé druhy informací o databázi otevřené v pracovním prostoru.
 
 ```
 void GetDatabaseInfo(
@@ -452,32 +452,32 @@ void GetDatabaseInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index objektu databáze v kolekci databází v pracovním prostoru založený na nule, pro vyhledávání podle indexu.
+Nulový index databázového objektu v kolekci databáze pracovního prostoru pro vyhledávání podle indexu.
 
 *dbinfo*<br/>
-Odkaz na objekt [CDaoDatabaseInfo –](../../mfc/reference/cdaodatabaseinfo-structure.md) , který vrací požadované informace.
+Odkaz na objekt [CDaoDatabaseInfo,](../../mfc/reference/cdaodatabaseinfo-structure.md) který vrací požadované informace.
 
-*dwInfoOptions*<br/>
-Možnosti, které určují, jaké informace databáze se mají načíst. Dostupné možnosti jsou uvedené tady spolu s tím, co způsobí, že funkce vrátí:
+*dwInfoMožnosti*<br/>
+Možnosti, které určují, které informace o databázi načíst. Dostupné možnosti jsou uvedeny zde spolu s tím, co způsobí, že funkce vrátit:
 
-- AFX_DAO_PRIMARY_INFO (výchozí) název, aktualizovatelné, transakce
+- AFX_DAO_PRIMARY_INFO (Výchozí) Název, Aktualizovatelné, Transakce
 
-- AFX_DAO_SECONDARY_INFO primární informace plus: verze, pořadí řazení, časový limit dotazu
+- AFX_DAO_SECONDARY_INFO primární informace plus: Verze, pořadí řazení, časový limit dotazu
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: připojit
+- AFX_DAO_ALL_INFO Primární a sekundární informace plus: Připojení
 
-*lpszName*<br/>
-Název databázového objektu pro vyhledávání podle názvu Název je řetězec s maximálně 14 znaky, který jedinečně pojmenuje nový objekt pracovního prostoru.
+*název lpsz*<br/>
+Název databázového objektu pro vyhledávání podle názvu. Název je řetězec s až 14 znaky, který jedinečně pojmenuje nový objekt pracovního prostoru.
 
 ### <a name="remarks"></a>Poznámky
 
 Jedna verze funkce umožňuje vyhledat databázi podle indexu. Druhá verze umožňuje vyhledat databázi podle názvu.
 
-Popis informací vrácených v *dbinfo*najdete v tématu struktura [CDaoDatabaseInfo –](../../mfc/reference/cdaodatabaseinfo-structure.md) . Tato struktura obsahuje členy, které odpovídají položkám, které jsou uvedeny výše v popisu *dwInfoOptions*. Když si vyžádáte informace na jedné úrovni, získáte informace také pro všechny předchozí úrovně.
+Popis informací vrácených v *dbinfo*naleznete v tématu [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) struktura. Tato struktura má členy, které odpovídají výše uvedeným položkám informací v popisu *dwInfoOptions*. Když požadujete informace na jedné úrovni, získáte také informace pro všechny předchozí úrovně.
 
-##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath
+## <a name="cdaoworkspacegetinipath"></a><a name="getinipath"></a>CDaoWorkspace::GetIniPath
 
-Tuto členskou funkci volejte pro získání umístění inicializačního nastavení databázového stroje Microsoft Jet v registru systému Windows.
+Volání této členské funkce získat umístění nastavení inicializace databázového stroje Microsoft Jet v registru systému Windows.
 
 ```
 static CString PASCAL GetIniPath();
@@ -489,13 +489,13 @@ static CString PASCAL GetIniPath();
 
 ### <a name="remarks"></a>Poznámky
 
-K získání informací o nastavení pro databázový stroj můžete použít umístění. Vrácené informace jsou ve skutečnosti názvem podklíče registru.
+Umístění můžete použít k získání informací o nastavení pro databázový stroj. Vrácené informace jsou ve skutečnosti názvem podklíče registru.
 
-Související informace naleznete v tématech "IniPath Property" a "Přizpůsobení nastavení registru systému Windows pro přístup k datům" v nápovědě k rozhraním DAO.
+Související informace naleznete v tématech Vlastnostini IniPath a Přizpůsobení nastavení registru systému Windows pro přístup k datům v nápovědě dao.
 
-##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans
+## <a name="cdaoworkspacegetisolateodbctrans"></a><a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans
 
-Voláním této členské funkce získáte aktuální hodnotu vlastnosti DAO IsolateODBCTrans pro daný pracovní prostor.
+Volání této členské funkce získat aktuální hodnotu DAO IsolateODBCTrans vlastnost pro pracovní prostor.
 
 ```
 BOOL GetIsolateODBCTrans();
@@ -503,19 +503,19 @@ BOOL GetIsolateODBCTrans();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou transakce rozhraní ODBC izolované; v opačném případě 0.
+Nenulová, pokud jsou transakce ROZHRANÍ ODBC izolovány; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-V některých situacích možná budete muset ve stejné databázi ODBC čekat na více souběžných transakcí. K tomu je třeba otevřít samostatný pracovní prostor pro každou transakci. Mějte na paměti, že přestože každý pracovní prostor může mít své vlastní připojení ODBC k databázi, zpomaluje výkon systému. Vzhledem k tomu, že se nepožaduje izolovaná transakce, budou se ve výchozím nastavení sdílet připojení ODBC z více objektů otevřených stejným uživatelem.
+V některých situacích může být nutné mít více souběžných transakcí čekajících na stejné databázi ODBC. Chcete-li to provést, musíte otevřít samostatný pracovní prostor pro každou transakci. Mějte na paměti, že i když každý pracovní prostor může mít vlastní připojení ODBC k databázi, to zpomaluje výkon systému. Vzhledem k tomu, že izolace transakcí není obvykle vyžadována, připojení ODBC z více objektů pracovního prostoru otevřených stejným uživatelem jsou ve výchozím nastavení sdílena.
 
-Některé servery ODBC, například Microsoft SQL Server, neumožňují souběžné transakce v jednom připojení. Pokud potřebujete mít v době čekání na takovou databázi více než jednu transakci, nastavte vlastnost IsolateODBCTrans na hodnotu TRUE v každém pracovním prostoru hned po jejím otevření. Tím se vynutí samostatné připojení ODBC pro každý pracovní prostor.
+Některé servery ODBC, například Microsoft SQL Server, neumožňují souběžné transakce v jednom připojení. Pokud potřebujete mít více než jednu transakci najednou čekající na tuto databázi, nastavte IsolateODBCTrans vlastnost TRUE na každém pracovním prostoru, jakmile ji otevřete. To vynutí samostatné připojení ODBC pro každý pracovní prostor.
 
-Související informace najdete v tématu "vlastnost IsolateODBCTrans" v nápovědě k rozhraní DAO.
+Související informace naleznete v tématu "IsolateODBCTrans Property" v nápovědě dao.
 
-##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout
+## <a name="cdaoworkspacegetlogintimeout"></a><a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout
 
-Voláním této členské funkce získáte aktuální hodnotu vlastnosti DAO LoginTimeout pro daný pracovní prostor.
+Volání této členské funkce získat aktuální hodnotu DAO LoginTimeout vlastnost pro pracovní prostor.
 
 ```
 static short PASCAL GetLoginTimeout();
@@ -523,19 +523,19 @@ static short PASCAL GetLoginTimeout();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet sekund, než dojde k chybě při pokusu o přihlášení k databázi ODBC.
+Počet sekund před chybou dojde při pokusu o přihlášení k databázi ODBC.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota představuje počet sekund, než dojde k chybě při pokusu o přihlášení k databázi ODBC. Výchozí nastavení LoginTimeout je 20 sekund. Když je LoginTimeout nastavené na 0, neproběhne žádný časový limit a komunikace se zdrojem dat může přestat reagovat.
+Tato hodnota představuje počet sekund před výskytem chyby při pokusu o přihlášení k databázi ODBC. Výchozí nastavení LoginTimeout je 20 sekund. Pokud LoginTimeout je nastavena na 0, žádný časový limit dojde a komunikace se zdrojem dat může přestat reagovat.
 
-Při pokusu o přihlášení k databázi ODBC, jako je například Microsoft SQL Server, může připojení selhat v důsledku chyb sítě nebo proto, že server není spuštěn. Místo toho, aby se čekalo na připojení výchozích 20 sekund, můžete určit, jak dlouho bude databázový stroj čekat před tím, než vyvolá chybu. Přihlášení k serveru probíhá implicitně jako součást řady různých událostí, jako je například spuštění dotazu na externí databázi serveru.
+Při pokusu o přihlášení k databázi ODBC, jako je například Microsoft SQL Server, může dojít k selhání připojení v důsledku chyb v síti nebo proto, že server není spuštěn. Místo čekání na výchozí 20 sekund připojení, můžete určit, jak dlouho databázový stroj čeká, než dojde k chybě. Přihlášení k serveru probíhá implicitně jako součást řady různých událostí, jako je například spuštění dotazu v databázi externího serveru.
 
-Související informace najdete v tématu "Vlastnost LoginTimeout" v nápovědě k rozhraní DAO.
+Související informace naleznete v tématu "Vlastnost LoginTimeout" v nápovědě DAO.
 
-##  <a name="getname"></a>CDaoWorkspace:: GetName
+## <a name="cdaoworkspacegetname"></a><a name="getname"></a>CDaoPracovní prostor::GetName
 
-Voláním této členské funkce získáte uživatelsky definovaný název objektu pracovního prostoru DAO, který je podkladem objektu `CDaoWorkspace`.
+Volání této členské funkce získat uživatelem definovaný název objektu pracovního prostoru DAO základní `CDaoWorkspace` objekt.
 
 ```
 CString GetName();
@@ -543,17 +543,17 @@ CString GetName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující uživatelsky definovaný název objektu pracovního prostoru rozhraní DAO.
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující uživatelem definovaný název objektu pracovního prostoru DAO.
 
 ### <a name="remarks"></a>Poznámky
 
-Název je vhodný pro přístup k objektu pracovního prostoru DAO v kolekci pracovních prostorů databázového stroje podle názvu.
+Název je užitečný pro přístup k objektu pracovního prostoru DAO v kolekci pracovních prostorů databázového stroje podle názvu.
 
-Související informace najdete v tématu "vlastnost Name" v nápovědě k rozhraní DAO.
+Související informace naleznete v tématu "Name Property" v nápovědě dao.
 
-##  <a name="getusername"></a>CDaoWorkspace:: getuživatelské_jméno
+## <a name="cdaoworkspacegetusername"></a><a name="getusername"></a>Prostor CDaoWorkspace::GetUserName
 
-Zavolejte tuto členskou funkci, aby získala jméno vlastníka pracovního prostoru.
+Volání této členské funkce získat jméno vlastníka pracovního prostoru.
 
 ```
 CString GetUserName();
@@ -561,17 +561,17 @@ CString GetUserName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md) , která představuje vlastníka objektu pracovního prostoru.
+[CString,](../../atl-mfc-shared/reference/cstringt-class.md) který představuje vlastníka objektu pracovního prostoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li získat nebo nastavit oprávnění vlastníka pracovního prostoru, zavolejte přímo rozhraní DAO a ověřte nastavení vlastnosti oprávnění; Tím určíte, jaká oprávnění uživatel má. K práci s oprávněními potřebujete systém. Soubor MDA.
+Chcete-li získat nebo nastavit oprávnění pro vlastníka pracovního prostoru, zavolejte dao přímo a zkontrolujte nastavení vlastnosti Oprávnění; To určuje, jaká oprávnění má uživatel. Chcete-li pracovat s oprávněními, potřebujete systém. Soubor MDA.
 
-Informace o přímém volání rozhraní DAO naleznete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). Související informace najdete v nápovědě k rozhraní DAO v tématu vlastnost UserName.
+Informace o přímém volání dao naleznete [v technické poznámce 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). Související informace naleznete v tématu "Vlastnost uživatelského_jména" v nápovědě dao.
 
-##  <a name="getversion"></a>CDaoWorkspace:: GetVersion
+## <a name="cdaoworkspacegetversion"></a><a name="getversion"></a>CDaoWorkspace::GetVersion
 
-Zavolejte tuto členskou funkci k určení používané verze databázového stroje Microsoft Jet.
+Volání této členské funkce k určení verze databázového stroje Microsoft Jet v provozu.
 
 ```
 static CString PASCAL GetVersion();
@@ -579,17 +579,17 @@ static CString PASCAL GetVersion();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CString](../../atl-mfc-shared/reference/cstringt-class.md) , která označuje verzi databázového stroje přidruženého k objektu.
+[CString,](../../atl-mfc-shared/reference/cstringt-class.md) který označuje verzi databázového stroje přidruženéka k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácená hodnota představuje číslo verze ve formátu "hlavní_verze. podverze"; například "3,0". Číslo verze produktu (například 3,0) se skládá z čísla verze (3), tečky a čísla vydání (0).
+Vrácená hodnota představuje číslo verze ve tvaru "major.minor"; například "3.0". Číslo verze produktu (například 3.0) se skládá z čísla verze (3), tečky a čísla verze (0).
 
-Související informace naleznete v tématu "vlastnost verze" v nápovědě rozhraní DAO.
+Související informace naleznete v tématu "Vlastnost verze" v nápovědě dao.
 
-##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount
+## <a name="cdaoworkspacegetworkspacecount"></a><a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount
 
-Voláním této členské funkce načtěte počet objektů v pracovním prostoru DAO v kolekci pracovních prostorů databázového stroje.
+Volání této členské funkce načíst počet objektů pracovního prostoru DAO v kolekci pracovních prostorů databázového stroje.
 
 ```
 short GetWorkspaceCount();
@@ -601,11 +601,11 @@ Počet otevřených pracovních prostorů v kolekci pracovních prostorů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento počet neobsahuje žádné otevřené pracovní prostory, které nejsou připojeny k této kolekci. `GetWorkspaceCount` je užitečné, pokud potřebujete projít všemi definovanými pracovními prostory v kolekci pracovních prostorů. Informace o daném pracovním prostoru v kolekci najdete v tématu [GetWorkspaceInfo](#getworkspaceinfo). Typickým použitím je volat `GetWorkspaceCount` pro počet otevřených pracovních prostorů a potom toto číslo použít jako index smyčky pro opakovaná volání `GetWorkspaceInfo`.
+Tento počet nezahrnuje žádné otevřené pracovní prostory, které nejsou připojeny ke kolekci. `GetWorkspaceCount`je užitečné, pokud potřebujete procházet všechny definované pracovní prostory v kolekci pracovních prostorů. Informace o daném pracovním prostoru v kolekci získáte na webu [GetWorkspaceInfo.](#getworkspaceinfo) Typické použití je `GetWorkspaceCount` volání počtu otevřených pracovních prostorů a potom použijte `GetWorkspaceInfo`toto číslo jako index smyčky pro opakované volání .
 
-##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo
+## <a name="cdaoworkspacegetworkspaceinfo"></a><a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo
 
-Tuto členskou funkci volejte pro získání různých druhů informací o pracovním prostoru otevřeném v relaci.
+Volání této členské funkce získat různé druhy informací o pracovní ploše otevřené v relaci.
 
 ```
 void GetWorkspaceInfo(
@@ -622,30 +622,30 @@ void GetWorkspaceInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index objektu databáze založený na nule v kolekci pracovních prostorů pro vyhledávání podle indexu.
+Index databázového objektu založený na nule v kolekci Workspaces pro vyhledávání podle indexu.
 
 *wkspcinfo*<br/>
-Odkaz na objekt [CDaoWorkspaceInfo –](../../mfc/reference/cdaoworkspaceinfo-structure.md) , který vrací požadované informace.
+Odkaz na objekt [CDaoWorkspaceInfo,](../../mfc/reference/cdaoworkspaceinfo-structure.md) který vrací požadované informace.
 
-*dwInfoOptions*<br/>
-Možnosti, které určují, jaké informace o pracovním prostoru mají být načteny. Dostupné možnosti jsou uvedené tady spolu s tím, co způsobí, že funkce vrátí:
+*dwInfoMožnosti*<br/>
+Možnosti, které určují, které informace o pracovním prostoru se mají načíst. Dostupné možnosti jsou uvedeny zde spolu s tím, co způsobí, že funkce vrátit:
 
-- Název AFX_DAO_PRIMARY_INFO (výchozí)
+- AFX_DAO_PRIMARY_INFO (výchozí) název
 
-- AFX_DAO_SECONDARY_INFO primární informace plus: uživatelské jméno
+- AFX_DAO_SECONDARY_INFO primární informace plus: Uživatelské jméno
 
-- AFX_DAO_ALL_INFO primární a sekundární informace plus: izolovat ODBCTrans
+- AFX_DAO_ALL_INFO Primární a sekundární informace plus: Izolujte ODBCTrans
 
-*lpszName*<br/>
-Název objektu pracovního prostoru pro vyhledávání podle názvu Název je řetězec s maximálně 14 znaky, který jedinečně pojmenuje nový objekt pracovního prostoru.
+*název lpsz*<br/>
+Název objektu pracovního prostoru pro vyhledávání podle názvu. Název je řetězec s až 14 znaky, který jedinečně pojmenuje nový objekt pracovního prostoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Popis informací vrácených v *wkspcinfo*najdete v tématu struktura [CDaoWorkspaceInfo –](../../mfc/reference/cdaoworkspaceinfo-structure.md) . Tato struktura obsahuje členy, které odpovídají položkám, které jsou uvedeny výše v popisu *dwInfoOptions*. Když si vyžádáte informace na jedné úrovni, získáte informace i pro předchozí úrovně.
+Popis informací vrácených v *wkspcinfo*naleznete v [cdaoworkspaceinfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) struktury. Tato struktura má členy, které odpovídají výše uvedeným položkám informací v popisu *dwInfoOptions*. Když požadujete informace na jedné úrovni, získáte také informace pro předchozí úrovně.
 
-##  <a name="idle"></a>CDaoWorkspace:: Idle
+## <a name="cdaoworkspaceidle"></a><a name="idle"></a>CDaoPracovní prostor::Nečinnosti
 
-Zavolejte `Idle` a poskytněte databázovému stroji příležitost provádět úlohy na pozadí, které nemusí být aktuální kvůli náročnému zpracování dat.
+Volání `Idle` poskytnout databázový stroj s možností provádět úlohy na pozadí, které nemusí být aktuální z důvodu intenzivní zpracování dat.
 
 ```
 static void PASCAL Idle(int nAction = dbFreeLocks);
@@ -653,25 +653,25 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>Parametry
 
-*Nvýstup akce*<br/>
-Akce, která má být provedena během nečinného zpracování. V současné době je `dbFreeLocks`jediná platná akce.
+*nAkce*<br/>
+Akce, která má být během zpracování nečinnosti. V současné době je `dbFreeLocks`jedinou platnou akcí .
 
 ### <a name="remarks"></a>Poznámky
 
-To je často pravdivé v prostředích s více úlohami s více uživateli, ve kterých není dostatek času na zpracování na pozadí, aby bylo možné uchovávat všechny záznamy v aktuální sadě záznamů.
+To často platí ve víceuživatelských prostředích s více úlohami, ve kterých není dostatek času na zpracování na pozadí, aby byly všechny záznamy v aktuální sadě záznamů.
 
 > [!NOTE]
->  Pro databáze vytvořené s verzí 3,0 databázového stroje Microsoft Jet není nutné volat `Idle`. Použijte `Idle` jenom pro databáze vytvořené pomocí dřívějších verzí.
+> Volání `Idle` není nutné s databázemi vytvořenými pomocí verze 3.0 databázového stroje Microsoft Jet. Používejte `Idle` pouze pro databáze vytvořené v dřívějších verzích.
 
-Obvykle jsou zámky čtení odebrány a data v místních dynamických sadách jsou aktualizována pouze v případě, že nedochází k žádné jiné akci (včetně pohybů myši). Pokud pravidelně voláte `Idle`, poskytnete databázovému stroji čas pro zachycení úloh zpracování na pozadí uvolněním nepotřebných zámků pro čtení. Určení `dbFreeLocks` konstanty jako zpoždění zpracování argumentu, dokud nejsou uvolněny všechny zámky pro čtení.
+Zámky čtení jsou obvykle odebrány a data v objektech sady záznamů typu místní dynaset je aktualizován pouze v případě, že žádné jiné akce (včetně pohybu myši) dochází. Pokud pravidelně voláte `Idle`, poskytnete databázový stroj čas dohnat na úlohy zpracování na pozadí uvolněním nepotřebné zámky čtení. Zadání konstanty `dbFreeLocks` jako argument zpoždění zpracování, dokud jsou uvolněny všechny zámky čtení.
 
-Tato členská funkce není potřebná v prostředích s jedním uživatelem, pokud není spuštěno více instancí aplikace. Členská funkce `Idle` může zvýšit výkon ve víceuživatelském prostředí, protože vynutí databázovému stroji vyprázdnit data na disk a uvolnit zámky paměti. Zámky pro čtení můžete také uvolnit tím, že provedete provozní část transakce.
+Tato členská funkce není potřeba v prostředích s jedním uživatelem, pokud nejsou spuštěny více instancí aplikace. Členská `Idle` funkce může zvýšit výkon ve víceuživatelském prostředí, protože vynutí vyprázdnění dat databázového stroje na disk a uvolnění zámků v paměti. Můžete také uvolnit zámky čtení tím, že operace součástí transakce.
 
-Související informace naleznete v tématu "metoda nečinnosti" v nápovědě pro rozhraní DAO.
+Související informace naleznete v tématu "Metoda nečinnosti" v nápovědě dao.
 
-##  <a name="isopen"></a>CDaoWorkspace:: Open
+## <a name="cdaoworkspaceisopen"></a><a name="isopen"></a>CDaoWorkspace::IsOpen
 
-Voláním této členské funkce určíte, zda je objekt `CDaoWorkspace` otevřen – to znamená, zda objekt knihovny MFC byl inicializován voláním metody [Open](#open) nebo voláním metody [Create](#create).
+Volání této členské funkce `CDaoWorkspace` k určení, zda je objekt otevřený – to znamená, zda byl objekt knihovny MFC inicializován voláním [Otevřít](#open) nebo [voláním Create](#create).
 
 ```
 BOOL IsOpen() const;
@@ -679,25 +679,25 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je otevřen objekt pracovního prostoru; v opačném případě 0.
+Nenulová, pokud je objekt pracovního prostoru otevřený; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete zavolat kteroukoli z členských funkcí pracovního prostoru, který je v otevřeném stavu.
+Můžete volat některou z členských funkcí pracovního prostoru, který je v otevřeném stavu.
 
-##  <a name="m_pdaoworkspace"></a>CDaoWorkspace:: m_pDAOWorkspace
+## <a name="cdaoworkspacem_pdaoworkspace"></a><a name="m_pdaoworkspace"></a>CDaoPracovní prostor::m_pDAOWorkspace
 
-Ukazatel na podkladový objekt pracovního prostoru DAO.
+Ukazatel na základní objekt pracovního prostoru DAO.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento datový člen použijte v případě, že potřebujete přímý přístup k základnímu objektu DAO. Pomocí tohoto ukazatele můžete volat rozhraní objektu DAO.
+Tento datový člen použijte, pokud potřebujete přímý přístup k podkladovému objektu DAO. Můžete volat rozhraní objektu DAO prostřednictvím tohoto ukazatele.
 
-Informace o přímý přístup k objektům DAO naleznete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+Informace o přímém přístupu k objektům DAO naleznete [v technické poznámce 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-##  <a name="open"></a>CDaoWorkspace:: Open
+## <a name="cdaoworkspaceopen"></a><a name="open"></a>CDaoPracovní prostor::Otevřít
 
-Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru rozhraní DAO.
+Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru DAO.
 
 ```
 virtual void Open(LPCTSTR lpszName = NULL);
@@ -705,30 +705,30 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
-Název objektu pracovního prostoru DAO, který se má otevřít – řetězec, který má až 14 znaků, který jedinečně pojmenovává pracovní prostor. Přijměte výchozí hodnotu NULL, aby se explicitně otevřel výchozí pracovní prostor. Požadavky na pojmenování najdete v parametru *lpszName* pro příkaz [Create](#create). Související informace najdete v tématu "vlastnost Name" v nápovědě k rozhraní DAO.
+*název lpsz*<br/>
+Název objektu pracovního prostoru DAO, který se má otevřít – řetězec s až 14 znaky, který jedinečně pojmenuje pracovní prostor. Přijměte výchozí hodnotu NULL a explicitně otevřete výchozí pracovní prostor. Požadavky na pojmenování naleznete v parametru *lpszName* pro [příkaz Vytvořit](#create). Související informace naleznete v tématu "Name Property" v nápovědě dao.
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení objektu `CDaoWorkspace` volejte tuto členskou funkci a proveďte jednu z následujících akcí:
+Po vytvoření `CDaoWorkspace` objektu, volání této členské funkce provést jednu z následujících akcí:
 
 - Explicitně otevřete výchozí pracovní prostor. Předat hodnotu NULL pro *lpszName*.
 
-- Otevřete existující objekt `CDaoWorkspace`, který je členem kolekce pracovních prostorů, podle názvu. Předejte platný název pro existující objekt pracovního prostoru.
+- Otevřete `CDaoWorkspace` existující objekt, člen kolekce Pracovní prostory, podle názvu. Předajte platný název existujícího objektu pracovního prostoru.
 
-`Open` vloží objekt pracovního prostoru do otevřeného stavu a také inicializuje databázový stroj, pokud ještě není pro vaši aplikaci inicializovaný.
+`Open`vloží objekt pracovního prostoru do otevřeného stavu a také inicializuje databázový stroj, pokud ještě nebyl inicializován pro vaši aplikaci.
 
-I když mnoho `CDaoWorkspace` členských funkcí lze volat pouze po otevření pracovního prostoru, jsou následující členské funkce, které pracují s databázovým strojem, k dispozici po konstrukci C++ objektu, ale před voláním `Open`:
+Přestože `CDaoWorkspace` mnoho členských funkcí lze volat až po otevření pracovního prostoru, následující členské funkce, které pracují v databázovém stroji, jsou k dispozici po konstrukci objektu C++, ale před voláním `Open`:
 
 ||||
 |-|-|-|
-|[Vytvoření](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Volnoběž](#idle)|[SetIniPath](#setinipath)|
+|[Vytvořit](#create)|[GetVersion](#getversion)|[Nastavitvýchozího uživatele](#setdefaultuser)|
+|[GetIniPath](#getinipath)|[Období](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
-##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase
+## <a name="cdaoworkspacerepairdatabase"></a><a name="repairdatabase"></a>CDaoWorkspace::Opravadatabáze
 
-Pokud se potřebujete pokusit opravit poškozenou databázi, která přistupuje k databázovému stroji Microsoft Jet, volejte tuto členskou funkci.
+Volání této členské funkce, pokud potřebujete pokusit se opravit poškozenou databázi, která přistupuje k databázový stroj Microsoft Jet.
 
 ```
 static void PASCAL RepairDatabase(LPCTSTR lpszName);
@@ -736,23 +736,23 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
-Cesta a název souboru pro existující soubor databáze Microsoft Jet Engine. Pokud cestu vynecháte, bude prohledán pouze aktuální adresář. Pokud váš systém podporuje konvenci UNC (Uniform Naming Convention), můžete taky zadat síťovou cestu, například: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (V řetězci cesty jsou vyžadovány dvojité zpětné lomítko, protože "\\" je C++ řídicí znak.)
+*název lpsz*<br/>
+Cesta a název souboru pro existující databázový soubor motoru Microsoft Jet. Pokud cestu vynesete, bude prohledán pouze aktuální adresář. Pokud váš systém podporuje jednotnou konvenci pojmenování (UNC),\\\\\\můžete také\\zadat\\síťovou\\cestu, například: " \MYSERVER \MYSHARE \MYDIR \MYDB. MDB". (Dvojitá zpětná lomítka jsou\\vyžadována v řetězci cesty, protože " " je řídicí znak jazyka C++.)
 
 ### <a name="remarks"></a>Poznámky
 
-Před opravou databáze musíte zavřít databázi určenou nástrojem *lpszName* . Ve víceuživatelském prostředí nemůžou jiní uživatelé mít *lpszName* otevřený, když ho opravíte. Pokud *lpszName* není uzavřený nebo není k dispozici pro výhradní použití, dojde k chybě.
+Před opravou je nutné zavřít databázi určenou *společností lpszName.* Ve víceuživatelském prostředí nemohou mít ostatní uživatelé při opravě *lpszName otevřenou.* Pokud *lpszName* není uzavřena nebo není k dispozici pro výhradní použití, dojde k chybě.
 
-Tato členská funkce se pokouší opravit databázi, která byla označena jako možná poškozená nekompletní operací zápisu. Tato situace může nastat, pokud je aplikace používající databázový stroj Microsoft Jet neočekávaně ukončena z důvodu výpadku napájení nebo problému s hardwarem počítače. Pokud dokončíte operaci a zavoláte členskou funkci [Close](../../mfc/reference/cdaodatabase-class.md#close) nebo neukončíte aplikaci obvyklým způsobem, databáze nebude označena jako možná poškozená.
+Tato členská funkce se pokusí opravit databázi, která byla označena jako pravděpodobně poškozena neúplnou operací zápisu. Tato situace může nastat, pokud je aplikace používající databázový stroj Microsoft Jet neočekávaně uzavřena z důvodu výpadku napájení nebo problému s hardwarem počítače. Pokud dokončíte operaci a zavoláte [členovou](../../mfc/reference/cdaodatabase-class.md#close) funkci Zavřít nebo ukončíte aplikaci obvyklým způsobem, databáze nebude označena jako pravděpodobně poškozená.
 
 > [!NOTE]
->  Po opravě databáze je také vhodné ji zkomprimovat pomocí členské funkce [CompactDatabase](#compactdatabase) k defragmentaci souboru a k obnovení místa na disku.
+> Po opravě databáze je také vhodné ji komprimovat pomocí členské funkce [CompactDatabase](#compactdatabase) k defragmentaci souboru a obnovení místa na disku.
 
-Další informace o opravách databází naleznete v tématu "metoda RepairDatabase" v nápovědě k rozhraní DAO.
+Další informace o opravách databází naleznete v tématu "RepairDatabase Method" v nápovědě dao.
 
-##  <a name="rollback"></a>CDaoWorkspace:: Rollback
+## <a name="cdaoworkspacerollback"></a><a name="rollback"></a>CDaoWorkspace::Vrácení zpět
 
-Zavolejte tuto členskou funkci pro ukončení aktuální transakce a obnovte všechny databáze v pracovním prostoru do podmínky před zahájením transakce.
+Volání této členské funkce ukončit aktuální transakci a obnovit všechny databáze v pracovním prostoru do jejich stavu před zahájením transakce.
 
 ```
 void Rollback();
@@ -761,16 +761,16 @@ void Rollback();
 ### <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
->  V rámci jednoho objektu pracovního prostoru jsou transakce vždy globální k pracovnímu prostoru a nejsou omezeny pouze na jednu databázi nebo sadu záznamů. Pokud provádíte operace s více než jednou databází nebo sadou záznamů v rámci transakce pracovního prostoru, `Rollback` obnoví všechny operace na všech těchto databázích a sadách záznamů.
+> V rámci jednoho objektu pracovního prostoru jsou transakce vždy globální pro pracovní prostor a nejsou omezeny pouze na jednu databázi nebo sadu záznamů. Pokud provádíte operace s více než jednou databází nebo `Rollback` sadou záznamů v rámci transakce pracovního prostoru, obnoví všechny operace ve všech těchto databázích a sadách záznamů.
 
-Pokud zavřete objekt pracovního prostoru bez uložení nebo vrácení všech nevyřízených transakcí, transakce se automaticky vrátí zpět. Pokud zavoláte metodu [CommitTrans](#committrans) nebo `Rollback` bez prvního volání [BeginTrans](#begintrans), dojde k chybě.
+Pokud zavřete objekt pracovního prostoru bez uložení nebo vrácení zpět všechny čekající transakce, transakce jsou automaticky vráceny zpět. Pokud zavoláte [CommitTrans](#committrans) nebo `Rollback` bez prvního volání [BeginTrans](#begintrans), dojde k chybě.
 
 > [!NOTE]
->  Po zahájení transakce se databázový stroj zaznamená jeho operace do souboru uchovávaného v adresáři určeném proměnnou prostředí TEMP v pracovní stanici. Pokud soubor protokolu transakcí vyčerpá dostupné úložiště na dočasné jednotce, databázový stroj Vyvolá příkaz MFC, aby vyvolal `CDaoException` (chyba rozhraní DAO 2004). V tomto okamžiku při volání `CommitTrans`se potvrdí neurčitý počet operací, ale zbývající nedokončené operace se ztratí a operace se musí restartovat. Volání `Rollback` uvolní transakční protokol a vrátí všechny operace v transakci.
+> Když zahájíte transakci, databázový stroj zaznamená své operace do souboru uchovávaném v adresáři určeném proměnnou prostředí TEMP na pracovní stanici. Pokud soubor protokolu transakcí vyčerpá dostupné úložiště na jednotce TEMP, databázový stroj způsobí, že knihovna `CDaoException` MFC vyvolá chybu (chyba DAO 2004). V tomto okamžiku, `CommitTrans`pokud zavoláte , neurčitý počet operací jsou potvrzeny, ale zbývající nedokončené operace jsou ztraceny a operace musí být restartován. Volání `Rollback` uvolní transakční protokol a vrátí zpět všechny operace v transakci.
 
-##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword
+## <a name="cdaoworkspacesetdefaultpassword"></a><a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword
 
-Zavolejte tuto členskou funkci pro nastavení výchozího hesla, které databázový stroj používá, když je vytvořen objekt pracovního prostoru bez konkrétního hesla.
+Volání této členské funkce nastavit výchozí heslo, které databázový stroj používá při vytvoření objektu pracovního prostoru bez určitého hesla.
 
 ```
 static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
@@ -779,27 +779,27 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ### <a name="parameters"></a>Parametry
 
 *lpszPassword*<br/>
-Výchozí heslo Heslo může mít délku až 14 znaků a může obsahovat libovolný znak kromě ASCII 0 (null). V heslech se rozlišují malá a velká písmena.
+Výchozí heslo. Heslo může mít až 14 znaků a může obsahovat libovolný znak kromě ASCII 0 (null). Hesla rozlišují malá a velká písmena.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí heslo, které nastavíte, se použije na nové pracovní prostory, které vytvoříte po volání. Při vytváření dalších pracovních prostorů není nutné zadávat heslo ve volání metody [Create](#create) .
+Výchozí heslo, které nastavíte, se vztahuje na nové pracovní prostory, které vytvoříte po volání. Při vytváření následujících pracovních prostorů není nutné zadat heslo ve volání [Vytvořit.](#create)
 
-Chcete-li použít tuto členskou funkci:
+Použití této členské funkce:
 
-1. Sestavte objekt `CDaoWorkspace`, ale Nevolejte `Create`.
+1. Vytvořte `CDaoWorkspace` objekt, ale `Create`nevolejte .
 
-1. Zavolejte `SetDefaultPassword` a, pokud chcete, [SetDefaultUser](#setdefaultuser).
+1. Volání `SetDefaultPassword` a, pokud chcete, [SetDefaultUser](#setdefaultuser).
 
-1. Pro tento objekt pracovního prostoru nebo po sobě zavolejte `Create`, aniž byste zadali heslo.
+1. Volání `Create` tohoto objektu pracovního prostoru nebo následné objekty bez zadání hesla.
 
 Ve výchozím nastavení je vlastnost DefaultUser nastavena na "admin" a vlastnost DefaultPassword je nastavena na prázdný řetězec ("").
 
-Další informace o zabezpečení najdete v tématu "vlastnost oprávnění" v nápovědě k rozhraní DAO. Související informace najdete v nápovědě k rozhraní DAO v tématech "vlastnost DefaultPassword" a "DefaultUser Property".
+Další informace o zabezpečení najdete v tématu "Vlastnost oprávnění" v nápovědě dao. Související informace naleznete v tématech "Vlastnost DefaultPassword" a "Vlastnost defaultuser" v nápovědě DAO.
 
-##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser
+## <a name="cdaoworkspacesetdefaultuser"></a><a name="setdefaultuser"></a>Prostor CDaoWorkspace::SetDefaultUser
 
-Zavolejte tuto členskou funkci pro nastavení výchozího uživatelského jména, které databázový stroj používá, když je vytvořen objekt pracovního prostoru bez konkrétního uživatelského jména.
+Volánítéto členské funkce nastavit výchozí uživatelské jméno, které databázový stroj používá při vytvoření objektu pracovního prostoru bez konkrétního uživatelského jména.
 
 ```
 static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
@@ -808,27 +808,27 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ### <a name="parameters"></a>Parametry
 
 *lpszDefaultUser*<br/>
-Výchozí uživatelské jméno. Uživatelské jméno může být 1-20 znaků dlouhé a obsahovat abecední znaky, znaky s diakritikou, číslice, mezery a symboly s výjimkou: "(uvozovky),/(lomítko), \ (zpětné lomítko), \[ \] (hranaté závorky),: ( &#124; dvojtečka), (kanál), \< (znaménko minus), > (znak větší než), + (znaménko plus), = (rovnítko), (středník),, (čárka), (otazník), \* (hvězdička), úvodní mezery a řídicí znaky (ASCII 00 až ASCII 31). Související informace najdete v nápovědě k rozhraní DAO v tématu vlastnost UserName.
+Výchozí uživatelské jméno. Uživatelské jméno může mít velikost 1 až 20 znaků a může obsahovat abecední znaky, znaky s diakritikou, čísla, \[ \] mezery a symboly kromě: \< " (uvozovky), / (lomítko), \ (zpětné lomítko), (závorky), : (dvojtečka), &#124; (potrubí), (znaménko menší než), > (znaménko větší než), + (znaménko plus), = (rovnítko), ; (středník), , ( čárka), \* (otazník), (hvězdička), úvodní mezery a řídicí znaky (ASCII 00 až ASCII 31). Související informace naleznete v tématu "Vlastnost uživatelského_jména" v nápovědě dao.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí uživatelské jméno, které jste nastavili, se použije na nové pracovní prostory, které vytvoříte po volání. Když vytváříte další pracovní prostory, nemusíte zadávat uživatelské jméno ve volání metody [Create](#create) .
+Výchozí uživatelské jméno, které nastavíte, se vztahuje na nové pracovní prostory, které vytvoříte po volání. Při vytváření následujících pracovních prostorů není nutné zadat uživatelské jméno ve volání [Vytvořit.](#create)
 
-Chcete-li použít tuto členskou funkci:
+Použití této členské funkce:
 
-1. Sestavte objekt `CDaoWorkspace`, ale Nevolejte `Create`.
+1. Vytvořte `CDaoWorkspace` objekt, ale `Create`nevolejte .
 
-1. Zavolejte `SetDefaultUser` a, pokud chcete, [SetDefaultPassword](#setdefaultpassword).
+1. Volání `SetDefaultUser` a, pokud se vám líbí, [SetDefaultPassword](#setdefaultpassword).
 
-1. Pro tento objekt pracovního prostoru nebo po sobě volejte `Create`, aniž byste zadali uživatelské jméno.
+1. Volání `Create` tohoto objektu pracovního prostoru nebo následujících objektů bez zadání uživatelského jména.
 
 Ve výchozím nastavení je vlastnost DefaultUser nastavena na "admin" a vlastnost DefaultPassword je nastavena na prázdný řetězec ("").
 
-Související informace naleznete v tématech "vlastnost DefaultUser" a "vlastnost DefaultPassword" v nápovědě rozhraní DAO.
+Související informace naleznete v tématech "Vlastnost defaultuser" a "Vlastnost DefaultPassword" v nápovědě dao.
 
-##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath
+## <a name="cdaoworkspacesetinipath"></a><a name="setinipath"></a>CDaoWorkspace::SetIniPath
 
-Zavolejte tuto členskou funkci, pokud chcete zadat umístění nastavení registru Windows pro databázový stroj Microsoft Jet.
+Volání této členské funkce určit umístění nastavení registru systému Windows pro databázový stroj Microsoft Jet.
 
 ```
 static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
@@ -836,21 +836,21 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRegistrySubkey*<br/>
-Řetězec obsahující název podklíče registru systému Windows pro umístění nastavení nebo parametrů databázového stroje Microsoft Jet, které jsou potřeba pro Instalovatelné databáze ISAM.
+*lpszRegistryPodklíč*<br/>
+Řetězec obsahující název podklíče registru systému Windows pro umístění nastavení databázového stroje Microsoft Jet nebo parametrů potřebných pro instalovatelné databáze ISAM.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetIniPath` volejte pouze v případě, že potřebujete zadat zvláštní nastavení. Další informace najdete v tématu "vlastnost IniPath" v nápovědě k rozhraní DAO.
+Volejte `SetIniPath` pouze v případě, že potřebujete zadat speciální nastavení. Další informace naleznete v tématu "Vlastnost IniPath" v nápovědě DAO.
 
 > [!NOTE]
->  Během instalace aplikace volejte `SetIniPath`, ne při spuštění aplikace. před otevřením libovolných pracovních prostorů, databází nebo záznamů se musí volat `SetIniPath`. v opačném případě knihovna MFC vyvolá výjimku.
+> Volání `SetIniPath` během instalace aplikace, ne při spuštění aplikace. `SetIniPath`před otevřením pracovních prostorů, databází nebo sad záznamů musí být volána. v opačném případě knihovna MFC vyvolá výjimku.
 
-Tento mechanismus můžete použít ke konfiguraci databázového stroje pomocí nastavení registru poskytnutého uživatelem. Rozsah tohoto atributu je omezen na vaši aplikaci a nelze jej změnit bez restartování aplikace.
+Tento mechanismus můžete použít ke konfiguraci databázového stroje s uživatelským nastavením registru. Rozsah tohoto atributu je omezen na vaši aplikaci a nelze jej změnit bez restartování aplikace.
 
-##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans
+## <a name="cdaoworkspacesetisolateodbctrans"></a><a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans
 
-Tuto členskou funkci zavolejte, pokud chcete nastavit hodnotu vlastnosti IsolateODBCTrans DAO pro daný pracovní prostor.
+Volání této členské funkce nastavit hodnotu DAO IsolateODBCTrans vlastnost pro pracovní prostor.
 
 ```
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
@@ -858,18 +858,18 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 
 ### <a name="parameters"></a>Parametry
 
-*bIsolateODBCTrans*<br/>
-Předejte hodnotu TRUE, pokud chcete začít izolovat transakce rozhraní ODBC. Předejte hodnotu FALSE, pokud chcete zastavit izolaci transakcí ODBC.
+*b IzololátODBCTrans*<br/>
+Pokud chcete začít izolovat transakce ODBC, předajte hodnotu PRAVDA. Pokud chcete zastavit izolaci transakcí ODBC, předejte false.
 
 ### <a name="remarks"></a>Poznámky
 
-V některých situacích možná budete muset ve stejné databázi ODBC čekat na více souběžných transakcí. K tomu je třeba otevřít samostatný pracovní prostor pro každou transakci. I když každý pracovní prostor může mít své vlastní připojení ODBC k databázi, tím se zpomaluje výkon systému. Vzhledem k tomu, že se nepožaduje izolovaná transakce, budou se ve výchozím nastavení sdílet připojení ODBC z více objektů otevřených stejným uživatelem.
+V některých situacích může být nutné mít více souběžných transakcí čekajících na stejné databázi ODBC. Chcete-li to provést, musíte otevřít samostatný pracovní prostor pro každou transakci. Přestože každý pracovní prostor může mít vlastní připojení ODBC k databázi, zpomaluje to výkon systému. Vzhledem k tomu, že izolace transakcí není obvykle vyžadována, připojení ODBC z více objektů pracovního prostoru otevřených stejným uživatelem jsou ve výchozím nastavení sdílena.
 
-Některé servery ODBC, například Microsoft SQL Server, neumožňují souběžné transakce v jednom připojení. Pokud potřebujete mít v době čekání na takovou databázi více než jednu transakci, nastavte vlastnost IsolateODBCTrans na hodnotu TRUE v každém pracovním prostoru hned po jejím otevření. Tím se vynutí samostatné připojení ODBC pro každý pracovní prostor.
+Některé servery ODBC, například Microsoft SQL Server, neumožňují souběžné transakce v jednom připojení. Pokud potřebujete mít více než jednu transakci najednou čekající na tuto databázi, nastavte IsolateODBCTrans vlastnost TRUE na každém pracovním prostoru, jakmile ji otevřete. To vynutí samostatné připojení ODBC pro každý pracovní prostor.
 
-##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout
+## <a name="cdaoworkspacesetlogintimeout"></a><a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout
 
-Tuto členskou funkci zavolejte, pokud chcete nastavit hodnotu vlastnosti LoginTimeout DAO pro daný pracovní prostor.
+Volání této členské funkce nastavit hodnotu DAO LoginTimeout vlastnost pro pracovní prostor.
 
 ```
 static void PASCAL SetLoginTimeout(short nSeconds);
@@ -877,16 +877,16 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametry
 
-*nSeconds*<br/>
-Počet sekund, než dojde k chybě při pokusu o přihlášení k databázi ODBC.
+*nSekundy*<br/>
+Počet sekund před chybou dojde při pokusu o přihlášení k databázi ODBC.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota představuje počet sekund, než dojde k chybě při pokusu o přihlášení k databázi ODBC. Výchozí nastavení LoginTimeout je 20 sekund. Když je LoginTimeout nastavené na 0, neproběhne žádný časový limit a komunikace se zdrojem dat může přestat reagovat.
+Tato hodnota představuje počet sekund před výskytem chyby při pokusu o přihlášení k databázi ODBC. Výchozí nastavení LoginTimeout je 20 sekund. Pokud LoginTimeout je nastavena na 0, žádný časový limit dojde a komunikace se zdrojem dat může přestat reagovat.
 
-Při pokusu o přihlášení k databázi ODBC, jako je například Microsoft SQL Server, může připojení selhat v důsledku chyb sítě nebo proto, že server není spuštěn. Místo toho, aby se čekalo na připojení výchozích 20 sekund, můžete určit, jak dlouho bude databázový stroj čekat před tím, než vyvolá chybu. Přihlášení k serveru probíhá implicitně jako součást řady různých událostí, jako je například spuštění dotazu na externí databázi serveru. Hodnota časového limitu je určena aktuálním nastavením vlastnosti LoginTimeout.
+Při pokusu o přihlášení k databázi ODBC, jako je například Microsoft SQL Server, může dojít k selhání připojení v důsledku chyb v síti nebo proto, že server není spuštěn. Místo čekání na výchozí 20 sekund připojení, můžete určit, jak dlouho databázový stroj čeká, než dojde k chybě. Přihlášení k serveru probíhá implicitně jako součást řady různých událostí, jako je například spuštění dotazu v databázi externího serveru. Hodnota časového limitu je určena aktuální nastavení LoginTimeout vlastnost.
 
-Související informace najdete v tématu "Vlastnost LoginTimeout" v nápovědě k rozhraní DAO.
+Související informace naleznete v tématu "Vlastnost LoginTimeout" v nápovědě DAO.
 
 ## <a name="see-also"></a>Viz také
 

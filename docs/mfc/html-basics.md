@@ -4,89 +4,89 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262993"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377251"
 ---
 # <a name="html-basics"></a>HTML – základy
 
-Většina prohlížečů schopné zkoumání zdrojový kód HTML stránky, které můžete procházet. Při zobrazení zdroje se zobrazí počet značek HTML (DHTML) ohraničen ostrými závorkami (<>), spolu s textem.
+Většina prohlížečů má možnost zkoumat zdroj HTML stránek, které procházíte. Při zobrazení zdroje se zobrazí řada značek HTML (html markup language), obklopených úhlovými závorkami (<>), proloženými textem.
 
-Následující postup použijte k vytvoření jednoduché webové stránky značky HTML. V následujícím postupu budete zadejte ve formátu prostého textu do souboru v programu Poznámkový blok, provést několik změn, uložte soubor a znovu načíst stránku v prohlížeči pro zobrazení vašich změn.
+Následující kroky používají značky HTML k vytvoření jednoduché webové stránky. V těchto krocích zadáte prostý text do souboru v poznámkovém bloku, provedete několik změn, uložíte soubor a znovu načtete stránku do prohlížeče, abyste viděli změny.
 
-#### <a name="to-create-an-html-file"></a>Chcete-li vytvořit soubor HTML
+#### <a name="to-create-an-html-file"></a>Vytvoření souboru HTML
 
-1. Otevřete Poznámkový blok nebo libovolný textový editor.
+1. Otevřete poznámkový blok nebo libovolný editor ve formátu prostého textu.
 
-1. Z **souboru** nabídce zvolte **nový**.
+1. V nabídce **Soubor** zvolte **Nový**.
 
 1. Zadejte následující řádky:
 
-```
-<HTML>
-<HEAD>
-<TITLE>Top HTML Tags</TITLE>
-</HEAD>
-</HTML>
-```
+    ```html
+    <HTML>
+    <HEAD>
+    <TITLE>Top HTML Tags</TITLE>
+    </HEAD>
+    </HTML>
+    ```
 
-1. Z **souboru** nabídce zvolte **Uložit**a uložte soubor jako c:\webpages\First.htm. Nechte soubor otevřený v editoru.
+1. Z nabídky **Soubor** zvolte **Uložit**a uložte soubor jako c:\webpages\First.htm. Ponechejte soubor otevřený v editoru.
 
-1. Přepněte do prohlížeče a z **souboru** nabídce zvolte **otevřít**, nebo typ *file://C:/webpages/first.htm* textového pole URL v prohlížeči. Zobrazí se prázdná stránka s titulek okna "Hlavní značky HTML."
+1. Přepněte do prohlížeče a z nabídky **Soubor** zvolte **Otevřít**nebo zadejte *file://C:/webpages/first.htm* do textového pole url prohlížeče. Měla by se zobrazit prázdná stránka s titulkem okna "Top HTML Tags".
 
-   Všimněte si, že značky jsou párovány a jsou zahrnuty v lomených závorkách. Slovech se nerozlišují malá a velká písmena, ale malá a velká písmena se často používá značek zvýraznění.
+   Všimněte si, že značky jsou spárovány a jsou zahrnuty v úhlových závorkách. Značky nerozlišují malá a velká písmena, ale velká písmena se často používají k tomu, aby značky vynikly.
 
-   Značka \<HTML > spustí dokumentu a značky  \< /HTML > neukončí. Koncové značky (není vždy nutné) jsou stejné jako počáteční značku, ale mají lomítkem (/) před značku. Měla by existovat žádné mezery mezi ostré závorky (<) a spusťte vaši značku.
+   > \<html tagu spustí dokument \<a značka /HTML> ho ukončí. Koncové značky (ne vždy povinné) jsou stejné jako počáteční značka, ale mají před ní lomítko (/). Mezi úhlovou závorkou (<) a začátkem značky by neměly být žádné mezery.
 
-1. Přepněte zpět do poznámkového bloku a po  \< /HEAD > řádek, zadejte:
+1. Přepněte zpět do poznámkového \<bloku a za řádek /HEAD> zadejte:
 
-```
-<BODY>
-    HTML is swell.
-    Life is good.
-</BODY>
-```
+    ```html
+    <BODY>
+        HTML is swell.
+        Life is good.
+    </BODY>
+    ```
 
-1. Z **souboru** nabídce zvolte **Uložit**.
+1. Z nabídky **Soubor** zvolte **Uložit**.
 
 1. Přepněte zpět do prohlížeče a aktualizujte stránku.
 
-   Slova se zobrazí v klientské oblasti okna prohlížeče. Všimněte si, že vaše zalomení řádku je ignorován. Pokud chcete mít konce řádku, je nutné zahrnout `<BR>` značky po první řádek.
+   Slova se zobrazí v klientské oblasti okna prohlížeče. Všimněte si, že vaše návrat vozíku je ignorována. Pokud chcete mít zalomení řádku, `<BR>` musíte za první řádek zahrnout značku.
 
-   Pro všechny kroky, které řídí, vložit text kdekoli mezi \<text > a  \< /BODY > Chcete-li přidat do těla dokumentu.
+   Pro všechny následující kroky vložte text \<kdekoli \<mezi BODY> a /BODY> přidat do těla dokumentu.
 
-9. Přidáte záhlaví:
+1. Přidání záhlaví:
 
-```
-<H3>Here's the big picture</H3>
-```
+    ```html
+    <H3>Here's the big picture</H3>
+    ```
 
-10. Přidání obrázku, pomocí souborů .gif uloženy ve stejném adresáři jako stránka:
+1. Přidejte obrázek pomocí souboru GIF uloženého ve stejném adresáři jako na stránce:
 
-```
-<IMG src="yourfile.gif">
-```
+    ```html
+    <IMG src="yourfile.gif">
+    ```
 
-11. Přidání seznamu:
+1. Přidat seznam:
 
-```
-<UL>Make me an unordered list.
-<LI>One programmer</LI>
-<LI>Ten SDKs</LI>
-<LI>Great Internet Apps</LI>
-</UL>
-```
+    ```html
+    <UL>Make me an unordered list.
+    <LI>One programmer</LI>
+    <LI>Ten SDKs</LI>
+    <LI>Great Internet Apps</LI>
+    </UL>
+    ```
 
-12. Místo toho čísel v seznamu, použijte spárované \<OL > a \</OL > značky místo \<UL > a \</UL > značky.
+1. Chcete-li místo toho \<očíslovat seznam, použijte místo \<značek \<UL> a /UL>> spárované značky OL> a \</OL.
 
-Který by vám pomůžou začít. Pokud se na webové stránce skvělé funkce, můžete zjistit jak byl vytvořen prozkoumáním zdrojový kód HTML. Editorů jazyka HTML, jako je přední stránce společnosti Microsoft lze použít k vytvoření jednoduché i pokročilé stránky.
+To by tě mělo nastartovat. Pokud se na webové stránce zobrazí skvělá funkce, můžete zjistit, jak byla vytvořena, a to tak, že prozkoumáte zdroj HTML. Editory HTML, jako je microsoft frontpage, lze použít k vytvoření jednoduchých i pokročilých stránek.
 
-Tady je celý zdrojový kód HTML soubor, který jsme vám sestavení:
+Zde je celý zdroj HTML pro soubor, který jste vytvářeli:
 
-```
+```html
 <HTML>
 <HEAD>
 <TITLE>Top HTML Tags</TITLE>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Úplný popis značek, atributy a rozšíření naleznete ve specifikaci Hypertext Markup Language (HTML):
+Úplný popis značek, atributů a rozšíření naleznete ve specifikaci html (Hypertext Markup Language):
 
-[Nejnovější publikované verzi HTML](https://www.w3.org/TR/html/) na W3C.org.
+[Poslední publikovaná verze HTML](https://www.w3.org/TR/html/) na W3C.org.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)

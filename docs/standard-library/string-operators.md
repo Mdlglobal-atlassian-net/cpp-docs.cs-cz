@@ -1,5 +1,5 @@
 ---
-title: operátory&gt; &lt;ového řetězce
+title: '&lt;operátory řetězců&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - string/std::operator!=
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419411"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376651"
 ---
-# <a name="ltstringgt-operators"></a>operátory&gt; &lt;ového řetězce
+# <a name="ltstringgt-operators"></a>&lt;operátory řetězců&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;&gt;](#op_gt_gt)|
-|[operátor&gt;=](#op_gt_eq)|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|
-|[operátor&lt;=](#op_lt_eq)|[operator + – operátor](#op_add)|[operator = = – operátor](#op_eq_eq)|
+|[operátor!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;&gt;](#op_gt_gt)|
+|[Operátor&gt;=](#op_gt_eq)|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|
+|[Operátor&lt;=](#op_lt_eq)|[operátor+](#op_add)|[operátor==](#op_eq_eq)|
 
-## <a name="op_add"></a>operator + – operátor
+## <a name="operator"></a><a name="op_add"></a>operátor+
 
 Zřetězí dva objekty řetězce.
 
@@ -103,19 +103,19 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string` mají být zřetězeny.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být zřetězen.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string` mají být zřetězeny.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být zřetězen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec, který je zřetězením vstupních řetězců.
+Řetězec, který je zřetězení vstupní řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce každého přetížení `operator+` zřetězení dvou objektů třídy template [basic_string](../standard-library/basic-string-class.md). Všechno efektivně vrací `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Další informace najdete v tématu věnovaném [připojení](../standard-library/basic-string-class.md#append).
+Funkce každé `operator+` přetížení zřetězit dva objekty šablony třídy [basic_string Class](../standard-library/basic-string-class.md). Všechny účinně `basic_string< CharType, Traits, Allocator>(Left).append(right)`vrátit . Další informace naleznete v [tématu append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Příklad
 
@@ -169,9 +169,9 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
-Testuje, zda objekt String na levé straně operátoru není roven objektu řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru není rovna objektu řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -192,19 +192,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud objekt String na levé straně operátoru není lexikograficky rovný objektu řetězce na pravé straně; v opačném případě **false**.
+**true** pokud objekt řetězce na levé straně operátoru není lexicograficky rovna objektu řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty řetězce je založeno na lexicographical porovnání jejich znaků. Dva řetězce jsou stejné, pokud mají stejný počet znaků a jejich příslušné znakové hodnoty jsou stejné. V opačném případě jsou nerovné.
+Porovnání mezi řetězcovými objekty je založeno na párovém lexikografickém porovnání jejich znaků. Dva řetězce jsou stejné, pokud mají stejný počet znaků a jejich příslušné hodnoty znaků jsou stejné. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -260,9 +260,9 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
-Testuje, zda je objekt řetězce na levé straně operátoru roven objektu řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru se rovná objektu řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -283,19 +283,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je objekt řetězce na levé straně operátoru lexikograficky rovný objektu řetězce na pravé straně; v opačném případě **false**.
+**true** pokud je objekt řetězce na levé straně operátoru lexikograficky roven objektu řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty řetězce je založeno na lexicographical porovnání jejich znaků. Dva řetězce jsou stejné, pokud mají stejný počet znaků a jejich příslušné znakové hodnoty jsou stejné. V opačném případě jsou nerovné.
+Porovnání mezi řetězcovými objekty je založeno na párovém lexikografickém porovnání jejich znaků. Dva řetězce jsou stejné, pokud mají stejný počet znaků a jejich příslušné hodnoty znaků jsou stejné. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -351,9 +351,9 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a>operátor&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operátor&lt;
 
-Testuje, zda je objekt řetězce na levé straně operátoru menší než na objekt řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru je menší než objekt řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -374,25 +374,25 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je objekt řetězce na levé straně operátoru lexikograficky menší než objekt řetězce na pravé straně; v opačném případě **false**.
+**true** pokud je objekt řetězce na levé straně operátoru lexikograficky menší než objekt řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání lexicographical mezi řetězci porovná je se znakem až do:
+Lexikografické porovnání mezi řetězci je porovná znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -447,9 +447,9 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>operátor&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operátor&lt;=
 
-Testuje, zda je objekt řetězce na levé straně operátoru menší než nebo roven objektu řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru je menší nebo rovna objektu řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -470,25 +470,25 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je objekt řetězce na levé straně operátoru lexikograficky menší než nebo roven objektu řetězce na pravé straně; v opačném případě **false**.
+**true** pokud je objekt řetězce na levé straně operátoru lexikograficky menší nebo roven objektu řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání lexicographical mezi řetězci porovná je se znakem až do:
+Lexikografické porovnání mezi řetězci je porovná znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -550,9 +550,9 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>operátor&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operátor&lt;&lt;
 
-Funkce šablony, která zapisuje řetězec do výstupního datového proudu.
+Funkce šablony, která zapíše řetězec do výstupního datového proudu.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -564,9 +564,9 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="parameters"></a>Parametry
 
 *_Ostr*\
-Výstupní datový proud, do kterého se zapisuje.
+Výstupní datový proud zapisován do.
 
-\ *str*
+*Str*\
 Řetězec, který má být zadán do výstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -575,11 +575,11 @@ Zapíše hodnotu zadaného řetězce do výstupního datového proudu *_Ostr*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony přetěžování **< <** pro vložení objektového *str* šablony třídy [Basic_string](../standard-library/basic-string-class.md) do datového proudu *\_OSTR*. Funkce efektivně vrátí `_Ostr.write( str.c_str, str.size )`.
+Operátor přetěžuje funkci šablony **<<** vložení objektu *str* šablony třídy [basic_string](../standard-library/basic-string-class.md) do datového proudu * \_Ostr*. Funkce se efektivně `_Ostr.write( str.c_str, str.size )`vrací .
 
-## <a name="op_gt"></a>operátor&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operátor&gt;
 
-Testuje, zda je objekt řetězce na levé straně operátoru větší než na objekt řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru je větší než objekt řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -600,25 +600,25 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je objekt řetězce na levé straně operátoru lexikograficky větší než objekt řetězce na pravé straně; v opačném případě **false**.
+**true** pokud je objekt řetězce na levé straně operátoru lexikograficky větší než objekt řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání lexicographical mezi řetězci porovná je se znakem až do:
+Lexikografické porovnání mezi řetězci je porovná znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -680,9 +680,9 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>operátor&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operátor&gt;=
 
-Testuje, zda je objekt řetězce na levé straně operátoru větší než nebo roven objektu řetězce na pravé straně.
+Testy, pokud objekt řetězce na levé straně operátoru je větší nebo rovna objektu řetězce na pravé straně.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -703,25 +703,25 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Vlevo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
-*pravé*\
-Řetězec ve stylu jazyka C nebo objekt typu `basic_string`, které mají být porovnány.
+*Právo*\
+Řetězec ve stylu C nebo `basic_string` objekt typu, který má být porovnán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je objekt řetězce na levé straně operátoru lexikograficky větší než nebo roven objektu řetězce na pravé straně; v opačném případě **false**.
+**true** pokud je objekt řetězce na levé straně operátoru lexikograficky větší nebo roven objektu řetězce na pravé straně; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání lexicographical mezi řetězci porovná je se znakem až do:
+Lexikografické porovnání mezi řetězci je porovná znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a vyhledá řetězce mají stejný počet znaků, a proto jsou řetězce stejné.
+- Najde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto jsou řetězce stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>operátor&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Operátor&gt;&gt;
 
 Funkce šablony, která čte řetězec ze vstupního datového proudu.
 
@@ -797,30 +797,30 @@ basic_istream<CharType, Traits>& operator>>(
 ### <a name="parameters"></a>Parametry
 
 *_Istr*\
-Vstupní datový proud použitý k extrakci sekvence
+Vstupní datový proud použitý k extrahování sekvence
 
-*pravé*\
-Řetězec, který se extrahuje ze vstupního datového proudu.
+*Právo*\
+Řetězec, který je extrahován ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Přečte hodnotu zadaného řetězce z *_Istr* a vrátí ji do *pravé*části.
+Přečte hodnotu zadaného řetězce z *_Istr* a vrátí ji do *pravého*.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přeskočí úvodní prázdné znaky, pokud není nastaven příznak `skipws`. Přečte všechny následující znaky, dokud je další znak mezerou nebo koncem souboru.
+Operátor přeskočí úvodní mezery, `skipws` pokud není nastaven příznak. Přečte všechny následující znaky, dokud další znak je prázdné místo nebo je dosaženo konce souboru.
 
-Funkce šablony přetěžuje **operátor > >** , aby nahradil sekvenci řízenou *pravou* s posloupností prvků extrahovaných z *_Istr*datového proudu. Extrakce se zastaví:
+Operátor funkce šablony přetěžuje **>>** nahradit pořadí řízené *právem* posloupností prvků extrahovaných z *datového*proudu _Istr . Odsávací zastávky:
 
 - Na konci souboru.
 
-- Po extrahování funkce `_Istr`. element **Width** , pokud je tato hodnota nenulová.
+- Po funkci extrahuje `_Istr`. **šířkové** prvky, pokud je tato hodnota nenulová.
 
-Po extrahování funkce `_Istr`. prvky [max_size](../standard-library/basic-string-class.md#max_size) .
+Po funkci extrahuje `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) prvky.
 
-- Poté, co funkce extrahuje prvek *ch* , pro který [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **is**( **ctype**\< **CharType**>:: **Space**, *ch*) má hodnotu true. v takovém případě je znak vrácen zpět.
+- Po funkci extrahuje element *ch,* pro který `getloc` [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> >( ). **is**( **ctype** \< **CharType**>:: **mezera**, *ch*) je true, v takovém případě je znak odložen zpět.
 
-Pokud funkce neextrahuje žádné prvky, volá [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). V každém případě volá **ISTR**. **Width**(0) a **vrátí \*.**
+Pokud funkce extrahuje žádné prvky,`ios_base::failbit`volá [setstate](../standard-library/basic-ios-class.md#setstate)( ). V každém případě, to volá **istr**. **width**(0) \* a vrátí **tuto hodnotu**.
 
 ### <a name="example"></a>Příklad
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Viz také
 
-[\<řetězec >](../standard-library/string.md)
+[\<řetězec>](../standard-library/string.md)

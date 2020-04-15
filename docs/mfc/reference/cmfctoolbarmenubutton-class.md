@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarMenuButton – třída
+title: Třída CMFCToolBarMenuButton
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarMenuButton
@@ -92,17 +92,17 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 883d6a9242066289f15e58179a03c4f609699141
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504718"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376160"
 ---
-# <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton – třída
+# <a name="cmfctoolbarmenubutton-class"></a>Třída CMFCToolBarMenuButton
 
-Tlačítko panelu nástrojů, které obsahuje místní nabídku.
-Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
+Tlačítko panelu nástrojů, které obsahuje rozbalovací nabídku.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -114,94 +114,94 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|`CMFCToolBarMenuButton` Vytvoří objekt.|
+|[CMFCToolBarMenuButtonButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Vytvoří `CMFCToolBarMenuButton` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarMenuButton:: compareWith –](#comparewith)|Porovná tuto instanci se zadaným `CMFCToolBarButton` objektem. (Overrides [CMFCToolBarButton:: compareWith –](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jiného tlačítka panelu nástrojů na aktuální tlačítko. (Overrides [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
-|[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Inicializuje nabídku panelu nástrojů z popisovače nabídky systému Windows.|
+|[CMFCToolBarMenuButton::Porovnat](#comparewith)|Porovná tuto instanci `CMFCToolBarButton` s poskytnutým objektem. (Přepíše [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jiného tlačítka panelu nástrojů na aktuální tlačítko. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Inicializuje nabídku panelu nástrojů z úchytu nabídky systému Windows.|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Vytvoří nabídku systému Windows, která se skládá z příkazů v nabídce panelu nástrojů. Vrátí popisovač do nabídky systému Windows.|
-|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Vytvoří překryvný objekt nabídky ( [Třída CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) pro zobrazení nabídky panelu nástrojů.|
+|[CMFCToolBarMenuButton::Nabídka CreatePopupMenu](#createpopupmenu)|Vytvoří objekt rozbalovací nabídky [(TŘÍDA CMFCPopupMenu),](../../mfc/reference/cmfcpopupmenu-class.md)který zobrazí nabídku panelu nástrojů.|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
-|[CMFCToolBarMenuButton:: GetCommands](#getcommands)|Poskytuje přístup jen pro čtení k seznamu příkazů v nabídce panelu nástrojů.|
-|[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Načte ohraničující obdélník pro obrázek tlačítka.|
-|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Vrátí počet řádků v místní nabídce, pokud je nabídka v režimu palety.|
-|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Vrátí ukazatel na objekt místní nabídky, který je přidružen k tlačítku.|
-|[CMFCToolBarMenuButton::HasButton](#hasbutton)||
-|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Určuje, zda je zobrazeno ohraničení tlačítka, když uživatel vybere tlačítko. (Overrides [CMFCToolBarButton:: HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
+|[CMFCToolBarMenuButton::Příkazy GetCommands](#getcommands)|Poskytuje přístup jen pro čtení k seznamu příkazů v nabídce panelu nástrojů.|
+|[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Načte ohraničovací obdélník pro obraz tlačítka.|
+|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Vrátí počet řádků v rozbalovací nabídce, když je nabídka v režimu palety.|
+|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Vrátí ukazatel na objekt rozbalovací nabídky, který je přidružen k tlačítku.|
+|[CMFCToolBarMenuButton::hasButton](#hasbutton)||
+|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Určuje, zda se po výběru tlačítka zobrazí ohraničení tlačítka. (Přepíše [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
-|[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Určuje, zda se zobrazí místní nabídka.|
-|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Volá se rozhraním, aby se určilo, jestli uživatel může otevřít podnabídku z vybrané položky nabídky.|
-|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Určuje, zda je toto tlačítko v exkluzivním režimu, tedy zda místní nabídka zůstane otevřená, i když uživatel přesune ukazatel myši na jiný panel nástrojů nebo tlačítko.|
-|[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Určuje, zda se místní nabídka nachází v režimu palety.|
+|[CMFCToolBarMenuButton::isdroppeddown](#isdroppeddown)|Určuje, zda se zobrazí rozbalovací nabídka.|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Volat rámci k určení, zda uživatel může otevřít podnabídku z vybrané položky nabídky.|
+|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Určuje, zda je tlačítko ve výhradním režimu, to znamená, zda rozbalovací nabídka zůstane otevřená i v případě, že uživatel přesune ukazatel myši na jiný panel nástrojů nebo tlačítko.|
+|[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Určuje, zda je rozbalovací nabídka v režimu palety.|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
-|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|Určuje, zda se má rozbalovací nabídka odtrhnout.|
+|[CMFCToolBarMenuButton::nabídka istearoff](#istearoffmenu)|Určuje, zda má rozbalovací nabídka odtrhávací pruh.|
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||
-|[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Určuje, zda lze tlačítko přetáhnout. (Overrides [CMFCToolBarButton:: OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|
-|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním, aby se počítala velikost tlačítka pro zadaný kontext zařízení a stav docking. (Overrides [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Volá se rozhraním, aby se zpracovala zpráva [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) . (Overrides [CMFCToolBarButton:: OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|
-|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním, když se na nový panel nástrojů Vloží tlačítko. (Overrides [CMFCToolBarButton:: OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|
-|[CMFCToolBarMenuButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši. (Potlačení [CMFCToolBarButton:: Click](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
-|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Volá se rozhraním, když uživatel vybere položku v místní nabídce.|
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Volá se rozhraním, když nadřazený panel nástrojů zpracovává zprávu WM_HELPHITTEST. (Overrides [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
-|[CMFCToolBarMenuButton::OnDraw](#ondraw)|Volá se rozhraním, aby se vykreslilo tlačítko pomocí zadaných stylů a možností. (Overrides [CMFCToolBarButton:: nakreslit](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
-|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Volá se rozhraním, aby se nakreslilo tlačítko v podokně **příkazy** dialogového okna **přizpůsobit** . (Overrides [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Volá se rozhraním, když uživatel otevře místní nabídku.|
-|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|Nastaví výchozí hodnotu na obrázek, který je přidružený k tlačítku. (Overrides [CMFCToolBarButton:: ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|
-|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|Uloží stav tlačítka panelu nástrojů. (Overrides [CMFCToolBarButton:: SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|
-|[CMFCToolBarMenuButton:: serializovat](#serialize)|Přečte tento objekt z archivu nebo ho zapíše do archivu. (Overrides [CMFCToolBarButton:: serializovat](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
-|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|Naplní poskytnutý `CAccessibilityData` objekt daty přístupnosti z tlačítka panelu nástrojů. (Overrides [CMFCToolBarButton:: SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
-|[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|Určuje, zda lze tlačítko Přidat na panel nástrojů.|
-|[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|Určuje, zda se místní nabídka nachází v režimu palety.|
+|[CMFCToolBarMenuButton::onBeforeDrag](#onbeforedrag)|Určuje, zda lze tlačítko přetáhnout. (Přepíše [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|
+|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Volat rámci vypočítat velikost tlačítka pro zadaný kontext zařízení a dokovací stav. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Volat rámci pro zpracování [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) zprávy. (Přepíše [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|
+|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Volat rámci při vložení tlačítka do nového panelu nástrojů. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|
+|[CMFCToolBarMenuButton::OnClick](#onclick)|Volat rámci po kliknutí uživatele na tlačítko myši. (Přepíše [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
+|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Volat rámci při uživatel vybere položku v rozbalovací nabídce.|
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Volat rámci při nadřazený panel nástrojů zpracovává WM_HELPHITTEST zprávu. (Přepíše [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
+|[CMFCToolBarMenuButton::OnDraw](#ondraw)|Volat rámci nakreslit tlačítko pomocí zadaných stylů a možností. (Přepíše [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
+|[CMFCToolBarMenuButton::OndrawOnCustomizeList](#ondrawoncustomizelist)|Volat rámci nakreslit tlačítko v podokně **příkazy** dialogového okna **Přizpůsobit.** (Přepíše [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
+|[CMFCToolBarMenuButton::Nabídka OpenPopup](#openpopupmenu)|Volat rámci při uživatelotevře rozbalovací nabídku.|
+|[CMFCToolBarMenuButton::resetImageToDefault](#resetimagetodefault)|Nastaví výchozí hodnotu obrazu, který je přidružen k tlačítku. (Přepíše [CMFCToolBarButton::ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|
+|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|Uloží stav tlačítka panelu nástrojů. (Přepíše [CMFCToolBarButton::SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|
+|[CMFCToolBarMenuButton::Serializovat](#serialize)|Přečte tento objekt z archivu nebo jej zapíše do archivu. (Přepíše [CMFCToolBarButton::Serializovat](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
+|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|Naplní poskytnutý `CAccessibilityData` objekt daty usnadnění přístupu z tlačítka panelu nástrojů. (Přepíše [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
+|[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|Určuje, zda lze tlačítko přidat na panel nástrojů.|
+|[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|Určuje, zda je rozbalovací nabídka v režimu palety.|
 |[CMFCToolBarMenuButton::SetMessageWnd](#setmessagewnd)||
-|[CMFCToolBarMenuButton::SetRadio](#setradio)|Vynutí tlačítko nabídky panelu nástrojů Zobrazit ikonu označující, že je vybraná.|
-|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|Určuje ID odtrhnoutelné čáry pro místní nabídku.|
+|[CMFCToolBarMenuButton::SetRadio](#setradio)|Vynutí, aby tlačítko nabídky panelu nástrojů zobrazilo ikonu označující, že je vybraná.|
+|[CMFCToolBarMenuButton::SetTearoff](#settearoff)|Určuje ID odtrhávací hospicové id rozbalovací nabídky.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::D rawDocumentIcon](#drawdocumenticon)|Nakreslí ikonu na tlačítko nabídky.|
+|[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Nakreslí ikonu na tlačítko nabídky.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Je-li nastaveno na hodnotu TRUE, rozhraní při vykreslení tlačítka vždy volá [CFrameWndEx:: OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) .|
+|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Pokud TRUE, framework vždy volá [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) při nakreslení tlačítka.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCToolBarMenuButton` Může se zobrazit jako nabídka, položka nabídky, která má podnabídku, tlačítko, které buď spustí příkaz, nebo zobrazí nabídku, nebo tlačítko, které zobrazí pouze nabídku. Můžete určit chování a vzhled tlačítka nabídky zadáním parametrů, jako je obrázek, text, popisovač nabídky a ID příkazu, který je přidružen k tlačítku v konstruktoru `CMFCToolbarMenuButton::CMFCToolbarMenuButton`.
+A `CMFCToolBarMenuButton` se může zobrazit jako nabídka, položka nabídky, která má podnabídku, tlačítko, které buď provede příkaz nebo zobrazí nabídku, nebo tlačítko, které zobrazuje pouze nabídku. Chování a vzhled tlačítka nabídky určíte zadáním parametrů, jako je obrázek, text, úchyt nabídky a `CMFCToolbarMenuButton::CMFCToolbarMenuButton`ID příkazu, které je přidruženo k tlačítku v konstruktoru .
 
-Vlastní třída odvozená od `CMFCToolbarMenuButton` třídy musí používat makro [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) . Makro [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) vygeneruje chybu při zavření aplikace.
+Vlastní třída odvozená `CMFCToolbarMenuButton` z třídy musí používat [makro DECLARE_SERIAL.](run-time-object-model-services.md#declare_serial) Makro [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) vygeneruje chybu při ukončení aplikace.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarMenuButton` objekt. Kód ukazuje, jak určit, že rozevírací nabídka je v režimu Paleta a určuje ID pro nepřerušený pruh, který se vytvoří, když uživatel přetáhne tlačítko nabídky mimo řádek nabídek. Tento fragment kódu je součástí ukázky panelu [aplikace Word](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `CMFCToolBarMenuButton` nakonfigurovat objekt. Kód ukazuje, jak určit, že rozevírací nabídka je v režimu palety a určit ID pro odtrhávací pruh, který je vytvořen, když uživatel přetáhne tlačítko nabídky mimo řádek nabídek. Tento fragment kódu je součástí [ukázky aplikace Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](cobject-class.md)
+[CObjekt](cobject-class.md)
 
-[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CmFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
 [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtoolbarmenubutton. h
+**Záhlaví:** afxtoolbarmenubutton.h
 
-##  <a name="cmfctoolbarmenubutton"></a>CMFCToolBarMenuButton::CMFCToolBarMenuButton
+## <a name="cmfctoolbarmenubuttoncmfctoolbarmenubutton"></a><a name="cmfctoolbarmenubutton"></a>CMFCToolBarMenuButtonButton::CMFCToolBarMenuButton
 
-`CMFCToolBarMenuButton` Vytvoří objekt.
+Vytvoří `CMFCToolBarMenuButton` objekt.
 
 ```
 CMFCToolBarMenuButton();
@@ -218,34 +218,34 @@ CMFCToolBarMenuButton(
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-pro Existující `CMFCToolBarMenuButton` objekt, který má být zkopírován do `CMFCToolBarMenuButton` tohoto objektu.
+[v] Existující `CMFCToolBarMenuButton` objekt, který má `CMFCToolBarMenuButton` být do tohoto objektu zkopírován.
 
 *uiID*<br/>
-pro ID příkazu, který se má provést, když uživatel klikne na tlačítko; nebo (UINT)-1 pro tlačítko nabídky, které přímo neprovede příkaz.
+[v] ID příkazu, který má být proveden, když uživatel klepne na tlačítko; nebo (UINT)-1 pro tlačítko nabídky, které přímo neprovede příkaz.
 
-*hMenu*<br/>
-pro Popisovač do nabídky; nebo hodnotu NULL, pokud tlačítko neobsahuje nabídku.
+*hNabídka*<br/>
+[v] Úchyt do nabídky; nebo NULL, pokud tlačítko nemá nabídku.
 
 *iImage*<br/>
-pro Index obrázku pro tlačítko; nebo-1, pokud toto tlačítko nemá ikonu nebo používá ikonu pro příkaz určený parametrem *uiID*. Index je stejný pro každý `CMFCToolBarImages` objekt v aplikaci.
+[v] Index obrázku pro tlačítko; nebo -1, pokud toto tlačítko nemá ikonu nebo používá ikonu pro příkaz určený *uiID*. Index je stejný pro `CMFCToolBarImages` každý objekt v aplikaci.
 
 *lpszText*<br/>
-pro Text tlačítka nabídky panelu nástrojů
+[v] Text tlačítka nabídky panelu nástrojů.
 
-*bUserButton*<br/>
-pro TRUE, pokud tlačítko zobrazuje uživatelsky definovaný obrázek; FALSE, pokud tlačítko zobrazí předdefinovaný obrázek přidružený k příkazu určenému parametrem *uiID*.
+*bTlačítko uživatele*<br/>
+[v] TRUE, pokud tlačítko zobrazuje uživatelem definovaný obrázek; FALSE, pokud tlačítko zobrazuje předdefinovaný obraz přidružený k příkazu určenému *uiID*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je *uiID* platným ID příkazu, tlačítko provede tento příkaz, když na něj uživatel klikne. Pokud je *HMENU* platným popisovačem nabídky, tlačítko nabízí rozevírací nabídku, když se zobrazí na panelu nástrojů nebo v podnabídce, když se objeví v nabídce. Pokud jsou *uiID* i *HMENU* platné, tlačítko je rozdělené na část, která provede příkaz, když na něj uživatel klikne a část s šipkou dolů, která bude po kliknutí na ni na ni rozevírací nabídku vypnula. Pokud je však *HMENU* platný, uživatel nebude moci při vložení tlačítka do nabídky kliknout na tlačítko a provést příkaz.
+Pokud *uiID* je platné ID příkazu, tlačítko provede tento příkaz, když uživatel klepne na něj. Pokud *hMenu* je platný popisovač nabídky, tlačítko poskytuje rozevírací nabídku, když se zobrazí v panelu nástrojů nebo podnabídce, když se zobrazí v nabídce. Pokud jsou *uiID* i *hMenu* platné, je tlačítko rozdělené tlačítko s částí, která provede příkaz, když na něj uživatel klikne, a část se šipkou dolů, která rozbalí nabídku, když na něj uživatel klikne. Pokud je však *hMenu* platná, uživatel nebude moci klepnout na tlačítko a provést příkaz, když je tlačítko vloženo do nabídky.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarMenuButton` třídy. Tento fragment kódu je součástí ukázky panelu [aplikace Word](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCToolBarMenuButton` třídy. Tento fragment kódu je součástí [ukázky aplikace Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 
-##  <a name="comparewith"></a>CMFCToolBarMenuButton:: compareWith –
+## <a name="cmfctoolbarmenubuttoncomparewith"></a><a name="comparewith"></a>CMFCToolBarMenuButton::Porovnat
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
@@ -253,13 +253,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-pro *jiné*<br/>
+[v] *ostatní*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom
+## <a name="cmfctoolbarmenubuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -267,13 +267,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>Parametry
 
-pro *Src*<br/>
+[v] *src*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="createfrommenu"></a>CMFCToolBarMenuButton::CreateFromMenu
+## <a name="cmfctoolbarmenubuttoncreatefrommenu"></a><a name="createfrommenu"></a>CMFCToolBarMenuButton::CreateFromMenu
 
-Inicializuje nabídku panelu nástrojů z popisovače nabídky systému Windows.
+Inicializuje nabídku panelu nástrojů z úchytu nabídky systému Windows.
 
 ```
 virtual void CreateFromMenu(HMENU hMenu);
@@ -281,16 +281,16 @@ virtual void CreateFromMenu(HMENU hMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
-pro Popisovač do nabídky
+*hNabídka*<br/>
+[v] Úchyt k nabídce.
 
 ### <a name="remarks"></a>Poznámky
 
-Tlačítko nabídky panelu nástrojů může zobrazit rozevírací nabídku.
+Tlačítko nabídky panelu nástrojů může zobrazit rozevírací podnabídku.
 
-Rozhraní volá tuto metodu pro inicializaci příkazů v podnabídce z nabídky.
+Rozhraní Framework volá tuto metodu k inicializaci příkazů v podnabídce z nabídky.
 
-##  <a name="createmenu"></a>CMFCToolBarMenuButton::CreateMenu
+## <a name="cmfctoolbarmenubuttoncreatemenu"></a><a name="createmenu"></a>CMFCToolBarMenuButton::CreateMenu
 
 Vytvoří nabídku, která se skládá z příkazů v nabídce panelu nástrojů. Vrátí popisovač do nabídky.
 
@@ -300,15 +300,15 @@ virtual HMENU CreateMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač nabídky, pokud je úspěch. Hodnota NULL, pokud je seznam příkazů přidružených k tlačítku nabídky panelu nástrojů prázdný.
+Popisovač nabídky, pokud úspěch. NULL, pokud je seznam příkazů přidružených k tlačítku nabídky panelu nástrojů prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze přepsat v odvozené třídě a přizpůsobit tak způsob, jakým je nabídka vygenerována.
+Tuto metodu můžete přepsat v odvozené třídě a přizpůsobit způsob generování nabídky.
 
-##  <a name="createpopupmenu"></a>CMFCToolBarMenuButton::CreatePopupMenu
+## <a name="cmfctoolbarmenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>CMFCToolBarMenuButton::Nabídka CreatePopupMenu
 
-`CMFCPopupMenu` Vytvoří objekt pro zobrazení nabídky panelu nástrojů.
+Vytvoří `CMFCPopupMenu` objekt pro zobrazení nabídky panelu nástrojů.
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -320,11 +320,11 @@ Ukazatel na `CMFCPopupMenu` objekt, který zobrazuje rozevírací nabídku přid
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním pro přípravu zobrazení rozevírací nabídky přidružené k tlačítku.
+Tato metoda je volána rámci připravit zobrazení rozevírací nabídky spojené s tlačítkem.
 
-Výchozí implementace pouze vytvoří a vrátí nový `CMFCPopupMenu` objekt. Tuto metodu přepište, pokud chcete použít odvozený typ [třídy CMFCPopupMenu](cmfcpopupmenu-class.md) nebo provést další inicializaci.
+Výchozí implementace pouze vytvoří a `CMFCPopupMenu` vrátí nový objekt. Přepsat tuto metodu, pokud chcete použít odvozený typ [TŘÍDY CMFCPopupMenu](cmfcpopupmenu-class.md) nebo provést další inicializaci.
 
-##  <a name="drawdocumenticon"></a>CMFCToolBarMenuButton::D rawDocumentIcon
+## <a name="cmfctoolbarmenubuttondrawdocumenticon"></a><a name="drawdocumenticon"></a>CMFCToolBarMenuButton::DrawDocumentIcon
 
 Nakreslí ikonu dokumentu na tlačítko nabídky.
 
@@ -337,20 +337,20 @@ void DrawDocumentIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-pro Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 *rectImage*<br/>
-pro Souřadnice ohraničujícího obdélníku obrázku
+[v] Souřadnice obdélníku ohraničujícího obrazu.
 
-*hIcon*<br/>
-pro Popisovač ikony.
+*hIkona*<br/>
+[v] Úchyt k ikoně.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda získá ikonu dokumentu a nakreslí ji na tlačítko nabídky uprostřed oblasti určené parametrem *rectImage*.
+Tato metoda převezme ikonu dokumentu a nakreslí ji na tlačítko nabídky, vystředěné v oblasti určené *rectImage*.
 
-##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
+## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
 ```
 void EnableQuickCustomize();
@@ -358,7 +358,7 @@ void EnableQuickCustomize();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton
+## <a name="cmfctoolbarmenubuttonhasbutton"></a><a name="hasbutton"></a>CMFCToolBarMenuButton::hasButton
 
 ```
 virtual BOOL HasButton() const;
@@ -368,7 +368,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder
+## <a name="cmfctoolbarmenubuttonhavehotborder"></a><a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder
 
 ```
 virtual BOOL HaveHotBorder() const;
@@ -378,7 +378,7 @@ virtual BOOL HaveHotBorder() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isborder"></a>CMFCToolBarMenuButton::-Border
+## <a name="cmfctoolbarmenubuttonisborder"></a><a name="isborder"></a>CMFCToolBarMenuButton::IsBorder
 
 ```
 virtual BOOL IsBorder() const;
@@ -388,7 +388,7 @@ virtual BOOL IsBorder() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu
+## <a name="cmfctoolbarmenubuttonisclickedonmenu"></a><a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu
 
 ```
 BOOL IsClickedOnMenu() const;
@@ -398,7 +398,7 @@ BOOL IsClickedOnMenu() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode
+## <a name="cmfctoolbarmenubuttonisquickmode"></a><a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode
 
 ```
 BOOL IsQuickMode();
@@ -408,7 +408,7 @@ BOOL IsQuickMode();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcommands"></a>CMFCToolBarMenuButton:: GetCommands
+## <a name="cmfctoolbarmenubuttongetcommands"></a><a name="getcommands"></a>CMFCToolBarMenuButton::Příkazy GetCommands
 
 Poskytuje přístup jen pro čtení k seznamu příkazů v nabídce panelu nástrojů.
 
@@ -418,15 +418,15 @@ const CObList& GetCommands() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz const na objekt [třídy CObList](../../mfc/reference/coblist-class.md) , který obsahuje kolekci objektů [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) .
+Const odkaz na [CObList Class](../../mfc/reference/coblist-class.md) objektu, který obsahuje kolekci [CMFCToolBarButton třídy](../../mfc/reference/cmfctoolbarbutton-class.md) objektů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tlačítko nabídky panelu nástrojů může zobrazit podnabídku. Seznam příkazů můžete zadat v podnabídce v konstruktoru nebo v [CMFCToolBarMenuButton:: CreateFromMenu](#createfrommenu) jako popisovač do nabídky (HMENU). Nabídka je převedena na seznam objektů, které jsou odvozeny z [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a uloženy do interního `CObList` objektu. Přístup k tomuto seznamu získáte voláním této metody.
+Tlačítko nabídky panelu nástrojů může zobrazit podnabídku. Můžete zadat seznam příkazů v podnabídce v konstruktoru nebo v [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) jako popisovač do nabídky (HMENU). Nabídka je převedena na seznam objektů, které jsou odvozeny z [TŘÍDY CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a uloženy ve vnitřním `CObList` objektu. K tomuto seznamu můžete přistupovat voláním této metody.
 
-##  <a name="getimagerect"></a>CMFCToolBarMenuButton::GetImageRect
+## <a name="cmfctoolbarmenubuttongetimagerect"></a><a name="getimagerect"></a>CMFCToolBarMenuButton::GetImageRect
 
-Načte ohraničující obdélník pro obrázek tlačítka.
+Načte ohraničovací obdélník pro obraz tlačítka.
 
 ```
 void GetImageRect(CRect& rectImage);
@@ -435,11 +435,11 @@ void GetImageRect(CRect& rectImage);
 ### <a name="parameters"></a>Parametry
 
 *rectImage*<br/>
-mimo Odkaz na `CRect` objekt, který přijímá souřadnice ohraničujícího obdélníku obrázku.
+[out] Odkaz na `CRect` objekt, který přijímá souřadnice obdélníku ohraničujícího obrazu.
 
-##  <a name="getpaletterows"></a>CMFCToolBarMenuButton::GetPaletteRows
+## <a name="cmfctoolbarmenubuttongetpaletterows"></a><a name="getpaletterows"></a>CMFCToolBarMenuButton::GetPaletteRows
 
-Vrátí počet řádků v rozevírací nabídce, pokud je nabídka v režimu palety.
+Vrátí počet řádků v rozevírací nabídce, když je nabídka v režimu palety.
 
 ```
 int GetPaletteRows() const;
@@ -451,11 +451,11 @@ Počet řádků v paletě.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je tlačítko nabídky nastaveno na režim palety, položky nabídky se zobrazí ve více sloupcích s pouze omezeným počtem řádků. Voláním této metody získáte počet řádků. Můžete povolit nebo zakázat režim palety a zadat počet řádků pomocí [CMFCToolBarMenuButton:: SetMenuPaletteMode](#setmenupalettemode).
+Pokud je tlačítko nabídky nastaveno na režim palety, položky nabídky se zobrazí ve více sloupcích s omezeným počtem řádků. Volání této metody získat počet řádků. Můžete povolit nebo zakázat režim palety a určit počet řádků pomocí [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
 
-##  <a name="getpopupmenu"></a>CMFCToolBarMenuButton::GetPopupMenu
+## <a name="cmfctoolbarmenubuttongetpopupmenu"></a><a name="getpopupmenu"></a>CMFCToolBarMenuButton::GetPopupMenu
 
-Vrátí ukazatel na objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , který představuje rozevírací nabídku tlačítka.
+Vrátí ukazatel na objekt [třídy CMFCPopupMenu,](../../mfc/reference/cmfcpopupmenu-class.md) který představuje rozevírací nabídku tlačítka.
 
 ```
 CMFCPopupMenu* GetPopupMenu() const;
@@ -463,15 +463,15 @@ CMFCPopupMenu* GetPopupMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , který byl vytvořen, když rozhraní nakreslilo v podnabídce tlačítka nabídky panelu nástrojů; Hodnota NULL, pokud není zobrazena žádná podnabídka
+Ukazatel na objekt [třídy CMFCPopupMenu,](../../mfc/reference/cmfcpopupmenu-class.md) který byl vytvořen, když rozhraní nakreslilo podnabídku tlačítka nabídky panelu nástrojů; Null, pokud není zobrazena žádná podnabídka.
 
 ### <a name="remarks"></a>Poznámky
 
-Když tlačítko nabídky panelu nástrojů zobrazí rozevírací nabídku, vytvoří tlačítko objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , který představuje nabídku. Voláním této metody získáte ukazatel na `CMFCPopupMenu` objekt. Vrácený ukazatel byste neměli ukládat, protože je dočasný a když uživatel zavře rozevírací nabídku, bude neplatný.
+Když tlačítko nabídky panelu nástrojů zobrazí rozevírací nabídku, vytvoří objekt [třídy CMFCPopupMenu Class,](../../mfc/reference/cmfcpopupmenu-class.md) který bude představovat nabídku. Volání této metody získat ukazatel `CMFCPopupMenu` na objekt. Vrácený ukazatel byste neměli ukládat, protože je dočasný a stane se neplatným, když uživatel zavře rozevírací nabídku.
 
-##  <a name="isdroppeddown"></a>CMFCToolBarMenuButton::IsDroppedDown
+## <a name="cmfctoolbarmenubuttonisdroppeddown"></a><a name="isdroppeddown"></a>CMFCToolBarMenuButton::isdroppeddown
 
-Označuje, zda se aktuálně zobrazuje místní nabídka.
+Označuje, zda je aktuálně zobrazena rozbalovací nabídka.
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -479,11 +479,11 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud tlačítko nabídky panelu nástrojů zobrazí svou podnabídku; v opačném případě FALSE.
+PRAVDA, pokud tlačítko nabídky panelu nástrojů zobrazuje podnabídku; jinak FALSE.
 
-##  <a name="isemptymenuallowed"></a>CMFCToolBarMenuButton::IsEmptyMenuAllowed
+## <a name="cmfctoolbarmenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>CMFCToolBarMenuButton::IsEmptyMenuAllowed
 
-Určuje, zda položky nabídky zobrazují prázdné podnabídky.
+Určuje, zda se v položkách nabídky zobrazí prázdné podnabídky.
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
@@ -491,17 +491,17 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud rozhraní otevře podnabídku z aktuálně vybrané položky nabídky, a to i v případě, že je podnabídka prázdná; v opačném případě FALSE.
+PRAVDA, pokud architektura otevře podnabídku z aktuálně vybrané položky nabídky, i když je podnabídka prázdná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu, když se uživatel pokusí otevřít podnabídku z aktuálně vybrané položky nabídky. Pokud je podnabídka prázdná a `IsEmptyMenuAllowed` vrátí hodnotu false, podnabídka se neotevře.
+Rozhraní Framework volá tuto metodu, když se uživatel pokusí otevřít podnabídku z aktuálně vybrané položky nabídky. Pokud je podnabídka `IsEmptyMenuAllowed` prázdná a vrátí hodnotu NEPRAVDA, podnabídka se neotevře.
 
-Výchozí implementace vrátí hodnotu FALSE. Tuto metodu přepište, pokud chcete toto chování přizpůsobit.
+Výchozí implementace vrátí hodnotu NEPRAVDA. Přepsat tuto metodu přizpůsobit toto chování.
 
-##  <a name="isexclusive"></a>CMFCToolBarMenuButton:: Exclusive
+## <a name="cmfctoolbarmenubuttonisexclusive"></a><a name="isexclusive"></a>CMFCToolBarMenuButton::IsExclusive
 
-Určuje, zda je tlačítko ve výhradním režimu.
+Označuje, zda je tlačítko ve výhradním režimu.
 
 ```
 virtual BOOL IsExclusive() const;
@@ -509,17 +509,17 @@ virtual BOOL IsExclusive() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud tlačítko pracuje ve výhradním režimu; v opačném případě FALSE.
+TRUE, pokud tlačítko pracuje ve výhradním režimu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel otevře místní nabídku pro tlačítko a potom přesune ukazatel myši na jiný panel nástrojů nebo tlačítko nabídky, automaticky otevíraná okna se zavře, pokud je tlačítko ve výhradním režimu.
+Když uživatel otevře místní nabídku pro tlačítko a potom přesune ukazatel myši nad jiný panel nástrojů nebo tlačítko nabídky, rozbalovací nabídka se zavře, pokud není tlačítko ve výhradním režimu.
 
-Výchozí implementace vždy vrátí hodnotu FALSE. Tuto metodu přepište v odvozené třídě, pokud chcete zapnout výhradní režim.
+Výchozí implementace vždy vrátí hodnotu NEPRAVDA. Přepsat tuto metodu v odvozené třídě, pokud chcete zapnout výhradní režim.
 
-##  <a name="ismenupalettemode"></a>CMFCToolBarMenuButton::IsMenuPaletteMode
+## <a name="cmfctoolbarmenubuttonismenupalettemode"></a><a name="ismenupalettemode"></a>CMFCToolBarMenuButton::IsMenuPaletteMode
 
-Určuje, zda se rozevírací nabídka nachází v režimu palety.
+Určuje, zda je rozevírací nabídka v režimu palety.
 
 ```
 BOOL IsMenuPaletteMode() const;
@@ -527,15 +527,15 @@ BOOL IsMenuPaletteMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je povolen režim palety, v opačném případě FALSE.
+TRUE, pokud je povolen režim palety, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je tlačítko nabídky nastaveno na režim palety, položky nabídky se zobrazí ve více sloupcích s pouze omezeným počtem řádků. Voláním této metody získáte počet řádků. Můžete povolit nebo zakázat režim palety voláním [CMFCToolBarMenuButton:: SetMenuPaletteMode](#setmenupalettemode).
+Pokud je tlačítko nabídky nastaveno na režim palety, položky nabídky se zobrazí ve více sloupcích s omezeným počtem řádků. Volání této metody získat počet řádků. Režim palety můžete povolit nebo zakázat voláním [PŘÍKAZU CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
 
-##  <a name="istearoffmenu"></a>CMFCToolBarMenuButton::IsTearOffMenu
+## <a name="cmfctoolbarmenubuttonistearoffmenu"></a><a name="istearoffmenu"></a>CMFCToolBarMenuButton::nabídka istearoff
 
-Označuje, zda má rozevírací nabídka odtrhnout panel.
+Označuje, zda má rozevírací nabídka odtrhávací pruh.
 
 ```
 virtual BOOL IsTearOffMenu() const;
@@ -543,15 +543,15 @@ virtual BOOL IsTearOffMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud má tlačítko nabídky panelu nástrojů odtrhnoutelné pruhy; v opačném případě FALSE.
+PRAVDA, pokud má tlačítko nabídky panelu nástrojů odtrhávací lištu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li povolit funkci Tear a nastavit ID odvolaného řádku, zavolejte [CMFCToolBarMenuButton:: SetTearOff](#settearoff).
+Chcete-li povolit funkci odtržení a nastavit ID odtrhávací lišty, zavolejte [příkaz CMFCToolBarMenuButton::SetTearOff](#settearoff).
 
-##  <a name="m_balwayscallownerdraw"></a>CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw
+## <a name="cmfctoolbarmenubuttonm_balwayscallownerdraw"></a><a name="m_balwayscallownerdraw"></a>CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw
 
-Určuje, zda rozhraní při vykreslení tlačítka vždy volá metodu [CFrameWndEx:: OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) .
+Určuje, zda framework vždy volá [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) při kreslení tlačítka.
 
 ```
 static BOOL m_bAlwaysCallOwnerDraw;
@@ -559,9 +559,9 @@ static BOOL m_bAlwaysCallOwnerDraw;
 
 ### <a name="remarks"></a>Poznámky
 
-Je-li tato členská proměnná nastavena na hodnotu TRUE, tlačítko po volání metody CFrameWndEx:: OnDrawMenuImage pro zobrazení obrázku na tlačítku vždy volá metodu [::](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) . Pokud `m_bAlwaysCallOwnerDraw` je hodnota false, tlačítko sám nakreslí obrázek, pokud je obrázek předdefinovaný. V opačném případě `OnDrawMenuImage`volá.
+Pokud je tato členská proměnná nastavena na hodnotu TRUE, tlačítko vždy volá metodu [CFrameWndEx::OnDrawMenuImage,](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) aby se obrázek na tlačítku zobrazil. Pokud `m_bAlwaysCallOwnerDraw` je false, samotné tlačítko nakreslí obraz, pokud je obraz předdefinován. V opačném `OnDrawMenuImage`případě volá .
 
-##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu
+## <a name="cmfctoolbarmenubuttononaftercreatepopupmenu"></a><a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu
 
 ```
 virtual void OnAfterCreatePopupMenu();
@@ -569,7 +569,7 @@ virtual void OnAfterCreatePopupMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag
+## <a name="cmfctoolbarmenubuttononbeforedrag"></a><a name="onbeforedrag"></a>CMFCToolBarMenuButton::onBeforeDrag
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -579,7 +579,7 @@ virtual BOOL OnBeforeDrag() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize
+## <a name="cmfctoolbarmenubuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize
 
 ```
 virtual SIZE OnCalculateSize(
@@ -590,15 +590,15 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-pro *primární řadič domény*<br/>
-pro *sizeDefault*<br/>
-[in] *bHorz*<br/>
+[v] *pDC*<br/>
+[v] *sizeDefault*<br/>
+[v] *bHorz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode
+## <a name="cmfctoolbarmenubuttononcancelmode"></a><a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode
 
 ```
 virtual void OnCancelMode();
@@ -606,7 +606,7 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd
+## <a name="cmfctoolbarmenubuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -614,11 +614,11 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pWndParent*<br/>
+[v] *pWndParent*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onclick"></a>CMFCToolBarMenuButton:: Click
+## <a name="cmfctoolbarmenubuttononclick"></a><a name="onclick"></a>CMFCToolBarMenuButton::OnClick
 
 ```
 virtual BOOL OnClick(
@@ -628,16 +628,16 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parametry
 
-pro *pWnd*<br/>
-pro *bDelay*<br/>
+[v] *pWnd*<br/>
+[v] *bZpoždění*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onclickmenuitem"></a>CMFCToolBarMenuButton::OnClickMenuItem
+## <a name="cmfctoolbarmenubuttononclickmenuitem"></a><a name="onclickmenuitem"></a>CMFCToolBarMenuButton::OnClickMenuItem
 
-Volá se rozhraním, když uživatel vybere položku v rozevírací nabídce.
+Volat rámci při uživatel vybere položku v rozevírací nabídce.
 
 ```
 virtual BOOL OnClickMenuItem();
@@ -645,15 +645,15 @@ virtual BOOL OnClickMenuItem();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-FALSE, pokud by měl rozhraní pokračovat ve výchozím zpracování položky nabídky; v opačném případě TRUE. Výchozí implementace vždy vrátí hodnotu FALSE.
+FALSE, pokud by měl rámec pokračovat ve zpracování výchozí položky nabídky; jinak TRUE. Výchozí implementace vždy vrátí hodnotu NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel klikne na položku nabídky, rozhraní provede příkaz, který je přidružen k této položce.
+Když uživatel klepne na položku nabídky, rozhraní provede příkaz, který je přidružen k této položce.
 
-Chcete-li přizpůsobit zpracování položky nabídky, `OnClickMenuItem` přepište ve třídě odvozené `CMFCToolBarMenuButton` z třídy. Je také nutné přepsat [CFrameWndEx:: OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) a nahradit tlačítka nabídky, která vyžadují zvláštní zpracování s instancemi odvozené třídy.
+Chcete-li přizpůsobit zpracování položky nabídky, přepište `OnClickMenuItem` ve třídě odvozené z `CMFCToolBarMenuButton` třídy. Musíte také přepsat [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) a nahradit tlačítka nabídky, které vyžadují speciální zpracování s instancemi odvozené třídy.
 
-##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp
+## <a name="cmfctoolbarmenubuttononcontexthelp"></a><a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp
 
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -661,13 +661,13 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pWnd*<br/>
+[v] *pWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondraw"></a>CMFCToolBarMenuButton:: Draw
+## <a name="cmfctoolbarmenubuttonondraw"></a><a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw
 
 ```
 virtual void OnDraw(
@@ -683,18 +683,18 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-pro *primární řadič domény*<br/>
-pro *Rect*<br/>
-pro *pImages*<br/>
-[in] *bHorz*<br/>
-pro *bCustomizeMode*<br/>
-pro *bHighlight*<br/>
-pro *bDrawBorder*<br/>
-pro *bGrayDisabledButtons*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
+[v] *pObrázky*<br/>
+[v] *bHorz*<br/>
+[v] *bPřizpůsobitrežim*<br/>
+[v] *bZvýraznění*<br/>
+[v] *bDrawBorder*<br/>
+[v] *bGrayDisabledTlačítka*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList
+## <a name="cmfctoolbarmenubuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OndrawOnCustomizeList
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -705,17 +705,17 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-pro *primární řadič domény*<br/>
-pro *Rect*<br/>
-pro *bSelected*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
+[v] *bVybrané*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="openpopupmenu"></a>CMFCToolBarMenuButton::OpenPopupMenu
+## <a name="cmfctoolbarmenubuttonopenpopupmenu"></a><a name="openpopupmenu"></a>CMFCToolBarMenuButton::Nabídka OpenPopup
 
-Volá se rozhraním, když uživatel otevře rozevírací nabídku tlačítka nabídky panelu nástrojů.
+Volat rámci při uživateli otevře rozevírací nabídku tlačítka nabídky panelu nástrojů.
 
 ```
 virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
@@ -724,17 +724,17 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-pro Určuje okno, které přijímá příkazy rozevírací nabídky. Může mít hodnotu NULL pouze v případě, že tlačítko nabídky panelu nástrojů má nadřazené okno.
+[v] Určuje okno, ve které jsou přijímá příkazy rozevírací nabídky. Může být null pouze v případě, že tlačítko nabídky panelu nástrojů má nadřazené okno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byl vytvořen a úspěšně otevřen objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) ; v opačném případě FALSE.
+TRUE při vytvoření a úspěšném otevření [objektu třídy CMFCPopupMenu;](../../mfc/reference/cmfcpopupmenu-class.md) jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána rozhraním, když uživatel otevře rozevírací nabídku z tlačítka nabídky panelu nástrojů.
+Tato funkce je volána v rámci, když uživatel otevře rozevírací nabídku z tlačítka nabídky panelu nástrojů.
 
-##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault
+## <a name="cmfctoolbarmenubuttonresetimagetodefault"></a><a name="resetimagetodefault"></a>CMFCToolBarMenuButton::resetImageToDefault
 
 ```
 virtual void ResetImageToDefault();
@@ -742,7 +742,7 @@ virtual void ResetImageToDefault();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState
+## <a name="cmfctoolbarmenubuttonsavebarstate"></a><a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState
 
 ```
 virtual void SaveBarState();
@@ -750,9 +750,9 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu, když vytvoří tlačítko panelu nástrojů jako výsledek operace přetažení. Tato metoda volá metodu [CMFCPopupMenu:: SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) v místní nabídce nejvyšší úrovně, která způsobí, že nadřazené tlačítko místní nabídky znovu vytvoří svou nabídku.
+Rozhraní Framework volá tuto metodu při vytvoření tlačítka panelu nástrojů v důsledku operace přetažení myší. Tato metoda volá [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) metoda rozbalovací nabídky nejvyšší úrovně, která způsobí, že nadřazené tlačítko rozbalovací nabídky znovu vytvořit jeho menu.
 
-##  <a name="serialize"></a>CMFCToolBarMenuButton:: serializovat
+## <a name="cmfctoolbarmenubuttonserialize"></a><a name="serialize"></a>CMFCToolBarMenuButton::Serializovat
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -760,13 +760,13 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-pro *ar*<br/>
+[v] *ar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setaccdata"></a>CMFCToolBarMenuButton::SetACCData
+## <a name="cmfctoolbarmenubuttonsetaccdata"></a><a name="setaccdata"></a>CMFCToolBarMenuButton::SetACCData
 
-Nastaví data přístupnosti prvku pásu karet.
+Nastaví data usnadnění pro prvek pásu karet.
 
 ```
 virtual BOOL SetACCData(
@@ -777,22 +777,22 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-Nadřazené okno elementu pásu karet.
+Nadřazené okno pro prvek pásu karet.
 
-*data*<br/>
-Data přístupnosti prvku pásu karet.
+*Dat*<br/>
+Data usnadnění pro prvek pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu TRUE.
+Vždy vrátí hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda nastaví data přístupnosti pro element pásu karet a vždy vrátí hodnotu TRUE. Přepsáním této metody nastavíte data přístupnosti a vrátíte hodnotu, která indikuje úspěch nebo neúspěch.
+Ve výchozím nastavení tato metoda nastaví data usnadnění pro prvek pásu karet a vždy vrátí hodnotu PRAVDA. Přepsat tuto metodu nastavit data usnadnění a vrátit hodnotu, která označuje úspěch nebo neúspěch.
 
-##  <a name="setmenuonly"></a>CMFCToolBarMenuButton::SetMenuOnly
+## <a name="cmfctoolbarmenubuttonsetmenuonly"></a><a name="setmenuonly"></a>CMFCToolBarMenuButton::SetMenuOnly
 
-Určuje, zda je tlačítko vykresleno jako tlačítko nabídky nebo tlačítko rozdělení, pokud má buď platné ID příkazu, a podnabídku.
+Určuje, zda je tlačítko nakresleno jako tlačítko nabídky nebo tlačítko rozdělení, pokud má platné ID příkazu i podnabídku.
 
 ```
 void SetMenuOnly(BOOL bMenuOnly);
@@ -801,15 +801,15 @@ void SetMenuOnly(BOOL bMenuOnly);
 ### <a name="parameters"></a>Parametry
 
 *bMenuOnly*<br/>
-pro TRUE Chcete-li toto tlačítko Zobrazit jako tlačítko nabídky, pokud má platné ID příkazu i podnabídku, hodnota FALSE pro zobrazení tohoto tlačítka jako tlačítko rozdělení, pokud má buď platný identifikátor příkazu, a podnabídku.
+[v] PRAVDA, chcete-li toto tlačítko zobrazit jako tlačítko nabídky, pokud má platné ID příkazu i podnabídku, FALSE, aby se toto tlačítko zobrazilo jako tlačítko rozdělení, pokud má platné ID příkazu i podnabídku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má tlačítko nabídky na panelu nástrojů jak podnabídku, tak ID příkazu, zobrazí se nabídka jako tlačítko rozdělení, které má hlavní tlačítko a připojené tlačítko se šipkou dolů. Pokud tuto metodu zavoláte a *bMenuOnly* je pravda, tlačítko se místo toho jeví jako jediné tlačítko nabídky se šipkou dolů na tlačítku. Když uživatel klikne na šipku v obou režimech, otevře se podnabídka a když uživatel klikne na tlačítko, které není šipkou v obou režimech, rozhraní provede příkaz.
+Obvykle, když tlačítko nabídky panelu nástrojů obsahuje podnabídku i ID příkazu, zobrazí se nabídka jako tlačítko rozdělení, které má hlavní tlačítko a připojené tlačítko se šipkou dolů. Pokud zavoláte tuto metodu a *bMenuOnly* je TRUE, tlačítko se místo toho zobrazí jako jedno tlačítko nabídky se šipkou dolů v tlačítku. Když uživatel klepne na šipku v obou režimech, otevře se podnabídka a když uživatel klepne na nešipkovou část tlačítka v obou režimech, provede příkaz rozhraní .
 
-##  <a name="setmenupalettemode"></a>CMFCToolBarMenuButton::SetMenuPaletteMode
+## <a name="cmfctoolbarmenubuttonsetmenupalettemode"></a><a name="setmenupalettemode"></a>CMFCToolBarMenuButton::SetMenuPaletteMode
 
-Určuje, zda se rozevírací nabídka nachází v režimu palety.
+Určuje, zda je rozevírací nabídka v režimu palety.
 
 ```
 void SetMenuPaletteMode(
@@ -820,16 +820,16 @@ void SetMenuPaletteMode(
 ### <a name="parameters"></a>Parametry
 
 *bMenuPaletteMode*<br/>
-pro Určuje, zda se rozevírací nabídka nachází v režimu palety.
+[v] Určuje, zda je rozevírací nabídka v režimu palety.
 
 *nPaletteRows*<br/>
-pro Počet řádků v paletě.
+[v] Počet řádků v paletě.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu palety se všechny položky nabídky zobrazí jako paleta s více sloupci. Počet řádků určíte pomocí *nPaletteRows*.
+V režimu palety jsou všechny položky nabídky zobrazeny jako paleta s více sloupci. Počet řádků můžete zadat pomocí *nPaletteRows*.
 
-##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
+## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
 ```
 void SetMessageWnd(CWnd* pWndMessage);
@@ -837,13 +837,13 @@ void SetMessageWnd(CWnd* pWndMessage);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pWndMessage*<br/>
+[v] *pWndMessage*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setradio"></a>CMFCToolBarMenuButton::SetRadio
+## <a name="cmfctoolbarmenubuttonsetradio"></a><a name="setradio"></a>CMFCToolBarMenuButton::SetRadio
 
-Nastaví tlačítko nabídky panelu nástrojů k zobrazení ikony stylu přepínacího tlačítka, když je zaškrtnuto.
+Nastaví tlačítko nabídky panelu nástrojů tak, aby se při kontrole zobrazila ikona stylu přepínacího tlačítka.
 
 ```
 virtual void SetRadio();
@@ -851,13 +851,13 @@ virtual void SetRadio();
 
 ### <a name="remarks"></a>Poznámky
 
-Když je tlačítko nabídky vykresleno, když je zaškrtnuto, volá [CMFCVisualManager:: OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) , aby nakreslila ikonu zaškrtnutí. Ve výchozím nastavení `OnDrawMenuCheck` požaduje, aby aktuální vizuální nadřízený v tlačítku nabídky zaškrtne zaškrtnutí políčka styl zaškrtávací políčko. Po volání této metody se aktuální vizuální manažer místo toho na tlačítku nabídky nakreslí zaškrtnutím stylu přepínače. Tuto změnu nelze vrátit zpět.
+Když je tlačítko nabídky nakresleno, když je zaškrtnuto, volá [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) k nakreslení ikony zaškrtnutí. Ve výchozím `OnDrawMenuCheck` nastavení požaduje, aby aktuální vizuální manažer nakreslí zaškrtávací políčko styl zaškrtnutí na tlačítko nabídky. Po volání této metody aktuální vizuální manažer místo toho nakreslí zaškrtnutí stylu přepínacího tlačítka na tlačítku nabídky. Tuto změnu nelze vrátit zpět.
 
-Když zavoláte tuto metodu a v současné době se zobrazuje tlačítko nabídky, aktualizace se aktualizuje.
+Když zavoláte tuto metodu a tlačítko nabídky se právě zobrazí, obnoví se.
 
-##  <a name="settearoff"></a>CMFCToolBarMenuButton::SetTearOff
+## <a name="cmfctoolbarmenubuttonsettearoff"></a><a name="settearoff"></a>CMFCToolBarMenuButton::SetTearoff
 
-Určuje ID neodstranitelné čáry rozevírací nabídky.
+Určuje ID odtrhávací ho pruhu pro rozevírací nabídku.
 
 ```
 virtual void SetTearOff(UINT uiBarID);
@@ -866,18 +866,18 @@ virtual void SetTearOff(UINT uiBarID);
 ### <a name="parameters"></a>Parametry
 
 *uiBarID*<br/>
-pro Určuje nové ID přerušeného lomítka.
+[v] Určuje nové ID odtrhávací lišty.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody určíte ID pro nepřerušený pruh, který se vytvoří, když uživatel přetáhne tlačítko nabídky mimo panel nabídek. Pokud je parametr *uiBarID* 0, nemůže uživatel vytrhnout tlačítko nabídky.
+Volání této metody k určení ID pro odtrhnutí panelu, který je vytvořen, když uživatel přetáhne tlačítko nabídky mimo řádek nabídek. Pokud je parametr *uiBarID* 0, uživatel nemůže odtrhnout tlačítko nabídky.
 
-Voláním [CWinAppEx:: EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) povolte funkci odtrhnoutelné nabídky ve vaší aplikaci.
+Volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) povolit funkci odtržení menu ve vaší aplikaci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
+[Třída CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)
+[Třída cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)

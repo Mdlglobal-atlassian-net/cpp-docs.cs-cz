@@ -9,34 +9,34 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: c1f83f794cc40fa7f4d290fa4a147fe9f7e074be
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2cf5b266348e299fe761ba40bd2cfb849f02b9ab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377195"
 ---
 # <a name="initinstance-member-function"></a>InitInstance – členská funkce
 
 Operační systém Windows umožňuje spustit více než jednu kopii nebo "instanci" stejné aplikace. `WinMain`volá [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) pokaždé, když se spustí nová instance aplikace.
 
-Standardní `InitInstance` implementace vytvořená Průvodcem aplikací knihovny MFC provádí následující úlohy:
+Standardní `InitInstance` implementace vytvořená Průvodcem aplikací knihovny MFC provádí následující úkoly:
 
-- Jako jeho ústřední akce vytvoří šablony dokumentů, které zase vytvoří dokumenty, zobrazení a okna s rámečkem. Popis tohoto procesu najdete v tématu [Vytvoření šablony dokumentu](../mfc/document-template-creation.md).
+- Jako svou centrální akci vytvoří šablony dokumentů, které zase vytvářejí okna dokumentů, pohledů a rámečků. Popis tohoto procesu naleznete v tématu [Vytvoření šablony dokumentu](../mfc/document-template-creation.md).
 
-- Načte standardní možnosti souborů ze souboru. ini nebo z registru Windows, včetně názvů naposledy použitých souborů.
+- Načte standardní možnosti souborů ze souboru INI nebo registru systému Windows, včetně názvů naposledy použitých souborů.
 
 - Zaregistruje jednu nebo více šablon dokumentů.
 
-- Pro aplikaci MDI vytvoří hlavní okno rámce.
+- Pro aplikaci MDI vytvoří okno hlavního rámce.
 
-- Zpracuje příkazový řádek pro otevření dokumentu zadaného v příkazovém řádku nebo pro otevření nového prázdného dokumentu.
+- Zpracuje příkazový řádek, aby otevřel dokument určený na příkazovém řádku nebo otevřel nový prázdný dokument.
 
 Můžete přidat vlastní inicializační kód nebo upravit kód napsaný průvodcem.
 
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [funkce CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) do `InitInstance` svého přepsání, zadejte COINIT_APARTMENTTHREADED (místo COINIT_MULTITHREADED).
+> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [CoInitializeExV](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) v `InitInstance` přepsání, zadejte COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CWinApp: Třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

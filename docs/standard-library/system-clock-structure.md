@@ -9,16 +9,16 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ca516551bb1b41d96b99aaf7b842666c9341ee7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450180"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376516"
 ---
-# <a name="systemclock-structure"></a>system_clock – struktura
+# <a name="system_clock-structure"></a>system_clock – struktura
 
-Představuje *typ hodin* , který je založen na hodinách systému v reálném čase.
+Představuje *typ hodiny,* který je založen na hodiny v reálném čase systému.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,47 +28,47 @@ struct system_clock;
 
 ## <a name="remarks"></a>Poznámky
 
-*Typ hodin* slouží k získání aktuálního času jako UTC. Typ vytvoří instanci instance [Trvání](../standard-library/duration-class.md) a šablonu třídy [time_point](../standard-library/time-point-class.md)a definuje statickou členskou funkci `now()` , která vrátí čas.
+*Typ hodiny* se používá k získání aktuálního času jako UTC. Typ ztělesňuje konkretizaci [doby trvání](../standard-library/duration-class.md) a šablonu třídy [time_point](../standard-library/time-point-class.md)a definuje statickou členskou funkci, `now()` která vrací čas.
 
-Hodiny jsou *monotónní* , pokud hodnota, která je vrácena prvním voláním `now()` , je vždy menší než nebo rovna hodnotě, která je vrácena následným voláním metody. `now()`
+Hodiny je *monotónní,* pokud je hodnota, která `now()` je vrácena první volání je vždy menší nebo `now()`rovna hodnotu, která je vrácena následné volání .
 
-Hodiny jsou *stabilní* , pokud jsou *monotónní* , a pokud je čas mezi takty konstantní.
+Hodiny jsou *stabilní,* pokud jsou *monotónní* a pokud je doba mezi hodinami konstantní.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice typedef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`system_clock::duration`|Synonymum pro `duration<rep, period>`.|
-|`system_clock::period`|Synonymum pro typ, který se používá k reprezentaci období Tick v uzavřeném vytváření instancí `duration`.|
-|`system_clock::rep`|Synonymum pro typ, který představuje počet taktů v uzavřeném vytváření instancí `duration`.|
-|`system_clock::time_point`|Synonymum pro `time_point<Clock, duration>`, kde `Clock` je synonymum pro buď typ hodin samotný, nebo jiný typ hodin, který je založen na stejném epocha a má stejný vnořený `duration` typ.|
+|`system_clock::duration`|Synonymum `duration<rep, period>`pro .|
+|`system_clock::period`|Synonymum pro typ, který se používá k reprezentaci `duration`období značek v obsažené konkretiaci .|
+|`system_clock::rep`|Synonymum pro typ, který se používá k reprezentaci počtu značek `duration`hodin v obsažené konkretiaci .|
+|`system_clock::time_point`|Synonymum `time_point<Clock, duration>`pro `Clock` , kde je synonymum pro samotný typ hodin nebo jiný typ hodin, `duration` který je založen na stejné epochě a má stejný vnořený typ.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[from_time_t](#from_time_t)|Tras. `time_point` Vrátí, který nejlépe vyblíží zadaný čas.|
-|[současné](#now)|Tras. Vrátí aktuální čas.|
-|[to_time_t](#to_time_t)|Tras. Vrátí objekt, který nejlépe seblíží zadanou `time_point`hodnotu. `time_t`|
+|[from_time_t](#from_time_t)|Statická. Vrátí `time_point` hodnotu, která se nejvíce blíží zadanému času.|
+|[Nwo](#now)|Statická. Vrátí aktuální čas.|
+|[to_time_t](#to_time_t)|Statická. Vrátí `time_t` objekt, který se nejvíce `time_point`blíží zadanému .|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[system_clock::is_monotonic Constant](#is_monotonic_constant)|Určuje, zda je typ hodin monotónní.|
-|[system_clock:: is_steady – konstanta](#is_steady_constant)|Určuje, zda je typ hodin konstantní.|
+|[system_clock::is_monotonic konstanta](#is_monotonic_constant)|Určuje, zda je typ hodin monotónní.|
+|[system_clock::is_steady konstanta](#is_steady_constant)|Určuje, zda je typ hodin stabilní.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<Chrono >
+**Záhlaví:** \<chrono>
 
-**Obor názvů:** std:: chrono
+**Obor názvů:** std::chrono
 
-## <a name="from_time_t"></a>system_clock::from_time_t
+## <a name="system_clockfrom_time_t"></a><a name="from_time_t"></a>system_clock::from_time_t
 
-Statická metoda, která vrací [time_point](../standard-library/time-point-class.md) , který nejlépe odpovídá času reprezentovanému *TM*.
+Statická metoda, která vrací [time_point,](../standard-library/time-point-class.md) která nejvíce blíží čas, který je reprezentován *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,10 +76,10 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*TM*\
-Objekt [time_t](../c-runtime-library/standard-types.md) .
+*Tm*\
+[Objekt time_t.](../c-runtime-library/standard-types.md)
 
-## <a name="is_monotonic_constant"></a>system_clock:: is_monotonic – konstanta
+## <a name="system_clockis_monotonic-constant"></a><a name="is_monotonic_constant"></a>system_clock::is_monotonic konstanta
 
 Statická hodnota, která určuje, zda je typ hodin monotónní.
 
@@ -89,15 +89,15 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V této implementaci `system_clock::is_monotonic` vždy vrátí **hodnotu false**.
+V této `system_clock::is_monotonic` implementaci vždy vrátí **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodiny jsou *monotónní* , pokud hodnota, která je vrácena prvním voláním `now()` , je vždy menší než nebo rovna hodnotě, která je vrácena následným voláním metody. `now()`
+Hodiny je *monotónní,* pokud je hodnota, která `now()` je vrácena první volání je vždy menší nebo `now()`rovna hodnotu, která je vrácena následné volání .
 
-## <a name="is_steady_constant"></a>system_clock:: is_steady – konstanta
+## <a name="system_clockis_steady-constant"></a><a name="is_steady_constant"></a>system_clock::is_steady konstanta
 
-Statická hodnota, která určuje, zda je typ hodin *konstantní*.
+Statická hodnota, která určuje, zda je typ hodin *stabilní*.
 
 ```cpp
 static const bool is_steady = false;
@@ -105,13 +105,13 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V této implementaci `system_clock::is_steady` vždy vrátí **hodnotu false**.
+V této `system_clock::is_steady` implementaci vždy vrátí **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodiny jsou *stabilní* , pokud jsou [monotónní](#is_monotonic_constant) , a pokud je čas mezi takty konstantní.
+Hodiny jsou *stabilní,* pokud jsou [monotónní](#is_monotonic_constant) a pokud je doba mezi hodinami konstantní.
 
-## <a name="now"></a>system_clock:: Now
+## <a name="system_clocknow"></a><a name="now"></a>system_clock::Nyní
 
 Statická metoda, která vrací aktuální čas.
 
@@ -121,11 +121,11 @@ static time_point now() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt [time_point](../standard-library/time-point-class.md) , který představuje aktuální čas.
+Objekt [time_point,](../standard-library/time-point-class.md) který představuje aktuální čas.
 
-## <a name="to_time_t"></a>system_clock::to_time_t
+## <a name="system_clockto_time_t"></a><a name="to_time_t"></a>system_clock::to_time_t
 
-Statická metoda, která vrací [time_t](../c-runtime-library/standard-types.md) , který nejlépe odpovídá času reprezentovanému *časem*.
+Statická metoda, která vrací [time_t,](../c-runtime-library/standard-types.md) která nejvíce blíží čas, který je reprezentován *Time*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Interval*\
-Objekt [time_point](../standard-library/time-point-class.md) .
+*Čas*\
+[Objekt time_point.](../standard-library/time-point-class.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)\
 [steady_clock – struktura](../standard-library/steady-clock-struct.md)

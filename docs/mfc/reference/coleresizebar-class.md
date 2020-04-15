@@ -1,5 +1,5 @@
 ---
-title: Coleresizebar – třída
+title: COleResizeBar – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleResizeBar
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224407"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376157"
 ---
-# <a name="coleresizebar-class"></a>Coleresizebar – třída
+# <a name="coleresizebar-class"></a>COleResizeBar – třída
 
-Typ ovládací panel, který podporuje změnu velikosti ve umístěných položek OLE.
+Typ ovládacího panelu, který podporuje změna velikosti položek OLE na místě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,33 +31,33 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|Vytvoří `COleResizeBar` objektu.|
+|[COleResizeBar::COleResizeBar](#coleresizebar)|Vytvoří `COleResizeBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|Vytvoří a inicializuje podřízeného okna Windows a přidruží ji k `COleResizeBar` objektu.|
+|[COleResizeBar::Vytvořit](#create)|Vytvoří a inicializuje podřízené okno systému `COleResizeBar` Windows a přidruží jej k objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleResizeBar` objekty se zobrazí jako [crecttracker –](../../mfc/reference/crecttracker-class.md) šrafované ohraničení a vnější úchyty pro změnu velikosti.
+`COleResizeBar`objekty se zobrazí jako [CRectTracker](../../mfc/reference/crecttracker-class.md) se šrafovaným okrajem a vnějšími úchyty pro velikost.
 
-`COleResizeBar` objekty jsou obvykle vložené členy odvozené od objektů oken s rámečkem [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) třídy.
+`COleResizeBar`objekty jsou obvykle vložené členy objektů frame-window odvozených z třídy [COleIPFrameWnd.](../../mfc/reference/coleipframewnd-class.md)
 
-Další informace najdete v článku [aktivace](../../mfc/activation-cpp.md).
+Další informace naleznete v článku [Aktivace](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ovládací panel CControl](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
@@ -65,9 +65,9 @@ Další informace najdete v článku [aktivace](../../mfc/activation-cpp.md).
 
 **Záhlaví:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar
 
-Vytvoří `COleResizeBar` objektu.
+Vytvoří `COleResizeBar` objekt.
 
 ```
 COleResizeBar();
@@ -75,11 +75,11 @@ COleResizeBar();
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `Create` k vytvoření objektu změnu velikosti panelu.
+Volání `Create` k vytvoření objektu pruhu změny velikosti.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Vytvořit
 
-Vytvoří podřízené okno a přidruží ji k `COleResizeBar` objektu.
+Vytvoří podřízené okno a přidruží ho k objektu. `COleResizeBar`
 
 ```
 virtual BOOL Create(
@@ -93,19 +93,19 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno panelu změny velikosti.
 
-*dwStyle*<br/>
-Určuje, [styl okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributy.
+*dwStyl*<br/>
+Určuje atributy [stylu okna.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
-*nID*<br/>
-ID podřízené okno na změnu velikosti panelu.
+*Nid*<br/>
+Id podřízeného okna panelu změny velikosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl vytvořen příčku; jinak 0.
+Nenulová, pokud byl vytvořen pruh změny velikosti; jinak 0.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek mfc SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)
+[Třída COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

@@ -1,5 +1,5 @@
 ---
-title: CArchiveException – třída
+title: Třída CArchiveException
 ms.date: 11/04/2016
 f1_keywords:
 - CArchiveException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ad2a9d8c5b4466a04b5a88fcce7679911bf1b81a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420650"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377017"
 ---
-# <a name="carchiveexception-class"></a>CArchiveException – třída
+# <a name="carchiveexception-class"></a>Třída CArchiveException
 
 Představuje podmínku výjimky serializace.
 
@@ -33,38 +33,38 @@ class CArchiveException : public CException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CArchiveException::CArchiveException](#carchiveexception)|Vytvoří objekt `CArchiveException`.|
+|[CArchiveException::CArchiveException](#carchiveexception)|Vytvoří `CArchiveException` objekt.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CArchiveException:: m_cause](#m_cause)|Určuje příčinu výjimky.|
-|[CArchiveException:: m_strFileName](#m_strfilename)|Určuje název souboru pro tuto podmínku výjimky.|
+|[CArchiveException::m_cause](#m_cause)|Označuje příčinu výjimky.|
+|[CArchiveException::m_strFileName](#m_strfilename)|Určuje název souboru pro tuto podmínku výjimky.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `CArchiveException` zahrnuje veřejný datový člen, který určuje příčinu výjimky.
+Třída `CArchiveException` obsahuje veřejný datový člen, který označuje příčinu výjimky.
 
-objekty `CArchiveException` jsou vytvářeny a vyvolány uvnitř členských funkcí [CArchive](../../mfc/reference/carchive-class.md) . K těmto objektům máte přístup v rámci rozsahu výrazu **catch** . Kód příčiny nezávisí na operačním systému. Další informace o zpracování výjimek naleznete v tématu [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+`CArchiveException`objekty jsou konstruovány a vyvolány uvnitř funkcí členů [CArchive.](../../mfc/reference/carchive-class.md) K těmto objektům můžete přistupovat v rámci výrazu **CATCH.** Kód příčiny je nezávislý na operačním systému. Další informace o zpracování výjimek naleznete v [tématu Zpracování výjimek (MFC).](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CException –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `CArchiveException`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFX –. h
+**Záhlaví:** afx.h
 
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException
+## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException
 
-Vytvoří objekt `CArchiveException` a uloží hodnotu *příčiny* do objektu.
+Vytvoří `CArchiveException` objekt a uváží hodnotu *příčiny* v objektu.
 
 ```
 CArchiveException(
@@ -74,19 +74,19 @@ CArchiveException(
 
 ### <a name="parameters"></a>Parametry
 
-*způsobit*<br/>
-Proměnná výčtového typu, která určuje důvod výjimky. Seznam enumerátorů naleznete v tématu [m_cause](#m_cause) data member.
+*Způsobit*<br/>
+Ve výčtu typ proměnné, která označuje důvod výjimky. Seznam čítačů výčtu naleznete v [m_cause](#m_cause) datový člen.
 
 *lpszArchiveName*<br/>
-Odkazuje na řetězec obsahující název objektu `CArchive`, který způsobil výjimku.
+Odkazuje na řetězec obsahující název `CArchive` objektu, který způsobuje výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-V haldě můžete vytvořit objekt `CArchiveException` a vyvolat ho sami nebo nechat globální funkce [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) ho zpracovat za vás.
+Můžete vytvořit `CArchiveException` objekt na haldě a hodit sami nebo nechat globální funkce [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) zpracovat za vás.
 
-Nepoužívejte tento konstruktor přímo; místo toho zavolejte globální funkci `AfxThrowArchiveException`.
+Nepoužívejte tento konstruktor přímo; místo toho zavolejte `AfxThrowArchiveException`globální funkci .
 
-##  <a name="m_cause"></a>CArchiveException:: m_cause
+## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a>CArchiveException::m_cause
 
 Určuje příčinu výjimky.
 
@@ -96,31 +96,31 @@ int m_cause;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento datový člen je veřejná proměnná typu **int**. Jeho hodnoty jsou definovány výčtovým typem `CArchiveException`. Enumerátory a jejich významy jsou následující:
+Tento datový člen je veřejná proměnná typu **int**. Jeho hodnoty jsou `CArchiveException` definovány ve výčtu typu. Čítači výčtu a jejich význam jsou následující:
 
-- `CArchiveException::none` nedošlo k žádné chybě.
+- `CArchiveException::none`Nedošlo k žádné chybě.
 
-- `CArchiveException::genericException` nespecifikovanou chybou.
+- `CArchiveException::genericException`Nespecifikovaná chyba.
 
-- `CArchiveException::readOnly` se pokusil zapisovat do archivu otevřeného pro načtení.
+- `CArchiveException::readOnly`Pokusil se zapsat do archivu otevřeného pro načtení.
 
-- Při čtení objektu `CArchiveException::endOfFile` dosaženo konce souboru.
+- `CArchiveException::endOfFile`Při čtení objektu bylo dosaženo konce souboru.
 
-- `CArchiveException::writeOnly` se pokusilo číst z archivu otevřeného pro ukládání.
+- `CArchiveException::writeOnly`Snažil se číst z archivu otevřeného pro ukládání.
 
-- `CArchiveException::badIndex` neplatný formát souboru.
+- `CArchiveException::badIndex`Neplatný formát souboru.
 
-- `CArchiveException::badClass` se pokusil přečíst objekt do objektu nesprávného typu.
+- `CArchiveException::badClass`Došlo k pokusu o čtení objektu do objektu nesprávného typu.
 
-- `CArchiveException::badSchema` se pokusil přečíst objekt s jinou verzí třídy.
-
-    > [!NOTE]
-    >  Tyto `CArchiveException` způsobují, že enumerátory jsou odlišné od `CFileException` způsobujících výčty.
+- `CArchiveException::badSchema`Pokusili jste se přečíst objekt s jinou verzí třídy.
 
     > [!NOTE]
-    > `CArchiveException::generic` je zastaralá. Místo toho použijte `genericException`. Pokud je v aplikaci použito **Obecné** a sestavené s možností/CLR, dojde k chybám syntaxe, které nelze snadno dešifrovat.
+    >  Tyto `CArchiveException` příčiny výčtu se `CFileException` liší od čítače výčtu příčiny.
 
-##  <a name="m_strfilename"></a>CArchiveException:: m_strFileName
+    > [!NOTE]
+    > `CArchiveException::generic`je zastaralé. Místo toho použijte `genericException`. Pokud **obecný** se používá v aplikaci a je postaven s /clr, bude syntaxe chyby, které není snadné rozluštit.
+
+## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a>CArchiveException::m_strFileName
 
 Určuje název souboru pro tuto podmínku výjimky.
 
@@ -132,6 +132,6 @@ CString m_strFileName;
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CArchive – třída](../../mfc/reference/carchive-class.md)<br/>
+[Třída CArchiv](../../mfc/reference/carchive-class.md)<br/>
 [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [Zpracování výjimek](../../mfc/reference/exception-processing.md)

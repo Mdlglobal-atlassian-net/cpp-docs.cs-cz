@@ -1,5 +1,5 @@
 ---
-title: CAnimationVariableIntegerChangeHandler Class
+title: CAnimationVariableIntegerChangeHandler – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationVariableIntegerChangeHandler
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261f8eb17953c047fcc8ec05ae48dc369de4614c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377043"
 ---
-# <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler Class
+# <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler – třída
 
 Implementuje zpětné volání, které je voláno rozhraním API animace při změně hodnoty proměnné animace.
 
@@ -35,25 +35,25 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|Vytvoří `CAnimationVariableIntegerChangeHandler` objektu.|
+|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|Vytvoří `CAnimationVariableIntegerChangeHandler` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationVariableIntegerChangeHandler` zpětného volání.|
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Volá se při změně hodnoty proměnné animace. (Přepíše `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|
-|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Uchovává ukazatel na řadič animace směrování událostí.|
+|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Vytvoří instanci zpětného `CAnimationVariableIntegerChangeHandler` volání.|
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Nazývá se při změně hodnoty proměnné animace. (Přepíše `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|
+|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Ukládá ukazatel na řadič animace pro směrování událostí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato obslužná rutina události je vytvořen a předán metodě IUIAnimationVariable::SetVariableIntegerChangeHandler při volání CAnimationVariable::EnableIntegerValueChangedEvent nebo CAnimationBaseObject::EnableIntegerValueChangedEvent (umožňující Tato událost pro všechny proměnné animace zapouzdřené v objektu animace).
+Tato obslužná rutina události je vytvořena a předána metodě IUIAnimationVariable::SetVariableIntegerChangeHandler, když voláte CAnimationVariable::EnableIntegerValueChangedEvent nebo CAnimationBaseObject::EnableIntegerValueChangedEvent (která umožňuje tuto událost pro všechny proměnné animace zapouzdřené v objektu animace).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[MFC – třídy](../../mfc/reference/mfc-classes.md)
+[Třídy knihovny MFC](../../mfc/reference/mfc-classes.md)
 
 `CUIAnimationCallbackBase`
 
@@ -65,17 +65,17 @@ Tato obslužná rutina události je vytvořen a předán metodě IUIAnimationVar
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
 
-Vytvoří objekt canimationvariableintegerchangehandler –.
+Vytvoří objekt CAnimationVariableIntegerChangeHandler.
 
 ```
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-##  <a name="createinstance"></a>  CAnimationVariableIntegerChangeHandler::CreateInstance
+## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance
 
-Vytvoří instanci canimationvariableintegerchangehandler – zpětného volání.
+Vytvoří instanci zpětného volání CAnimationVariableIntegerChangeHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,17 +86,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
 *ppHandler*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="onintegervaluechanged"></a>  CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 
-Volá se při změně hodnoty proměnné animace.
+Nazývá se při změně hodnoty proměnné animace.
 
 ```
 IFACEMETHOD(OnIntegerValueChanged) (
@@ -108,25 +108,25 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*storyboard*<br/>
-Scénář, který je proměnné animace.
+*Scénáře*<br/>
+Scénář, který animuje proměnnou.
 
-*Proměnná*<br/>
-Proměnné animace, který byl aktualizován.
+*Proměnné*<br/>
+Proměnná animace, která byla aktualizována.
 
-*newValue*<br/>
-Nové Zaokrouhlená hodnota.
+*Newvalue*<br/>
+Nová zaokrouhlená hodnota.
 
-*previousValue*<br/>
-Předchozí Zaokrouhlená hodnota.
+*předchozíhodnota*<br/>
+Předchozí zaokrouhlená hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableIntegerChangeHandler::SetAnimationController
+## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController
 
-Uchovává ukazatel na řadič animace směrování událostí.
+Ukládá ukazatel na řadič animace pro směrování událostí.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -135,8 +135,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)
