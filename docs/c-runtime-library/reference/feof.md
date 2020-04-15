@@ -1,8 +1,9 @@
 ---
 title: feof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - feof
+- _o_feof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ee085624be3c5613ac4b5e87965d47324727778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347374"
 ---
 # <a name="feof"></a>feof
 
-Testy pro konec souboru v datovém proudu.
+Testy pro konec souboru na datovém proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,20 +48,22 @@ int feof(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **feof** vrací nenulovou hodnotu, pokud se operace čtení pokusila přečíst za koncem souboru; v opačném případě vrátí 0. Pokud má ukazatel datového proudu **hodnotu null**, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a **feof** vrátí hodnotu 0.
+Funkce **feof** vrátí nenulovou hodnotu, pokud se operace čtení pokusila číst za koncem souboru; vrátí 0 jinak. Pokud je ukazatel datového proudu **null**, funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, **errno** je nastavena na **EINVAL** a **feof** vrátí 0.
 
-Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o těchto a dalších kódech chyb naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Rutina **feof** (implementovaná jako funkce a jako makro) určuje, zda byl předán konec *datového proudu* . Když je předán konec souboru, operace čtení vrátí indikátor konce souboru, dokud není datový proud zavřen nebo dokud není pro něj volána metoda [Rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)nebo **clearerr** .
+**Rutina feof** (implementována jako funkce i jako makro) určuje, zda byl předán konec *datového proudu.* Po předání konce souboru vrátí operace čtení indikátor konce souboru, dokud není datový proud uzavřen nebo dokud [není převinnutí](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)nebo **clearerr** volán proti němu.
 
-Například pokud soubor obsahuje 10 bajtů a přečtete 10 bajtů ze souboru, **feof** vrátí 0, protože i když je ukazatel souboru na konci souboru, Nezkoušíte číst za koncem. Až se pokusíte přečíst jedenáctý bajt, **feof** vrátí nenulovou hodnotu.
+Například pokud soubor obsahuje 10 bajtů a číst 10 bajtů ze **souboru, feof** vrátí 0, protože i v případě, že ukazatel souboru je na konci souboru, jste se nepokusili číst za koncem. Teprve po pokusu o čtení 11bajt bajt **vrátí** nenulovou hodnotu.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,7 +71,7 @@ Například pokud soubor obsahuje 10 bajtů a přečtete 10 bajtů ze souboru, *
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -109,7 +113,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_feoftxt"></a>Vstup: crt_feof. txt
+## <a name="input-crt_feoftxt"></a>Vstup: crt_feof.txt
 
 ```Input
 Line one.
@@ -122,10 +126,10 @@ Line two.
 Number of bytes read = 19
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [ferror](ferror.md)<br/>

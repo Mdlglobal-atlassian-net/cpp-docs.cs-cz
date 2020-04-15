@@ -1,12 +1,17 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +47,16 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953155"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341680"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
-Extrahuje hodnotu exponentu argumentu s plovoucí desetinnou čárkou.
+Extrahuje hodnotu exponent argumentu s plovoucí desetinnou desetinnou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,38 +86,40 @@ float _logbf(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou tácem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**logb –** vrací hodnotu neposunutého exponentu *x* jako celé číslo se znaménkem, které je reprezentované jako hodnota s plovoucí desetinnou čárkou.
+**logb** vrátí nezaujatou hodnotu exponent *u x* jako podepsané celé číslo reprezentované jako hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **logb –** extrahuje exponenciální hodnotu argumentu s plovoucí desetinnou čárkou *x*, jako kdyby byl znak *x* reprezentován nekonečným rozsahem. Pokud je argument *x* denormalizovaný, je považován za normalizovaný.
+**Logb** funkce extrahovat exponenciální hodnotu argument s plovoucí desetinnou čárkou *x*, jako by *x* byly reprezentovány s nekonečný rozsah. Pokud argument *x* je denormalized, je zacházeno, jako by byly normalizovány.
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **logb –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **logb –** vždycky přebírá a vrací **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **logb,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **logb** vždy trvá a vrací **double**.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, ZASÁHNOUT|Žádné|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN,IND|Žádný|_DOMAIN|
+|± 0|NULAROZDĚLIT|_SING|
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_logb**|\<float. h >|
-|**logb**, **logbf**, **logbl**, **_logbf**|\<Math. h >|
+|**_logb**|\<float.h>|
+|**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

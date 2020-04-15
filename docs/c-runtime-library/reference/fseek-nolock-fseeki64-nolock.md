@@ -1,9 +1,11 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fseek_nolock
 - _fseeki64_nolock
+- _o__fseek_nolock
+- _o__fseeki64_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345738"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
-Přesune ukazatel na soubor do zadaného umístění.
+Přesune ukazatel souboru do určeného umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,22 +64,24 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
-*polohy*<br/>
-Počet bajtů od *počátku*
+*Posun*<br/>
+Počet bajtů od *počátku*.
 
-*zdroji*<br/>
+*Původu*<br/>
 Počáteční pozice.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Stejné jako [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md), v uvedeném pořadí.
+Stejné jako [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md), resp.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou neuzamykání verzí [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md)v uvedeném pořadí. Jedná se o shodné s [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md) s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Tyto funkce mohou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
+Tyto funkce jsou bez blokovací verze [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md), v uvedeném pořadí. Ty jsou identické s [fseek](fseek-fseeki64.md) a [_fseeki64](fseek-fseeki64.md) s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Tyto funkce mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -84,11 +89,11 @@ Tyto funkce jsou neuzamykání verzí [fseek](fseek-fseeki64.md) a [_fseeki64](f
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
 [rewind](rewind.md)<br/>

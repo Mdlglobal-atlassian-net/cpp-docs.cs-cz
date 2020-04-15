@@ -1,5 +1,5 @@
 ---
-title: Cheapptrlist – třída
+title: Třída CHeapPtrList
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrList
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245644"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326862"
 ---
-# <a name="cheapptrlist-class"></a>Cheapptrlist – třída
+# <a name="cheapptrlist-class"></a>Třída CHeapPtrList
 
-Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu haldy ukazatele.
+Tato třída poskytuje metody užitečné při vytváření seznamu ukazatelů haldy.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,26 +34,26 @@ class CHeapPtrList
 #### <a name="parameters"></a>Parametry
 
 *E*<br/>
-Typ objektu ukládaly ve třídě kolekce.
+Typ objektu, který má být uložen ve třídě kolekce.
 
-*Allocator –*<br/>
-Třída přidělení paměti pro použití. Výchozí hodnota je [ccrtallocator –](../../atl/reference/ccrtallocator-class.md).
+*Přidělování*<br/>
+Třída přidělení paměti, která má být používána. Výchozí hodnota je [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Konstruktor|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje konstruktor a je odvozena z metody [catllist –](../../atl/reference/catllist-class.md) a [cheapptrelementtraits –](../../atl/reference/cheapptrelementtraits-class.md) pro vytvoření objektu třídy kolekce ukládání ukazatelů haldy.
+Tato třída poskytuje konstruktor a odvozuje metody z [CAtlList](../../atl/reference/catllist-class.md) a [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) na podporu vytvoření třídy kolekce objektu ukládání haldy ukazatele.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Seznam CAtlList](../../atl/reference/catllist-class.md)
 
 `CHeapPtrList`
 
@@ -61,7 +61,7 @@ Tato třída poskytuje konstruktor a je odvozena z metody [catllist –](../../a
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList
 
 Konstruktor
 
@@ -76,11 +76,11 @@ Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.
+Velikost bloku je míra množství paměti přidělené při je požadováno nový prvek. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
-[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
-[CHeapPtrElementTraits – třída](../../atl/reference/cheapptrelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Třída CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Třída CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

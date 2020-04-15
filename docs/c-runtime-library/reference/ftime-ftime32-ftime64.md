@@ -1,10 +1,12 @@
 ---
 title: _ftime, _ftime32, _ftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ftime64
 - _ftime
 - _ftime32
+- _o__ftime32
+- _o__ftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: b8cc46a0a5470892e0bdfdcb0918c2757cdaf4c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4e06eec975f02744c4b49c1980383c2ab2338ddc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345574"
 ---
 # <a name="_ftime-_ftime32-_ftime64"></a>_ftime, _ftime32, _ftime64
 
-Získá aktuální čas. K dispozici jsou bezpečnější verze těchto funkcí; viz [_ftime_s, _ftime32_s, _ftime64_s](ftime-s-ftime32-s-ftime64-s.md).
+Získejte aktuální čas. K dispozici jsou bezpečnější verze těchto funkcí. viz [_ftime_s, _ftime32_s, _ftime64_s](ftime-s-ftime32-s-ftime64-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,34 +63,36 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Ukazatel na strukturu **_timeb**, **__timeb32**nebo **__timeb64** .
+Ukazatel na **strukturu _timeb**, **__timeb32**nebo **__timeb64.**
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_ftime** získá aktuální místní čas a uloží ji do struktury, na kterou odkazuje *timeptr*. Struktury **_timeb**, **__timeb32**a **__timeb64** jsou definovány v \<sys\\timeb. h >. Obsahují čtyři pole, která jsou uvedena v následující tabulce.
+Funkce **_ftime** získá aktuální místní čas a uloží jej do struktury, na kterou se vztahuje *timeptr*. Struktury **_timeb**, **__timeb32**a **__timeb64** \<jsou definovány v> sys\\timeb.h. Obsahují čtyři pole, která jsou uvedena v následující tabulce.
 
 |Pole|Popis|
 |-|-|
-|**dstflag**|Nenulové, pokud je letní čas v současnosti platný pro místní časové pásmo. (Viz [_tzset](tzset.md) pro vysvětlení, jak se určuje letní čas.)|
-|**millitm**|Zlomek sekundy v milisekundách.|
-|**čas**|Čas v sekundách od půlnoci (00:00:00), 1. ledna 1970, koordinovaný světový čas (UTC).|
-|**údaj**|Rozdíl v minutách, pohybování Westward, mezi časem UTC a místním časem. Hodnota **časového pásma** je nastavena z hodnoty globální proměnné **_timezone** (viz **_tzset**).|
+|**dstflag**|Nenulová, pokud letní čas je aktuálně v platnosti pro místní časové pásmo. (Vysvětlení, jak je určen letní čas, naleznete [_tzset.)](tzset.md)|
+|**mlýnek**|Zlomek sekundy v milisekundách.|
+|**Čas**|Čas v sekundách od půlnoci (00:00:00), 1.|
+|**Timezone**|Rozdíl v minutách, pohybující se na západ, mezi UTC a místním časem. Hodnota **časového pásma** je nastavena z hodnoty globální proměnné **_timezone** (viz **_tzset**).|
 
-Funkce **_ftime64** , která používá strukturu **__timeb64** , umožňuje, aby data vytváření souborů byla vyjádřena až 23:59:59, 31. prosince 3000, UTC; zatímco **_ftime32** představuje pouze kalendářní data 23:59:59 do 18. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+Funkce **_ftime64,** která používá **__timeb64** strukturu, umožňuje vyjádřit data vytvoření souboru až do 23:59:59, prosinec 31, 3000, UTC; vzhledem k tomu, **že _ftime32** představuje pouze data do 23:59:59 Leden 18, 2038, UTC. Půlnoc 1. ledna 1970 je dolní mez časového období pro všechny tyto funkce.
 
-Funkce **_ftime** je ekvivalentem **_ftime64**a **_timeb** obsahuje 64, pokud není definována **_USE_32BIT_TIME_T** , v takovém případě se stará chování projeví. **_ftime** používá 32ový čas a **_timeb** obsahuje 32-bit času.
+Funkce **_ftime** je ekvivalentní **_ftime64**a **_timeb** obsahuje 64bitový čas, pokud není **definována _USE_32BIT_TIME_T,** v takovém případě je staré chování v platnosti; **_ftime** používá 32bitový čas a **_timeb** obsahuje 32bitový čas.
 
-**_ftime** ověří své parametry. Pokud byl předán ukazatel s hodnotou null jako *timeptr*, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL**.
+**_ftime** ověří jeho parametry. Pokud je předán ukazatel null jako *timeptr*, funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce nastaví **errno** na **EINVAL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_ftime**|\<sys/Types. h > \<a sys/timeb. h >|
-|**_ftime32**|\<sys/Types. h > \<a sys/timeb. h >|
-|**_ftime64**|\<sys/Types. h > \<a sys/timeb. h >|
+|**_ftime**|\<sys/types.h> \<a sys/timeb.h>|
+|**_ftime32**|\<sys/types.h> \<a sys/timeb.h>|
+|**_ftime64**|\<sys/types.h> \<a sys/timeb.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -144,9 +149,9 @@ Daylight savings time flag (1 means Daylight time is in effect): 1
 The time is Mon Apr 28 11:08:54.230 2003
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

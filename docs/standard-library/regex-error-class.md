@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331872"
 ---
-# <a name="regexerror-class"></a>regex_error – třída
+# <a name="regex_error-class"></a>regex_error – třída
 
-Oznamuje chybný objekt basic_regex.
+Nahlásí špatný basic_regex objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +27,7 @@ class regex_error
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt výjimky vyvolaný pro hlášení chyby při konstrukci nebo použití `basic_regex` objektu.
+Třída popisuje objekt výjimky, který je vyvolán k hlášení `basic_regex` chyby v konstrukci nebo použití objektu.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -39,11 +39,11 @@ Třída popisuje objekt výjimky vyvolaný pro hlášení chyby při konstrukci 
 
 |Členská funkce|Popis|
 |-|-|
-|[code](#code)|Vrátí kód chyby.|
+|[Kód](#code)|Vrátí kód chyby.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> regulárního výrazu
+**Záhlaví:** \<regex>
 
 **Obor názvů:** std
 
@@ -82,7 +82,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="code"></a>regex_error:: Code
+## <a name="regex_errorcode"></a><a name="code"></a>regex_error::kód
 
 Vrátí kód chyby.
 
@@ -92,9 +92,9 @@ regex_constants::error_code code() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací hodnotu, která byla předána konstruktoru objektu.
+Členská funkce vrátí hodnotu, která byla předána konstruktoru objektu.
 
-## <a name="regex_error"></a>regex_error::regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error::regex_error
 
 Vytvoří objekt.
 
@@ -109,15 +109,15 @@ Kód chyby
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor vytvoří objekt, který obsahuje *chybu*hodnoty.
+Konstruktor vytvoří objekt, který obsahuje *chybu*hodnoty .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex>](../standard-library/regex.md)\
-[regex_constants – třída](../standard-library/regex-constants-class.md)\
-[\<regulární funkce >](../standard-library/regex-functions.md)\
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
-[\<operátory > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
-[regex_traits – třída](../standard-library/regex-traits-class.md)\
-[\<Regex > definice typedef](../standard-library/regex-typedefs.md)
+[\<regulární>](../standard-library/regex.md)\
+[regex_constants třída](../standard-library/regex-constants-class.md)\
+[\<funkce> regulárních výrazů](../standard-library/regex-functions.md)\
+[regex_iterator třída](../standard-library/regex-iterator-class.md)\
+[\<operátory> regulárních výrazů](../standard-library/regex-operators.md)\
+[regex_token_iterator třída](../standard-library/regex-token-iterator-class.md)\
+[třída regex_traits](../standard-library/regex-traits-class.md)\
+[\<regulární> typedefs](../standard-library/regex-typedefs.md)

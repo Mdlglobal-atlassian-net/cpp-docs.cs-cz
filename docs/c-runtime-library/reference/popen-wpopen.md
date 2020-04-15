@@ -1,10 +1,12 @@
 ---
 title: _popen, _wpopen
-description: Odkaz na funkce knihovny modulu runtime jazyka Microsoft (CRT) _popen a _wpopen.
-ms.date: 01/28/2020
+description: Odkaz na funkce _popen knihovny runtime (Microsoft _wpopenC) a .
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +49,19 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894317"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338504"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Vytvoří kanál a provede příkaz.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,33 +78,35 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametry
 
-\ *příkazu*
-Příkaz, který má být spuštěn.
+*Příkaz*\
+Příkaz, který má být proveden.
 
-\ *režimu*
+*Režimu*\
 Režim vráceného datového proudu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí datový proud přidružený k jednomu konci vytvořeného kanálu. Druhý konec kanálu je přidružený ke standardnímu vstupnímu nebo standardnímu výstupu příkazu vytvořenému příkazem. Funkce vrací **hodnotu null** u chyby. Pokud je chyba způsobená neplatným parametrem, je **errno** nastaven na **EINVAL**. Platné režimy najdete v části s poznámkami.
+Vrátí datový proud přidružený k jednomu konci vytvořeného kanálu. Druhý konec kanálu je spojen se standardním vstupem nebo standardním výstupem příkazu. Funkce vrátí **hodnotu NULL** při chybě. Pokud je chyba způsobena neplatným parametrem, **je errno** nastaveno na **EINVAL**. Platné režimy naleznete v části Poznámky.
 
-Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_popen** vytvoří kanál. Poté asynchronně spustí vytvořenou kopii procesoru příkazů a použije *příkaz* jako příkazový řádek. *Režim* řetězce znaků Určuje typ požadovaného přístupu, jak je uvedeno níže.
+Funkce **_popen** vytvoří potrubí. Potom asynchronně provede zplozenou kopii příkazového procesoru a použije *příkaz* jako příkazový řádek. *Režim* řetězce znaků určuje typ požadovaného přístupu následujícím způsobem.
 
 |Režim přístupu|Popis|
 |-|-|
-|**í**|Volající proces může přečíst standardní výstup příkazu vytvořený pomocí vráceného datového proudu.|
-|**"w"**|Volající proces může zapisovat do standardního vstupu příkazu vytvořeného pomocí vráceného datového proudu.|
-|**b**|Otevřete v binárním režimu.|
-|**š**|Otevřete v textovém režimu.|
+|**"r"**|Volající proces můžete číst zplodil příkazu standardní výstup pomocí vráceného datového proudu.|
+|**"w"**|Volající proces můžete zapisovat do standardního vstupu příkazu spawned pomocí vráceného datového proudu.|
+|**"b"**|Otevřít v binárním režimu.|
+|**"t"**|Otevřít v textovém režimu.|
 
 > [!NOTE]
-> Při použití v programu systému Windows vrátí funkce **_popen** neplatný ukazatel na soubor, který způsobí, že program přestane reagovat po neomezenou dobu. **_popen** funguje správně v konzolové aplikaci. Chcete-li vytvořit aplikaci systému Windows, která přesměruje vstup a výstup, viz téma [Vytvoření podřízeného procesu s přesměrovaným vstupem a výstupem](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) v Windows SDK.
+> Pokud je funkce **systému** Windows použita, vrátí funkce _popen neplatný ukazatel souboru, který způsobí, že program přestane reagovat neomezeně dlouho. **_popen** funguje správně v konzolové aplikaci. Chcete-li vytvořit aplikaci systému Windows, která přesměruje vstup a výstup, přečtěte si informace o [vytvoření podřízeného procesu s přesměrovanou vstupní a výstupní](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) sadou Windows VDK.
 
-**_wpopen** je verze **_popen**s velkým znakem; Argument *cesty* pro **_wpopen** je řetězec s velkým znakem. **_wpopen** a **_popen** se chovají identicky jinak.
+**_wpopen** je širokoznaková verze **_popen**; argument *cesty* k **_wpopen** je řetězec s širokým znakem. **_wpopen** a **_popen** se chovají stejně jinak.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -114,13 +119,13 @@ Funkce **_popen** vytvoří kanál. Poté asynchronně spustí vytvořenou kopii
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
-|**_wpopen**|\<stdio. h > nebo \<WCHAR. h >|
+|**_wpopen**|\<stdio.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-Tento výstup předpokládá, že existuje pouze jeden soubor v aktuálním adresáři, který má příponu názvu souboru `.c`.
+Tento výstup předpokládá, že v aktuálním adresáři `.c` je pouze jeden soubor, který má příponu názvu souboru.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -181,8 +186,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Procesy a\ řízení prostředí](../../c-runtime-library/process-and-environment-control.md)
+[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

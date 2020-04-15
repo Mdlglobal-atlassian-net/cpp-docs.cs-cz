@@ -1,9 +1,11 @@
 ---
 title: _get_daylight
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __daylight
 - _get_daylight
+- _o___daylight
+- _o__get_daylight
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0abab77b1429b263c7e5d84a6d395f0411ebf8a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956049"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345305"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
-Načte časový posun letního času v hodinách.
+Načte posun letního času v hodinách.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,20 +50,22 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametry
 
-*hodin*<br/>
-Posun v hodinách letního času uložení.
+*Hodin*<br/>
+Posun v hodinách letního času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
+Nula, pokud je úspěšná, nebo hodnota **errno,** pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_get_daylight** načítá počet hodin v letním čase jako celé číslo. Pokud je aktivní letní čas, je výchozím posunem jedna hodina (i když pár oblastí sleduje posun o dvě hodiny).
+Funkce **_get_daylight** načte počet hodin v letním čase jako celé číslo. Pokud letní čas je v platnosti, výchozí posun je jedna hodina (i když několik oblastí dodržovat dvouhodinový posun).
 
-Pokud je *počet hodin* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
+Pokud je *doba* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
 
-Doporučujeme použít tuto funkci namísto makra **_daylight** nebo zastaralé funkce **__daylight**.
+Doporučujeme použít tuto funkci namísto **_daylight** makra nebo funkce zastaralá **__daylight**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,11 +73,11 @@ Doporučujeme použít tuto funkci namísto makra **_daylight** nebo zastaralé 
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 
-Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

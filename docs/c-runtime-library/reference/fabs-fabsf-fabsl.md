@@ -1,10 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941484"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347541"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
-Vypočítá absolutní hodnotu argumentu s plovoucí desetinnou čárkou.
+Vypočítá absolutní hodnotu argumentu s plovoucí desetinnou desetinnou desetinnou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,35 +70,37 @@ long double fabsl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **fabs –** vrací absolutní hodnotu argumentu *x*. Nevrátila se žádná chybová zpráva.
+**Funkce fabs** vrátí absolutní hodnotu argumentu *x*. Neexistuje žádná chyba vrátit.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
+|± QNAN,IND|Žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-C++umožňuje přetížení, takže můžete volat přetížení **fabs –** , pokud zahrnete \<hlavičku cmath >. V programu v jazyce C **fabs –** vždycky přebírá a vrací **Double**.
+C++ umožňuje přetížení, takže můžete volat přetížení **fabs,** pokud zahrnete hlavičku \<cmath>. V programu C **fabs** vždy bere a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
+|Funkce|Povinná hlavička C|Povinná hlavička jazyka C++|
 |--------------|-----------------------|---------------------------|
-|**fabs –** , **fabsf –** , **fabsl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [ABS](abs-labs-llabs-abs64.md).
+Viz příklad pro [abs](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>

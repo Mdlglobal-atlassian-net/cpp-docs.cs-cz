@@ -1,8 +1,9 @@
 ---
 title: fwrite
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fwrite
+- _o_fwrite
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5bd6da3c8d16189f7ff0db744901e03513acc21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345394"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -49,29 +51,31 @@ size_t fwrite(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
+*Vyrovnávací paměti*<br/>
 Ukazatel na data, která mají být zapsána.
 
-*hodnota*<br/>
-Velikost položky (v bajtech)
+*Velikost*<br/>
+Velikost položky v bajtech.
 
-*výpočtu*<br/>
+*Počet*<br/>
 Maximální počet položek, které mají být zapsány.
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fwrite** vrátí počet úplných položek, které jsou skutečně napsány, což může být menší než *počet* , pokud dojde k chybě. Také, pokud dojde k chybě, nelze určit ukazatel pozice souboru. Pokud je buď *datový proud* nebo *vyrovnávací paměť* ukazatel s hodnotou null, nebo pokud je v režimu Unicode uveden lichý počet bajtů k zápisu, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
+**fwrite** vrátí počet zcela zapsaných položek, které mohou být menší než *počet,* pokud dojde k chybě. Také pokud dojde k chybě, indikátor pozice souboru nelze určit. Pokud je *datový proud* nebo *vyrovnávací paměť* ukazatelem null nebo pokud je v režimu Unicode zadán lichý počet bajtů, který má být zapsán, funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fwrite** zapisuje do výstupního *datového proudu*až do *počtu* položek, jejichž délka je *Velikost* z *vyrovnávací paměti* . Ukazatel na soubor přidružený ke *streamu* (pokud existuje) se zvýší o počet skutečně zapsaných bajtů. Pokud je *datový proud* otevřený v textovém režimu, jednotlivé řádkové kanály se nahradí dvojicí kanálů návratového řádku. Náhrada nemá na vrácenou hodnotu žádný vliv.
+Funkce **fwrite** zapisuje do *počtu* položek, *o velikosti* délky, z *vyrovnávací paměti* do výstupního *datového proudu*. Ukazatel souboru přidružený k *datovému proudu* (pokud existuje) se zintáží o počet skutečně zapsaných bajtů. Pokud je *datový proud* otevřen v textovém režimu, každý řádek je nahrazen dvojicí datového kanálu vozíku. Nahrazení nemá žádný vliv na vrácenou hodnotu.
 
-Když je *datový proud* otevřen v režimu překladu Unicode – například pokud je *datový proud* otevřen pomocí volání **fopen** a pomocí parametru režimu, který zahrnuje **CCS = Unicode**, **CCS = UTF-16LE**nebo **CCS = UTF-8**, nebo pokud je režim změněno na režim překladu Unicode pomocí **_setmode** a parametr režimu, který obsahuje **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**–*vyrovnávací paměť* je interpretována jako ukazatel na pole **wchar_t** , který obsahuje Data UTF-16. Pokus o zápis lichého počtu bajtů v tomto režimu způsobí chybu ověření parametru.
+Při otevření *datového proudu* v režimu překladu Unicode – například pokud je *datový proud* otevřen voláním **fopen** a pomocí parametru režimu, který zahrnuje **ccs=UNICODE**, **ccs=UTF-16LE**nebo **ccs=UTF-8**, nebo pokud je režim změněn na režim překladu Unicode pomocí **_setmode** a parametru režimu, který zahrnuje **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**–*vyrovnávací paměť* je interpretována jako ukazatel na pole **wchar_t,** které obsahuje data UTF-16. Pokus o zápis lichého počtu bajtů v tomto režimu způsobí chybu ověření parametru.
 
-Vzhledem k tomu, že tato funkce zamkne volající vlákno, je bezpečný pro přístup z více vláken. Neuzamykání verze naleznete v tématu **_fwrite_nolock**.
+Protože tato funkce uzamkne volající vlákno, je bezpečné pro přístup z více vláken. Neblokovací verze viz **_fwrite_nolock**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -79,15 +83,15 @@ Vzhledem k tomu, že tato funkce zamkne volající vlákno, je bezpečný pro p�
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [fread](fread.md).
+Viz příklad pro [fread](fread.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>
 [fread](fread.md)<br/>
 [_fwrite_nolock](fwrite-nolock.md)<br/>

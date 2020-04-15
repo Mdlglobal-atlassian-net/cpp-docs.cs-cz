@@ -1,10 +1,13 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346573"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Vynásobí dvě hodnoty dohromady, přidá třetí hodnotu a pak výsledek zaokrouhlí, aniž by došlo ke ztrátě přesnosti kvůli zaokrouhlení.
+Vynásobí dvě hodnoty dohromady, přidá třetí hodnotu a pak zaokrouhlí výsledek, aniž by došlo ke ztrátě přesnosti z důvodu zaokrouhlení zprostředkovatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,47 +84,49 @@ long double fmal(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-První hodnota, která se má vynásobit.
+*X*<br/>
+První hodnota násobit.
 
-*y*<br/>
-Druhá hodnota, která se má vynásobit.
+*Y*<br/>
+Druhá hodnota násobit.
 
-*z*<br/>
-Hodnota, která má být přidána.
+*Z*<br/>
+Hodnota přidat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí `(x * y) + z`. Návratová hodnota se pak zaokrouhluje pomocí aktuálního formátu zaokrouhlení.
+Vrací objekt `(x * y) + z`. Vrácená hodnota se pak zaokrouhlí pomocí aktuálního formátu zaokrouhlení.
 
-V opačném případě může vracet jednu z následujících hodnot:
+V opačném případě může vrátit jednu z následujících hodnot:
 
-|Problém|vrátit|
+|Problém|Vrátit|
 |-----------|------------|
-|*x* = nekonečno, *y* = 0 nebo<br /><br /> *x* = 0, *y* = nekonečno|NaN|
-|*x* nebo *y* = přesné ± nekonečno, *z* = nekonečno s opačným znaménkem|NaN|
-|*x* nebo *y* = NaN|NaN|
-|NOT (*x* = 0, *y*= nekonečno) a *z* = NaN<br /><br /> Ne (*x*= nekonečno, *y*= 0) a *z* = NaN|NaN|
-|Chyba rozsahu přetečení|± HUGE_VAL, ± HUGE_VALF nebo ± HUGE_VALL|
-|Chyba podtečení rozsahu|správná hodnota, po zaokrouhlení.|
+|*x* = INFINITY, *y* = 0 nebo<br /><br /> *x* = 0, *y* = NEKONEČNO|Není číslo|
+|*x* nebo *y* = přesné ± INFINITY, *z* = INFINITY s opačným znaménkem|Není číslo|
+|*x* nebo *y* = NaN|Není číslo|
+|ne (*x* = 0, *y*= neurčitý) a *z* = NaN<br /><br /> ne (*x*= neurčitý, *y*= 0) a *z* = NaN|Není číslo|
+|Chyba rozsahu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
+|Chyba rozsahu podtečení|správnou hodnotu po zaokrouhlení.|
 
-Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
+Chyby jsou hlášeny podle _matherr [.](matherr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **FMA** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **FMA** vždycky přebírá a vrací **Double**.
+Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **fma,** které take a return **float** a **dlouhé** **dvojité** typy. V programu C **fma** vždy trvá a vrací **double**.
 
-Tato funkce vypočítá hodnotu, jako by byla převedena na nekonečnou přesnost, a pak zaokrouhlí konečný výsledek.
+Tato funkce vypočítá hodnotu, jako by byla přijata na nekonečnou přesnost a pak zaokrouhlí konečný výsledek.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf –** , **fmal**|\<Math. h >|\<cmath >|
+|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

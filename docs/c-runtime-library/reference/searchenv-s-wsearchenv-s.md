@@ -1,9 +1,11 @@
 ---
 title: _searchenv_s, _wsearchenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsearchenv_s
 - _searchenv_s
+- _o__searchenv_s
+- _o__wsearchenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332404"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
-Vyhledá soubor pomocí cest prostředí. Tyto verze [_searchenv, _wsearchenv](searchenv-wsearchenv.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Hledá soubor pomocí cest prostředí. Tyto verze [_searchenv, _wsearchenv](searchenv-wsearchenv.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,45 +87,47 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Bitmap*<br/>
-Název souboru, který se má vyhledat
+*Název_souboru*<br/>
+Název souboru, který chcete vyhledat.
 
-*název_proměnné*<br/>
-Prostředí, které se má hledat
+*název var*<br/>
+Prostředí k vyhledávání.
 
-*pathname*<br/>
-Uložte úplnou cestu do vyrovnávací paměti.
+*Cesta*<br/>
+Vyrovnávací paměť pro uložení úplné cesty.
 
 *numberOfElements*<br/>
-Velikost vyrovnávací paměti pro *cestu* .
+Velikost vyrovnávací paměti *cesty.*
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; chybový kód při selhání.
+Nula v případě úspěchu; kód chyby při selhání.
 
-Pokud *filename* je prázdný řetězec, návratová hodnota je **ENOENT**.
+Pokud je *název souboru* prázdný řetězec, vrácená hodnota je **ENOENT**.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*Bitmap*|*název_proměnné*|*pathname*|*numberOfElements*|Návratová hodnota|Obsah *cesty*|
+|*Název_souboru*|*název var*|*Cesta*|*numberOfElements*|Návratová hodnota|Obsah *cesty*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|Jakýmikoli|Jakýmikoli|**NULL**|Jakýmikoli|**EINVAL**|není k dispozici|
-|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|nezměněno|
-|Jakýmikoli|Jakýmikoli|Jakýmikoli|<= 0|**EINVAL**|nezměněno|
+|jakékoli|jakékoli|**Null**|jakékoli|**EINVAL**|neuvedeno|
+|**Null**|jakékoli|jakékoli|jakékoli|**EINVAL**|se nezměnilo|
+|jakékoli|jakékoli|jakékoli|<= 0|**EINVAL**|se nezměnilo|
 
-Pokud dojde k některé z těchto chybových podmínek, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
+Pokud dojde k některé z těchto chybových stavů, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce nastavit **errno** na **EINVAL** a vrátit **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Rutina **_searchenv_s** vyhledává cílový soubor v zadané doméně. Proměnná *název_proměnné* může být libovolné prostředí nebo uživatelsky definovaná proměnná, která určuje seznam cest adresářů, jako je například **path**, **lib**a **include**. Vzhledem k tomu, že **_searchenv_s** rozlišuje velká a malá písmena, by měl pole *název_proměnné* odpovídat velikosti proměnné prostředí. Pokud hodnota *název_proměnné* neodpovídá názvu proměnné prostředí definované v prostředí procesu, vrátí funkce hodnotu nula a proměnná *cesty* zůstane beze změny.
+Rutina **_searchenv_s** vyhledá cílový soubor v zadané doméně. Proměnná *varname* může být libovolné prostředí nebo uživatelem definovaná proměnná, která určuje seznam cest adresáře, například **PATH**, **LIB**a **INCLUDE**. Vzhledem k tomu, **že _searchenv_s** rozlišuje malá *a velká písmena, měl* by název var odpovídat velikosti písmen proměnné prostředí. Pokud *varname* neodpovídá názvu proměnné prostředí definované v prostředí procesu, funkce vrátí nulu a proměnná *cesty* se nezmění.
 
-Rutina nejprve vyhledá soubor v aktuálním pracovním adresáři. Pokud soubor nenajde, zobrazí se vedle adresářů určených proměnnou prostředí. Pokud je cílový soubor v jednom z těchto adresářů, nově vytvořená cesta je zkopírována do *cesty*. Pokud soubor *filename* není nalezen, *cesta* obsahuje prázdný řetězec zakončený hodnotou null.
+Rutina nejprve vyhledá soubor v aktuálním pracovním adresáři. Pokud soubor nenajde, zobrazí se dále prostřednictvím adresářů určených proměnnou prostředí. Pokud je cílový soubor v jednom z těchto adresářů, nově vytvořená cesta se zkopíruje do *cesty*. Pokud soubor *názvu souboru* nebyl nalezen, *cesta* obsahuje prázdný řetězec s ukončeným hodnotou null.
 
-Velikost vyrovnávací paměti pro *cestu* by měla být aspoň **_MAX_PATH** znaků dlouhá, aby se vešla úplná délka názvu konstruované cesty. V opačném případě může **_searchenv_s** přetečení vyrovnávací paměti *cesty* , což vede k neočekávanému chování.
+Vyrovnávací paměť *cesty* by měla být alespoň **_MAX_PATH** znaky dlouhé, aby se přizpůsobily celé délce názvu postavené cesty. V opačném případě **_searchenv_s** může přetečit vyrovnávací paměť *cesty,* což vede k neočekávanému chování.
 
-**_wsearchenv_s** je **_searchenv_s**verze s velkým znakem; argumenty **_wsearchenv_s** jsou řetězce s libovolným znakem. **_wsearchenv_s** a **_searchenv_s** se chovají stejně jinak.
+**_wsearchenv_s** je širokoznaková verze **_searchenv_s**; argumenty, které mají **_wsearchenv_s,** jsou řetězce s širokými znaky. **_wsearchenv_s** a **_searchenv_s** se chovají stejně jinak.
 
-V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -135,9 +140,9 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
-|**_wsearchenv_s**|\<Stdlib. h > nebo \<WCHAR. h >|
+|**_wsearchenv_s**|\<stdlib.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -175,9 +180,9 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
+[Řízení adresářů](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>

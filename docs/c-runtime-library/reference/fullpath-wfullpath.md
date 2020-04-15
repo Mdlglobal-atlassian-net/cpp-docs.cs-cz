@@ -1,9 +1,11 @@
 ---
 title: _fullpath, _wfullpath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fullpath
 - _wfullpath
+- _o__fullpath
+- _o__wfullpath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0910cf4f39e00be84e683cd6f3b9afbeb3f2a749
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345488"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -62,37 +65,39 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parametry
 
 *absPath*<br/>
-Ukazatel na vyrovnávací paměť obsahující absolutní nebo úplný název cesty nebo **hodnotu null**.
+Ukazatel na vyrovnávací paměť obsahující absolutní nebo úplný název cesty nebo **NULL**.
 
 *relPath*<br/>
-Název relativní cesty
+Relativní název cesty.
 
-*maxLength*<br/>
-Maximální délka vyrovnávací paměti názvu absolutní cesty (*absPath*). Tato délka je v bajtech pro **_fullpath** , ale v různých znacích (**wchar_t**) pro **_wfullpath**.
+*Maxlength*<br/>
+Maximální délka vyrovnávací paměti absolutního názvu cesty (*absPath*). Tato délka je v bajtů pro **_fullpath,** ale v široké znaky (**wchar_t**) pro **_wfullpath**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na vyrovnávací paměť obsahující absolutní název cesty (*absPath*). Pokud se vyskytne chyba (například pokud hodnota předaná v *relPath* zahrnuje písmeno jednotky, které není platné nebo se nedá najít, nebo pokud je délka vytvořeného absolutního názvu cesty (*absPath*) větší než hodnota *MaxLength*), vrátí funkce **Hodnota null**.
+Každá z těchto funkcí vrátí ukazatel na vyrovnávací paměť obsahující absolutní název cesty (*absPath*). Pokud dojde k chybě (například pokud hodnota předaná v *relPath* obsahuje písmeno jednotky, které není platné nebo nelze najít, nebo pokud je délka vytvořeného absolutního názvu cesty (*absPath*) větší než *maxLength*), vrátí funkce **hodnotu NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_fullpath** rozbalí název relativní cesty v *relPath* k jeho plně kvalifikované nebo absolutní cestě a uloží tento název v *absPath*. Pokud má AbsPath **hodnotu null** **, použije se k** přidělení vyrovnávací paměti dostatečné délky pro název cesty. Je odpovědností volajícího uvolnit tuto vyrovnávací paměť. Relativní cesta název určuje cestu k jinému umístění z aktuálního umístění (například aktuální pracovní adresář: "."). Absolutní cesta název je rozšíření názvu relativní cesty, které uvádí celou cestu nutnou k dosažení požadovaného umístění z kořenového adresáře systému souborů. Na rozdíl od **_makepath**se dá **_fullpath** použít k získání absolutní cesty pro relativní cesty (*relPath*), které zahrnují "./" nebo ".. v jejich názvech.
+Funkce **_fullpath** rozšíří relativní název cesty v *relPath* na plně kvalifikovanou nebo absolutní cestu a uloží tento název v *absPath*. Pokud *absPath* je **NULL**, **malloc** se používá k přidělení vyrovnávací paměti dostatečné délky pro uložení názvu cesty. Je odpovědností volajícího k uvolnění této vyrovnávací paměti. Relativní název cesty určuje cestu k jinému umístění z aktuálního umístění (například aktuální pracovní adresář: "."). Absolutní název cesty je rozšíření relativní název cesty, který uvádí celou cestu potřebnou k dosažení požadovaného umístění z kořenového adresáře systému souborů. Na rozdíl od **_makepath**lze **_fullpath** získat absolutní název cesty pro relativní cesty (*relPath),* které obsahují "./" nebo ".. /" na jejich jména.
 
-Například chcete-li použít rutiny run-time jazyka C, musí aplikace zahrnovat hlavičkové soubory, které obsahují deklarace pro rutiny. Každý soubor hlaviček include obsahuje odkazy na umístění souboru relativním způsobem (z pracovního adresáře aplikace):
+Chcete-li například použít rutiny c run-time, aplikace musí obsahovat soubory hlaviček, které obsahují deklarace pro rutiny. Každý soubor záhlaví obsahuje příkaz odkazuje na umístění souboru relativním způsobem (z pracovního adresáře aplikace):
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <stdlib.h>
 ```
 
-v případě, že absolutní cesta (skutečné umístění systému souborů) souboru může být:
+pokud absolutní cesta (skutečné umístění systému souborů) souboru může být:
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která se právě používá. **_wfullpath** je **_fullpath**verze s velkým znakem; řetězcové argumenty, které se mají **_wfullpath** , jsou řetězce s libovolným znakem. **_wfullpath** a **_fullpath** se chovají stejně, s výjimkou toho, že **_wfullpath** zpracovává řetězce vícebajtových znaků.
+**_fullpath** podle potřeby automaticky zpracovává argumenty vícebajtových řetězců a rozpozná se sekvence vícebajtových znaků podle aktuálně používáné vícebajtové znakové stránky. **_wfullpath** je širokoznaková verze **_fullpath**; argumenty řetězce, které **mají _wfullpath,** jsou řetězce s širokými znaky. **_wfullpath** a **_fullpath** se chovají stejně s tím rozdílem, že **_wfullpath** nezpracovává vícebajtové řetězce znaků.
 
-Pokud jsou definovány obě **_DEBUG** a **_CRTDBG_MAP_ALLOC** , volání **_fullpath** a **_wfullpath** jsou nahrazena voláními **_fullpath_dbg** a **_wfullpath_dbg** , aby bylo možné ladit přidělení paměti. Další informace najdete v tématu [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Pokud jsou definovány **_DEBUG** a **_CRTDBG_MAP_ALLOC,** volání **_fullpath** a **_wfullpath** jsou nahrazeny voláními **_fullpath_dbg** a **_wfullpath_dbg,** aby bylo možné ladit přidělení paměti. Další informace naleznete [v tématu _fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md), pokud *MAXLEN* je menší nebo rovno 0. Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
+Tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md), pokud *je hodnota maxlen* menší nebo rovna 0. Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu NULL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -100,16 +105,16 @@ Tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v té
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Pokud má vyrovnávací paměť AbsPath **hodnotu null**, **_fullpath** [zavolá metodu](malloc.md) pro přidělení vyrovnávací paměti a ignoruje argument *MaxLength* . Je zodpovědností volajícího [uvolnit](free.md)tuto vyrovnávací paměť (podle potřeby). Pokud argument *relPath* určuje diskovou jednotku, bude aktuální adresář této jednotky kombinován s cestou.
+Pokud je vyrovnávací paměť *absPath* **null**, **_fullpath** volání [malloc](malloc.md) přidělit vyrovnávací paměti a ignoruje *argument maxLength.* Je odpovědností volajícího navrátit tuto vyrovnávací paměť (pomocí [free)](free.md)podle potřeby. Pokud argument *relPath* určuje diskovou jednotku, bude aktuální adresář této jednotky kombinován s cestou.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
-|**_wfullpath**|\<Stdlib. h > nebo \<WCHAR. h >|
+|**_wfullpath**|\<stdlib.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -146,7 +151,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

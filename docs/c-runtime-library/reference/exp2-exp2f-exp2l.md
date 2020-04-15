@@ -1,10 +1,13 @@
 ---
 title: exp2, exp2f, exp2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - exp2
 - exp2f
 - exp2l
+- _o_exp2
+- _o_exp2f
+- _o_exp2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5df1a216b4565f013a4c42b4ef4369b5b7f9b04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941567"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347586"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Hodnoty COMPUTE 2 byly vyvolány na zadanou hodnotu.
+Vypočítá 2 aktivována na zadanou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,37 +74,39 @@ long double exp2l(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota exponentu
+*X*<br/>
+Hodnota exponentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí exponent základní-2 třídy *x*, tj. 2<sup>x</sup>. V opačném případě vrátí jednu z následujících hodnot:
+Pokud je úspěšná, vrátí hodnotu base-2 *x*, tedy 2<sup>x</sup>. V opačném případě vrátí jednu z následujících hodnot:
 
-|Problém|vrátit|
+|Problém|Vrátit|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* = – nekonečno|+0|
-|*x* = + nekonečno|\+ NEKONEČNO|
-|*x* = NaN|NaN|
-|Chyba rozsahu přetečení|\+ HUGE_VAL, + HUGE_VALF nebo + HUGE_VALL|
-|Chyba podtečení rozsahu|Správný výsledek, po zaokrouhlení|
+|*x* = -NEKONEČNO|+0|
+|*x* = +INFINITY|+NEKONEČNO|
+|*x* = NaN|Není číslo|
+|Chyba rozsahu přetečení|+HUGE_VAL, +HUGE_VALF nebo +HUGE_VALL|
+|Chyba rozsahu podtečení|Správný výsledek po zaokrouhlení|
 
-Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
+Chyby jsou hlášeny podle _matherr [.](matherr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **exp2 –** , která přijímají a vracejí typ **float** a **Long Double** . V programu v jazyce C **exp2 –** vždycky přebírá a vrací **Double**.
+Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **exp2,** které take a return **float** a **long double** typy. V programu C **exp2** vždy trvá a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička jazyka C|C++hlaviček|
+|Rutina|Hlavička C|Hlavička C++|
 |-------------|--------------|------------------|
-|**exp**, **expf –** , **Expl**|\<Math. h >|\<cmath >|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

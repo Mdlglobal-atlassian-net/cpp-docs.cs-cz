@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
+- _o__mbsnbset_s
+- _o__mbsnbset_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 7addd7e053816c462ae430443506445b878464a0
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81339013"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Nastaví prvních **n** bajtů řetězce vícebajtových znaků na zadaný znak. Tyto verze [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Nastaví první **n** bajtů vícebajtového znakového řetězce na zadaný znak. Tyto verze [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,20 +85,20 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Řetězec, který má být změněn.
 
-*hodnota*<br/>
-Velikost vyrovnávací paměti pro řetězce.
+*Velikost*<br/>
+Velikost vyrovnávací paměti řetězce.
 
-*r*<br/>
-Nastavení s jedním bajtem nebo vícebajtovým znakem.
+*C*<br/>
+Jednobajtové nebo vícebajtové znakové nastavení.
 
-*výpočtu*<br/>
+*Počet*<br/>
 Počet bajtů, které mají být nastaveny.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -103,17 +106,19 @@ Nula v případě úspěchu; v opačném případě kód chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsnbset_s** a **_mbsnbset_s_l** nastaví maximálně první *počet* bajtů *str* na *c*. Pokud je *počet* větší než délka *str*, místo funkce *Count*se použije délka *str* . Pokud *c* je vícebajtový znak a nelze jej nastavit zcela na poslední bajt, který je určen podle *Count*, je poslední bajt doplněn prázdným znakem. **_mbsnbset_s** a **_mbsnbset_s_l** neumísťují ukončující hodnotu null na konci *str*.
+Funkce **_mbsnbset_s** a **_mbsnbset_s_l** nastavují maximálně první *počet* bajtů *str* až *c*. Pokud *je počet* větší než délka *str*, použije se místo *počtu*délka *str* . Pokud *c* je vícebajtový znak a nelze nastavit zcela do posledního bajtu, který je určen *count*, poslední bajt je doplněn prázdným znakem. **_mbsnbset_s** a **_mbsnbset_s_l** neumisťují ukončující null na konec *str*.
 
-**_mbsnbset_s** a **_mbsnbset_s_l** se podobají **_mbsnset**, s tím rozdílem, že nastavují bajty *Count* spíše než *počet* znaků *jazyka c*.
+**_mbsnbset_s** a **_mbsnbset_s_l** se podobají **_mbsnset**, s tím rozdílem, že nastavují *počet* bajtů spíše než *počet* znaků *c*.
 
-Pokud má str **hodnotu null** nebo je *počet* nula, tato funkce vygeneruje výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**. Kromě toho, pokud *c* není platný vícebajtový znak, je **errno** nastaven na **EINVAL** a místo toho se použije místo.
+Pokud *str* je **NULL** nebo *count* je nula, tato funkce generuje neplatný parametr výjimku, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**. Také pokud *c* není platný vícebajtový znak, **errno** je nastavena na **EINVAL** a místo toho se použije mezera.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze **_mbsnbset_s** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze **_mbsnbset_s_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí, který je předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v _wsetlocale setlocale.](setlocale-wsetlocale.md) Verze **_mbsnbset_s** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; **verze _mbsnbset_s_l** je identická s tím rozdílem, že místo toho používá parametr národního prostředí, který je předán. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky, takže eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky a tím eliminovat potřebu zadat argument velikosti. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -126,10 +131,10 @@ Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť po
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbset_s**|\<Mbstring. h >|
-|**_mbsnbset_s_l**|\<Mbstring. h >|
+|**_mbsnbset_s**|\<mbstring.h>|
+|**_mbsnbset_s_l**|\<mbstring.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -155,9 +160,9 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

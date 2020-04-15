@@ -1,5 +1,5 @@
 ---
-title: IAtlAutoThreadModule Class
+title: Třída IAtlAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: f65ce43f3e88e1bbff0d2fc012b4ca75d77efc80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330076"
 ---
-# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule Class
+# <a name="iatlautothreadmodule-class"></a>Třída IAtlAutoThreadModule
 
-Tato třída reprezentuje rozhraní pro `CreateInstance` metoda.
+Tato třída představuje rozhraní `CreateInstance` metody.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,12 +29,12 @@ __interface IAtlAutoThreadModule
 
 ## <a name="remarks"></a>Poznámky
 
-Třída [catlautothreadmodulet –](../../atl/reference/catlautothreadmodulet-class.md) je odvozena z `IAtlAutoThreadModule`, použije se k poskytnutí ověřovacího kódu pro vytvoření objektu a načítání ukazatel rozhraní.
+Třída [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) je `IAtlAutoThreadModule`odvozena od , pomocí ji poskytnout kód pro vytvoření objektu a načítání ukazatele rozhraní.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

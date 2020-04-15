@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126445"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336808"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory – třída
 
-Výjimka, která je vyvolána, když je metoda neúspěšná z důvodu nedostatku paměti systému nebo zařízení.
+Výjimka, která je vyvolána při selhání metody z důvodu nedostatku systémové nebo paměti zařízení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,9 +29,9 @@ class out_of_memory : public runtime_exception;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[out_of_memory – konstruktor](#ctor)|Inicializuje novou instanci třídy `out_of_memory`.|
+|[konstruktor out_of_memory](#ctor)|Inicializuje novou instanci třídy. `out_of_memory`|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -43,10 +43,11 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt. h
+**Záhlaví:** amprt.h
 
-**Obor názvů:** Concurrency
-## <a name="ctor"></a>out_of_memory
+**Obor názvů:** Souběžnost
+
+## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
 
 Inicializuje novou instanci třídy.
 
@@ -62,12 +63,12 @@ out_of_memory () throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popis chyby
+Popis chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová instance třídy `out_of_memory`.
+Nová instance třídy. `out_of_memory`
 
 ## <a name="see-also"></a>Viz také
 
-[Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Obor názvů souběžnosti (C++ AMP)](concurrency-namespace-cpp-amp.md)

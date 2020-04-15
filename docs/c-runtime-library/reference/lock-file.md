@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342110"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Zamkne objekt **File** , aby zajistil konzistenci pro vlákna přistupující k objektu **souboru** současně.
+Uzamkne objekt **FILE,** aby byla zajištěna konzistence pro vlákna, která přistupují k objektu **FILE** současně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*souborů*<br/>
+*Soubor*<br/>
 Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_lock_file** zamkne objekt **File** určený *souborem*. Podkladový soubor není uzamčen nástrojem **_lock_file**. K uvolnění zámku souboru použijte [_unlock_file](unlock-file.md) . Volání **_lock_file** a **_unlock_file** musí být ve vlákně shodná.
+Funkce **_lock_file** uzamkne objekt **FILE** určený *souborem*. Základní soubor není uzamčen **_lock_file**. Pomocí [_unlock_file](unlock-file.md) uvolněte zámek souboru. Volání **_lock_file** a **_unlock_file** musí být spárována ve vlákně.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -59,7 +63,7 @@ Funkce **_lock_file** zamkne objekt **File** určený *souborem*. Podkladový so
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

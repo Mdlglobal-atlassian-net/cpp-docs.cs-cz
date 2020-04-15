@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338165"
 ---
 # <a name="rand"></a>rand
 
-Vygeneruje pseudonáhodných číslo pomocí dobře známého a plně reprodukovatelného algoritmu. K dispozici je programově zabezpečená verze této funkce; viz [rand_s](rand-s.md). Čísla generovaná pomocí funkce **Rand** nejsou kryptograficky zabezpečena. Pro kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně v C++ [ \<části náhodný >](../../standard-library/random.md).
+Generuje pseudonáhodné číslo pomocí známého a plně reprodukovatelného algoritmu. Je k dispozici programově bezpečnější verze této funkce. viz [rand_s](rand-s.md). Čísla generovaná **randem** nejsou kryptograficky zabezpečená. Pro více kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně Jazyka C++ v [ \<náhodném>](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,21 +50,23 @@ int rand( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Rand** Vrátí pseudonáhodných číslo, jak je popsáno výše. Nevrátila se žádná chybová zpráva.
+**rand** vrátí pseudonáhodné číslo, jak je popsáno výše. Neexistuje žádná chyba vrátit.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **Rand** vrátí celé číslo pseudonáhodných v rozsahu 0 až **RAND_MAX** (32767). Před voláním funkce **Rand**použijte funkci [srand](srand.md) k osazení generátoru pseudonáhodných.
+Funkce **rand** vrátí pseudonáhodné celé číslo v rozsahu 0 až **RAND_MAX** (32767). Použijte funkci [srand](srand.md) k osivu pseudogenerátoru náhodných čísel před voláním **rand**.
 
-Funkce **NÁHČÍSLO** vygeneruje dobře známou sekvenci a není vhodná pro použití jako kryptografická funkce. Pro kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně v C++ [ \<části náhodný >](../../standard-library/random.md). Informace o tom, co je pro **funkci NÁHČÍSLO** chybné \<, a o tom, jak náhodná > řeší tyto nedostatky, najdete v tomto videu s názvem [Rand považovaný za škodlivý](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+Funkce **rand** generuje známou sekvenci a není vhodná pro použití jako kryptografická funkce. Pro více kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně Jazyka C++ v [ \<náhodném>](../../standard-library/random.md). Informace o tom, co je špatného **na rand** a jak \<náhodné> řeší tyto nedostatky, viz toto video s názvem [rand považován za škodlivý](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**rand**|\<stdlib.h>|
+|**Rand**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -134,8 +138,8 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>
 [rand_s](rand-s.md)<br/>

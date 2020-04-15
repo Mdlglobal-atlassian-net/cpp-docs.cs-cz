@@ -1,9 +1,11 @@
 ---
 title: _cgets_s, _cgetws_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cgetws_s
 - _cgets_s
+- _o__cgets_s
+- _o__cgetws_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b4871ff2c362e2c6cbe37be6a31bde4e6e258709
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333550"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
-Získá řetězec znaků z konzoly. Tyto verze [_cgets a _cgetws](../../c-runtime-library/cgets-cgetws.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá řetězec znaku z konzoly. Tyto verze [_cgets a _cgetws](../../c-runtime-library/cgets-cgetws.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,36 +77,38 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
-Umístění úložiště pro data
+*Vyrovnávací paměti*<br/>
+Umístění úložiště pro data.
 
 *numberOfElements*<br/>
-Velikost vyrovnávací paměti v jednobajtových nebo velkých znacích, což je také maximální počet znaků, které mají být čteny.
+Velikost vyrovnávací paměti v jednobajtové nebo široké znaky, což je také maximální počet znaků, které mají být přečteny.
 
 *pSizeRead*<br/>
-Počet znaků, které jsou ve skutečnosti čteny.
+Počet znaků skutečně číst.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota je v případě úspěchu nulová. v opačném případě kód chyby, pokud dojde k selhání.
+Vrácená hodnota je nula, pokud je úspěšná; v opačném případě kód chyby, pokud dojde k chybě.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|Vrátit|Obsah *vyrovnávací paměti*|
+|*Vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|Vrátit|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|není k dispozici|
-|není **null**|nula|Jakýmikoli|**EINVAL**|Neupraveno|
-|není **null**|Jakýmikoli|**PLATNOST**|**EINVAL**|řetězec s nulovou délkou|
+|**Null**|jakékoli|jakékoli|**EINVAL**|neuvedeno|
+|není **null**|nula|jakékoli|**EINVAL**|nezměněno|
+|není **null**|jakékoli|**Null**|**EINVAL**|řetězec nulové délky|
 
 ## <a name="remarks"></a>Poznámky
 
-**_cgets_s** a **_cgetws_s** čtou z konzoly řetězec a do *vyrovnávací paměti*kopíruje řetězec (s ukončovacím znakem null). **_cgetws_s** je verze funkce s velkým znakem. Kromě velikosti znaku je chování těchto dvou funkcí stejné. Maximální velikost řetězce, který se má načíst, se předává jako parametr *numberOfElements* . Tato velikost by měla obsahovat znak navíc pro ukončující hodnotu null. Skutečný počet čtených znaků je umístěný v *pSizeRead*.
+**_cgets_s** a **_cgetws_s** číst řetězec z konzoly a zkopírujte řetězec (s zakončením null) do *vyrovnávací paměti*. **_cgetws_s** je široká znaková verze funkce; velikost i velikost i znaku, chování těchto dvou funkcí je identické. Maximální velikost řetězce, který má být přečten, je předána jako parametr *numberOfElements.* Tato velikost by měla obsahovat další znak pro ukončující null. Skutečný počet přečtených znaků je umístěn v *pSizeRead*.
 
-Pokud během operace nebo při ověřování parametrů dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí **EINVAL** .
+Pokud dojde k chybě během operace nebo při ověřování parametrů, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, **errno** je nastavena na **EINVAL** a **EINVAL** je vrácena.
 
-V C++nástroji je použití těchto funkcí zjednodušeno pomocí přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky, čímž eliminují nutnost zadat argument velikosti a můžou automaticky nahradit starší a méně zabezpečené funkce jejich novějšími, bezpečnějšími protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky, čímž se eliminuje potřeba zadat argument velikost a mohou automaticky nahradit starší, méně zabezpečené funkce s jejich novější, bezpečnější protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -115,12 +120,12 @@ Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť po
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cgets_s**|\<conio. h >|
-|**_cgetws_s**|\<conio. h > nebo \<wchar. h >|
+|**_cgets_s**|\<conio.h>|
+|**_cgetws_s**|\<conio.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

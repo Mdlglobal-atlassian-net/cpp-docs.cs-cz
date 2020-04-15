@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 287cbd8bc9cc567a4a0d5b9505d57098197bc545
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442917"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342179"
 ---
 # <a name="_lfind"></a>_lfind
 
-Provede lineární hledání zadaného klíče. K dispozici je bezpečnější verze této funkce; viz [_lfind_s](lfind-s.md).
+Provede lineární hledání zadaného klíče. K dispozici je bezpečnější verze této funkce. viz [_lfind_s](lfind-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,34 +60,36 @@ void *_lfind(
 Objekt, který chcete vyhledat.
 
 *base*<br/>
-Ukazatel na základ dat hledání.
+Ukazatel na základnu vyhledávacích dat.
 
-*Automatické*<br/>
+*Číslo*<br/>
 Počet prvků pole.
 
-*Délk*<br/>
+*Šířka*<br/>
 Šířka prvků pole.
 
-*porovnán*<br/>
-Ukazatel na srovnávací rutinu. První parametr je ukazatel na klíč pro hledání. Druhý parametr je ukazatel na prvek pole, který má být porovnán s klíčem.
+*Porovnat*<br/>
+Ukazatel na srovnávací rutinu. První parametr je ukazatel na klíč pro vyhledávání. Druhý parametr je ukazatel na prvek pole, který má být porovnán s klíčem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je klíč nalezen, **_lfind** vrátí ukazatel na prvek pole na *bázi Base* , který odpovídá *klíči*. Pokud klíč nebyl nalezen, **_lfind** vrátí **hodnotu null**.
+Pokud je klíč nalezen, **_lfind** vrátí ukazatel na prvek pole na *základně,* který odpovídá *klíči*. Pokud klíč nebyl nalezen, **vrátí _lfind** **hodnotu NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_lfind** provede lineární hledání *klíč* hodnoty v poli *číselných* prvků, přičemž každý z nich má *šířku* . Na rozdíl od **bSearch**nevyžaduje **_lfind** pole k řazení. *Základní* argument je ukazatel na základ pole, které má být prohledáno. Argument *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovnává dva prvky pole a vrátí hodnotu určující jejich relaci. **_lfind** volá rutinu *porovnání* jednou nebo vícekrát během hledání a předá ukazatel na dva prvky pole při každém volání. Rutina *porovnání* musí porovnat prvky a vracet nenulové hodnoty (což znamená, že prvky jsou rozdílné) nebo 0 (což znamená, že prvky jsou identické).
+Funkce **_lfind** provádí lineární hledání *klíče* hodnoty v poli *číselných* prvků, každý z *šířky* bajtů. Na rozdíl od **bsearch** **_lfind** nevyžaduje řazení pole. *Základní* argument je ukazatel na základnu pole, které má být prohledáno. Argument *porovnání* je ukazatel na rutinu dodanou uživatelem, která porovnává dva prvky pole a pak vrátí hodnotu určující jejich vztah. **_lfind** volání *porovnání* rutiny jednou nebo vícekrát během hledání, předávání ukazatelů na dva prvky pole na každé volání. Porovnání *compare* rutina musí porovnat prvky a potom vrátit nenulovou (což znamená, že prvky jsou různé) nebo 0 (což znamená, že prvky jsou identické).
 
-Tato funkce ověří své parametry. Pokud je **hodnota** *Compare*, *klíč* nebo *číslo* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**.
+Tato funkce ověřuje její parametry. Pokud *je hodnota porovnání*, *klíč* nebo *číslo* **null**nebo pokud je *hodnota* **NULL** a *číslo* je nenulová nebo pokud je *šířka* menší než nula, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lfind**|\<Search. h >|
+|**_lfind**|\<search.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -126,7 +130,7 @@ Hello found
 
 ## <a name="see-also"></a>Viz také
 
-[Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Vyhledávání a řazení](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

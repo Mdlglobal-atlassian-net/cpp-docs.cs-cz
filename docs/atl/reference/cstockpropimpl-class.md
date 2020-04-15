@@ -1,5 +1,5 @@
 ---
-title: CStockPropImpl Class
+title: Třída CStockPropImpl
 ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: bc349137661d7026e48688f8ef510958de270280
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0aaeb1b6de0febfd5fc0d41cbcc7bad41c607af4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330676"
 ---
-# <a name="cstockpropimpl-class"></a>CStockPropImpl Class
+# <a name="cstockpropimpl-class"></a>Třída CStockPropImpl
 
-Tato třída poskytuje metody pro podporu hodnot uložených vlastností.
+Tato třída poskytuje metody pro podporu hodnot vlastností zásob.
 
 > [!IMPORTANT]
-> Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,26 +95,26 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 #### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Třída, která implementuje ovládací prvek a který je odvozen z `CStockPropImpl`.
+*T*<br/>
+Třída, která implementuje ovládací prvek `CStockPropImpl`a odvození od .
 
-*InterfaceName*<br/>
-Duální rozhraní, které zveřejňuje základní vlastnosti.
+*Název rozhraní*<br/>
+Duální rozhraní odhalující vlastnosti zásob.
 
 *piid*<br/>
 Ukazatel na IID `InterfaceName`.
 
 *plibid*<br/>
-Ukazatel na LIBID knihovny typů obsahující definici `InterfaceName`.
+Ukazatel na LIBID knihovny typů obsahující definici . `InterfaceName`
 
 *wMajor*<br/>
 Hlavní verze knihovny typů. Výchozí hodnota je 1.
 
-*wMinor*<br/>
-Vedlejší verze knihovny typů. Výchozí hodnota je 0.
+*wMenší*<br/>
+Dílčí verze knihovny typů. Výchozí hodnota je 0.
 
 *tihclass*<br/>
-Třída, která slouží ke správě informací o typu pro *T*. Výchozí hodnota je `CComTypeInfoHolder`.
+Třída slouží ke správě informací o typu pro *T*. Výchozí hodnota `CComTypeInfoHolder`je .
 
 ## <a name="members"></a>Členové
 
@@ -122,95 +122,95 @@ Třída, která slouží ke správě informací o typu pro *T*. Výchozí hodnot
 
 |||
 |-|-|
-|[get_Appearance](#get_appearance)|Voláním této metody získáte styl Malování, který je použit ovládacím prvkem, například plochý nebo 3D.|
-|[get_AutoSize](#get_autosize)|Voláním této metody získáte stav příznaku, který označuje, zda ovládací prvek nemůže být jinou velikostí.|
-|[get_BackColor](#get_backcolor)|Voláním této metody Získá barvu pozadí ovládacího prvku.|
-|[get_BackStyle](#get_backstyle)|Voláním této metody získáte styl pozadí ovládacího prvku, buď transparentního, nebo neprůhledný.|
-|[get_BorderColor](#get_bordercolor)|Voláním této metody Získá barvu ohraničení ovládacího prvku.|
-|[get_BorderStyle](#get_borderstyle)|Voláním této metody Získá styl ohraničení ovládacího prvku.|
-|[get_BorderVisible](#get_bordervisible)|Voláním této metody získáte stav příznaku, který označuje, zda je ohraničení ovládacího prvku viditelné nebo ne.|
-|[get_BorderWidth](#get_borderwidth)|Voláním této metody získáte šířku ohraničení ovládacího prvku (v pixelech).|
-|[get_Caption](#get_caption)|Voláním této metody získáte text zadaný v titulku objektu.|
-|[get_DrawMode](#get_drawmode)|Voláním této metody získáte režim kreslení ovládacího prvku, například barvu pera nebo invertování barev XOR.|
-|[get_DrawStyle](#get_drawstyle)|Voláním této metody získáte styl kreslení ovládacího prvku, například Solid, čárkovaný nebo tečkovaný.|
-|[get_DrawWidth](#get_drawwidth)|Voláním této metody získáte šířku kresby (v pixelech), kterou používají metody kreslení ovládacího prvku.|
-|[get_Enabled](#get_enabled)|Voláním této metody získáte stav příznaku, který označuje, zda je ovládací prvek povolen.|
-|[get_FillColor](#get_fillcolor)|Voláním této metody Získá barvu výplně ovládacího prvku.|
-|[get_FillStyle](#get_fillstyle)|Voláním této metody získáte styl výplně ovládacího prvku, například plná, průhledná nebo křížově šrafované.|
-|[get_Font](#get_font)|Voláním této metody získá ukazatel na vlastnosti písma ovládacího prvku.|
-|[get_ForeColor](#get_forecolor)|Voláním této metody Získá barvu popředí ovládacího prvku.|
-|[get_HWND](#get_hwnd)|Voláním této metody získáte popisovač okna přidruženého k ovládacímu prvku.|
-|[get_MouseIcon](#get_mouseicon)|Voláním této metody získáte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem.|
-|[get_MousePointer](#get_mousepointer)|Voláním této metody získáte typ ukazatele myši, který se zobrazí, když je ukazatel myši nad ovládacím prvkem, například šipky, příčně nebo přesýpací hodiny.|
-|[get_Picture](#get_picture)|Voláním této metody načtete ukazatel na vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se mají zobrazit.|
-|[get_ReadyState](#get_readystate)|Voláním této metody získáte stav připravenosti ovládacího prvku, například načítání nebo načtení.|
-|[get_TabStop](#get_tabstop)|Voláním této metody získáte příznak, který označuje, zda je ovládací prvek zarážka tabulátoru nebo ne.|
-|[get_Text](#get_text)|Voláním této metody získáte text, který se zobrazí s ovládacím prvkem.|
-|[GetValID](#get_valid)|Voláním této metody získáte stav příznaku, který označuje, zda je ovládací prvek platný nebo nikoli.|
-|[get_Window](#get_window)|Voláním této metody získáte popisovač okna přidruženého k ovládacímu prvku. Stejné jako [CStockPropImpl:: get_HWND](#get_hwnd).|
-|[put_Appearance](#put_appearance)|Voláním této metody nastavíte styl Malování používaný ovládacím prvkem, například plochý nebo 3D.|
-|[put_AutoSize](#put_autosize)|Voláním této metody nastavíte hodnotu příznaku, která označuje, zda ovládací prvek nemůže být jinou velikostí.|
-|[put_BackColor](#put_backcolor)|Voláním této metody nastavíte barvu pozadí ovládacího prvku.|
-|[put_BackStyle](#put_backstyle)|Voláním této metody nastavíte styl pozadí ovládacího prvku.|
-|[put_BorderColor](#put_bordercolor)|Voláním této metody nastavíte barvu ohraničení ovládacího prvku.|
-|[put_BorderStyle](#put_borderstyle)|Voláním této metody nastavíte styl ohraničení ovládacího prvku.|
-|[put_BorderVisible](#put_bordervisible)|Voláním této metody nastavíte hodnotu příznaku, která označuje, zda je okraj ovládacího prvku viditelný nebo nikoli.|
-|[put_BorderWidth](#put_borderwidth)|Voláním této metody nastavíte šířku ohraničení ovládacího prvku.|
-|[put_Caption](#put_caption)|Voláním této metody nastavíte text, který má být zobrazen s ovládacím prvkem.|
-|[put_DrawMode](#put_drawmode)|Voláním této metody nastavíte režim kreslení ovládacího prvku, například barvu pera nebo invertování barev XOR.|
-|[put_DrawStyle](#put_drawstyle)|Voláním této metody nastavíte styl vykreslování ovládacího prvku, například Solid, čárkovaný nebo tečkovaný.|
-|[put_DrawWidth](#put_drawwidth)|Voláním této metody nastavíte šířku (v pixelech), kterou používají metody kreslení ovládacího prvku.|
-|[put_Enabled](#put_enabled)|Voláním této metody nastavíte příznak, který označuje, zda je ovládací prvek povolen.|
-|[put_FillColor](#put_fillcolor)|Voláním této metody nastavíte barvu výplně ovládacího prvku.|
-|[put_FillStyle](#put_fillstyle)|Voláním této metody nastavíte styl výplně ovládacího prvku, například Solid, Průhledný nebo mřížkovaný.|
-|[put_Font](#put_font)|Voláním této metody nastavíte vlastnosti písma ovládacího prvku.|
-|[put_ForeColor](#put_forecolor)|Voláním této metody nastavíte barvu popředí ovládacího prvku.|
-|[put_HWND](#put_hwnd)|Tato metoda vrací E_FAIL.|
-|[put_MouseIcon](#put_mouseicon)|Voláním této metody nastavíte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem.|
-|[put_MousePointer](#put_mousepointer)|Voláním této metody nastavíte typ ukazatele myši, který se zobrazí, když je ukazatel myši nad ovládacím prvkem, například šipky, příčně nebo přesýpací hodiny.|
-|[put_Picture](#put_picture)|Voláním této metody nastavíte zobrazení vlastností obrázku grafiky (ikona, rastrový obrázek nebo metasoubor).|
-|[put_ReadyState](#put_readystate)|Voláním této metody nastavíte stav připravenosti ovládacího prvku, například načítání nebo načtení.|
-|[put_TabStop](#put_tabstop)|Voláním této metody nastavíte hodnotu příznaku, která označuje, zda je ovládací prvek zarážka tabulátoru nebo ne.|
-|[put_Text](#put_text)|Voláním této metody nastavíte text, který se zobrazí s ovládacím prvkem.|
-|[putvalid](#put_valid)|Voláním této metody nastavíte příznak, který označuje, zda je ovládací prvek platný nebo nikoli.|
-|[put_Window](#put_window)|Tato metoda volá [CStockPropImpl::p ut_HWND](#put_hwnd), která vrací E_FAIL.|
-|[putref_Font](#putref_font)|Zavolejte tuto metodu pro nastavení vlastností písma ovládacího prvku s počtem odkazů.|
-|[putref_MouseIcon](#putref_mouseicon)|Voláním této metody nastavíte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem, s počtem odkazů.|
-|[putref_Picture](#putref_picture)|Voláním této metody nastavíte zobrazení vlastností obrázku (ikona, rastrový obrázek nebo metasoubor) na hodnotu počet odkazů.|
+|[get_Appearance](#get_appearance)|Volání této metody získat styl malování používá ovládací prvek, například ploché nebo 3D.|
+|[get_AutoSize](#get_autosize)|Volání této metody získat stav příznak, který označuje, pokud ovládací prvek nemůže být žádná jiná velikost.|
+|[get_BackColor](#get_backcolor)|Volání této metody získat barvu pozadí ovládacího prvku.|
+|[get_BackStyle](#get_backstyle)|Volání této metody získat styl pozadí ovládacího prvku, transparentní nebo neprůhledné.|
+|[get_BorderColor](#get_bordercolor)|Volání této metody získat barvu ohraničení ovládacího prvku.|
+|[get_BorderStyle](#get_borderstyle)|Volání této metody získat styl ohraničení ovládacího prvku.|
+|[get_BorderVisible](#get_bordervisible)|Volání této metody získat stav příznak, který označuje, pokud je zobrazeno ohraničení ovládacího prvku nebo ne.|
+|[get_BorderWidth](#get_borderwidth)|Volání této metody získat šířku (v pixelech) ohraničení ovládacího prvku.|
+|[get_Caption](#get_caption)|Volání této metody získat text zadaný v titulku objektu.|
+|[get_DrawMode](#get_drawmode)|Volání této metody získat režim kreslení ovládacího prvku, například XOR pero nebo invertovat barvy.|
+|[get_DrawStyle](#get_drawstyle)|Volánítéto metody získat styl kreslení ovládacího prvku, například plné, přerušované nebo tečkované.|
+|[get_DrawWidth](#get_drawwidth)|Volání této metody získat šířku výkresu (v obrazových bodech) používá metody kreslení ovládacího prvku.|
+|[get_Enabled](#get_enabled)|Volání této metody získat stav příznak, který označuje, pokud je povolen ovládací prvek.|
+|[get_FillColor](#get_fillcolor)|Volání této metody získat barvu výplně ovládacího prvku.|
+|[get_FillStyle](#get_fillstyle)|Volánítéto metody získat ovládací prvek styl výplně, například plné, průhledné nebo šrafované.|
+|[get_Font](#get_font)|Volání této metody získat ukazatel na vlastnosti písma ovládacího prvku.|
+|[get_ForeColor](#get_forecolor)|Volání této metody získat barvu popředí ovládacího prvku.|
+|[get_HWND](#get_hwnd)|Volání této metody získat popisovač okna přidružené k ovládacímu prvku.|
+|[get_MouseIcon](#get_mouseicon)|Volání této metody získat vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je nad ovládacím prvkem.|
+|[get_MousePointer](#get_mousepointer)|Volání této metody získat typ ukazatele myši zobrazí, když je myš nad ovládacím prvkem, například šipka, kříž nebo přesýpací hodiny.|
+|[get_Picture](#get_picture)|Volánítéto metody získat ukazatel na vlastnosti obrázku grafiky (ikona, bitmapa nebo metasoubor), které mají být zobrazeny.|
+|[get_ReadyState](#get_readystate)|Volání této metody získat ovládacího prvku připraven stavu, například načítání nebo načtení.|
+|[get_TabStop](#get_tabstop)|Volání této metody získat příznak, který označuje, pokud je ovládací prvek zarážka tabulátoru nebo ne.|
+|[get_Text](#get_text)|Volání této metody získat text, který je zobrazen s ovládacím prvkem.|
+|[getvalid](#get_valid)|Volání této metody získat stav příznak, který označuje, pokud je ovládací prvek platný nebo ne.|
+|[get_Window](#get_window)|Volání této metody získat popisovač okna přidružené k ovládacímu prvku. Shodné s [CStockPropImpl::get_HWND](#get_hwnd).|
+|[put_Appearance](#put_appearance)|Volání této metody nastavit styl malování používá ovládací prvek, například ploché nebo 3D.|
+|[put_AutoSize](#put_autosize)|Volání této metody nastavit hodnotu příznak, který označuje, pokud ovládací prvek nemůže mít jinou velikost.|
+|[put_BackColor](#put_backcolor)|Volání této metody nastavit barvu pozadí ovládacího prvku.|
+|[put_BackStyle](#put_backstyle)|Volání této metody nastavit styl pozadí ovládacího prvku.|
+|[put_BorderColor](#put_bordercolor)|Volání této metody nastavit barvu ohraničení ovládacího prvku.|
+|[put_BorderStyle](#put_borderstyle)|Volání této metody nastavit styl ohraničení ovládacího prvku.|
+|[put_BorderVisible](#put_bordervisible)|Volání této metody nastavit hodnotu příznak, který označuje, pokud je zobrazeno ohraničení ovládacího prvku nebo ne.|
+|[put_BorderWidth](#put_borderwidth)|Volání této metody nastavit šířku ohraničení ovládacího prvku.|
+|[put_Caption](#put_caption)|Volání této metody nastavit text, který má být zobrazen s ovládacím prvkem.|
+|[put_DrawMode](#put_drawmode)|Volání této metody nastavit režim kreslení ovládacího prvku, například XOR Pero nebo Invertovat barvy.|
+|[put_DrawStyle](#put_drawstyle)|Volánítéto metody nastavit styl kreslení ovládacího prvku, například plné, přerušované nebo tečkované.|
+|[put_DrawWidth](#put_drawwidth)|Volání této metody nastavit šířku (v obrazových bodech) používané metody kreslení ovládacího prvku.|
+|[put_Enabled](#put_enabled)|Volání této metody nastavit příznak, který označuje, pokud je povolen ovládací prvek.|
+|[put_FillColor](#put_fillcolor)|Volání této metody nastavit barvu výplně ovládacího prvku.|
+|[put_FillStyle](#put_fillstyle)|Volánítéto metody nastavit styl výplně ovládacího prvku, například plné, průhledné nebo šrafované.|
+|[put_Font](#put_font)|Volání této metody nastavit vlastnosti písma ovládacího prvku.|
+|[put_ForeColor](#put_forecolor)|Volání této metody nastavit barvu popředí ovládacího prvku.|
+|[put_HWND](#put_hwnd)|Tato metoda vrátí E_FAIL.|
+|[put_MouseIcon](#put_mouseicon)|Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je myš nad ovládacím prvkem.|
+|[put_MousePointer](#put_mousepointer)|Volání této metody nastavit typ ukazatele myši zobrazí, když je myš nad ovládacím prvkem, například šipka, kříž nebo přesýpací hodiny.|
+|[put_Picture](#put_picture)|Voláním této metody nastavte vlastnosti obrázku (ikona, bitmapa nebo metasoubor), který se má zobrazit.|
+|[put_ReadyState](#put_readystate)|Volání této metody nastavit stav připravenosti ovládacího prvku, například načítání nebo načtení.|
+|[put_TabStop](#put_tabstop)|Volání této metody nastavit hodnotu příznak, který označuje, pokud je ovládací prvek zarážka tabulátoru nebo ne.|
+|[put_Text](#put_text)|Volání této metody nastavit text, který je zobrazen s ovládacím prvkem.|
+|[putvalid](#put_valid)|Volání této metody nastavit příznak, který označuje, pokud je ovládací prvek platný nebo ne.|
+|[put_Window](#put_window)|Tato metoda volá [CStockPropImpl::put_HWND](#put_hwnd), který vrátí E_FAIL.|
+|[putref_Font](#putref_font)|Volání této metody nastavit vlastnosti písma ovládacího prvku, s počtem odkazů.|
+|[putref_MouseIcon](#putref_mouseicon)|Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je myš nad ovládacím prvkem, s počtem odkazů.|
+|[putref_Picture](#putref_picture)|Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, s počtem odkazů.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CStockPropImpl` poskytuje metody **Put** a **Get** pro každou vlastnost akcie. Tyto metody poskytují kód potřebný k nastavení nebo získání datového členu přidruženého k jednotlivým vlastnostem a k oznamování a synchronizaci s kontejnerem při změně jakékoli vlastnosti.
+`CStockPropImpl`poskytuje **put a** **get** metody pro každou vlastnost zásob. Tyto metody poskytují kód potřebný k nastavení nebo získání datového člena přidruženého ke každé vlastnosti a k upozornění a synchronizaci s kontejnerem při změně jakékoli vlastnosti.
 
-Visual Studio poskytuje podporu pro vlastnosti akcií prostřednictvím průvodců. Další informace o přidání uložených vlastností do ovládacího prvku naleznete v [kurzu ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio poskytuje podporu pro vlastnosti zásob prostřednictvím svých průvodců. Další informace o přidání vlastností zásob do ovládacího prvku naleznete v [kurzu atl .](../../atl/active-template-library-atl-tutorial.md)
 
-Z důvodu zpětné kompatibility `CStockPropImpl` také zpřístupňuje metody `get_Window` a `put_Window`, které jednoduše volají `get_HWND` a `put_HWND`v uvedeném pořadí. Výchozí implementace `put_HWND` vrátí E_FAIL, protože HWND by měla být vlastnost jen pro čtení.
+Pro zpětnou `CStockPropImpl` kompatibilitu `get_Window` `put_Window` také zpřístupňuje a metody, které jednoduše volat `get_HWND` a `put_HWND`, v uvedeném pořadí. Výchozí implementace `put_HWND` vrátí E_FAIL protože HWND by měla být vlastnost jen pro čtení.
 
-Následující vlastnosti mají také implementaci **PUTREF** :
+Následující vlastnosti mají také implementaci **hniloby:**
 
-- Písma
+- Písmo
 
-- MouseIcon
+- Ikona myši
 
 - Obrázek
 
-Stejné tři uložené vlastnosti vyžadují, aby jejich odpovídající datový člen byl typu `CComPtr` nebo jinou třídou, která poskytuje správné počítání odkazů rozhraní prostřednictvím operátoru přiřazení.
+Stejné tři vlastnosti zásob vyžadují, aby `CComPtr` jejich odpovídající datový člen byl typu nebo jiné třídy, která poskytuje správné počítání odkazů rozhraní pomocí operátoru přiřazení.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 `T`
 
-[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
+[IDispatchimpl](../../atl/reference/idispatchimpl-class.md)
 
 `CStockPropImpl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-##  <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>CStockPropImpl:: get_Appearance
+## <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>CStockPropImpl::get_Appearance
 
-Voláním této metody získáte styl Malování, který je použit ovládacím prvkem, například plochý nebo 3D.
+Volání této metody získat styl malování používá ovládací prvek, například ploché nebo 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
@@ -218,16 +218,16 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*pnAppearance*<br/>
-Proměnná, která přijímá styl Malování ovládacího prvku
+*pnVzhled*<br/>
+Proměnná, která přijímá styl malby ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>CStockPropImpl:: get_AutoSize
+## <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>CStockPropImpl::get_AutoSize
 
-Voláním této metody získáte stav příznaku, který označuje, zda ovládací prvek nemůže být jinou velikostí.
+Volání této metody získat stav příznak, který označuje, pokud ovládací prvek nemůže být žádná jiná velikost.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
@@ -236,15 +236,15 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 ### <a name="parameters"></a>Parametry
 
 *pbAutoSize*<br/>
-Proměnná, která přijímá stav příznaku Hodnota TRUE označuje, že ovládací prvek nemůže být jinou velikostí.
+Proměnná, která obdrží stav příznaku. True označuje, že ovládací prvek nemůže mít jinou velikost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>CStockPropImpl:: get_BackColor
+## <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>CStockPropImpl::get_BackColor
 
-Voláním této metody Získá barvu pozadí ovládacího prvku.
+Volání této metody získat barvu pozadí ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
@@ -253,15 +253,15 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrBackColor*<br/>
-Proměnná, která obdrží barvu pozadí ovládacího prvku
+Proměnná, která přijímá barvu pozadí ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>CStockPropImpl:: get_BackStyle
+## <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>CStockPropImpl::get_BackStyle
 
-Voláním této metody získáte styl pozadí ovládacího prvku, buď transparentního, nebo neprůhledný.
+Volání této metody získat styl pozadí ovládacího prvku, transparentní nebo neprůhledné.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
@@ -270,15 +270,15 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 ### <a name="parameters"></a>Parametry
 
 *pnBackStyle*<br/>
-Proměnná, která přijímá styl pozadí ovládacího prvku
+Proměnná, která přijímá styl pozadí ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl:: get_BorderColor
+## <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor
 
-Voláním této metody Získá barvu ohraničení ovládacího prvku.
+Volání této metody získat barvu ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
@@ -287,15 +287,15 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrBorderColor*<br/>
-Proměnná, která obdrží barvu ohraničení ovládacího prvku
+Proměnná, která přijímá barvu ohraničení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl:: get_BorderStyle
+## <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle
 
-Voláním této metody Získá styl ohraničení ovládacího prvku.
+Volání této metody získat styl ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
@@ -304,15 +304,15 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 ### <a name="parameters"></a>Parametry
 
 *pnBorderStyle*<br/>
-Proměnná, která přijímá styl ohraničení ovládacího prvku
+Proměnná, která přijímá styl ohraničení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl:: get_BorderVisible
+## <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible
 
-Voláním této metody získáte stav příznaku, který označuje, zda je ohraničení ovládacího prvku viditelné nebo ne.
+Volání této metody získat stav příznak, který označuje, pokud je zobrazeno ohraničení ovládacího prvku nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
@@ -321,15 +321,15 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 ### <a name="parameters"></a>Parametry
 
 *pbBorderVisible*<br/>
-Proměnná, která přijímá stav příznaku Hodnota TRUE označuje, že je ohraničení ovládacího prvku viditelné.
+Proměnná, která obdrží stav příznaku. True označuje, že ohraničení ovládacího prvku je viditelné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl:: get_BorderWidth
+## <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth
 
-Voláním této metody získáte šířku ohraničení ovládacího prvku.
+Volání této metody získat šířku ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
@@ -338,15 +338,15 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 ### <a name="parameters"></a>Parametry
 
 *pnBorderWidth*<br/>
-Proměnná, která přijímá šířku ohraničení ovládacího prvku
+Proměnná, která přijímá šířku ohraničení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>CStockPropImpl:: get_Caption
+## <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>CStockPropImpl::get_Caption
 
-Voláním této metody získáte text zadaný v titulku objektu.
+Volání této metody získat text zadaný v titulku objektu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
@@ -355,15 +355,15 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 ### <a name="parameters"></a>Parametry
 
 *pbstrCaption*<br/>
-Text, který se má zobrazit v ovládacím prvku
+Text, který má být zobrazen s ovládacím prvkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>CStockPropImpl:: get_DrawMode
+## <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>CStockPropImpl::get_DrawMode
 
-Voláním této metody získáte režim kreslení ovládacího prvku, například barvu pera nebo invertování barev XOR.
+Volání této metody získat režim kreslení ovládacího prvku, například XOR pero nebo invertovat barvy.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
@@ -372,15 +372,15 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 ### <a name="parameters"></a>Parametry
 
 *pnDrawMode*<br/>
-Proměnná, která přijímá režim kreslení ovládacího prvku
+Proměnná, která přijímá režim kreslení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl:: get_DrawStyle
+## <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle
 
-Voláním této metody získáte styl kreslení ovládacího prvku, například Solid, čárkovaný nebo tečkovaný.
+Volánítéto metody získat styl kreslení ovládacího prvku, například plné, přerušované nebo tečkované.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
@@ -389,15 +389,15 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 ### <a name="parameters"></a>Parametry
 
 *pnDrawStyle*<br/>
-Proměnná, která přijímá styl vykreslování ovládacího prvku
+Proměnná, která přijímá styl kreslení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl:: get_DrawWidth
+## <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl::get_DrawWidth
 
-Voláním této metody získáte šířku kresby (v pixelech), kterou používají metody kreslení ovládacího prvku.
+Volání této metody získat šířku výkresu (v obrazových bodech) používá metody kreslení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
@@ -405,16 +405,16 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*pnDrawWidth*<br/>
-Proměnná, která přijímá hodnotu šířky ovládacího prvku v pixelech
+*pnŠířka*<br/>
+Proměnná, která přijímá hodnotu šířky ovládacího prvku v obrazových bodech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>CStockPropImpl:: get_Enabled
+## <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>CStockPropImpl::get_Enabled
 
-Voláním této metody získáte stav příznaku, který označuje, zda je ovládací prvek povolen.
+Volání této metody získat stav příznak, který označuje, pokud je povolen ovládací prvek.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
@@ -422,16 +422,16 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*pbEnabled*<br/>
-Proměnná, která přijímá stav příznaku Hodnota TRUE označuje, že je ovládací prvek povolen.
+*funkce pbEnabled*<br/>
+Proměnná, která obdrží stav příznaku. True označuje, že ovládací prvek je povolen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl:: get_FillColor
+## <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl::get_FillColor
 
-Voláním této metody Získá barvu výplně ovládacího prvku.
+Volání této metody získat barvu výplně ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
@@ -440,15 +440,15 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrFillColor*<br/>
-Proměnná, která přijímá barvu výplně ovládacího prvku
+Proměnná, která přijímá barvu výplně ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl:: get_FillStyle
+## <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl::get_FillStyle
 
-Voláním této metody získáte styl výplně ovládacího prvku, například Solid, Průhledný nebo crosshatched.
+Volání této metody získat ovládací prvek styl výplně, například plné, průhledné nebo šrafované.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
@@ -457,15 +457,15 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 ### <a name="parameters"></a>Parametry
 
 *pnFillStyle*<br/>
-Proměnná, která přijímá styl výplně ovládacího prvku
+Proměnná, která přijímá styl výplně ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_font"></a><a name="get_font"></a>CStockPropImpl:: get_Font
+## <a name="cstockpropimplget_font"></a><a name="get_font"></a>CStockPropImpl::get_Font
 
-Voláním této metody získá ukazatel na vlastnosti písma ovládacího prvku.
+Volání této metody získat ukazatel na vlastnosti písma ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
@@ -473,16 +473,16 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*<br/>
-Proměnná, která přijímá ukazatel na vlastnosti písma ovládacího prvku
+*ppPísmo*<br/>
+Proměnná, která obdrží ukazatel na vlastnosti písma ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>CStockPropImpl:: get_ForeColor
+## <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>CStockPropImpl::get_ForeColor
 
-Voláním této metody Získá barvu popředí ovládacího prvku.
+Volání této metody získat barvu popředí ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
@@ -491,15 +491,15 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrForeColor*<br/>
-Proměnná, která obdrží barvu popředí ovládacího prvku
+Proměnná, která přijímá barvu popředí ovládacích prvků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>CStockPropImpl:: get_HWND
+## <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>CStockPropImpl::get_HWND
 
-Voláním této metody získáte popisovač okna přidruženého k ovládacímu prvku.
+Volání této metody získat popisovač okna přidružené k ovládacímu prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
@@ -508,15 +508,15 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 ### <a name="parameters"></a>Parametry
 
 *phWnd*<br/>
-Popisovač okna přidružený k ovládacímu prvku
+Popisovač okna přidružený k ovládacímu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl:: get_MouseIcon
+## <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon
 
-Voláním této metody získáte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem.
+Volání této metody získat vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je nad ovládacím prvkem.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
@@ -524,16 +524,16 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*<br/>
+*ppObrázek*<br/>
 Proměnná, která obdrží ukazatel na vlastnosti obrázku grafiky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl:: get_MousePointer
+## <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer
 
-Voláním této metody získáte typ ukazatele myši, který se zobrazí, když je ukazatel myši nad ovládacím prvkem, například šipky, příčně nebo přesýpací hodiny.
+Volání této metody získat typ ukazatele myši zobrazí, když je myš nad ovládacím prvkem, například šipka, kříž nebo přesýpací hodiny.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
@@ -546,11 +546,11 @@ Proměnná, která přijímá typ ukazatele myši.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>CStockPropImpl:: get_Picture
+## <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>CStockPropImpl::get_Picture
 
-Voláním této metody načtete ukazatel na vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se mají zobrazit.
+Volánítéto metody získat ukazatel na vlastnosti obrázku grafiky (ikona, bitmapa nebo metasoubor), které mají být zobrazeny.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
@@ -558,16 +558,16 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*<br/>
-Proměnná, která přijímá ukazatel na vlastnosti obrázku Další podrobnosti najdete v tématu [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*ppObrázek*<br/>
+Proměnná, která obdrží ukazatel na vlastnosti obrázku. Další podrobnosti najdete v [tématu IPictureDisp.](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>CStockPropImpl:: get_ReadyState
+## <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>CStockPropImpl::get_ReadyState
 
-Voláním této metody získáte stav připravenosti ovládacího prvku, například načítání nebo načtení.
+Volání této metody získat ovládacího prvku připraven stavu, například načítání nebo načtení.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
@@ -576,15 +576,15 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 ### <a name="parameters"></a>Parametry
 
 *pnReadyState*<br/>
-Proměnná, která přijímá stav připravenosti ovládacího prvku
+Proměnná, která přijímá stav připravenosti ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>CStockPropImpl:: get_TabStop
+## <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>CStockPropImpl::get_TabStop
 
-Voláním této metody získáte stav příznaku, který označuje, zda je ovládací prvek zarážka tabulátoru nebo ne.
+Volání této metody získat stav příznak, který označuje, pokud je ovládací prvek zarážka tabulátoru nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
@@ -593,15 +593,15 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 ### <a name="parameters"></a>Parametry
 
 *pbTabStop*<br/>
-Proměnná, která přijímá stav příznaku Hodnota TRUE označuje, že ovládací prvek je zarážka tabulátoru.
+Proměnná, která obdrží stav příznaku. True označuje, že ovládací prvek je zarážka tabulátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_text"></a><a name="get_text"></a>CStockPropImpl:: get_Text
+## <a name="cstockpropimplget_text"></a><a name="get_text"></a>CStockPropImpl::get_Text
 
-Voláním této metody získáte text, který se zobrazí s ovládacím prvkem.
+Volání této metody získat text, který je zobrazen s ovládacím prvkem.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
@@ -610,15 +610,15 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 ### <a name="parameters"></a>Parametry
 
 *pbstrText*<br/>
-Text zobrazený s ovládacím prvkem
+Text, který je zobrazen s ovládacím prvkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl:: GetValID
+## <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl::getvalid
 
-Voláním této metody získáte stav příznaku, který označuje, zda je ovládací prvek platný nebo nikoli.
+Volání této metody získat stav příznak, který označuje, pokud je ovládací prvek platný nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
@@ -627,15 +627,15 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 ### <a name="parameters"></a>Parametry
 
 *pbValid*<br/>
-Proměnná, která přijímá stav příznaku Hodnota TRUE označuje, že ovládací prvek je platný.
+Proměnná, která obdrží stav příznaku. TRUE označuje, že ovládací prvek je platný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplget_window"></a><a name="get_window"></a>CStockPropImpl:: get_Window
+## <a name="cstockpropimplget_window"></a><a name="get_window"></a>CStockPropImpl::get_Window
 
-Voláním této metody získáte popisovač okna přidruženého k ovládacímu prvku. Stejné jako [CStockPropImpl:: get_HWND](#get_hwnd).
+Volání této metody získat popisovač okna přidružené k ovládacímu prvku. Shodné s [CStockPropImpl::get_HWND](#get_hwnd).
 
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
@@ -644,15 +644,15 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 ### <a name="parameters"></a>Parametry
 
 *phWnd*<br/>
-Popisovač okna přidružený k ovládacímu prvku
+Popisovač okna přidružený k ovládacímu prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>CStockPropImpl::p ut_Appearance
+## <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>CStockPropImpl::put_Vzhled
 
-Voláním této metody nastavíte styl Malování používaný ovládacím prvkem, například plochý nebo 3D.
+Volání této metody nastavit styl malování používá ovládací prvek, například ploché nebo 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
@@ -660,16 +660,16 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*nAppearance*<br/>
-Nový styl Malování, který má být použit ovládacím prvkem.
+*nVzhled*<br/>
+Nový styl malování, který má být použit ovládacím prvkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>CStockPropImpl::p ut_AutoSize
+## <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>CStockPropImpl::put_AutoSize
 
-Voláním této metody nastavíte hodnotu příznaku, která označuje, zda ovládací prvek nemůže být jinou velikostí.
+Volání této metody nastavit hodnotu příznak, který označuje, pokud ovládací prvek nemůže mít jinou velikost.
 
 ```
 HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
@@ -677,16 +677,16 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>Parametry
 
-*bAutoSize*<br/>
-TRUE, pokud ovládací prvek nemůže být jinou velikostí.
+*bVelikost auto*<br/>
+TRUE, pokud ovládací prvek nemůže mít jinou velikost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>CStockPropImpl::p ut_BackColor
+## <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>CStockPropImpl::put_BackColor
 
-Voláním této metody nastavíte barvu pozadí ovládacího prvku.
+Volání této metody nastavit barvu pozadí ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
@@ -699,11 +699,11 @@ Nová barva pozadí ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>CStockPropImpl::p ut_BackStyle
+## <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>CStockPropImpl::put_BackStyle
 
-Voláním této metody nastavíte styl pozadí ovládacího prvku.
+Volání této metody nastavit styl pozadí ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
@@ -711,16 +711,16 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nBackStyle*<br/>
+*nStyl zpět*<br/>
 Nový styl pozadí ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl::p ut_BorderColor
+## <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl::put_BorderColor
 
-Voláním této metody nastavíte barvu ohraničení ovládacího prvku.
+Volání této metody nastavit barvu ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
@@ -729,15 +729,15 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 ### <a name="parameters"></a>Parametry
 
 *clrBorderColor*<br/>
-Nová barva ohraničení Datový typ OLE_COLOR je interně reprezentován jako 32 dlouhé celé číslo.
+Nová barva ohraničení. Datový typ OLE_COLOR je interně reprezentován jako 32bitové celé číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl::p ut_BorderStyle
+## <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl::put_BorderStyle
 
-Voláním této metody nastavíte styl ohraničení ovládacího prvku.
+Volání této metody nastavit styl ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
@@ -750,11 +750,11 @@ Nový styl ohraničení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl::p ut_BorderVisible
+## <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl::put_BorderVisible
 
-Voláním této metody nastavíte hodnotu příznaku, která označuje, zda je okraj ovládacího prvku viditelný nebo nikoli.
+Volání této metody nastavit hodnotu příznak, který označuje, pokud je zobrazeno ohraničení ovládacího prvku nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
@@ -763,15 +763,15 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 ### <a name="parameters"></a>Parametry
 
 *bBorderVisible*<br/>
-TRUE, pokud má být ohraničení viditelné.
+PRAVDA, pokud má být ohraničení viditelné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl::p ut_BorderWidth
+## <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl::put_BorderWidth
 
-Voláním této metody nastavíte šířku ohraničení ovládacího prvku.
+Volání této metody nastavit šířku ohraničení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
@@ -779,16 +779,16 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nBorderWidth*<br/>
+*nŠířka ohraničení*<br/>
 Nová šířka ohraničení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>CStockPropImpl::p ut_Caption
+## <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>CStockPropImpl::put_Caption
 
-Voláním této metody nastavíte text, který má být zobrazen s ovládacím prvkem.
+Volání této metody nastavit text, který má být zobrazen s ovládacím prvkem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
@@ -796,16 +796,16 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrCaption*<br/>
-Text, který se má zobrazit v ovládacím prvku
+*titulek bstr*<br/>
+Text, který má být zobrazen s ovládacím prvkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>CStockPropImpl::p ut_DrawMode
+## <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>CStockPropImpl::put_DrawMode
 
-Voláním této metody nastavíte režim kreslení ovládacího prvku, například barvu pera nebo invertování barev XOR.
+Volání této metody nastavit režim kreslení ovládacího prvku, například XOR Pero nebo Invertovat barvy.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
@@ -813,16 +813,16 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawMode*<br/>
+*nRežim drawmode*<br/>
 Nový režim kreslení pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl::p ut_DrawStyle
+## <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl::put_DrawStyle
 
-Voláním této metody nastavíte styl vykreslování ovládacího prvku, například Solid, čárkovaný nebo tečkovaný.
+Volánítéto metody nastavit styl kreslení ovládacího prvku, například plné, přerušované nebo tečkované.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
@@ -830,16 +830,16 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawStyle*<br/>
-Nový styl vykreslování ovládacího prvku
+*nStyl slosování*<br/>
+Nový styl kreslení pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl::p ut_DrawWidth
+## <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl::put_DrawWidth
 
-Voláním této metody nastavíte šířku (v pixelech), kterou používají metody kreslení ovládacího prvku.
+Volání této metody nastavit šířku (v obrazových bodech) používané metody kreslení ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
@@ -847,16 +847,16 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawWidth*<br/>
-Nová šířka, kterou mají použít metody kreslení ovládacího prvku.
+*nŠířka_*<br/>
+Nová šířka, která má být použita metodami kreslení ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>CStockPropImpl::p ut_Enabled
+## <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>CStockPropImpl::put_Enabled
 
-Voláním této metody nastavíte hodnotu příznaku, která označuje, zda je ovládací prvek povolen.
+Volání této metody nastavit hodnotu příznak, který označuje, pokud je povolen ovládací prvek.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
@@ -864,16 +864,16 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnabled*<br/>
+*bPovoleno*<br/>
 TRUE, pokud je ovládací prvek povolen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl::p ut_FillColor
+## <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl::put_FillColor
 
-Voláním této metody nastavíte barvu výplně ovládacího prvku.
+Volání této metody nastavit barvu výplně ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
@@ -886,11 +886,11 @@ Nová barva výplně ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl::p ut_FillStyle
+## <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl::put_FillStyle
 
-Voláním této metody nastavíte styl výplně ovládacího prvku, například Solid, Průhledný nebo mřížkovaný.
+Volánítéto metody nastavit styl výplně ovládacího prvku, například plné, průhledné nebo šrafované.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
@@ -899,15 +899,15 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 ### <a name="parameters"></a>Parametry
 
 *nFillStyle*<br/>
-Nový styl výplně ovládacího prvku
+Nový styl výplně pro ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_font"></a><a name="put_font"></a>CStockPropImpl::p ut_Font
+## <a name="cstockpropimplput_font"></a><a name="put_font"></a>CStockPropImpl::put_Font
 
-Voláním této metody nastavíte vlastnosti písma ovládacího prvku.
+Volání této metody nastavit vlastnosti písma ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
@@ -915,16 +915,16 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
+*písmo*<br/>
 Ukazatel na vlastnosti písma ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>CStockPropImpl::p ut_ForeColor
+## <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>CStockPropImpl::put_ForeColor
 
-Voláním této metody nastavíte barvu popředí ovládacího prvku.
+Volání této metody nastavit barvu popředí ovládacího prvku.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
@@ -937,11 +937,11 @@ Nová barva popředí ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>CStockPropImpl::p ut_HWND
+## <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>CStockPropImpl::put_HWND
 
-Tato metoda vrací E_FAIL.
+Tato metoda vrátí E_FAIL.
 
 ```
 HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
@@ -949,8 +949,8 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-Rezervovaný.
+*Hwnd*<br/>
+Vyhrazeno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -958,11 +958,11 @@ Vrátí E_FAIL.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač okna je hodnota jen pro čtení.
+Popisovač okna je jen pro čtení hodnotu.
 
-##  <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl::p ut_MouseIcon
+## <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl::put_MouseIcon
 
-Voláním této metody nastavíte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem.
+Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je myš nad ovládacím prvkem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
@@ -970,16 +970,16 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
+*pObrázek*<br/>
 Ukazatel na vlastnosti obrázku grafiky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl::p ut_MousePointer
+## <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl::put_MousePointer
 
-Voláním této metody nastavíte typ ukazatele myši, který se zobrazí, když je ukazatel myši nad ovládacím prvkem, například šipky, příčně nebo přesýpací hodiny.
+Volání této metody nastavit typ ukazatele myši zobrazí, když je myš nad ovládacím prvkem, například šipka, kříž nebo přesýpací hodiny.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
@@ -987,16 +987,16 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Parametry
 
-*nMousePointer*<br/>
-Typ ukazatele myši
+*nUkazatel myši*<br/>
+Typ ukazatele myši.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>CStockPropImpl::p ut_Picture
+## <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>CStockPropImpl::put_Picture
 
-Voláním této metody nastavíte zobrazení vlastností obrázku grafiky (ikona, rastrový obrázek nebo metasoubor).
+Voláním této metody nastavte vlastnosti obrázku (ikona, bitmapa nebo metasoubor), který se má zobrazit.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
@@ -1004,16 +1004,16 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
-Ukazatel na vlastnosti obrázku. Další podrobnosti najdete v tématu [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*pObrázek*<br/>
+Ukazatel na vlastnosti obrázku. Další podrobnosti najdete v [tématu IPictureDisp.](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>CStockPropImpl::p ut_ReadyState
+## <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>CStockPropImpl::put_ReadyState
 
-Voláním této metody nastavíte stav připravenosti ovládacího prvku, například načítání nebo načtení.
+Volání této metody nastavit stav připravenosti ovládacího prvku, například načítání nebo načtení.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
@@ -1022,15 +1022,15 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 ### <a name="parameters"></a>Parametry
 
 *nReadyState*<br/>
-Stav připraveno pro ovládací prvek.
+Ovládací prvek je připraven.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>CStockPropImpl::p ut_TabStop
+## <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>CStockPropImpl::put_TabStop
 
-Voláním této metody nastavíte příznak, který označuje, zda je ovládací prvek zarážka tabulátoru nebo ne.
+Volání této metody nastavit příznak, který označuje, pokud je ovládací prvek zarážka tabulátoru nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
@@ -1043,11 +1043,11 @@ TRUE, pokud je ovládací prvek zarážka tabulátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_text"></a><a name="put_text"></a>CStockPropImpl::p ut_Text
+## <a name="cstockpropimplput_text"></a><a name="put_text"></a>CStockPropImpl::put_Text
 
-Voláním této metody nastavíte text, který se zobrazí s ovládacím prvkem.
+Volání této metody nastavit text, který je zobrazen s ovládacím prvkem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
@@ -1056,15 +1056,15 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 ### <a name="parameters"></a>Parametry
 
 *bstrText*<br/>
-Text zobrazený s ovládacím prvkem
+Text, který je zobrazen s ovládacím prvkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl::p utvalid
+## <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl::putvalid
 
-Voláním této metody nastavíte příznak, který označuje, zda je ovládací prvek platný nebo nikoli.
+Volání této metody nastavit příznak, který označuje, pokud je ovládací prvek platný nebo ne.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
@@ -1077,11 +1077,11 @@ TRUE, pokud je ovládací prvek platný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
-##  <a name="cstockpropimplput_window"></a><a name="put_window"></a>CStockPropImpl::p ut_Window
+## <a name="cstockpropimplput_window"></a><a name="put_window"></a>CStockPropImpl::put_Window
 
-Tato metoda volá [CStockPropImpl::p ut_HWND](#put_hwnd), která vrací E_FAIL.
+Tato metoda volá [CStockPropImpl::put_HWND](#put_hwnd), který vrátí E_FAIL.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -1089,8 +1089,8 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-Popisovač okna.
+*Hwnd*<br/>
+Klika okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1098,11 +1098,11 @@ Vrátí E_FAIL.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač okna je hodnota jen pro čtení.
+Popisovač okna je jen pro čtení hodnotu.
 
-##  <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>CStockPropImpl::p utref_Font
+## <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>CStockPropImpl::putref_Font
 
-Zavolejte tuto metodu pro nastavení vlastností písma ovládacího prvku s počtem odkazů.
+Volání této metody nastavit vlastnosti písma ovládacího prvku, s počtem odkazů.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
@@ -1110,20 +1110,20 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
+*písmo*<br/>
 Ukazatel na vlastnosti písma ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Stejné jako [CStockPropImpl::p ut_Font](#put_font), ale s počtem odkazů.
+Stejné jako [CStockPropImpl::put_Font](#put_font), ale s počtem odkazů.
 
-##  <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl::p utref_MouseIcon
+## <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl::putref_MouseIcon
 
-Voláním této metody nastavíte vlastnosti obrázku grafiky (ikona, rastrový obrázek nebo metasoubor), které se zobrazí, když je ukazatel myši nad ovládacím prvkem, s počtem odkazů.
+Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, když je myš nad ovládacím prvkem, s počtem odkazů.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
@@ -1131,20 +1131,20 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
+*pObrázek*<br/>
 Ukazatel na vlastnosti obrázku grafiky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Stejné jako [CStockPropImpl::p ut_MouseIcon](#put_mouseicon), ale s počtem odkazů.
+Stejné jako [CStockPropImpl::put_MouseIcon](#put_mouseicon), ale s počtem odkazů.
 
-##  <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>CStockPropImpl::p utref_Picture
+## <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>CStockPropImpl::putref_Picture
 
-Voláním této metody nastavíte zobrazení vlastností obrázku (ikona, rastrový obrázek nebo metasoubor) na hodnotu počet odkazů.
+Volánítéto metody nastavit vlastnosti obrázku (ikona, bitmapa nebo metasoubor), které mají být zobrazeny, s počtem odkazů.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
@@ -1152,18 +1152,18 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
-Ukazatel na vlastnosti obrázku. Další podrobnosti najdete v tématu [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*pObrázek*<br/>
+Ukazatel na vlastnosti obrázku. Další podrobnosti najdete v [tématu IPictureDisp.](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Stejné jako [CStockPropImpl::p ut_Picture](#put_picture), ale s počtem odkazů.
+Stejné jako [CStockPropImpl::put_Picture](#put_picture), ale s počtem odkazů.
 
 ## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
-[IDispatchImpl – třída](../../atl/reference/idispatchimpl-class.md)
+[Třída IDispatchimpl](../../atl/reference/idispatchimpl-class.md)

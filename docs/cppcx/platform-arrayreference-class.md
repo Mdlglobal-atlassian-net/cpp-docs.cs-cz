@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: ArrayReference – třída'
+title: Platform::ArrayReference – třída
 ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: e9dd16ad6c3f53c5562b0419197a582c06fbc642
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354789"
 ---
-# <a name="platformarrayreference-class"></a>Platform:: ArrayReference – třída
+# <a name="platformarrayreference-class"></a>Platform::ArrayReference – třída
 
-`ArrayReference` je typ optimalizace, který můžete nahradit pro [Platform:: Array ^](../cppcx/platform-array-class.md) ve vstupních parametrech, pokud chcete vyplnit pole ve stylu jazyka C vstupními daty.
+`ArrayReference`je typ optimalizace, který můžete nahradit [platformou::Array^](../cppcx/platform-array-class.md) ve vstupních parametrech, pokud chcete vyplnit pole ve stylu C vstupními daty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,36 +28,36 @@ class ArrayReference
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|Inicializuje novou instanci třídy `ArrayReference`.|
+|[ArrayReference::ArrayReference](#ctor)|Inicializuje novou instanci třídy. `ArrayReference`|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ArrayReference:: operator () – operátor](#operator-call)|Převede tento `ArrayReference` na `Platform::Array<T>^*`.|
-|[ArrayReference:: operator = – operátor](#operator-assign)|Přiřadí k této instanci obsah jiné `ArrayReference`.|
+|[ArrayReference::operátor() Operátor](#operator-call)|Převede `ArrayReference` to `Platform::Array<T>^*`na .|
+|[ArrayReference::operátor= Operátor](#operator-assign)|Přiřadí obsah jiné `ArrayReference` instance této instanci.|
 
 ## <a name="exceptions"></a>Výjimky
 
 ### <a name="remarks"></a>Poznámky
 
-Když použijete `ArrayReference` k vyplnění pole ve stylu jazyka C, vyhnete se nadbytečné operaci kopírování, která by byla zahrnuta do kopírování do `Platform::Array` proměnné, a pak do pole ve stylu jazyka C. Při použití `ArrayReference` existuje pouze jedna operace kopírování. Příklad kódu naleznete v tématu [Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Pomocí `ArrayReference` vyplnit pole ve stylu C, vyhnete další operace kopírování, `Platform::Array` které by se podílejí na kopírování nejprve do proměnné a potom do pole stylu C. Při použití `ArrayReference`, je pouze jedna operace kopírování. Příklad kódu naleznete v tématech [Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaný klient:** Systém Windows 8
+**Minimální podporovaný klient:** Windows 8
 
-**Minimální podporovaný Server:** Windows Server 2012
+**Minimální podporovaný server:** Windows Server 2012
 
-**Obor názvů:** Platformy
+**Obor názvů:** Platforma
 
-**Záhlaví:** vccorlib. h
+**Záhlaví:** vccorlib.h
 
-## <a name="ctor"></a>ArrayReference:: ArrayReference – konstruktor
+## <a name="arrayreferencearrayreference-constructor"></a><a name="ctor"></a>ArrayReference::Konstruktor ArrayReference
 
-Inicializuje novou instanci třídy [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) .
+Inicializuje novou instanci třídy [Platform::ArrayReference.](../cppcx/platform-arrayreference-class.md)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -75,13 +75,13 @@ Ukazatel na data pole.
 Počet prvků ve zdrojovém poli.
 
 *otherArg*<br/>
-Objekt `ArrayReference`, jehož data budou přesunuta za účelem inicializace nové instance.
+Objekt, `ArrayReference` jehož data budou přesunuta k inicializaci nové instance.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="operator-assign"></a>ArrayReference:: operator = – operátor
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-assign"></a>ArrayReference::operátor= Operátor
 
-Přiřadí zadaný objekt k aktuálnímu objektu [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) pomocí sémantiky přesunutí.
+Přiřadí zadaný objekt aktuálnímu objektu [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) pomocí sémantiky move.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,7 +92,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 ### <a name="parameters"></a>Parametry
 
 *otherArg*<br/>
-Objekt, který je přesunut do aktuálního objektu `ArrayReference`.
+Objekt, který je přesunut `ArrayReference` do aktuálního objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -100,11 +100,11 @@ Odkaz na objekt typu `ArrayReference`.
 
 ### <a name="remarks"></a>Poznámky
 
-`Platform::ArrayReference` je standardní C++ šablona třídy, nikoli ref class.
+`Platform::ArrayReference`je standardní šablona třídy Jazyka C++, nikoli třída ref.
 
-## <a name="operator-call"></a>ArrayReference:: operator () – operátor
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-call"></a>ArrayReference::operátor() Operátor
 
-Převede aktuální objekt [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) zpět na třídu [Platform:: Array](../cppcx/platform-array-class.md) .
+Převede aktuální objekt [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) zpět na třídu [Platform::Array.](../cppcx/platform-array-class.md)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -114,12 +114,12 @@ Array<TArg>^ operator ();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač objektu typu `Array<TArg>^`
+Typ typu z úchytu k objektu`Array<TArg>^`
 
 ### <a name="remarks"></a>Poznámky
 
-[Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) je standardní C++ šablona třídy a [Platform:: Array](../cppcx/platform-array-class.md) je ref class.
+[Platforma::ArrayReference](../cppcx/platform-arrayreference-class.md) je standardní šablona třídy C++ a [Platform::Array](../cppcx/platform-array-class.md) je třída ref.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

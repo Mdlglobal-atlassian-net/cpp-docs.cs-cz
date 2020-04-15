@@ -1,11 +1,15 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,16 +54,16 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 103b100b293ff183dd89f3e7c2f291f9d49519e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939486"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348829"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
-Převede řetězec na 64 celé číslo.
+Převede řetězec na 64bitové celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,35 +86,37 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Řetězec, který má být převeden.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí hodnotu **__int64** vytvořenou interpretací vstupních znaků jako čísla. Návratová hodnota je 0 pro **_atoi64** , pokud vstup nelze převést na hodnotu daného typu.
+Každá funkce vrátí **__int64** hodnotu vytvořenou interpretací vstupních znaků jako čísla. Vrácená hodnota je 0 pro **_atoi64** pokud vstup nelze převést na hodnotu tohoto typu.
 
-V případě přetečení s velkými celočíselnými hodnotami **_atoi64** vrátí **I64_MAX** a **I64_MIN** v případě přetečení s velkými zápornými celočíselnými hodnotami.
+V případě přetečení s velkými kladnými integrálními hodnotami **_atoi64** vrátí **I64_MAX** a **I64_MIN** v případě přetečení s velkými zápornými integrálními hodnotami.
 
-V všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud předaný parametr má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
+Ve všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud je předaný parametr **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce nastavit **errno** **eINVAL** a vrátit 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převádějí řetězec znaků na celočíselnou hodnotu 64.
+Tyto funkce převedou řetězec znaků na 64bitovou celočíselnou hodnotu.
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nemůže rozpoznat jako součást čísla. Tento znak může být znak null (' \ 0 ' nebo L ' \ 0 ') ukončující řetězec.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce na první znak, který nelze rozpoznat jako součást čísla. Tento znak může být znak emitující řetězec nulovým znakem (\0 nebo L'\0).
 
-Argument *str* pro **_atoi64** má následující tvar:
+Argument *str* **_atoi64** má následující formu:
 
-> [*prázdné znaky*] [*Sign*] [*číslice*]
+> [*mezery*] [*znamení*] [*číslice*]
 
-*Mezera* se skládá z mezer nebo znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); a *číslice* jsou jednou nebo více číslicemi.
+*Prázdné znaky* se skládají z mezer nebo tabulátoru znaků, které jsou ignorovány; *znak* je buď plus (+) nebo mínus (-); a *číslice* jsou jedna nebo více číslic.
 
-**_wtoi64** je shodná s **_atoi64** s tím rozdílem, že jako parametr přijímá řetězec s velkým počtem znaků.
+**_wtoi64** je shodné s **_atoi64** s tím rozdílem, že trvá široký řetězec znaků jako parametr.
 
-Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí s **příponou _l** jsou identické s tím rozdílem, že používají parametr národního prostředí předaný namísto aktuálního národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -123,11 +130,11 @@ Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že pou
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_atoi64**, **_atoi64_l**|\<stdlib.h>|
-|**_wtoi64**, **_wtoi64_l**|\<Stdlib. h > nebo \<WCHAR. h >|
+|**_wtoi64** **_wtoi64_l**|\<stdlib.h> \<nebo wchar.h>|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje, jak mohou být čísla uložená jako řetězce převedeny na číselné hodnoty pomocí funkcí **_atoi64** .
+Tento program ukazuje, jak mohou být čísla uložená jako řetězce převedena na číselné hodnoty pomocí **_atoi64** funkcí.
 
 ```C
 // crt_atoi64.c
@@ -174,10 +181,10 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

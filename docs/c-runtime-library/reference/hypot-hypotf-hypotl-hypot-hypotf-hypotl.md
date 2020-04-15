@@ -1,6 +1,6 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +44,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168743"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343948"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Vypočítá přepony.
+Vypočítá přeponu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,27 +87,29 @@ long double _hypotl(
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Hodnoty s plovoucí desetinnou čárkou.
+Hodnoty s plovoucí desetinnou desetinnou tázkem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí **hypot –** délku přepony; při přetečení vrátí **HYPOT –** INF (Infinity) a proměnná **errno** je nastavená na **ERANGE**. Pro úpravu zpracování chyb lze použít **_matherr** .
+V případě úspěchu **hypot** vrátí délku přepony; při přetečení **vrátí hypot** INF (nekonečno) a proměnná **errno** je nastavena na **ERANGE**. Pomocí **_matherr** můžete upravit zpracování chyb.
 
-Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete [v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **hypot –** vypočítávají délku přepony pravého trojúhelníku s ohledem na délku dvou stran *x* a *y* (jinými slovy, druhá odmocnina *x*<sup>2</sup> + *y*<sup>2</sup>).
+**Hypot** funkce vypočítat délku přepony pravého trojúhelníku, vzhledem k délce obou stran *x* a *y* (jinými slovy, druhá odmocnina *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Verze funkcí, které mají počáteční podtržítka, jsou k dispozici pro kompatibilitu s předchozími standardy. Jejich chování je stejné jako verze, které nemají úvodní podtržítka. Doporučujeme používat verze bez počátečních podtržítek pro nový kód.
+Verze funkcí, které mají úvodní podtržítka jsou k dispozici pro kompatibilitu s dřívějšími standardy. Jejich chování je shodné s verzemi, které nemají úvodní podtržítka. Doporučujeme používat verze bez úvodních podtržítek pro nový kód.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**hypot –** , **hypotf –** , **hypotl**, **_hypot**, **_hypotf** **_hypotl**|\<Math. h >|
+|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,6 +135,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Ccomqiptrelementtraits – třída
+title: Třída CComQIPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtrElementTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246164"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327414"
 ---
-# <a name="ccomqiptrelementtraits-class"></a>Ccomqiptrelementtraits – třída
+# <a name="ccomqiptrelementtraits-class"></a>Třída CComQIPtrElementTraits
 
-Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce ukazatele rozhraní modelu COM.
+Tato třída poskytuje metody, statické funkce a typedefs užitečné při vytváření kolekcí ukazatelů rozhraní COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,34 +30,34 @@ class CComQIPtrElementTraits :
 #### <a name="parameters"></a>Parametry
 
 *I*<br/>
-Rozhraní modelu COM zadání typu ukazatel na Uložit.
+Rozhraní COM určující typ ukazatele, který má být uložen.
 
 *piid*<br/>
-Ukazatel na IID *můžu*.
+Ukazatel na IID *I*.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání prvků do objektu třídy kolekce.|
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je odvozena metody a obsahuje definice typu poskytující užitečné při vytváření třídy kolekce z [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objektů ukazatele rozhraní modelu COM. Tato třída se používá i [cinterfacearray –](../../atl/reference/cinterfacearray-class.md) a [cinterfacelist –](../../atl/reference/cinterfacelist-class.md) třídy.
+Tato třída odvodí metody a poskytuje typedef užitečné při vytváření třídy kolekce [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM ukazatele ukazatele objektů. Tato třída je využívána třídami [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) a [CInterfaceList.](../../atl/reference/cinterfacelist-class.md)
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cdefaultcomparetraits –](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[Cdefaulthashtraits –](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Celementtraitsbase –](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[Cdefaultelementtraits –](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
@@ -65,15 +65,15 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE
 
-Datový typ pro použití při přidávání prvků do objektu třídy kolekce.
+Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.
 
 ```
 typedef I* INARGTYPE;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

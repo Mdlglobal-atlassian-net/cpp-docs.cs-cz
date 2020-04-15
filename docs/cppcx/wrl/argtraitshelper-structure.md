@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: fbba6d96106cc95910ccd9d0029cb3e9c254d7d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360773"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,22 +34,22 @@ Rozhraní delegáta.
 
 ## <a name="remarks"></a>Poznámky
 
-Pomáhá definovat běžné vlastnosti argumenty delegátů.
+Pomáhá definovat společné charakteristiky argumentů delegáta.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název         | Popis
+Name (Název)         | Popis
 ------------ | ------------------------------------------------------
-`methodType` | Synonymum pro `decltype(&TDelegateInterface::Invoke)`.
-`Traits`     | Synonymum pro `ArgTraits<methodType>`.
+`methodType` | Synonymum `decltype(&TDelegateInterface::Invoke)`pro .
+`Traits`     | Synonymum `ArgTraits<methodType>`pro .
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-Název                           | Popis
+Name (Název)                           | Popis
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[ArgTraitsHelper::args](#args) | Pomáhá [ArgTraits::args](#args) zachovat počet parametrů na `Invoke` metoda rozhraní delegáta.
+[ArgTraitsHelper::args](#args) | Pomáhá [ArgTraits::args](#args) zachovat počet parametrů na `Invoke` metodu delegáta rozhraní.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -59,11 +59,11 @@ Název                           | Popis
 
 **Záhlaví:** event.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="args"></a>ArgTraitsHelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a>ArgTraitsHelper::args
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 static const int args = Traits::args;
@@ -71,4 +71,4 @@ static const int args = Traits::args;
 
 ### <a name="remarks"></a>Poznámky
 
-Pomáhá `ArgTraitsHelper::args` zachovat počet parametrů na `Invoke` metoda rozhraní delegáta.
+Pomáhá `ArgTraitsHelper::args` udržovat počet parametrů na metodu `Invoke` delegáta rozhraní.

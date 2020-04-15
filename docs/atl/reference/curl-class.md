@@ -1,5 +1,5 @@
 ---
-title: CUrl – třída
+title: Třída CUrl
 ms.date: 05/06/2019
 f1_keywords:
 - CUrl
@@ -35,19 +35,19 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: fe91a01fbe67580bf82ae57c0317d06057fc9098
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 3468e17b031d0a72bc56d915c689fbe4c78859e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221502"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330470"
 ---
-# <a name="curl-class"></a>CUrl – třída
+# <a name="curl-class"></a>Třída CUrl
 
-Tato třída představuje adresu URL. To umožňuje pracovat s každý prvek adresu URL nezávisle na ostatních, zda analýza stávající adresy URL řetězec nebo vytváření řetězec od začátku.
+Tato třída představuje adresu URL. Umožňuje manipulovat s každým prvkem adresy URL nezávisle na ostatních, zda je analýza existujícího řetězce adresy URL nebo vytvoření řetězce od začátku.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,84 +59,84 @@ class CUrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Konstruktor|
 |[CUrl::~CUrl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CUrl::Canonicalize](#canonicalize)|Volání této metody pro převod řetězce adresy URL na kanonický tvar.|
-|[CUrl::Clear](#clear)|Voláním této metody lze vymazat všechna pole adresy URL.|
-|[CUrl::CrackUrl](#crackurl)|Volejte tuto metodu za účelem dekódování a analyzovat adresu URL.|
-|[CUrl::CreateUrl](#createurl)|Volejte tuto metodu za účelem vytvoření adresy URL.|
-|[CUrl::GetExtraInfo](#getextrainfo)|Voláním této metody lze získat další informace (například *text* nebo # *text*) z adresy URL.|
-|[CUrl::GetExtraInfoLength](#getextrainfolength)|Volat tuto metodu za účelem získání délky dodatečné informace (například *text* nebo # *text*) pro načtení z adresy URL.|
-|[CUrl::GetHostName](#gethostname)|Volejte tuto metodu za účelem získání názvu hostitele z adresy URL.|
-|[CUrl::GetHostNameLength](#gethostnamelength)|Volejte tuto metodu za účelem získání délky názvu hostitele.|
-|[CUrl::GetPassword](#getpassword)|Volejte tuto metodu za účelem získání hesla z adresy URL.|
-|[CUrl::GetPasswordLength](#getpasswordlength)|Volejte tuto metodu za účelem získání délky hesla.|
-|[CUrl::GetPortNumber](#getportnumber)|Volejte tuto metodu za účelem získání číslo portu z hlediska ATL_URL_PORT.|
-|[CUrl::GetScheme](#getscheme)|Volejte tuto metodu za účelem získání schéma adresy URL.|
-|[CUrl::GetSchemeName](#getschemename)|Volejte tuto metodu za účelem získání názvu schéma adresy URL.|
-|[CUrl::GetSchemeNameLength](#getschemenamelength)|Volejte tuto metodu za účelem získání délky název schéma adresy URL.|
-|[CUrl::GetUrlLength](#geturllength)|Volejte tuto metodu za účelem získání délky adresy URL.|
-|[CUrl::GetUrlPath](#geturlpath)|Volejte tuto metodu za účelem získání cesty adresy URL.|
-|[CUrl::GetUrlPathLength](#geturlpathlength)|Volejte tuto metodu za účelem získání délky cesty adresy URL.|
-|[CUrl::GetUserName](#getusername)|Volejte tuto metodu za účelem získání uživatelského jména z adresy URL.|
-|[CUrl::GetUserNameLength](#getusernamelength)|Volejte tuto metodu za účelem získání délky uživatelské jméno.|
-|[CUrl::SetExtraInfo](#setextrainfo)|Voláním této metody lze nastavit další informace (například *text* nebo # *text*) adresy URL.|
-|[CUrl::SetHostName](#sethostname)|Voláním této metody lze nastavit název hostitele.|
-|[CUrl::SetPassword](#setpassword)|Voláním této metody lze nastavit heslo.|
-|[CUrl::SetPortNumber](#setportnumber)|Voláním této metody nastavte číslo portu z hlediska ATL_URL_PORT.|
-|[CUrl::SetScheme](#setscheme)|Voláním této metody nastavte schéma adresy URL.|
-|[CUrl::SetSchemeName](#setschemename)|Voláním této metody nastavte název schéma adresy URL.|
-|[CUrl::SetUrlPath](#seturlpath)|Volejte tuto metodu použijte k nastavení cesty adresy URL.|
-|[CUrl::SetUserName](#setusername)|Voláním této metody nastavte uživatelské jméno.|
+|[CUrl::Kanoián](#canonicalize)|Volánítéto metody převést řetězec URL do kanonického formuláře.|
+|[CUrl::Vymazat](#clear)|Voláním této metody zrušte všechna pole adresy URL.|
+|[CUrl::CrackUrl](#crackurl)|Volání této metody dekódovat a analyzovat adresu URL.|
+|[CUrl::Vytvořit adresu Url](#createurl)|Volání této metody k vytvoření adresy URL.|
+|[CUrl::ZískatextraInfo](#getextrainfo)|Volání této metody získat další informace (například *text* nebo # *text)* z adresy URL.|
+|[CUrl::GetExtraInfoLength](#getextrainfolength)|Volání této metody získat délku další informace (například *text* nebo # *text)* načíst z adresy URL.|
+|[curl::GethostName](#gethostname)|Volání této metody získat název hostitele z adresy URL.|
+|[curl::GetHostNameLength](#gethostnamelength)|Volání této metody získat délku názvu hostitele.|
+|[CUrl::GetPassword](#getpassword)|Volání této metody získat heslo z adresy URL.|
+|[CUrl::GetPasswordLength](#getpasswordlength)|Volání této metody získat délku hesla.|
+|[CUrl::Číslo GetPort](#getportnumber)|Volání této metody získat číslo portu z hlediska ATL_URL_PORT.|
+|[CUrl::GetScheme](#getscheme)|Volání této metody získat schéma URL.|
+|[CUrl::GetSchemeName](#getschemename)|Volání této metody získat název schématu ADRESY URL.|
+|[CUrl::GetSchemeNameLength](#getschemenamelength)|Volání této metody získat délku názvu schématu URL.|
+|[CUrl::GetUrlLength](#geturllength)|Volání této metody získat délku adresy URL.|
+|[CUrl::GetUrlPath](#geturlpath)|Volání této metody získat cestu URL.|
+|[CUrl::GetUrlPathLength](#geturlpathlength)|Volání této metody získat délku cesty URL.|
+|[CUrl::GetUserName](#getusername)|Volání této metody získat uživatelské jméno z adresy URL.|
+|[CUrl::GetUserNameLength](#getusernamelength)|Volání této metody získat délku uživatelského jména.|
+|[CUrl::SetExtraInfo](#setextrainfo)|Volání této metody nastavit další informace (například *text* nebo # *text)* adresy URL.|
+|[curl::SetHostName](#sethostname)|Volání této metody nastavit název hostitele.|
+|[CUrl::SetPassword](#setpassword)|Volání této metody nastavit heslo.|
+|[CUrl::SetPortNumber](#setportnumber)|Volání této metody nastavit číslo portu z hlediska ATL_URL_PORT.|
+|[CUrl::SetScheme](#setscheme)|Volání této metody nastavit schéma adresy URL.|
+|[CUrl::SetSchemeName](#setschemename)|Volánítéto metody nastavit název schématu ADRESY URL.|
+|[CUrl::SetUrlPath](#seturlpath)|Volánítéto metody nastavit cestu URL.|
+|[CUrl::SetUserName](#setusername)|Volání této metody nastavit uživatelské jméno.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CUrl::operator =](#operator_eq)|Přiřadí zadaný `CUrl` objektů na aktuální `CUrl` objektu.|
+|[CUrl::operátor =](#operator_eq)|Přiřadí zadaný `CUrl` objekt `CUrl` k aktuálnímu objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CUrl` umožňuje manipulaci s poli Adresa URL, jako je například cesta nebo port číslo. `CUrl` rozumí adresy URL v následujícím formátu:
+`CUrl`umožňuje manipulovat s poli adresy URL, například s cestou nebo číslem portu. `CUrl`rozumí adresám URL následujícího formuláře:
 
-\<Scheme>://\<UserName>:\<Password>\@\<HostName>:\<PortNumber>/\<UrlPath>\<ExtraInfo>
+\<Schéma\<>:// uživatelské\<jméno \@ \<>: Heslo\<>>\<HostName: PortNumber>/ UrlPath>\<ExtraInfo>
 
-(Některá pole jsou volitelná.) Zvažte například tuto adresu URL:
+(Některá pole jsou nepovinná.) Zvažte například tuto adresu URL:
 
 `http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
-[CUrl::CrackUrl](#crackurl) analyzuje následujícím způsobem:
+[CUrl::CrackUrl](#crackurl) analyzuje to takto:
 
 - Schéma: "http" nebo [ATL_URL_SCHEME_HTTP](atl-url-scheme-enum.md)
 
-- Uživatelské jméno: "uživatel"
+- Uživatelské jméno: "někdo"
 
-- Heslo: "tajný klíč"
+- Heslo: "tajné"
 
-- Název hostitele: "`www.microsoft.com`"
+- HostName:`www.microsoft.com`"
 
-- Číslo_portu: 80
+- Číslo portu: 80
 
 - UrlPath: "visualc/stuff.htm"
 
 - ExtraInfo: "#contents"
 
-K manipulaci s poli UrlPath (například), můžete využít [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), a [SetUrlPath](#seturlpath). Můžete využít [CreateUrl](#createurl) k vytvoření kompletního řetězce adresy URL.
+Chcete-li manipulovat s polem UrlPath (například), použijte [geturlpath](#geturlpath), [GetUrlPathLength](#geturlpathlength)a [SetUrlPath](#seturlpath). Pomocí [adresy CreateUrl](#createurl) byste vytvořili úplný řetězec adresy URL.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlutil.h
 
-##  <a name="canonicalize"></a>  CUrl::Canonicalize
+## <a name="curlcanonicalize"></a><a name="canonicalize"></a>CUrl::Kanoián
 
-Volání této metody pro převod řetězce adresy URL na kanonický tvar.
+Volánítéto metody převést řetězec URL do kanonického formuláře.
 
 ```
 inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
@@ -145,39 +145,39 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Příznaky, které řídí převodu do kanonického tvaru. Pokud nejsou zadány žádné příznaky (*dwFlags* = 0), metoda převede všechny problematické znaky a meta pořadí (jako například \\., \.., a \\...) dostala mimo pořadí. *dwFlags* může být jedna z následujících hodnot:
+Příznaky, které řídí kanonizaci. Pokud nejsou zadány žádné příznaky (*dwFlags* = 0), metoda převede \\všechny nebezpečné znaky \\a metasekvence (například .,\ .., a ...) na únikové sekvence. *dwFlags* může být jedna z následujících hodnot:
 
-- ATL_URL_BROWSER_MODE: Kódování nebo dekódování znaků za "#" nebo "" a neodebere prázdný znak po "". Pokud tato hodnota není zadaná, je zakódovaný celou adresu URL a odebrat koncové prázdné znaky.
+- ATL_URL_BROWSER_MODE: Nekóduje ani nedekóduje znaky za "#" nebo "" a neodstraní koncové prázdné místo po "". Pokud tato hodnota není zadána, je zakódována celá adresa URL a je odebráno koncové prázdné místo.
 
-- ATL_URL _DECODE: Převede všechny % XX sekvence znaků, včetně řídicí sekvence, než adresa URL se zpracuje.
+- ATL_URL _DECODE: Převede všechny sekvence %XX na znaky, včetně sekvencí escape, před analýzou adresy URL.
 
-- ATL_URL _ENCODE_PERCENT: Zakóduje došlo k procenta. Ve výchozím nastavení nejsou kódovaný procenta.
+- ATL_URL _ENCODE_PERCENT: Zakóduje všechny znaky, které se objeví. Ve výchozím nastavení nejsou znaky procenta zakódovány.
 
 - ATL_URL _ENCODE_SPACES_ONLY: Zakóduje pouze mezery.
 
-- ATL_URL _NO_ENCODE: Nelze převést problematické znaky na řídicí sekvence.
+- ATL_URL _NO_ENCODE: Nepřevádí nebezpečné znaky na řídicí sekvence.
 
-- ATL_URL _NO_META: Neodebere meta pořadí (jako například "."a"..") z adresy URL.
+- ATL_URL _NO_META: Neodebere metasekvence (například "." a "..") z adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 ### <a name="remarks"></a>Poznámky
 
-Převod do kanonického tvaru zahrnuje problematické znaky a mezery pro řídicí sekvence.
+Převod na kanonický formulář zahrnuje převod nebezpečných znaků a mezer na řídicí sekvence.
 
-##  <a name="clear"></a>  CUrl::Clear
+## <a name="curlclear"></a><a name="clear"></a>CUrl::Vymazat
 
-Voláním této metody lze vymazat všechna pole adresy URL.
+Voláním této metody zrušte všechna pole adresy URL.
 
 ```
 inline void Clear() throw();
 ```
 
-##  <a name="crackurl"></a>  CUrl::CrackUrl
+## <a name="curlcrackurl"></a><a name="crackurl"></a>CUrl::CrackUrl
 
-Volejte tuto metodu za účelem dekódování a analyzovat adresu URL.
+Volání této metody dekódovat a analyzovat adresu URL.
 
 ```
 BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
@@ -189,15 +189,15 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 Adresa URL.
 
 *dwFlags*<br/>
-Zadejte ATL_URL_DECODE nebo ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty po analýze. (Před Visual C++ 2005, ATL_URL_DECODE převést všechny řídicí znaky před dokončením analýzy.)
+Zadejte ATL_URL_DECODE nebo ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na jejich skutečné hodnoty po parsingu. (Před visual c++ 2005 ATL_URL_DECODE před analýzou převést všechny řídicí znaky.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="createurl"></a>  CUrl::CreateUrl
+## <a name="curlcreateurl"></a><a name="createurl"></a>CUrl::Vytvořit adresu Url
 
-Tato metoda vytvoří řetězec adresy URL z polí objekt CUrl komponenty.
+Tato metoda vytvoří řetězec ADRESY URL z polí komponent objektu CUrl.
 
 ```
 inline BOOL CreateUrl(
@@ -209,33 +209,33 @@ inline BOOL CreateUrl(
 ### <a name="parameters"></a>Parametry
 
 *lpszUrl*<br/>
-Vyrovnávací paměti řetězce pro uložení kompletního řetězce adresy URL.
+Vyrovnávací paměť řetězce pro uložení úplného řetězce ADRESY URL.
 
 *pdwMaxLength*<br/>
-Maximální délka *lpszUrl* vyrovnávací paměti pro řetězec.
+Maximální délka vyrovnávací paměti řetězce *lpszUrl.*
 
 *dwFlags*<br/>
-Zadejte ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty.
+Zadejte ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na jejich skutečné hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá jeho jednotlivých polí. aby bylo možné vytvořit kompletního řetězce adresy URL v následujícím formátu:
+Tato metoda připojí jeho jednotlivá pole, aby bylo možné vytvořit celý řetězec URL pomocí následujícího formátu:
 
-**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
+**\<schéma\<>://>\<uživatele: předat \@ \<>> domény:\<cesta>portu \<>\<další>**
 
-Při volání této metody *pdwMaxLength* parametr by měl obsahovat zpočátku maximální délka vyrovnávací paměti pro řetězec odkazuje *lpszUrl* parametru. Hodnota *pdwMaxLength* parametr aktualizuje skutečnou délku řetězce adresy URL.
+Při volání této metody by měl parametr *pdwMaxLength* zpočátku obsahovat maximální délku vyrovnávací paměti řetězce, na kterou odkazuje parametr *lpszUrl.* Hodnota parametru *pdwMaxLength* bude aktualizována skutečnou délkou řetězce URL.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje vytvoření objektu CUrl a načítání jeho řetězce adresy URL
+Tato ukázka ukazuje vytvoření curl objektu a načítání jeho řetězec URL
 
 [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]
 
-##  <a name="curl"></a>  CUrl::CUrl
+## <a name="curlcurl"></a><a name="curl"></a>CUrl::CUrl
 
 Konstruktor
 
@@ -247,9 +247,9 @@ CUrl(const CUrl& urlThat) throw();
 ### <a name="parameters"></a>Parametry
 
 *urlThat*<br/>
-`CUrl` Objektu, který chcete zkopírovat do vytvořit adresu URL.
+Objekt, `CUrl` který chcete zkopírovat, chcete-li vytvořit adresu URL.
 
-##  <a name="dtor"></a>  CUrl::~CUrl
+## <a name="curlcurl"></a><a name="dtor"></a>CUrl::~CUrl
 
 Destruktor.
 
@@ -257,9 +257,9 @@ Destruktor.
 ~CUrl() throw();
 ```
 
-##  <a name="getextrainfo"></a>  CUrl::GetExtraInfo
+## <a name="curlgetextrainfo"></a><a name="getextrainfo"></a>CUrl::ZískatextraInfo
 
-Voláním této metody lze získat další informace (například *text* nebo # *text*) z adresy URL.
+Volání této metody získat další informace (například *text* nebo # *text)* z adresy URL.
 
 ```
 inline LPCTSTR GetExtraInfo() const throw();
@@ -269,9 +269,9 @@ inline LPCTSTR GetExtraInfo() const throw();
 
 Vrátí řetězec obsahující další informace.
 
-##  <a name="getextrainfolength"></a>  CUrl::GetExtraInfoLength
+## <a name="curlgetextrainfolength"></a><a name="getextrainfolength"></a>CUrl::GetExtraInfoLength
 
-Volat tuto metodu za účelem získání délky dodatečné informace (například *text* nebo # *text*) pro načtení z adresy URL.
+Volání této metody získat délku další informace (například *text* nebo # *text)* načíst z adresy URL.
 
 ```
 inline DWORD GetExtraInfoLength() const throw();
@@ -279,11 +279,11 @@ inline DWORD GetExtraInfoLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délku řetězce, který obsahuje další informace.
+Vrátí délku řetězce obsahujícího další informace.
 
-##  <a name="gethostname"></a>  CUrl::GetHostName
+## <a name="curlgethostname"></a><a name="gethostname"></a>curl::GethostName
 
-Volejte tuto metodu za účelem získání názvu hostitele z adresy URL.
+Volání této metody získat název hostitele z adresy URL.
 
 ```
 inline LPCTSTR GetHostName() const throw();
@@ -293,9 +293,9 @@ inline LPCTSTR GetHostName() const throw();
 
 Vrátí název hostitele.
 
-##  <a name="gethostnamelength"></a>  CUrl::GetHostNameLength
+## <a name="curlgethostnamelength"></a><a name="gethostnamelength"></a>curl::GetHostNameLength
 
-Volejte tuto metodu za účelem získání délky názvu hostitele.
+Volání této metody získat délku názvu hostitele.
 
 ```
 inline DWORD GetHostNameLength() const throw();
@@ -303,11 +303,11 @@ inline DWORD GetHostNameLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délka názvu hostitele.
+Vrátí délku názvu hostitele.
 
-##  <a name="getpassword"></a>  CUrl::GetPassword
+## <a name="curlgetpassword"></a><a name="getpassword"></a>CUrl::GetPassword
 
-Volejte tuto metodu za účelem získání hesla z adresy URL.
+Volání této metody získat heslo z adresy URL.
 
 ```
 inline LPCTSTR GetPassword() const throw();
@@ -317,9 +317,9 @@ inline LPCTSTR GetPassword() const throw();
 
 Vrátí heslo.
 
-##  <a name="getpasswordlength"></a>  CUrl::GetPasswordLength
+## <a name="curlgetpasswordlength"></a><a name="getpasswordlength"></a>CUrl::GetPasswordLength
 
-Volejte tuto metodu za účelem získání délky hesla.
+Volání této metody získat délku hesla.
 
 ```
 inline DWORD GetPasswordLength() const throw();
@@ -329,9 +329,9 @@ inline DWORD GetPasswordLength() const throw();
 
 Vrátí délku hesla.
 
-##  <a name="getportnumber"></a>  CUrl::GetPortNumber
+## <a name="curlgetportnumber"></a><a name="getportnumber"></a>CUrl::Číslo GetPort
 
-Volejte tuto metodu za účelem získání číslo portu.
+Volání této metody získat číslo portu.
 
 ```
 inline ATL_URL_PORT GetPortNumber() const throw();
@@ -341,9 +341,9 @@ inline ATL_URL_PORT GetPortNumber() const throw();
 
 Vrátí číslo portu.
 
-##  <a name="getscheme"></a>  CUrl::GetScheme
+## <a name="curlgetscheme"></a><a name="getscheme"></a>CUrl::GetScheme
 
-Volejte tuto metodu za účelem získání schéma adresy URL.
+Volání této metody získat schéma URL.
 
 ```
 inline ATL_URL_SCHEME GetScheme() const throw();
@@ -351,11 +351,11 @@ inline ATL_URL_SCHEME GetScheme() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnotu popisující schéma adresy URL.
+Vrátí [hodnotu ATL_URL_SCHEME](atl-url-scheme-enum.md) popisující schéma adresy URL.
 
-##  <a name="getschemename"></a>  CUrl::GetSchemeName
+## <a name="curlgetschemename"></a><a name="getschemename"></a>CUrl::GetSchemeName
 
-Volejte tuto metodu za účelem získání názvu schéma adresy URL.
+Volání této metody získat název schématu ADRESY URL.
 
 ```
 inline LPCTSTR GetSchemeName() const throw();
@@ -363,11 +363,11 @@ inline LPCTSTR GetSchemeName() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí název schéma adresy URL (například "http" nebo "ftp").
+Vrátí název schématu adresy URL (například "http" nebo "ftp").
 
-##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength
+## <a name="curlgetschemenamelength"></a><a name="getschemenamelength"></a>CUrl::GetSchemeNameLength
 
-Volejte tuto metodu za účelem získání délky název schéma adresy URL.
+Volání této metody získat délku názvu schématu URL.
 
 ```
 inline DWORD GetSchemeNameLength() const throw();
@@ -375,11 +375,11 @@ inline DWORD GetSchemeNameLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délku názvu schéma adresy URL.
+Vrátí délku názvu schématu adresy URL.
 
-##  <a name="geturllength"></a>  CUrl::GetUrlLength
+## <a name="curlgeturllength"></a><a name="geturllength"></a>CUrl::GetUrlLength
 
-Volejte tuto metodu za účelem získání délky adresy URL.
+Volání této metody získat délku adresy URL.
 
 ```
 inline DWORD GetUrlLength() const throw();
@@ -389,9 +389,9 @@ inline DWORD GetUrlLength() const throw();
 
 Vrátí délku adresy URL.
 
-##  <a name="geturlpath"></a>  CUrl::GetUrlPath
+## <a name="curlgeturlpath"></a><a name="geturlpath"></a>CUrl::GetUrlPath
 
-Volejte tuto metodu za účelem získání cesty adresy URL.
+Volání této metody získat cestu URL.
 
 ```
 inline LPCTSTR GetUrlPath() const throw();
@@ -399,11 +399,11 @@ inline LPCTSTR GetUrlPath() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací cestu adresy URL.
+Vrátí cestu url.
 
-##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength
+## <a name="curlgeturlpathlength"></a><a name="geturlpathlength"></a>CUrl::GetUrlPathLength
 
-Volejte tuto metodu za účelem získání délky cesty adresy URL.
+Volání této metody získat délku cesty URL.
 
 ```
 inline DWORD GetUrlPathLength() const throw();
@@ -411,11 +411,11 @@ inline DWORD GetUrlPathLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délku cesty adresy URL.
+Vrátí délku cesty URL.
 
-##  <a name="getusername"></a>  CUrl::GetUserName
+## <a name="curlgetusername"></a><a name="getusername"></a>CUrl::GetUserName
 
-Volejte tuto metodu za účelem získání uživatelského jména z adresy URL.
+Volání této metody získat uživatelské jméno z adresy URL.
 
 ```
 inline LPCTSTR GetUserName() const throw();
@@ -425,9 +425,9 @@ inline LPCTSTR GetUserName() const throw();
 
 Vrátí uživatelské jméno.
 
-##  <a name="getusernamelength"></a>  CUrl::GetUserNameLength
+## <a name="curlgetusernamelength"></a><a name="getusernamelength"></a>CUrl::GetUserNameLength
 
-Volejte tuto metodu za účelem získání délky uživatelské jméno.
+Volání této metody získat délku uživatelského jména.
 
 ```
 inline DWORD GetUserNameLength() const throw();
@@ -435,11 +435,11 @@ inline DWORD GetUserNameLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délka jména uživatele.
+Vrátí délku uživatelského jména.
 
-##  <a name="operator_eq"></a>  CUrl::operator =
+## <a name="curloperator-"></a><a name="operator_eq"></a>CUrl::operátor =
 
-Přiřadí zadaný `CUrl` objektů na aktuální `CUrl` objektu.
+Přiřadí zadaný `CUrl` objekt `CUrl` k aktuálnímu objektu.
 
 ```
 CUrl& operator= (const CUrl& urlThat) throw();
@@ -448,15 +448,15 @@ CUrl& operator= (const CUrl& urlThat) throw();
 ### <a name="parameters"></a>Parametry
 
 *urlThat*<br/>
-`CUrl` Objektu, který chcete zkopírovat do aktuálního objektu.
+Objekt, `CUrl` který chcete zkopírovat do aktuálního objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí odkaz na aktuální objekt.
 
-##  <a name="setextrainfo"></a>  CUrl::SetExtraInfo
+## <a name="curlsetextrainfo"></a><a name="setextrainfo"></a>CUrl::SetExtraInfo
 
-Voláním této metody lze nastavit další informace (například *text* nebo # *text*) adresy URL.
+Volání této metody nastavit další informace (například *text* nebo # *text)* adresy URL.
 
 ```
 inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
@@ -465,15 +465,15 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszInfo*<br/>
-Řetězec obsahující další informace, včetně v adrese URL.
+Řetězec obsahující další informace, které mají být zahrnuty do adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="sethostname"></a>  CUrl::SetHostName
+## <a name="curlsethostname"></a><a name="sethostname"></a>curl::SetHostName
 
-Voláním této metody lze nastavit název hostitele.
+Volání této metody nastavit název hostitele.
 
 ```
 inline BOOL SetHostName(LPCTSTR lpszHost) throw();
@@ -486,11 +486,11 @@ Název hostitele.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="setpassword"></a>  CUrl::SetPassword
+## <a name="curlsetpassword"></a><a name="setpassword"></a>CUrl::SetPassword
 
-Voláním této metody lze nastavit heslo.
+Volání této metody nastavit heslo.
 
 ```
 inline BOOL SetPassword(LPCTSTR lpszPass) throw();
@@ -503,11 +503,11 @@ Heslo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="setportnumber"></a>  CUrl::SetPortNumber
+## <a name="curlsetportnumber"></a><a name="setportnumber"></a>CUrl::SetPortNumber
 
-Voláním této metody nastavte číslo portu.
+Volání této metody nastavit číslo portu.
 
 ```
 inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
@@ -516,15 +516,15 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 ### <a name="parameters"></a>Parametry
 
 *nPrt*<br/>
-Číslo portu.
+Číslo portu
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="setscheme"></a>  CUrl::SetScheme
+## <a name="curlsetscheme"></a><a name="setscheme"></a>CUrl::SetScheme
 
-Voláním této metody nastavte schéma adresy URL.
+Volání této metody nastavit schéma adresy URL.
 
 ```
 inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
@@ -532,20 +532,20 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nScheme*<br/>
-Jeden z [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnoty pro schéma.
+*nSchéma*<br/>
+Jedna z [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnot pro schéma.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 ### <a name="remarks"></a>Poznámky
 
 Schéma můžete také nastavit podle názvu (viz [CUrl::SetSchemeName](#setschemename)).
 
-##  <a name="setschemename"></a>  CUrl::SetSchemeName
+## <a name="curlsetschemename"></a><a name="setschemename"></a>CUrl::SetSchemeName
 
-Voláním této metody nastavte název schéma adresy URL.
+Volánítéto metody nastavit název schématu ADRESY URL.
 
 ```
 inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
@@ -558,15 +558,15 @@ Název schématu adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 ### <a name="remarks"></a>Poznámky
 
-Schéma můžete nastavit také pomocí [ATL_URL_SCHEME](atl-url-scheme-enum.md) konstantní (viz [CUrl::SetScheme](#setscheme)).
+Schéma můžete také nastavit pomocí [ATL_URL_SCHEME](atl-url-scheme-enum.md) konstanty (viz [CUrl::SetScheme](#setscheme)).
 
-##  <a name="seturlpath"></a>  CUrl::SetUrlPath
+## <a name="curlseturlpath"></a><a name="seturlpath"></a>CUrl::SetUrlPath
 
-Volejte tuto metodu použijte k nastavení cesty adresy URL.
+Volánítéto metody nastavit cestu URL.
 
 ```
 inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
@@ -575,15 +575,15 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszPath*<br/>
-Cesta adresy URL.
+Cesta url.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-##  <a name="setusername"></a>  CUrl::SetUserName
+## <a name="curlsetusername"></a><a name="setusername"></a>CUrl::SetUserName
 
-Voláním této metody nastavte uživatelské jméno.
+Volání této metody nastavit uživatelské jméno.
 
 ```
 inline BOOL SetUserName(LPCTSTR lpszUser) throw();
@@ -592,12 +592,12 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszUser*<br/>
-Uživatelské jméno
+Uživatelské jméno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../atl/reference/atl-classes.md)

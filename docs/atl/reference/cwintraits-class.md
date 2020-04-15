@@ -1,5 +1,5 @@
 ---
-title: Cwintraits – třída
+title: Třída CWinTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CWinTraits
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd73f733e4eff21da92937d1e1b0cce21552a48c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330301"
 ---
-# <a name="cwintraits-class"></a>Cwintraits – třída
+# <a name="cwintraits-class"></a>Třída CWinTraits
 
-Tato třída poskytuje metody pro standardizaci stylů použitých při vytváření objektu okno.
+Tato třída poskytuje metodu pro standardizaci stylů používaných při vytváření objektu okna.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,49 +36,49 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 #### <a name="parameters"></a>Parametry
 
 *t_dwStyle*<br/>
-Výchozí styly standardní okno.
+Výchozí standardní styly oken.
 
 *t_dwExStyle*<br/>
-Rozšířené styly oken ve výchozím nastavení.
+Výchozí styly rozšířených oken.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Statické) Načte rozšířené styly `CWinTraits` objektu.|
-|[CWinTraits::GetWndStyle](#getwndstyle)|(Statické) Načte standardní styly `CWinTraits` objektu.|
+|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Statické) Načte rozšířené styly `CWinTraits` pro objekt.|
+|[CWinTraits::GetWndStyle](#getwndstyle)|(Statické) Načte standardní styly `CWinTraits` pro objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-To [vlastností okna](../../atl/understanding-window-traits.md) třída poskytuje jednoduchý způsob pro standardizaci stylů použitých pro vytvoření objektu ATL okna. Použít jako parametr šablony specializace této třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md) nebo jiného tříd oken ATL. Chcete-li určit výchozí standardní a rozšířené stylů použitých pro instance této třídy okna.
+Tato třída [vlastností okna](../../atl/understanding-window-traits.md) poskytuje jednoduchou metodu pro standardizaci stylů použitých pro vytvoření objektu okna KNIHOVNY ATL. Použijte specializaci této třídy jako parametr šablony [cWindowImpl](../../atl/reference/cwindowimpl-class.md) nebo jiné třídy oken knihovny ATL k určení výchozího standardního a rozšířeného stylu používaného pro instance této třídy okna.
 
-Tuto šablonu použít, pokud chcete zadat výchozí styly oken, které budou použity pouze v případě, že žádné další styly jsou zadány při volání funkce [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
+Tuto šablonu použijte, pokud chcete poskytnout výchozí styly oken, které budou použity pouze v případě, že ve volání [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)nejsou zadány žádné jiné styly.
 
-Knihovna ATL poskytuje tři předdefinované specializace této šablony pro běžně používané kombinací styly oken:
+Knihovna ATL poskytuje tři předdefinované specializace této šablony pro běžně používané kombinace stylů oken:
 
 - `CControlWinTraits`
 
-   Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
+   Navrženo pro standardní ovládací okno. Používají se následující standardní styly: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
 
 - `CFrameWinTraits`
 
-   Navržené pro standardní rámce okna. Standardní stylů použitých patří: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané patří: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
+   Navrženo pro standardní okno rámu. Mezi použité standardní styly patří: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Mezi použité rozšířené styly patří: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Navržené pro standardní podřízené okno MDI. Standardní stylů použitých patří: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané patří: WS_EX_MDICHILD.
+   Navrženo pro standardní podřízené okno MDI. Mezi používané standardní styly patří: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly používané patří: WS_EX_MDICHILD.
 
-Pokud chcete mít jistotu, že určité styly jsou nastavené pro všechny instance třídy okna při umožňující nastavit na základě jednotlivé instance i jiné styly použijte [cwintraitsor –](../../atl/reference/cwintraitsor-class.md) místo.
+Pokud chcete zajistit, že některé styly jsou nastaveny pro všechny instance třídy okna a zároveň umožňuje jiné styly, které mají být nastaveny na základě instance, použijte [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) místo.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle
+## <a name="cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle
 
-Volání této funkce načtete standardní stylů `CWinTraits` objektu.
+Volání této funkce načíst standardní `CWinTraits` styly objektu.
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -86,16 +86,16 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Standardní stylů použitých pro vytvoření okna. Pokud *dwStyle* je 0, hodnoty šablony stylů (`t_dwStyle`) jsou vráceny. Pokud *dwStyle* nenulové, *dwStyle* je vrácena.
+*dwStyl*<br/>
+Standardní styly používané pro vytvoření okna. Pokud *je dwStyle* 0, jsou`t_dwStyle`vráceny hodnoty stylu šablony ( ). Pokud *dwStyle* je nenulová, *dwStyle* je vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní okno Styly objektu.
+Standardní styly oken objektu.
 
-##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle
+## <a name="cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle
 
-Voláním této funkce načtete rozšířené styly `CWinTraits` objektu.
+Volání této funkce načíst rozšířené `CWinTraits` styly objektu.
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -103,14 +103,14 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Rozšířené stylů použitých pro vytvoření okna. Pokud *dwExStyle* je 0, hodnoty šablony stylů (`t_dwExStyle`) jsou vráceny. Pokud *dwExStyle* nenulové, *dwExStyle* je vrácena.
+*dwExStyl*<br/>
+Rozšířené styly používané pro vytvoření okna. Pokud *je dwExStyle* 0, jsou`t_dwExStyle`vráceny hodnoty stylu šablony ( ). Pokud *dwExStyle* je nenulová, *dwExStyle* je vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Rozšířené styly oken objektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Principy vlastností okna](../../atl/understanding-window-traits.md)

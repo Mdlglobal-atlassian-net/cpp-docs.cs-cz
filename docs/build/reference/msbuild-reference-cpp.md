@@ -1,43 +1,43 @@
 ---
-title: Referenční dokumentace nástroje C++ MSBuild pro projekty v aplikaci Visual Studio
+title: Odkaz msbuild pro projekty jazyka C++ v sadě Visual Studio
 ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
-ms.openlocfilehash: ec1285a760d438a94863181a1b099e6db153c268
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96987a252d12f718025dd55deecad5c6bac26872
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168899"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336213"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Referenční zdroje k nástroji MSBuild pro projekty C++
 
-MSBuild je nativní sestavovací systém pro všechny projekty v aplikaci Visual Studio, včetně C++ projektů. Při sestavení projektu v integrovaném vývojovém prostředí (IDE) sady Visual Studio vyvolá nástroj MSBuild. exe, který zase používá soubor projektu. vcxproj, a různé soubory. targets a. props. Obecně doporučujeme, abyste pomocí prostředí Visual Studio IDE nastavili vlastnosti projektu a vyvolali MSBuild. Ruční úprava souborů projektu může vést k vážným problémům, pokud není provedeno správně.
+MSBuild je nativní systém sestavení pro všechny projekty v sadě Visual Studio, včetně projektů jazyka C++. Při vytváření projektu v integrovaném vývojovém prostředí sady Visual Studio (IDE) vyvolá nástroj msbuild.exe, který zase spotřebovává soubor projektu .vcxproj a různé soubory .targets a .props. Obecně důrazně doporučujeme použít IDE visual studio nastavit vlastnosti projektu a vyvolat MSBuild. Ruční úprava souborů projektu může vést k vážným problémům, pokud není provedena správně.
 
-Pokud z nějakého důvodu chcete použít MSBuild přímo z příkazového řádku, přečtěte si téma [použití nástroje MSBuild z příkazového řádku](../msbuild-visual-cpp.md). Další informace o nástroji MSBuild obecně naleznete v tématu [MSBuild](/visualstudio/msbuild/msbuild) v dokumentaci k sadě Visual Studio.
+Pokud z nějakého důvodu chcete msbuild použít přímo z příkazového řádku, přečtěte si část [Použití msbuildu z příkazového řádku](../msbuild-visual-cpp.md). Další informace o MSBuild obecně naleznete v tématu [MSBuild](/visualstudio/msbuild/msbuild) v dokumentaci k sadě Visual Studio.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Vnitřní fungování nástroje MSBuild pro projekty C++](msbuild-visual-cpp-overview.md)<br/>
-Informace o tom, jak vlastnosti a cíle jsou uloženy a spotřebovány.
+Informace o tom, jak jsou uloženy a spotřebovány vlastnosti a cíle.
 
-[Běžná makra pro příkazy a vlastnosti sestavení](common-macros-for-build-commands-and-properties.md)<br/>
-Popisuje makra (konstanty při kompilaci), které lze použít k definování vlastností, jako jsou například cesty a verze produktu.
+[Společná makra pro příkazy a vlastnosti sestavení](common-macros-for-build-commands-and-properties.md)<br/>
+Popisuje makra (konstanty v době kompilace), které lze použít k definování vlastností, jako jsou cesty a verze produktu.
 
-[Typy souborů vytvořené pro C++ projekty](file-types-created-for-visual-cpp-projects.md)<br/>
-Popisuje různé druhy souborů, které Visual Studio vytvoří pro různé typy projektů.
+[Typy souborů vytvořené pro projekty jazyka C++](file-types-created-for-visual-cpp-projects.md)<br/>
+Popisuje různé druhy souborů, které visual studio vytvoří pro různé typy projektů.
 
-[Šablony projektů C++ sady Visual Studio](visual-cpp-project-types.md)<br>
+[Šablony projektů Visual Studio C++](visual-cpp-project-types.md)<br>
 Popisuje typy projektů založené na MSBuild, které jsou k dispozici pro C++.
 
 [Šablony nových položek v C++](using-visual-cpp-add-new-item-templates.md)<br>
-Popisuje zdrojové soubory a další položky, které lze přidat do projektu aplikace Visual Studio.
+Popisuje zdrojové soubory a další položky, které můžete přidat do projektu sady Visual Studio.
 
-[Předkompilované hlavičkové soubory](../creating-precompiled-header-files.md) Jak používat předkompilované hlavičkové soubory a jak vytvořit vlastní předkompilovaný kód pro urychlení časů sestavení.
+[Předkompilované soubory hlaviček](../creating-precompiled-header-files.md) Jak používat předkompilované soubory hlaviček a jak vytvořit vlastní předkompilovaný kód pro urychlení doby sestavení.
 
-[Referenční dokumentace k vlastnostem projektu sady Visual Studio](property-pages-visual-cpp.md)<br/>
-Referenční dokumentace k vlastnostem projektu, které jsou nastaveny v integrovaném vývojovém prostředí sady Visual Studio.
+[Referenční vlastnost projektu sady Visual Studio](property-pages-visual-cpp.md)<br/>
+Referenční dokumentace pro vlastnosti projektu, které jsou nastaveny v ide sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)
+[Odkaz sestavení C/C++](c-cpp-building-reference.md)

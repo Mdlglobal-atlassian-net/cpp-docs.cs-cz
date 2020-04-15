@@ -1,8 +1,9 @@
 ---
 title: _get_heap_handle
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_heap_handle
+- _o__get_heap_handle
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: b5f53569db6cf99eb8f91e9a8668280b135097ce
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955868"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345079"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
-Vrátí popisovač haldy, který je používán systémem runtime C.
+Vrátí popisovač haldy, který je používán systémem c běhu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,19 +49,21 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač haldy Win32 používané systémem runtime C.
+Vrátí popisovač haldy Win32 používané systémem run-time C.
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte, pokud chcete volat [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) a povolit haldu s nízkou fragmentaci v haldě CRT.
+Tuto funkci použijte, pokud chcete volat [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) a povolit haldu s nízkou fragmentací na haldě CRT.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_heap_handle**|\<. h >|
+|**_get_heap_handle**|\<malloc.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Ukázka
 
@@ -84,6 +88,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>

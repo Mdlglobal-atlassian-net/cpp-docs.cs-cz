@@ -1,9 +1,11 @@
 ---
 title: _fdopen, _wfdopen
-ms.date: 12/12/2017
+ms.date: 4/2/2020
 api_name:
 - _fdopen
 - _wfdopen
+- _o__fdopen
+- _o__wfdopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 5202c84cd1a9038faf68587f9207d376ed8c0af1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82a7e891e8bd6031ebbf761534b6df7cd8488d36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347390"
 ---
 # <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
-Přidruží datový proud k souboru, který byl dříve otevřen pro vstupně-výstupní operace nízké úrovně.
+Přidruží datový proud k souboru, který byl dříve otevřen pro vstupně-videa nižší úrovně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,79 +65,81 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parametry
 
-*fd*<br/>
-Popisovač souboru otevřeného souboru
+*Fd*<br/>
+Popisovač souboru otevřeného souboru.
 
-*Mode*<br/>
-Typ přístupu k souboru
+*Režimu*<br/>
+Typ přístupu k souborům.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na otevřený datový proud. Hodnota nulového ukazatele označuje chybu. Pokud dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven buď na **EBADF**, což indikuje špatný popisovač souboru, nebo **EINVAL**, což označuje, že *režim* byl ukazatel s hodnotou null.
+Každá z těchto funkcí vrátí ukazatel na otevřený datový proud. Hodnota ukazatele null označuje chybu. Dojde-li k chybě, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena buď **na EBADF**, což znamená chybný popisovač souboru nebo **EINVAL**, což znamená, že *režim* byl nulový ukazatel.
 
-Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_fdopen** přidruží vstupně-výstupní proud k souboru, který je identifikován pomocí *FD*, a umožňuje tak otevření souboru, který je otevřen pro vstupně-výstupní operace nízké úrovně do vyrovnávací paměti a formátování. **_wfdopen** je **_fdopen**verze s velkým znakem; Argument *Mode* pro **_wfdopen** je řetězec s velkým znakem. **_wfdopen** a **_fdopen** se v opačném případě chovají stejně.
+Funkce **_fdopen** přidruží vstupně-v.O datový proud se souborem, který je identifikován *fd*, a umožňuje soubor, který je otevřen pro nízké úrovně V/O, které mají být uloženy do vyrovnávací paměti a formátovány. **_wfdopen** je širokoznaková verze **_fdopen**; argument *mode,* který má **_wfdopen,** je řetězec s širokým znakem. **_wfdopen** a **_fdopen** jinak chovají stejně.
 
-Popisovače souborů předané do **_fdopen** jsou vlastněny vráceným datovým proudem **souboru &#42;**  . Pokud je **_fdopen** úspěšné, Nevolejte [ \_](close.md) v popisovači souboru Close. Volání [fclose](fclose-fcloseall.md) ve vráceném **souboru &#42;**  také zavře popisovač souboru.
+Popisovače souborů předané do **_fdopen** jsou vlastněny vráceným **datovým proudem &#42;souboru.** Pokud **_fdopen** úspěšné, nevolejte [ \_zavřít](close.md) popisovač souboru. Volání [fclose](fclose-fcloseall.md) na vrácené **souboru &#42;** také zavře popisovač souboru.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina Tchar.h|\_Kódování Unicode \_a MBCS není definováno.|\_Definice znakové sady MBCS|\_Definováno kódováním UNICODE|
+|Rutina Tchar.h|\_UNICODE \_a MBCS nejsou definovány|\_MBCS definice|\_UNICODE, definice|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-Řetězec znaků *režimu* určuje typ přístupu k souboru vyžádaného pro tento soubor:
+Řetězec znaků *režimu* určuje typ přístupu k souboru požadovaný pro soubor:
 
-| *Mode* | Access |
+| *Režimu* | Access |
 |--------|--------|
-| **í** | Otevře se pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, volání **fopen** se nezdařilo. |
-| **"w"** | Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah je zničen. |
-| **určitého** | Otevře se pro zápis na konci souboru (připojení). Vytvoří soubor, pokud neexistuje. |
-| **"r +"** | Otevře se pro čtení i zápis. Soubor musí existovat. |
-| **"w +"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah se zničí. |
-| **"a +"** | Otevře se pro čtení a připojení. Vytvoří soubor, pokud neexistuje. |
+| **"r"** | Otevírá se pro čtení. Pokud soubor neexistuje nebo jej nelze najít, volání **fopen** se nezdaří. |
+| **"w"** | Otevře prázdný soubor pro psaní. Pokud daný soubor existuje, jeho obsah je zničen. |
+| **"a"** | Otevře se pro zápis na konci souboru (připojení). Vytvoří soubor, pokud neexistuje. |
+| **"r+"** | Otevírá se pro čtení i psaní. Soubor musí existovat. |
+| **"w+"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah je zničen. |
+| **"a+"** | Otevírá se pro čtení a připojení. Vytvoří soubor, pokud neexistuje. |
 
-Když se soubor otevře s typem přístupu **"a"** nebo **"a +"** , na konci souboru se objeví všechny operace zápisu. Ukazatel na soubor lze změnit pomocí [fseek](fseek-fseeki64.md) nebo [Rewind](rewind.md), ale je vždy přesunut zpět na konec souboru před provedením jakékoli operace zápisu. Žádná existující data proto nemohou být přepsána. Je-li zadán typ přístupu **"r +"** , **"w +"** nebo **"a +"** , jsou povoleny čtení i zápis (soubor je označován jako otevřený pro "aktualizaci"). Pokud však přepínáte mezi čtením a zápisem, musí se jednat o [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)nebo [Rewind](rewind.md) operaci. Pokud chcete, můžete zadat aktuální pozici pro operaci [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) .
+Při otevření souboru s typem přístupu **"a"** nebo **"a+",** všechny operace zápisu dojít na konci souboru. Ukazatel souboru lze přemístit pomocí [fseek](fseek-fseeki64.md) nebo [převinout zpět](rewind.md), ale je vždy přesunuta zpět na konec souboru před provedením jakékoli operace zápisu. Existující data tedy nelze přepsat. Pokud je zadán typ přístupu **"r+"**, **"w+"** nebo **"a+",** je povoleno čtení i zápis (soubor je údajně otevřený pro "aktualizovat"). Však při přepínání mezi čtení min. a zápisem, musí být zasahující [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), nebo [převíjení vzad](rewind.md) operace. Můžete určit aktuální pozici pro [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) operace, pokud chcete.
 
-Kromě výše uvedených hodnot lze do *režimu* zahrnout také následující znaky, které určují režim překladu znaků nového řádku:
+Kromě výše uvedených hodnot mohou být v *režimu* zahrnuty také následující znaky pro určení režimu překladu znaků nového řádku:
 
-| Modifikátor *režimu* | Chování |
+| *modifikátor režimu* | Chování |
 |-----------------|----------|
-| **t** | Otevřít v textovém (přeloženém) režimu. V tomto režimu jsou kombinace pro návrat vozíku z řádku (CR-LF) přeloženy na vstup na jeden řádek (LF) na vstupu a znaky LF jsou přeloženy na kombinace znaků CR-LF na výstupu. Také CTRL + Z je interpretována jako znak konce souboru na vstupu. |
-| **b** | Otevřené v binárním (nepřeloženém) režimu. Všechny překlady z režimu **t** jsou potlačeny. |
-| **c** | Povolte příznak potvrzení pro přidružený *název souboru* tak, aby se obsah vyrovnávací paměti souboru zapsal přímo na disk, pokud je zavolána možnost **fflush** nebo **_flushall** . |
-| **n** | Obnovte příznak potvrzení pro přidružený *název souboru* na "bez potvrzení". Toto nastavení je výchozí. Také přepisuje příznak globálního potvrzení, Pokud propojíte program s Commode. obj. Pokud explicitně nepřipojíte program k Commode. obj, výchozí příznak autocommit je nastaven na možnost bez potvrzení. |
+| **t** | Otevřít v textovém (přeloženém) režimu. V tomto režimu jsou kombinace zpětného kanálu vozíku (CR-LF) přeloženy do jednořádkových kanálů (LF) na vstupu a lf znaky jsou přeloženy do kombinací CR-LF na výstupu. Ctrl+Z je také interpretován jako znak konce souboru na vstupu. |
+| **B** | Otevřít v binárním (nepřeloženém) režimu. Všechny překlady z režimu **t** jsou potlačeny. |
+| **C** | Povolte příznak potvrzení pro přidružený *název souboru,* aby byl obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud je volána **fflush** nebo **_flushall.** |
+| **N** | Obnovte příznak potvrzení pro přidružený *název souboru* na "no-commit". Toto nastavení je výchozí. Také přepíše příznak globální potvrzení, pokud propojíte program s Commode.obj. Výchozí hodnota příznaku globálního potvrzení je "no-commit", pokud explicitně nepropojíte program s commode.obj. |
 
-Možnosti *režimu* **t**, **c**a **n** jsou rozšířeními Microsoftu pro **fopen** a **_fdopen**. Nepoužívejte je, pokud chcete zachovat přenositelnost ANSI.
+Možnosti *režimu* **t**, **c**a **n** jsou rozšíření společnosti Microsoft pro **fopen** a **_fdopen**. Nepoužívejte je, pokud chcete zachovat přenositelnost ANSI.
 
-Pokud **t** nebo **b** není uveden v *režimu*, výchozí režim překladu je definován globální proměnnou [ \_fMode](../../c-runtime-library/fmode.md). Pokud je **t** nebo **b** předpona argumentu, funkce se nezdařila a vrátí hodnotu null. Diskuzi o textu a binárních režimech najdete v tématu [vstupně-výstupní operace se soubory textového a binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Pokud **t** nebo **b** není uveden v *režimu*, výchozí režim překladu je definován globální proměnnou [ \_fmode](../../c-runtime-library/fmode.md). Pokud **t** nebo **b** je předponou argument, funkce se nezdaří a vrátí NULL. Diskuse o texta a binární režimy naleznete [v tématu Text a binární režim soubor V/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Platné znaky pro řetězec *režimu* používané v **fopen** a **_fdopen** odpovídají argumentům *oflag* použitým v [ \_otevřených](open-wopen.md) a [ \_sopen](sopen-wsopen.md), jak je znázorněno v této tabulce:
+Platné znaky pro řetězec *režimu* použitý v **fopen** a **_fdopen** odpovídají argumentům *oflag* použitým v [ \_otevřeném](open-wopen.md) a [ \_sopen](sopen-wsopen.md), jak je znázorněno v této tabulce:
 
-|Znaky v řetězci *režimu*|Ekvivalentní hodnota *oflag* pro **_open** a **_sopen**|
+|Znaky v *řetězci režimu*|Ekvivalentní hodnota *opříznaku* pro **_open** a **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_ &#124; WRONLYopřipojení\_(obvykle o WRONLY o vytvořit o \_** **\_ &#124; \_ \_ \_\_ &#124; \_ PŘIPOJIT**)|
-|**a+**|**\_O\_ &#124; RDWRopřipojení\_(obvykle o RDWR o připojení o vytvoření \_** **\_ &#124; \_ &#124; \_ \_ \_\_**  )|
-|**r**|**\_O\_RDONLY**|
+|**A**|**\_O\_WRONLY \_\_&#124; O APPEND** (obvykle ** \_\_O WRONLY \_&#124; O\_CREAT \_&#124; O\_APPEND)**|
+|**a+**|**\_O\_RDWR \_\_&#124; O APPEND** (obvykle ** \_\_O RDWR \_&#124; O\_APPEND \_&#124; O\_CREAT)**|
+|**R**|**\_O\_RDONLY**|
 |**r+**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (obvykle  **\_oWRONLY\_ &#124; o vytvoření nTRUNC–\_) &#124; \_\_ \_**|
-|**w+**|**\_O\_RDWR** (obvykle  **\_oRDWR\_ &#124; o vytvoření nTRUNC–\_) &#124; \_\_ \_**|
-|**b**|**\_O\_BINÁRNÍM SOUBORU**|
+|**W**|**\_O\_WRONLY** (obvykle ** \_\_O \_\_WRONLY \_&#124;\_O CREAT &#124; O TRUNC)**|
+|**w+**|**\_O\_RDWR** (obvykle ** \_\_O \_\_RDWR \_&#124;\_O CREAT &#124; O TRUNC)**|
+|**B**|**\_O\_BINÁRNÍ**|
 |**t**|**\_O\_TEXT**|
-|**c**|Žádné|
-|**n**|Žádné|
+|**C**|Žádný|
+|**N**|Žádný|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fdopen**|\<stdio.h>|
-|**_wfdopen**|\<stdio. h > nebo \<WCHAR. h >|
+|**_wfdopen**|\<stdio.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -173,7 +178,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_fdopentxt"></a>Vstup: crt_fdopen. txt
+### <a name="input-crt_fdopentxt"></a>Vstup: crt_fdopen.txt
 
 ```Input
 Line one
@@ -186,10 +191,10 @@ Line two
 Lines in file: 2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
-[\_DUP, \_dUP2](dup-dup2.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[\_dup, \_dup2](dup-dup2.md)<br/>
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>

@@ -1,10 +1,11 @@
 ---
 title: modf, modff, modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338688"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
-Rozdělí hodnotu s plovoucí desetinnou čárkou na zlomky a celočíselné části.
+Rozdělí hodnotu s plovoucí desetinnou desetinnou hodnotou na zlomkové a celé části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,31 +62,33 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
-*intptr*<br/>
+*Intptr*<br/>
 Ukazatel na uloženou část celého čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tato funkce vrací zlomkovou část čísla *x*se znaménkem. Nevrátila se žádná chybová zpráva.
+Tato funkce vrátí podepsanou zlomkovou část *x*. Neexistuje žádná chyba vrátit.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **modf –** rozdělují hodnotu s plovoucí desetinnou čárkou *x* na zlomky a celočíselné části, z nichž každá má stejné znaménko jako *x*. Vrátí se podepsaná Zlomková část čísla *x* . Celočíselná část je uložena jako hodnota s plovoucí desetinnou čárkou na *IntPtr*.
+**Modf** funkce rozdělit hodnotu s plovoucí desetinnou hodnotou *x* na frakční a celočíselné části, z nichž každá má stejné znaménko jako *x*. Podepsaná zlomková část *x* je vrácena. Celá část je uložena jako hodnota s plovoucí desetinnou hodnotou *v intptr*.
 
-**modf –** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení použití implementace SSE2 najdete v tématu [_set_SSE2_enable](set-sse2-enable.md) .
+**modf** má implementaci, která používá streaming SIMD extensions 2 (SSE2). Informace a omezení týkající se používání implementace SSE2 naleznete v [_set_SSE2_enable.](set-sse2-enable.md)
 
-C++umožňuje přetížení, takže můžete volat přetížení **modf –** , která přebírají a vracejí parametry **float** nebo **Long** **Double** . V programu v jazyce C **modf –** vždy přebírá dvě hodnoty Double a vrátí hodnotu Double.
+C++ umožňuje přetížení, takže můžete volat přetížení **modf,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** parametry. V programu C **modf** vždy trvá dvě dvojité hodnoty a vrátí dvojitou hodnotu.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**modf –** , **modff –** , **modfl**|C: \<Math. h ><br /><br /> C++:, \<cmath > nebo \<Math. h >|
+|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: \<, cmath \<> nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,8 +114,8 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

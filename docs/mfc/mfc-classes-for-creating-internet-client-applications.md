@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 9201859c6a5d9fe2b31c3fc4348a42ff9566fc8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578fd5b72e6c04610aa862f1a6631895a32a9bfe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239220"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358222"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>MFC – třídy pro tvorbu internetových klientských aplikací
 
-Knihovna MFC poskytuje následující třídy a globální funkce pro psaní internetových klientských aplikací. Odsazení označuje, že třída je odvozena od třídy neodsazeného nad ním. `CGopherFile` a `CHttpFile` odvozovat `CInternetFile`, např. Tyto třídy a globální funkce jsou deklarovány v AFXINET. H, s výjimkou `CFileFind`, který je deklarován v afx –. H.
+Knihovna MFC poskytuje následující třídy a globální funkce pro psaní klientských aplikací Internetu. Odsazení označuje, že třída je odvozena od třídy bez odsazení nad ní. `CGopherFile`a `CHttpFile` odvozují `CInternetFile`například . Tyto třídy a globální funkce jsou deklarovány v AFXINET. H, `CFileFind`s výjimkou , který je deklarován v AFX. H.
 
 ## <a name="classes"></a>Třídy
 
@@ -25,37 +25,37 @@ Knihovna MFC poskytuje následující třídy a globální funkce pro psaní int
 
 - [CInternetConnection](../mfc/reference/cinternetconnection-class.md)
 
-   - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
+  - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
 
-   - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
+  - [CGopherPřipojení](../mfc/reference/cgopherconnection-class.md)
 
-   - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
+  - [Připojení CHttp](../mfc/reference/chttpconnection-class.md)
 
-- [CInternetFile](../mfc/reference/cinternetfile-class.md)
+- [Soubor CInternetFile](../mfc/reference/cinternetfile-class.md)
 
-   - [CGopherFile](../mfc/reference/cgopherfile-class.md)
+  - [Soubor CGopher](../mfc/reference/cgopherfile-class.md)
 
-   - [CHttpFile](../mfc/reference/chttpfile-class.md)
+  - [Soubor CHttp](../mfc/reference/chttpfile-class.md)
 
 - [CFileFind](../mfc/reference/cfilefind-class.md)
 
-   - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+  - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
 
-   - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
+  - [CGopherFileNajít](../mfc/reference/cgopherfilefind-class.md)
 
 - [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
 
-- [CInternetException](../mfc/reference/cinternetexception-class.md)
+- [Výjimka CInternet](../mfc/reference/cinternetexception-class.md)
 
 ## <a name="global-functions"></a>Globální funkce
 
 - [AfxParseURL](reference/internet-url-parsing-globals.md#afxparseurl)
 
-- [AfxGetInternetHandleType](reference/internet-url-parsing-globals.md#afxgetinternethandletype)
+- [AfxGetInternetHandleTyp](reference/internet-url-parsing-globals.md#afxgetinternethandletype)
 
 - [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: fclose, _fcloseall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fclose
 - _fcloseall
+- _o__fcloseall
+- _o_fclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b2ee14c5fc8bb47cc2652443c0263bd14147c90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347495"
 ---
 # <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
-Zavře datový proud (**fclose**) nebo zavře všechny otevřené streamy ( **_fcloseall**).
+Zavře datový proud (**fclose**) nebo zavře všechny otevřené datové proudy (**_fcloseall**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,24 +53,26 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fclose** vrátí hodnotu 0, pokud byl datový proud úspěšně zavřen. **_fcloseall** vrátí celkový počet uzavřených datových proudů. Obě funkce vrací **EOF** pro indikaci chyby.
+**fclose** vrátí 0, pokud je datový proud úspěšně uzavřen. **_fcloseall** vrátí celkový počet uzavřených datových proudů. Obě funkce vrátí **EOF** označující chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fclose** ukončí *datový proud*. Pokud má *datový proud* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **fclose** nastaví **errno** na **EINVAL** a vrátí **EOF**. Doporučuje se před voláním této funkce vždy zkontrolovat ukazatel na *datový proud* .
+Funkce **fclose** zavře *datový proud*. Pokud je *datový proud* **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **fclose** sady **errno** na **EINVAL** a vrátí **EOF**. Doporučuje se, aby ukazatel *datového proudu* vždy zkontrolovat před voláním této funkce.
 
-Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o těchto a dalších kódech chyb naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
-Funkce **_fcloseall** zavře všechny otevřené streamy kromě **stdin**, **stdout**, **stderr** (a v systémech MS-DOS, **_stdaux** a **_stdprn**). Také se zavře a odstraní všechny dočasné soubory vytvořené nástrojem **tmpfile**. V obou funkcích jsou před zavřením vyprázdněny všechny vyrovnávací paměti spojené s datovým proudem. Po zavření datového proudu jsou uvolněny vyrovnávací paměti přidělené systémem. Vyrovnávací paměti přiřazené uživatelem s **setbuf** a **setvbuf –** nejsou automaticky uvolněny.
+Funkce **_fcloseall** zavře všechny otevřené proudy kromě **stdin**, **stdout**, **stderr** (a v Systému MS-DOS **_stdaux** a **_stdprn**). Také zavře a odstraní všechny dočasné soubory vytvořené **tmpfile**. V obou funkcích jsou všechny vyrovnávací paměti přidružené k datovému proudu vyprázdněny před zavřením. Systémové rezervy jsou uvolněny při zavření datového proudu. Vyrovnávací paměti přiřazené uživatelem s **setbuf** a **setvbuf** nejsou automaticky uvolněny.
 
-**Poznámka:** Pokud jsou tyto funkce použity k zavření datového proudu, jsou zavřeny podkladové popisovače souborů a popisovač souboru operačního systému (nebo soket) a také datový proud. Proto pokud byl soubor původně otevřen jako popisovač souboru nebo popisovač souboru a je uzavřený pomocí **fclose**, Nevolejte také **_close** pro zavření popisovače souboru; Nevolejte **CloseHandle** funkce Win32 pro zavření popisovače souboru.
+**Poznámka:** Při použití těchto funkcí k zavření datového proudu, podkladový popisovač souboru a popisovač souboru operačního systému (nebo soket) jsou uzavřeny, stejně jako datový proud. Pokud byl tedy soubor původně otevřen jako popisovač souboru nebo popisovač souboru a je uzavřen **fclose**, nevolejte také **_close** k zavření popisovače souboru; nevolejte win32 funkce **CloseHandle** zavřít popisovač souboru.
 
-**fclose** a **_fcloseall** obsahují kód pro ochranu proti rušení z jiných vláken. Neuzamykání verze **fclose**naleznete v tématu **_fclose_nolock**.
+**fclose** a **_fcloseall** obsahovat kód pro ochranu proti rušení z jiných vláken. Pokud jde o verzi **fclose**bez uzamčení , viz **_fclose_nolock**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,15 +81,15 @@ Funkce **_fcloseall** zavře všechny otevřené streamy kromě **stdin**, **std
 |**fclose**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [fopen](fopen-wfopen.md).
+Viz příklad pro [fopen](fopen-wfopen.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

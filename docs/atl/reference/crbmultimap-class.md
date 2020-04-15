@@ -1,5 +1,5 @@
 ---
-title: Crbmultimap – třída
+title: Třída CRBMultiMap
 ms.date: 11/04/2016
 f1_keywords:
 - CRBMultiMap
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e36bc267b3a539d2d1d4bf370b9cdc33828c760
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331425"
 ---
-# <a name="crbmultimap-class"></a>Crbmultimap – třída
+# <a name="crbmultimap-class"></a>Třída CRBMultiMap
 
-Tato třída reprezentuje strukturu mapování, která umožňuje že každému klíči je možné přidružit více než jednu hodnotu pomocí binárního stromu černé Red.
+Tato třída představuje strukturu mapování, která umožňuje každý klíč může být přidružen a více než jednu hodnotu, pomocí červeno-černý binární strom.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,53 +37,53 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klíče prvku.
+Typ klíčového prvku.
 
 *V*<br/>
-Typ elementu hodnota.
+Typ prvku hodnoty.
 
-*KTraits*<br/>
-Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
+*KTraity*<br/>
+Kód používaný ke kopírování nebo přesunutí klíčových prvků. Další podrobnosti najdete v [části CElementTraits Class.](../../atl/reference/celementtraits-class.md)
 
 *VTraits*<br/>
-Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
+Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Konstruktor|
 |[CRBMultiMap::~CRBMultiMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Voláním této metody lze najít pozici prvního prvku k danému klíči.|
-|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Volejte tuto metodu za účelem získání hodnotu přidruženou k danému klíči a aktualizujte hodnotu pozice.|
-|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Volejte tuto metodu za účelem získání elementu přidružené k danému klíči a aktualizujte hodnotu pozice.|
-|[CRBMultiMap::Insert](#insert)|Voláním této metody lze vložit páru prvek do objektu map.|
-|[CRBMultiMap::RemoveKey](#removekey)|Volejte tuto metodu, která odebere všechny prvky klíč/hodnota pro zadaný klíč.|
+|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Volání této metody najít pozici prvního prvku s daným klíčem.|
+|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Volání této metody získat hodnotu přidruženou k danému klíči a aktualizovat hodnotu pozice.|
+|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Volání této metody získat prvek přidružený k danému klíči a aktualizovat hodnotu pozice.|
+|[CRBMultiMap::Vložit](#insert)|Volání této metody vložit pár elementů do mapy.|
+|[CRBMultiMap::Odebrat klíč](#removekey)|Volání této metody odebrat všechny prvky klíč/hodnota pro daný klíč.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CRBMultiMap` poskytuje podporu pro mapování pole daného typu, Správa uspořádaného pole klíčové prvky a hodnot. Na rozdíl od [crbmap –](../../atl/reference/crbmap-class.md) třídy, každý klíč lze přidružit více než jednu hodnotu.
+`CRBMultiMap`poskytuje podporu pro mapování pole libovolného typu, správa objednané pole klíčových prvků a hodnot. Na rozdíl od [crbmap](../../atl/reference/crbmap-class.md) třídy každý klíč může být přidružen a více než jednu hodnotu.
 
-Prvky (skládající se z klíče a hodnoty) jsou uloženy v binárního stromu struktury, pomocí [CRBMultiMap::Insert](#insert) metody. Prvky lze odebrat prostřednictvím [CRBMultiMap::RemoveKey](#removekey) metoda, která odstraňuje všechny prvky, které odpovídají danému klíči.
+Prvky (skládající se z klíče a hodnoty) jsou uloženy v binární stromové struktuře pomocí metody [CRBMultiMap::Insert.](#insert) Prvky lze odebrat pomocí [metody CRBMultiMap::RemoveKey,](#removekey) která odstraní všechny prvky, které odpovídají danému klíči.
 
-Procházení stromu je možné provádět pomocí metod, jako [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), a [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). Přístup k potenciálně více hodnot pro každý klíč je možné používat [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), a [CRBMultiMap::GetNextWithKey ](#getnextwithkey) metody. Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap) pro ilustraci tohoto v praxi.
+Procházení stromu je možné pomocí metod, jako je [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)a [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). Přístup k potenciálně více hodnotám na klíč je možný pomocí metod [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)a [CRBMultiMap::GetNextWithKey.](#getnextwithkey) Viz příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap) pro ilustraci tohoto v praxi.
 
-*KTraits* a *VTraits* parametry jsou třídy, které obsahují žádný doplňkový kód potřeba zkopírovat nebo přesunout prvky.
+*Parametry KTraits* a *VTraits* jsou třídy vlastností, které obsahují jakýkoli doplňkový kód potřebný ke kopírování nebo přesouvání prvků.
 
-`CRBMultiMap` je odvozen z [crbtree –](../../atl/reference/crbtree-class.md), který implementuje pomocí algoritmu Red černé binárního stromu. Alternativa k `CRBMultiMap` a `CRBMap` nabízí [catlmap –](../../atl/reference/catlmap-class.md) třídy. Pokud musí být uložen pouze malý počet prvků, zvažte použití [csimplemap –](../../atl/reference/csimplemap-class.md) namísto třídy.
+`CRBMultiMap`je odvozen z [CRBTree](../../atl/reference/crbtree-class.md), který implementuje binární strom pomocí algoritmu Red-Black. Alternativa `CRBMultiMap` a `CRBMap` je nabízena třídou [CAtlMap.](../../atl/reference/catlmap-class.md) Pokud je třeba uložit pouze malý počet prvků, zvažte použití [csimplemap](../../atl/reference/csimplemap-class.md) třídy místo.
 
-Podrobnější diskuzi o různých třídy kolekcí a jejich funkce a výkonové charakteristiky, naleznete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Podrobnější diskusi o různých třídách kolekce a jejich funkcích a vlastnostech výkonu naleznete [v tématu TŘÍDY kolekce atl](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CRBTree](../../atl/reference/crbtree-class.md)
+[Crbtree](../../atl/reference/crbtree-class.md)
 
 `CRBMultiMap`
 
@@ -91,7 +91,7 @@ Podrobnější diskuzi o různých třídy kolekcí a jejich funkce a výkonové
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap
 
 Konstruktor
 
@@ -106,15 +106,15 @@ Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
 
-*NBlockSize* parametr je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků. Výchozí hodnota se přidělit prostor pro 10 prvků v čase.
+Parametr *nBlockSize* je míra velikosti paměti přidělené při použití nového prvku. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků. Výchozí bude přidělit místo pro 10 prvků najednou.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap::~CRBMultiMap
 
 Destruktor.
 
@@ -124,13 +124,13 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky.
+Uvolní všechny přidělené zdroje.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
-##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey
+## <a name="crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey
 
-Voláním této metody lze najít pozici prvního prvku k danému klíči.
+Volání této metody najít pozici prvního prvku s daným klíčem.
 
 ```
 POSITION FindFirstWithKey(KINARGTYPE key) const throw();
@@ -139,25 +139,25 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje klíč, který identifikuje elementu, který chcete najít.
+Určuje klíč, který identifikuje prvek, který má být nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí POZICI prvního prvku klíč/hodnota, pokud je nalezen klíč, NULL jinak.
+Vrátí pozici prvního prvku klíč/hodnota, pokud je nalezen klíč, NULL jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Klíč v `CRBMultiMap` může mít jednu nebo více přidružených hodnot. Tato metoda poskytne hodnota pozice první hodnoty (což ve skutečnosti může být jediná hodnota) přidružené k této konkrétní klíč. Vrácená hodnota pozice pak jde použít s [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey) k získání hodnoty a aktualizaci umístění.
+Klíč v `CRBMultiMap` může mít jednu nebo více přidružených hodnot. Tato metoda poskytne hodnotu pozice první hodnoty (což může být ve skutečnosti jedinou hodnotou) přidruženou k tomuto konkrétnímu klíči. Vrácená hodnota pozice pak může být použita s [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey) k získání hodnoty a aktualizaci pozice.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Viz příklad [crbmultimap::CRBMultiMap](#crbmultimap).
 
-##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey
+## <a name="crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey
 
-Volejte tuto metodu za účelem získání hodnotu přidruženou k danému klíči a aktualizujte hodnotu pozice.
+Volání této metody získat hodnotu přidruženou k danému klíči a aktualizovat hodnotu pozice.
 
 ```
 const V& GetNextValueWithKey(
@@ -170,29 +170,29 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey), nebo předchozí volání k `GetNextValueWithKey`.
+*Pos*<br/>
+Hodnota pozice získaná buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextWithKey](#getnextwithkey)nebo předchozí volání `GetNextValueWithKey`.
 
 *key*<br/>
-Určuje klíč, který identifikuje elementu, který chcete najít.
+Určuje klíč, který identifikuje prvek, který má být nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí element pár spojené s daným klíčem.
+Vrátí dvojici prvků přidruženou k danému klíči.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota pozice je aktualizována tak, aby odkazoval na nejbližší hodnotu přiřazenou klíči. Pokud neexistují žádné další hodnoty pozice hodnota nastavená na hodnotu NULL.
+Hodnota pozice je aktualizována tak, aby ukazovala na další hodnotu přidruženou ke klíči. Pokud neexistují žádné další hodnoty, hodnota pozice je nastavena na hodnotu NULL.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Viz příklad [crbmultimap::CRBMultiMap](#crbmultimap).
 
-##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey
+## <a name="crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey
 
-Volejte tuto metodu za účelem získání elementu přidružené k danému klíči a aktualizujte hodnotu pozice.
+Volání této metody získat prvek přidružený k danému klíči a aktualizovat hodnotu pozice.
 
 ```
 const CPair* GetNextWithKey(
@@ -205,25 +205,25 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, získali buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), nebo předchozí volání k `GetNextWithKey`.
+*Pos*<br/>
+Hodnota pozice získaná buď voláním [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) nebo [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)nebo předchozí volání `GetNextWithKey`.
 
 *key*<br/>
-Určuje klíč, který identifikuje elementu, který chcete najít.
+Určuje klíč, který identifikuje prvek, který má být nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí Další [CRBTree::CPair třídy](crbtree-class.md#cpair_class) element spojený s daným klíčem.
+Vrátí další [crbtree::CPair Class](crbtree-class.md#cpair_class) element přidružený k danému klíči.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota pozice je aktualizována tak, aby odkazoval na nejbližší hodnotu přiřazenou klíči. Pokud neexistují žádné další hodnoty pozice hodnota nastavená na hodnotu NULL.
+Hodnota pozice je aktualizována tak, aby ukazovala na další hodnotu přidruženou ke klíči. Pokud neexistují žádné další hodnoty, hodnota pozice je nastavena na hodnotu NULL.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
-##  <a name="insert"></a>  CRBMultiMap::Insert
+## <a name="crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Vložit
 
-Voláním této metody lze vložit páru prvek do objektu map.
+Volání této metody vložit pár elementů do mapy.
 
 ```
 POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
@@ -232,26 +232,26 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnotu klíče pro přidání do `CRBMultiMap` objektu.
+Hodnota klíče, kterou `CRBMultiMap` chcete přidat k objektu.
 
-*value*<br/>
-Hodnota k přidání do `CRBMultiMap` objekt přidružený k *klíč*.
+*Hodnotu*<br/>
+Hodnota, kterou chcete `CRBMultiMap` přidat k objektu, přidružená ke *klíči*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí pozici prvku dvojice klíč/hodnota v `CRBMultiMap` objektu.
+Vrátí pozici páru prvků klíč/hodnota `CRBMultiMap` v objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Viz příklad [crbmultimap::CRBMultiMap](#crbmultimap).
 
-##  <a name="removekey"></a>  CRBMultiMap::RemoveKey
+## <a name="crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::Odebrat klíč
 
-Volejte tuto metodu, která odebere všechny prvky klíč/hodnota pro zadaný klíč.
+Volání této metody odebrat všechny prvky klíč/hodnota pro daný klíč.
 
 ```
 size_t RemoveKey(KINARGTYPE key) throw();
@@ -260,25 +260,25 @@ size_t RemoveKey(KINARGTYPE key) throw();
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje klíč, který identifikuje elementy, která se má odstranit.
+Určuje klíč, který identifikuje prvky, které mají být odstraněny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet hodnot, které jsou přidružené k danému klíči.
+Vrátí počet hodnot přidružených k danému klíči.
 
 ### <a name="remarks"></a>Poznámky
 
-`RemoveKey` Odstraní všechny prvky klíč/hodnota, které mají klíč, který odpovídá *klíč*.
+`RemoveKey`odstraní všechny prvky klíč/hodnota, které mají klíč, který odpovídá *klíči*.
 
-Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.
+Informace o dalších dostupných metodách naleznete v dokumentaci k základní třídě [CRBTree.](../../atl/reference/crbtree-class.md)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Viz příklad [crbmultimap::CRBMultiMap](#crbmultimap).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CRBTree – třída](../../atl/reference/crbtree-class.md)<br/>
-[CAtlMap – třída](../../atl/reference/catlmap-class.md)<br/>
-[CRBMap – třída](../../atl/reference/crbmap-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CRBTree](../../atl/reference/crbtree-class.md)<br/>
+[Třída CAtlMap](../../atl/reference/catlmap-class.md)<br/>
+[Třída CRBMap](../../atl/reference/crbmap-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

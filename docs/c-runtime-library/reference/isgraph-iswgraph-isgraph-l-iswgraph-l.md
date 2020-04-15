@@ -1,11 +1,13 @@
 ---
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
+- _o_isgraph
+- _o_iswgraph
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +42,16 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343829"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
-Určuje, zda celočíselná hodnota představuje grafický znak.
+Určuje, zda celé číslo představuje grafický znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,37 +74,41 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Parametry
 
-*r*<br/>
-Celé číslo k otestování.
+*C*<br/>
+Celé číslo k testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace tisknutelného znaku jiného než mezera. funkce **graf** vrátí nenulovou hodnotu, pokud je *c* tisknutelný znak jiný než mezera. **iswgraph** vrátí nenulovou hodnotu, pokud je *c* tisknutelným velkým znakem, který je jiný než prostor s velkým počtem znaků. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou *hodnotu,* pokud c je určitá reprezentace tisknutelného znaku jiného než mezery. **isgraph** vrátí nenulovou *hodnotu,* pokud c je tisknutelný znak jiný než mezera. **iswgraph** vrátí nenulovou *hodnotu,* pokud c je tisknutelný široký znak jiný než široký znakový prostor. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje zkušební podmínku.
 
-Verze těchto funkcí, které mají příponu **_l** , používají národní prostředí, které je předáno namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají **_l** příponu použít národní prostředí, které je předáno namísto aktuálního národního prostředí pro jejich chování závislé na národním prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-Chování funkce _isgraph_l v **grafu** a **_isgraph_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
+Chování **isgraph** a **_isgraph_l** je nedefinována, pokud *c* není EOF nebo v rozsahu 0 až 0xFF, včetně. Při ladění CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolat kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istgraph**|**graf**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
+|**_istgraph**|**isgraf**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**graf**|\<CType. h >|
-|**iswgraph**|\<CType. h > nebo \<WCHAR. h >|
-|**_isgraph_l**|\<CType. h >|
-|**_iswgraph_l**|\<CType. h > nebo \<WCHAR. h >|
+|**isgraf**|\<ctype.h>|
+|**iswgraph**|\<ctype.h> \<nebo wchar.h>|
+|**_isgraph_l**|\<ctype.h>|
+|**_iswgraph_l**|\<ctype.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[is, isw – rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, isw Rutiny](../../c-runtime-library/is-isw-routines.md)<br/>

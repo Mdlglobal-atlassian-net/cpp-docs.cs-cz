@@ -1,8 +1,9 @@
 ---
-title: frexp –, frexpf –, frexpl
-ms.date: 04/05/2018
+title: frexp, frexpf, frexpl
+ms.date: 4/2/2020
 api_name:
 - frexp
+- _o_frexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345801"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp –, frexpf –, frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
-Získá mantisu a exponent čísla s plovoucí desetinnou čárkou.
+Získá mantisa a exponent číslo s plovoucí desetinnou desetinnou tištěnou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,29 +70,31 @@ long double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
 *expptr*<br/>
-Ukazatel na uložený celočíselný exponent.
+Ukazatel na exponent uložených celé číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**frexp –** vrátí mantisu. Pokud *x* je 0, funkce vrátí 0 pro Mantis i exponent. Pokud má Expptr **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
+**frexp** vrátí mantisu. Pokud *x* je 0, funkce vrátí 0 pro mantisa a exponent. Pokud je *expptr* **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **frexp –** rozdělí hodnotu s plovoucí desetinnou čárkou (*x*) na mantisu (*m*) a exponent (*n*), což znamená, že absolutní hodnota *m* je větší nebo rovna 0,5 a menší než 1,0 a *x*  =  *m* * 2<sup>*n*</sup>. Celočíselný exponent *n* je uložen v umístění, na které ukazuje *expptr*.
+**Frexpova** funkce rozdělí hodnotu s plovoucí desetinnou hodnotou (*x*) na mantisu (*m*) a exponent (*n*), takže absolutní hodnota *m* je větší nebo rovna 0,5 a menší než 1,0 a *x* = *m* * 2<sup>*n*</sup>. Integer exponent *n* je uložen v umístění, na které se vztahuje *expptr*.
 
-C++umožňuje přetížení, takže můžete volat přetížení **frexp –** . V programu v jazyce C **frexp –** vždy přebírá **dvojitou** hodnotu a ukazatel **int** a vrací hodnotu **Double**.
+C++ umožňuje přetížení, takže můžete volat přetížení **frexp**. V programu C **frexp** vždy trvá **double** a **int** ukazatel a vrátí **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**frexp –** , **frexpf –** , **frexpl**|\<Math. h >|
+|**frexp**, **frexpf**, **frexpl**|\<math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,8 +121,8 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: CPrimitiveElementTraits Class
+title: Třída CPrimitiveElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CPrimitiveElementTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331441"
 ---
-# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits Class
+# <a name="cprimitiveelementtraits-class"></a>Třída CPrimitiveElementTraits
 
-Tato třída poskytuje výchozí metody a funkce pro třídy kolekce tvořené primitivní datové typy.
+Tato třída poskytuje výchozí metody a funkce pro třídu kolekce složenou z primitivních datových typů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,32 +30,32 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ dat uložených v kolekci objektu třídy.
+Typ dat, která mají být uložena v objektu třídy kolekce.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání prvků do objektu třídy kolekce.|
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Datový typ použitý pro získání prvky z třídy objektu kolekce.|
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.|
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje výchozí statické funkce a metody pro přesunutí, kopírování, porovnávání a hashování primitivní datový typ prvků uložených v objektu třídy kolekce.
+Tato třída poskytuje výchozí statické funkce a metody pro přesouvání, kopírování, porovnávání a hash primitivní datové prvky uložené v objektu třídy kolekce.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cdefaultcomparetraits –](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[Cdefaulthashtraits –](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Celementtraitsbase –](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[Cdefaultelementtraits –](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CPrimitiveElementTraits`
 
@@ -63,23 +63,23 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE
 
-Datový typ pro použití při přidávání prvků do objektu třídy kolekce.
+Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.
 
 ```
 typedef T INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE
 
-Datový typ použitý pro získání prvky z třídy objektu kolekce.
+Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

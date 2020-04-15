@@ -1,5 +1,5 @@
 ---
-title: IServiceProviderImpl Class
+title: Třída iServiceProviderimpl
 ms.date: 11/04/2016
 f1_keywords:
 - IServiceProviderImpl
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef0ee4f77441cb8d19ea2d6dcada1fed9faf2782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329420"
 ---
-# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl Class
+# <a name="iserviceproviderimpl-class"></a>Třída iServiceProviderimpl
 
-Tato třída poskytuje výchozí implementaci třídy `IServiceProvider` rozhraní.
+Tato třída poskytuje výchozí `IServiceProvider` implementaci rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,25 +30,25 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IServiceProviderImpl`.
+Vaše třída, odvozená z `IServiceProviderImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IServiceProviderImpl::QueryService](#queryservice)|Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.|
+|[iServiceProviderImpl::QueryService](#queryservice)|Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní zadanému rozhraní pro službu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IServiceProvider` Rozhraní vyhledá službu určené její identifikátor GUID a vrátí ukazatel rozhraní pro požadované rozhraní ve službě. Třída `IServiceProviderImpl` poskytuje výchozí implementaci tohoto rozhraní.
+Rozhraní `IServiceProvider` vyhledá službu určenou identifikátorem GUID a vrátí ukazatel rozhraní pro požadované rozhraní ve službě. Třída `IServiceProviderImpl` poskytuje výchozí implementaci tohoto rozhraní.
 
-`IServiceProviderImpl` Určuje jednu metodu: [Služby QueryService](#queryservice), který vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.
+`IServiceProviderImpl`určuje jednu metodu: [QueryService](#queryservice), která vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní určenému rozhraní pro službu.
 
-`IServiceProviderImpl` využívá mapu služeb, počínaje [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) a konče [END_SERVICE_MAP](service-map-macros.md#end_service_map).
+`IServiceProviderImpl`používá mapu služeb, počínaje [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) a konče [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-Mapy služeb obsahuje dvě položky: [SERVICE_ENTRY](service-map-macros.md#service_entry), což znamená id zadané služby (SID) podporována objektem, a [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), který volá `QueryService` řetězce do jiného objektu.
+Mapa služby obsahuje dvě položky: [SERVICE_ENTRY](service-map-macros.md#service_entry), což označuje zadané id služby (SID) podporované objektem, a [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), které volá `QueryService` řetěz na jiný objekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -58,11 +58,11 @@ Mapy služeb obsahuje dvě položky: [SERVICE_ENTRY](service-map-macros.md#servi
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="iserviceproviderimplqueryservice"></a><a name="queryservice"></a>iServiceProviderImpl::QueryService
 
-Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.
+Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní zadanému rozhraní pro službu.
 
 ```
 STDMETHOD(QueryService)(
@@ -74,42 +74,42 @@ STDMETHOD(QueryService)(
 ### <a name="parameters"></a>Parametry
 
 *guidService*<br/>
-[in] Ukazatel na identifikátor služby (SID).
+[v] Ukazatel na identifikátor služby (SID).
 
-*riid*<br/>
-[in] Identifikátor rozhraní, ke kterému volající získat přístup.
+*riid řekl:*<br/>
+[v] Identifikátor rozhraní, ke kterému má volající získat přístup.
 
 *ppvObj*<br/>
-[out] Nepřímé ukazatel na požadované rozhraní.
+[out] Nepřímý ukazatel na požadované rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota HRESULT je jedním z následujících akcí:
+Vrácená hodnota HRESULT je jedna z následujících:
 
 |Návratová hodnota|Význam|
 |------------------|-------------|
-|S_OK|Služby byl úspěšně vytvořen nebo načten.|
-|E_INVALIDARG|Jeden nebo více argumentů je neplatný.|
-|E_OUTOFMEMORY|Paměti není dostatečná k vytvoření služby.|
-|E_UNEXPECTED, JE-|Došlo k neznámé chybě.|
-|E_NOINTERFACE|Požadované rozhraní není součástí této služby nebo služby neznámý.|
+|S_OK|Služba byla úspěšně vytvořena nebo načtena.|
+|E_invalidarg|Jeden nebo více argumentů je neplatných.|
+|E_OUTOFMEMORY|Paměť je nedostatečná k vytvoření služby.|
+|E_UNEXPECTED|Došlo k neznámé chybě.|
+|E_NOINTERFACE|Požadované rozhraní není součástí této služby nebo je služba neznámá.|
 
 ### <a name="remarks"></a>Poznámky
 
-`QueryService` Vrátí nepřímým ukazatel na požadované rozhraní v zadaná služba. Volající zodpovídá za uvolňuje tento ukazatel, když se už nevyžaduje.
+`QueryService`vrátí nepřímý ukazatel na požadované rozhraní v zadané službě. Volající je zodpovědný za uvolnění tohoto ukazatele, pokud již není vyžadováno.
 
-Při volání `QueryService`, předáte identifikátor služby (*guidService*) a identifikátor rozhraní (*riid*). *GuidService* určuje služby, ke kterému chcete získat přístup, a *riid* identifikuje rozhraní, která je součástí služby. Na oplátku obdržíte nepřímé ukazatel na rozhraní.
+Při volání `QueryService`předáte identifikátor služby *(guidService)* a identifikátor rozhraní (*riid*). *GuidService* určuje službu, ke které chcete získat přístup a *riid* identifikuje rozhraní, které je součástí služby. Na oplátku obdržíte nepřímý ukazatel na rozhraní.
 
-Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiné služby. Zvažte použití těchto zdrojů:
+Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiných služeb. Zvažte použití těchto zdrojů:
 
-- Některé z těchto rozhraní může být volitelný. Ne všechna rozhraní, které jsou definované v popisu služby nejsou nutně na každou implementaci služby nebo na každý vráceného objektu.
+- Některá z těchto rozhraní mohou být volitelné. Ne všechna rozhraní definovaná v popisu služby jsou nutně k dispozici při každé implementaci služby nebo na každém vráceném objektu.
 
-- Na rozdíl od volání `QueryInterface`, předávání identifikátor různé služby nemusí nutně znamenat, že se vrátí jiný objekt modelu COM (Component Object).
+- Na rozdíl `QueryInterface`od volání , předávání jiný identifikátor služby nemusí nutně znamenat, že je vrácena jiný objekt modelu COM (COM).
 
 - Vrácený objekt může mít další rozhraní, které nejsou součástí definice služby.
 
-Dvě různé služby, jako je například SID_SMyService a SID_SYourService, můžete i určit používá stejné rozhraní, i když implementaci rozhraní může mít nic společného mezi těmito dvěma službami. Tento postup funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vrátit do jiného objektu než `QueryService` (SID_SYourService, IID_IDispatch). Identita objektu není předpokládá, že pokud zadáte identifikátor jinou službu.
+Dvě různé služby, jako je například SID_SMyService a SID_SYourService, mohou určit použití stejného rozhraní, i když implementace rozhraní může mít mezi těmito dvěma službami nic společného. To funguje, protože `QueryService` volání (SID_SMyService, IID_IDispatch) může `QueryService` vrátit jiný objekt než (SID_SYourService, IID_IDispatch). Identita objektu se nepředpokládá, když zadáte jiný identifikátor služby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

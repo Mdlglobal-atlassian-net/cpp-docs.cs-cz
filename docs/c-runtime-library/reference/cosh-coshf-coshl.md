@@ -1,10 +1,11 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - cosh
 - coshf
 - coshl
+- _o_cosh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d7d2050be406e7f2be66ca200d1e3cfd9c2960b0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348435"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -57,39 +59,41 @@ long double cosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hyperbolický kosinus hodnoty *x*.
+Hyperbolický kosinus *x*.
 
-Ve výchozím nastavení, pokud je výsledek příliš velký ve volání **cosh –** , **coshf –** nebo **coshl** , vrátí funkce **HUGE_VAL** a nastaví **errno** na **ERANGE**.
+Ve výchozím nastavení, pokud je výsledek příliš velký v **cosh**, **coshf**nebo **coshl** volání, funkce vrátí **HUGE_VAL** a nastaví **errno** na **ERANGE**.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|žádná|**_DOMAIN**|
-|*×* ≥ 7.104760 e + 002|**NEPŘESNÉ**+**PŘETEČENÍ**|**PLNĚ**|
+|± **QNAN**, **IND**|Žádná|**_DOMAIN**|
+|*x* ≥ 7,104760e+002|**NEPŘESNÉ**+**PŘETEČENÍ**|**Přetečení**|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cosh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **cosh –** vždycky přebírá a vrací **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **cosh,** které take a return **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **cosh** vždy trvá a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Povinná hlavička (C)|Povinné záhlaví (C++)|
 |-------------|---------------------|-|
-|**coshf –** , **cosl**, **coshl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [sinh –, sinhf –, sinhl](sinh-sinhf-sinhl.md).
+Viz příklad v [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

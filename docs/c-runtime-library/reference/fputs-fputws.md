@@ -1,9 +1,11 @@
 ---
 title: fputs, fputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputs
 - fputws
+- _o_fputs
+- _o_fputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0a6ac7770e88975a60e1e4aef522dddf901206fb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956902"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346217"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -57,27 +60,29 @@ int fputws(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Výstupní řetězec.
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí nezápornou hodnotu, pokud je úspěšná. V případě chyby vrátí znak **EOF** **fputs** a **fputws** . Pokud je *str* nebo *Stream* ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a pak **fputs** vrátí **EOF**a **fputws** vrátí **WEOF**.
+Každá z těchto funkcí vrátí nezápornou hodnotu, pokud je úspěšná. Při chybě **vrátí fputs** a **fputws** **eof**. Pokud *str* nebo *stream* je nulový ukazatel, tyto funkce vyvolat neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce nastavit **errno** **eINVAL** a **potom fputs** vrátí **EOF**a **fputws** vrátí **WEOF**.
 
-Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o těchto a dalších kódech chyb naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí kopíruje *str* na výstupní *datový proud* na aktuální pozici. **fputws** zkopíruje parametr *str* pro velký znak do *datového proudu* jako řetězec vícebajtových znaků nebo řetězec s velkým znakem podle toho, zda je *datový proud* otevřen v textovém režimu nebo v binárním režimu v uvedeném pořadí. Funkce ani nekopíruje ukončující znak null.
+Každá z těchto funkcí zkopíruje *str* do výstupního *datového proudu* na aktuální pozici. **fputws zkopíruje** argument *str* str široký znak *pro datový proud* jako řetězec vícebajtových znaků nebo řetězec s širokým znakem podle toho, zda je *datový proud* otevřen v textovém nebo binárním režimu. Ani jedna funkce nezkopíruje ukončující znak null.
 
-Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **fputs** v současné době nepodporuje výstup do datového proudu Unicode.
+Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **fputs** aktuálně nepodporuje výstup do datového proudu UNICODE.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fputts**|**fputs**|**fputs**|**fputws**|
 
@@ -86,9 +91,9 @@ Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**fputs**|\<stdio.h>|
-|**fputws**|\<stdio. h > nebo \<WCHAR. h >|
+|**fputws**|\<stdio.h> \<nebo wchar.h>|
 
-Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou –**stdin**, **stdout**a **stderr**– musí být přesměrované před tím, než je funkce běhového běhu v aplikacích pro UWP můžou použít. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke konzole –**stdin**, **stdout**a **stderr**– musí být přesměrovány, aby je mohly funkce c run-time používat v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -109,9 +114,9 @@ int main( void )
 Hello world from fputs.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

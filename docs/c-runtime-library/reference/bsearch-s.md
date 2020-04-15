@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ef8a68f0db45e718af6b17fe0d08c33a6fd61d6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333837"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Provede binární hledání seřazeného pole. Tato funkce je verze [bSearch](bsearch.md) s vylepšením zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Provede binární hledání seřazené pole. Tato funkce je verze [bsearch](bsearch.md) s vylepšeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,63 +54,65 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
+*Klíč*\
 Ukazatel na klíč, který chcete vyhledat.
 
-*základní*\
-Ukazatel na základ dat hledání.
+*Základní*\
+Ukazatel na základnu vyhledávacích dat.
 
-\ *číslo*
-Počet elementů.
+*Číslo*\
+Počet prvků.
 
-\ *šířky*
-Šířka prvků
+*Šířka*\
+Šířka prvků.
 
-*porovnat*\
-Funkce zpětného volání, která porovnává dva elementy. První argument je *kontextový* ukazatel. Druhý argument je ukazatel na *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, který má být porovnán s *klíčem*.
+*Porovnat*\
+Funkce zpětného volání, která porovnává dva prvky. První argument je ukazatel *kontextu.* Druhý argument je ukazatel na *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, který má být porovnán s *klíčem*.
 
-\ *kontextu*
-Ukazatel na objekt, který je možné použít ve funkci porovnání.
+*Kontextu*\
+Ukazatel na objekt, který lze přistupovat ve funkci porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**bsearch_s** vrací ukazatel na výskyt *klíče* v poli, na které ukazuje *základ*. Pokud *klíč* není nalezen, funkce vrátí **hodnotu null**. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy se stejnými klíči, výsledek je nepředvídatelné.
+**bsearch_s** vrátí ukazatel na výskyt *klíče* v poli, na které odkazuje *základna*. Pokud *klíč* nebyl nalezen, funkce vrátí **hodnotu NULL**. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, výsledek je nepředvídatelný.
 
-Pokud jsou do funkce předány neplatné parametry, vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud jsou funkci předány neplatné parametry, vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**. Další informace naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Chybové stavy
 
 |||||||
 |-|-|-|-|-|-|
-|*zkrat*|*base*|*porovnán*|*Automatické*|*Délk*|**errno**|
-|**PLATNOST**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|
-|Jakýmikoli|**PLATNOST**|Jakýmikoli|! = 0|Jakýmikoli|**EINVAL**|
-|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|= 0|**EINVAL**|
-|Jakýmikoli|Jakýmikoli|**PLATNOST**|k|Jakýmikoli|**EINVAL**|
+|*key*|*base*|*Porovnat*|*Číslo*|*Šířka*|**errno**|
+|**Null**|jakékoli|jakékoli|jakékoli|jakékoli|**EINVAL**|
+|jakékoli|**Null**|jakékoli|!= 0|jakékoli|**EINVAL**|
+|jakékoli|jakékoli|jakékoli|jakékoli|= 0|**EINVAL**|
+|jakékoli|jakékoli|**Null**|an|jakékoli|**EINVAL**|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **bsearch_s** provádí binární hledání seřazeného pole *číselného* prvku, přičemž každý z nich má velikost *v bajtech* . *Základní* hodnota je ukazatel na základ pole, které má být prohledáno, a *klíč* je hledaná hodnota. Parametr *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovnává požadovaný klíč s prvkem pole a vrací jednu z následujících hodnot, které určují jejich vztah:
+Funkce **bsearch_s** provádí binární vyhledávání seřazené pole *číselných* prvků, každý *šířka* bajtů ve velikosti. *Základní* hodnota je ukazatel na základnu pole, které má být prohledáno, a *klíč* je požadovaná hodnota. Parametr *porovnání* je ukazatel na rutinu dodanou uživatelem, která porovnává požadovaný klíč s elementem pole a vrací jednu z následujících hodnot určujících jejich vztah:
 
-|Hodnota vrácená rutinou *Compare*|Popis|
+|Hodnota vrácená *pomocí rutiny porovnání*|Popis|
 |-----------------------------------------|-----------------|
-|\< 0|Klíč je menší než prvek pole.|
-|0,8|Klíč je roven elementu pole.|
+|\<0|Klíč je menší než prvek pole.|
+|0|Klíč se rovná prvku pole.|
 |> 0|Klíč je větší než prvek pole.|
 
-*Kontextový* ukazatel může být užitečný, pokud je struktura prohledávaných dat součástí objektu a funkce Compare potřebuje přístup k členům objektu. Funkce *Compare* může přetypovat ukazatel void na příslušný typ objektu a přistupovat ke členům tohoto objektu. Přidání *kontextového* parametru vede k **bsearch_sější** zabezpečení, protože další kontext lze použít k tomu, aby se předešlo Vícenásobný přístup chybám přidruženým k použití statických proměnných, aby byla k dispozici data pro funkci *Compare* .
+Ukazatel *kontextu* může být užitečné, pokud je struktura prohledávaná data součástí objektu a funkce porovnání potřebuje přístup k členům objektu. Funkce *porovnání* může přetypování ukazatele void do příslušného typu objektu a přístup členů tohoto objektu. Přidání *parametru context* umožňuje **bsearch_s** bezpečnější, protože další kontext lze použít, aby se zabránilo reentrancy chyby spojené s použitím statických proměnných zpřístupnit data pro *funkci porovnání.*
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**bsearch_s**|\<Stdlib. h > a \<Search. h >|
+|**bsearch_s**|\<stdlib.h> \<a search.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program seřadí pole řetězců pomocí [qsort_s](qsort-s.md)a pak pomocí bsearch_s hledá slovo "Cat".
+Tento program seřadí pole řetězců s [qsort_s](qsort-s.md)a potom použije bsearch_s k nalezení slova "kočka".
 
 ```cpp
 // crt_bsearch_s.cpp
@@ -192,9 +196,9 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Hledání a řazení](../../c-runtime-library/searching-and-sorting.md)\
+[Vyhledávání a řazení](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
 [_lsearch](lsearch.md)\
 [qsort](qsort.md)

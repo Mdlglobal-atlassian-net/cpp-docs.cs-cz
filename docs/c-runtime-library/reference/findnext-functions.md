@@ -1,9 +1,27 @@
 ---
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
-- _wfindnext
 - _findnext
+- _findnext32
+- _findnext32i64
+- _findnext64
+- _findnext64i32
+- _findnexti64
+- _wfindnext
+- _wfindnext32
+- _wfindnext32i64
+- _wfindnext64
+- _wfindnext64i32
+- _wfindnexti64
+- _o__findnext32
+- _o__findnext32i64
+- _o__findnext64
+- _o__findnext64i32
+- _o__wfindnext32
+- _o__wfindnext32i64
+- _o__wfindnext64
+- _o__wfindnext64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -95,16 +114,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 083f0f1d383472c104a1e4fcb6f3139c7a9d9c88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38243b48a97c038f36ada85e3ca2cda814f43fa8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957250"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346742"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-Vyhledejte další název, pokud existuje, který odpovídá argumentu *filespec* v předchozím volání [_findfirst](findfirst-functions.md), a pak změňte obsah struktury *FileInfo* odpovídajícím způsobem.
+Najděte další název, pokud existuje, který odpovídá argumentu *filespec* v předchozím volání [_findfirst](findfirst-functions.md)a odpovídajícím způsobem změňte obsah struktury *fileinfo.*
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -161,46 +180,48 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*popisovač*<br/>
-Popisovač vyhledávání vrácený předchozím voláním **_findfirst**
+*Zpracování*<br/>
+Popisovač hledání vrácený předchozím voláním **_findfirst**.
 
-*fileinfo*<br/>
-Vyrovnávací paměť informací o souborech.
+*Fileinfo*<br/>
+Vyrovnávací paměť informací o souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu 0. V opačném případě vrátí hodnotu-1 a nastaví **errno** na hodnotu, která označuje povahu selhání. Možné kódy chyb jsou uvedeny v následující tabulce.
+Pokud je úspěšná, vrátí hodnotu 0. V opačném případě vrátí -1 a nastaví **errno** na hodnotu označující povahu selhání. Možné kódy chyb jsou uvedeny v následující tabulce.
 
 |hodnota errno|Podmínka|
 |-|-|
-| **EINVAL** | Neplatný parametr: hodnota *FileInfo* měla **hodnotu null**. Nebo operační systém vrátil neočekávanou chybu. |
-| **ENOENT** | Nenašly se žádné další vyhovující soubory. |
-| **ENOMEM** | Nedostatek paměti nebo délka názvu souboru přesáhla velikost **MAX_PATH**. |
+| **EINVAL** | Neplatný parametr: *fileinfo* byl **NULL**. Nebo operační systém vrátil neočekávanou chybu. |
+| **ENOENT** | Nebyly nalezeny žádné další odpovídající soubory. |
+| **ENOMEM** | Nepřekročila MAX_PATH dostatek paměti nebo délka názvu **souboru**. |
 
-Pokud je předán neplatný parametr, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
+Pokud je předán neplatný parametr, tyto funkce vyvolat neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Po dokončení používání funkce **_findfirst** nebo **_findnext** (nebo libovolné varianty) musíte volat [_findclose](findclose.md) . Tím se uvolní prostředky používané těmito funkcemi ve vaší aplikaci.
+Po dokončení funkce **_findfirst** nebo **_findnext** (nebo varianty) musíte volat [_findclose.](findclose.md) Tím se uvolní prostředky používané těmito funkcemi v aplikaci.
 
-Variace těchto funkcí s předponou **w** jsou verze s velkým znakem; v opačném případě jsou stejné jako odpovídající funkce s jedním bytem.
+Varianty těchto funkcí s předponou **w** jsou verze s širokým znakem; v opačném případě jsou shodné s odpovídající jednobajtové funkce.
 
-Variace těchto funkcí podporují 32 nebo 64 typů času a 32 64 bitů a velikost souborů. První číselná přípona (**32** nebo **64**) označuje velikost použitého typu času; Druhá přípona je buď **i32** , nebo **I64**, která označuje, jestli je velikost souboru reprezentována jako 32 nebo 64 celočíselného bitu. Informace o tom, které verze podporují 32 a 64 typy času a velikosti souborů, najdete v následující tabulce. Variace, které používají 64 typ času, umožňují, aby data vytváření souborů byla vyjádřena až 23:59:59, 31. prosince, 3000, UTC; zatímco ty, které používají 32 typy časových časů, reprezentují jenom data do 23:59:59 15. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+Varianty těchto funkcí podporují 32bitové nebo 64bitové časové typy a 32bitové nebo 64bitové velikosti souborů. První číselná přípona (**32** nebo **64**) označuje velikost použitého časového typu; Druhá přípona je **buď i32** nebo **i64**, označující, zda je velikost souboru reprezentována jako 32bitové nebo 64bitové celé číslo. Informace o tom, které verze podporují 32bitové a 64bitové časové typy a velikosti souborů, naleznete v následující tabulce. Varianty, které používají typ 64bitového času, umožňují vyjádřit data vytvoření souboru až do 23:59:59, 31. vzhledem k tomu, že ty, které používají 32bitové časové typy, představují pouze data do 23:59:59 leden 18, 2038, UTC. Půlnoc 1. ledna 1970 je dolní mez časového období pro všechny tyto funkce.
 
-Pokud nemáte konkrétní důvod pro použití verzí, které určují velikost času explicitně, použijte **_findnext** nebo **_wfindnext** , nebo pokud potřebujete podporovat velikosti souborů větší než 3 GB, použijte **_findnexti64** nebo **_wfindnexti64**. Všechny tyto funkce používají typ času 64. V předchozích verzích tyto funkce používaly typ času 32. Pokud se jedná o zásadní změnu aplikace, můžete definovat **_USE_32BIT_TIME_T** a získat tak staré chování. Pokud je definován **_USE_32BIT_TIME_T** , **_findnext**, **_Finnexti64** a jejich odpovídající verze Unicode používají 32-bit času.
+Pokud nemáte konkrétní důvod používat verze, které explicitně určují velikost času, použijte **_findnext** nebo **_wfindnext** nebo, pokud potřebujete podporovat velikosti souborů větší než 3 GB, použijte **_findnexti64** nebo **_wfindnexti64**. Všechny tyto funkce používají 64bitový typ času. V předchozích verzích tyto funkce používaly typ 32bitového času. Pokud se jedná o narušující změnu pro aplikaci, můžete definovat **_USE_32BIT_TIME_T** získat staré chování. Pokud je **definován_USE_32BIT_TIME_T** **_findnext** **_finnexti64** a jejich odpovídající verze unicode používají 32bitový čas.
 
-### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Typ času a délka souboru – variace typu _findnext
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
-|Funkce|**_USE_32BIT_TIME_T** definovány?|Typ času|Typ délky souboru|
+### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Změny typu a délky souboru _findnext
+
+|Functions|**_USE_32BIT_TIME_T** definováno?|Typ času|Typ délky souboru|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findnext**, **_wfindnext**|Nedefinováno|64bitová|32bitová|
-|**_findnext**, **_wfindnext**|definované|32bitová|32bitová|
-|**_findnext32**, **_wfindnext32**|Není ovlivněno definicí makra.|32bitová|32bitová|
-|**_findnext64**, **_wfindnext64**|Není ovlivněno definicí makra.|64bitová|64bitová|
+|**_findnext**, **_wfindnext**|Definovány|32bitová|32bitová|
+|**_findnext32** **, _wfindnext32**|Definice makra nemá vliv na|32bitová|32bitová|
+|**_findnext64**, **_wfindnext64**|Definice makra nemá vliv na|64bitová|64bitová|
 |**_findnexti64**, **_wfindnexti64**|Nedefinováno|64bitová|64bitová|
-|**_findnexti64**, **_wfindnexti64**|definované|32bitová|64bitová|
-|**_findnext32i64**, **_wfindnext32i64**|Není ovlivněno definicí makra.|32bitová|64bitová|
-|**_findnext64i32**, **_wfindnext64i32**|Není ovlivněno definicí makra.|64bitová|32bitová|
+|**_findnexti64**, **_wfindnexti64**|Definovány|32bitová|64bitová|
+|**_findnext32i64**, **_wfindnext32i64**|Definice makra nemá vliv na|32bitová|64bitová|
+|**_findnext64i32**, **_wfindnext64i32**|Definice makra nemá vliv na|64bitová|32bitová|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -223,20 +244,20 @@ Pokud nemáte konkrétní důvod pro použití verzí, které určují velikost 
 |**_findnexti64**|\<io.h>|
 |**_findnext32i64**|\<io.h>|
 |**_findnext64i32**|\<io.h>|
-|**_wfindnext**|\<IO. h > nebo \<WCHAR. h >|
-|**_wfindnext32**|\<IO. h > nebo \<WCHAR. h >|
-|**_wfindnext64**|\<IO. h > nebo \<WCHAR. h >|
-|**_wfindnexti64**|\<IO. h > nebo \<WCHAR. h >|
-|**_wfindnext32i64**|\<IO. h > nebo \<WCHAR. h >|
-|**_wfindnext64i32**|\<IO. h > nebo \<WCHAR. h >|
+|**_wfindnext**|\<io.h> \<nebo wchar.h>|
+|**_wfindnext32**|\<io.h> \<nebo wchar.h>|
+|**_wfindnext64**|\<io.h> \<nebo wchar.h>|
+|**_wfindnexti64**|\<io.h> \<nebo wchar.h>|
+|**_wfindnext32i64**|\<io.h> \<nebo wchar.h>|
+|**_wfindnext64i32**|\<io.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Systémová volání](../../c-runtime-library/system-calls.md)<br/>
-[Funkce hledání názvů souborů](../../c-runtime-library/filename-search-functions.md)<br/>
+[Funkce hledání názvu souboru](../../c-runtime-library/filename-search-functions.md)<br/>

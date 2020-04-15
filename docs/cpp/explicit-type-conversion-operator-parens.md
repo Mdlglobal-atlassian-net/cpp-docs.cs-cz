@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: 079a3390df56ba55bd4d71a320faa249266abb54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354863"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operátor převodu explicitního typu: ()
 
@@ -27,13 +27,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>Poznámky
 
-*Jednoduchý název typu* následovaný *seznamem výrazů* uzavřeným v závorkách vytvoří objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:
+*Název typu simple* následovaný *seznamem výrazů* uzavřeným v závorcích vytvoří objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:
 
 ```cpp
 int i = int( d );
 ```
 
-Následující příklad ukazuje třídu `Point`.
+Následující příklad ukazuje `Point` třídu.
 
 ## <a name="example"></a>Příklad
 
@@ -116,16 +116,16 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-Předchozí příklad, který používá převod stylu funkce, ukazuje, jak převést dvě hodnoty (jeden pro *x* a jeden pro *y*) na uživatelsky definovaný typ `Point`.
+Předchozí příklad, který používá převod ve stylu funkce, ukazuje, jak převést dvě hodnoty (jedna `Point`pro *x* a jedna pro *y*) na uživatelem definovaný typ .
 
 > [!CAUTION]
->  Explicitní převody typu používejte opatrně, protože přepisují vestavěnou kontrolu typů kompilátoru jazyka C++.
+> Explicitní převody typu používejte opatrně, protože přepisují vestavěnou kontrolu typů kompilátoru jazyka C++.
 
-Zápis [přetypování](../cpp/cast-operator-parens.md) musí být použit pro převody na typy, které nemají *název jednoduchého typu* (například ukazatel nebo odkazové typy). Převod na typy, které mohou být vyjádřeny pomocí *názvu jednoduchého typu* , lze zapsat v obou formách.
+Zápis [přetypování](../cpp/cast-operator-parens.md) musí být použit pro převody na typy, které nemají *název jednoduchého typu* (například ukazatel nebo typy odkazů). Převod na typy, které mohou být vyjádřeny *pomocí jednoduchého názvu typu,* lze zapsat v obou formách.
 
 Definice typu v rámci přetypování je neplatná.
 
 ## <a name="see-also"></a>Viz také
 
-[Výrazy přípony](../cpp/postfix-expressions.md)<br/>
+[Postfix výrazy](../cpp/postfix-expressions.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
