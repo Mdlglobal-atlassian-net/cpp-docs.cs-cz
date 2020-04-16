@@ -140,7 +140,7 @@
                 - name: Funkce
                   expanded: false
                   items:
-                    - name: Analyze
+                    - name: Analyzovat
                       href: build-insights/reference/sdk/functions/analyze.md
                     - name: AnalyzeA
                       href: build-insights/reference/sdk/functions/analyze-a.md
@@ -197,7 +197,7 @@
                 - name: Datové typy událostí (C++)
                   expanded: false
                   items:
-                    - name: Activity
+                    - name: Aktivita
                       href: build-insights/reference/sdk/cpp-event-data-types/activity.md
                     - name: BackEndPass
                       href: build-insights/reference/sdk/cpp-event-data-types/back-end-pass.md
@@ -217,7 +217,7 @@
                       href: build-insights/reference/sdk/cpp-event-data-types/compiler-pass.md
                     - name: EnvironmentVariable
                       href: build-insights/reference/sdk/cpp-event-data-types/environment-variable.md
-                    - name: Event
+                    - name: Událost
                       href: build-insights/reference/sdk/cpp-event-data-types/event.md
                     - name: EventGroup
                       href: build-insights/reference/sdk/cpp-event-data-types/event-group.md
@@ -239,7 +239,7 @@
                       href: build-insights/reference/sdk/cpp-event-data-types/front-end-file-group.md
                     - name: FrontEndPass
                       href: build-insights/reference/sdk/cpp-event-data-types/front-end-pass.md
-                    - name: Function
+                    - name: Funkce
                       href: build-insights/reference/sdk/cpp-event-data-types/function.md
                     - name: ImpLibOutput
                       href: build-insights/reference/sdk/cpp-event-data-types/imp-lib-output.md
@@ -4258,7 +4258,7 @@
                   href: cpp/classes-and-structs-cpp.md
                 - name: třída
                   href: cpp/class-cpp.md
-                - name: 'struct '
+                - name: struct
                   href: cpp/struct-cpp.md
                 - name: Přehled členů třídy
                   href: cpp/class-member-overview.md
@@ -6299,7 +6299,7 @@
                   href: windows/attributes/aggregates.md
                 - name: appobject
                   href: windows/attributes/appobject.md
-                - name: 'async_uuid '
+                - name: async_uuid
                   href: windows/attributes/async-uuid.md
                 - name: – atribut
                   href: windows/attributes/attribute.md
@@ -6311,7 +6311,7 @@
                   href: windows/attributes/case-cpp.md
                 - name: coclass
                   href: windows/attributes/coclass.md
-                - name: 'com_interface_entry '
+                - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
                 - name: – ovládací prvek
                   href: windows/attributes/control.md
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Inicializace CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: Globální stav v CRT
+                  href: c-runtime-library/global-state.md
             - name: Rutiny UCRT (Universal C runtime) podle kategorie
               expanded: false
               items:
