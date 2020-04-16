@@ -2,23 +2,23 @@
 title: Hodnoty
 ms.date: 11/04/2016
 ms.assetid: 24003f89-220f-4f93-be7a-b650c26157d7
-ms.openlocfilehash: a745b9cc45ed3e58cab4ec7355707d93a0557c04
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 261f78e34ffb28a164e06a81902bd9ff4d0eb6fc
+ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343154"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81480864"
 ---
 # <a name="values"></a>Hodnoty
 
-**ANSI 3.1.2.5** reprezentace a sady hodnot z různých typů čísel s plovoucí desetinnou čárkou
+**ANSI 3.1.2.5** Reprezentace a sady hodnot různých typů čísel s plovoucí desetinnou desetinnou desetinnou desetinnou desetinnou desetinnou
 
-**Float** typ obsahuje 32 bitů: 1 pro znaménko, 8 pro exponent a 23 pro mantisu. Jeho rozsah je +/-3.4E38 s alespoň 7 číslicemi přesnosti.
+Typ **float** obsahuje 32 bitů: 1 pro znaménko, 8 pro exponent a 23 pro mantisu. Jeho rozsah je +/- 3.4E38 s přesností nejméně 7 číslic.
 
-**Double** typ obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/-1.7E308 s alespoň 15 číslicemi přesnosti.
+**Dvojitý** typ obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/- 1.7E308 s přesností nejméně 15 číslic.
 
-**Long double** typ obsahuje 80 bitů: 1 pro znaménko, 15 pro exponent a 64 pro mantisu. Jeho rozsah je +/-1.2E4932 s alespoň 19 číslic. Všimněte si, že kompilátor Microsoft C reprezentace typu **long double** je stejný jako typ **double**.
+Dlouhý **dvojitý** typ je odlišný, ale má stejnou reprezentaci jako typ **double** v kompilátoru Microsoft C.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Matematika s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)
+[Matematika s plovoucí desetinnou tísní](../c-language/floating-point-math.md)
