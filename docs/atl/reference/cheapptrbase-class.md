@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326902"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747678"
 ---
 # <a name="cheapptrbase-class"></a>Třída CHeapPtrBase
 
@@ -46,13 +46,13 @@ Třída přidělení paměti, která má být používána. Ve výchozím nastav
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeapPtrBase::~CHeapPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeapPtrBase::Přidělit bajty](#allocatebytes)|Volání této metody přidělit paměť.|
 |[CHeapPtrBase::Připojit](#attach)|Volání této metody převzít vlastnictví existující ukazatel.|
@@ -62,7 +62,7 @@ Třída přidělení paměti, která má být používána. Ve výchozím nastav
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeapPtrBase::operátor T*](#operator_t_star)|Operátor obsazení.|
 |[CHeapPtrBase::operátor &](#operator_amp)|Operátor &.|
@@ -70,7 +70,7 @@ Třída přidělení paměti, která má být používána. Ve výchozím nastav
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeapPtrBase::m_pData](#m_pdata)|Proměnná datového prvku ukazatele.|
 
@@ -107,7 +107,7 @@ V sestaveních ladění dojde k selhání kontrolního výrazu, pokud proměnná
 
 Volání této metody převzít vlastnictví existující ukazatel.
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ Uvolní vlastnictví ukazatele, nastaví proměnnou [CHeapPtrBase::m_pData](#m_p
 
 Volání této metody odstranit objekt ukázal `CHeapPtrBase`.
 
-```
+```cpp
 void Free() throw();
 ```
 

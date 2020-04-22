@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368334"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747208"
 ---
 # <a name="crendertarget-class"></a>Třída CRenderTarget
 
@@ -135,14 +135,14 @@ class CRenderTarget : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Vytvoří objekt CRenderTarget.|
 |[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destruktor. Volána při zničení cílového objektu vykreslení.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::Připojit](#attach)|Připojí k objektu existující cílové rozhraní vykreslení.|
 |[CRenderTarget::BeginDraw](#begindraw)|Zahájí kreslení z tohoto cíle vykreslení.|
@@ -196,19 +196,19 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::Ověřitzdroj](#verifyresource)|Ověří platnost objektu CD2DResource; vytvoří objekt, pokud ještě neexistoval.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::operátor ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Vrátí rozhraní ID2D1RenderTarget.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Seznam ukazatelů na objekty CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Ukazatel na objekt ID2D1RenderTarget.|
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Připojí k objektu existující cílové rozhraní vykreslení.
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ Existující rozhraní cíle vykreslení. Nelze získat hodnotu NULL.
 
 Zahájí kreslení z tohoto cíle vykreslení.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 Vymaže kreslicí oblast na zadanou barvu.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -362,7 +362,7 @@ Ukazatel na odpojené rozhraní cíle vykreslení.
 
 Nakreslí formátovaný text popsaný zadaným objektem IDWriteTextLayout.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ Velikost a umístění v obrazových bodech nezávislých na zařízení v souř
 
 Nakreslí obrys zadané elipsy pomocí zadaného stylu tahu.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ Styl tahu, který se aplikuje na obrys elipsy, nebo NULL pro malování plného 
 
 Nakreslí obrys zadané geometrie pomocí zadaného stylu tahu.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ Styl tahu, který se aplikuje na obrys geometrie, nebo NULL pro malování plné
 
 Nakreslí zadané glyfy.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ Hodnota, která označuje, jak se metriky glyfu používají k měření textu p
 
 Nakreslí čáru mezi určenými body pomocí zadaného stylu tahu.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ Styl tahu malovat nebo NULL pro malování plné čáry.
 
 Nakreslí obrys obdélníku, který má zadané rozměry a styl tahu.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ Styl tahu malovat nebo NULL malovat plný tah.
 
 Nakreslí obrys určeného zaobleného obdélníku pomocí zadaného stylu tahu.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ Styl tahu zaobleného obdélníku nebo NULL pro malování plného tahu. Výchoz
 
 Nakreslí zadaný text pomocí informací o formátu poskytnutých objektem IDWriteTextFormat.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -586,7 +586,7 @@ Hodnota, která označuje, jak se metriky glyfu používají k měření textu p
 
 Nakreslí formátovaný text popsaný zadaným objektem IDWriteTextLayout.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -624,7 +624,7 @@ Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód c
 
 Maluje vnitřek zadané elipsy.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ Pozice a poloměr v pixelech nezávislých na zařízení elipsy, které chcete 
 
 Maluje vnitřek zadané geometrie.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ Maska krytí, která se má použít na geometrii; Null pro žádnou masku kryt�
 
 Maluje vnitřek zadané sítě.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ Síť k malování.
 
 Aplikuje masku krytí popsanou zadanou bitmapou na stopu a použije tuto stopu k malování oblasti cíle vykreslení.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ Oblast bitmapy, která se má použít jako maska krytí v pixelech nezávislýc
 
 Maluje vnitřek zadaného obdélníku.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ Rozměr obdélníku malovat, v pixelech nezávislých na zařízení.
 
 Maluje vnitřek zadaného zaobleného obdélníku.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ Rozměry zaobleného obdélníku malovat, v pixelech nezávislých na zařízen�
 
 Provede všechny čekající příkazy výkresu.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ Aktuální velikost cíle vykreslení v pixelech nezávislých na zařízení
 
 Získá popisek pro následné operace kreslení.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ Aktuální režim vyhlazení pro operace kreslení textu a glyfů.
 
 Načte aktuální volby vykreslení cíle vykreslení.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ Když tato metoda vrátí, textRenderingParamsobsahuje adresu ukazatele na aktu�
 
 Získá aktuální transformace cíle vykreslení.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ Ukazatel na rozhraní ID2D1RenderTarget nebo NULL, pokud objekt ještě není in
 
 Odstraní poslední klip zarovnaný osou z cíle vykreslení. Po volání této metody se klip již nepoužije na následné operace kreslení.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Zastaví přesměrování operací výkresu na hladinu určenou posledním voláním PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Odstraní poslední klip zarovnaný osou z cíle vykreslení. Po volání této metody se klip již nepoužije na následné operace kreslení.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ Režim vyhlazení, který se používá k nakreslení okrajů obdélníků klipu
 
 Přidá zadanou hladinu k cíli vykreslení tak, aby přijímali všechny následné operace kreslení, dokud není volána PopLayer.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ Hladina, která přijímá následné operace kreslení.
 
 Nastaví stav výkresu cíle vykreslení na stav zadaného ID2D1DrawingStateBlock.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ Nový stav výkresu cíle vykreslení.
 
 Uloží aktuální stav výkresu do zadaného ID2D1DrawingStateBlock.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ Když tato metoda vrátí, obsahuje aktuální stav výkresu cíle vykreslení. 
 
 Nastaví režim vyhlazení cíle vykreslení. Režim vyhlazení se vztahuje na všechny následné operace kreslení, s výjimkou operací kreslení textu a glyfů.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ Režim vyhlazení pro budoucí operace kreslení.
 
 Nastaví tečky na palec (DPI) cíle vykreslení.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ Hodnota větší nebo rovna nule, která určuje horizontální/vertikální DPI
 
 Určuje popisek pro následné operace kreslení.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ Popisek, který se má použít pro následné operace kreslení.
 
 Určuje režim vyhlazení, který se má použít pro následné operace kreslení textu a glyfů.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ Režim vyhlazení, který se má použít pro následné operace kreslení textu
 
 Určuje volby vykreslování textu, které mají být použity na všechny následné operace kreslení textu a glyfů.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ Volby vykreslení textu, které mají být použity pro všechny následné oper
 
 Aplikuje zadanou transformaci na cíl vykreslení a nahradí existující transformaci. Všechny následné operace kreslení probíhají v transformovaném prostoru.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

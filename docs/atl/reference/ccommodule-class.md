@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327762"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747929"
 ---
 # <a name="ccommodule-class"></a>CComModule – třída
 
@@ -55,7 +55,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComModule::GetClassObject](#getclassobject)|Vytvoří objekt zadaného identifikátoru CLSID. Pouze pro knihovny DLL.|
 |[CcomModule::GetModuleInstance](#getmoduleinstance)|Vrací objekt `m_hInst`.|
@@ -76,7 +76,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComModule::m_csObjMap](#m_csobjmap)|Zajišťuje synchronizovaný přístup k informacím o mapě objektů.|
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Zajišťuje synchronizovaný přístup k informacím knihovny typů.|
@@ -465,7 +465,7 @@ Odebere objekt třídy. Tato metoda je k dispozici pouze exes.
 
 Od ATL 7.0, `CComModule` je zastaralý: viz [třídy modulu ATL](../../atl/atl-module-classes.md) pro další podrobnosti.
 
-```
+```cpp
 void Term() throw();
 ```
 

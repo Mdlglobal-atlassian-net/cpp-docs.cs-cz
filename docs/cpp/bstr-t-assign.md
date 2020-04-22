@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190639"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749708"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Zkopíruje `BSTR` do `BSTR` zabalený`bstr_t` **_** .
+Zkopíruje `BSTR` a `BSTR` do zabalené **_**`bstr_t`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>Parametry
 
-*pracují*<br/>
-`BSTR` k zkopírování do `BSTR` zabaleného `_bstr_t`.
+*S*<br/>
+A, `BSTR` které mají `BSTR` být zkopírovány do zabalené `_bstr_t`.
 
 ## <a name="remarks"></a>Poznámky
 
-**Přiřazení** provede binární kopii, což znamená, že se zkopíruje celá délka `BSTR` bez ohledu na obsah.
+**Přiřadí** binární kopii, což znamená, `BSTR` že se zkopíruje celá délka kopie, bez ohledu na obsah.
 
 ## <a name="example"></a>Příklad
 
@@ -109,7 +109,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
 ## <a name="see-also"></a>Viz také
 

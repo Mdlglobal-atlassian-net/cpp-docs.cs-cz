@@ -2,62 +2,62 @@
 title: Řetězce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a67b9a4552dc83791c05029cca76f60fd83df0f1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403240"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745338"
 ---
 # <a name="strings-ccx"></a>Řetězce (C++/CX)
 
-Text v modulu Windows Runtime je vyjádřena v C++/CX podle [Platform::String – třída](../cppcx/platform-string-class.md). Použití `Platform::String Class` při předání řetězce vpřed a zpět v metodách Windows Runtime tříd, nebo jsou při interakci s ostatními součástmi modulu Windows Runtime hranice binární rozhraní (ABI) aplikace. `Platform::String Class` Poskytuje metody pro několik běžných operace s řetězci, ale to není navržena jako plně funkční řetězec třídy. Ve vaší C++ modulu, pomocí standardních C++ řetězec typy, jako [wstring](../standard-library/basic-string-class.md) žádné významné text zpracování, a pak převod je konečný výsledek do [Platform::String ^](../cppcx/platform-string-class.md) předtím, než ji předáte do nebo z veřejné rozhraní. Je snadné a efektivní pro převod mezi `wstring` nebo `wchar_t*` a `Platform::String`.
+Text v prostředí Windows Runtime je v jazyce C++/CX reprezentován [třídou Platform::String .](../cppcx/platform-string-class.md) `Platform::String Class` Při předávání řetězců tam a zpět metodám ve třídách prostředí Windows Runtime nebo při interakci s jinými součástmi prostředí Windows Runtime přes hranici binárního rozhraní aplikace (ABI). Poskytuje `Platform::String Class` metody pro několik běžných operací řetězce, ale není navržen tak, aby se plně vybavený řetězec třídy. V modulu Jazyka C++ použijte standardní typy řetězců jazyka C++, jako je [wstring](../standard-library/basic-string-class.md) pro jakékoli významné zpracování textu, a potom převeďte konečný výsledek na [Platform::String^](../cppcx/platform-string-class.md) před předáním do nebo z veřejného rozhraní. Je to snadné a efektivní `wstring` `wchar_t*` převést mezi nebo a `Platform::String`.
 
-**Fast pass**
+**Rychlý průchod**
 
-V některých případech můžete ověřit, že můžete bezpečně sestavit kompilátor `Platform::String` nebo předat `String` na funkci bez kopírování podkladová data řetězce. Tyto operace jsou označovány jako *fast pass* a k nim dojde transparentně.
+V některých případech kompilátor můžete ověřit, `Platform::String` že `String` může bezpečně sestavit nebo předat funkci bez kopírování podkladových řetězcových dat. Tyto operace jsou označovány jako *rychlý průchod* a dochází transparentně.
 
-## <a name="string-construction"></a>Vytváření řetězce
+## <a name="string-construction"></a>Konstrukce strun
 
-Hodnota `String` objektu je neměnný (jen pro čtení) posloupnost `char16` (16-bit Unicode) znaků. Protože `String` objektu je neměnný, přiřazení nové řetězcového literálu na `String` proměnné ve skutečnosti nahradí původní `String` objektu s novou `String` objektu. Operace sřetězení zahrnují zničení původního `String` objektu a vytvoření nového objektu.
+Hodnota objektu `String` je neměnná (jen pro čtení) sekvence `char16` (16bitové znaky Unicode). Vzhledem `String` k tomu, že objekt je neměnný, přiřazení literálu nového řetězce k `String` proměnné ve skutečnosti nahradí původní `String` objekt novým `String` objektem. Operace zřetězení zahrnují zničení `String` původního objektu a vytvoření nového objektu.
 
 **Literály**
 
-A *literální znak* je znak, který je uzavřen do jednoduchých uvozovek a *řetězcového literálu* je posloupnost znaků, který je uzavřen do dvojitých uvozovek. Je-li použít literál k inicializaci řetězec ^ proměnné, kompilátor předpokládá, že je literál skládá `char16` znaků. To znamená, nemusíte předcházet literál s modifikátorem řetězec "L", nebo zadejte literál ve **_T()** nebo **TEXT()** – makro. Další informace o podpoře jazyka C++ pro kódování Unicode naleznete v tématu [souhrn programování s kódem Unicode](../text/unicode-programming-summary.md).
+Znak *literálu* je znak, který je uzavřen v jednoduchých uvozovkách a *literál řetězec* je posloupnost znaků, která je uzavřena v uvozovkách. Pokud použijete literál k inicializaci string^ proměnné, kompilátor předpokládá, že literál se skládá ze `char16` znaků. To znamená, že není třeba předcházet literálu s modifikátorem řetězce L nebo uzavřete literál v makru **_T()** nebo **TEXT().** Další informace o podpoře jazyka C++ pro kódování Unicode naleznete v [tématu Unicode Programming Summary](../text/unicode-programming-summary.md).
 
-Následující příklad ukazuje různé způsoby, jak vytvořit `String` objekty.
+Následující příklad ukazuje různé `String` způsoby vytváření objektů.
 
 [!code-cpp[cx_strings#01](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#01)]
 
 ## <a name="string-handling-operations"></a>Operace zpracování řetězců
 
-`String` Třída poskytuje metody a operátory pro zřetězení, porovnání řetězců a další základní operace s řetězci. Rozsáhlejší manipulace s řetězci, použijte `String::Data()` členské funkce k načtení hodnoty `String^` objektu jako `const wchar_t*`. Potom tuto hodnotu použít k inicializaci `std::wstring`, která poskytuje funkce pro zpracování formátovaný řetězec.
+Třída `String` poskytuje metody a operátory pro zřetězení, porovnání řetězců a další základní operace řetězce. Chcete-li provést rozsáhlejší manipulace `String::Data()` s řetězci, použijte `String^` členovou `const wchar_t*`funkci k načtení hodnoty objektu jako . Pak použijte tuto hodnotu `std::wstring`k inicializaci , který poskytuje bohaté funkce zpracování řetězce.
 
 [!code-cpp[cx_strings#03](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#03)]
 
-## <a name="string-conversions"></a>Převod řetězců
+## <a name="string-conversions"></a>Převody řetězců
 
-A `Platform::String` může obsahovat pouze `char16` znaků, nebo `NULL` znak. Pokud má vaše aplikace pro práci s 8 bitů znaků, použijte [String::Data](../cppcx/platform-string-class.md#data) k extrakci textu jako `const wchar_t*`. Pak můžete použít odpovídající funkce Windows nebo funkce standardní knihovny pracovat s daty a převést jej zpět `wchar_t*` nebo [wstring](../standard-library/basic-string-class.md), který můžete použít k vytvoření nového `Platform::String`.
+A `Platform::String` může `char16` obsahovat pouze `NULL` znaky nebo znak. Pokud vaše aplikace má pracovat s 8bitové znaky, použijte [String::Data](../cppcx/platform-string-class.md#data) extrahovat text jako `const wchar_t*`. Potom můžete použít příslušné funkce systému Windows nebo standardní knihovny pracovat `wchar_t*` s daty a převést zpět `Platform::String`na nebo [wstring](../standard-library/basic-string-class.md), které můžete použít k vytvoření nového .
 
-Následující fragment kódu ukazuje, jak převést `String^` do a z proměnné `wstring` proměnné. Další informace o zacházení s řetězci, který se používá v tomto příkladu najdete v tématu [basic_string::replace](../standard-library/basic-string-class.md#replace).
+Následující fragment kódu ukazuje, `String^` jak převést `wstring` proměnnou do a z proměnné. Další informace o manipulaci s řetězci, která se používá v tomto příkladu, naleznete [v tématu basic_string::replace](../standard-library/basic-string-class.md#replace).
 
 [!code-cpp[cx_strings#04](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#04)]
 
 ## <a name="string-length-and-embedded-null-values"></a>Délka řetězce a vložené hodnoty NULL
 
-[String::Length](../cppcx/platform-string-class.md#length) vrátí počet znaků v řetězci, nikoli počet bajtů. Pokud ho explicitně neurčíte při použití – sémantika zásobníku pro vytvoření řetězce se nepočítá ukončujícího znaku NULL.
+[Funkce String::Length](../cppcx/platform-string-class.md#length) vrátí počet znaků v řetězci, nikoli počet bajtů. Ukončující znak NULL se nepočítá, pokud jej explicitně neurčíte při použití sémantiky zásobníku k vytvoření řetězce.
 
-A `Platform::String` může obsahovat vložené hodnoty NULL, ale pouze pokud hodnota NULL je výsledek operace zřetězení. Vložené znaky Null nejsou podporovány u řetězcových literálů.; proto nelze použít vložené znaky null způsobem, že k inicializaci `Platform::String`. Vložit hodnoty NULL v `Platform::String` jsou ignorovány, pokud řetězec se zobrazí, třeba když se přiřadí `TextBlock::Text` vlastnost. Vložené znaky Null se odeberou, když je vrácena hodnota řetězce `Data` vlastnost.
+A `Platform::String` může obsahovat vložené hodnoty NULL, ale pouze v případě, že null je výsledkem operace zřetězení. Vložené null nejsou podporovány v řetězcových literále; Proto nelze použít vložené nulls tímto způsobem `Platform::String`k inicializaci . Vložené hodnoty NULL `Platform::String` v a jsou ignorovány při zobrazení řetězce, například `TextBlock::Text` když je přiřazen k vlastnosti. Vložené nulls jsou odebrány při hodnota `Data` řetězce je vrácena vlastností.
 
-## <a name="stringreference"></a>StringReference
+## <a name="stringreference"></a>Odkaz na řetězec
 
-V některých případech kódu (a) obdrží std::wstring nebo wchar_t řetězec nebo L"" řetězec literálu a pouze předává je do jinou metodu, která přebírá řetězec ^ jako vstupní parametr. Jako původní řetězec samotné vyrovnávací paměti zůstává v platnosti a před vrácení funkce nezmění, můžete převést `wchar_t*` řetězec nebo řetězcový literál [Platform::stringreference –](../cppcx/platform-stringreference-class.md)a předejte mu, které místo `Platform::String^`. To je povoleno, protože `StringReference` má uživatelem definovaný převod na `Platform::String^`. S použitím `StringReference` vyvarujte další kopie dat řetězce. Ve smyčkách, kde je úspěšných velká čísla, řetězce nebo při předávání velmi dlouhých řetězců, které potenciálně dosáhnout významné výkonnostní zlepšení pomocí `StringReference`. Ale protože `StringReference` v podstatě vypůjčí původní vyrovnávací paměti pro řetězec, je nutné použít mimořádně pečlivě vyhnete se tak poškození paměti. By neměla předat `StringReference` na asynchronní metodu Pokud původní řetězec je zaručeno, že po návratu tato metoda bude v oboru. Řetězec ^, který je inicializován z StringReference vynutí přidělení a kopírování dat řetězců případě druhou operaci přiřazení. V takovém případě dojde ke ztrátě výhod výkonu `StringReference`.
+V některých případech váš kód (a) obdrží std::wstring, nebo wchar_t řetězci nebo L"" řetězci literálu a jen předává ji na jinou metodu, která trvá String^ jako vstupní parametr. Dokud původní vyrovnávací paměť řetězce zůstane platná a nezmutuje před `wchar_t*` návratem funkce, můžete převést literál řetězce nebo řetězce `Platform::String^`na [platformu::StringReference](../cppcx/platform-stringreference-class.md)a předat ji místo . To je `StringReference` povoleno, protože má `Platform::String^`uživatelem definovaný převod na . Pomocí `StringReference` můžete vyhnout vytváření další kopii dat řetězce. Ve smyčkách, kde předáváte velký počet řetězců nebo při předávání velmi velkých řetězců, `StringReference`můžete potenciálně dosáhnout významného zlepšení výkonu pomocí . Ale `StringReference` protože v podstatě vypůjčí původní vyrovnávací paměti řetězce, je nutné použít extrémní péči, aby se zabránilo poškození paměti. Neměli byste `StringReference` předat asynchronní metodu, pokud původní řetězec je zaručeno, že bude v oboru, když tato metoda vrátí. Řetězec^, který je inicializován z StringReference vynutí přidělení a kopii dat řetězce, pokud dojde k druhé operaci přiřazení. V takovém případě ztratíte výhodu výkonu `StringReference`.
 
-Všimněte si, že `StringReference` je standardní typ třídy jazyka C++, ne ref class, nelze ji použít ve veřejném rozhraní referenční třídy, které definujete.
+Všimněte `StringReference` si, že je standardní c++ typ třídy, nikoli ref třídy, nelze použít ve veřejném rozhraní ref třídy, které definujete.
 
-Následující příklad ukazuje způsob použití StringReference:
+Následující příklad ukazuje, jak používat StringReference:
 
-```
+```cpp
 void GetDecodedStrings(std::vector<std::wstring> strings)
 {
     using namespace Windows::Security::Cryptography;

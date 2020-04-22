@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370154"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749134"
 ---
 # <a name="clistctrl-class"></a>Třída CListCtrl
 
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Vytvoří `CListCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListCtrl::Přibližný zobrazeníRect](#approximateviewrect)|Určuje šířku a výšku potřebnou k zobrazení položek ovládacího prvku zobrazení seznamu.|
 |[CListCtrl::Uspořádat](#arrange)|Zarovná položky v mřížce.|
@@ -584,7 +584,7 @@ Parametr *nCode* určuje styl zarovnání.
 
 Zruší operaci úprav textu položky.
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku seznamu. Aplikujte na ovládací prvek libovolnou kombinaci stylů ovládacího prvku seznamu. Úplný seznam těchto stylů naleznete v tématu [Styly oken zobrazení](/windows/win32/Controls/list-view-window-styles) v sadě Windows SDK. Nastavte rozšířené styly specifické pro ovládací prvek pomocí [SetExtendedStyle](#setextendedstyle).
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku seznamu. Může to být `CRect` buď objekt nebo [rect](/previous-versions/dd162897\(v=vs.85\)) struktura.
+Určuje velikost a umístění ovládacího prvku seznamu. Může to být `CRect` buď objekt nebo [rect](/windows/win32/api/windef/ns-windef-rect) struktura.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku seznamu, obvykle . Nesmí být null.
@@ -666,7 +666,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku seznamu. Aplikujte na ovládací prvek libovolnou kombinaci stylů ovládacího prvku seznamu. Úplný seznam těchto stylů naleznete v tématu [Seznam stylů oken zobrazení](/windows/win32/Controls/list-view-window-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 Index položky, jejíž seznam přetažení obrázku má být vytvořen.
 
 *lpPoint*<br/>
-Adresa [point](/previous-versions/dd162805\(v=vs.85\)) struktury, která přijímá počáteční umístění levého horního rohu obrázku, v souřadnicích zobrazení.
+Adresa [point](/windows/win32/api/windef/ns-windef-point) struktury, která přijímá počáteční umístění levého horního rohu obrázku, v souřadnicích zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1413,7 +1413,7 @@ Následující příklad kódu ukazuje `GetGroupInfoByIndex` metodu. V dřívěj
 
 Načte metriky skupiny.
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*iGroupId*|[v] Určuje skupinu.|
-|*lpRect*|[dovnitř, ven] Ukazatel na strukturu [RECT.](/previous-versions/dd162897\(v=vs.85\)) Pokud je tato metoda úspěšná, struktura obdrží obdélníkové souřadnice skupiny, která je určena *iGroupId*.|
+|*lpRect*|[dovnitř, ven] Ukazatel na strukturu [RECT.](/windows/win32/api/windef/ns-windef-rect) Pokud je tato metoda úspěšná, struktura obdrží obdélníkové souřadnice skupiny, která je určena *iGroupId*.|
 |*iCoords*|[v] Určuje souřadnice obdélníku, které chcete načíst. Použijte jednu z těchto hodnot:<br /><br /> - LVGGR_GROUP - (Výchozí) Souřadnice celé rozbalené skupiny.<br />- LVGGR_HEADER - Souřadnice pouze záhlaví (sbalená skupina).<br />- LVGGR_SUBSETLINK - Souřadnice pouze podmnožinu spojnice (podmnožina značek).|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1451,7 +1451,7 @@ TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Volající je zodpovědný za přidělení [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, na kterou se vztahuje parametr *pRect.*
+Volající je zodpovědný za přidělení [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, na kterou se vztahuje parametr *pRect.*
 
 Tato metoda odešle [zprávu LVM_GETGROUPRECT,](/windows/win32/Controls/lvm-getgrouprect) která je popsána v sadě Windows SDK.
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[v] Ukazatel na strukturu [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) pro nadřazenou položku podpoložky.<br /><br /> Volající je zodpovědný za přidělení a nastavení členů [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) struktury. Tento parametr nemůže mít hodnotu NULL.|
 |*iColumn*|[v] Nulový index sloupce v ovládacím prvku.|
 |*rectType*|[v] Část podpoložky zobrazení seznamu, pro kterou je načten ohraničovací obdélník. Zadejte jednu z následujících hodnot:<br /><br /> LVIR_BOUNDS - Vrátí ohraničovací obdélník celé podpoložky, včetně ikony a popisku.<br /><br /> LVIR_ICON - Vrátí ohraničovací obdélník ikony nebo malé ikony podpoložky.<br /><br /> LVIR_LABEL - Vrátí ohraničovací obdélník textu podpoložky.|
-|*pRect*|[out] Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která přijímá informace o ohraničující obdélník podpoložky.<br /><br /> Volající je zodpovědný za přidělení [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Tento parametr nemůže mít hodnotu NULL.|
+|*pRect*|[out] Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která přijímá informace o ohraničující obdélník podpoložky.<br /><br /> Volající je zodpovědný za přidělení [RECT](/windows/win32/api/windef/ns-windef-rect) struktury. Tento parametr nemůže mít hodnotu NULL.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 Index položky, jejíž pozice má být načtena.
 
 *lpPoint*<br/>
-Adresa [point](/previous-versions/dd162805\(v=vs.85\)) struktury, která přijímá pozici položky v levém horním rohu, v souřadnicích zobrazení.
+Adresa [point](/windows/win32/api/windef/ns-windef-point) struktury, která přijímá pozici položky v levém horním rohu, v souřadnicích zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 Index položky, jejíž pozice má být načtena.
 
 *lpRect*<br/>
-Adresa [rect](/previous-versions/dd162897\(v=vs.85\)) struktury, která přijímá ohraničující obdélník.
+Adresa [rect](/windows/win32/api/windef/ns-windef-rect) struktury, která přijímá ohraničující obdélník.
 
 *nKód*<br/>
 Část položky zobrazení seznamu, pro které chcete načíst ohraničovací obdélník. Může to být jedna z těchto hodnot:
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adresa [point](/previous-versions/dd162805\(v=vs.85\)) struktury, která přijímá původ zobrazení.
+Adresa [point](/windows/win32/api/windef/ns-windef-point) struktury, která přijímá původ zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Adresa struktury [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Adresa struktury [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2546,7 +2546,7 @@ Zobrazení seznamu musí být v zobrazení ikon nebo v zobrazení malých ikon.
 
 Načte aktuální pracovní oblasti ovládacího prvku zobrazení seznamu.
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *pBod*<br/>
-Ukazatel na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje souřadnice testu přístupů, vzhledem k klientské oblasti ovládacího prvku seznamu.
+Ukazatel na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která obsahuje souřadnice testu přístupů, vzhledem k klientské oblasti ovládacího prvku seznamu.
 
 *plvim*<br/>
 Ukazatel na strukturu [LVINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) která určuje kurzor nejblíže souřadnicím definovaným parametrem bodu.
@@ -3008,7 +3008,7 @@ Tato členská funkce emuluje funkce [zprávy LVM_MOVEGROUP,](/windows/win32/Con
 
 Přesune zadanou položku do zadané skupiny.
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ Zadané položky nejsou ve skutečnosti překresleny, dokud okno zobrazení sezn
 
 Odebere všechny skupiny z ovládacího prvku zobrazení seznamu.
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3387,7 +3387,7 @@ Tato metoda odešle [zprávu LVM_SETGROUPINFO,](/windows/win32/Controls/lvm-setg
 
 Nastaví metriky skupiny ovládacího prvku zobrazení seznamu.
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3693,7 +3693,7 @@ Viz příklad [pro CListCtrl::HitTest](#hittest).
 
 Připraví ovládací prvek zobrazení seznamu pro přidání velkého počtu položek.
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 Index položky, jejíž pozice má být nastavena.
 
 *Pt*<br/>
-A [POINT](/previous-versions/dd162805\(v=vs.85\)) struktura určující novou pozici, v zobrazení souřadnice, položky levého horního rohu.
+A [POINT](/windows/win32/api/windef/ns-windef-point) struktura určující novou pozici, v zobrazení souřadnice, položky levého horního rohu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4156,7 +4156,7 @@ Tato členská funkce emuluje funkce [zprávy LVM_SETVIEW,](/windows/win32/Contr
 
 Nastaví oblast, kde lze ikony zobrazit v ovládacím prvku zobrazení seznamu.
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

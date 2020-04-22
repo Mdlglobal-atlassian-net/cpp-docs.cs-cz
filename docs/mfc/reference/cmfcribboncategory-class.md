@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375266"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749538"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory – třída
 
@@ -151,13 +151,13 @@ class CMFCRibbonCategory : public CObject
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Přidá skrytý prvek do kategorie pásu karet.|
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Přidá nový panel do kategorie pásu karet.|
@@ -260,7 +260,7 @@ Následující diagram znázorňuje obrázek kategorie Home z ukázkové aplikac
 
 Přidá zadaný prvek pásu karet do pole prvků pásu karet, které jsou zobrazeny v dialogovém okně přizpůsobení.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Ukazatel na prvek pásu karet, pokud byla metoda úspěšná; jinak NULL.
 
 Načte všechny prvky pásu karet v kategorii pásu karet.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Prvky pásu karet, které jsou určeny pro použití na panelu nástrojů rychl�
 
 Načte všechny prvky pásu karet, které jsou přidruženy k zadanému ID příkazu.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ Načtená velikost zahrnuje faktor globálního měřítka obrazu.
 
 Načte ID příkazů pro prvky pásu karet, které jsou obsaženy v kategorii pásu karet.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ Svislé umístění textu v obrazových bodech na tlačítkách pásu karet, kte
 
 Načte všechny viditelné prvky, které patří do kategorie pásu karet.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Definuje pořadí, ve kterém se sbalí panely pásu karet kategorie pásu karet.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ Následující příklad ukazuje, jak `SetCollapseOrder` používat metodu ve `C
 
 Nastaví uživatelem definovaná data tak, aby byla přidružena ke kategorii pásu karet.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Přiřadí klíčovou klávesu ke kategorii pásu karet.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ Klávesy se zobrazí, když uživatel stiskne klávesu Alt nebo klávesu F10.
 
 Přiřadí kategorii pásu karet název a klíč.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ Chcete-li nastavit klávesovou zkratku pro kategorii pásu karet, přidejte novo
 
 Nastaví barvu kategorie pásu karet.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

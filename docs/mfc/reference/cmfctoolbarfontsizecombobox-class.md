@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358309"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745317"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox – třída
 
@@ -35,13 +35,13 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::CMFCToolBarFontFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Vytvoří `CMFCToolBarFontSizeComboBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Vrátí vybranou velikost písma v twipech.|
 |[CMFCToolBarFontSizeComboBox::Znovu vytvořit velikostpísma](#rebuildfontsizes)|Vyplní seznam polí se seznamem všemi podporovanými velikostmi písma pro zadané písmo.|
@@ -99,7 +99,7 @@ Pokud je vrácená hodnota kladná, je to velikost písma v twips. Je -1, pokud 
 
 Vyplní pole se seznamem velikosti písma všemi platnými velikostmi daného písma.
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ Tuto funkci zavolejte, pokud chcete synchronizovat mezi výběrem v poli se sezn
 
 Zaokrouhlí zadanou velikost (v twipech) na nejbližší velikost v bodech a pak nastaví vybranou velikost v poli se seznamem na tuto hodnotu.
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 

@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330323"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746017"
 ---
 # <a name="cwindow-class"></a>Třída CWindow
 
@@ -177,13 +177,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::UspořádaticonicWindows](#arrangeiconicwindows)|Uspořádá všechna minimalizovaná podřízená okna.|
 |[CWindow::Připojit](#attach)|Připojí okno k `CWindow` objektu.|
@@ -331,14 +331,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::operátor HWND](#operator_hwnd)|Převede `CWindow` objekt na HWND.|
 |[CWindow::operátor =](#operator_eq)|Přiřadí `CWindow` objektu HWND.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::m_hWnd](#m_hwnd)|Popisovač okna přidruženého `CWindow` k objektu.|
 |[CWindow::rcDefault](#rcdefault)|Obsahuje výchozí dimenze okna.|
@@ -394,7 +394,7 @@ Viz [ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeiconicwi
 
 Připojí okno identifikované *hWndNew* `CWindow` k objektu.
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Viz [ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) v sadě Windows SDK.
 
-Druhá verze této metody umožňuje převést souřadnice [rect](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Druhá verze této metody umožňuje převést souřadnice [rect](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow::Vytvořit
 
@@ -771,7 +771,7 @@ Viz [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectc
 
 Zaregistruje, zda okno přijímá přetažené soubory.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Viz [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) v sadě W
 
 Označuje konec malby.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ Viz [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) v sad�
 
 Nastaví fokus klávesnice na ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Viz [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) v sad
 
 Zruší platnost klientské oblasti v rámci zadané oblasti.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Viz [MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) v sadě Windows SDK.
 
-Druhá verze této metody umožňuje převést souřadnice [rect](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Druhá verze této metody umožňuje převést souřadnice [rect](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow::Okno zprávy
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 U objektu okna nejvyšší úrovně jsou parametry x a y relativní vzhledem k levému hornímu rohu obrazovky. Pro podřízený objekt okna jsou relativní vzhledem k levému hornímu rohu klientské oblasti nadřazeného okna.
 
-Druhá verze této metody používá [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu k určení nové pozice, šířky a výšky okna.
+Druhá verze této metody používá [RECT](/windows/win32/api/windef/ns-windef-rect) strukturu k určení nové pozice, šířky a výšky okna.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl
 
 Nastaví fokus klávesnice na další ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Vrátí bez čekání na vlákno ke zpracování zprávy.
 
 Nastaví fokus klávesnice na předchozí ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Viz [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) v sadě Windows SDK.
 
 Odešle [WM_PRINT](/windows/win32/gdi/wm-print) zprávu do okna a požádá ho, aby se sám nakreslil v zadaném kontextu zařízení.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 Odešle [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) zprávu do okna a požádá jej, aby nakreslil svou klientskou oblast v zadaném kontextu zařízení.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Viz [ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) v sadě Windows SDK.
 
-Druhá verze této metody umožňuje převést souřadnice [rect](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Druhá verze této metody umožňuje převést souřadnice [rect](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow::ScrollWindow
 
@@ -2216,7 +2216,7 @@ Viz [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) v sadě Win
 
 Odešle zadanou zprávu všem `CWindow` bezprostředně jším objektům objektu.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2363,7 +2363,7 @@ Viz [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) v sadě Windows S
 
 Změní aktuální písmo okna odesláním [WM_SETFONT](/windows/win32/winmsg/wm-setfont) zprávy do okna.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Viz [SetParent](/windows/win32/api/winuser/nf-winuser-setparent) v sadě Windows
 
 Nastaví nebo vymaže příznak překreslení odesláním [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) zprávu do okna.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Viz [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) v sadě Windows SDK.
 
-Druhá verze této metody používá [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu nastavit nové umístění, šířku a výšku okna.
+Druhá verze této metody používá [rect](/windows/win32/api/windef/ns-windef-rect) strukturu nastavit nové umístění, šířku a výšku okna.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn
 

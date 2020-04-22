@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327219"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747743"
 ---
 # <a name="ccontainedwindowt-class"></a>Třída CContainedWindowT
 
@@ -58,13 +58,13 @@ Třída vlastností, která definuje styly pro vaše okno. Výchozí formát je 
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Konstruktor Inicializuje členy dat a určí, která mapa zpráv bude zpracovávat zprávy obsaženého okna.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CContainedWindowT::Vytvořit](#create)|Vytvoří okno.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Poskytuje výchozí zpracování zpráv.|
@@ -77,7 +77,7 @@ Třída vlastností, která definuje styly pro vaše okno. Výchozí formát je 
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Určuje, které mapování zpráv bude zpracovávat zprávy obsaženého okna.|
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Určuje název existující třídy okna, na které bude založena nová třída okna.|
@@ -214,7 +214,7 @@ HWND Create(
 [v] Popisovač do okna nadřazeného nebo vlastníka.
 
 *Rect*<br/>
-[v] A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující umístění okna. Může `RECT` být předán ukazatelem nebo odkazem.
+[v] A [RECT](/windows/win32/api/windef/ns-windef-rect) struktura určující umístění okna. Může `RECT` být předán ukazatelem nebo odkazem.
 
 *szNázev_okna*<br/>
 [v] Určuje název okna. Výchozí hodnota je NULL.
@@ -390,7 +390,7 @@ Okno s podtřídou nyní používá [CContainedWindowT::WindowProc](#windowproc)
 
 Změny, které mapy zpráv budou použity ke zpracování zpráv obsaženého okna.
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 

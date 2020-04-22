@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366183"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749027"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer – třída
 
@@ -93,13 +93,13 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlContainer::COleControlContainer](#colecontrolcontainer)|Vytvoří `COleControlContainer` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlContainer::AttachControlSite](#attachcontrolsite)|Vytvoří řídicí web hostovaný kontejnerem.|
 |[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje všechny hostované ovládací prvky, že došlo ke změně vlastnosti okolí.|
@@ -126,7 +126,7 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlContainer::m_crBack](#m_crback)|Barva pozadí kontejneru.|
 |[COleControlContainer::m_crFore](#m_crfore)|Barva popředí kontejneru.|
@@ -359,7 +359,7 @@ Druhé přetížení použijte k vytvoření ovládacích prvků výchozí velik
 
 Vytvoří písmo OLE.
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ Ukazatel na vlastní web zadané položky.
 
 Určuje, zda bude kontejner ignorovat události z připojených řídicích webů nebo je přijme.
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 

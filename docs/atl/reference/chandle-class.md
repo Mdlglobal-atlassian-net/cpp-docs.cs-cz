@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326926"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747694"
 ---
 # <a name="chandle-class"></a>Třída CHandle
 
@@ -33,14 +33,14 @@ class CHandle
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Konstruktor|
 |[CHandle::~CHandle](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHandle::Připojit](#attach)|Volání této metody `CHandle` připojit objekt k existující muško.|
 |[CHandle::Zavřít](#close)|Volání této metody `CHandle` zavřít objekt.|
@@ -48,14 +48,14 @@ class CHandle
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHandle::POPISOVAČ operátora](#operator_handle)|Vrátí hodnotu uloženého popisovače.|
 |[CHandle::operátor =](#operator_eq)|Operátor přiřazení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHandle::m_h](#m_h)|Členská proměnná, která ukládá popisovač.|
 
@@ -74,7 +74,7 @@ Objekt `CHandle` lze použít vždy, když je požadován popisovač: hlavní ro
 
 Volání této metody `CHandle` připojit objekt k existující muško.
 
-```
+```cpp
 void Attach(HANDLE h) throw();
 ```
 
@@ -122,7 +122,7 @@ Uvolní `CHandle` objekt voláním [CHandle::Close](#close).
 
 Volání této metody `CHandle` zavřít objekt.
 
-```
+```cpp
 void Close() throw();
 ```
 

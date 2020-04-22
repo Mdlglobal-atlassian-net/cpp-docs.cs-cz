@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750174"
 ---
 # <a name="canimationcontroller-class"></a>Třída CAnimationController
 
@@ -124,14 +124,14 @@ class CAnimationController : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Vytvoří animační řadič.|
 |[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|Destruktor. Volána při zničení objektu řadiče animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Přidá objekt animace do skupiny, která patří do ovladače animace.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Přidá klíčový snímek do skupiny.|
@@ -174,14 +174,14 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CanimationController::CleanUpGroup](#cleanupgroup)|Přetíženo. Pomocník, který uklidí skupinu.|
 |[CanimationController::OnAfterSchedule](#onafterschedule)|Volat rámci při animace pro zadanou skupinu byla právě naplánována.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Klíčový snímek, který představuje začátek scénáře.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Určuje, zda je řadič animace platný nebo ne. Tento člen je nastaven na hodnotu FALSE, pokud aktuální operační systém nepodporuje rozhraní API pro animaci systému Windows.|
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Volat rámci vyčistit skupinu, když animace byla naplánována.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ Tato metoda se nazývá, pokud povolíte události scénáře pomocí CAnimation
 
 Odebere všechny skupiny animací z ovladače animace.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Všechny skupiny budou odstraněny, jejich ukazatel, pokud je uložen na úrovni
 
 Odebere skupinu animací se zadaným ID z ovladače animace.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Tato metoda odebere skupinu animací z vnitřního seznamu skupin a odstraní ji
 
 Odeberte objekt animace z ovladače animace.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Odebere objekt animace z ovladače animace a skupiny animací. Tuto funkci zavol
 
 Odebere přechody z animačních objektů, které patří do zadané skupiny.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ Musíte volat AnimateGroup s parametrem bScheduleNow nastaveným na FALSE předc
 
 Vytvoří vztah mezi ovladačem animace a oknem.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 40dbfb822e71309e9675aba14d46d333ffa4ee06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373268"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747196"
 ---
 # <a name="ctypedptrlist-class"></a>Třída CTypedPtrList
 
@@ -56,7 +56,7 @@ Typ prvků uložených v seznamu základní třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrList::Přidat hlavu](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do hlavy seznamu (vytvoří novou hlavu).|
 |[CTypedPtrList::AddTail](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konci seznamu (vytvoří nový ocas).|
@@ -354,7 +354,7 @@ Před voláním `RemoveTail`je nutné zajistit, aby seznam nebyl prázdný. Poku
 
 Tato členská `BASE_CLASS`funkce volá **::SetAt**.
 
-```
+```cpp
 void SetAt(POSITION pos, TYPE newElement);
 ```
 

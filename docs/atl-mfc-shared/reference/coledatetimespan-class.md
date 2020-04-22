@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7173fa0b6261ea718a02d399d944a1b5bb98b9f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f6a26c2724146f8723dee3ddce60ddce6995ec8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317730"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747147"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan – třída
 
@@ -47,13 +47,13 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Vytvoří `COleDateTimeSpan` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::Formát](#format)|Generuje formátovaný řetězec reprezentace `COleDateTimeSpan` objektu.|
 |[COleDateTimeSpan::GetDays](#getdays)|Vrátí denní část rozsahu, `COleDateTimeSpan` který tento objekt představuje.|
@@ -80,7 +80,7 @@ class COleDateTimeSpan
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDateTimeSpan::m_span](#m_span)|Obsahuje základní **double** `COleDateTimeSpan` pro tento objekt.|
 |[COleDateTimeSpan::m_status](#m_status)|Obsahuje stav tohoto `COleDateTimeSpan` objektu.|
@@ -678,7 +678,7 @@ Tento operátor vrátí hodnotu této `COleDateTimeSpan` hodnoty jako počet dn�
 
 Nastaví hodnotu této hodnoty data a časového rozpětí.
 
-```
+```cpp
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
@@ -715,7 +715,7 @@ Funkce, které dotaz hodnotu objektu, `COleDateTimeSpan` naleznete v následují
 
 Nastaví stav (platnost) `COleDateTimeSpan` tohoto objektu.
 
-```
+```cpp
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 

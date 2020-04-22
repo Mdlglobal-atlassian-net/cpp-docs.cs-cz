@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330720"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746426"
 ---
 # <a name="csnapinitemimpl-class"></a>Třída CSnapInItemImpl
 
@@ -60,13 +60,13 @@ TRUE, pokud je objekt rozšířením modulu snap-in; jinak FALSE.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSnapinItemimpl::csnapinitemimpl](#csnapinitemimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[cSnapinItemimpl::AddItems](#addmenuitems)|Přidá položky nabídky do místní nabídky.|
 |[cSnapinItemimpl::Příkaz](#command)|Volána konzolou, když je vybrána vlastní položka nabídky.|
@@ -84,7 +84,7 @@ TRUE, pokud je objekt rozšířením modulu snap-in; jinak FALSE.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Název objektu modulu snap-in.|
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Struktura `RESULTDATAITEM` systému Windows `CSnapInItemImpl` používá objekt.|
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Volání této funkce upravit příznaky vložení nabídky, určené *pInsertionAllowed*, pro objekt modulu snap-in.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ Neměli byste se pokoušet nastavit bity v *pInsertionAllowed,* které byly pův
 
 Voláním této funkce můžete před vytvořením panelu nástrojů upravit všechny styly tlačítek panelu nástrojů.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Voláním této funkce upravte položku nabídky před vložením do kontextové nabídky objektu modulu snap-in.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,

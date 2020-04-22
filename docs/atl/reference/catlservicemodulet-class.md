@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321339"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748588"
 ---
 # <a name="catlservicemodulet-class"></a>Třída CAtlServiceModuleT
 
@@ -68,13 +68,13 @@ Identifikátor prostředku služby.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::Obslužná rutina](#handler)|Rutina obslužné rutiny pro službu.|
 |[CAtlServiceModuleT::Inicializovatzabezpečení](#initializesecurity)|Poskytuje výchozí nastavení zabezpečení služby.|
@@ -101,7 +101,7 @@ Identifikátor prostředku služby.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Příznak označující, že program je spuštěn jako služba.|
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Proměnná člena ukládající identifikátor vlákna.|
@@ -147,7 +147,7 @@ Inicializuje datové členy a nastaví stav počáteční služby.
 
 Rutina obslužné rutiny pro službu.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ Vrátí hodnotu PRAVDA, pokud je služba nainstalována, jinak NEPRAVDA.
 
 Zapíše do protokolu událostí.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ TCHAR [256] m_szServiceName;
 
 Přepsat tuto metodu pokračovat ve službě.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 Přepsat tuto metodu k dotazování služby.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 Přepsat tuto metodu pozastavit službu.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 Přepsat tuto metodu vypnout službu.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 Přepsat tuto metodu zastavit službu.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 Přepsat tuto metodu pro zpracování neznámých požadavků na službu.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ Po volání `Run` volání [CAtlServiceModuleT::PreMessageLoop](#premessageloop)
 
 Tato metoda je volána správcem řízení služeb.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ Po volání `ServiceMain`SCM musí služba poskytnout funkci obslužné rutiny S
 
 Tato metoda aktualizuje stav služby.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 

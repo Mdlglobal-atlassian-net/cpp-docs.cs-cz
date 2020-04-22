@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317722"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747080"
 ---
 # <a name="cpoint-class"></a>CPoint – třída
 
@@ -32,19 +32,19 @@ class CPoint : public tagPOINT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::CPoint](#cpoint)|Vytvoří `CPoint`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::Posun](#offset)|Přidá hodnoty `x` a `y` členy `CPoint`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPoint::operátor -](#operator_-)|Vrátí rozdíl a `CPoint` a velikost nebo negace bodu nebo rozdíl velikosti mezi dvěma body nebo posun zápornou velikostí.|
 |[CPoint::operátor !=](#operator_neq)|Kontroluje nerovnost mezi dvěma body.|
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 Přidá hodnoty `x` a `y` členy `CPoint`.
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -209,7 +209,7 @@ Nenulová, pokud body nejsou stejné; jinak 0.
 
 První přetížení přidá velikost `CPoint`.
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
@@ -238,7 +238,7 @@ Například přidání `CPoint(5, -7)` matné `CPoint(30, 40)` proměnné, kter�
 
 První přetížení odečte velikost od `CPoint`.
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```

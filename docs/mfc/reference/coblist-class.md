@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f24965357e0b71f28ba39b82d045600e7e1a44e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360376"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749682"
 ---
 # <a name="coblist-class"></a>Třída CObList
 
@@ -71,13 +71,13 @@ class CObList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CobList::CobList](#coblist)|Vytvoří prázdný seznam `CObject` pro ukazatele.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CobList::Hlavička](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do hlavy seznamu (vytvoří novou hlavu).|
 |[CobList::Addtail](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konci seznamu (vytvoří nový ocas).|
@@ -749,7 +749,7 @@ V následující tabulce jsou uvedeny `CObList::IsEmpty`další členské funkce
 
 Odebere všechny prvky z tohoto seznamu `CObList` a uvolní přidružené paměti.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -776,7 +776,7 @@ Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 Odebere zadaný prvek z tohoto seznamu.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -876,7 +876,7 @@ Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 Nastaví prvek na dané pozici.
 
-```
+```cpp
 void SetAt(
     POSITION pos,
     CObject* newElement);

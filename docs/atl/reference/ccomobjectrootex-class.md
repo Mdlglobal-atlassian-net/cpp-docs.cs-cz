@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327605"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747900"
 ---
 # <a name="ccomobjectrootex-class"></a>Třída CComObjectRootEx
 
@@ -155,7 +155,7 @@ Zde je typický způsob, jak vytvořit agregát:
 
 Tuto metodu můžete přepsat v odvozené třídě a provést jakékoli vyčištění požadované pro váš objekt.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ Pokud je model podprocesu `InterlockedDecrement` vícevláknové, slouží k zab
 
 Pokud je model vlákna vícevláknový, tato metoda volá funkci Rozhraní API Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), která čeká, dokud vlákno může převzít vlastnictví objektu kritické části získaného prostřednictvím soukromého datového člena.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ V sestaveních bez ladění vždy vrátí 0. V sestavení ladění vrátí hodno
 
 Pokud je model vlákna vícevláknový, tato metoda volá funkci Rozhraní API Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), která uvolní vlastnictví objektu kritické části získaného prostřednictvím soukromého datového člena.
 
-```
+```cpp
 void Unlock();
 ```
 

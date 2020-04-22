@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318933"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748735"
 ---
 # <a name="catllist-class"></a>Třída CAtlList
 
@@ -67,20 +67,20 @@ Kód používaný ke kopírování nebo přesouvání prvků. Další podrobnost
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlList::INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Konstruktor|
 |[CAtlList::~CAtlList](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlList::Přidat hlavu](#addhead)|Volání této metody přidat prvek do hlavy seznamu.|
 |[CAtlList::AddHeadList](#addheadlist)|Volání této metody přidat existující seznam do hlavního seznamu.|
@@ -153,7 +153,7 @@ Pokud je použita první verze, prázdný prvek je vytvořen pomocí jeho výcho
 
 Volání této metody přidat existující seznam do hlavního seznamu.
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ Pokud je použita první verze, prázdný prvek je vytvořen pomocí jeho výcho
 
 Volání této metody přidat existující seznam na konci tohoto seznamu.
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ Seznam odkazovaný *na plNew* je vložen za poslední prvek (pokud existuje) v o
 
 Volání této metody pro potvrzení, že seznam je platný.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ Vrátí hodnotu true, pokud seznam neobsahuje žádné objekty, jinak false.
 
 Volání této metody přesunout zadaný prvek do čela seznamu.
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ Zadaný prvek je přesunut z aktuální pozice do hlavy seznamu. V sestaveních 
 
 Volání této metody přesunout zadaný prvek na konec seznamu.
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ Viz příklad pro [CAtlList::MoveToHead](#movetohead).
 
 Volání této metody odebrat všechny prvky ze seznamu.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ Viz příklad pro [CAtlList::IsEmpty](#isempty).
 
 Volání této metody odebrat jeden prvek ze seznamu.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ Prvek head je odstraněn ze seznamu a paměť je uvolněna. Je vrácena kopie pr
 
 Volání této metody odebrat prvek v čele seznamu bez vrácení hodnoty.
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ Prvek ocasu je odstraněn ze seznamu a paměť je uvolněna. Je vrácena kopie p
 
 Volání této metody odebrat prvek na konci seznamu bez vrácení hodnoty.
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ Viz příklad pro [CAtlList::IsEmpty](#isempty).
 
 Volání této metody nastavit hodnotu prvku na dané pozici v seznamu.
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ Nahradí existující hodnotu *elementem*. V sestaveních ladění dojde k selh�
 
 Volání této metody pro zamění prvky v seznamu.
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

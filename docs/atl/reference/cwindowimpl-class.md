@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745994"
 ---
 # <a name="cwindowimpl-class"></a>Třída CWindowImpl
 
@@ -54,7 +54,7 @@ Základní třída vaší třídy. Ve výchozím nastavení je základní tříd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindowImpl::Vytvořit](#create)|Vytvoří okno.|
 
@@ -147,7 +147,7 @@ HWND Create(
 [v] Popisovač do okna nadřazeného nebo vlastníka.
 
 *Rect*<br/>
-[v] A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující umístění okna. Může `RECT` být předán ukazatelem nebo odkazem.
+[v] A [RECT](/windows/win32/api/windef/ns-windef-rect) struktura určující umístění okna. Může `RECT` být předán ukazatelem nebo odkazem.
 
 *szNázev_okna*<br/>
 [v] Určuje název okna. Výchozí hodnota je NULL.

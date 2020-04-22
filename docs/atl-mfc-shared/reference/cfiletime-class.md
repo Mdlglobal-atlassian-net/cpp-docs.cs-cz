@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: bc9fe752898a5dfde2631352abd8c3cf5f8b378c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd19d941365c7772363417ce3e9225bd9b0300b2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317897"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748839"
 ---
 # <a name="cfiletime-class"></a>CFileTime – třída
 
@@ -41,13 +41,13 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileTime::CFileTime](#cfiletime)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileTime::GetCurrentTime](#getcurrenttime)|Volání této statické funkce `CFileTime` načíst objekt, který představuje aktuální systémové datum a čas.|
 |[CFileTime::GetTime](#gettime)|Volání této metody načíst `CFileTime` čas z objektu.|
@@ -57,7 +57,7 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileTime::operátor -](#operator_-)|Tento operátor se používá k `CFileTime` provádění `CFileTimeSpan` odčítání na nebo objektu.|
 |[CFileTime::operátor !=](#operator_neq)|Tento operátor porovnává `CFileTime` dva objekty pro nerovnost.|
@@ -73,7 +73,7 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileTime::Day](#day)|Statický datový člen ukládající počet 100 nanosekundových intervalů, které tvoří jeden den.|
 |[CFileTime::Hodina](#hour)|Statický datový člen ukládající počet 100 nanosekundových intervalů, které tvoří jednu hodinu.|
@@ -436,7 +436,7 @@ Viz příklad [cfiletime::Millisecond](#millisecond).
 
 Volání této metody nastavit datum a `CFileTime` čas uložený objektem.
 
-```
+```cpp
 void SetTime(ULONGLONG nTime) throw();
 ```
 

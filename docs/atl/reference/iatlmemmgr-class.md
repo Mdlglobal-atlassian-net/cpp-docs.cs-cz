@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330059"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746011"
 ---
 # <a name="iatlmemmgr-class"></a>Třída IAtlMemMgr
 
@@ -37,7 +37,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |||
 |-|-|
 |[Přidělit](#allocate)|Volání této metody přidělit blok paměti.|
-|[Zdarma](#free)|Volání této metody uvolnit blok paměti.|
+|[Free](#free)|Volání této metody uvolnit blok paměti.|
 |[GetSize](#getsize)|Volání této metody načíst velikost bloku přidělené paměti.|
 |[Přerozdělit](#reallocate)|Volání této metody přerozdělit blok paměti.|
 
@@ -60,7 +60,7 @@ Toto rozhraní je implementováno [CComHeap](../../atl/reference/ccomheap-class.
 
 Volání této metody přidělit blok paměti.
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ Například viz [Přehled IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 Volání této metody uvolnit blok paměti.
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ Například viz [Přehled IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 Volání této metody přerozdělit paměti přidělené tohoto správce paměti.
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 

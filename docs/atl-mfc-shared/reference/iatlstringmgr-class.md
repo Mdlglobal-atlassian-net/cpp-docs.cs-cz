@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317485"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746604"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr – třída
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[Přidělit](#allocate)|Volání této metody přidělit novou strukturu dat řetězce.|
 |[Klonování](#clone)|Volání této metody vrátit ukazatel na nový správce řetězců `CSimpleStringT`pro použití s jinou instanci .|
-|[Zdarma](#free)|Volání této metody k uvolnění struktury dat řetězce.|
+|[Free](#free)|Volání této metody k uvolnění struktury dat řetězce.|
 |[Řetězec GetNilString](#getnilstring)|Vrátí ukazatel na `CStringData` objekt používaný prázdnými řetězcovými objekty.|
 |[Přerozdělit](#reallocate)|Volání této metody přerozdělit strukturu dat řetězce.|
 
@@ -108,7 +108,7 @@ Pokud však správce paměti nepodporuje použití více `CSimpleStringT`instanc
 
 Uvolní strukturu dat řetězce.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 

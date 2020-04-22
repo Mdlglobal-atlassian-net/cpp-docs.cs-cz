@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: fbdb77e7f52e858401c87e1cd8782b59cc6ebcea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2d79de308b1afb3059cf04ad40b63b6e603073c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330464"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746031"
 ---
 # <a name="cwin32heap-class"></a>Třída CWin32HeAP
 
@@ -40,14 +40,14 @@ class CWin32Heap : public IAtlMemMgr
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Konstruktor|
 |[CWin32Heap::~CWin32Heap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWin32HeAP::Přidělit](#allocate)|Přidělí blok paměti z objektu haldy.|
 |[CWin32HeAP::Připojit](#attach)|Připojí objekt haldy k existující haldě.|
@@ -58,7 +58,7 @@ class CWin32Heap : public IAtlMemMgr
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWin32Heap::m_bOwnHeap](#m_bownheap)|Příznak používaný k určení aktuálního vlastnictví popisovače haldy.|
 |[CWin32Heap::m_hHeap](#m_hheap)|Zpracovat objekt haldy.|
@@ -108,7 +108,7 @@ Implementováno pomocí [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapal
 
 Připojí objekt haldy k existující haldě.
 
-```
+```cpp
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```
 

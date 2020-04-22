@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317813"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747177"
 ---
 # <a name="cimage-class"></a>Třída CImage
 
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Zobrazí bitmapy s průhlednými nebo poloprůhlednými obrazovými body.|
 |[CImage::Připojit](#attach)|Připojí HBITMAP k `CImage` objektu. Lze použít buď s bitmapami oddílu bez DIB, nebo s bitmapami oddílů DIB.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImage::operátor HBITMAP](#operator_hbitmap)|Vrátí popisovač systému `CImage` Windows připojený k objektu.|
 
@@ -258,7 +258,7 @@ Hodnota průhlednosti alfa, která se použije na celou zdrojovou bitmapu. Vých
 Funkce alfa prolnutí pro zdrojové a cílové rastrové obrázky, globální hodnota alfa, která se použije na celou zdrojovou bitmapu, a informace o formátování zdrojové bitmapy. Funkce zdrojové a cílové prolnutí jsou v současné době omezeny na AC_SRC_OVER.
 
 *pointDest*<br/>
-Odkaz na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
+Odkaz na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
 Šířka cílového obdélníku v logických jednotkách.
@@ -279,7 +279,7 @@ Logická souřadnice y levého horního rohu zdrojového obdélníku.
 Výška zdrojového obdélníku v logických jednotkách.
 
 *rectDest*<br/>
-Odkaz na strukturu [RECT,](/previous-versions/dd162897\(v=vs.85\)) identifikace cíle.
+Odkaz na strukturu [RECT,](/windows/win32/api/windef/ns-windef-rect) identifikace cíle.
 
 *rectSrc*<br/>
 Odkaz na `RECT` strukturu, identifikace zdroje.
@@ -298,7 +298,7 @@ Když je *hodnota bBlendOp* nastavena na výchozí hodnotu AC_SRC_OVER, zdrojov�
 
 Připojí *hBitmap* k `CImage` objektu.
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ Logická souřadnice y levého horního rohu cílového obdélníku.
 Rastrová operace, která má být provedena. Kódy rastrových operací přesně definují, jak kombinovat bity zdroje, cíl a vzorek (podle definice aktuálně vybrané stopy) a vytvořit tak cíl. Seznam dalších kódů rastrových operací a jejich popisy naleznete v části [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v kanisu Windows SDK.
 
 *pointDest*<br/>
-A [POINT](/previous-versions/dd162805\(v=vs.85\)) struktura označující levém horním rohu cílového obdélníku.
+A [POINT](/windows/win32/api/windef/ns-windef-point) struktura označující levém horním rohu cílového obdélníku.
 
 *nDestWidth*<br/>
 Šířka cílového obdélníku v logických jednotkách.
@@ -383,7 +383,7 @@ Logická souřadnice x levého horního rohu zdrojového obdélníku.
 Logická souřadnice y levého horního rohu zdrojového obdélníku.
 
 *rectDest*<br/>
-A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura označující cílový obdélník.
+A [RECT](/windows/win32/api/windef/ns-windef-rect) struktura označující cílový obdélník.
 
 *bodSrc*<br/>
 Struktura `POINT` označující levý horní roh zdrojového obdélníku.
@@ -480,7 +480,7 @@ Určuje typ komprese pro komprimovovně nahoru bitmapu (shora dolů DIBs nelze k
 - BI_BITFIELDS Formát je nekomprimovaný a tabulka barev se skládá ze tří barevných masek DWORD, které určují červenou, zelenou a modrou složku každého obrazového bodu. To platí při použití s bitmapami 16 a 32 bpp.
 
 *pdwBitfields*<br/>
-Používá se pouze v případě, že je *eCompression* nastavena na BI_BITFIELDS, jinak musí mít hodnotu NULL. Ukazatel na pole tří bitových masek DWORD určující, které bity každého obrazového bodu se použijí pro červenou, zelenou a modrou složku barvy. Informace o omezeních pro bitová pole naleznete v [tématu BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK.
+Používá se pouze v případě, že je *eCompression* nastavena na BI_BITFIELDS, jinak musí mít hodnotu NULL. Ukazatel na pole tří bitových masek DWORD určující, které bity každého obrazového bodu se použijí pro červenou, zelenou a modrou složku barvy. Informace o omezeních pro bitová pole naleznete v [tématu BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) v sadě Windows SDK.
 
 *dwFlags*<br/>
 Určuje, zda má bitmapový objekt alfa kanál. Může být kombinací nuly nebo více z následujících hodnot:
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 Odpojí bitmapu od `CImage` objektu a zničí bitmapu.
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ Souřadnice y v logických jednotkách levého horního rohu zdrojového obdéln
 Výška zdrojového obdélníku v logických jednotkách.
 
 *rectDest*<br/>
-Odkaz na strukturu [RECT,](/previous-versions/dd162897\(v=vs.85\)) identifikace cíle.
+Odkaz na strukturu [RECT,](/windows/win32/api/windef/ns-windef-rect) identifikace cíle.
 
 *rectSrc*<br/>
 Odkaz na `RECT` strukturu, identifikace zdroje.
 
 *pointDest*<br/>
-Odkaz na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
+Odkaz na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -617,7 +617,7 @@ Pro verze, `Draw` které neurčují zdrojový obdélník, je výchozí celý zdr
 
 Načte ukazatel na skutečné bitové hodnoty daného obrazového bodu v bitmapě.
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ Počet bitů na pixel.
 
 Tato hodnota určuje počet bitů, které definují každý obrazový bod, a maximální počet barev v bitmapě.
 
-Bity na pixel je obvykle 1, 4, 8, 16, 24 nebo 32. Další `biBitCount` informace o této hodnotě naleznete v členu [bitmapinfoheaderu](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK.
+Bity na pixel je obvykle 1, 4, 8, 16, 24 nebo 32. Další `biBitCount` informace o této hodnotě naleznete v členu [bitmapinfoheaderu](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) v sadě Windows SDK.
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColortable
 
 Načte hodnoty barev červené, zelené, modré (RGB) z rozsahu položek v paletě oddílu DIB.
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -923,7 +923,7 @@ Hodnota červené, zelené, modré (RGB) obrazového bodu. Pokud je obrazový bo
 
 Načte přesnou adresu pixelu.
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
@@ -1076,7 +1076,7 @@ Platné typy obrazů jsou BMP, GIF, JPEG, PNG a TIFF.
 
 Načte obraz z prostředku BITMAP.
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ Souřadnice x levého horního rohu monochromatické bitmapy.
 Souřadnice y levého horního rohu monochromatické bitmapy.
 
 *rectSrc*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu určující souřadnice zdrojobdélníku.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu určující souřadnice zdrojobdélníku.
 
 *maska bodu*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) označující levý horní roh bitmapy masky.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) označující levý horní roh bitmapy masky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1278,7 +1278,7 @@ Tato metoda platí pro systém Windows NT, pouze verze 4.0 a novější. Podrobn
 
 Uvolní kontext zařízení.
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ Vzhledem k tomu, že do kontextu zařízení lze vybrat `ReleaseDC` pouze jednu 
 
 Uvolní prostředky používané GDI+.
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ Voláním této funkce uložíte obrázek pomocí zadaného názvu a typu. Pokud
 
 Nastaví hodnoty barev červené, zelené, modré (RGB) pro rozsah položek v paletě oddílu DIB.
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,7 +1372,7 @@ Tato metoda podporuje pouze bitmapy oddílu DIB.
 
 Nastaví barvu obrazového bodu v daném umístění v bitmapě.
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
@@ -1395,7 +1395,7 @@ Tato metoda se nezdaří, pokud souřadnice obrazových bodů leží mimo vybran
 
 Nastaví barvu obrazového bodu na barvu umístěnou v *iIndex* v paletě barev.
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
@@ -1414,7 +1414,7 @@ Index barvy v paletě barev.
 
 Nastaví obrazový bod v umístěních určených *x* a *y* na barvy označené *r*, *g*a *b*v červeném, zeleném, modrém (RGB) obraze.
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1519,7 +1519,7 @@ Výška cílového obdélníku v logických jednotkách.
 Rastrová operace, která má být provedena. Kódy rastrových operací přesně definují, jak kombinovat bity zdroje, cíl a vzorek (podle definice aktuálně vybrané stopy) a vytvořit tak cíl. Seznam dalších kódů rastrových operací a jejich popisy naleznete v části [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v kanisu Windows SDK.
 
 *rectDest*<br/>
-Odkaz na strukturu [RECT,](/previous-versions/dd162897\(v=vs.85\)) identifikace cíle.
+Odkaz na strukturu [RECT,](/windows/win32/api/windef/ns-windef-rect) identifikace cíle.
 
 *xSrc*<br/>
 Souřadnice x v logických jednotkách levého horního rohu zdrojového obdélníku.
@@ -1602,7 +1602,7 @@ Výška cílového obdélníku v logických jednotkách.
 Barva ve zdrojové bitmapě, která má být považována za průhlednou. Ve výchozím nastavení CLR_INVALID, což znamená, že by měla být použita barva aktuálně nastavená jako průhledná barva obrazu.
 
 *rectDest*<br/>
-Odkaz na strukturu [RECT,](/previous-versions/dd162897\(v=vs.85\)) identifikace cíle.
+Odkaz na strukturu [RECT,](/windows/win32/api/windef/ns-windef-rect) identifikace cíle.
 
 *xSrc*<br/>
 Souřadnice x v logických jednotkách levého horního rohu zdrojového obdélníku.

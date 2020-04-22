@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: e45c9b3fd778aacd3a3e2d5d3696661afa0c6fb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330902"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746469"
 ---
 # <a name="csimplearray-class"></a>Třída CSimpleArray
 
@@ -46,14 +46,14 @@ Objekt vlastnosti, definování testu rovnosti pro prvky typu *T*.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor pro jednoduché pole.|
 |[CSimpleArray::~CSimpleArray](#dtor)|Destruktor pro jednoduché pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleArray::Přidat](#add)|Přidá nový prvek do pole.|
 |[CSimpleArray::Najít](#find)|Najde prvek v poli.|
@@ -66,7 +66,7 @@ Objekt vlastnosti, definování testu rovnosti pro prvky typu *T*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleArray::operátor\[\]](#operator_at)|Načte prvek z pole.|
 |[CSimpleArray::operátor =](#operator_eq)|Operátor přiřazení.|
@@ -256,7 +256,7 @@ Při odebrání prvku jsou zbývající prvky v poli přečíslovány tak, aby v
 
 Odebere všechny prvky z pole.
 
-```
+```cpp
 void RemoveAll();
 ```
 

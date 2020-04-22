@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317587"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746711"
 ---
 # <a name="cstringt-class"></a>CStringT – třída
 
@@ -134,14 +134,14 @@ Určuje, zda třída řetězce potřebuje podporu knihovny C Run-Time (CRT) a kd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStringT::CStringt](#cstringt)|Vytvoří `CStringT` objekt různými způsoby.|
 |[CStringT::~CStringT](#_dtorcstringt)|Zničí `CStringT` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStringT::AllocSysString](#allocsysstring)|Přiděluje BSTR z `CStringT` dat.|
 |[CStringT::AnsiToOem](#ansitooem)|Provede převod na místě ze znakové sady ANSI na znakovou sadu OEM.|
@@ -251,7 +251,7 @@ Následující typy řetězců jsou k dispozici v projektech, kde není definov�
 
 Protože `CStringT` používá argument šablony k definování typu znaku (wchar_t [nebo](../../c-runtime-library/standard-types.md) [znak](../../c-runtime-library/standard-types.md)) podporované, typy parametrů metody mohou být někdy složité. Pro zjednodušení tohoto problému je definována a používána `CStringT` v celé třídě sada předdefinovaných typů. V následující tabulce jsou uvedeny různé typy:
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`XCHAR`|Jeden znak **(buď wchar_t** nebo **znak**) se `CStringT` stejným typem znaku jako objekt.|
 |`YCHAR`|Jeden znak **(buď wchar_t** nebo **znak**) s `CStringT` opačným typem znaku jako objekt.|
@@ -306,7 +306,7 @@ Následující příklad ukazuje použití `CStringT::AllocSysString`.
 
 Převede všechny znaky `CStringT` v tomto objektu ze znakové sady ANSI na znakovou sadu OEM.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ Funkce není k dispozici, pokud je definována _UNICODE.
 
 Připojí formátovaná data k `CStringT` existujícímu objektu.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -696,7 +696,7 @@ Vyhledá první výskyt některého ze znaků v *pszCharSet*.
 
 Zapisuje `CStringT` formátovaná data stejným způsobem, jakým [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formátuje data do znakového pole ve stylu C.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -730,7 +730,7 @@ Další informace naleznete [v tématu Syntaxe specifikace formátu: printf a wp
 
 Formátuje řetězec zprávy.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -763,7 +763,7 @@ Každá vložení musí mít odpovídající parametr za parametrem *pszFormat* 
 
 Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ Další informace naleznete v aplikaci Windows [FormatMessage](/windows/win32/ap
 
 Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ Pro vícebajtové znakové sady (MBCS) *nCount* odkazuje na každý 8bitový zna
 
 Převede všechny znaky `CStringT` v tomto objektu ze znakové sady OEM na znakovou sadu ANSI.
 
-```
+```cpp
 void OemToAnsi();
 ```
 

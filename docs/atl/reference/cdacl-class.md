@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1540c90e3538d763708e161ba6c1a5e459bb2bdf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327142"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747735"
 ---
 # <a name="cdacl-class"></a>Třída CDacl
 
@@ -37,14 +37,14 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Konstruktor|
 |[CDacl::~CDacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::AddAllowedAce](#addallowedace)|Přidá k objektu povolenou položku `CDacl` ACE (položka řízení přístupu).|
 |[CDacl::AddDeniedAce](#adddeniedace)|Přidá odepřené ACE `CDacl` k objektu.|
@@ -54,7 +54,7 @@ class CDacl : public CAcl
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDacl::operátor =](#operator_eq)|Operátor přiřazení.|
 
@@ -235,7 +235,7 @@ Měli byste zajistit, že do této funkce předáte pouze seznam DACL (voliteln�
 
 Odebere z objektu konkrétní ace (zadávání řízení přístupu). `CDacl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -252,7 +252,7 @@ Tato metoda je odvozena z [CAtlArray::RemoveAt](../../atl/reference/catlarray-cl
 
 Odebere všechny položky ACE (položky řízení přístupu) obsažené v objektu. `CDacl`
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 87bf903220a584798ea59c5f1c701fc35049e901
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321662"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748770"
 ---
 # <a name="cacl-class"></a>Třída CAcl
 
@@ -46,7 +46,7 @@ class CAcl
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAcl::CAccessMaskArray](#caccessmaskarray)|Pole ACCESS_MASKs.|
 |[CAcl::CAceFlagArray](#caceflagarray)|Pole BYT.|
@@ -54,14 +54,14 @@ class CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Konstruktor|
 |[CAcl::~CAcl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAcl::GetAceCount](#getacecount)|Vrátí počet objektů položky řízení přístupu (ACE).|
 |[CAcl::GetAclEntries](#getaclentries)|Načte položky seznamu řízení přístupu (ACL) z objektu. `CAcl`|
@@ -77,7 +77,7 @@ class CAcl
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAcl::operátor const ACL *](#operator_const_acl__star)|Přehodí `CAcl` objekt do `ACL` struktury.|
 |[CAcl::operátor =](#operator_eq)|Operátor přiřazení.|
@@ -186,7 +186,7 @@ Vrátí počet položek ACE `CAcl` v objektu.
 
 Načte položky seznamu řízení přístupu (ACL) z objektu. `CAcl`
 
-```
+```cpp
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
@@ -220,7 +220,7 @@ Další podrobnosti o typech a vlajkách ACE najdete v [ACE_HEADER.](/windows/wi
 
 Načte všechny informace o položce v seznamu řízení přístupu (ACL).
 
-```
+```cpp
 void GetAclEntry(
     UINT nIndex,
     CSid* pSid,
@@ -341,7 +341,7 @@ Vrátí odkaz na `CAcl` aktualizovaný objekt.
 
 Odebere z objektu konkrétní ace (zadávání řízení přístupu). `CAcl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -371,7 +371,7 @@ Odkaz na `CSid` objekt.
 
 Označí `CAcl` objekt jako prázdný.
 
-```
+```cpp
 void SetEmpty() throw();
 ```
 
@@ -383,7 +383,7 @@ Může `CAcl` být nastavena na prázdné nebo NULL: dva stavy jsou odlišné.
 
 Označí `CAcl` objekt jako null.
 
-```
+```cpp
 void SetNull() throw();
 ```
 

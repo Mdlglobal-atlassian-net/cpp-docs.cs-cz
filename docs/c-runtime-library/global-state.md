@@ -3,12 +3,12 @@ title: Globální stav v CRT
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81379098"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745365"
 ---
 # <a name="global-state-in-the-crt"></a>Globální stav v CRT
 
@@ -20,8 +20,8 @@ Globální stav UCRT není sdílen mezi aplikacemi a os. Například pokud vaše
 
 V UCRT mají funkce, které interagují s globálním `_o_`stavem, funkci "dvojče", s předponou . Příklad:
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`ovlivňuje globální stav specifický pro aplikaci.
+- `_o_setlocale()`ovlivňuje globální stav sdílený všemi součástmi operačního systému, ale ne aplikacemi.
 
 Jediný rozdíl mezi těmito "twin" funkce je, že při čtení nebo zápisu globální crt stavu, verze `_o_`specifické pro operační systém (to znamená, že verze, které začínají ) použít kopii operačního systému globálního stavu namísto kopie aplikace globálního stavu.
 

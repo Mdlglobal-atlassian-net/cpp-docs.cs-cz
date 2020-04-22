@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747717"
 ---
 # <a name="cdebugreporthook-class"></a>Třída CDebugReportHook
 
@@ -34,14 +34,14 @@ class CDebugReportHook
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Volání [SetPipeName](#setpipename), [SetTimeout](#settimeout)a [SetHook](#sethook).|
 |[CDebugReportHook::~CDebugReportHook](#dtor)|Volání [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Statické) Vlastní funkce vykazování, která je připojena k procesu vytváření ladicích procesů c run-time.|
 |[CDebugReportHook::RemoveHook](#removehook)|Volání této metody zastavit odesílání ladicí sestavy do pojmenované kanálu a obnovit předchozí zavěšení sestavy.|
@@ -127,7 +127,7 @@ Kód v této funkci je spuštěn v kontextu zabezpečení podkladového vlákna 
 
 Volání této metody zastavit odesílání ladicí sestavy do pojmenované kanálu a obnovit předchozí zavěšení sestavy.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Volání [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook
 
 Volání této metody začít odesílat ladicí sestavy do pojmenované kanálu.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 Volání této metody nastavit čas v milisekundách, že tato třída bude čekat na pojmenované kanálu k dispozici.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

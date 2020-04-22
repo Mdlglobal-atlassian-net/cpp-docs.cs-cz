@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361795"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750057"
 ---
 # <a name="cmfcpropertysheet-class"></a>Třída cmfcpropertysheet
 
@@ -61,14 +61,14 @@ class CMFCPropertySheet : public CPropertySheet
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Vytvoří `CMFCPropertySheet` objekt.|
 |`CMFCPropertySheet::~CMFCPropertySheet`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertySheet::Přidat stránku](#addpage)|Přidá stránku do seznamu vlastností.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Přidá novou stránku vlastností do ovládacího prvku stromu.|
@@ -142,7 +142,7 @@ Následující obrázek znázorňuje seznam vlastností, který je ve stylu stro
 
 Přidá stránku do seznamu vlastností.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ Pokud je seznam vlastností ve stylu aplikace Microsoft Outlook, zobrazí se v r
 
 Přidá novou stránku vlastností do ovládacího prvku stromu.
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ Další informace naleznete v parametrech konstruktoru [CPropertySheet::CPropert
 
 Rezervuje místo v horní části každé stránky a nakreslí vlastní záhlaví.
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 Odebere uzel z ovládacího prvku stromu.
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ Pomocí této metody můžete odebrat uzel, který je také označován jako kat
 
 Odebere stránku vlastností ze seznamu vlastností.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ Další informace o metodách, které podporují tuto metodu, naleznete v [téma
 
 Určuje vzhled seznamu vlastností.
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);

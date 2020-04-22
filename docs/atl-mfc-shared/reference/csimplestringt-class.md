@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76d418c4f063d5787209ea72e7c681013eb37801
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747029"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT – třída
 
@@ -69,21 +69,21 @@ Typ znaku třídy řetězce. Může to být jedna z následujících možností:
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleStringT::PCXSTR](#pcxstr)|Ukazatel na konstantní řetězec.|
 |[CSimpleStringT::PXSTR](#pxstr)|Ukazatel na řetězec.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Vytváří `CSimpleStringT` objekty různými způsoby.|
 |[CSimpleStringT::~CSimpleStringT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleStringT::Připojit](#append)|Připojí `CSimpleStringT` objekt k existujícímu `CSimpleStringT` objektu.|
 |[CSimpleStringT::AppendChar](#appendchar)|Připojí znak k existujícímu `CSimpleStringT` objektu.|
@@ -112,7 +112,7 @@ Typ znaku třídy řetězce. Může to být jedna z následujících možností:
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleStringT::operátor PCXSTR](#operator_pcxstr)|Přímo přistupuje `CSimpleStringT` k znakům uloženým v objektu jako řetězec ve stylu C.|
 |[CSimpleStringT::operátor\[\]](#operator_at)|Vrátí znak na dané pozici – `GetAt`substituce operátora pro .|
@@ -133,7 +133,7 @@ Připojí `CSimpleStringT` objekt k existujícímu `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Append(const CSimpleStringT& strSrc);
 void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
@@ -172,7 +172,7 @@ Připojí znak k existujícímu `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AppendChar(XCHAR ch);
 ```
 
@@ -316,7 +316,7 @@ Vytvoří `CSimpleStringT` tento objekt prázdný řetězec a uvolní paměť po
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -339,7 +339,7 @@ Uvolní všechny další paměti dříve přidělené řetězcem, ale již není
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -895,7 +895,7 @@ Přidělí určité množství bajtů `CSimpleStringT` pro objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Preallocate( int nLength);
 ```
 
@@ -937,7 +937,7 @@ Uvolní řízení vyrovnávací paměti přidělené [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void ReleaseBuffer(int nNewLength = -1);
 ```
 
@@ -978,7 +978,7 @@ Uvolní řízení vyrovnávací paměti přidělené [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void ReleaseBufferSetLength(int nNewLength);
 ```
 
@@ -997,7 +997,7 @@ Nastaví jeden znak `CSimpleStringT` z objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void SetAt(int iChar, XCHAR ch);
 ```
 
@@ -1029,7 +1029,7 @@ Určuje správce paměti objektu. `CSimpleStringT`
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
 
@@ -1057,7 +1057,7 @@ Nastaví řetězec `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
@@ -1130,7 +1130,7 @@ Zkrátí řetězec na novou délku.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Truncate(int nNewLength);
 ```
 
@@ -1165,7 +1165,7 @@ Odemkne vyrovnávací `CSimpleStringT` paměť objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void UnlockBuffer() throw();
 ```
 

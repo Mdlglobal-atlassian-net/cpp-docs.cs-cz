@@ -1,5 +1,5 @@
 ---
-title: Struktura ATL_DRAWINFO
+title: ATL_DRAWINFO struktura
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fb50f49d387e8620f3d5bbb41263738adbd8b437
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498012"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748802"
 ---
-# <a name="atl_drawinfo-structure"></a>Struktura ATL_DRAWINFO
+# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO struktura
 
-Obsahuje informace používané pro vykreslování do různých cílů, jako je například tiskárna, metasoubor nebo ovládací prvek ActiveX.
+Obsahuje informace používané pro vykreslování různých cílů, jako je například tiskárna, metasoubor nebo ovládací prvek ActiveX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,56 +42,56 @@ struct ATL_DRAWINFO {
 ## <a name="members"></a>Členové
 
 `cbSize`<br/>
-Velikost struktury (v bajtech).
+Velikost struktury v bajtů.
 
 `dwDrawAspect`<br/>
-Určuje, jak má být cíl reprezentován. Reprezentace mohou zahrnovat obsah, ikonu, miniaturu nebo vytištěný dokument. Seznam možných hodnot naleznete v tématu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) a [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
+Určuje, jak má být cíl reprezentován. Reprezentace mohou zahrnovat obsah, ikonu, miniaturu nebo tištěný dokument. Seznam možných hodnot naleznete v tématech [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) a [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
 
 `lindex`<br/>
-Část cíle, která je pro operaci Draw zajímavá. Jeho interpretace se liší v závislosti na hodnotě v `dwDrawAspect` členu.
+Část cíle, která je v zájmu pro operaci kreslení. Jeho interpretace se liší v `dwDrawAspect` závislosti na hodnotě v členu.
 
 `ptd`<br/>
-Ukazatel na strukturu [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) , která umožňuje optimalizace kreslení v závislosti na určeném aspektu. Všimněte si, že novější objekty a kontejnery, které podporují optimalizovaná kreslicí rozhraní, podporují i tento člen. Starší objekty a kontejnery, které nepodporují optimalizovaná kreslicí rozhraní, vždy pro tento člen zadáte hodnotu NULL.
+Ukazatel na strukturu [DVTARGETDEVICE,](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) která umožňuje optimalizace výkresu v závislosti na zadaném aspektu. Všimněte si, že novější objekty a kontejnery, které podporují optimalizované rozhraní výkresu podporují také tento člen. Starší objekty a kontejnery, které nepodporují optimalizovaná rozhraní výkresu, vždy určují hodnotu NULL pro tohoto člena.
 
 `hicTargetDev`<br/>
-Informační kontext pro cílové zařízení odkazoval na `ptd` , ze kterého může objekt extrahovat metriky zařízení a testovat schopnosti zařízení. Pokud `ptd` je null, objekt by měl ignorovat hodnotu `hicTargetDev` v členu.
+Kontext informací pro cílové zařízení, na `ptd` které je objekt určen k extrakci metrik zařízení a testování možností zařízení. Pokud `ptd` je NULL, objekt by měl `hicTargetDev` ignorovat hodnotu v členu.
 
 `hdcDraw`<br/>
-Kontext zařízení, na kterém se má kreslit. V případě objektu bez `hdcDraw` oken je člen `MM_TEXT` v režimu mapování s jeho logickými souřadnicemi, které odpovídají souřadnicím klienta v nadřazeném okně. Kromě toho by měl být kontext zařízení ve stejném stavu jako ten, který obvykle předává `WM_PAINT` zpráva.
+Kontext zařízení, na kterém chcete kreslit. Pro objekt bez oken `hdcDraw` je člen `MM_TEXT` v režimu mapování s logickými souřadnicemi odpovídajícími souřadnicím klienta obsahujícího okna. Kromě toho kontext zařízení by měl být ve stejném stavu `WM_PAINT` jako obvykle předávané zprávou.
 
 `prcBounds`<br/>
-Ukazatel na strukturu [Rect](/previous-versions//dd162907\(v=vs.85\)) určující obdélník `hdcDraw` , ve kterém má být objekt vykreslen. Tento člen ovládá umístění a roztažení objektu. Tento člen by měl mít hodnotu NULL, aby se nakreslil místní aktivní objekt bez okna. V každé jiné situaci hodnota null není platnou hodnotou a měla by mít za následek `E_INVALIDARG` kód chyby. Pokud kontejner předá hodnotu, která není NULL, do objektu bez oken, objekt by měl vykreslovat požadovaný aspekt do určeného kontextu zařízení a obdélníku. Kontejner může vyžádat to z objektu bez okna pro vykreslení druhého, neaktivního zobrazení objektu nebo pro tisk objektu.
+Ukazatel na [rectl](/windows/win32/api/windef/ns-windef-rectl) strukturu určující `hdcDraw` obdélník na a ve kterém by měl být nakreslenobjekt. Tento člen řídí umístění a roztažení objektu. Tento člen by měl být NULL nakreslit aktivní objekt bez oken na místě. V každé jiné situaci null není právní hodnotu `E_INVALIDARG` a by mělo mít za následek kód chyby. Pokud kontejner předá hodnotu bez hodnoty NULL objektu bez oken, objekt by měl vykreslit požadovaný aspekt do zadaného kontextu zařízení a obdélníku. Kontejner můžete požadovat z objektu bez oken k vykreslení druhé, neaktivní zobrazení objektu nebo k tisku objektu.
 
 `prcWBounds`<br/>
-Pokud `hdcDraw` je kontext zařízení metasouboru (viz [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK), jedná se o ukazatel na `RECTL` strukturu, která určuje ohraničující obdélník v podkladovém metasouboru. Struktura obdélníku obsahuje rozsah okna a počátek okna. Tyto hodnoty jsou užitečné pro kreslení metasouborů. Obdélník, který je `prcBounds` označen jako, je `prcWBounds` vnořený uvnitř tohoto obdélníku; jsou ve stejném souřadnicovém prostoru.
+Pokud `hdcDraw` je kontext zařízení metasouboru (viz [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v sadě Windows `RECTL` SDK), toto je ukazatel na strukturu určující ohraničující obdélník v podkladovém metasouboru. Obdélníková struktura obsahuje rozsah okna a původ okna. Tyto hodnoty jsou užitečné pro kreslení metasouborů. Obdélník označený je `prcBounds` vnořen `prcWBounds` uvnitř tohoto obdélníku; jsou ve stejném souřadnicovém prostoru.
 
 `bOptimize`<br/>
-Nenulové, pokud je vykreslování ovládacího prvku optimalizováno, jinak 0. Pokud je výkres optimalizovaný, stav kontextu zařízení se po dokončení vykreslování automaticky obnoví.
+Nenulová, pokud má být optimalizován výkres ovládacího prvku, jinak 0. Pokud je výkres optimalizován, stav kontextu zařízení se po dokončení vykreslování automaticky obnoví.
 
 `bZoomed`<br/>
-Nenulová, pokud má cíl faktor přiblížení, jinak 0. Faktor přiblížení je uložen v `ZoomNum`.
+Nenulová, pokud má cíl faktor zvětšení, jinak 0. Faktor zvětšení je `ZoomNum`uložen v aplikaci .
 
 `bRectInHimetric`<br/>
-Nenulové, pokud `prcBounds` jsou dimenze v HIMETRIC, jinak 0.
+Nenulová, pokud `prcBounds` jsou rozměry himetrické, jinak 0.
 
 `ZoomNum`<br/>
-Šířka a výška obdélníku, do kterého je objekt vykreslen. Faktor přiblížení podél osy x (podíl přirozené velikosti objektu na jeho aktuální rozsah) cíle je hodnota `ZoomNum.cx` dělená `ZoomDen.cx`hodnotou. Faktor přiblížení podél osy y se dosahuje podobným způsobem.
+Šířka a výška obdélníku, do kterého je objekt vykreslen. Faktor zvětšení podél osy x (podíl přirozené velikosti objektu na jeho aktuální `ZoomNum.cx` množiny) `ZoomDen.cx`cíle je hodnota dělená hodnotou . Faktor zvětšení podél osy y je dosažen podobným způsobem.
 
 `ZoomDen`<br/>
-Skutečná šířka a výška cíle
+Skutečná šířka a výška cíle.
 
 ## <a name="remarks"></a>Poznámky
 
-Typické použití této struktury by bylo načítání informací během vykreslování cílového objektu. Například můžete načíst hodnoty z ATL_DRAWINFO v rámci přetížení [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
+Typické použití této struktury by načítání informací během vykreslování cílového objektu. Můžete například načíst hodnoty z ATL_DRAWINFO uvnitř přetížení [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
 
-Tato struktura ukládá relevantní informace, které slouží k vykreslování vzhledu objektu pro cílové zařízení. Poskytnuté informace se dají použít při kreslení na obrazovku, na tiskárnu nebo dokonce na metasoubor.
+Tato struktura ukládá relevantní informace používané k vykreslení vzhledu objektu pro cílové zařízení. Poskytnuté informace lze použít při kreslení na obrazovku, tiskárnu nebo dokonce metasoubor.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../../atl/reference/atl-classes.md)<br/>
-[IViewObject: nezpracované:D](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

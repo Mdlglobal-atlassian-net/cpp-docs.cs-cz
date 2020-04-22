@@ -22,20 +22,20 @@ helpviewer_keywords:
 - _local_unwind2 function
 - local_unwind2 function
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
-ms.openlocfilehash: 64ed92af32caaf579e7c6951250e3bf692d1cf43
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cbcc0c6177ba4cc449daf6a385a7cce53b8c1230
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944213"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745325"
 ---
 # <a name="_local_unwind2"></a>_local_unwind2
 
-Vnitřní funkce CRT. Spustí všechny obslužné rutiny ukončení, které jsou uvedeny v tabulce určeného oboru.
+Interní funkce CRT. Spustí všechny obslužné rutiny ukončení, které jsou uvedeny v tabulce uvedeného oboru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void _local_unwind2(
    PEXCEPTION_REGISTRATION xr,
    int stop
@@ -44,18 +44,18 @@ void _local_unwind2(
 
 #### <a name="parameters"></a>Parametry
 
-*xr*<br/>
-pro Záznam registrace, který je přidružen k jedné tabulce oborů.
+*Xr*<br/>
+[v] Záznam registrace, který je přidružen k jedné tabulce oboru.
 
 *Stop*<br/>
-pro Lexikální úroveň, která označuje, `_local_unwind2` kde se má zastavit.
+[v] Lexikální úroveň, `_local_unwind2` která označuje, kde by měl zastavit.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato metoda je používána pouze v prostředí Runtime. Nevolejte metodu ve vašem kódu.
+Tato metoda se používá pouze v prostředí za běhu. Nevolejte metodu v kódu.
 
-Pokud tato metoda spouští obslužné rutiny ukončení, začíná na aktuální lexikální úrovni a pracuje na jejich cestě v lexikálních úrovních, dokud nedosáhne úrovně, která je `stop`uvedena v. Neprovádí obslužné rutiny ukončení na úrovni, která je uvedena `stop`v.
+Když tato metoda provede obslužné rutiny ukončení, spustí se na aktuální lexikální úrovni a `stop`pracuje svou cestu nahoru v lexikálních úrovních, dokud nedosáhne úrovně, která je označena . Neprovádí obslužné rutiny ukončení na `stop`úrovni, která je označena .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

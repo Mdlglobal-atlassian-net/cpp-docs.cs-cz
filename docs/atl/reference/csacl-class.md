@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: 72b5c9fee3868286f9e4a0917f46aeb732349c62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5a060555901361ef6c70c6a4f801605eafd92cf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330993"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746547"
 ---
 # <a name="csacl-class"></a>Třída CSacl
 
@@ -36,14 +36,14 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Konstruktor|
 |[CSacl::~CSacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSacl::AddAuditAce](#addauditace)|Přidá do objektu položku řízení přístupu k auditu `CSacl` (ACE).|
 |[CSacl::GetAceCount](#getacecount)|Vrátí počet položek řízení přístupu (ACE) `CSacl` v objektu.|
@@ -52,7 +52,7 @@ class CSacl : public CAcl
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSacl::operátor =](#operator_eq)|Operátor přiřazení.|
 
@@ -194,7 +194,7 @@ Vrátí odkaz na `CSacl` aktualizovaný objekt. Ujistěte `ACL` se, že parametr
 
 Odebere z objektu konkrétní ace (zadávání řízení přístupu). `CSacl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -211,7 +211,7 @@ Tato metoda je odvozena z [CAtlArray::RemoveAt](../../atl/reference/catlarray-cl
 
 Odebere všechny položky řízení přístupu (ACE) `CSacl` obsažené v objektu.
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321577"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748789"
 ---
 # <a name="catlarray-class"></a>Třída CAtlArray
 
@@ -162,7 +162,7 @@ V sestavení ladění ATLASSERT bude aktivována, `CAtlArray` pokud argument nen
 
 Volání této metody k potvrzení, že objekt pole je platný.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ Uvolní všechny prostředky používané objektem pole.
 
 Volání této metody zkopírovat prvky jednoho pole do jiného.
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ V sestavení ladění ATLASSERT bude aktivována, `CAtlArray` pokud existující
 
 Volání této metody odebrat všechny prázdné prvky z pole.
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 Volání této metody vložit jedno pole do jiného.
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ V sestaveních ladění bude aktivována ATLASSERT, pokud `CAtlArray` objekt nen
 
 Volání této metody vložit nový prvek (nebo více kopií prvku) do objektu pole.
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 Volání této metody odebrat všechny prvky z objektu pole.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ Viz příklad [catlarray::IsEmpty](#isempty).
 
 Volání této metody odebrat jeden nebo více prvků z pole.
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ V sestavení ladění ATLASSERT bude aktivována, `CAtlArray` pokud objekt není
 
 Volání této metody nastavit hodnotu prvku v objektu pole.
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ Viz příklad [catlarray::GetData](#getdata).
 
 Volání této metody nastavit hodnotu prvku v objektu pole, rozbalení pole podle potřeby.
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

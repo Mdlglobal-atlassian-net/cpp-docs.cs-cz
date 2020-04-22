@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376160"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745147"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Třída CMFCToolBarMenuButton
 
@@ -114,13 +114,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButtonButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Vytvoří `CMFCToolBarMenuButton` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::Porovnat](#comparewith)|Porovná tuto instanci `CMFCToolBarButton` s poskytnutým objektem. (Přepíše [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jiného tlačítka panelu nástrojů na aktuální tlačítko. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -165,13 +165,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Nakreslí ikonu na tlačítko nabídky.|
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Pokud TRUE, framework vždy volá [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) při nakreslení tlačítka.|
 
@@ -328,7 +328,7 @@ Výchozí implementace pouze vytvoří a `CMFCPopupMenu` vrátí nový objekt. P
 
 Nakreslí ikonu dokumentu na tlačítko nabídky.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Tato metoda převezme ikonu dokumentu a nakreslí ji na tlačítko nabídky, vys
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Tlačítko nabídky panelu nástrojů může zobrazit podnabídku. Můžete zada
 
 Načte ohraničovací obdélník pro obraz tlačítka.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ Ve výchozím nastavení tato metoda nastaví data usnadnění pro prvek pásu k
 
 Určuje, zda je tlačítko nakresleno jako tlačítko nabídky nebo tlačítko rozdělení, pokud má platné ID příkazu i podnabídku.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ Obvykle, když tlačítko nabídky panelu nástrojů obsahuje podnabídku i ID p
 
 Určuje, zda je rozevírací nabídka v režimu palety.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ V režimu palety jsou všechny položky nabídky zobrazeny jako paleta s více s
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 

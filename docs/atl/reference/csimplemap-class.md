@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eed41c2250728d257b6d303e79c3afd36a543dbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330798"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747639"
 ---
 # <a name="csimplemap-class"></a>Třída CSimpleMap
 
@@ -56,21 +56,21 @@ Objekt vlastnosti, definování testu rovnosti pro `T`prvky typu .
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleMap::_ArrayElementType](#_arrayelementtype)|Typedef pro typ hodnoty.|
 |[CSimpleMap::_ArrayKeyType](#_arraykeytype)|Typedef pro typ klíče.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleMap::CSimpleMap](#csimplemap)|Konstruktor|
 |[CSimpleMap::~CSimpleMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSimpleMap::Přidat](#add)|Přidá klíč a přidruženou hodnotu do mapového pole.|
 |[CSimpleMap::FindKey](#findkey)|Najde konkrétní klíč.|
@@ -294,7 +294,7 @@ Vrátí hodnotu PRAVDA, pokud byl klíč a odpovídající hodnota úspěšně o
 
 Odebere všechny klíče a hodnoty.
 
-```
+```cpp
 void RemoveAll();
 ```
 

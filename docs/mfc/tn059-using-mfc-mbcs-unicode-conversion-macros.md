@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366579"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749441"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Použití převodních maker MBCS/Unicode prostředí MFC
 
@@ -114,7 +114,7 @@ Opět existují podobné makra pro práci TEXTMETRIC, DEVMODE, BSTR a OLE přid�
 
 Nepoužívejte makra v těsné smyčce. Například nechcete psát následující druh kódu:
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 Výše uvedený kód může mít za následek přidělení megabajtů paměti v zásobníku `lpsz` v závislosti na tom, jaký je obsah řetězce! Také trvá nějakou dobu převést řetězec pro každou iteraci smyčky. Místo toho přesuňte tyto konstantní převody mimo smyčku:
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 Pokud řetězec není konstantní, pak zapouzdřte volání metody do funkce. To umožní vyrovnávací paměti převodu uvolnit pokaždé. Příklad:
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;

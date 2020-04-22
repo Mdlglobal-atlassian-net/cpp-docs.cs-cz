@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749747"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar – třída
 
@@ -211,13 +211,13 @@ class CMFCRibbonBar : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonBar::CMFCRibbonBar`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonBar::Aktivovatkategorii kontextu](#activatecontextcategory)|Aktivuje kategorii kontextu, která je již viditelná.|
 |[CMFCRibbonBar::Přidat kategorii](#addcategory)|Přidá na pás karet novou kategorii pásu karet.|
@@ -581,7 +581,7 @@ Kategorie pásu karet panelu nástrojů rychlý přístup se používá pouze v 
 
 Přidá zadaný prvek pásu karet do řádku karet na panelu pásu karet.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ PRAVDA, pokud bylo okno vytvořeno; jinak FALSE.
 
 Zavře všechny ovládací prvky klíčových kláves na panelu pásu karet.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Povolí nebo zakáže funkci klíčových tipů pro panel pásu karet.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Pokud tuto funkci povolíte, zobrazí se klíčové klávesy, když uživatel st
 
 Povolí nebo zakáže funkci **Náhled.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ Ve výchozím nastavení je funkce **Náhled** povolena.
 
 Povolí nebo zakáže popisky a volitelné popisy popisů popisů na panelu karet.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ Index na základě nuly kategorie pásu karet, pokud byla metoda úspěšná; ji
 
 Upraví rozložení všech položek v pruhu pásu karet a nadřazeném okně a překreslí celé okno.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ Prvek pásu karet, který je aktuálně klesl dolů; nebo NULL, pokud žádný p
 
 Načte pole ukazatelů na všechny prvky pásu karet, které mají konkrétní ID příkazu.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ V následující tabulce je uvedena možná kombinace příznaků pro vrácenou 
 
 Načte ID příkazů pro zadanou kolekci prvků pásu karet na panelu pásu karet.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Ukazatel na prvek pásu karet na panelu nástrojů rychlý přístup, který má
 
 Načte seznam ID příkazů pro prvky pásu karet na panelu nástrojů rychlý přístup.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Pokud je aktivní kategorie kontextu, aktivní kategorie se obnoví na první vi
 
 Skryje všechny klávesové zkratky na panelu pásu karet.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ PRAVDA, pokud byla zpracována událost stisknutí klávesy; jinak FALSE.
 
 Odebere popisek ze zobrazení.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Po úpravě rozvržení se aktualizuje zobrazení pruhu pásu karet.
 
 Odstraní všechny kategorie pásu karet z pruhu pásu karet.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Tato metoda odstraní všechny kategorie pásu karet z paměti a ze seznamu kate
 
 Odebere všechny prvky pásu karet z oblasti tabulátoru.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Pokud kategorie určená *parametrem pCategory* není zobrazena, nelze ji nastav
 
 Přidruží systémová tlačítka na panelu karet, která patří do podřízeného okna rozhraní MDI (multiple-document) k zadanému podřízenému oknu MDI.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Přiřadí k pruhu pásu karet tlačítko pásu karet aplikace.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ Volitelná klávesová zkratka nabídky je pro prvky pásu karet s tlačítkem r
 
 Nastaví úroveň navigace pomocí klávesnice, když uživatel stiskne klávesy, které jsou obsaženy na panelu pásu karet.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ Navigace pomocí klávesnice na panelu karet se spustí, když uživatel stiskne
 
 Upraví pruh pásu karet, když velikost okna podřízeného okna rozhraní více dokumentů (MDI) vstoupí nebo opustí maximalizovaný stav.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ Panel pásu karet zobrazuje systémová tlačítka pro podřízené okno MDI v �
 
 Přidá jeden nebo více prvků pásu karet na panel nástrojů Rychlý přístup.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,7 +1890,7 @@ Následující příklad ukazuje, jak `SetQuickAccessCommands` používat metodu
 
 Nastaví panel nástrojů rychlý přístup na výchozí stav.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
@@ -1913,7 +1913,7 @@ Následující příklad ukazuje, jak `SetQuickAccessDefaultState` používat me
 
 Umístí panel nástrojů rychlý přístup nad nebo pod pruh pásu karet.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Nastaví běžné a velké velikosti pevných šířek popisku pro pruh pásu karet.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ Nastavení parametru na hodnotu 0 způsobí, že se odpovídající šířka bud
 
 Zobrazí nebo skryje zadanou kategorii pásu karet.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Zobrazí nebo skryje kategorie kontextu, které mají zadané ID.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Zobrazuje klíčové klávesy pro každý prvek pásu karet na panelu pásu karet.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Přepíná pruh pásu karet mezi minimalizované a maximalizované stavy.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ PRAVDA v případě úspěchu; jinak FALSE.
 
 Povolí nebo zakáže vzhled systému Windows 7 (malé obdélníkové tlačítko aplikace) pro pás karet.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

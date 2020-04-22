@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368367"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750502"
 ---
 # <a name="crecordset-class"></a>CRecordset – třída
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRecordset::CRecordset](#crecordset)|Vytvoří `CRecordset` objekt. Odvozené třídy musí poskytnout konstruktor, který volá tento jeden.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRecordset::Přidatnový](#addnew)|Připravuje se na přidání nového záznamu. Volání `Update` k dokončení přidání.|
 |[CRecordset::CanAppend](#canappend)|Vrátí nenulovou hodnotu, pokud lze nové `AddNew` záznamy přidat do sady záznamů pomocí členské funkce.|
@@ -217,7 +217,7 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSada záznamů::m_hstmt](#m_hstmt)|Obsahuje popisovač příkazu ODBC pro sadu záznamů. Zadejte `HSTMT`.|
 |[CRecordset::m_nFields](#m_nfields)|Obsahuje počet datových členů pole v sadě záznamů. Zadejte `UINT`.|
@@ -331,7 +331,7 @@ Další informace o záložkách a navigaci v sadě záznamů naleznete v člán
 
 Požaduje, aby zdroj dat zrušil probíhající asynchronní operaci nebo proces z druhého vlákna.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Všimněte si, že třídy Knihovny MFC ODBC již nepoužívají asynchronní zp
 
 Zruší všechny čekající aktualizace způsobené operací [Upravit](#edit) nebo [PřidatNový](#addnew) [před](#update) update je volána.
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ Následující kód předpokládá, `COutParamRecordset` že `CRecordset`je odvo
 
 Získá hodnotu záložky pro aktuální záznam.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Další informace naleznete v článku [Sada záznamů: Deklarování třídy pr
 
 Načte data polí v aktuálním záznamu.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Další informace o vytváření sad záznamů naleznete v článku [Sada zázna
 
 Získá informace o polích v sadě záznamů.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Další informace naleznete v části `SQLExtendedFetch` Funkce rozhraní API RO
 
 Určuje index aktuálního záznamu v sadě záznamů a zda byl zaznamenán poslední záznam.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Další informace o navigaci v sadě záznamů naleznete v článcích [Sada zá
 
 Vytvoří první záznam v první sadě řádků aktuální záznam.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Další informace o navigaci v sadě záznamů naleznete v článcích [Sada zá
 
 Vytvoří první záznam v poslední kompletní sadě řádků aktuální záznam.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Další informace o navigaci v sadě záznamů naleznete v článcích [Sada zá
 
 Vytvoří první záznam v další sadě řádků jako aktuální záznam.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Další informace o navigaci v sadě záznamů naleznete v článcích [Sada zá
 
 Vytvoří první záznam v předchozí sadě řádků jako aktuální záznam.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Následující příklady kódu zobrazit různé `Open` formy volání.
 
 Aktualizuje data a stav řádku v aktuální sadě řádků.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ Tento příklad znovu vytvoří sadu záznamů a použije jiné pořadí řazen�
 
 Umístí sadu záznamů na záznam odpovídající zadanému číslu záznamu.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Další informace o navigaci a záložkách sady záznamů naleznete v článcí
 
 Umístí sadu záznamů na záznam obsahující zadanou záložku.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Další informace o záložkách a navigaci v sadě záznamů naleznete v člán
 
 Označí datového člena pole sady záznamů jako změněného nebo nezměněného.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ To znamená, že `param` nelze nastavit všechna pole `outputColumn` na hodnotu 
 
 Označí datového člena pole sady záznamů jako null (konkrétně bez hodnoty) nebo jako nenulový.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ To znamená, že `param` nelze nastavit všechna pole `outputColumn` na hodnotu 
 
 Nastaví režim zamykání na "optimistické" zamykání (výchozí) nebo "pesimistické" zamykání. Určuje, jak jsou záznamy uzamčeny pro aktualizace.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Volání této členské funkce, pokud potřebujete určit, které ze dvou strat
 
 Označí parametr jako Null (konkrétně bez hodnoty) nebo jako non-Null.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ Na rozdíl od [SetFieldNull](#setfieldnull), můžete volat `SetParamNull` před
 
 Přesune kurzor na řádek v rámci aktuální sady řádků.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

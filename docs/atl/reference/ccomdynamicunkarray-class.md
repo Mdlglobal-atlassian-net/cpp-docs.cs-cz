@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: 57383823897a434f649c6c4af78e71fe6ff66a6a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51b1d7e81c98bd5dbcf957b1705e7a717bfb9ab0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327896"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747988"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Třída CComDynamicUnkArray
 
@@ -39,14 +39,14 @@ class CComDynamicUnkArray
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor Inicializuje hodnoty kolekce na HODNOTU NULL a velikost kolekce na nulu.|
 |[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComDynamicUnkArray::Přidat](#add)|Volání této metody `IUnknown` přidat ukazatel pole.|
 |[CComDynamicUnkArray::begin](#begin)|Vrátí ukazatel na `IUnknown` první ukazatel v kolekci.|
@@ -113,7 +113,7 @@ Před použitím `IUnknown` rozhraní byste měli zkontrolovat, zda není null.
 
 Vyprázdní pole.
 
-```
+```cpp
 void clear();
 ```
 

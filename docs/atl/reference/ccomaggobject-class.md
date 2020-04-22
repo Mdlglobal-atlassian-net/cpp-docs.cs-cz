@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321169"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748161"
 ---
 # <a name="ccomaggobject-class"></a>Třída CComAggObject
 
@@ -45,14 +45,14 @@ Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|Konstruktor|
 |[CComAggObject::~CComAggObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComAggObject::AddRef](#addref)|Zvýšení počet odkazů na agregovaný objekt.|
 |[CComAggObject::CreateInstance](#createinstance)|Tato statická funkce umožňuje vytvořit nový **objekt CComAggObject<** `contained` **>** bez režie [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
@@ -63,7 +63,7 @@ Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComAggObject::m_contained](#m_contained)|Delegáti `IUnknown` volání vnější neznámé.|
 
@@ -171,7 +171,7 @@ Standardní hodnota HRESULT.
 
 Volána během zničení objektu, tato metoda uvolní [m_contained](#m_contained) člen.
 
-```
+```cpp
 void FinalRelease();
 ```
 

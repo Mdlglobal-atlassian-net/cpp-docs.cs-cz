@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 43f914a52666788fc0bf394d9d14830b28f5adc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 019b90c932de144d05fbf05f3ca339f4e5d6edd1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321042"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748100"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Třída CComCachedTearOffObject
 
@@ -46,14 +46,14 @@ Vaše třída odtržení, odvozená od `CComTearOffObjectBase` a rozhraní, kter
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Konstruktor|
 |[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComCachedTearOffObject::AddRef](#addref)|Zintáží počet odkazů `CComCachedTearOffObject` pro objekt.|
 |[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Volá `m_contained::FinalConstruct` metodu (tear-off class).|
@@ -63,7 +63,7 @@ Vaše třída odtržení, odvozená od `CComTearOffObjectBase` a rozhraní, kter
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComCachedTearOffObject::m_contained](#m_contained)|Objekt `CComContainedObject` odvozený z třídy odtržení `contained`(třída).|
 
@@ -146,7 +146,7 @@ Standardní hodnota HRESULT.
 
 Volání `m_contained::FinalRelease` zdarma `m_contained` `CComContainedObject` <  `contained` ,> objekt.
 
-```
+```cpp
 void FinalRelease();
 ```
 

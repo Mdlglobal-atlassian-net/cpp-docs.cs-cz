@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330701"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747576"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Třída CSnapInPropertyPageimpl
 
@@ -49,13 +49,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSnapinPropertyPageimpl::csnapinpropertyPageimpl](#csnapinpropertypageimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSnapinPropertyPageimpl::Zrušitzavření](#canceltoclose)|Změní stav tlačítek **OK** a **Storno.**|
 |[CSnapinPropertyPageimpl::Vytvořit](#create)|Inicializuje nově `CSnapInPropertyPageImpl` vytvořený objekt.|
@@ -73,7 +73,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Struktura `PROPSHEETPAGE` systému Windows `CSnapInPropertyPageImpl` používá objekt.|
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 Volání této funkce po neopravitelné změny byla provedena data na stránce seznamu modální vlastností.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ Výchozí implementace `OnApply` vrátí hodnotu TRUE.
 
 Tato členská funkce je volána, když uživatel klepne na tlačítko **Nápověda** pro stránku vlastností.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ Výchozí implementace `OnQueryCancel` vrátí hodnotu TRUE.
 
 Tato členská funkce je volána, když uživatel klepne na tlačítko **Storno.**
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ Pokud stránka vrátí nenulovou hodnotu, seznam vlastností neodešle zprávu n
 
 Volání této členské funkce povolit nebo zakázat **použít nyní** tlačítko, na základě toho, zda nastavení na stránce vlastností by měla být použita na příslušný externí objekt.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

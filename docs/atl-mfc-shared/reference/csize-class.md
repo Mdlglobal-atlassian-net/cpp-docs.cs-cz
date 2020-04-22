@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 6d1b82e3f60428e3a778709dc69de983a7f886bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746969"
 ---
 # <a name="csize-class"></a>CSize – třída
 
@@ -32,13 +32,13 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSize::CSize](#csize)|Vytvoří `CSize` objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSize::operátor -](#operator_-)|Odečte dvě velikosti.|
 |[CSize::operátor !=](#operator_neq)|Kontroluje nerovnost mezi `CSize` a velikostí.|
@@ -139,7 +139,7 @@ Vrátí nenulovou, pokud velikost i rovna, jinak 0.
 
 Přidá k tomuto `CSize`rozměru velikost .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -151,7 +151,7 @@ void operator+=(SIZE size) throw();
 
 Odečte velikost od `CSize`tohoto .
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -179,11 +179,11 @@ Viz následující popisy jednotlivých operátorů:
 
 - **operátor +(** *bod* **)**
 
-  Tato operace posune (přesune) hodnotu [POINT](/previous-versions/dd162805\(v=vs.85\)) (nebo [CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)o tuto `CSize` hodnotu. A `cx` `cy` členy této `CSize` hodnoty jsou `x` přidány `y` a datové `POINT` členy hodnoty. Je obdobou verze [CPoint::operator +,](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Tato operace posune (přesune) hodnotu [POINT](/windows/win32/api/windef/ns-windef-point) (nebo [CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)o tuto `CSize` hodnotu. A `cx` `cy` členy této `CSize` hodnoty jsou `x` přidány `y` a datové `POINT` členy hodnoty. Je obdobou verze [CPoint::operator +,](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operátor +(** *lpRect* **)**
 
-   Tato operace posune (přesune) hodnotu [RECT](/previous-versions/dd162897\(v=vs.85\)) (nebo `CSize` [CRect)](../../atl-mfc-shared/reference/crect-class.md)touto hodnotou. Členy `cx` `cy` a členy `CSize` této hodnoty `left`jsou `top` `right`přidány `bottom` do , `RECT` , a datové členy hodnoty. Je obdobou verze [CRect::operator +,](../../atl-mfc-shared/reference/crect-class.md#operator_add) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+   Tato operace posune (přesune) hodnotu [RECT](/windows/win32/api/windef/ns-windef-rect) (nebo `CSize` [CRect)](../../atl-mfc-shared/reference/crect-class.md)touto hodnotou. Členy `cx` `cy` a členy `CSize` této hodnoty `left`jsou `top` `right`přidány `bottom` do , `RECT` , a datové členy hodnoty. Je obdobou verze [CRect::operator +,](../../atl-mfc-shared/reference/crect-class.md#operator_add) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 ### <a name="example"></a>Příklad
 
@@ -210,11 +210,11 @@ CSize operator-() const throw();
 
 - **operátor -(** *bod* **)**
 
-  Tato operace posune (přesune) [point](/previous-versions/dd162805\(v=vs.85\)) nebo [cpoint](../../atl-mfc-shared/reference/cpoint-class.md) hodnotu `CSize` aditivní inverzní této hodnoty. A `cx` `cy` a `CSize` tato hodnota jsou odečteny od `x` a `y` datové členy `POINT` hodnoty. Je obdobou verze [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Tato operace posune (přesune) [point](/windows/win32/api/windef/ns-windef-point) nebo [cpoint](../../atl-mfc-shared/reference/cpoint-class.md) hodnotu `CSize` aditivní inverzní této hodnoty. A `cx` `cy` a `CSize` tato hodnota jsou odečteny od `x` a `y` datové členy `POINT` hodnoty. Je obdobou verze [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operátor -(** *lpRect* **)**
 
-  Tato operace posune (přesune) hodnotu [RECT](/previous-versions/dd162897\(v=vs.85\)) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) aditivní inverzní k této `CSize` hodnotě. A `cx` `cy` členy této `CSize` hodnoty jsou odečteny `top` `right`od `bottom` `left`, , `RECT` a datových členů hodnoty. Je obdobou verze [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Tato operace posune (přesune) hodnotu [RECT](/windows/win32/api/windef/ns-windef-rect) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) aditivní inverzní k této `CSize` hodnotě. A `cx` `cy` členy této `CSize` hodnoty jsou odečteny `top` `right`od `bottom` `left`, , `RECT` a datových členů hodnoty. Je obdobou verze [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) která přebírá parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operátor -()**
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 573446256aa89423837ebf73176a73f72054911b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318766"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748212"
 ---
 # <a name="cautovectorptr-class"></a>Třída CAutoVectorPtr
 
@@ -43,14 +43,14 @@ Typ ukazatele.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Konstruktor|
 |[CAutoVectorPtr::~CAutoVectorPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAutoVectorPtr::Přidělit](#allocate)|Volání této metody přidělit paměť vyžadované pole objektů, na které `CAutoVectorPtr`se vztahuje .|
 |[CAutoVectorPtr::Připojit](#attach)|Volání této metody převzít vlastnictví existující ukazatel.|
@@ -59,14 +59,14 @@ Typ ukazatele.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAutoVectorPtr::operátor T *](#operator_t__star)|Operátor obsazení.|
 |[CAutoVectorPtr::operátor =](#operator_eq)|Operátor přiřazení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAutoVectorPtr::m_p](#m_p)|Proměnná datového prvku ukazatele.|
 
@@ -105,7 +105,7 @@ V sestaveních ladění dojde k selhání kontrolního výrazu, pokud proměnná
 
 Volání této metody převzít vlastnictví existující ukazatel.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -171,7 +171,7 @@ Uvolní vlastnictví ukazatele, nastaví proměnnou [CAutoVectorPtr::m_p](#m_p) 
 
 Volání této metody odstranit objekt ukázal `CAutoVectorPtr`.
 
-```
+```cpp
 void Free() throw();
 ```
 

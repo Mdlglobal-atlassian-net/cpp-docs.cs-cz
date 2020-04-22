@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748663"
 ---
 # <a name="catlmap-class"></a>Třída CAtlMap
 
@@ -76,7 +76,7 @@ Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Typ použitý při předání klíče jako vstupní argument|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ použitý při vrácení klíče jako výstupního argumentu.|
@@ -85,27 +85,27 @@ Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::Třída CPair](#cpair_class)|Třída obsahující klíčové a hodnotové prvky.|
 
 ### <a name="cpair-data-members"></a>CPair Data Members
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Datový člen ukládání klíčový prvek.|
 |[CPair::m_value](#m_value)|Datový člen ukládání elementvalue.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor|
 |[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Volání této metody způsobit ASSERT, `CAtlMap` pokud není platný.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Volání této metody zakázat automatické předhasování objektu. `CAtlMap`|
@@ -133,7 +133,7 @@ Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlMap::operátor\[\]](catlmap-class.md#operator_at)|Nahradí nebo přidá nový prvek `CAtlMap`do .|
 
@@ -159,7 +159,7 @@ Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/a
 
 Volání této metody způsobit ASSERT, `CAtlMap` pokud objekt není platný.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Tato třída se používá metody [CAtlMap::GetNext](#getnext) a [CAtlMap::Looku
 
 Volání této metody zakázat automatické předhasování objektu. `CAtlMap`
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Pokud je povoleno automatické předělávka (což je ve výchozím nastavení),
 
 Volání této metody povolit automatické předhasování objektu. `CAtlMap`
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Pokud je povoleno automatické předělávka (což je ve výchozím nastavení),
 
 Volání této metody vrátit prvek na zadanou pozici v mapě.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -294,7 +294,7 @@ CPair* GetAt(POSITION& pos) throw();
 *key*<br/>
 Parametr šablony určující typ klíče mapy.
 
-*Hodnotu*<br/>
+*value*<br/>
 Parametr šablony určující typ hodnoty mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -376,7 +376,7 @@ Vrátí ukazatel na další dvojici prvků klíč/hodnota uložená v mapě. Č�
 
 Získá další prvek pro iterace.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -391,7 +391,7 @@ void GetNextAssoc(
 *key*<br/>
 Parametr šablony určující typ klíče mapy.
 
-*Hodnotu*<br/>
+*value*<br/>
 Parametr šablony určující typ hodnoty mapy.
 
 ### <a name="remarks"></a>Poznámky
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Určuje klíč, který identifikuje prvek, který má být vyhledán.
 
-*Hodnotu*<br/>
+*value*<br/>
 Proměnná, která obdrží hodnotu vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -597,7 +597,7 @@ Pokud klíč již existuje, prvek je nahrazen. Pokud klíč neexistuje, je přid
 
 Volání této metody přemístit `CAtlMap` objekt.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Pokud *nBins* je `CAtlMap` 0, vypočítá přiměřené číslo na základě po�
 
 Volání této metody odebrat `CAtlMap` všechny prvky z objektu.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Vymaže `CAtlMap` objekt, uvolnění paměti používané k uložení prvků.
 
 Volání této metody odebrat prvek na `CAtlMap` dané pozici v objektu.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 Hodnota klíče, kterou `CAtlMap` chcete přidat k objektu.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, kterou chcete `CAtlMap` přidat k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -690,7 +690,7 @@ Vrátí pozici páru prvků klíč/hodnota `CAtlMap` v objektu.
 
 Volání této metody nastavit optimální `CAtlMap` zatížení objektu.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Tato metoda předefinuje optimální hodnotu `CAtlMap` zatížení pro objekt. V
 
 Volání této metody změnit hodnotu uloženou `CAtlMap` na dané pozici v objektu.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -731,7 +731,7 @@ void SetValueAt(
 *Pos*<br/>
 Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, kterou chcete `CAtlMap` přidat k objektu.
 
 ### <a name="remarks"></a>Poznámky

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 7d450f7762b39d7fa8fae07230690eecb8edbb4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c62cc912b3fea3ea68390882bdda37cbfb25a7e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327467"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747756"
 ---
 # <a name="ccomptrbase-class"></a>Třída CComPtrBase
 
@@ -44,13 +44,13 @@ Typ objektu, na který má inteligentní ukazatel odkazovat.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase::~CComPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase::Poradit](#advise)|Volání této metody k vytvoření `CComPtrBase`připojení mezi 's spojovací bod a jímky klienta.|
 |[CComPtrBase::Připojit](#attach)|Volání této metody převzít vlastnictví existující ukazatel.|
@@ -64,7 +64,7 @@ Typ objektu, na který má inteligentní ukazatel odkazovat.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase::operátor T*](#operator_t_star)|Operátor obsazení.|
 |[CComPtrBase::operátor !](#operator_not)|Operátor NOT.|
@@ -76,7 +76,7 @@ Typ objektu, na který má inteligentní ukazatel odkazovat.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Proměnná datového prvku ukazatele.|
 
@@ -122,7 +122,7 @@ Další informace naleznete [v tématu AtlAdvise.](connection-point-global-funct
 
 Volání této metody převzít vlastnictví existující ukazatel.
 
-```
+```cpp
 void Attach(T* p2) throw();
 ```
 
@@ -386,7 +386,7 @@ V sestaveních ladění dojde k chybě kontrolního výrazu, pokud *se hodnota p
 
 Volání této metody k uvolnění rozhraní.
 
-```
+```cpp
 void Release() throw();
 ```
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 1e9d21c59eb5efabf036fbc938a40de2c4b7a0b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330555"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746390"
 ---
 # <a name="ctokengroups-class"></a>Třída CTokenGroups
 
@@ -40,14 +40,14 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor|
 |[CTokenGroups::~CTokenGroups](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::Přidat](#add)|Přidá `CSid` k `TOKEN_GROUPS` objektu `CTokenGroups` nebo existující strukturu.|
 |[CTokenGroups::Delete](#delete)|Odstraní `CSid` a jeho přidružené atributy `CTokenGroups` z objektu.|
@@ -60,7 +60,7 @@ class CTokenGroups
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTokenGroups::operátor const TOKEN_GROUPS *](#operator_const_token_groups__star)|Přetypovat `CTokenGroups` objekt na ukazatel `TOKEN_GROUPS` na strukturu.|
 |[CTokenGroups::operátor =](#operator_eq)|Operátor přiřazení.|
@@ -81,7 +81,7 @@ Třída `CTokenGroups` je obálka pro [strukturu TOKEN_GROUPS,](/windows/win32/a
 
 Přidá `CSid` k `TOKEN_GROUPS` objektu `CTokenGroups` nebo existující strukturu.
 
-```
+```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
@@ -153,7 +153,7 @@ Vrátí hodnotu `CSid` true, pokud je odebrán, false jinak.
 
 Odstraní z `CSid` objektu všechny objekty `CTokenGroups` a jejich přidružené atributy.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -197,7 +197,7 @@ Načte ukazatel na [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups
 
 Načte `CSid` objekty a (volitelně) atributy, které patří k objektu. `CTokenGroups`
 
-```
+```cpp
 void GetSidsAndAttributes(
     CSid::CSidArray* pSids,
     CAtlArray<DWORD>* pAttributes = NULL) const throw(...);

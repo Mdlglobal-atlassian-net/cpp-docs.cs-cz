@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 84c67aa8ea819f420368a72a2374f800f3d89055
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71d7b6f7d53e9613b1ac26013d73c1dbd1ef0aab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317650"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746924"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT – třída
 
@@ -46,7 +46,7 @@ Typ znaku `CStrBufT` třídy. Může to být jedna z následujících možností
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |PCXSTR|Ukazatel na konstantní řetězec.|
 |PXSTR|Ukazatel na řetězec.|
@@ -54,26 +54,26 @@ Typ znaku `CStrBufT` třídy. Může to být jedna z následujících možností
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStrBufT::CStrBufT](#cstrbuft)|Konstruktor pro objekt vyrovnávací paměti řetězce.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStrBufT::SetLength](#setlength)|Nastaví délku vyrovnávací paměti znaků přidruženého objektu řetězce.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStrBufT::operátor PCXSTR](#operator_pcxstr)|Načte ukazatel **const** do vyrovnávací paměti znaků přidruženého objektu řetězce.|
 |[CStrBufT::operátor PXSTR](#operator_pxstr)|Načte ukazatel na vyrovnávací paměť znaků přidruženého objektu řetězce.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStrBufT::AUTO_LENGTH](#auto_length)|Automaticky určete novou délku řetězce při uvolnění.|
 |[CStrBufT::SET_LENGTH](#set_length)|Nastavení délky objektu řetězce v čase GetBuffer|
@@ -196,7 +196,7 @@ Určuje, zda jsou při vytváření objektu vyrovnávací paměti řetězce vol�
 
 Nastaví délku vyrovnávací paměti znaků.
 
-```
+```cpp
 void SetLength(int nLength);
 ```
 

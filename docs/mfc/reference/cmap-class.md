@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370099"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749071"
 ---
 # <a name="cmap-class"></a>Třída CMap
 
@@ -73,19 +73,19 @@ Datový typ používaný pro argumenty *VALUE;* obvykle odkaz na *HODNOTU*.
 
 ### <a name="public-structures"></a>Veřejné struktury
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Vnořená struktura obsahující hodnotu klíče a hodnotu přidruženého objektu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Vytvoří kolekci, která mapuje klíče na hodnoty.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Vrátí počet prvků v této mapě.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Vrátí počet prvků v tabulce hash.|
@@ -104,7 +104,7 @@ Datový typ používaný pro argumenty *VALUE;* obvykle odkaz na *HODNOTU*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMap::operátor \[\]](#operator_at)|Vloží prvek do mapy – substituce operátora pro `SetAt`.|
 
@@ -211,7 +211,7 @@ Počet prvků v tabulce hash.
 
 Načte prvek mapy `rNextPosition`na `rNextPosition` , pak aktualizuje odkazovat na další prvek v mapě.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ Viz příklad pro [CMap::SetAt](#setat).
 
 Inicializuje tabulku hash.
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -466,7 +466,7 @@ Volání této metody k hledání prvku mapy s klíčem, který přesně odpoví
 
 Odebere všechny hodnoty z této mapy voláním `DestructElements`globální pomocné funkce .
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -510,7 +510,7 @@ Viz příklad pro [CMap::SetAt](#setat).
 
 Primární prostředky pro vložení prvku do mapy.
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 

@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320774"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748107"
 ---
 # <a name="ccomcontrolbase-class"></a>Třída CComControlBase
 
@@ -104,20 +104,20 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComControlBase::Typ vzhledu](#appearancetype)|Přepsat, pokud `m_nAppearance` vaše zásoby vlastnost není typu **krátké**.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Konstruktor|
 |[CComControlBase::~CComControlBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComControlBase::Rozhraní ControlQueryInterface](#controlqueryinterface)|Načte ukazatel na požadované rozhraní.|
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Zkontroluje, zda parametr `IOleObjectImpl::DoVerb` *iVerb* použitý buď aktivuje uživatelské rozhraní ovládacího prvku (*iVerb* se rovná OLEIVERB_UIACTIVATE), definuje akci přijatou při poklepání na ovládací prvek (*iVerb* se rovná OLEIVERB_PRIMARY), zobrazí ovládací prvek (*iVerb* se rovná OLEIVERB_SHOW), nebo aktivuje ovládací prvek (*iVerb* se rovná OLEIVERB_INPLACEACTIVATE).|
@@ -168,7 +168,7 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComControlBase::m_bAutoSize](#m_bautosize)|Příznak označující ovládací prvek nemůže mít jinou velikost.|
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Příznak `IDataObjectImpl::GetData` označující, `CComControlBase::GetZoomInfo` že a by `m_sizeNatural` měl `m_sizeExtent`nastavit velikost ovládacího prvku z spíše než z .|
@@ -794,7 +794,7 @@ Tato hodnota je nastavena pomocí [CComControlBase::SetDirty](#setdirty).
 
 Načte hodnoty x a y čitatela a jmenovatele faktoru přiblížení pro ovládací prvek aktivovaný pro úpravy na místě.
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ Pro ovládací prvek s okny se volá funkce Rozhraní API systému Windows [SetF
 
 Nastaví datový `m_bRequiresSave` člen na hodnotu v *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 

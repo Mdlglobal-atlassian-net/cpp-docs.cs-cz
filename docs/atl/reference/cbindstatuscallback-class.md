@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 6cdac444836574dd4d398571b71bb25363af5d3d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ae7f4fcdba18be84d99140e395b6f2ac3db792a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321234"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748209"
 ---
 # <a name="cbindstatuscallback-class"></a>Třída CBindStatusCallback
 
@@ -64,14 +64,14 @@ Určuje příznaky vazby, které jsou vráceny [getbindinfo](#getbindinfo). Výc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor|
 |[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::Download](#download)|Statická metoda, která spustí `CBindStatusCallback` proces stahování, `StartAsyncDownload`vytvoří objekt a zavolá .|
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|Volána asynchronní zástupný název požadovat informace o typu vazby, které mají být vytvořeny.|
@@ -86,7 +86,7 @@ Určuje příznaky vazby, které jsou vráceny [getbindinfo](#getbindinfo). Výc
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Počet bajtů, které jsou k dispozici ke čtení.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet přečtených bajtů.|
@@ -274,7 +274,7 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 Funkce, na `m_pFunc` kterou se vztahuje od člena, je členem třídy objektu a má následující syntaxi:
 
-```
+```cpp
 void Function_Name(
    CBindStatusCallback<T>* pbsc,
    BYTE* pBytes,
@@ -521,7 +521,7 @@ Pokaždé, když jsou data k dispozici, jsou odeslána do objektu prostřednictv
 
 Funkce, na kterou *pFunc* ukazuje, je členem třídy objektu a má následující syntaxi:
 
-```
+```cpp
 void Function_Name(
     CBindStatusCallback<T>* pbsc,
     BYTE* pBytes,

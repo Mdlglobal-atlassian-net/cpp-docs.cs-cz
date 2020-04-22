@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331240"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746574"
 ---
 # <a name="crbtree-class"></a>Třída CRBTree
 
@@ -66,7 +66,7 @@ Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRBTree::KINARGTYPE](#kinargtype)|Typ použitý při předání klíče jako vstupní argument.|
 |[CRBTree::KOUTARGTYPE](#koutargtype)|Typ použitý při vrácení klíče jako výstupního argumentu.|
@@ -75,19 +75,19 @@ Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRBTree::Třída CPair](#cpair_class)|Třída obsahující klíčové a hodnotové prvky.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRBTree::~CRBTree](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Volání této metody najít pozici prvku, který používá další dostupný klíč.|
 |[CRBTree::Getat](#getat)|Volání této metody získat prvek na dané pozici ve stromu.|
@@ -188,7 +188,7 @@ Hodnota pozice.
 *key*<br/>
 Proměnná, která přijímá klíč.
 
-*Hodnotu*<br/>
+*value*<br/>
 Proměnná, která přijímá hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -276,7 +276,7 @@ Vrátí ukazatel na další hodnotu [CPair](#cpair_class) ve stromu.
 
 Volání této metody získat klíč a hodnotu prvku uloženého v mapě a posunut pozici na další prvek.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -291,7 +291,7 @@ void GetNextAssoc(
 *key*<br/>
 Parametr šablony určující typ klíče stromu.
 
-*Hodnotu*<br/>
+*value*<br/>
 Parametr šablony určující typ hodnoty stromu.
 
 ### <a name="remarks"></a>Poznámky
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Volání této metody odebrat `CRBTree` všechny prvky z objektu.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ Vymaže `CRBTree` objekt, uvolnění paměti používané k uložení prvků.
 
 Volání této metody odebrat prvek na `CRBTree` dané pozici v objektu.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ Odebere dvojici klíč/hodnota uloženou na zadané pozici. Paměť použitá k 
 
 Volání této metody změnit hodnotu uloženou `CRBTree` na dané pozici v objektu.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *Pos*<br/>
 Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, kterou chcete `CRBTree` přidat k objektu.
 
 ### <a name="remarks"></a>Poznámky

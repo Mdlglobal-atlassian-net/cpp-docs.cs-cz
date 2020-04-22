@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 309b74126f57e76aa6399f57382d88fee4400700
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369667"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749565"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Třída CMFCOutlookBarTabctrl
 
@@ -66,14 +66,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Výchozí konstruktor.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarTabctrl::AddControl](#addcontrol)|Přidá ovládací prvek systému Windows jako novou kartu na panelu aplikace Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Volat rámci k určení rozměry textového pole, které se zobrazí, když `CMFCBaseTabCtrl::CalcRectEdit`uživatel přejmenuje kartu.|
@@ -135,7 +135,7 @@ Následující příklad ukazuje, jak inicializovat `CMFCOutlookBarTabCtrl` obje
 
 Přidá ovládací prvek systému Windows jako novou kartu na panelu aplikace Outlook.
 
-```
+```cpp
 void AddControl(
     CWnd* pWndCtrl,
     LPCTSTR lpszName,
@@ -277,7 +277,7 @@ Voláním této funkce povolíte nebo zakážete úpravy textových štítků na
 
 Volat rámci povolit posouvání úchyty, které umožňují uživateli procházet tlačítka v podokně panelu aplikace Outlook.
 
-```
+```cpp
 void EnableScrollButtons(
     BOOL bEnable = TRUE,
     BOOL bIsUp = TRUE,
@@ -416,7 +416,7 @@ Vizuální efekt nastavení aktivní karty závisí na tom, zda jste povolili an
 
 Nastaví velikost ohraničení ovládacího prvku karta Outlook.
 
-```
+```cpp
 void SetBorderSize(int nBorderSize);
 ```
 
@@ -433,7 +433,7 @@ Nastaví novou velikost ohraničení a přepočítá rozložení okna aplikace O
 
 Nastaví zarovnání textových popisků na tlačítkách karet na panelu aplikace Outlook.
 
-```
+```cpp
 void SetPageButtonTextAlign(
     UINT uiAlign,
     BOOL bRedraw=TRUE);
@@ -495,7 +495,7 @@ Tato metoda by neměla být volána, pokud není v režimu sady Microsoft Office
 
 ## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBartabctrl::SetVisiblePageButtons
 
-```
+```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 

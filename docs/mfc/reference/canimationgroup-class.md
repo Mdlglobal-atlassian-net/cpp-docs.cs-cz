@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369747"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750148"
 ---
 # <a name="canimationgroup-class"></a>Třída CAnimationGroup
 
@@ -67,14 +67,14 @@ class CAnimationGroup;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Vytvoří skupinu animací.|
 |[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|Destruktor. Nazývá se při zničení skupiny animací.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::Animovat](#animate)|Animuje skupinu.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Aplikuje přechody na objekty animace.|
@@ -87,7 +87,7 @@ class CAnimationGroup;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::AddKeyframes](#addkeyframes)|Pomocník, který přidá klíčové snímky do scénáře.|
 |[CAnimationGroup::AddTransitions](#addtransitions)|Pomocník, který přidá přechody do scénáře.|
@@ -95,7 +95,7 @@ class CAnimationGroup;
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Určuje, jak vymazat přechody z objektů animace, které patří do skupiny. Pokud je tento člen TRUE, přechody jsou automaticky odebrány, když byla naplánována animace. V opačném případě je třeba odstranit přechody ručně.|
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Určuje způsob zničení objektů animace. Pokud je tento parametr TRUE, objekty animace budou automaticky zničeny při zničení skupiny. V opačném případě musí být objekty animace zničeny ručně. Výchozí hodnota je FALSE. Tuto hodnotu nastavte na hodnotu PRAVDA pouze v případě, že všechny objekty animace, které patří do skupiny, jsou dynamicky přiděleny operátoru new.|
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Jedinečný identifikátor skupiny animací.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Ukazatel na ovladač animace, do který tato skupina patří.|
@@ -135,7 +135,7 @@ Destruktor. Nazývá se při zničení skupiny animací.
 
 Pomocník, který přidá klíčové snímky do scénáře.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ Určuje, zda má tato metoda přidat do scénáře klíčové snímky, které z�
 
 Pomocník, který přidá přechody do scénáře.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ Tato metoda vytvoří vnitřní scénář, vytvoří a použije přechody a napl
 
 Aplikuje přechody na objekty animace.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 Odebere a volitelně zničí všechny klíčové snímky, které patří do skupiny animací.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ Pokud je m_bAutodestroyKeyframes člen true, jsou klíčové snímky odebrány a
 
 Odstraní přechody z animačních objektů, které patří do skupiny animací.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -374,7 +374,7 @@ Volání této funkce naplánovat animaci v zadaném čase. Musíte nejprve zavo
 
 Přesměruje všechny animační objekty, které patří do skupiny, automaticky zničí přechody.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 

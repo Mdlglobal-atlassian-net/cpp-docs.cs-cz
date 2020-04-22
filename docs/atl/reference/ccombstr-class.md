@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: adaad47c49a64c6654b70fa60ef5514e104c50a5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1448a5638b263a87403edf0baca170f0f952e26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321057"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748133"
 ---
 # <a name="ccombstr-class"></a>Třída CComBSTR
 
@@ -50,14 +50,14 @@ class CComBSTR
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|Konstruktor|
 |[CComBSTR::~CComBSTR](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComBSTR::Připojit](#append)|Připojí řetězec k `m_str`aplikaci .|
 |[CComBSTR::AppendBSTR](#appendbstr)|Připojí BSTR k `m_str`aplikaci .|
@@ -80,7 +80,7 @@ class CComBSTR
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComBSTR::operátor BSTR](#operator_bstr)|Převrhne `CComBSTR` objekt bstr.|
 |[CComBSTR::operátor !](#operator_not)|Vrátí hodnotu PRAVDA nebo `m_str`NEPRAVDA v závislosti na tom, zda je null.|
@@ -94,7 +94,7 @@ class CComBSTR
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComBSTR::m_str](#m_str)|Obsahuje BSTR přidružené `CComBSTR` k objektu.|
 
@@ -242,7 +242,7 @@ S_OK na úspěch, nebo standardní HRESULT chybová hodnota.
 
 Připojí BSTR k `CComBSTR` objektu nastavením [m_str](#m_str) člen *src*.
 
-```
+```cpp
 void Attach(BSTR src) throw();
 ```
 
@@ -329,7 +329,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *src*<br/>
 [v] Objekt. `CComBSTR`
 
-*Identifikátor guid*<br/>
+*guid*<br/>
 [v] Odkaz na `GUID` strukturu.
 
 ### <a name="remarks"></a>Poznámky
@@ -424,7 +424,7 @@ BSTR přidružené k `CComBSTR` objektu.
 
 Osvobodí [člena m_str.](#m_str)
 
-```
+```cpp
 void Empty() throw();
 ```
 

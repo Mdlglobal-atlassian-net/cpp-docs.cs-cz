@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369646"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749605"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane – třída
 
@@ -63,14 +63,14 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCOutlookBarPane::CMFCOutlookBarPane`|Výchozí konstruktor.|
 |`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarpane::Tlačítko AddButton](#addbutton)|Přidá tlačítko do podokna panelu aplikace Outlook.|
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Určuje, zda lze podokno ukotvit do jiného podokna nebo okna rámce. (Přepíše [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|
@@ -98,7 +98,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Určuje, které položky místní nabídky budou zobrazeny v režimu vlastního nastavení.|
 |[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Odebere všechna tlačítka z podokna panelu aplikace Outlook. (Přepíše [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Uvolní prostředky používané obrázky v podokně panelu aplikace Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ Výchozí implementace zkontroluje režim přizpůsobení [(CMFCToolBar::IsCusto
 
 Určuje, zda šipky posuvníku v podokně panelu aplikace Outlook posunují seznam tlačítek po stránce nebo tlačítka po tlačítku.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ PRAVDA, pokud bylo tlačítko úspěšně odebráno; FALSE, pokud zadané ID př
 
 Nastaví barvu pozadí panelu aplikace Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Voláním této funkce nastavte aktuální barvu pozadí pro panel aplikace Outl
 
 Nastaví obrázek pozadí.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Voláním této metody nastavte obrázek pozadí panelu aplikace Outlook. Seznam
 
 Obnoví podokno panelu panelu aplikace Outlook na původní sadu tlačítek.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ Tato metoda obnoví tlačítka panelu aplikace Outlook na původní sadu. Tato m
 
 Nastaví počet obrazových bodů odsazení použitých kolem tlačítek v podokně panelu aplikace Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Nastaví barvy běžného a zvýrazněného textu v podokně panelu aplikace Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Nastaví průhlednou barvu panelového podokna aplikace Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

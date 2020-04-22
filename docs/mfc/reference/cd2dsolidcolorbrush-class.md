@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 5aa3d7688046b0c1b04983f2d27fe5579dd7c680
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d66a92e4801f7a13c62e2d83fdb94411d077ff53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369061"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750254"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Třída CD2DSolidColorBrush
 
@@ -47,14 +47,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Přetíženo. Vytvoří objekt CD2DSolidColorBrush.|
 |[CD2DSolidColorBrush::~CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|Destruktor. Nazývá se při zničení objektu pevnéstopy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DSolidColorBrush::Vytvořit](#create)|Vytvoří cd2DSolidColorBrush. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -66,13 +66,13 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::operátor ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Vrátí rozhraní ID2D1SolidColorBrush.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Štětec plná barva.|
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Uloží ukazatel na objekt ID2D1SolidColorBrush.|
@@ -103,7 +103,7 @@ virtual ~CD2DSolidColorBrush();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1SolidColorBrush* pResource);
 ```
 
@@ -241,7 +241,7 @@ Ukazatel na rozhraní ID2D1SolidColorBrush nebo NULL, pokud objekt ještě není
 
 Určuje barvu této plné barevné stopy.
 
-```
+```cpp
 void SetColor(D2D1_COLOR_F color);
 ```
 

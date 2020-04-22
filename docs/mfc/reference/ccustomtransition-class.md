@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: 8bdd0ebab0a6e4138e24edff38da9b444745f83a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76e0d12308ad579e4bdf9866dfcf1cde231a2d0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369332"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749149"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition – třída
 
@@ -45,13 +45,13 @@ class CCustomTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Vytvoří vlastní objekt přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomTransition::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Nastaví počáteční hodnotu, která bude použita na proměnnou animace přidruženou k tomuto přechodu.|
@@ -59,7 +59,7 @@ class CCustomTransition : public CBaseTransition;
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Určuje, zda byla počáteční hodnota zadána pomocí parametru SetInitialValue.|
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Určuje, zda byla počáteční rychlost zadána pomocí parametru SetInitialVelocity.|
@@ -161,7 +161,7 @@ CCustomInterpolator* m_pInterpolator;
 
 Nastaví počáteční hodnotu, která bude použita na proměnnou animace přidruženou k tomuto přechodu.
 
-```
+```cpp
 void SetInitialValue(DOUBLE initialValue);
 ```
 
@@ -173,7 +173,7 @@ void SetInitialValue(DOUBLE initialValue);
 
 Nastaví počáteční rychlost, která bude použita na proměnnou animace přidruženou k tomuto přechodu.
 
-```
+```cpp
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```
 

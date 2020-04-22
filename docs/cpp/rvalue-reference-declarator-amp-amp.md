@@ -1,19 +1,19 @@
 ---
-title: Deklarátor odkazu rvalue:&amp;&amp;
+title: Deklarátor odkazu na rvalu:&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: d6aa6aa9caed77f92b3b183cc49c63aaaa6c724f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53729cca7c259bc2d3b792ddc3509d5fc3bd255a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498567"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749824"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Deklarátor odkazu rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Deklarátor odkazu na rvalu:&amp;&amp;
 
 Obsahuje odkaz na výraz rvalue.
 
@@ -25,17 +25,17 @@ type-id && cast-expression
 
 ## <a name="remarks"></a>Poznámky
 
-Odkazy rvalue umožňují odlišit lvalue od rvalue. Odkazy lvalue a odkazy rvalue jsou syntakticky a sémanticky podobné, ale následují trochu odlišná pravidla. Další informace o hodnoty lvalue a rvalue najdete v tématu [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md). Další informace o odkazech na hodnotu lvalue naleznete v tématu [referenční hodnota deklarátor: &](../cpp/lvalue-reference-declarator-amp.md).
+Odkazy rvalue umožňují odlišit lvalue od rvalue. Lvalue odkazy a rvalue odkazy jsou syntakticky a sémanticky podobné, ale postupujte podle poněkud odlišných pravidel. Další informace o lvalues a rvalues naleznete v [tématu Lvalues a Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Další informace o odkazech na lvalue naleznete v [tématu Deklarátor odkazů lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
 
-Následující části popisují, jak odkazy rvalue podporují implementaci sémantiky *přesunutí* a dokonalého *předávání*.
+Následující části popisují, jak odkazy na rvalue podporují implementaci *sémantiky přesunutí* a *dokonalého předávání*.
 
-## <a name="move-semantics"></a>Přesunout sémantiky
+## <a name="move-semantics"></a>Přesunout sémantiku
 
-Odkazy rvalue podporují implementaci sémantiky *přesunutí*, což může významně zvýšit výkon vašich aplikací. Přesunutí sémantiky umožňuje napsat kód, který přenáší prostředky (například dynamicky přidělené paměti) z jednoho objektu na jiný. Přesunutí sémantiky funguje, protože umožňuje přenos prostředků z dočasných objektů, na které nelze odkazovat jinde v programu.
+Rvalue odkazy podporují implementaci *přesunout sémantiku*, což může výrazně zvýšit výkon vašich aplikací. Přesunout sémantiku umožňuje psát kód, který přenáší prostředky (například dynamicky přidělené paměti) z jednoho objektu do druhého. Přesunout sémantiku funguje, protože umožňuje prostředky, které mají být převedeny z dočasných objektů, které nelze odkazovat jinde v programu.
 
-Pro implementaci sémantiky přesunutí obvykle poskytnete *konstruktor Move* a volitelně operátor přiřazení přesunu (**Operator =** ) do vaší třídy. Operace kopírování a přiřazení, jejichž zdroje jsou rvalue, pak automaticky využijí sémantiky přesunutí. Na rozdíl od výchozího kopírovacího konstruktoru kompilátor neposkytuje výchozí konstruktor Move. Další informace o tom, jak napsat konstruktor přesunu a jak ho použít v aplikaci, naleznete v tématu [Move konstruktors and Move Assignment OperatorsC++()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Chcete-li implementovat přesunout sémantiku, obvykle poskytují *move konstruktor* a volitelně operátor přiřazení přesunutí (**operátor =**), do vaší třídy. Operace kopírování a přiřazení, jejichž zdroje jsou rvalues, pak automaticky využívají sémantiku přesunutí. Na rozdíl od výchozího konstruktoru kopie kompilátor neposkytuje výchozí konstruktor move. Další informace o tom, jak napsat konstruktor přesunutí a jak jej používat ve vaší aplikaci, naleznete v [tématu Přesunutí konstruktorů a přesunutí operátorů přiřazení (C++).](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
 
-Můžete také přetížit běžné funkce a operátory a využít přitom sémantiku přesunutí. Visual Studio 2010 zavádí sémantiku přesunutí do C++ standardní knihovny. `string` Třída například implementuje operace, které provádějí sémantiku přesunutí. Vezměte v úvahu následující příklad, který zřetězí několik řetězců a vytiskne výsledek:
+Můžete také přetížení běžné funkce a operátory využít přesunout sémantiku. Visual Studio 2010 zavádí přesunout sémantiku do standardní knihovny C++. Například třída `string` implementuje operace, které provádějí sémantiku přesunutí. Vezměme si následující příklad, který zřetězí několik řetězců a vytiskne výsledek:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,23 +51,23 @@ int main()
 }
 ```
 
-Před Visual Studio 2010 se každé volání **operátoru +** přidělí a vrátí nový dočasný `string` objekt (rvalue). **Operator +** nemůže připojit jeden řetězec k druhému, protože neví, zda jsou zdrojové řetězce hodnoty lvalue nebo rvalue. Pokud jsou zdrojové řetězce hodnoty lvalue, mohou být odkazovány jinde v programu a proto nesmí být upraveny. Pomocí odkazů rvalue lze **operátor +** upravit tak, aby převzal rvalue, na který nelze odkazovat jinde v programu. Proto **operátor +** může nyní připojit jeden řetězec k druhému. To může významně snížit počet přidělených dynamických paměti, které `string` třída musí provádět. Další informace o `string` třídě naleznete v tématu [Třída basic_string](../standard-library/basic-string-class.md).
+Před Visual Studio 2010 každé volání **operátor+** přiděluje a vrací nový dočasný `string` objekt (rvalue). **operátor+** nemůže připojit jeden řetězec k druhému, protože neví, zda jsou zdrojové řetězce lvalues nebo rvalues. Pokud jsou zdrojové řetězce obě lvalues, mohou být odkazovány jinde v programu a proto nesmí být změněny. Pomocí rvalue odkazy, **operátor+** lze upravit tak, aby rvalues, které nelze odkazovat jinde v programu. Proto **operátor+** nyní můžete připojit jeden řetězec do druhého. To může výrazně snížit počet přidělení dynamické `string` paměti, které musí třída provést. Další informace o `string` třídě naleznete v [tématu basic_string Class](../standard-library/basic-string-class.md).
 
-Přesunutí sémantiky také pomáhá, když kompilátor nemůže použít optimalizaci návratových hodnot (RVO) nebo pojmenovanou optimalizaci návratové hodnoty (NRVO). V těchto případech vyvolá kompilátor přesunutí konstruktoru, pokud jej definuje typ. Další informace o optimalizaci pojmenovaných vrácených hodnot naleznete [v tématu Optimalizace pojmenované návratové hodnoty v aplikaci Visual Studio 2005](/previous-versions/ms364057(v=vs.80)).
+Přesunout sémantiku také pomáhá, když kompilátor nemůže použít optimalizaci návratové hodnoty (RVO) nebo pojmenovanou optimalizaci návratové hodnoty (NRVO). V těchto případech kompilátor volá konstruktor move, pokud jej definuje typ.
 
-Chcete-li lépe pochopit sémantiku přesunutí, zvažte příklad vložení elementu do `vector` objektu. Pokud je překročena kapacita `vector` objektu `vector` , objekt musí znovu přidělit paměť pro své prvky a pak zkopírovat každý element do jiného umístění v paměti, aby uvolnil prostor pro vložený element. Když operace vložení zkopíruje prvek, vytvoří nový prvek, zavolá kopírovací konstruktor pro zkopírování dat z předchozího prvku do nového prvku a poté zničí předchozí prvek. Přesunutí sémantik umožňuje přesun objektů přímo bez nutnosti provádět náročné přidělování paměti a operace kopírování.
+Chcete-li lépe porozumět sémantiku přesunutí, zvažte `vector` příklad vložení prvku do objektu. Pokud je překročena kapacita objektu, `vector` `vector` musí objekt znovu přidělit paměť pro jeho prvky a potom zkopírovat každý prvek do jiného umístění paměti, aby se uvolnilo místo pro vložený prvek. Když operace vložení zkopíruje prvek, vytvoří nový prvek, volá konstruktor kopie zkopírovat data z předchozího prvku do nového prvku a pak zničí předchozí prvek. Přesunout sémantiku umožňuje přesunout objekty přímo bez nutnosti provádět nákladné přidělení paměti a kopírování operací.
 
-Chcete-li využít výhod sémantiky přesunutí v `vector` příkladu, můžete napsat konstruktor Move pro přesun dat z jednoho objektu na jiný.
+Chcete-li využít přesunout sémantiku v příkladu, `vector` můžete napsat move konstruktor přesunout data z jednoho objektu do druhého.
 
-Další informace o zavedení sémantiky přesunutí do C++ standardní knihovny v aplikaci Visual Studio 2010 naleznete v tématu [ C++ standardní knihovna](../standard-library/cpp-standard-library-reference.md).
+Další informace o zavedení přesunout sémantiku do standardní knihovny Jazyka C++ v sadě Visual Studio 2010 naleznete v [tématu C++ Standard Library](../standard-library/cpp-standard-library-reference.md).
 
-## <a name="perfect-forwarding"></a>Dokonalé přesměrování
+## <a name="perfect-forwarding"></a>Dokonalé přeposílání
 
-Dokonalé přesměrování snižuje potřebu přetížených funkcí a pomáhá vyhnout se problému s předáváním. K tomuto *problému* může dojít při psaní obecné funkce, která jako své parametry přijímá odkazy, a předá (nebo *předává*) tyto parametry jiné funkci. Například pokud obecná funkce přebírá parametr typu `const T&`, volaná funkce nemůže změnit hodnotu tohoto parametru. Pokud Obecná funkce přebírá parametr typu `T&`, nemůže být funkce volána pomocí rvalue (například dočasného objektu nebo celočíselného literálu).
+Dokonalé předávání snižuje potřebu přetížených funkcí a pomáhá vyhnout se problému s předáváním. *Problém předávání* může dojít při zápisu obecné funkce, která přebírá odkazy jako jeho parametry a předá (nebo *předává*) tyto parametry do jiné funkce. Pokud například obecná funkce přebírá parametr `const T&`typu , nemůže volaná funkce změnit hodnotu tohoto parametru. Pokud obecná funkce přebírá parametr `T&`typu , pak funkci nelze volat pomocí rvalue (například dočasný objekt nebo literál celého čísla).
 
-Obvykle pro vyřešení tohoto problému je nutné poskytnout přetížené verze generické funkce, která přijímá obojí `T&` a `const T&` pro každý z jeho parametrů. V důsledku toho se počet přetížených funkcí zvyšuje exponenciálně s počtem parametrů. Odkazy rvalue umožňují napsat jednu verzi funkce, která přijímá libovolný argument, a předá je do jiné funkce, jako kdyby byla jiná funkce přímo volána.
+Obvykle k vyřešení tohoto problému je nutné zadat přetížené verze obecné `T&` `const T&` funkce, které trvat oba a pro každý z jeho parametrů. V důsledku toho se počet přetížených funkcí exponenciálně zvyšuje s počtem parametrů. Rvalue odkazy umožňují napsat jednu verzi funkce, která přijímá libovolné argumenty a předává je do jiné funkce, jako kdyby druhá funkce byla volána přímo.
 
-Vezměte v úvahu následující příklad, který deklaruje čtyři typy `W`, `X`, `Y`, a `Z`. Konstruktor pro každý typ používá jinou kombinaci odkazů const a non-**const** jako svůj parametr.
+Zvažte následující příklad, který `W`deklaruje čtyři typy , `X`, `Y`a `Z`. Konstruktor pro každý typ má jinou kombinaci **const** a**non-const** lvalue odkazy jako jeho parametry.
 
 ```cpp
 struct W
@@ -91,7 +91,7 @@ struct Z
 };
 ```
 
-Předpokládejme, že chcete napsat obecnou funkci, která generuje objekty. Následující příklad ukazuje jeden ze způsobů, jak zapsat tuto funkci:
+Předpokládejme, že chcete napsat obecnou funkci, která generuje objekty. Následující příklad ukazuje jeden způsob, jak napsat tuto funkci:
 
 ```cpp
 template <typename T, typename A1, typename A2>
@@ -108,13 +108,13 @@ int a = 4, b = 5;
 W* pw = factory<W>(a, b);
 ```
 
-Následující příklad však neobsahuje platné volání `factory` funkce, protože `factory` bere odkazy lvalue, které lze upravit jako své parametry, ale je volána pomocí rvalue:
+Následující příklad však neobsahuje platné volání `factory` funkce, protože `factory` přebírá odkazy lvalue, které jsou upravitelné jako jeho parametry, ale je volána pomocí rvalues:
 
 ```cpp
 Z* pz = factory<Z>(2, 2);
 ```
 
-Obvykle pro vyřešení tohoto problému je nutné vytvořit přetíženou verzi `factory` funkce pro každou `A&` kombinaci parametrů a `const A&` . Odkazy rvalue umožňují napsat jednu verzi `factory` funkce, jak je znázorněno v následujícím příkladu:
+Obvykle k vyřešení tohoto problému je nutné vytvořit přetíženou verzi `factory` funkce `A&` `const A&` pro každou kombinaci a parametry. Odkazy na rvalue umožňují napsat jednu `factory` verzi funkce, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 template <typename T, typename A1, typename A2>
@@ -124,9 +124,9 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-Tento příklad používá odkazy rvalue jako parametry `factory` funkce. Účelem funkce [std::](../standard-library/utility-functions.md#forward) dopředné je přeposlání parametrů funkce Factory do konstruktoru třídy šablony.
+Tento příklad používá odkazy rvalue jako `factory` parametry funkce. Účelem funkce [std::forward](../standard-library/utility-functions.md#forward) je předat parametry funkce factory konstruktoru třídy šablony.
 
-Následující `main` příklad ukazuje funkci, která používá revidovanou `factory` funkci `W`k vytvoření instancí tříd, `X`, `Y`a `Z` . Revidovaná `factory` funkce přepošle své parametry (buď hodnoty lvalue nebo rvalue) do příslušného konstruktoru třídy.
+Následující příklad ukazuje `main` funkci, která `factory` používá revidovanou funkci `W`k `X` `Y`vytvoření `Z` instancí tříd , , a tříd. Revidovaná `factory` funkce předá své parametry (buď lvalues nebo rvalues) příslušnému konstruktoru třídy.
 
 ```cpp
 int main()
@@ -146,9 +146,9 @@ int main()
 
 ## <a name="additional-properties-of-rvalue-references"></a>Další vlastnosti odkazů rvalue
 
-**Můžete přetížit funkci, aby převzala odkaz lvalue a odkaz rvalue.**
+**Můžete přetížení funkce, aby se odkaz lvalue a rvalue odkaz.**
 
-Přetížením funkce, aby převzala odkaz **const** lvalue nebo odkaz rvalue, můžete napsat kód, který rozlišuje mezi neupravitelnými objekty (hodnoty lvalue) a upravitelnými dočasnými hodnotami (rvalue). Objektu můžete předat funkci, která převezme odkaz rvalue, pokud objekt není označený jako const. Následující příklad ukazuje funkci `f`, která je přetížena pro převzetí odkazu lvalue a odkazu rvalue. `main` Funkce volá`f` obě hodnoty lvalue i rvalue.
+Přetížením funkce tak, aby byla přijata referenční hodnota **const** lvalue nebo odkaz rvalue, můžete napsat kód, který rozlišuje mezi neupravitelnými objekty (lvalues) a modifikovatelnými dočasnými hodnotami (rvalues). Objekt můžete předat funkci, která přebírá odkaz na rvalue, pokud není objekt označen jako **const**. Následující příklad ukazuje `f`funkci , která je přetížena, aby přijala odkaz lvalue a odkaz rvalue. Funkce `main` volá `f` s ilvalues a rvalue.
 
 ```cpp
 // reference-overload.cpp
@@ -180,20 +180,20 @@ int main()
 }
 ```
 
-Tento příklad vytvoří následující výstup:
+Tento příklad vytváří následující výstup:
 
 ```Output
 In f(const MemoryBlock&). This version cannot modify the parameter.
 In f(MemoryBlock&&). This version can modify the parameter.
 ```
 
-V tomto příkladu první volání `f` předává místní proměnnou (l-hodnotu) jako argument. Druhé volání `f` předává dočasný objekt jako argument. Vzhledem k tomu, že na dočasný objekt nelze odkazovat jinde v programu, volání se váže k přetížené verzi `f` , která přebírá odkaz rvalue, což je zdarma upravovat objekt.
+V tomto příkladu první `f` volání předá místní proměnné (lvalue) jako jeho argument. Druhé volání `f` předá dočasný objekt jako jeho argument. Vzhledem k tomu, že dočasný objekt nelze odkazovat jinde v `f` programu, volání váže přetížené verze, která má rvalue odkaz, který je volně měnit objekt.
 
-**Kompilátor považuje pojmenovaný odkaz rvalue za lvalue a nepojmenované odkazy rvalue jako rvalue.**
+**Kompilátor považuje pojmenovanou hodnotu rvalue za lvalue a nepojmenovanou hodnotu jako rvalue.**
 
-Při psaní funkce, která jako svůj parametr přebírá odkaz rvalue, je tento parametr považován za lvalue v těle funkce. Kompilátor považuje pojmenovaný odkaz rvalue za hodnotu lvalue, protože na pojmenovaný objekt může odkazovat několik částí programu; mohlo by to být nebezpečné, aby bylo možné upravovat nebo odebírat prostředky z tohoto objektu více částmi programu. Například pokud se více částí programu pokusí přenést prostředky ze stejného objektu, pouze první část úspěšně převede prostředek.
+Při zápisu funkce, která má rvalue odkaz jako jeho parametr, tento parametr je považován za lvalue v těle funkce. Kompilátor považuje pojmenovanou hodnotu rvalue za lvalue, protože pojmenovaný objekt může odkazovat několik částí programu; bylo by nebezpečné povolit více částí programu upravit nebo odebrat prostředky z tohoto objektu. Pokud se například více částí programu pokusí přenést prostředky ze stejného objektu, pouze první část úspěšně převede prostředek.
 
-Následující příklad ukazuje funkci `g`, která je přetížena pro převzetí odkazu lvalue a odkazu rvalue. Funkce `f` přebírá odkaz rvalue jako svůj parametr (pojmenovaný odkaz rvalue) a vrací odkaz rvalue (nepojmenovaný odkaz rvalue). Při volání `g` `f` z `f` ,`g` řešení přetížení vybere verzi, která přebírá odkaz lvalue, protože tělo považuje svůj parametr za lvalue. Při volání `g` `f` z `main` ,`g` řešení přetížení vybere verzi, která přebírá odkaz rvalue, protože vrací odkaz rvalue.
+Následující příklad ukazuje `g`funkci , která je přetížena, aby přijala odkaz lvalue a odkaz rvalue. Funkce `f` přebírá jako svůj parametr odkaz rvalue (pojmenovaný odkaz rvalue) a vrací odkaz rvalue (nepojmenovaný odkaz rvalue). Volání do `g` from `f`, rozlišení přetížení vybere `g` verzi, která má odkaz `f` lvalue, protože tělo zachází s jeho parametr jako lvalue. Při volání `g` do `main`from , rozlišení přetížení `g` vybere verzi, která `f` má rvalue odkaz, protože vrátí odkaz rvalue.
 
 ```cpp
 // named-reference.cpp
@@ -229,18 +229,18 @@ int main()
 }
 ```
 
-Tento příklad vytvoří následující výstup:
+Tento příklad vytváří následující výstup:
 
 ```cpp
 In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-V tomto příkladu `main` funkce předává rvalue do `f`. Tělo `f` zpracovává jeho pojmenovaný parametr jako lvalue. Volání `f` `g`metody váže parametr na odkaz lvalue (první přetížená verze). `g`
+V tomto příkladu `main` funkce předá `f`rvalue . Tělo považuje `f` jeho pojmenovaný parametr jako lvalue. Volání z `f` `g` to váže parametr na odkaz lvalue (první `g`přetížená verze).
 
-- **L-hodnotu můžete přetypovat na odkaz rvalue.**
+- **Lvalue můžete přetypovat na odkaz rvalue.**
 
-C++ Standardní knihovna funkce [std:: Move](../standard-library/utility-functions.md#move) umožňuje převést objekt na odkaz rvalue na tento objekt. Alternativně můžete použít klíčové slovo **static_cast** k přetypování hodnoty lvalue na odkaz rvalue, jak je znázorněno v následujícím příkladu:
+Funkce [std::move](../standard-library/utility-functions.md#move) standardní knihovny jazyka C++umožňuje převést objekt na odkaz rvalue na tento objekt. Alternativně můžete použít **static_cast** klíčové slovo k přetypování lvalue na odkaz rvalue, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 // cast-reference.cpp
@@ -272,20 +272,20 @@ int main()
 }
 ```
 
-Tento příklad vytvoří následující výstup:
+Tento příklad vytváří následující výstup:
 
 ```cpp
 In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-**Šablony funkcí odvodit své typy argumentů šablony a pak používají pravidla sbalení odkazů.**
+**Šablony funkcí odvodí jejich typy argumentů šablony a poté použijí pravidla sbalení odkazů.**
 
-Je běžné napsat šablonu funkce, která předává (nebo *předává*) své parametry jiné funkci. Je důležité porozumět tomu, jak odvození typu šablony funguje pro šablony funkcí, které přijímají odkazy rvalue.
+Je běžné napsat šablonu funkce, která předává (nebo *předává*) své parametry jiné funkci. Je důležité pochopit, jak funguje odpočet typu šablony pro šablony funkcí, které berou odkazy na rvalue.
 
-Pokud je argumentem funkce rvalue, kompilátor odvodit argument jako odkaz rvalue. Například Pokud předáte odkaz rvalue objektu `X` typu na funkci šablony, která jako svůj parametr přebírá typ `T&&` , `X`odpočty `T` argumentů šablony se odvodit. Proto má parametr typ `X&&`. Pokud je argumentem funkce l-hodnota nebo const lvalue, kompilátor odvodí svůj typ tak, aby byl odkaz lvalue nebo **const** odkaz na lvalue tohoto typu.
+Pokud je argument funkce rvalue, kompilátor odvodí argument jako odkaz na rvalue. Pokud například předáte odkaz na rvalue `X` na objekt typu funkci `T&&` šablony, která bere typ jako `T` jeho `X`parametr, odpočet odpočtu argumentu šablony se odvede . Proto má parametr `X&&`typ . Pokud je argumentem funkce lvalue nebo **const** lvalue, kompilátor odvodí svůj typ jako odkaz lvalue nebo odkaz **const** lvalue tohoto typu.
 
-Následující příklad deklaruje jednu šablonu struktury a potom ji specializuje pro různé typy odkazů. Funkce jako svůj parametr převezme odkaz rvalue a předá ho příslušné specializované verzi `S::print` metody. `print_type_and_value` Funkce ukazuje různé způsoby `S::print` volání metody. `main`
+Následující příklad deklaruje jednu šablonu struktury a pak ji specializuje na různé typy odkazů. Funkce `print_type_and_value` přebírá odkaz rvalue jako jeho parametr a předá jej `S::print` příslušné specializované verzi metody. Funkce `main` ukazuje různé způsoby volání `S::print` metody.
 
 ```cpp
 // template-type-deduction.cpp
@@ -366,7 +366,7 @@ int main()
 }
 ```
 
-Tento příklad vytvoří následující výstup:
+Tento příklad vytváří následující výstup:
 
 ```cpp
 print<T&>: first
@@ -375,40 +375,40 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-Chcete-li vyřešit každé volání `print_type_and_value` funkce, kompilátor nejprve provede odvození argumentu šablony. Kompilátor potom použije pravidla sbalení odkazu, když nahradí odvozené argumenty šablony pro typy parametrů. Například předání místní proměnné `s1` `print_type_and_value` funkci způsobí, že kompilátor vygeneruje následující signaturu funkce:
+Chcete-li vyřešit `print_type_and_value` každé volání funkce, kompilátor nejprve provede odpočet argumentů šablony. Kompilátor pak použije pravidla sbalení odkazu, když nahradí odvozené argumenty šablony pro typy parametrů. Například předání místní `s1` proměnné `print_type_and_value` funkci způsobí, že kompilátor vytvoří následující podpis funkce:
 
 ```cpp
 print_type_and_value<string&>(string& && t)
 ```
 
-Kompilátor používá pravidla sbalení odkazů ke snížení signatury na následující:
+Kompilátor používá pravidla sbalení odkazu ke snížení podpisu na následující:
 
 ```cpp
 print_type_and_value<string&>(string& t)
 ```
 
-Tato verze `print_type_and_value` funkce pak předá svůj parametr správné specializované verzi `S::print` metody.
+Tato verze `print_type_and_value` funkce pak předá svůj parametr správné specializované `S::print` verzi metody.
 
-Následující tabulka shrnuje pravidla sbalení odkazu pro odvození typu argumentu šablony:
+Následující tabulka shrnuje pravidla sbalení odkazu pro odpočet typu argumentu šablony:
 
 |||
 |-|-|
-|Rozbalený typ|Sbalený typ|
+|Rozšířený typ|Sbalený typ|
 |`T& &`|`T&`|
 |`T& &&`|`T&`|
 |`T&& &`|`T&`|
 |`T&& &&`|`T&&`|
 
-Odvození argumentu šablony je důležitým prvkem implementace dokonalého předávání. Oddíl Perfect forwarding uvedený výše v tomto tématu popisuje dokonalé přesměrování podrobněji.
+Odpočet argumentů šablony je důležitým prvkem implementace dokonalého předávání. Sekce Dokonalé předávání, která je uvedena dříve v tomto tématu, popisuje dokonalé předávání podrobněji.
 
 ## <a name="summary"></a>Souhrn
 
-Odkazy rvalue odlišují hodnoty lvalue od rvalue. Mohou pomoci zlepšit výkon aplikací tím, že eliminují nutnost zbytečného přidělení paměti a operací kopírování. Umožňují také napsat jednu verzi funkce, která přijímá libovolný argument, a předá je do jiné funkce, jako kdyby byla jiná funkce přímo volána.
+Odkazy rvalue rozlišují hodnoty lvalues od hodnot rvalues. Mohou vám pomoci zlepšit výkon aplikací tím, že eliminují potřebu zbytečného přidělení paměti a operací kopírování. Umožňují také napsat jednu verzi funkce, která přijímá libovolné argumenty a předává je do jiné funkce, jako by druhá funkce byla volána přímo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Deklarátor odkazu l-hodnoty: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[L-hodnoty a r-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[Lhodnoty a Hodnoty R](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Konstruktory a operátory přiřazení pro přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

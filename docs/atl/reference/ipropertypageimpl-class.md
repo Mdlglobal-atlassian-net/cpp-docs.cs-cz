@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: ac8fcb3b8b2bd0f876cf28d58e195000112373f4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 154bfb5beb258ff26649f44f0bd4c23fb8708977
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329576"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745860"
 ---
 # <a name="ipropertypageimpl-class"></a>Třída iPropertyPageimpl
 
@@ -61,13 +61,13 @@ Vaše třída, odvozená z `IPropertyPageImpl`.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[iPropertyPageimpl::iPropertyPageImpl](#ipropertypageimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[iPropertyPageImpl::Aktivovat](#activate)|Vytvoří okno dialogového okna pro stránku vlastností.|
 |[iPropertyPageImpl::Použít](#apply)|Aplikuje aktuální hodnoty stránky vlastností `SetObjects`na podkladové objekty určené prostřednictvím aplikace . Implementace ATL vrátí S_OK.|
@@ -84,7 +84,7 @@ Vaše třída, odvozená z `IPropertyPageImpl`.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IPropertyPageImpl::m_bDirty](#m_bdirty)|Určuje, zda se stav stránky vlastností změnil.|
 |[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Ukládá identifikátor prostředku přidružený k textovému řetězci popisujícímu stránku vlastností.|
@@ -295,7 +295,7 @@ Viz [IPropertyPage::Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) 
 
 Označí stav stránky vlastností jako změněný nebo nezměněný v závislosti na hodnotě *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 

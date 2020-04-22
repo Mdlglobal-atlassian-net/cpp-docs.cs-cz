@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 9581ea142c6f87ae12665374a483abc00763ad97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1874ddfdd26b8dd371e32f7e68ea8f668c47d8e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371125"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750218"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject – třída
 
@@ -71,14 +71,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Přetíženo. Vytvoří objekt animace.|
 |[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Destruktor. Nazývá se při zničení objektu animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Přidá přechody do scénáře s zapouzdřenou proměnnou animace.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Odebere všechny související přechody.|
@@ -97,14 +97,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Shromažďuje ukazatele na obsažené proměnné animace.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Vytvoří vztah mezi proměnné animace obsažené v objektu animace a jejich kontejneru.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda mají být související přechody automaticky zničeny.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Ukládá uživatelem definovaná data.|
@@ -246,7 +246,7 @@ Smyčky přes seznam proměnných animace zapouzdřené v odvozené matné objek
 
 Odpojí objekt animace od nadřazeného animačního kontroléru.
 
-```
+```cpp
 void DetachFromController();
 ```
 
@@ -425,7 +425,7 @@ CAnimationController* m_pParentController;
 
 Nastaví příznak, který automaticky zničí přechody.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bValue);
 ```
 
@@ -442,7 +442,7 @@ Tento příznak nastavte pouze v případě, že jste přidělili objekty přech
 
 Nastaví nová ID.
 
-```
+```cpp
 void SetID(
     UINT32 nObjectID,
     UINT32 nGroupID = 0);
@@ -476,7 +476,7 @@ Tento pomocník lze vytvořit vztah mezi proměnné animace obsažené v objektu
 
 Nastaví uživatelem definovaná data.
 
-```
+```cpp
 void SetUserData (DWORD dwUserData);
 ```
 

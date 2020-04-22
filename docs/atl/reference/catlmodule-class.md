@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 378c8634e00935c622f0bf5d06a4f6c50cc60cb6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfc11a95a8d5d9354279f4c71698a6bc35c7aca7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321426"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748616"
 ---
 # <a name="catlmodule-class"></a>Třída CAtlModule
 
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Konstruktor|
 |[CAtlModule::~CAtlModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Přepsat tuto metodu přidat parametry atl registru součásti (registrátor) náhradní mapy.|
 |[CAtlModule::AddTermFunc](#addtermfunc)|Přidá novou funkci, která má být volána při ukončení modulu.|
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlModul::m_libid](#m_libid)|Obsahuje identifikátor GUID aktuálního modulu.|
 |[CAtlModul::m_pGIT](#m_pgit)|Ukazatel na tabulku globálního rozhraní.|
@@ -222,7 +222,7 @@ IGlobalInterfaceTable* m_pGIT;
 
 Uvolní všechny datové členy.
 
-```
+```cpp
 void Term() throw();
 ```
 

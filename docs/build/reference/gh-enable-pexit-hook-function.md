@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749237"
 ---
-# <a name="gh-enable-pexit-hook-function"></a>/GH (Povolit funkce háku _pexit)
+# <a name="gh-enable-_pexit-hook-function"></a>/GH (Povolit funkce háku _pexit)
 
-Volání `_pexit` funkce na konci každé metody nebo funkce.
+Volá `_pexit` funkci na konci každé metody nebo funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,31 +28,31 @@ Volání `_pexit` funkce na konci každé metody nebo funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-`_pexit` Funkce není součástí žádné knihovny a je na vás poskytnout definici pro `_pexit`.
+Funkce `_pexit` není součástí žádné knihovny a je na vás, `_pexit`abyste pro něj zadali definici .
 
-Pokud máte v úmyslu explicitně volat `_pexit`, není potřeba poskytovat prototypu. Funkce musí být uvedena jako by měl následující prototyp, a musí distribuce obsahu všem registrů na záznam a vyvolat přes pop beze změny obsahu při ukončení:
+Pokud nemáte v `_pexit`úmyslu explicitně volat , není nutné zadat prototyp. Funkce musí vypadat, jako by měla následující prototyp, a musí při vstupu tlačit obsah všech registrů a při výstupu vysuňovat nezměněný obsah:
 
-```
+```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` je podobný `_penter`; naleznete v tématu [/Gh (povolení _penter funkce háku)](gh-enable-penter-hook-function.md) příklad toho, jak zapisovat `_pexit` funkce.
+`_pexit`je podobná `_penter`; viz [/Gh (Povolit _penter funkce hook)](gh-enable-penter-hook-function.md) pro `_pexit` příklad, jak napsat funkci.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **C/C++.**
 
-1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+1. Klepněte na stránku vlastností **příkazového řádku.**
 
-1. Zadejte možnost do kompilátoru **další možnosti** pole.
+1. Do pole **Další možnosti** zadejte možnost kompilátoru.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e52868f23883836919b96be9aec1815bc1c17b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330571"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747447"
 ---
 # <a name="cthreadpool-class"></a>Třída CThreadPool
 
@@ -50,14 +50,14 @@ Třída poskytující funkci použitou k vytvoření podprocesů ve fondu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor pro fond vláken.|
 |[CThreadPool::~CThreadPool](#dtor)|Destruktor pro fond vláken.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CThreadPool::Přidat odkaz](#addref)|Provádění `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Volání této metody získat počet podprocesů ve fondu.|
@@ -333,7 +333,7 @@ Všimněte si, že *dwMaxWait* je čas, který fond bude čekat na vypnutí jedn
 
 Volání této metody vypnout fondu vláken.
 
-```
+```cpp
 void Shutdown(DWORD dwMaxWait = 0) throw();
 ```
 

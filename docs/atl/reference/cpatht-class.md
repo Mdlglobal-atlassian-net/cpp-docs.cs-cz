@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331478"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746592"
 ---
 # <a name="cpatht-class"></a>Třída CPathT
 
@@ -79,7 +79,7 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 
 ### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Konstantní typ řetězce.|
 |[CPathT::PXSTR](#pxstr)|Typ řetězce.|
@@ -87,13 +87,13 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Cpatht::CPatht](#cpatht)|Konstruktor pro cestu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::AddBackslash](#addbackslash)|Volání této metody přidat zpětné lomítko na konec řetězce vytvořit správnou syntaxi pro cestu.|
 |[CPatht::AddExtension](#addextension)|Volání této metody přidat příponu souboru na cestu.|
@@ -135,7 +135,7 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::operátor const StringType &](#operator_const_stringtype_amp)|Tento operátor umožňuje objekt, který má být zpracován jako řetězec.|
 |[CPathT::operátor CPathT::PCXSTR](#operator_cpatht__pcxstr)|Tento operátor umožňuje objekt, který má být zpracován jako řetězec.|
@@ -144,7 +144,7 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPathT::m_strPath](#m_strpath)|Cesta.|
 
@@ -166,7 +166,7 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 
 Volání této metody přidat zpětné lomítko na konec řetězce vytvořit správnou syntaxi pro cestu. Pokud cesta již má koncové zpětné lomítko, nebude přidáno žádné zpětné lomítko.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Další informace naleznete v tématu [PathAppend](/windows/win32/api/shlwapi/nf
 
 Volání této metody k vytvoření kořenové cesty z daného čísla jednotky.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Další informace naleznete v tématu [PathBuildRoot](/windows/win32/api/shlwapi
 
 Volání této metody převést cestu do kanonického formuláře.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Další informace naleznete v tématu [PathCanonicalize](/windows/win32/api/shlw
 
 Volání této metody zřetězit řetězec představující název adresáře a řetězec představující název cesty souboru do jedné cesty.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Volání této metody uzavřít cestu do uvozovek, pokud obsahuje mezery.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Další informace naleznete v tématu [PathRelativePathTo](/windows/win32/api/sh
 
 Volání této metody odebrat všechny argumenty příkazového řádku z cesty.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Další informace naleznete v tématu [PathRemoveArgs](/windows/win32/api/shlwap
 
 Volání této metody odebrat koncové zpětné lomítko z cesty.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Další informace naleznete v tématu [PathRemoveBackslash](/windows/win32/api/s
 
 Volání této metody odebrat všechny úvodní a koncové mezery z cesty.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Další informace naleznete v tématu [PathRemoveBlanks](/windows/win32/api/shlw
 
 Volání této metody odebrat příponu souboru z cesty, pokud existuje.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Další informace naleznete v tématu [PathSkipRoot](/windows/win32/api/shlwapi/
 
 Volání této metody odebrat část cesty plně kvalifikovanou cestu a název souboru.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Další informace naleznete v tématu [PathStripToRoot](/windows/win32/api/shlwa
 
 Volání této metody odebrat uvozovky z začátku a konce cesty.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

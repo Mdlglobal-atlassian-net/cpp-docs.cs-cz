@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749616"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar – třída
 
@@ -128,7 +128,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMenubar::Adjustlocations](#adjustlocations)|(Přepíše `CMFCToolBar::AdjustLocations`.)|
 |[CMFCPanel menu::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda lze textové popisky zobrazit pod obrázky na tlačítkách panelu nástrojů. (Přepíše [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
@@ -430,7 +430,7 @@ Tuto metodu použijte, pokud chcete, aby ovládací prvek nabídky měl stejné 
 
 Povolí pole se seznamem **nápovědy,** které je umístěno na pravé straně panelu nabídek.
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ Uložené informace zahrnují položky nabídky, stav ukotvení a umístění pa
 
 Nastaví výchozí nabídku objektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) na základě ID prostředku.
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ Použijte metodu [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) k nač
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 Rozhraní Framework volá tuto metodu, když Rozhraní MDI změní režim zobrazení a řádek nabídek musí být aktualizován.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ Když je podřízené okno MDI maximalizováno, panel nabídek připojený k hla
 
 Nastaví informace o třídě runtime, které rozhraní používá, když uživatel vytvoří tlačítka nabídky.
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 

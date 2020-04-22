@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749170"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator – třída
 
@@ -57,13 +57,13 @@ class CCustomInterpolator;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Přetíženo. Vytvoří vlastní objekt interpolátoru a inicializuje dobu trvání a rychlost na zadané hodnoty.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomInterpolator::GetDependencies](#getdependencies)|Získá závislosti interpolátoru.|
 |[CCustomInterpolator::GetDuration](#getduration)|Získá dobu trvání interpolátoru.|
@@ -76,7 +76,7 @@ class CCustomInterpolator;
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|Interpolovaná hodnota.|
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Interpolovaná rychlost.|
@@ -173,7 +173,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*value*<br/>
 Výstup. Konečná hodnota proměnné na konci přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -184,7 +184,7 @@ Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané
 
 Inicializuje dobu trvání a konečnou hodnotu.
 
-```
+```cpp
 void Init(
     UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
@@ -210,7 +210,7 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*value*<br/>
 Výstup. Interpolovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: cc8aa9216fd0d4dcc169830fb745134ceb5c65fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c2f9ac1658f50f0ec5bd9e2f53d270c09bfcb6a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318416"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750319"
 ---
 # <a name="cshellmanager-class"></a>Třída CShellManager
 
@@ -49,13 +49,13 @@ class CShellManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|Vytvoří `CShellManager` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CShellManager::Procházetprosložku](#browseforfolder)|Zobrazí dialogové okno, které umožňuje uživateli vybrat složku prostředí.|
 |[CShellManager::Zřetězitpoložku](#concatenateitem)|Zřetězí dva PIDL.|
@@ -212,7 +212,7 @@ Ve většině případů není třeba vytvořit `CShellManager` přímo. Ve výc
 
 Odstraní seznam položek.
 
-```
+```cpp
 void FreeItem(LPITEMIDLIST pidl);
 ```
 

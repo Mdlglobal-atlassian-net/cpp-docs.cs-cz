@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: ae790cf1248c78ff9aa70c0e586f86af6c8f3b9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16eebfff4330a47888d1b60eaa993ee87d120f72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318946"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748295"
 ---
 # <a name="catlfilemappingbase-class"></a>Třída CAtlFileMappingBase
 
@@ -40,14 +40,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Konstruktor|
 |[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Volání této metody ke kopírování z objektu mapování souborů.|
 |[CAtlFileMappingBase::GetData](#getdata)|Volání této metody získat data z objektu mapování souborů.|
@@ -60,7 +60,7 @@ class CAtlFileMappingBase
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlFileMappingBase::operátor =](#operator_eq)|Nastaví aktuální objekt mapování souborů na jiný objekt mapování souborů.|
 
@@ -129,7 +129,7 @@ Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 Volání této metody získat data z objektu mapování souborů.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
