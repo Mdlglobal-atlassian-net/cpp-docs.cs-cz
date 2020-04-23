@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 468d947947fc89f9ebc832cda722d854bb8b4be2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367668"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752474"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage – třída
 
@@ -31,14 +31,14 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`CMFCCustomColorsPropertyPage::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
 |`CMFCCustomColorsPropertyPage::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
 |[CMFCCustomColorsPropertyPage::Instalace](#setup)|Nastaví barevné komponenty stránky vlastností.|
@@ -75,7 +75,7 @@ Následující příklad ukazuje, jak `CMFCCustomColorsPropertyPage` vytvořit o
 
 Nastaví barevné komponenty stránky vlastností.
 
-```
+```cpp
 void Setup(
     BYTE R,
     BYTE G,

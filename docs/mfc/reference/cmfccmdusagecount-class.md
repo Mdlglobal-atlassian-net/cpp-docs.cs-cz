@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367742"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752590"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount – třída
 
@@ -43,7 +43,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Výchozí konstruktor.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destruktor.|
 
@@ -51,7 +51,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCCmdUsageCountCount::AddCmd](#addcmd)|Přírůstky o jeden čítač, který je přidružen k danému příkazu.|
 |[CMFCCmdUsageCountCount::GetCount](#getcount)|Načte počet využití, který je přidružen k dané ID příkazu.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Určuje, zda tento objekt shromáždil minimální množství dat sledování.|
@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`m_CmdUsage`|Objekt, `CMap` který mapuje příkazy na jejich použití se počítá.|
 |`m_nMinUsagePercentage`|Minimální procento využití pro příkaz, který má být často používán.|
 |`m_nStartCount`|Počáteční čítač, který se používá k určení, zda tento objekt shromáždil minimální množství dat sledování.|
@@ -90,7 +90,7 @@ Mezi spuštěními programu můžete zachovat `CMFCCmdUsageCount` data třídy. 
 
 Přírůstky o jeden čítač, který je přidružen k danému příkazu.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
@@ -179,7 +179,7 @@ Tato metoda vrátí 0, pokud `m_nTotalUsage`celkové využití příkazu, , je 0
 
 Vymaže počet využití všech příkazů.
 
-```
+```cpp
 void Reset();
 ```
 

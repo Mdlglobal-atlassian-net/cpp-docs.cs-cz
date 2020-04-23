@@ -1,20 +1,20 @@
 ---
-title: Třídy hodnot a struktury (C++/CX)
+title: Hodnotové třídy a struktury (C++/CX)
 ms.date: 12/30/2016
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740937"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752891"
 ---
-# <a name="value-classes-and-structs-ccx"></a>Třídy hodnot a struktury (C++/CX)
+# <a name="value-classes-and-structs-ccx"></a>Hodnotové třídy a struktury (C++/CX)
 
-*Struktura hodnot* nebo *hodnotová třída* je kompatibilní s prostředí Windows Runtime pod ("jednoduchá stará data struktura"). Má pevnou velikost a skládá se pouze z polí; na rozdíl od ref class nemá žádné vlastnosti.
+*Struktura hodnoty* nebo *třída hodnot* je pod kompatibilní se modulem Windows Runtime ("stará datová struktura plain"). Má pevnou velikost a skládá se pouze z polí; na rozdíl od třídy ref nemá žádné vlastnosti.
 
 Následující příklady ukazují, jak deklarovat a inicializovat struktury hodnot.
 
@@ -48,49 +48,49 @@ Následující příklady ukazují, jak deklarovat a inicializovat struktury hod
     ts3.str = "Another way to init a value struct.";
 ```
 
-Je-li proměnná typu hodnoty přiřazena jiné proměnné, je hodnota zkopírována tak, aby každá ze dvou proměnných měla svou vlastní kopii dat. Struktura *hodnot* je struktura s pevnou velikostí, která obsahuje pouze veřejná datová pole a je deklarována pomocí `value struct` klíčového slova.
+Pokud je proměnná typu hodnoty přiřazena jiné proměnné, hodnota se zkopíruje tak, aby každá z těchto dvou proměnných má vlastní kopii dat. *Struktura hodnoty* je struktura pevné velikosti, která obsahuje pouze veřejná `value struct` datová pole a je deklarována pomocí klíčového slova.
 
-*Hodnotová třída* je stejně jako a `value struct` s tím rozdílem, že její pole musí explicitně předávat veřejné přístupnost. Je deklarována pomocí `value class` klíčového slova.
+Hodnota *třídy* je `value struct` stejně jako kromě toho, že jeho pole musí být explicitně veřejné usnadnění přístupu. Deklaruje se `value class` pomocí klíčového slova.
 
-Struktura hodnot nebo hodnotová třída může obsahovat jako pole pouze základní číselné typy, třídy výčtu, `Platform::String^`nebo [Platform:: iBox \<T > ^](../cppcx/platform-ibox-interface.md) , kde T je číselný typ nebo třída výčtu nebo třída hodnoty nebo struktura. Pole může mít `nullptr`hodnotu – to je způsob, jakým C++ implementuje koncept *typů hodnot s možnou hodnotou null.* `IBox<T>^`
+Hodnota struktura nebo třída hodnot může obsahovat jako pole pouze `Platform::String^`základní číselné typy, třídy výčtu nebo [Platform::IBox \<T>^](../cppcx/platform-ibox-interface.md) kde T je číselný typ nebo třída výčtu nebo třída nebo struktura. Pole `IBox<T>^` může mít hodnotu `nullptr`– to je způsob, jakým C++ implementuje koncept typů hodnot s *možnou hodnotou null*.
 
-Struktura hodnot třídy nebo hodnoty, která obsahuje `Platform::String^` typ nebo `IBox<T>^` `memcpy`jako člen, není možné.
+Hodnota třídy nebo struktury hodnoty, která obsahuje `Platform::String^` nebo `memcpy` `IBox<T>^` typ jako člen není -nelze.
 
-Vzhledem k tomu, že `value class` všechny `value struct` členy nebo jsou veřejné a jsou generovány do metadat C++ , standardní typy nejsou povoleny jako členy. To se liší od referenčních tříd, které mohou `private` obsahovat `internal` nebo C++ standardní typy.
+Vzhledem k `value class` tomu, že všechny členy nebo `value struct` jsou veřejné a jsou vydávány do metadat, standardní typy Jazyka C++ nejsou povoleny jako členy. To se liší od ref `private` třídy, které mohou obsahovat nebo `internal` standardní C++ typy..
 
-Následující fragment kódu deklaruje `Coordinates` typy a `City` jako struktury hodnot. Všimněte si, že jeden `City` z datových členů `GeoCoordinates` je typ. `value struct` Může obsahovat jiné struktury hodnot jako členy.
+Následující fragment kódu deklaruje `Coordinates` `City` a typy jako struktury hodnoty. Všimněte si, `City` že jeden `GeoCoordinates` z datových členů je typ. A `value struct` může obsahovat jiné struktury hodnot jako členy.
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
 ## <a name="parameter-passing-for-value-types"></a>Předávání parametrů pro typy hodnot
 
-Pokud máte typ hodnoty jako funkci nebo parametr metody, je obvykle předána hodnotou. U větších objektů to může způsobit problémy s výkonem. V jazyce Visual Studio2013 a dřívějších byly hodnoty typů C++v/CX vždy předány hodnotou. V aplikaci Visual Studio 2015 a novějších lze typy hodnot předat podle odkazu nebo podle hodnoty.
+Pokud máte typ hodnoty jako parametr funkce nebo metody, je obvykle předán hodnotou. U větších objektů to může způsobit potíže s výkonem. Ve Visual Studio2013 a starší typy hodnot v Jazyce C++/CX byly vždy předány hodnotou. V sadě Visual Studio 2015 a novější můžete předat typy hodnot odkazem nebo hodnotou.
 
-Chcete-li deklarovat parametr, který předává hodnotový typ podle hodnoty, použijte kód podobný následujícímu:
+Chcete-li deklarovat parametr, který předává typ hodnoty podle hodnoty, použijte kód takto:
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
-Chcete-li deklarovat parametr, který předává hodnotový typ odkazem, použijte symbol Reference (&), jak je uvedeno níže:
+Chcete-li deklarovat parametr, který předává typ hodnoty odkazem, použijte referenční symbol (&), jako v následujícím:
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
-Typ uvnitř Method2 je odkaz na MyValueType a funguje stejným způsobem jako typ odkazu ve standardu C++.
+Typ uvnitř Method2 je odkaz na MyValueType a funguje stejným způsobem jako typ odkazu ve standardním jazyce C++.
 
-Pokud voláte – metoda1 z jiného jazyka, například C#, není nutné použít `ref` klíčové slovo or. `out` Při volání Method2 použijte `ref` klíčové slovo.
+Při volání Method1 z jiného jazyka, jako je C#, není nutné použít `ref` nebo `out` klíčové slovo. Při volání Method2 použijte `ref` klíčové slovo.
 
 ```
 Method2(ref obj);
 ```
 
-Můžete také použít symbol ukazatele (*) k předání typu hodnoty odkazem. Chování s ohledem na volající v jiných jazycích je stejné (volající v C# použití `ref` klíčového slova), ale v metodě je typ ukazatel na typ hodnoty.
+Symbol ukazatele (*) můžete také použít k předání typu hodnoty odkazem. Chování s ohledem na volající v jiných jazycích je stejný `ref` (volající v jazyce C# použít klíčové slovo), ale v metodě je typ ukazatel na typ hodnoty.
 
-## <a name="nullable-value-types"></a>Typy hodnot s možnou hodnotou null
+## <a name="nullable-value-types"></a>Typy hodnot s povolenou hodnotou Null
 
-Jak bylo zmíněno dříve, struktura hodnot třídy nebo hodnoty může mít pole typu [Platform:: iBox\<T > ^](../cppcx/platform-ibox-interface.md) `IBox<int>^`, například. Takové pole může mít libovolnou číselnou hodnotu, která je pro tento `int` typ platná, nebo může mít `nullptr`hodnotu. Pole s možnou hodnotou null můžete předat jako argument metodě, jejíž parametr je deklarován jako volitelný, nebo kdekoli jinde, že typ hodnoty není požadován pro hodnotu.
+Jak již bylo zmíněno dříve, třída hodnoty nebo struktura hodnoty může mít pole typu [Platform::IBox\<T>^](../cppcx/platform-ibox-interface.md)– například . `IBox<int>^` Takové pole může mít libovolnou číselnou `int` hodnotu, která je `nullptr`platná pro typ, nebo může mít hodnotu . Pole s možnou hodnotou null můžete předat jako argument metodě, jejíž parametr je deklarován jako volitelný, nebo kdekoli jinde, kde typ hodnoty nemusí mít hodnotu.
 
 Následující příklad ukazuje, jak inicializovat strukturu, která má pole s možnou hodnotou null.
 
@@ -129,7 +129,7 @@ bool MainPage::IsCurrentlyEnrolled(Student s)
 }
 ```
 
-Samotnou strukturu hodnoty lze nastavit jako null, jak je znázorněno zde:
+Samotná struktura hodnoty může být prohlášena za neplatnou stejným způsobem, jak je znázorněno zde:
 
 ```
 
@@ -147,7 +147,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

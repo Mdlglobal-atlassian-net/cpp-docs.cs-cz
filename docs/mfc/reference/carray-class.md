@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377028"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753975"
 ---
 # <a name="carray-class"></a>Třída CArray
 
@@ -72,13 +72,13 @@ Parametr šablony, který určuje typ argumentu, který se používá pro přís
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArray::Přidat](#add)|Přidá prvek na konec pole; v případě potřeby pole zvětší.|
 |[CArray::Připojit](#append)|Připojí k poli jiné pole; v případě potřeby pole zvětšuje|
@@ -100,7 +100,7 @@ Parametr šablony, který určuje typ argumentu, který se používá pro přís
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[operátor&#91;&#93;](#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
@@ -209,7 +209,7 @@ Pole zvětšuje jeden prvek najednou.
 
 Tato členská funkce slouží ke kopírování prvků jednoho pole do druhého.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ Používá se k implementaci operátoru přiřazení na levé straně pro pole.
 
 Uvolní všechny další paměti, která byla přidělena, zatímco pole bylo pěstováno.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ Podmínka `GetUpperBound( )` = -1 označuje, že pole neobsahuje žádné prvky.
 
 První verze `InsertAt` vloží jeden prvek (nebo více kopií prvku) na zadaný index v poli.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ Pro pole, ve kterém prvek obsahuje ukazatel na jeden z jeho vlastních členů 
 
 Odebere všechny prvky z tohoto pole.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ Pokud je pole již prázdné, funkce stále funguje.
 
 Odebere jeden nebo více prvků začínajících na zadaný index v poli.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ Pokud se pokusíte odebrat více prvků, než jsou obsaženy v poli nad bodem od
 
 Nastaví prvek pole na zadaný index.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ Je nutné zajistit, aby hodnota indexu představuje platnou pozici v poli. Pokud
 
 Nastaví prvek pole na zadaný index.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ Pole se v případě potřeby automaticky zvětší (to znamená, že horní mez
 
 Vytvoří velikost prázdného nebo existujícího pole; v případě potřeby přidělí paměť.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 335deefc04a80f47151c5d5e71486e30f9918abd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b75509beb7287fad5e51dc9d15fc3e47cacf6854
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356633"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751305"
 ---
 # <a name="icommandui-interface"></a>ICommandUI – rozhraní
 
@@ -35,7 +35,7 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[icommandui__Check](#check)|Nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu.|
 |[iCommandUI::ContinueRouting](#continuerouting)|Sděluje mechanismus směrování příkazů, aby pokračoval v směrování aktuální zprávy v řetězci obslužných rutin.|
@@ -77,7 +77,7 @@ Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do
 
 Sděluje mechanismus směrování příkazů, aby pokračoval v směrování aktuální zprávy v řetězci obslužných rutin.
 
-```
+```cpp
 void ContinueRouting();
 ```
 

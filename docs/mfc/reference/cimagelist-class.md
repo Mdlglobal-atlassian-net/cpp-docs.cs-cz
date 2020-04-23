@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372452"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752695"
 ---
 # <a name="cimagelist-class"></a>CImageList – třída
 
@@ -95,13 +95,13 @@ class CImageList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImageList::CImageList](#cimagelist)|Vytvoří `CImageList` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImageList::Přidat](#add)|Přidá obrázek nebo obrázky do seznamu obrázků.|
 |[CImageList::Připojit](#attach)|Připojí k objektu `CImageList` seznam obrázků.|
@@ -138,13 +138,13 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImageList::operátor HIMAGELIST](#operator_himagelist)|Vrátí hodnotu FUNKCE HIMAGELIST připojené k souboru `CImageList`.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CImageList::m_hImageList](#m_himagelist)|Úchyt obsahující seznam obrázků připojený k tomuto objektu.|
 
@@ -691,13 +691,13 @@ Ukazatel na kontext cílového zařízení. Po dokončení práce je nutné odst
 Nulový index obrázku, který má být vykreslen.
 
 *Pt*<br/>
-A [POINT](/previous-versions/dd162805\(v=vs.85\)) struktura obsahující souřadnice x a y, kde bude obraz nakreslena.
+A [POINT](/windows/win32/api/windef/ns-windef-point) struktura obsahující souřadnice x a y, kde bude obraz nakreslena.
 
 *Sz*<br/>
 Struktura [SIZE](/windows/win32/api/windef/ns-windef-size) označující velikost obrázku, který má být nakreslen.
 
 *ptOrigin*<br/>
-A [POINT](/previous-versions/dd162805\(v=vs.85\)) struktura obsahující souřadnice x a y určující levý horní roh operace kreslení vzhledem k samotnému obrazu. Obrazové body obrazu, které jsou vlevo od souřadnice x a nad souřadnicí y, nejsou vykresleny.
+A [POINT](/windows/win32/api/windef/ns-windef-point) struktura obsahující souřadnice x a y určující levý horní roh operace kreslení vzhledem k samotnému obrazu. Obrazové body obrazu, které jsou vlevo od souřadnice x a nad souřadnicí y, nejsou vykresleny.
 
 *fStyl*<br/>
 Příznak určující styl kreslení a volitelně překryvné zobrazení. Informace o překryvném obrázku najdete v části Poznámky. Výchozí implementace knihovny MFC, ILD_NORMAL, nakreslí obrázek pomocí barvy pozadí pro seznam obrázků. Pokud je barva pozadí CLR_NONE hodnotou, obraz se nakreslí transparentně pomocí masky.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adresa [point](/previous-versions/dd162805\(v=vs.85\)) struktury, která přijímá aktuální pozici přetažení.
+Adresa [point](/windows/win32/api/windef/ns-windef-point) struktury, která přijímá aktuální pozici přetažení.
 
 *lpPointHotSpot*<br/>
 Adresa `POINT` struktury, která přijímá odsazení obrazu přetažení vzhledem k poloze přetažení.

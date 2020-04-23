@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 822f4f6fe76bb5b82b455daec54ed96568ea6ba7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbf28787e0c0f7d89586fbf98632bd9172c12eed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375170"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754153"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox – třída
 
@@ -43,19 +43,19 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|Destruktor.|
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonFontcomboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Vytvoří a inicializuje `CMFCRibbonFontComboBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonFontoBox::BuildFonts](#buildfonts)|Naplní pole se seznamem písma pásu karet písmy zadaného typu písma, znakové sady a rozteče a rodiny.|
 |`CMFCRibbonFontComboBox::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
@@ -93,7 +93,7 @@ Po vytvoření `CMFCRibbonFontComboBox` objektu jej přidejte do panelu pásu ka
 
 Naplní pole se seznamem na pásu karet písmy.
 
-```
+```cpp
 void BuildFonts(
     int nFontType = DEVICE_FONTTYPE | RASTER_FONTTYPE | TRUETYPE_FONTTYPE,
     BYTE nCharSet = DEFAULT_CHARSET,
@@ -167,7 +167,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 Naplní pole se seznamem na pásu karet písmy dříve určeného typu písma, znakové sady a rozteče a rodiny.
 
-```
+```cpp
 void RebuildFonts();
 ```
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376467"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754648"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty – třída
 
@@ -41,13 +41,13 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Vytvoří `CDataPathProperty` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataPathProperty::Ovládací prvek GetControl](#getcontrol)|Načte asynchronní ovládací prvek OLE `CDataPathProperty` přidružený k objektu.|
 |[CDataPathProperty::GetPath](#getpath)|Načte název cesty vlastnosti.|
@@ -193,7 +193,7 @@ Otevření by mělo být restartováno. Odvozené třídy můžete přepsat tuto
 
 Volání této členské funkce přidružit asynchronní ovládací prvek OLE s objektem. `CDataPathProperty`
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -206,7 +206,7 @@ Ukazatel na asynchronní ovládací prvek OLE, který má být přidružen k vla
 
 Volání této členské funkce nastavit název cesty vlastnosti.
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: d1231df8fa6287e5983327784283c37c2f0eb6ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 05b4d6129f5c398df7f3e1efc249cf51c2326914
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319849"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752833"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows – třída
 
@@ -163,13 +163,13 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Rozhraní framework volá tuto metodu k určení, zda 3D karty by měly být vždy zvýrazněny v aplikaci. (Přepíše [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Přepíše `CMFCVisualManager::DrawComboBorderWinXP`.)|
@@ -240,7 +240,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Určuje, zda se v motivu systému Windows XP zobrazí 3D karty.|
 
@@ -1477,7 +1477,7 @@ virtual void OnUpdateSystemColors();
 
 ## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a>CMFCVisualManagerWindows::SetOfficeStyleMenus
 
-```
+```cpp
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```
 

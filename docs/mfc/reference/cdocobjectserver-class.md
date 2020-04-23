@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f415df35b13e50eee092f87eca0627e5cf143720
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375496"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753293"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer – třída
 
@@ -37,19 +37,19 @@ class CDocObjectServer : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Vytvoří `CDocObjectServer` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocObjectServer::ActivateDocObject](#activatedocobject)|Aktivuje server objektu dokumentu, ale nezobrazí jej.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocObjectServer::Zobrazení OnActivateView](#onactivateview)|Zobrazí zobrazení DocObject.|
 |[CdocObjectServer::OnApplyViewState](#onapplyviewstate)|Obnoví stav zobrazení DocObject.|
@@ -81,7 +81,7 @@ Další informace o docobjects naleznete v [tématu CDocObjectServerItem](../../
 
 Volánítéto funkce pro aktivaci (ale nezobrazit) objektový server dokumentu.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 

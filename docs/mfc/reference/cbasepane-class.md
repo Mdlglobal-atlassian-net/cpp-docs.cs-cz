@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352941"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752988"
 ---
 # <a name="cbasepane-class"></a>CBasePane – třída
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Výchozí konstruktor.|
 |`CBasePane::~CBasePane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Volat rámci načíst podřízený prvek nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Volat rámci načíst aktuální umístění obrazovky pro zadaný objekt. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Vyplní pozadí podokna.|
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 Přidá podokno do dokovacího správce.
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ Volání této funkce ukotvit podokno do jiného podokna nebo dock bar [(CDockSi
 
 Ukotví podokno pomocí informací typu za běhu.
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 Zruší registraci podokna a odebere ho ze seznamu ve správci ukotvení.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 Nastaví režim ukotvení pro podokno.
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319746"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752816"
 ---
 # <a name="cmonthcalctrl-class"></a>Třída CMonthCalCtrl
 
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Vytvoří `CMonthCalCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMonthCalCtrl::Vytvořit](#create)|Vytvoří ovládací prvek měsíčního kalendáře `CMonthCalCtrl` a připojí jej k objektu.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Načte šířku ohraničení ovládacího prvku kalendáře aktuálního měsíce.|
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Určuje kombinaci stylů systému Windows aplikovaných na ovládací prvek měsíčního kalendáře. Další informace o stylech naleznete v části [Styly ovládacího prvku Kalendář](/windows/win32/Controls/month-calendar-control-styles) měsíců v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na strukturu [RECT.](/previous-versions/dd162897\(v=vs.85\)) Obsahuje pozici a velikost ovládacího prvku kalendář měsíce.
+Odkaz na strukturu [RECT.](/windows/win32/api/windef/ns-windef-rect) Obsahuje pozici a velikost ovládacího prvku kalendář měsíce.
 
 *Pt*<br/>
-Odkaz na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje umístění ovládacího prvku kalendář měsíce.
+Odkaz na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která identifikuje umístění ovládacího prvku kalendář měsíce.
 
 *pParentWnd*<br/>
 Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku kalendář měsíce. Nesmí být null.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parametry
 
 *pRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obdrží informace ohraničující obdélník. Tento parametr musí být platnou adresou a nemůže mít hodnotu NULL.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obdrží informace ohraničující obdélník. Tento parametr musí být platnou adresou a nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -808,7 +808,7 @@ Tato metoda odešle [zprávu MCM_GETCURRENTVIEW,](/windows/win32/Controls/mcm-ge
 
 Nastaví šířku ohraničení ovládacího prvku kalendáře aktuálního měsíce.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ Následující příklad kódu nastaví šířku ohraničení ovládacího prvku
 
 Nastaví výchozí šířku ohraničení ovládacího prvku kalendáře aktuálního měsíce.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/m
 
 Nastaví ovládací prvek kalendáře pro aktuální den.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpRect*|[v] Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která definuje obdélník, který obsahuje požadovaný počet kalendářů.|
+|*lpRect*|[v] Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která definuje obdélník, který obsahuje požadovaný počet kalendářů.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která definuje obdélník, jehož velikost je menší nebo rovna obdélník definované *lpRect* parametr.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která definuje obdélník, jehož velikost je menší nebo rovna obdélník definované *lpRect* parametr.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373000"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751136"
 ---
 # <a name="property-pages-mfc"></a>Stránky vlastností (MFC)
 
@@ -49,7 +49,7 @@ Následuje seznam maker použitých k vytvoření a správě stránek vlastnost�
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti celé číslo s indexem aktuálního výběru v poli se seznamem na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ Tato funkce by měla `DDX_CBIndex` být volána před voláním odpovídající 
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce s aktuálním výběrem v poli se seznamem na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ Tato funkce by měla `DDX_CBString` být volána před voláním odpovídající
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce, která přesně odpovídá aktuálnímu výběru v poli se seznamem na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ Tato funkce by měla `DDX_CBStringExact` být volána před voláním odpovídaj
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti s přidruženým ovládacím prvkem stránky vlastností.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ Tato funkce by měla `DDX_Check` být volána před voláním odpovídající fu
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti celé číslo s indexem aktuálního výběru v seznamu na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ Tato funkce by měla `DDX_LBIndex` být volána před voláním odpovídající 
 
 Volánítéto funkce ve `DoDataExchange` funkci stránky vlastností pro synchronizaci hodnoty vlastnosti řetězce s aktuálním výběrem v seznamu na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ Tato funkce by měla `DDX_LBString` být volána před voláním odpovídající
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce, která přesně odpovídá aktuálnímu výběru v seznamu na stránce vlastností.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ Tato funkce by měla `DDX_LBStringExact` být volána před voláním odpovídaj
 
 Volání této funkce ve `DoDataExchange` funkci stránky vlastností, dokončit převod hodnot vlastností ze stránky vlastností do ovládacího prvku při ukládání hodnot vlastností.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ Tato funkce by měla být volána po dokončení všech funkcí výměny dat. P�
 
 Volání této funkce ve `DoPropExchange` funkci ovládacího prvku pro synchronizaci hodnoty vlastnosti s ovládacím prvkem přidružené stránky stránky přepínacího tlačítka.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ Tato funkce by měla `DDX_Radio` být volána před voláním odpovídající fu
 
 Volání této funkce ve `DoDataExchange` funkci ovládacího prvku synchronizovat hodnotu vlastnosti s přidruženým ovládacím prvkem stránky vlastností.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

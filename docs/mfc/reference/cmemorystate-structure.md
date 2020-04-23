@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369987"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752611"
 ---
 # <a name="cmemorystate-structure"></a>Struktura stavu CMemoryState
 
@@ -29,13 +29,13 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMemoryState::CMemoryState](#cmemorystate)|Vytvoří strukturu třídy, která řídí kontrolní body paměti.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMemoryState::Kontrolní bod](#checkpoint)|Získá snímek (kontrolní bod) aktuálního stavu paměti.|
 |[CMemoryState::Difference](#difference)|Vypočítá rozdíl mezi dvěma `CMemoryState`objekty typu .|
@@ -79,7 +79,7 @@ Další informace o použití `CMemoryState` a další diagnostiky naleznete [v 
 
 Pořídí souhrn snímků paměti a `CMemoryState` uloží jej do tohoto objektu.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ Nenulová, pokud se dva stavy paměti liší; jinak 0.
 
 Volá `Dump` funkci pro všechny objekty typu `CObject` odvozené z třídy, které byly přiděleny (a `CMemoryState` jsou stále přiděleny) od [posledního volání Checkpoint](#checkpoint) pro tento objekt.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ Volání `DumpAllObjectsSince` s neinicializovaný `CMemoryState` objekt vypíš
 
 Vytiskne stručnou sestavu `CMemoryState` statistiky paměti z objektu, který je vyplněn členovou funkcí [Rozdíl.](#difference)
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: f63b2bb4fd5f809861622a4f6b255ee3725564b6
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
-ms.translationtype: MT
+ms.openlocfilehash: 3849074f93424912b1dc5b93883482a6cb55892a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750665"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
 
-Představuje typ [GUID](/previous-versions/cc317743(v%3dmsdn.10)) v systému prostředí Windows Runtimeho typu.
+Představuje typ typu [GUID](/windows/win32/api/guiddef/ns-guiddef-guid v systému typu Prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,33 +24,33 @@ Představuje typ [GUID](/previous-versions/cc317743(v%3dmsdn.10)) v systému pro
 public value struct Guid
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>Členové
 
-`Platform::Guid` má metody `Equals()`, `GetHashCode()`a `ToString()` odvozené z [třídy Platform:: Object](../cppcx/platform-object-class.md)a `GetTypeCode()` metody odvozené z [třídy Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` mají také následující členy.
+`Platform::Guid`má `Equals()`, `GetHashCode()`a `ToString()` metody odvozené z [Platform::Object](../cppcx/platform-object-class.md) `GetTypeCode()` Class a metodu odvozenou z [Platform::Type Class](../cppcx/platform-type-class.md). `Platform::Guid`má také následující členy.
 
 |Člen|Popis|
 |------------|-----------------|
-|[Hlavních](#ctor)|Inicializuje novou instanci `Platform::Guid`.|
-|[operator==](#operator-equality)|Operátor Equals|
-|[operator!=](#operator-inequality)|Operátor nerovnosti|
-|[operátor&lt;](#operator-less)|Operátor menší než|
-|[operator()](#operator-call)|Převede `Platform::Guid` na `GUID`.|
+|[Identifikátor guid](#ctor)|Inicializuje novou instanci `Platform::Guid`.|
+|[operátor==](#operator-equality)|Operátor Rovná se.|
+|[operátor!=](#operator-inequality)|Není rovná operátor.|
+|[Operátor&lt;](#operator-less)|Menší než operátor.|
+|[operátor()](#operator-call)|Převede `Platform::Guid` a `GUID`na .|
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vygenerovat nový `Platform::Guid`, použijte statickou metodu [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
+Chcete-li `Platform::Guid`generovat nový , použijte [Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) statickou metodu.
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaný klient:** Systém Windows 8
+**Minimální podporovaný klient:** Windows 8
 
-**Minimální podporovaný Server:** Windows Server 2012
+**Minimální podporovaný server:** Windows Server 2012
 
-**Obor názvů:** Platformy
+**Obor názvů:** Platforma
 
-**Metadata:** Platform. winmd
+**Metadata:** platform.winmd
 
-## <a name="ctor"></a>GUID:: GUID – konstruktory
+## <a name="guidguid-constructors"></a><a name="ctor"></a>Guid::Konstruktory guid
 
 Inicializuje novou instanci `Platform::Guid`.
 
@@ -81,48 +81,48 @@ Guid(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Prvních 4 bajtů `GUID`.
+*A*<br/>
+První 4 bajty `GUID`.
 
-*b*<br/>
-Dalších 2 bajtů `GUID`.
+*B*<br/>
+Další 2 bajty `GUID`.
 
-*c*<br/>
-Dalších 2 bajtů `GUID`.
+*C*<br/>
+Další 2 bajty `GUID`.
 
-*d*<br/>
-Další bajt `GUID`.
+*D*<br/>
+Další bajt . `GUID`
 
-*e*<br/>
-Další bajt `GUID`.
+*E*<br/>
+Další bajt . `GUID`
 
-*f*<br/>
-Další bajt `GUID`.
+*F*<br/>
+Další bajt . `GUID`
 
-*g*<br/>
-Další bajt `GUID`.
+*G*<br/>
+Další bajt . `GUID`
 
-*h*<br/>
-Další bajt `GUID`.
+*H*<br/>
+Další bajt . `GUID`
 
-*i*<br/>
-Další bajt `GUID`.
+*I*<br/>
+Další bajt . `GUID`
 
-*j*<br/>
-Další bajt `GUID`.
+*J*<br/>
+Další bajt . `GUID`
 
-*k*<br/>
-Další bajt `GUID`.
+*K*<br/>
+Další bajt . `GUID`
 
-*m*<br/>
-`GUID` ve formě [struktury GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+*M*<br/>
+A `GUID` ve formě [struktury GUID](/windows/win32/api/guiddef/ns-guiddef-guid).
 
-*n*<br/>
+*N*<br/>
 Zbývajících 8 bajtů `GUID`.
 
-## <a name="operator-equality"></a>GUID:: operator = = – operátor
+## <a name="guidoperator-operator"></a><a name="operator-equality"></a>Guid::operator== Operátor
 
-Porovná dvě instance `Platform::Guid` pro rovnost.
+Porovná dvě `Platform::Guid` instance rovnosti.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -132,23 +132,23 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>Parametry
 
-*guid1*<br/>
-První `Platform::Guid` k porovnání
+*identifikátor GUID1*<br/>
+První `Platform::Guid` porovnat.
 
 *guid2*<br/>
-Druhý `Platform::Guid` k porovnání.
+Druhý `Platform::Guid` porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud jsou tyto dvě instance `Platform::Guid` stejné.
+True, pokud `Platform::Guid` jsou dvě instance stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Raději použijte operátor `==` namísto statické metody [Windows:: Foundation:: GuidHelper:: Equals](/uwp/api/windows.foundation.guidhelper.equals) .
+Preferovat `==` použití operátoru namísto [Windows::Foundation::GuidHelper::Rovná se](/uwp/api/windows.foundation.guidhelper.equals) statickou metodu.
 
-## <a name="operator-inequality"></a>GUID:: operator! = – operátor
+## <a name="guidoperator-operator"></a><a name="operator-inequality"></a>Guid::operátor!= Operátor
 
-Porovná dvě instance `Platform::Guid` pro nerovnost.
+Porovná dvě `Platform::Guid` instance nerovnosti.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -158,19 +158,19 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>Parametry
 
-*guid1*<br/>
-První `Platform::Guid` k porovnání
+*identifikátor GUID1*<br/>
+První `Platform::Guid` porovnat.
 
 *guid2*<br/>
-Druhý `Platform::Guid` k porovnání.
+Druhý `Platform::Guid` porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud se tyto dvě instance `Platform::Guid` neshodují.
+True, pokud `Platform::Guid` dvě instance nejsou stejné.
 
-## <a name="operator-less"></a>GUID:: operator&lt; – operátor
+## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a>Identifikátor Guid::Operátor&lt; operátora
 
-Porovná dvě instance `Platform::Guid` pro řazení.
+Porovná dvě `Platform::Guid` instance pro řazení.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,21 +180,21 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="parameters"></a>Parametry
 
-*guid1*<br/>
-První `Platform::Guid` k porovnání
+*identifikátor GUID1*<br/>
+První `Platform::Guid` porovnat.
 
 *guid2*<br/>
-Druhý `Platform::Guid` k porovnání.
+Druhý `Platform::Guid` porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud je *guid1* seřazen před *guid2*. Řazení je lexikografickým pořadím, když se každý `Platform::Guid` zpracuje, jako by to bylo pole 4 32 nepodepsaných hodnot. Toto není řazení, které používá SQL Server nebo .NET Framework, ani to stejné jako řazení lexicographical podle řetězcové reprezentace.
+True, pokud *guid1* je objednáno před *guid2*. Řazení je lexikografické po `Platform::Guid` ošetření každého, jako by se jednalo o pole čtyř 32bitových nepodepsaných hodnot. Toto není řazení používané SQL Server nebo rozhraní .NET Framework, ani není stejné jako lexikografické řazení podle řetězcové reprezentace.
 
-Tento operátor je k dispozici, aby bylo možné `Guid` objekty snadněji využívané C++ standardní knihovnou.
+Tento operátor je k `Guid` dispozici tak, aby objekty mohou být snadněji spotřebovány standardní knihovny Jazyka C++.
 
-## <a name="operator-call"></a>GUID:: operator () – operátor
+## <a name="guidoperator-operator"></a><a name="operator-call"></a>Guid::operátor() Operátor
 
-Implicitně převede `Platform::Guid` na [strukturu identifikátoru GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Implicitně převede `Platform::Guid` a na [strukturu GUID](/windows/win32/api/guiddef/ns-guiddef-guid).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -204,8 +204,8 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Struktura identifikátoru GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+[Struktura GUID](/windows/win32/api/guiddef/ns-guiddef-guid).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

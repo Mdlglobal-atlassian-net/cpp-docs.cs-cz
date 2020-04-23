@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321903"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754607"
 ---
 # <a name="cdatetimectrl-class"></a>Třída CDateTimeCtrl
 
@@ -61,13 +61,13 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Vytvoří `CDateTimeCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDateTimeCtrl::ZavřítMonthCal](#closemonthcal)|Zavře aktuální ovládací prvek pro výběr data a času.|
 |[CDateTimeCtrl::Vytvořit](#create)|Vytvoří ovládací prvek pro výběr data a `CDateTimeCtrl` času a připojí jej k objektu.|
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Zavře aktuální ovládací prvek pro výběr data a času.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Určuje kombinaci stylů časového řízení. Další informace o stylech výběru data a času v části Windows SDK naleznete v [tématu Styly ovládacího prvku](/windows/win32/Controls/date-and-time-picker-control-styles) výběru data a času v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost ovládacího prvku výběr u data a času.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) struktury, což je umístění a velikost ovládacího prvku výběr u data a času.
 
 *pParentWnd*<br/>
 Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku pro výběr data a času. Nesmí být null.
@@ -474,7 +474,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/d
 
 Nastaví písmo, které bude používat ovládací prvek kalendáře podřízeného měsíce ovládacího prvku pro výběr data a času.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

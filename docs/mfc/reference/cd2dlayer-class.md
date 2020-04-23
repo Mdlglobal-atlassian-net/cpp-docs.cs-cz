@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: aa6fb313bfcc2983f167936e5ad4f78be1e17a44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 30025d6097e439c07202d144a6e549845b78ffa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369205"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754755"
 ---
 # <a name="cd2dlayer-class"></a>Třída CD2DLayer
 
@@ -45,14 +45,14 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Vytvoří objekt CD2DLayer.|
 |[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|Destruktor. Nazývá se při zničení objektu vrstvy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DLayer::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DLayer::Vytvořit](#create)|Vytvoří vrstvu CD2D. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -64,13 +64,13 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DLayer::operátor ID2D1Layer*](#operator_id2d1layer_star)|Vrátí rozhraní ID2D1Layer.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DLayer::m_pLayer](#m_player)|Uloží ukazatel na objekt ID2D1Layer.|
 
@@ -98,7 +98,7 @@ virtual ~CD2DLayer();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1Layer* pResource);
 ```
 

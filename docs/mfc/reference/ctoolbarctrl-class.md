@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365096"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752220"
 ---
 # <a name="ctoolbarctrl-class"></a>Třída CToolBarctrl
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CtoolBarctrl::CToolBarCtrl](#ctoolbarctrl)|Vytvoří `CToolBarCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Přidá jeden nebo více bitmapových obrázků tlačítka do seznamu obrazů tlačítek dostupných pro ovládací prvek panelu nástrojů.|
 |[CtoolBarctrl::Přidat tlačítka](#addbuttons)|Přidá jedno nebo více tlačítek do ovládacího prvku panelu nástrojů.|
@@ -523,7 +523,7 @@ Neměli byste `CString` předat objekt této funkci, protože není možné mít
 
 Změní velikost celého ovládacího prvku panelu nástrojů.
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy WS_CHILD styl. Kromě toho můžete určit libovolnou kombinaci stylů panelů nástrojů a stylů oken, jak je popsáno v části **Poznámky**.
 
 *Rect*<br/>
-Volitelně určuje velikost a umístění ovládacího prvku panelu nástrojů. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Volitelně určuje velikost a umístění ovládacího prvku panelu nástrojů. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku panelu nástrojů. Nesmí být null.
@@ -681,7 +681,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy WS_CHILD styl. Kromě toho můžete určit libovolnou kombinaci stylů panelů nástrojů a stylů oken, jak je popsáno v části **Poznámky** v části [Vytvořit](#create).
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -713,7 +713,7 @@ Chcete-li vytvořit panel nástrojů, je nutné volat [Create.](#create)
 
 Zobrazí dialogové okno Přizpůsobit panel nástrojů.
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Načte aktuální značku vložení pro panel nástrojů.
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Nulový index tlačítka, pro které chcete načíst informace.
 
 *lpRect*<br/>
-Adresa [rect](/previous-versions/dd162897\(v=vs.85\)) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijímá souřadnice ohraničující obdélník.
+Adresa [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijímá souřadnice ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1132,7 +1132,7 @@ Maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.
 
 Načte metriky objektu. `CToolBarCtrl`
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 Identifikátor tlačítka.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury přijímat informace ohraničující obdélník.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) struktury přijímat informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parametry
 
 *Ppt*<br/>
-Ukazatel na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje x souřadnice testu přístupů v `x` členu `y` a y souřadnice testu přístupů v členu. Souřadnice jsou relativní vzhledem k oblasti klienta panelu nástrojů.
+Ukazatel na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která obsahuje x souřadnice testu přístupů v `x` členu `y` a y souřadnice testu přístupů v členu. Souřadnice jsou relativní vzhledem k oblasti klienta panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *Ppt*<br/>
-Ukazatel na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje souřadnice testu přístupů vzhledem k oblasti klienta panelu nástrojů.
+Ukazatel na [point](/windows/win32/api/windef/ns-windef-point) strukturu, která obsahuje souřadnice testu přístupů vzhledem k oblasti klienta panelu nástrojů.
 
 *ptbim*<br/>
 Ukazatel na strukturu [TBINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) která obdrží informace o značce vložení.
@@ -1567,7 +1567,7 @@ Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden s
 
 Načte bitmapy do seznamu obrázků ovládacího prvku panelu nástrojů.
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ Následující příklad kódu nahradí bitmapu pro standardní panel nástrojů
 
 Obnoví stav ovládacího prvku panelu nástrojů z umístění v registru určeném parametry.
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ Odkazuje na řetězec obsahující název hodnoty, kterou chcete načíst. Pokud
 
 Uloží stav ovládacího prvku panelu nástrojů v umístění v registru určeném parametry.
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1883,7 +1883,7 @@ Velikost tlačítka musí být vždy alespoň tak velká jako velikost bitmapy, 
 
 Určuje velikost `TBBUTTON` struktury.
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ Vrátí nenulovou hodnotu, pokud je úspěšná. jinak nula.
 
 Nastaví barevné schéma aktuálního ovládacího prvku panelu nástrojů.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Nastaví značku aktuálního vložení pro panel nástrojů.
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Nastaví metriky `CToolBarCtrl` objektu.
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ Tato členská funkce emuluje funkce [zprávy TB_SETMETRICS,](/windows/win32/Con
 
 Nastaví okno vlastníka ovládacího prvku panelu nástrojů.
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ Následující příklad kódu nastaví, aby byl seznam stisknutého obrázku st
 
 Požádá ovládací prvek panelu nástrojů o velikost na požadovaný počet řádků.
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ Požadovaný počet řádků.
 Určuje, zda má být používáno více řádků nebo méně řádků, pokud nelze velikost panelu nástrojů na požadovaný počet řádků.
 
 *lpRect*<br/>
-Odkazuje na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, která obdrží nový ohraničovací obdélník panelu nástrojů.
+Odkazuje na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, která obdrží nový ohraničovací obdélník panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2341,7 +2341,7 @@ Tato funkce je obzvláště užitečná, pokud chcete nastavit více než jeden 
 
 Nastaví styly ovládacího prvku panelu nástrojů.
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ DWORD obsahující kombinaci [stylů ovládacího prvku panelu nástrojů](/wind
 
 Přidruží ovládací prvek špičky nástroje k ovládacímu prvku panelu nástrojů.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 

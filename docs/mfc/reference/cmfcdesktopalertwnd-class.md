@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367639"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752456"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd – třída
 
@@ -67,7 +67,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDesktopAlertWnd::Vytvořit](#create)|Vytvoří a inicializuje okno výstrah y plochy.|
 |[CMFCDesktopAlertWnd::Rychlost getanimationspeed](#getanimationspeed)|Vrátí rychlost animace.|
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Nastaví novou rychlost animace.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,7 +408,7 @@ Volání této metody nastavit rychlost animace pro okno výstrahy. Výchozí ry
 
 Nastaví typ animace.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
@@ -435,7 +435,7 @@ Volání této metody nastavit typ animace. Můžete určit jednu z následujíc
 
 Nastaví časový režim automatického uzavření.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ Okno výstrahy se automaticky zavře po zadaném čase, pokud uživatel s oknem 
 
 Přepíná mezi titulky malé a běžné velikosti.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ Volání této metody zobrazíte popisek malé nebo běžné velikosti. Ve vých
 
 Nastaví úroveň průhlednosti vyskakovacího okna.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

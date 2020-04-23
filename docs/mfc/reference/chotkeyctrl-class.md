@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366888"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750810"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl – třída
 
@@ -43,13 +43,13 @@ class CHotKeyCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Vytvoří `CHotKeyCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHotKeyCtrl::Vytvořit](#create)|Vytvoří ovládací prvek s klávesovou `CHotKeyCtrl` zkratkou a připojí jej k objektu.|
 |[CHotKeyCtrl::CreateEx](#createex)|Vytvoří ovládací prvek s klávesovou zkratkou se zadanými rozšířenými styly systému Windows a připojí jej k objektu. `CHotKeyCtrl`|
@@ -151,7 +151,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku s párklávesové zkratky. Použijte libovolnou kombinaci stylů ovládacích prvků. Další informace naleznete v [tématu Common Control Styles](/windows/win32/Controls/common-control-styles) in the Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -254,7 +254,7 @@ Název klíče, který tato funkce vrátí, pochází z ovladače klávesnice, t
 
 Nastaví klávesovou zkratku pro ovládací prvek s klávesovou zkratkou.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ Kód virtuální klávesy a modifikační klávesy společně definují kláveso
 
 Volánítéto funkce definuje neplatné kombinace a výchozí kombinaci modifikátoru pro ovládací prvek klávesové zkratky.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318629"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754463"
 ---
 # <a name="cricheditview-class"></a>CRichEditView – třída
 
@@ -121,13 +121,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Vytvoří `CRichEditView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditView::UpravitdialogPosition](#adjustdialogposition)|Přesune dialogové okno tak, aby nezakrývalo aktuální výběr.|
 |[CricheditView::CanPaste](#canpaste)|Určuje, zda schránka obsahuje data, která lze vložit do rozšířeného zobrazení úprav.|
@@ -164,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Načte objekt schránky pro oblast v tomto rozšířeném zobrazení úprav.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Načte místní nabídku pro použití na pravé tlačítko myši dolů.|
@@ -181,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Označuje velikost odsazení pro seznamy odrážek.|
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|Označuje omezení zalamování řádků.|
@@ -218,7 +218,7 @@ Příklad použití rozšířeného zobrazení úprav v aplikaci knihovny MFC na
 
 Volánítéto funkce přesunout dané dialogové okno tak, aby nezakrývalo aktuální výběr.
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 Volání této funkce pro vložení položky OLE v *dataobj* do tohoto rozšířeného upravit dokument/zobrazení.
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ Počet znaků nebo bajtů v ovládacím prvku úprav. Pokud byly v *dwFlags*nast
 
 Volání této funkce vložit zadaný soubor (jako [cRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objekt) do zobrazení bohaté úpravy.
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ Jedna z následujících hodnot:
 
 Voláním této funkce přepnete efekty formátování znaků pro aktuální výběr.
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ Další informace naleznete v [tématu IStorage](/windows/win32/api/objidl/nn-ob
 
 Voláním této funkce změníte zarovnání odstavce pro vybrané odstavce.
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ Další informace naleznete v tématu [MessageBeep](/windows/win32/api/winuser/n
 
 Rozhraní Framework volá tuto funkci k aktualizaci příkazu UI pro příkazy efekt znaků.
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních h
 
 Framework volá tuto funkci k aktualizaci příkazu UI pro příkazy odstavcový efekt.
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ Další informace o hresult a `IDataObject`najdete v [tématu Struktura kódů c
 
 Voláním této funkce nastavte atributy formátování znaků pro `CRichEditView` nový text v tomto objektu.
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ Další informace naleznete [v tématu EM_SETCHARFORMAT](/windows/win32/Controls
 
 Voláním této funkce nastavte okraje tisku pro toto rozšířené zobrazení úprav.
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ Všimněte si, že okraje používané [PrintPage](#printpage) jsou relativní v
 
 Voláním této funkce nastavte velikost papíru pro tisk tohoto rozšířeného zobrazení úprav.
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ Další informace naleznete [v tématu EM_SETPARAFORMAT](/windows/win32/Controls
 
 Volání této funkce obnovit stav vnitřního vyhledávání ovládacího prvku [CRichEditView](../../mfc/reference/cricheditview-class.md) po neúspěšném volání [FindText](#findtext).
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

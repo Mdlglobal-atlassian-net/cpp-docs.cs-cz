@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376287"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753957"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem – třída
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Vytvoří `COleClientItem` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::Aktivovat](#activate)|Otevře položku OLE pro operaci a potom provede zadané sloveso.|
 |[COleClientItem::ActivateAs](#activateas)|Aktivuje položku jako jiný typ.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Volat rámci k určení, zda je povolena aktivace na místě.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Volat rámci při změně pozice položky.|
@@ -310,7 +310,7 @@ Další informace o použití rozhraní kontejneru naleznete v článcích [Kont
 
 Volání této funkce k provedení zadané ho sloveso namísto [DoVerb](#doverb) tak, aby můžete provést vlastní zpracování při vyvolání výjimky.
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ To se nazývá automaticky [COleConvertDialog::DoConvert](../../mfc/reference/co
 
 Volání této funkce inicializovat [COleDataObject](../../mfc/reference/coledataobject-class.md) pro přístup k datům v položce OLE.
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ Další informace naleznete v [tématech OleGetClipboard](/windows/win32/api/ole
 
 Volání této funkce změnit stav položky OLE z spuštěného stavu na načtený stav, to znamená, že načteste obslužnou rutinu v paměti, ale se serverem není spuštěn.
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ To se nazývá automaticky [COleConvertDialog](../../mfc/reference/coleconvertdi
 
 Volání této funkce zkopírovat položku OLE do schránky.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ Další informace naleznete v [tématech OleCreateStaticFromData](/windows/win32
 
 Voláním této funkce deaktivujte položku OLE a uvolníte všechny přidružené prostředky.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ Další informace naleznete v tématu [IOleInPlaceObject::InPlaceDeactivate](/wi
 
 Volání této funkce, když uživatel deaktivuje položku, která byla aktivována na místě.
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ Další informace naleznete v tématu [IOleInPlaceObject::InPlaceDeactivate](/wi
 
 Volání této funkce odstranit položku OLE z dokumentu kontejneru.
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ Další informace naleznete v tématu [IViewObject2::GetExtent](/windows/win32/a
 
 Vrátí ID třídy položky do paměti, na kterou se vztahuje *bod pClassID*.
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ Další informace naleznete v [tématu IPersist::GetClassID](/windows/win32/api/
 
 Voláním této funkce `COleDataSource` získáte objekt obsahující všechna data, která by byla umístěna do schránky voláním členské funkce [CopyToClipboard.](#copytoclipboard)
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ Nepodepsané celé číslo s jednou z následujících hodnot:
 
 Volání této funkce získat uživatelem viditelný řetězec popisující typ položky OLE, například "Dokument aplikace Word."
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ Volání `Reload` funkce po aktivaci položky jako položky jiného typu volán�
 
 Spustí aplikaci přidruženou k této položce.
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ Tato funkce je volána automaticky ikonou změnit (a další mise, která přím
 
 Volání této funkce určit, kolik místa je k dispozici pro položku OLE.
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2040,7 +2040,7 @@ Další informace naleznete v tématu [IOleObject::SetExtent](/windows/win32/api
 
 Volání této funkce zadejte název aplikace kontejneru a název kontejneru pro vloženou položku OLE.
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ Další informace naleznete v tématu [IOleInPlaceObject::SetObjectRects](/windo
 
 Voláním této funkce nastavte možnost aktualizace odkazu pro prezentaci zadané propojené položky.
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 

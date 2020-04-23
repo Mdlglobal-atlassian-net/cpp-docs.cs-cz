@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372221"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753588"
 ---
 # <a name="clistbox-class"></a>CListBox – třída
 
@@ -124,13 +124,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Vytvoří `CListBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListBox::Přidat řetězec](#addstring)|Přidá řetězec do seznamu.|
 |[CListBox::chartoitem](#chartoitem)|Přepsat poskytnout vlastní WM_CHAR zpracování pro seznamy losování vlastníka, které nemají řetězce.|
@@ -717,7 +717,7 @@ Hodnota doubleword byla parametrem *dwItemData* volání [SetItemData.](#setitem
 
 Načte 32bitovou hodnotu dodanou aplikací přidruženou k zadané položce seznamu jako ukazatel (**void** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ Viz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pro p
 
 Odebere všechny položky ze seznamu.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ Tuto členská funkci používejte pouze se seznamy s více výběry. Pokud pot�
 
 Nastaví kotvu v seznamu s více násobným výběrem tak, aby začínala rozšířený výběr.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ Pokud položka není viditelná, je posunuta do zobrazení.
 
 Nastaví šířku všech sloupců v obrazových bodech [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) v seznamu s více sloupci (vytvořeného LBS_MULTICOLUMN stylem).
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ Chcete-li nastavit nebo odebrat výběr v seznamu s více násobným výběrem, 
 
 Nastaví šířku v obrazových bodech, o kterou lze seznam posouvat vodorovně.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ Chcete-li vybrat položku ze seznamu s jedním výběrem, použijte [CListBox::S
 
 Nastaví pozice zastavovacího místa v seznamu.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

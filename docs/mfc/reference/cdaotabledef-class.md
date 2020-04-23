@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377129"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754686"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef – třída
 
@@ -93,13 +93,13 @@ class CDaoTableDef : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Vytvoří `CDaoTableDef` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoTableDef::Připojit](#append)|Přidá do databáze novou tabulku.|
 |[CDaoTableDef::CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud lze tabulku aktualizovat (můžete upravit definici polí nebo vlastnosti tabulky).|
@@ -134,7 +134,7 @@ class CDaoTableDef : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|Ukazatel na rozhraní DAO, které je základem objektu tabledef.|
 |[CDaoTableDef::m_pDatabase](#m_pdatabase)|Zdrojová databáze pro tuto tabulku.|
@@ -300,7 +300,7 @@ Související informace naleznete v tématu "Metoda CreateTableDef" v nápověd�
 
 Volání této členské funkce pro přidání pole do tabulky.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ Související informace naleznete v tématu "Metoda CreateField" v nápovědě d
 
 Volání této funkce přidat index do tabulky.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ Zbývající členové budou ignorováni, pokud je nastavena na FALSE. Kromě to
 
 Volání této členské funkce odebrat pole a znepřístupní jej.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ Související informace naleznete v tématu "Delete Method" v nápovědě dao.
 
 Volání této členské funkce odstranit index v podkladové tabulce.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ Související informace naleznete v tématu "Count Property" v nápovědě dao.
 
 Volání této členské funkce získat různé druhy informací o pole definované v tabledef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ Související informace naleznete v tématu "Count Property" v nápovědě dao.
 
 Volání této členské funkce získat různé druhy informací o indexu definované v tabledef.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ Ukazatel na řetězec, který určuje název tabulky.
 
 Volání této členské funkce aktualizovat informace o připojení pro připojené tabulky.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ Související informace naleznete v tématu "RefreshLink Method" v nápovědě D
 
 Nastaví hodnotu, která označuje `CDaoTableDef` jednu nebo více vlastností objektu.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ Související informace naleznete v tématu "Vlastnost atributů" v nápovědě 
 
 Pro `CDaoTableDef` objekt, který představuje připojenou tabulku, objekt řetězce se skládá z jedné nebo dvou částí (specifikátor typu databáze a cesta k databázi).
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ Související informace naleznete v tématu "Connect Property" v nápovědě dao
 
 Volánítéto členské funkce nastavit uživatelem definovaný název tabulky.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ Související informace naleznete v tématu "Name Property" v nápovědě dao.
 
 Volání této členské funkce určit název připojené tabulky nebo název základní tabulky, na kterém je `CDaoTableDef` objekt založen, protože existuje v původním zdroji dat.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ Související informace naleznete v tématu "SourceTableName Property" v nápov�
 
 Volání této členské funkce nastavit ověřovací pravidlo pro tabledef.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ Související informace naleznete v tématu "ValidationRule Property" v nápově
 
 Volání této členské funkce nastavit text výjimky `CDaoTableDef` ověřovacípravidlo pro objekt s základní tabulky podporované databázového stroje Microsoft Jet.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

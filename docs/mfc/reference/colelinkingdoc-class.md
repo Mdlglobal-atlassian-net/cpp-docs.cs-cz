@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: f9f184542aaceb206d3eae110d3a088d5fbc95cf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374938"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753850"
 ---
 # <a name="colelinkingdoc-class"></a>Třída COleLinkingDoc
 
@@ -37,20 +37,20 @@ class COleLinkingDoc : public COleDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Vytvoří `COleLinkingDoc` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::Registrovat](#register)|Zaregistruje dokument u knihoven DLL systému OLE.|
 |[COleLinkingDoc::Odvolat](#revoke)|Odvolá registraci dokumentu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Najde zadanou vloženou položku.|
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Vyhledá zadanou propojenou položku.|
@@ -181,7 +181,7 @@ Pokud používáte `COleTemplateServer` ve své `Register` aplikaci, `COleLinkin
 
 Informuje knihovny DLL systému OLE, že dokument již není otevřen.
 
-```
+```cpp
 void Revoke();
 ```
 

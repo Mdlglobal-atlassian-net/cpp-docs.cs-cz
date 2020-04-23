@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365078"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752163"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager – třída
 
@@ -37,7 +37,7 @@ class CTooltipManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTooltipManager::Vytvořitpopis](#createtooltip)|Vytvoří ovládací prvek popisu pro zadané typy ovládacích prvku systému Windows.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Odstraní ovládací prvek popisku.|
@@ -128,7 +128,7 @@ Volání této metody pro každou [třídu CToolTipCtrl,](../../mfc/reference/ct
 
 Přizpůsobí vzhled ovládacího prvku popisek pro zadané typy ovládacích prvku systému Windows.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,7 +198,7 @@ Hodnota *nType* musí mít stejnou hodnotu jako parametr *nType* [ctooltipmanage
 
 Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 

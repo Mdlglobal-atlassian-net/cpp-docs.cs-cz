@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375685"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753382"
 ---
 # <a name="cdhtmldialog-class"></a>Třída CDHtmlDialog
 
@@ -137,14 +137,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Vytvoří objekt CDHtmlDialog.|
 |[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Zničí objekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable, který je volán jako kontrola přístupu, chcete-li zjistit, zda skriptování objektů na načtené stránce přístup k externí odeslání webu ovládacího prvku. Zkontroluje, zda je odeslání bezpečné pro skriptování nebo aktuální zóna umožňuje objekty, které nejsou bezpečné pro skriptování.|
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable slouží k vytvoření instance řídicího webu pro hostování ovládacího prvku WebBrowser v dialogovém okně.|
@@ -197,7 +197,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Označuje, zda se má jako popisek dialogu použít název dokumentu HTML.|
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|ID prostředku HTML, který má být zobrazen.|
@@ -348,7 +348,7 @@ Tuto členovou funkci můžete přepsat a vrátit tak instanci vlastní třídy 
 
 Vyměňuje data mezi členskou proměnnou a hodnotou vlastnosti ovládacího prvku ActiveX na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -387,7 +387,7 @@ Datový člen typu VARIANT, [COleVariant](../../mfc/reference/colevariant-class.
 
 Vyměňuje data mezi členskou proměnnou a zaškrtávacím políčkem na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -402,7 +402,7 @@ Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ### <a name="example"></a>Příklad
@@ -413,7 +413,7 @@ Hodnota, která je vyměňována.
 
 Vyměňuje data mezi proměnnou člena a libovolnou vlastností elementu HTML na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -468,14 +468,14 @@ Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 *Dispid*<br/>
 ID odeslání prvku HTML, se kterým chcete vyměňovat data.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio
 
 Vyměňuje data mezi členskou proměnnou a přepínacím tlačítkem na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -490,14 +490,14 @@ Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex
 
 Získá nebo nastaví index seznamu na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -512,14 +512,14 @@ Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Hodnota, kterou jste zadali pro `id` parametr ovládacího prvku HTML.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString
 
 Získá nebo nastaví zobrazovaný text položky seznamu (na základě aktuálního indexu) na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -534,14 +534,14 @@ Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue
 
 Získá nebo nastaví hodnotu položky seznamu (na základě aktuálního indexu) na stránce HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -556,7 +556,7 @@ Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která je vyměňována.
 
 ### <a name="example"></a>Příklad
@@ -567,7 +567,7 @@ Hodnota, která je vyměňována.
 
 Odpojí nemodlavé `CDHtmlDialog` dialogové okno od objektu a zničí objekt.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ Přetížení jsou uvedeny z nejméně efektivní v horní části na nejúčinn
 
 Načte url jednotného prostředku přidruženého k aktuálnímu dokumentu.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 Přejde na prostředek identifikovaný adresou URL určenou *parametrem lpszURL*.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ Vrátí E_NOTIMPL.
 
 Nastaví vlastnost ovládacího prvku ActiveX na novou hodnotu.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ Ukazatel na rozhraní ovládacího `IDispatch` prvku ActiveX.
 
 Nastaví `innerHTML` vlastnost elementu HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ Ukazatel `IUnknown` prvku HTML.
 
 Nastaví vlastnost prvku HTML.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ Nová hodnota vlastnosti.
 
 Nastaví `innerText` vlastnost elementu HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ Ukazatel `IUnknown` prvku HTML.
 
 Nastaví `IDispatch` rozhraní hostitele.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ Nové `IDispatch` rozhraní.
 
 Nastaví příznaky hostitelského uznatí.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

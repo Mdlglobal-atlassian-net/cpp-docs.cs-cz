@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360450"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754470"
 ---
 # <a name="cobarray-class"></a>Třída CObArray
 
@@ -63,13 +63,13 @@ class CObArray : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CobArray::CObArray](#cobarray)|Vytvoří prázdné pole `CObject` pro ukazatele.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CobArray::Přidat](#add)|Přidá prvek na konec pole; v případě potřeby pole zvětší.|
 |[CObArray::Připojit](#append)|Připojí k poli jiné pole; v případě potřeby pole zvětší.|
@@ -91,7 +91,7 @@ class CObArray : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObArray::operátor \[\]](#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
@@ -219,7 +219,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Volání této členské funkce přepsat prvky daného pole s prvky jiného pole stejného typu.
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
@@ -316,7 +316,7 @@ V následující tabulce jsou uvedeny `CObArray::ElementAt`další členské fun
 
 Uvolní všechny další paměti, která byla přidělena, zatímco pole bylo pěstováno.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -516,7 +516,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Vloží prvek (nebo všechny prvky v jiném poli) v zadaném indexu.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -626,7 +626,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Odebere všechny ukazatele z tohoto pole, ale `CObject` ve skutečnosti objekty neodstraní.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -657,7 +657,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Odebere jeden nebo více prvků začínajících na zadaný index v poli.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -707,7 +707,7 @@ RemoveAt example: A CObArray with 1 elements
 
 Nastaví prvek pole na zadaný index.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -756,7 +756,7 @@ SetAt example: A CObArray with 2 elements
 
 Nastaví prvek pole na zadaný index.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -805,7 +805,7 @@ SetAtGrow example: A CObArray with 4 elements
 
 Vytvoří velikost prázdného nebo existujícího pole; v případě potřeby přidělí paměť.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370775"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754241"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl – třída
 
@@ -49,7 +49,7 @@ class CMFCListCtrl : public CListCtrl
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Umožňuje označit seřazený sloupec jinou barvou pozadí.|
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Povolí více režim řazení.|
@@ -94,7 +94,7 @@ Následující příklad ukazuje, jak používat různé `CMFCListCtrl` metody v
 
 Označí seřazené sloupce jinou barvou pozadí.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 Umožňuje řazení řádků dat v ovládacím prvku seznamu podle více sloupců.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ Ve výchozím nastavení `GetTextColor` tato metoda volá bez ohledu na vstupní
 
 Odebere sloupec řazení ze seznamu seřazených sloupců.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ Tato metoda odebere sloupec řazení z ovládacího prvku záhlaví. Volá [CMFC
 
 Nastaví aktuální seřazený sloupec a pořadí řazení.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,

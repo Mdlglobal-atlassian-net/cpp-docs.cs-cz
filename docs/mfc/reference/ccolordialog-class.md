@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: ab8d934ca0c40c7073f2fc6d88549eb8db595b3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 99b4ff27a7686972bcbc85478998b52ed713ab5b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352240"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754260"
 ---
 # <a name="ccolordialog-class"></a>Třída CColorDialog
 
@@ -41,13 +41,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog:dialog CColor](#ccolordialog)|Vytvoří `CColorDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::DoModální](#domodal)|Zobrazí dialogové okno barev a umožní uživateli provést výběr.|
 |[CColorDialog::GetColor](#getcolor)|Vrátí `COLORREF` strukturu obsahující hodnoty vybrané barvy.|
@@ -56,13 +56,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CcolorDialog::OnColorOK](#oncolorok)|Přepsáním ověřte barvu zadanou do dialogového okna.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CColorDialog::m_cc](#m_cc)|Struktura používaná k přizpůsobení nastavení dialogového okna.|
 
@@ -249,7 +249,7 @@ Chcete-li vynutit `OnColorOK` výběr barvy, můžete volat [SetCurrentColor](#s
 
 Volání této funkce `DoModal` po volání vynutit aktuální výběr barvy na hodnotu barvy zadanou v *clr*.
 
-```
+```cpp
 void SetCurrentColor(COLORREF clr);
 ```
 

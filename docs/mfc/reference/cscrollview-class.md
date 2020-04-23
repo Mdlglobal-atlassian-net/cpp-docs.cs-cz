@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318489"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754417"
 ---
 # <a name="cscrollview-class"></a>CScrollView – třída
 
@@ -49,13 +49,13 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Vytvoří `CScrollView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollView::Kontrola posuvníků](#checkscrollbars)|Označuje, zda má posuvníkové zobrazení vodorovné a svislé posuvníky.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Vyplní oblast pohledu mimo oblast posouvání.|
@@ -124,7 +124,7 @@ Další informace o `CScrollView`použití naleznete v [tématu Document/View Ar
 
 Volání této členské funkce k určení, zda má zobrazení posouvání vodorovné a svislé pruhy.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ Musíte zavolat `SetScrollSizes` `SetScaleToFitSize` buď nebo před zobrazení 
 
 Volání `FillOutsideRect` k vyplnění oblasti zobrazení, která se zobrazí mimo oblast posouvání.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Tato dvojice souřadnic odpovídá umístění v dokumentu, do kterého byl posu
 
 `GetDeviceScrollSizes`získá aktuální režim mapování, celkovou velikost a velikost řádků a stránek posuvného zobrazení.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ Celková velikost zobrazení posouvání v logických jednotkách. Vodorovná ve
 
 Volání, `ResizeParentToFit` které umožní velikost zobrazení, určuje velikost okna rámce.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ To se doporučuje pouze pro zobrazení v podřízených oknech rámů MDI. Použ
 
 Volání `ScrollToPosition` pro posun k danému bodu v zobrazení.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ Zobrazení bude posunuto tak, aby tento bod byl v levém horním rohu okna. Tato
 
 Volání, `SetScaleToFitSize` pokud chcete automaticky změnit velikost výřezu na aktuální velikost okna.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ Obvykle umístíte volání do `SetScaleToFitSize` přepsání `OnInitialUpdate`
 
 Volání, `SetScrollSizes` když se má zobrazení aktualizovat.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

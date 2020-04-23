@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: bcdf60c974ecdc437b90891d2b46a5eec94859d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367683"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752491"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu – třída
 
@@ -37,7 +37,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Vytvoří `CMFCColorPopupMenu` objekt.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destruktor.|
 
@@ -45,7 +45,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Vytvoří ukotvitelný odtrhnutelný barevný pruh. (Přepíše [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Vrátí [panel CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) vložený do rozbalovací nabídky. (Přepíše [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
@@ -55,7 +55,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`m_bEnabledInCustomizeMode`|Logická hodnota, která určuje, zda se má zobrazit barevný pruh.|
 |`m_wndColorBar`|Objekt, `CMFCColorBar` který poskytuje výběr barev.|
 
@@ -231,7 +231,7 @@ Rozbalovací nabídka barva obsahuje vložený objekt [třídy CMFCPopupMenuBar.
 
 Nastaví objekt řízení mřížky `CMFCColorBar` vlastností vloženého objektu.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 

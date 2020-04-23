@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368822"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754053"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Třída cmfcpásového pruhu
 
@@ -71,7 +71,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPásový pruh::AddDynamicElement](#adddynamicelement)|Přidá dynamický prvek na stavový řádek pásu karet.|
 |[CMFCPásový pruh::Přidat prvek](#addelement)|Přidá nový prvek pásu karet na stavový řádek pásu karet.|
@@ -97,7 +97,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonStatusBar::OnDrawInformace](#ondrawinformation)|Zobrazí informační řetězec, který se zobrazí na stavovém řádku pásu karet, když je povolen informační režim.|
 
@@ -140,7 +140,7 @@ Následující příklad ukazuje, jak používat různé `CMFCRibbonStatusBar` m
 
 Přidá dynamický prvek na stavový řádek pásu karet.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ Na rozdíl od běžných prvků nejsou dynamické prvky přizpůsobitelné a nab
 
 Přidá nový prvek pásu karet na stavový řádek pásu karet.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 Přidá prvek pásu karet do rozšířené oblasti stavového řádku pásu karet.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ Rozšířená oblast je na pravé straně ovládacího prvku stavového řádku.
 
 Přidá oddělovač na stavový řádek pásu karet.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 Odebere všechny prvky ze stavového řádku pásu karet.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ TRUE, pokud je odebrán prvek se zadaným *uiID.* FALSE jinak.
 
 Povolí nebo zakáže informační režim pro stavový řádek pásu karet.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 

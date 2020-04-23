@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366135"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753906"
 ---
 # <a name="coledataobject-class"></a>COleDataObject – třída
 
@@ -49,13 +49,13 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDataObject::COleDataObject](#coledataobject)|Vytvoří `COleDataObject` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDataObject::Připojit](#attach)|Připojí zadaný datový objekt `COleDataObject`OLE k souboru .|
 |[COleDataObject::AttachClipboard](#attachclipboard)|Připojí datový objekt, který je ve schránce.|
@@ -92,7 +92,7 @@ Další informace o použití datových objektů v aplikaci naleznete v článku
 
 Volání této funkce `COleDataObject` přidružit objekt s datovým objektem OLE.
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ Nenulová, pokud je úspěšná; jinak 0.
 
 Volání této funkce připravit pro `GetNextFormat` následné volání pro načtení seznamu formátů dat z položky.
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ Po volání [COleDataObject::BeginEnumFormats](#beginenumformats)je uložena poz
 
 Chcete-li zkontrolovat dostupnost daného formátu, zavolejte [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Další informace naleznete v [tématu IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) v sadě Windows SDK.
+Další informace naleznete v [tématu IEnumXXXX::Next](/previous-versions/ms695273\(v=vs.85\)) v sadě Windows SDK.
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::isDataAvailable
 
@@ -328,7 +328,7 @@ Další informace naleznete v tématu [RegisterClipboardFormat](/windows/win32/a
 
 Volání této funkce uvolnit vlastnictví [objektu IDataObject,](/windows/win32/api/objidl/nn-objidl-idataobject) `COleDataObject` který byl dříve přidružen k objektu.
 
-```
+```cpp
 void Release();
 ```
 

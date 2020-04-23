@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752657"
 ---
 # <a name="chtmlview-class"></a>Třída CHtmlView
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHtmlView::Vytvořit](#create)|Vytvoří ovládací prvek WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable slouží k vytvoření instance lokality ovládacího prvku pro hostování ovládacího prvku ve formuláři.|
@@ -390,7 +390,7 @@ Odkazuje na řetězec znaků ukončený hodnotou null, který představuje náze
 Určuje atributy stylu okna. Ve výchozím nastavení jsou nastaveny styly WS_VISIBLE a WS_CHILD systému Windows.
 
 *Rect*<br/>
-Odkaz na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) určující velikost a umístění okna. Hodnota *rectDefault* umožňuje systému Windows určit velikost a umístění nového okna.
+Odkaz na strukturu [RECT](/windows/win32/api/windef/ns-windef-rect) určující velikost a umístění okna. Hodnota *rectDefault* umožňuje systému Windows určit velikost a umístění nového okna.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího prvku.
@@ -469,7 +469,7 @@ Standardní hodnota HRESULT. Úplný seznam možných hodnot naleznete v [témat
 
 Volánítéto členské funkce k provedení příkazu ve webovém prohlížeči nebo v aplikaci Internet Explorer.
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ Aktuální šířka okna v pixelech.
 
 Přejde zpět o jednu položku v seznamu historie.
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Přejde vpřed o jednu položku v seznamu historie.
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Přejde na aktuální domovskou nebo úvodní stránku určenou v dialogovém okně Možnosti Internetu nebo V dialogovém okně Vlastnosti Internetu, ke které se přistupuje z Ovládacích panelů.
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Přejde na aktuální vyhledávací stránku, jak je určena v dialogovém okně Možnosti Internetu v aplikaci Internet explorer nebo v dialogovém okně Vlastnosti Internetu, na kterou se přistupuje z Ovládacích panelů.
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Volání této členské funkce přejít na prostředek identifikovaný adresou URL.
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Volání této členské funkce přejít na prostředek identifikovaný adresou URL nebo do souboru identifikovaného úplnou cestou.
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ To umožňuje, aby se okno hostitele řízení objektů chovalo stejným způsob
 
 Volání této členské funkce nastavit vlastnost přidruženou k danému objektu.
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Znovu načte adresu URL nebo soubor, který právě zobrazuje webový prohlížeč.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Znovu načte soubor, který aplikace Internet Explorer právě zobrazuje.
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Voláním této členské funkce zobrazte nebo skryjte adresní řádek objektu aplikace Internet Explorer.
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládac
 
 Voláním této členské funkce nastavte aplikaci Internet Explorer na režim celé obrazovky nebo normálního okna.
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládac
 
 Voláním této členské funkce nastavte výšku hlavního okna aplikace Internet Explorer.
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Nastaví vodorovnou polohu hlavního okna aplikace Internet Explorer.
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ Souřadnice obrazovky levého okraje hlavního okna.
 
 Voláním této členské funkce zobrazte nebo skryjte řádek nabídek aplikace Internet Explorer.
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládac
 
 Voláním této členské funkce nastavte hodnotu označující, zda ovládací prvek WebBrowser aktuálně pracuje v režimu offline.
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Voláním této členské funkce nastavte hodnotu označující, zda je ovládací prvek WebBrowser registrován jako prohlížeč nejvyšší úrovně pro překlad cílových názvů.
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Volání této členské funkce nastavit hodnotu označující, zda je ovládací prvek WebBrowser registrován jako cíl přetažení pro navigaci.
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Voláním této členské funkce nastavte hodnotu označující, zda lze zobrazit některá dialogová okna.
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Volání této členské funkce zobrazí stavový řádek.
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládac
 
 Voláním této členské funkce nastavte hodnotu označující, zda je ovládací prvek WebBrowser v divadelním režimu.
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Voláním této členské funkce zobrazte nebo skryjte panel nástrojů aplikace Internet Explorer.
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládac
 
 Volání této členské funkce pro nastavení vzdálenosti mezi vnitřním horním okrajem ovládacího prvku WebBrowser a horním okrajem jeho kontejneru
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Volánítéto členské funkce nastavit stav viditelnosti ovládacího prvku WebBrowser.
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Platí pro aplikaci Internet Explorer a webbrowser.
 
 Nastaví šířku hlavního okna aplikace Internet Explorer.
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ void SetWidth(long nNewValue);
 
 Voláním této členské funkce zrušte všechny čekající operace navigace nebo stahování a zastavte všechny dynamické prvky stránky, jako jsou zvuky na pozadí a animace.
 
-```
+```cpp
 void Stop();
 ```
 

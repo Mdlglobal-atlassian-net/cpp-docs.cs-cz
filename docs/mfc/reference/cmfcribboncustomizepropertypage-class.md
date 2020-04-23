@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375185"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754172"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Třída CMFCAPřizpůsobení vlastností karty
 
@@ -35,7 +35,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCRibbonRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Vytvoří `CMFCRibbonCustomizePropertyPage` objekt.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destruktor.|
 
@@ -43,7 +43,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Přidá vlastní kategorii do pole se **seznamem Příkazy.**|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
@@ -83,7 +83,7 @@ Následující příklad ukazuje, jak `CMFCRibbonCustomizePropertyPage` vytvoři
 
 Přidá vlastní kategorii do pole se **seznamem Příkazy.**
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);

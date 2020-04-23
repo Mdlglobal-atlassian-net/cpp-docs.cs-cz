@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: fcee569659d732c26e274c8ca189042a16f13557
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e570681c899d58e8659635d55da843c23d1e95ee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371072"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752879"
 ---
 # <a name="canimatectrl-class"></a>Třída CAnimateCtrl
 
@@ -45,13 +45,13 @@ class CAnimateCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Vytvoří `CAnimateCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimateCtrl::Zavřít](#close)|Zavře klip AVI.|
 |[CAnimateCtrl::Vytvořit](#create)|Vytvoří ovládací prvek animace a `CAnimateCtrl` připojí jej k objektu.|
@@ -206,7 +206,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku animace. Použijte libovolnou kombinaci stylů oken a ovládacích prvků animace popsanou ve [stylech ovládacího prvku animace](/windows/win32/Controls/animation-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.

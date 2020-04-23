@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375377"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751941"
 ---
 # <a name="cmfcpopupmenu-class"></a>Třída cmfcpopupmenu
 
@@ -182,13 +182,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Vytvoří `CMFCPopupMenu` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPopupMenu::Aktivovatnabídku Popup](#activatepopupmenu)||
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Nastaví, zda je rozbalovací nabídka povolena pro zobrazení prázdných položek pro uživatelem definované nástroje.|
@@ -266,7 +266,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPopupMenu::Vytvořittrhoffbar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
@@ -375,7 +375,7 @@ Parametr MENUAREA_TYPE může mít některou z následujících hodnot.
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 Inicializuje logo pro rozbalovací nabídku.
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ Pokud povolíte zvuk, rozhraní framework zavolá metodu [PlaySound,](/windows/w
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::PovolitZměna velikosti
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupMenu::Posuvnutí
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -1089,7 +1089,7 @@ PRAVDA, pokud je viditelná rozbalovací nabídka; jinak FALSE.
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::Přesunout
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Vymaže všechny položky z rozbalovací nabídky.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1259,7 +1259,7 @@ Seznam platných hodnot pro *typ*naleznete v tématu [CMFCPopupMenu::GetAnimatio
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Nastaví výchozí příkaz pro rozbalovací nabídku.
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ Při volání této metody nastaví globální příznak ve vaší aplikaci. Ten
 
 Nastavte maximální šířku rozbalovací nabídky.
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ Pokud se text přidružený k příkazu nabídky nevejde do maximální šířky
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupMenu::Nastavitrychlý režim
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 Nastaví zarovnání nabídky pro rozbalovací nabídky.
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ Toto je globální možnost pro všechny rozbalovací nabídky v aplikaci. Pokud
 
 Vynutí, aby rozbalovací nabídka zobrazila všechny příkazy.
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ Toto není globální nastavení a ovlivňuje pouze aktuální rozbalovací nab�
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::Změna velikosti spouště
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ Tato metoda je užitečná, když jsou rozbalovací nabídky zobrazeny přes ani
 
 Aktualizuje stín pro rozbalovací nabídku.
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 

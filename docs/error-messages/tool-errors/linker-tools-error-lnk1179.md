@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d85693cec11ef53a6bbbb60d8ced716d2a0bb131
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183954"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754343"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Chyba linkerů LNK1179
 
-soubor je neplatný nebo poškozený: duplicitní COMDAT ' filename '
+neplatný nebo poškozený soubor: duplicitní COMDAT 'název_souboru'
 
-Modul objektu obsahuje dva nebo více sekvence COMDAT se stejným názvem.
+Modul objektu obsahuje dva nebo více comdatů se stejným názvem.
 
-Tato chyba může být způsobena použitím [/h](../../build/reference/h-restrict-length-of-external-names.md), která omezuje délku externích názvů a [/Gy](../../build/reference/gy-enable-function-level-linking.md), která zabalí funkce v sekvence COMDAT.
+Tato chyba může být způsobena pomocí [/H](../../build/reference/h-restrict-length-of-external-names.md), který omezuje délku externí názvy a [/Gy](../../build/reference/gy-enable-function-level-linking.md), které balíčky funkce v COMDATs.
 
 ## <a name="example"></a>Příklad
 
-V následujícím kódu jsou `function1` a `function2` v prvních osmi znacích identické. Kompilace s **/Gy** a **/h8** vytvoří chybu propojení.
+V následujícím kódu `function1` `function2` a jsou identické v prvních osmi znaků. Kompilace s **/Gy** a **/H8** vytvoří chybu propojení.
 
-```
+```cpp
 void function1(void);
 void function2(void);
 

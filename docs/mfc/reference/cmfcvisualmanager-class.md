@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320004"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752844"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager – třída
 
@@ -367,13 +367,13 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCVisualManager::Upravit snímky](#adjustframes)||
 |[CMFCVisualManager::Adjusttoolbars](#adjusttoolbars)||
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -5011,7 +5011,7 @@ Pomocí této metody můžete změnit vizuální manažer, který používá va�
 
 Povolí nebo zakáže režim reliéfu pro zakázané obrazy panelů nástrojů.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ Pomocí funkce [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage
 
 Povolí nebo zakáže efekt osvětlení pro neaktivní obrazy v nabídce nebo panelu nástrojů.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ Tato funkce určuje, zda se neaktivní obrazy v nabídce nebo panelu nástrojů 
 
 Nastaví příznak, který označuje, zda jsou tlačítka nabídky plochá. V opačném případě se objeví trojrozměrné.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ Ve výchozím nastavení není tato funkce povolena.
 
 Nastaví šířku a výšku stínu nabídky.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ Výška a šířka stínu nabídky musí být shodná. Výchozí hodnota je 7 pi
 
 Nastaví příznak, který označuje, zda [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) zobrazí stíny pro zvýrazněné obrázky.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

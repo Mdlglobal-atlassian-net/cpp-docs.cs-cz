@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7cbddbd4fca8379562b762fadbb3d2bda44f166
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368865"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753528"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Třída CMFCRibbonRibbonBar
 
@@ -47,13 +47,13 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Vytvoří a inicializuje `CMFCRibbonProgressBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Vrátí aktuální průběh.|
 |[CMFCRibbonRibbonProgressBar::GetRangeMax](#getrangemax)|Vrátí maximální hodnotu aktuálního rozsahu.|
@@ -203,7 +203,7 @@ virtual void OnDraw(CDC* pDC);
 
 Nastaví indikátor průběhu tak, aby fungoval v nekonečném režimu.
 
-```
+```cpp
 void SetInfiniteMode(BOOL bSet = TRUE);
 ```
 
@@ -220,7 +220,7 @@ Obvykle pokud indikátor průběhu je v nekonečném režimu, je říkat uživat
 
 Nastaví aktuální pozici indikátoru průběhu.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw = TRUE);
@@ -242,7 +242,7 @@ Nastavený rozsah musí být v rozsahu určeném metodou [CMFCRibbonProgressBar:
 
 Nastaví minimální a maximální hodnoty indikátoru průběhu.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);

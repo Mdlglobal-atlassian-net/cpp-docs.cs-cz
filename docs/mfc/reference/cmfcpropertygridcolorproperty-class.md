@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375315"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751827"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty – třída
 
@@ -41,14 +41,14 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridColorPropertyProperty::VLASTNOST CMFCPropertyColorProperty](#cmfcpropertygridcolorproperty)|Vytvoří `CMFCPropertyGridColorProperty` objekt.|
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridColorPropertyProperty::EnableAutomaticButton](#enableautomaticbutton)|Povolí *automatické* tlačítko v dialogovém okně výběru barev. (Standardní automatické tlačítko je označeno **automaticky**.)|
 |[CMFCPropertyGridColorPropertyProperty::EnableOtherButton](#enableotherbutton)|Povolí *druhé* tlačítko v dialogovém okně výběru barev. (Standardní jiné tlačítko je označeno **více barev**.)|
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 Povolí *automatické* tlačítko v dialogovém okně výběru barev. (Standardní automatické tlačítko je označeno **automaticky**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 Povolí *druhé* tlačítko v dialogovém okně výběru barev. (Standardní jiné tlačítko je označeno **více barev**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ Hodnota barvy RGB.
 
 Nastaví novou barvu vlastnosti.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 Určuje počet sloupců v aktuální mřížce vlastností barev.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 

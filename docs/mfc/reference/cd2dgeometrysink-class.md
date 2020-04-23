@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369243"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754773"
 ---
 # <a name="cd2dgeometrysink-class"></a>Třída CD2DGeometrySink
 
@@ -59,14 +59,14 @@ class CD2DGeometrySink;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Vytvoří objekt CD2DGeometrySink z objektu CD2DPathGeometry.|
 |[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destruktor. Nazývá se při zničení objektu jímky geometrie D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometrySink::AddArc](#addarc)|Přidá do geometrie cesty jeden oblouk.|
 |[CD2DGeometrySink::AddBezier](#addbezier)|Vytvoří kubickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.|
@@ -85,13 +85,13 @@ class CD2DGeometrySink;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometrySink::operátor ID2D1GeometrySink*](#operator_id2d1geometrysink_star)|Vrátí rozhraní ID2D1GeometrySink.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometrySink::m_pSink](#m_psink)|Ukazatel na ID2D1GeometrySink.|
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 Přidá do geometrie cesty jeden oblouk.
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ Segment oblouku, který chcete přidat k pojivu
 
 Vytvoří kubickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ Struktura, která popisuje řídicí body a koncový bod Bezierovy křivky, kter
 
 Vytvoří posloupnost kubických Bezierových křivek a přidá je do jímky geometrie.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ Pole Bezierových segmentů, které popisuje Bezierovy křivky, které chcete vy
 
 Vytvoří segment čáry mezi aktuálním a zadaným koncovým bodem a přidá ho do jímky geometrie.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ Koncový bod čáry k nakreslení.
 
 Vytvoří posloupnost čar pomocí určených bodů a přidá je do jímky geometrie.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ Pole jednoho nebo více bodů, které popisují čáry kreslit. Čára je nakres
 
 Vytvoří kvadratickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ Struktura, která popisuje řídicí bod a koncový bod kvadratické Bezierovy k
 
 Přidá posloupnost kvadratické Segmenty Bezier jako pole v jednom volání.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ Pole posloupnosti kvadratické Bezierovy segmenty.
 
 Spustí nový obrázek v zadaném bodě.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ Nenulová, pokud je úspěšná; jinak FALSE.
 
 Ukončí aktuální obrázek; volitelně jej zavře.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ Ukazatel na rozhraní ID2D1GeometrySink nebo NULL, pokud objekt ještě není in
 
 Určuje metodu použitou k určení bodů, které jsou uvnitř geometrie popsané tímto jímkou geometrie a které body jsou mimo.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ Metoda použitá k určení, zda je daný bod součástí geometrie.
 
 Určuje volby tahu a spojení, které mají být použity na nové segmenty přidané do jímky geometrie.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 

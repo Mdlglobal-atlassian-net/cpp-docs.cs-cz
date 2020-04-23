@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: 52989f7b523bf0ba9a00da350242a968ca0db153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 064ebe1c8fe377064d410d09e5ef60ed628df2f3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360469"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754008"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton Třída
 
@@ -73,14 +73,14 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton](#cmfctoolbareditboxbutton)|Vytvoří `CMFCToolBarEditBoxButton` objekt.|
 |`CMFCToolBarEditBoxButton::~CMFCToolBarEditBoxButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|Určuje, zda může uživatel tlačítko během vlastního nastavení roztáhnout. (Přepíše [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|
 |[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jiného tlačítka panelu nástrojů na aktuální tlačítko. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -638,7 +638,7 @@ Nenulová, pokud byl text nastaven; 0, `CMFCToolBarEditBoxButton` pokud ovládac
 
 Určuje ID prostředku místní nabídky, která je přidružena k tlačítku.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 

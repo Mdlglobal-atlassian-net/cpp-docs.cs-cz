@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 067ea7238c48f2698d7bfe469e9c4be10129c065
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edb93b05c1187d2c78f4c1120ee76282167c9b49
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364044"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753596"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder – třída
 
@@ -49,13 +49,13 @@ class CPictureHolder
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPictureHolder::CPictureHolder](#cpictureholder)|Vytvoří `CPictureHolder` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPictureHolder::CreateEmpty](#createempty)|Vytvoří prázdný `CPictureHolder` objekt.|
 |[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Vytvoří `CPictureHolder` objekt z bitmapy.|
@@ -69,7 +69,7 @@ class CPictureHolder
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPictureHolder::m_pPict](#m_ppict)|Ukazatel na objekt obrázku.|
 
@@ -287,7 +287,7 @@ LPPICTURE m_pPict;
 
 Vykreslí obrázek v obdélníku odkazuje *rcRender*.
 
-```
+```cpp
 void Render(
     CDC* pDC,
     const CRect& rcRender,
@@ -309,7 +309,7 @@ Obdélník představující ohraničující obdélník objektu vykreslující ob
 
 Připojí objekt `CPictureHolder` k `IPictureDisp` rozhraní.
 
-```
+```cpp
 void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```
 

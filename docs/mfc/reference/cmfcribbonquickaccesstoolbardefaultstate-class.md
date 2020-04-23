@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368875"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753522"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState – třída
 
@@ -35,13 +35,13 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonQuickAccessToolBarDefaultState:::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Vytvoří `CMFCRibbonQuickAccessToolbarDefaultState` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Přidá příkaz do výchozího stavu panelu nástrojů Rychlý přístup. Tím se nezmění samotný panel nástrojů.|
 |[CMFCRibbonRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jednoho panelu nástrojů Rychlý přístup do jiného.|
@@ -69,7 +69,7 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonQuickAccessToo
 
 Přidá příkaz do výchozího stavu panelu nástrojů Rychlý přístup.
 
-```
+```cpp
 void AddCommand(
     UINT uiCmd,
     BOOL bIsVisible=TRUE);
@@ -91,7 +91,7 @@ Přidání příkazu do CMFCRibbonQuickAccessToolBarDefaultState dosáhne tři v
 
 Zkopíruje vlastnosti jednoho panelu nástrojů Rychlý přístup do jiného.
 
-```
+```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```
 
@@ -120,7 +120,7 @@ Ve výchozím nastavení je seznam příkazů, které nová instance [CMFRibbonQ
 
 Vymaže seznam výchozích příkazů na panelu nástrojů Rychlý přístup.
 
-```
+```cpp
 void RemoveAll();
 ```
 

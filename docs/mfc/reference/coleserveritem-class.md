@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376116"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753738"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem – třída
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Vytvoří `COleServerItem` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umístí formáty prezentace a `COleDataSource` převodu do objektu.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Zkopíruje položku do schránky.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Získá objekt, který slouží k ukládání formátů převodu.|
 |[COleServerItem::OnHide](#onhide)|Volat rámci skrýt položku OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje server o tom, kolik položky OLE je viditelné.|
 
@@ -175,7 +175,7 @@ Další informace o serverech a souvisejících tématech naleznete v článku [
 
 Volání této funkce umístit formáty prezentace a převodu `COleDataSource` pro položku OLE v zadaném objektu.
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ Příznak označující, zda lze objekt odstranit při uvolnění odkazu na něj
 
 Volání této funkce zkopírovat položku OLE do schránky.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ Další informace o tom, jak jsou informace o zpoždění přetažení uloženy 
 
 Volání této funkce vyplnit zadaný [COleDataSource](../../mfc/reference/coledatasource-class.md) objekt se všemi daty, které by byly zkopírovány do schránky, pokud jste [volali CopyToClipboard](#copytoclipboard) (stejná data by také být přeneseny, pokud jste [volali DoDragDrop](#dodragdrop)).
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ To umožňuje přístup k dokumentu serveru, který `COleServerItem` jste předa
 
 Volání této funkce získat CF_EMBEDSOURCE data pro položku OLE.
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ Další informace naleznete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-o
 
 Volání této funkce získat CF_OBJECTDESCRIPTOR data pro položku OLE.
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ Výchozí implementace [OnSetExtent](#onsetextent) nastaví tento člen.
 
 Volání této funkce po změně propojené položky.
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -982,7 +982,7 @@ Výchozí implementace volá [UpdateLink](../../mfc/reference/coleclientitem-cla
 
 Tuto funkci volání při vytváření propojené položky nastavit její název.
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 

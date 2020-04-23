@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366022"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753045"
 ---
 # <a name="cstatusbarctrl-class"></a>Třída CStatusBarCtrl
 
@@ -65,13 +65,13 @@ class CStatusBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStavový panelctrl::cStavový panelctrl](#cstatusbarctrl)|Vytvoří `CStatusBarCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStavový panel::Vytvořit](#create)|Vytvoří ovládací prvek stavového řádku `CStatusBarCtrl` a připojí jej k objektu.|
 |[CStavový panel::CreateEX](#createex)|Vytvoří ovládací prvek stavového řádku se zadanými `CStatusBarCtrl` rozšířenými styly systému Windows a připojí jej k objektu.|
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku stavového řádku. Použijte libovolnou kombinaci stylů ovládacích prvků stavového řádku uvedených v [seznamu Běžné styly ovládacího prvku](/windows/win32/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD styl. Měl by také obsahovat WS_VISIBLE styl.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku stavového řádku. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Určuje velikost a umístění ovládacího prvku stavového řádku. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku stavového řádku, obvykle . Nesmí být null.
@@ -178,7 +178,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku stavového řádku. Použijte libovolnou kombinaci stylů ovládacích prvků stavového řádku uvedených v [seznamu Běžné styly ovládacího prvku](/windows/win32/Controls/common-control-styles) v sadě Windows SDK. Tento parametr musí obsahovat WS_CHILD styl. Měl by také obsahovat WS_VISIBLE styl.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Nulový index dílu, jehož ohraničovací obdélník má být načten.
 
 *lpRect*<br/>
-Adresa [rect](/previous-versions/dd162897\(v=vs.85\)) struktury, která přijímá ohraničující obdélník.
+Adresa [rect](/windows/win32/api/windef/ns-windef-rect) struktury, která přijímá ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -530,7 +530,7 @@ Tato členská funkce implementuje chování [SB_SETICON](/windows/win32/Control
 
 Nastaví minimální výšku kreslicí plochy ovládacího prvku stavového řádku.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ Zpráva zruší platnost části ovládacího prvku, který byl změněn, přim�
 
 Nastaví text popisu podokna ve stavovém řádku.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367799"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752630"
 ---
 # <a name="cmfccaptionbar-class"></a>Třída CMFCCaptionBar
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCcaptionBar::Vytvořit](#create)|Vytvoří ovládací prvek pruhu titulků `CMFCCaptionBar` a připojí jej k objektu.|
 |[CMFCCaptionBar::DoesAllowDynInsertPřed](#doesallowdyninsertbefore)|Označuje, zda lze mezi pruh titulků a nadřazený rámeček dynamicky vložit jiné podokno. (Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCcaptionBar::Pozadí při kreslení](#ondrawbackground)|Volat rámci vyplnit pozadí panelu titulků.|
 |[CMFCcaptionBar::OnDrawBorder](#ondrawborder)|Volat rámci k nakreslení hranice indikátoru titulků.|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Barva pozadí panelu titulků.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Barva ohraničení pruhu titulků.|
@@ -227,7 +227,7 @@ Vrátí hodnotu NEPRAVDA, pokud není přepsána.
 
 Povolí nebo zakáže tlačítko na panelu titulků.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ Přepsat tuto metodu `CMFCCaptionBar` v odvozené třídě přizpůsobit vzhled 
 
 Odebere bitmapový obraz z pruhu titulků.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Odebere tlačítko z pruhu titulků.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ Rozložení prvků pruhů titulků se upraví automaticky.
 
 Odebere ikonu z pruhu titulků.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Odebere textový popisek z pruhu titulků.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Nastaví bitmapový obraz pro pruh titulků.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ Bitmapa je zarovnána podle specifikace parametru *bmpAlignment.*  Tento paramet
 
 Nastaví velikost ohraničení pruhu titulků.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Nastaví tlačítko pro panel titulků.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ PRAVDA, pokud tlačítko zobrazí šipku rozevíracího seznamu, jinak NEPRAVDA.
 
 Určuje, zda tlačítko zůstane stisknuté.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ TRUE Pokud tlačítko zachová svůj stlačený stav, false jinak.
 
 Nastaví popis pro tlačítko.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Nastaví styl ohraničení pruhu titulků.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Nastaví ikonu pro panel titulků.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ Ikona je zarovnána podle parametru *iconAlignment.* Může to být jedna `BarEl
 
 Nastaví popisek obrazu v pruhu titulků.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Nastaví vzdálenost mezi okrajem prvku panelu titulků a okrajem ovládacího prvku pruhu titulků.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Nastaví textový popisek pro pruh titulků.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);

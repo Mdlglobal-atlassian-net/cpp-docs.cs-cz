@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 1e022f09986f5d49ab2bba44c62cb716ce939a0c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b630a588d6c7ec81a22a9665deb0fa7517f90dc8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369619"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750645"
 ---
 # <a name="cwinappex-class"></a>Třída CWinAppEx
 
@@ -141,13 +141,13 @@ class CWinAppEx : public CWinApp
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinAppEx::CWinAppEx](#cwinappex)|Vytvoří `CWinAppEx` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinAppEx::CleanState](#cleanstate)|Odebere informace o aplikaci z registru systému Windows.|
 |[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Určuje, zda aplikace načte počáteční velikost a umístění okna hlavního rámce z registru.|
@@ -198,7 +198,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|Volat rámci při načtení stavu aplikace.|
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Volat rámci při načtení velikost a umístění aplikace z registru. Načtená data zahrnují velikost a umístění hlavního rámce v době, kdy byla aplikace naposledy uzavřena.|
@@ -211,7 +211,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Určuje, zda bude rozhraní obnovit všechny obrazy panelu nástrojů při načtení okna rámce, které obsahuje panel nástrojů.|
 
@@ -283,7 +283,7 @@ Třída `CWinAppEx` má metody inicializace, poskytuje funkce pro ukládání a 
 
 Určuje, zda aplikace načte počáteční velikost a umístění okna hlavního rámce z registru.
 
-```
+```cpp
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 

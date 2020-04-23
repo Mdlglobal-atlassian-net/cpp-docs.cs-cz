@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370073"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754567"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 
@@ -135,7 +135,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Volat interně rámci aktivovat rámce nejvyšší úrovně, když aplikace by měla být aktivována z karty hlavního panelu.|
 |`CMDIChildWndEx::AddDockSite`|Tato metoda se nepoužívá ani implementována.|
@@ -249,7 +249,7 @@ PRAVDA, pokud bylo podokno úspěšně zaregistrováno u správce ukotvení; jin
 
 Přidá podokno s kartami.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ Přepsat tuto metodu v odvozené třídě a vrátit FALSE, pokud okno by neměla
 
 Ukotví podokno.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Odebere podokno ze správce ukotvení.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::Zobrazitpodokno
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 
 Odebere podřízenou aplikaci MDI z karet hlavního panelu systému Windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ PRAVDA v případě úspěchu; jinak FALSE.
 
 Nastaví vlastnosti karty hlavního panelu systému Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ Kombinace hodnot STPFLAG. Další informace naleznete v [tématu ITaskbarList4::
 
 Vloží podřízenou položku MDI před zadané okno na kartách hlavního panelu systému Windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ Ukazatel na podřízené okno MDI, jehož miniatura je vložena vlevo. Toto okno
 
 Aktivuje odpovídající kartu hlavního panelu systému Windows 7.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -1146,7 +1146,7 @@ Ukazatel na `CMDITabProxyWnd` objekt, který je registrován na kartách hlavní
 
 Povolí nebo zakáže automatický výběr části klientské oblasti okna, která se zobrazí jako miniatura tohoto okna na hlavním panelu.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

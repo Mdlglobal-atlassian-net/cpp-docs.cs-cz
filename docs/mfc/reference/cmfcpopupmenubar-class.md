@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: b4693e316fd78948cfae262433fee8ca8b6ab23c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0ba90246d19e8dd07c856eec6a518a8513ee665
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375365"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751919"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar – třída
 
@@ -67,7 +67,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení podokna. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Načte položky místní nabídky ze zadaného prostředku nabídky.|
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Určuje, zda bude šedý postranní panel zobrazen, pokud má aplikace vzhled systému Windows XP.|
 
@@ -411,7 +411,7 @@ virtual void SetButtonStyle(
 
 Nastaví odsazení řádku rozbalovacího řádku nabídek.
 
-```
+```cpp
 void SetOffset(int iOffset);
 ```
 
@@ -426,7 +426,7 @@ void SetOffset(int iOffset);
 
 Spustí časovač pro zadané tlačítko zpožděné rozbalovací nabídky.
 
-```
+```cpp
 void StartPopupMenuTimer(
     CMFCToolBarMenuButton* pMenuButton,
     int nDelayFactor = 1);

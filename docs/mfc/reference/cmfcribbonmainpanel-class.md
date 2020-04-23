@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375096"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753578"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Třída CMFCRibbonMainPanel
 
@@ -37,14 +37,14 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Výchozí konstruktor.|
 |`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonMainPanel::Přidat](#add)|Přidá prvek pásu karet do levého podokna panelu tlačítka aplikace. (Přepíše [CMFCRibbonPanel::Přidat](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
 |[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Přidá textový řetězec do nabídky seznamu posledních souborů.|
@@ -97,7 +97,7 @@ Přidá do panelu prvek pásu karet. Prvky přidané touto metodou budou umíst�
 
 Přidá textový řetězec do nabídky seznamu posledních souborů.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -117,7 +117,7 @@ Určuje šířku panelu seznamu posledních souborů v obrazových bodech.
 
 Přidá prvek pásu karet do spodního podokna panelu aplikace pásu karet.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
@@ -132,7 +132,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 Přidá prvek pásu karet do pravého podokna panelu tlačítka aplikace.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);

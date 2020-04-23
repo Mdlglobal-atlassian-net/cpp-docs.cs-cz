@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753543"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel – třída
 
@@ -137,13 +137,13 @@ class CMFCRibbonPanel : public CObject
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Vytvoří a inicializuje `CMFCRibbonPanel` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonPanel::Přidat](#add)|Přidá do panelu prvek pásu karet.|
 |[CMFCRibbonPanel::Oddělovač přidání](#addseparator)|Přidá k panelu pásu karet oddělovač.|
@@ -432,7 +432,7 @@ Platný ukazatel na element základní pás karet umístěný na pozici *nIndex*
 
 Načte všechny prvky pásu karet, které jsou obsaženy v panelu pásu karet.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Přidá prvky pásu karet, které mají zadané ID příkazu, do zadaného pole.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ Nulový index zadaného prvku pásu karet, pokud byla metoda úspěšná; jinak 
 
 Načte ID příkazů pro všechny prvky pásu karet v panelu pásu karet.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Volání této metody odebrat prvek z panelu pásu karet.
 
 Odstraní všechny prvky pásu karet z panelu pásu karet.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Chcete-li nahradit prvek pásu karet na základě pozice, zavolejte [CMFCRibbonP
 
 Povolí nebo zakáže vystředění svislých pozic prvků pásu karet v jejich obdélníku zobrazení.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Přidruží uživatelem definovaná data k panelu pásu karet.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Povolí nebo zakáže úpravu šířky prvků pásu karet ve stejném sloupci.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Pokud je tato funkce povolena v panelu pásu karet, šířky prvků pásu karet 
 
 Nastaví klávesovou zkratku pro výchozí tlačítko panelu pásu karet.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ Rozbalovací nabídka pro panel pásu karet je k dispozici pouze při sbalení z
 
 Nastaví fokus na zadaný prvek pásu karet.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Ukazatel na prvek pásu karet, který obdrží fokus.
 
 Posune galerii tak, aby byl zadaný prvek pásu karet viditelný.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ PRAVDA, pokud nadřazený pás karet má Vzhled systému Windows 7; jinak FALSE.
 
 Načte pole viditelných prvků.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

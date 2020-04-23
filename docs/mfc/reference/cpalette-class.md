@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 83cd125fa7ab64aa39c606bc048022400d158e72
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f5740b3b073c4f564f9cac0fa04e5687ce1d8f00
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374761"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753671"
 ---
 # <a name="cpalette-class"></a>CPalette – třída
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Vytvoří `CPalette` objekt bez připojené palety Systému Windows. Před použitím je `CPalette` nutné objekt inicializovat jednou z funkcí inicializačního člena.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Nahradí položky v logické paletě identifikované objektem. `CPalette` Aplikace nemusí aktualizovat svou klientskou oblast, protože systém Windows okamžitě mapuje nové položky do systémové palety.|
 |[CPalette::Vytvořitpolotónpaleta](#createhalftonepalette)|Vytvoří polotónovou paletu pro kontext zařízení a `CPalette` připojí ji k objektu.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPalette::operátor HPALETTE](#operator_hpalette)|Vrátí hodnotu HPALETTE `CPalette`připojenou k rozhraní .|
 
@@ -95,7 +95,7 @@ Další informace o `CPalette`použití naleznete v [tématu Grafické objekty](
 
 Nahradí položky v logické paletě `CPalette` připojené k objektu.
 
-```
+```cpp
 void AnimatePalette(
     UINT nStartIndex,
     UINT nNumEntries,

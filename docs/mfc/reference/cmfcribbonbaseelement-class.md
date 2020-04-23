@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752482"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement – třída
 
@@ -253,13 +253,13 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Vytvoří `CMFCRibbonBaseElement` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Přidá klávesovou zkratku pro prvek pásu karet do pole klíčových kláves.|
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Přidá prvek pásu karet do seznamu zadané příkazy pásu karet.|
@@ -375,7 +375,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Volat rámci, když uživatel stiskne klávesovou zkratku.|
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Volat rámci při prvek pásu karet obdrží nebo ztratí vstupní fokus.|
@@ -1893,7 +1893,7 @@ Tato metoda upozorní nadřazené okno panelu pásu karet, že prvek pásu karet
 
 Zavře rozbalovací nabídku pro prvek pásu karet a odešle zprávu o zavření do nadřazené nabídky.
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ Následující tabulka shrnuje logiku pro tuto metodu.
 
 Přidruží datovou položku k prvku pásu karet.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 Nastaví prvek pásu karet tak, aby se zobrazoval jako příkaz automaticky otevíraných míst.
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 Nastaví rozměry obdélníku zobrazení prvku pásu karet.
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 Nastaví viditelnost prvku pásu karet.
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 

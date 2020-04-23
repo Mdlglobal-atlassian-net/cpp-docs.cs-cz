@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374015"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753236"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager – třída
 
@@ -77,14 +77,14 @@ class CDrawingManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Vytvoří `CDrawingManager` objekt.|
 |`CDrawingManager::~CDrawingManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Vytvoří 32bitovou bitmapu (DIB) nezávislou na zařízení, do které mohou aplikace přímo zapisovat.|
 |[CDrawingManager::DrawAlpha](#drawalpha)|Zobrazí bitmapy s průhlednými nebo poloprůhlednými obrazovými body.|
@@ -174,7 +174,7 @@ Další informace o vytvoření bitmapy DIB naleznete v tématu [CreateDIBSectio
 
 Zobrazí bitmapy s průhlednými nebo poloprůhlednými obrazovými body.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Tato metoda provádí alfa prolnutí pro dva bitmapy. Další informace o alfa p
 
 Nakreslí elipsu s dodanou výplní a barvami ohraničení.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ Obdélník definovaný *rect* musí být alespoň 5 pixelů široký a 5 pixelů
 
 Nakreslí čáru.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Tato metoda se nezdaří, pokud *clrLine* rovná -1.
 
 Nakreslí obdélník s dodanou výplní a barvami ohraničení.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ Následující příklad ukazuje, jak `DrawShadow` používat metodu třídy. `C
 
 Vyplní obdélníkovou oblast dvěma barevnými přechody.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Tato metoda generuje selhání kontrolního výrazu, pokud *nPercentage* je men�
 
 Vyplní obdélníkovou oblast určeným barevným přechodem.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ Následující příklad ukazuje, jak `FillGradient` používat metodu třídy. 
 
 Vyplní obdélníkovou oblast určeným barevným přechodem.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ Chcete-li převést barvu HSV nebo HSL na reprezentaci RGB, zavolejte jednu z n�
 
 Překlopí obdélníkovou oblast.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -1012,7 +1012,7 @@ Vážený poměr se vypočítá podle následujícího vzorce: \* (barva1 \* k1 
 
 Otočí zdrojový obsah řadiče domény uvnitř daného obdélníku o 90 stupňů.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

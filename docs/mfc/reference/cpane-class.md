@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364164"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753663"
 ---
 # <a name="cpane-class"></a>CPane – třída
 
@@ -154,13 +154,13 @@ class CPane : public CBasePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CPane::~CPane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení podokna.|
 |[CPane::AllocElements](#allocelements)|Přiděluje úložiště pro interní použití.|
@@ -228,7 +228,7 @@ class CPane : public CBasePane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPane::OnAfterDock](#onafterdock)|Volat rámci při ukotvení podokna.|
 |[CPane::OnAfterFloat](#onafterfloat)|Volat rámci při plovoucí podokno.|
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Umožňuje konzistentní zpracování minimální velikosti pro podokna.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Obsahuje nejnovější informace o ukotvení.|
@@ -340,7 +340,7 @@ Rozdíl v šířce a výšce mezi *rectRequired* a aktuální obdélník okna.
 
 Vypočítá vnitřní obdélník podokna, včetně ohraničení a úchytů.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ Tato metoda je volána rámci, když má přepočítat rozložení pro podokno. 
 
 Vypočítá nedávno ukotvený obdélník.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -890,7 +890,7 @@ Název podokna se zobrazí v oblasti titulků, když je podokno ukotvené nebo p
 
 Načte *virtuální obdélník* podokna.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ Pokud `CMFCAutoHideButton::m_bOverlappingTabs` je FALSE nebo pokud podokno není
 
 Nastaví hodnoty ohraničení podokna.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ Voláním této funkce nastavte velikost ohraničení podokna.
 
 Nastaví *aktivní bod* pro podokno.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,7 +1471,7 @@ Ve výchozím nastavení mají všechny panely nástrojů vypnutý režim výhra
 
 Nastaví minimální povolenou velikost podokna.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 Nastaví *virtuální obdélník* podokna.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ Nevolejte metody, které souvisejí s virtuálníobdélníky, pokud nepřesouvá
 
 Nastaví informace o třídě runtime pro výchozí okno minirámce.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ Pomocí této metody můžete programově uvolnit podokno.
 
 Aktualizuje virtuální obdélník.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375650"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753361"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Vytvoří `CDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::Vytvořit](#create)|Inicializuje `CDialog` objekt. Vytvoří nemodální dialogové okno a `CDialog` připojí ho k objektu.|
 |[CDialog::Vytvořitnepřímá](#createindirect)|Vytvoří nemodální dialogové okno ze šablony dialogového okna v paměti (nikoli na základě prostředků).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Přepsáním provedete akci tlačítka Storno nebo klávesy ESC. Výchozí nastavení zavře dialogové `DoModal` okno a vrátí hodnotu IDCANCEL.|
 |[CDialog::OnOK](#onok)|Přepsáním provedete akci tlačítka OK v modálním dialogovém okně. Výchozí nastavení zavře dialogové `DoModal` okno a vrátí Hodnotu IDOK.|
@@ -295,7 +295,7 @@ Pokud uživatel klepne na jedno z tlačítek v dialogovém okně, například OK
 
 Volání této členské funkce k ukončení modální dialogové okno.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Obvykle se jedná o tlačítko OK.
 
 Přesune fokus na zadaný ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Dialogová okna, která obsahují ovládací prvky ActiveX, vyžadují další i
 
 Volání převést dialogové okno jednotky obdélníku na obrazovku jednotky.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ Funkce `GetDialogBaseUnits` systému Windows vrátí informace o velikosti syst�
 
 Přesune fokus na další ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Editor dialogů obvykle nastaví písmo dialogového okna jako součást prostř
 
 Nastaví fokus na předchozí ovládací prvek v dialogovém okně.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Pokud je fokus na prvním ovládacím prvku v dialogovém okně, přesune se na 
 
 Změní výchozí ovládací prvek tlačítka pro dialogové okno.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Určuje ID ovládacího prvku tlačítka, který se stane výchozím.
 
 Nastaví kontextové ID nápovědy pro dialogové okno.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

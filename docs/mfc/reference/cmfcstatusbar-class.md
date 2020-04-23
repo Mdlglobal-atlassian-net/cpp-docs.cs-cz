@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 8f262d0139b6dffe54e16748ffda4938ba43fc08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 024fbad44af2fb11e967141fc8e7ccc0aad0ccbe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366056"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753465"
 ---
 # <a name="cmfcstatusbar-class"></a>Třída CMFCStatusBar
 
@@ -95,7 +95,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCStavový bar::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CMFCStavový řádek::Příkaztoindex](#commandtoindex)||
@@ -132,7 +132,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCStavový řádek::OnDrawPane](#ondrawpane)|Volat rámci při překreslí podokno stavového řádku.|
 
@@ -269,7 +269,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 Povolí nebo zakáže zpracování poklepání myší na stavovém řádku.
 
-```
+```cpp
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```
 
@@ -286,7 +286,7 @@ Pokud je na stavovém řádku povoleno zpracování poklepání, odešle systém
 
 Zobrazí indikátor průběhu v zadaném podokně.
 
-```
+```cpp
 void EnablePaneProgressBar(
     int nIndex,
     long nTotal=100,
@@ -376,7 +376,7 @@ UINT GetItemID(int nIndex) const;
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>CMFCStavový bar::GetItemRect
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -391,7 +391,7 @@ void GetItemRect(
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CMFCStavový řádek::GetPaneInfo
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -438,7 +438,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>CMFCStavový řádek::GetpaneText
 
-```
+```cpp
 void GetPaneText(
     int nIndex,
     CString& s) const;
@@ -493,7 +493,7 @@ Text popisku podokna stavového řádku, který *určuje nIndex.* V opačném p�
 
 Zneplatnit podokno stavového řádku a překreslit jeho obsah.
 
-```
+```cpp
 void InvalidatePaneContent(int nIndex);
 ```
 
@@ -546,7 +546,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>CMFCStavový řádek::SetdrawExtendedArea
 
-```
+```cpp
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
@@ -577,7 +577,7 @@ BOOL SetIndicators(
 
 Přiřadí animaci zadanému podoknu.
 
-```
+```cpp
 void SetPaneAnimation(
     int nIndex,
     HIMAGELIST hImageList,
@@ -607,7 +607,7 @@ Pokud chcete zakázat aktuální animaci, volání `SetPaneAnimation` s `hImageL
 
 Nastaví barvu pozadí podokna stavového řádku.
 
-```
+```cpp
 void SetPaneBackgroundColor(
     int nIndex,
     COLORREF clrBackground=(COLORREF)-1,
@@ -629,7 +629,7 @@ void SetPaneBackgroundColor(
 
 Nastavte ikonu podokna stavového řádku.
 
-```
+```cpp
 void SetPaneIcon(
     int nIndex,
     HICON hIcon,
@@ -667,7 +667,7 @@ Pokud je spuštěna animace, která [CMFCStatusBar::SetPaneAnimation](#setpanean
 
 ## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>CMFCStavový řádek::SetpaneInfo
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -688,7 +688,7 @@ void SetPaneInfo(
 
 Nastavte indikátor aktuálního průběhu indikátoru průběhu pro zadané podokno.
 
-```
+```cpp
 void SetPaneProgress(
     int nIndex,
     long nCurr,
@@ -714,7 +714,7 @@ Chcete-li tuto funkci použít pro dané podokno, musíte nejprve zavolat [CMFCS
 
 ## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>CMFCStavový řádek::SetpaneStyle
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
@@ -750,7 +750,7 @@ virtual BOOL SetPaneText(
 
 Nastaví barvu textu zadaného podokna.
 
-```
+```cpp
 void SetPaneTextColor(
     int nIndex,
     COLORREF clrText=(COLORREF)-1,
@@ -772,7 +772,7 @@ void SetPaneTextColor(
 
 Nastavte šířku podokna stavového řádku.
 
-```
+```cpp
 void SetPaneWidth(
     int nIndex,
     int cx);
@@ -790,7 +790,7 @@ void SetPaneWidth(
 
 Nastavte text popisku podokna stavového řádku.
 
-```
+```cpp
 void SetTipText(
     int nIndex,
     LPCTSTR pszTipText);

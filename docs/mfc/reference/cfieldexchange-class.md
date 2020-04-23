@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: d4b99a4992075072253d4f9b3182a926673bdfd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de9db2713a25b232bbd7f936958d1c10e96c511a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373935"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753164"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange – třída
 
@@ -31,7 +31,7 @@ class CFieldExchange
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CfieldExchange::IsfieldType](#isfieldtype)|Vrátí nenulovou hodnotu, pokud je aktuální operace vhodná pro typ aktualizovaného pole.|
 |[Cfieldexchange::setfieldtype](#setfieldtype)|Určuje typ datového člena sady záznamů – sloupec nebo parametr – reprezentované `SetFieldType`všemi následujícími voláními funkcí RFX až do dalšího volání aplikace .|
@@ -90,7 +90,7 @@ Postupujte podle modelu existujících funkcí RFX.
 
 Potřebujete volání `SetFieldType` v přepsání třídy [doFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) vaší třídy záznamů.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375586"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753322"
 ---
 # <a name="cdockingmanager-class"></a>Třída CDockingManager
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Vytvoří podokno ukotvení a přidá ho do seznamu ovládacích panelů.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Přidá úchyt do podokna pruhu do seznamu skrytých panelů panelů s kartami MDI.|
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Určuje, zda správce ukotvení skryje podokna v režimu kontejneru OLE.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Určuje globální režim ukotvení.|
@@ -332,7 +332,7 @@ PRAVDA, pokud bylo podokno ukotvení úspěšně vytvořeno. FALSE jinak.
 
 Přidá úchyt do podokna pruhu do seznamu skrytých panelů panelů s kartami MDI.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ Parametr *dwAlignment* může mít jednu z následujících hodnot:
 
 Změní velikost dokovacího podokna v režimu automatického skrytí tak, aby zaujímělo celou šířku nebo výšku klientské oblasti rámce obklopené dokovacími sítěmi.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL, pokud nebyl vytvořen automatický skrytý panel nástrojů; jinak ukazate
 
 Přenese ukotvené pruhy, které mají zadanou trasu, na začátek.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Přidá do nabídky názvy ukotvených panelů a panelů nástrojů.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Vypočítá očekávaný obdélník ukotveného okna.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ Stav ukotvení může být jedna z následujících hodnot:
 
 Povolí nebo zakáže načítání dokovacího rozložení z registru.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Tuto metodu zavolejte, když je nutné zachovat aktuální rozložení ukotvený
 
 Ukotví podokno do jiného podokna nebo do okna rámce.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ Ve výchozím nastavení se tato nabídka nezobrazí.
 
 Řekne knihovně, aby zobrazila speciální kontextovou nabídku se seznamem panelů nástrojů aplikace a ukotvených panelů, když uživatel klepne pravým tlačítkem myši a knihovna zpracovává WM_CONTEXTMENU zprávu.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Obdélník, který obsahuje vnější okraje rámečku.
 
 Vrátí seznam podoken, které patří do dokovacího manažera. To zahrnuje všechny plovoucí podokna.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ Třída, která obsahuje parametry inteligentního ukotvení pro aktuálního sp
 
 Skryje podokno, které je v režimu automatického skrytí.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1221,7 +1221,7 @@ PRAVDA, pokud byl stav správce ukotvení úspěšně načten; jinak FALSE.
 
 Zamkne dané okno.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Volat rámci při aktivní rozbalovací nabídky zpracovává WM_DESTROY zprávu.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ TRUE, pokud je metoda úspěšná; jinak FALSE.
 
 Volat rámci při sestavení nabídky, která má seznam podoken.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Uvolní prázdné kontejnery podokna.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Odebere zadané skryté podokno pruhů.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ PRAVDA, pokud je zadaný snímek odebrán; FALSE jinak.
 
 Zruší registraci podokna a odebere ho ze seznamu ve správci ukotvení.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ PRAVDA, pokud je podokno úspěšně nahrazeno; FALSE jinak.
 
 Střediska rámy v seznamu mini snímků.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ TRUE vždy.
 
 Zapíše správce dokovací služby do archivu.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ Zápis správce ukotvení do archivu zahrnuje určení počtu ovládacích panel
 
 Nastaví velikost, šířku a výšku ovládacích panelů a zadaného podokna.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Nastaví režim náhledu pruhů, které jsou zobrazeny v náhledu tisku.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Chcete-li použít výchozí vzhled inteligentních značek ukotvení, předajte
 
 Zobrazí nebo skryje okna minirámečků.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Vždy FALSE
 
 Spustí inteligentní ukotvení zadaného okna podle zarovnání inteligentního správce dokovaní.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Zastaví inteligentní dokování.
 
-```
+```cpp
 void StopSDocking();
 ```
 

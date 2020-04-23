@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: 46937795499fd9f697f9778c263a1ee011777c0d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1bd88ad17bdb047de4c344ab96f3d9aecbe23c31
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370013"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752631"
 ---
 # <a name="cmemfile-class"></a>CMemFile – třída
 
@@ -43,20 +43,20 @@ class CMemFile : public CFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMemFile::CMemFile](#cmemfile)|Vytvoří objekt souboru paměti.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMemFile::Připojit](#attach)|Připojí blok paměti k `CMemFile`.|
 |[CMemFile::Detach](#detach)|Odpojí blok paměti od `CMemFile` a vrátí ukazatel na blok odpojené paměti.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMemFile::Alloc](#alloc)|Přepište změnit chování přidělení paměti.|
 |[CMemFile::Volný](#free)|Přepsat změnit chování umístění paměti deallocation.|
@@ -121,7 +121,7 @@ Výchozí implementace používá funkci knihovny za běhu [malloc](../../c-runt
 
 Voláním této funkce připojíte `CMemFile`blok paměti k aplikaci .
 
-```
+```cpp
 void Attach(
     BYTE* lpBuffer,
     UINT nBufferSize,

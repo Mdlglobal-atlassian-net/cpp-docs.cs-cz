@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367774"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752572"
 ---
 # <a name="cmfccolorbar-class"></a>Třída CMFCColorBar
 
@@ -95,13 +95,13 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Vytvoří `CMFCColorBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::ContexttoSize](#contexttosize)|Vypočítá svislé a vodorovné okraje, které musí obsahovat tlačítka na ovládacím prvku pruhu barev, a potom upraví umístění těchto tlačítek.|
 |[CMFCColorBar::Ovládací prvek CreateControl](#createcontrol)|Vytvoří okno ovládacího prvku panelu `CMFCColorBar` barev, připojí jej k objektu a změní jeho velikost tak, aby obsahoval zadanou paletu barev.|
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorBar::adjustlocations](#adjustlocations)|Upraví polohy barevných tlačítek na ovládacím prvku pruhu barev.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Označuje, zda se může změnit textový popisek barevných tlačítek.|
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bInternal`|Logické pole, které určuje, zda jsou zpracovány události myši. Události myši jsou obvykle zpracovány, pokud je toto pole PRAVDA a režim přizpůsobení je FALSE.|
 |`m_bIsEnabled`|Logická hodnota, která označuje, zda je povolen ovládací prvek.|
@@ -380,7 +380,7 @@ Standardní popisek pro druhé tlačítko je **Více barev...**.
 
 Vypočítá svislé a vodorovné okraje, které musí obsahovat tlačítka na ovládacím prvku pruhu barev, a upraví umístění těchto tlačítek.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 Zobrazí nebo skryje automatické tlačítko.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ Textový popisek automatického tlačítka se odstraní, pokud je parametr *lpsz
 
 Povolí nebo zakáže zobrazení dialogového okna, které umožňuje uživateli vybrat více barev.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ Ukazatel na paletu, která je nahrazena paletou nadřazeného tlačítka aktuál
 
 Nastaví barvu, která je aktuálně vybraná.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ Tato metoda změní název zadané barvy `CMFCColorBar` ve všech objektech v ap
 
 Nastaví nové ID příkazu pro ovládací prvek pruhu barev.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ Volání této metody upravit ID příkazu ovládacího prvku panelu barev a upo
 
 Nastaví seznam barev, které se používají v aktuálním dokumentu.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Nastaví vodorovný okraj, což je mezera mezi levou nebo pravou barevnou buňkou a hranicí klientské oblasti.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ Ve výchozím nastavení konstruktor [CMFCColorBar::CMFCColorBar](#cmfccolorbar)
 
 Nastaví `m_pWndPropList` chráněný datový člen na zadaný ukazatel na ovládací prvek mřížky vlastností.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Nastaví svislý okraj, což je mezera mezi horní nebo dolní barevnou buňkou a hranicí klientské oblasti.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

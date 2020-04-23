@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374050"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753242"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Vytvoří `CDocument` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Připojí zobrazení k dokumentu.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Inicializuje čtení bloků.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Cdocument::OnFileSendMail](#onfilesendmail)|Odešle e-mailovou zprávu s připojeným dokumentem.|
 |[Cdocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Povolí příkaz Odeslat poštu, pokud je k dispozici podpora pošty.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Určuje, `CDocument` že objekt byl vytvořen dllhost pro miniatury. Je třeba zkontrolovat `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Určuje, `CDocument` že objekt byl vytvořen `Rich Preview`prevhost pro . Je třeba zkontrolovat `CView::OnDraw`.|
@@ -260,7 +260,7 @@ Další informace `CDocument`naleznete v tématu [Serializace](../../mfc/seriali
 
 Voláním této funkce připojte zobrazení k dokumentu.
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*Identifikátor guid*<br/>
+*guid*<br/>
 Určuje identifikátor GUID bloku, který má být vyhledání.
 
 *Pid*<br/>
@@ -765,7 +765,7 @@ Určuje ohraničující obdélník oblasti, kde má být miniatura nakreslena.
 
 Odešle zprávu prostřednictvím rezidentního poštovního hostitele (pokud existuje) s dokumentem jako přílohou.
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 Povolí příkaz ID_FILE_SEND_MAIL, pokud je k dispozici podpora pošty (MAPI).
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ Určuje PID bloku, který má být odebrán.
 
 Voláním této funkce odpojte zobrazení od dokumentu.
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ Volání této funkce aktualizuje názvy všech oken rámce, které zobrazují d
 
 Volání této funkce po změně dokumentu.
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

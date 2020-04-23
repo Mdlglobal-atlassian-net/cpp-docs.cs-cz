@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375092"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754076"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CmFCRibbonRibbonMiniToolBar třída
 
@@ -37,14 +37,14 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Výchozí konstruktor.|
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
@@ -86,7 +86,7 @@ Mini panel nástrojů se stane průhledným, když je ukazatel myši mimo hranic
 
 Nastaví seznam příkazů, které se mají zobrazit na panelu nástrojů.
 
-```
+```cpp
 void SetCommands(
     CMFCRibbonBar* pRibbonBar,
     const CList<UINT,UINT>& lstCommands);

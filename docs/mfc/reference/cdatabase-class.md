@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376479"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754638"
 ---
 # <a name="cdatabase-class"></a>CDatabase – třída
 
@@ -71,13 +71,13 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDatabase::CDatabáze](#cdatabase)|Vytvoří `CDatabase` objekt. Objekt je nutné inicializovat voláním `OpenEx` nebo `Open`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDatabáze::BeginTrans](#begintrans)|Spustí "transakci" – řadu reverzibilních `AddNew` `Edit`volání `Delete`, `Update` , a `CRecordset` členské funkce třídy – na připojeném zdroji dat. Zdroj dat musí podporovat `BeginTrans` transakce, aby měly nějaký účinek.|
 |[CDatabase::BindParameters](#bindparameters)|Umožňuje vázat parametry před `CDatabase::ExecuteSQL`voláním .|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDatabáze::m_hdbc](#m_hdbc)|Otevřete popisovač připojení připojení k databázi (ODBC) ke zdroji dat. Typ *HDBC*.|
 
@@ -186,7 +186,7 @@ V přepsání, `SQLBindParameters` volání a související funkce ODBC svázat 
 
 Volání této členské funkce požadovat, aby zdroj dat zrušit asynchronní operace probíhá nebo proces z druhého vlákna.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ Další informace o transakcích naleznete v článku [Transakce (ODBC).](../../
 
 Volání této členské funkce, když potřebujete provést příkaz SQL přímo.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ Po vrácení zpět, záznam, který byl aktuální před vrácení zpět zůstan
 
 Volání této členské funkce `OpenEx` – `Open` před voláním nebo – přepsat výchozí počet sekund povolených před vypršením doby pokusu o připojení zdroje dat.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ Výchozí hodnota pro časové limity přihlášení je 15 sekund. Ne všechny z
 
 Volání této členské funkce přepsat výchozí počet sekund povolit před následnými operacemi na připojený zdroj dat časový limit.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

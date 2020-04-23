@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373976"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753218"
 ---
 # <a name="cedit-class"></a>CEdit – třída
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEdit::CEditovat](#cedit)|Vytvoří `CEdit` řídicí objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Určuje, zda lze operaci kontroly úprav vrátit zpět.|
 |[CEdit::CharFromPos](#charfrompos)|Načte indexy řádků a znaků pro znak, který je nejblíže zadané pozici.|
@@ -299,7 +299,7 @@ Další informace naleznete [v tématu EM_CHARFROMPOS](/windows/win32/Controls/e
 
 Volání této funkce odstranit (vymazat) aktuální výběr (pokud existuje) v ovládacím prvku upravit.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ Další informace naleznete v [WM_CLEAR](/windows/win32/dataxchg/wm-clear) sady 
 
 Volání této funkce koze aktuální výběr (pokud existuje) v ovládacím prvku upravit do schránky ve formátu CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Použijte následující [styly oken](styles-used-by-mfc.md#window-styles) u ovl
 
 Voláním této funkce odstraňte (vyjměte) aktuální výběr (pokud existuje) v ovládacím prvku pro úpravy a zkopírujte odstraněný text do schránky ve formátu CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ Další informace naleznete v [tématu WM_CUT](/windows/win32/dataxchg/wm-cut) v
 
 Volání této funkce obnovit (vymazat) příznak vrátit úpravy ovládacího prvku.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ Tato metoda odešle [zprávu EM_GETPASSWORDCHAR,](/windows/win32/Controls/em-get
 
 Voláním této funkce získáte formátovací obdélník ovládacího prvku pro úpravy.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ Tato funkce odešle [zprávu EM_HIDEBALLOONTIP,](/windows/win32/Controls/em-hide
 
 Volání této funkce omezit délku textu, který uživatel může zadat do ovládacího prvku úprav.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ Tato metoda je podporována [zprávou EM_LINELENGTH,](/windows/win32/Controls/em
 
 Voláním této funkce můžete posouvat text víceřádkového ovládacího prvku pro úpravy.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ Další informace naleznete [v tématu EM_LINESCROLL](/windows/win32/Controls/em
 
 Voláním této funkce vložte data ze `CEdit` schránky do bodu vložení.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ Další informace naleznete v [EM_POSFROMCHAR](/windows/win32/Controls/em-posfro
 
 Voláním této funkce nahradíte aktuální výběr v ovládacím prvku pro úpravy textem určeným *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ Následující příklad ukazuje metodu [CEdit::SetCueBanner.](#setcuebanner)
 
 Volání této funkce nastavit popisovač na místní paměti, která bude použita víceřádkový ovládací prvek pro úpravy.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ Další informace naleznete [v tématech EM_SETHANDLE](/windows/win32/Controls/e
 
 Zvýrazní rozsah textu, který se zobrazí v aktuálním ovládacím prvku úprav.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ Tato metoda odešle [zprávu EM_SETHILITE,](/windows/win32/Controls/em-sethilite
 
 Volánítéto členské funkce nastavit textový `CEdit` limit pro tento objekt.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ Další informace naleznete v [tématu EM_SETLIMITTEXT](/windows/win32/Controls/
 
 Volání této metody nastavit levý a pravý okraj tohoto ovládacího prvku úpravy.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ Další informace naleznete v [tématu EM_SETMARGINS](/windows/win32/Controls/em
 
 Voláním této funkce nastavte nebo zrušte zaškrtnutí upraveného příznaku ovládacího prvku pro úpravy.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ Další informace naleznete v [EM_SETMODIFY](/windows/win32/Controls/em-setmodif
 
 Voláním této funkce nastavte nebo odeberte znak hesla zobrazený v ovládacím prvku pro úpravy, když uživatel zadá text.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Další informace naleznete v [tématu EM_SETREADONLY](/windows/win32/Controls/e
 
 Volání této funkce nastavit rozměry obdélníku pomocí zadané souřadnice.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ Další informace naleznete v [EM_SETRECT](/windows/win32/Controls/em-setrect) s
 
 Voláním této funkce nastavte formátovací obdélník víceřádkového ovládacího prvku pro úpravy.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ Další informace naleznete v [EM_SETRECTNP](/windows/win32/Controls/em-setrectn
 
 Voláním této funkce vyberte rozsah znaků v ovládacím prvku pro úpravy.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ Další informace naleznete v [tématu EM_SETSEL](/windows/win32/Controls/em-set
 
 Voláním této funkce nastavte zarážky tabulátoru v ovládacím prvku pro úpravy více řádků.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

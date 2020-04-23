@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 51169de521997890190aab52e4afd02ed383af3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753871"
 ---
 # <a name="coledocument-class"></a>Třída COleDocument
 
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Vytvoří `COleDocument` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::Přidat položku](#additem)|Přidá položku do seznamu položek udržovaných dokumentem.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Nastaví zařízení pro cíl tisku pro všechny klientské položky v dokumentu.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Zpracovává události v příkazu Změnit ikonu.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Zpracovává převod vloženého nebo propojeného objektu z jednoho typu na jiný.|
@@ -195,7 +195,7 @@ COleDocument();
 
 Tuto funkci zavolejte, pokud chcete dokument uložit ve formátu složeného souboru.
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 

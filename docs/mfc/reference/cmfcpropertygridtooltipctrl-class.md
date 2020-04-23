@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361794"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754113"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl – třída
 
@@ -43,7 +43,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Vytvoří `CMFCPropertyGridToolTipCtrl` objekt.|
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destruktor.|
 
@@ -51,7 +51,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCPropertyGridToolTipCtrl::Vytvořit](#create)|Vytvoří okno pro ovládací prvek popisek.|
 |[CMFCPropertyGridToolTipCtrl::Deaktivovat](#deactivate)|Deaktivuje a skryje ovládací prvek popisku.|
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Vrátí souřadnice poslední pozice ovládacího prvku popisku.|
@@ -115,7 +115,7 @@ PRAVDA, pokud bylo okno úspěšně vytvořeno; jinak NEPRAVDA.
 
 Deaktivuje a skryje ovládací prvek popisku.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ Tato metoda nastaví poslední pozici a text na prázdné hodnoty, takže budouc
 
 Vrátí souřadnice poslední pozice ovládacího prvku popisku.
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 Skryje ovládací prvek popisek.
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 Nastaví mezery mezi textem popisu a ohraničením okna popisku.
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 Zobrazí ovládací prvek popisku.
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);

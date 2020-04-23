@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368276"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754428"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl – třída
 
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Vytvoří `CRichEditCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CricheditCtrl::CanPaste](#canpaste)|Určuje, zda lze obsah schránky vložit do tohoto rozšířeného ovládacího prvku úprav.|
 |[CRichEditCtrl::CanRedo](#canredo)|Určuje, zda jsou ve frontě opakování ovládacího prvku nějaké akce.|
@@ -377,7 +377,7 @@ Další informace naleznete [v tématu EM_CHARFROMPOS](/windows/win32/Controls/e
 
 Odstraní (vymaže) aktuální výběr (pokud existuje) v ovládacím prvku rich edit.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ Další informace naleznete v [WM_CLEAR](/windows/win32/dataxchg/wm-clear) sady 
 
 Zkopíruje aktuální výběr (pokud existuje) v ovládacím prvku rich edit do schránky.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku pro úpravy. Použijte kombinaci stylů oken uvedených v části **Poznámky** [v](#create) části Vytvořit a [upravit styly ovládacích prvků](/windows/win32/Controls/edit-control-styles), popsanou v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -525,7 +525,7 @@ Pomocí [příkazu Vytvořit](#create) vytvořte ovládací prvek pro bohaté ú
 
 Odstranit (vyjme) aktuální výběr (pokud existuje) v ovládacím prvku rich edit a zkopíruje odstraněný text do schránky.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ Další informace naleznete v [tématu EM_DISPLAYBAND](/windows/win32/Controls/e
 
 Obnoví (vymazat) příznak vrátit tento rozšířený ovládací prvek úpravy.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Tato členská funkce je k dispozici pouze v asijských jazykových verzích ope
 
 Načte formátovací obdélník pro `CRichEditCtrl` tento objekt.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ Mezi typy akcí, které lze vrátit zpět nebo předělat, patří operace psan�
 
 Načte hranice aktuálního výběru `CRichEditCtrl` v tomto objektu.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ Tato členská funkce je k dispozici pouze pro asijské jazykové verze operačn
 
 Změní viditelnost výběru.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ Další informace naleznete v [tématu EM_HIDESELECTION](/windows/win32/Controls
 
 Omezuje délku textu, který může uživatel zadat do ovládacího prvku pro úpravy.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ Další informace naleznete [v tématu EM_LINELENGTH](/windows/win32/Controls/em
 
 Posune text víceřádkového ovládacího prvku pro úpravy.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ Další informace naleznete [v tématu EM_LINESCROLL](/windows/win32/Controls/em
 
 Vloží data ze schránky do `CRichEditCtrl` v místě vložení, umístění stříšky.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ Další informace naleznete v [tématu WM_PASTE](/windows/win32/dataxchg/wm-past
 
 Vloží data v určitém formátu schránky `CRichEditCtrl` do tohoto objektu.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ Další informace naleznete v [tématu EM_REDO](/windows/win32/Controls/em-redo)
 
 Nahradí aktuální výběr v `CRichEditCtrl` tomto objektu zadaným textem.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ Další informace naleznete v [EM_REPLACESEL](/windows/win32/Controls/em-replace
 
 Vynutí, aby tento `CRichEditCtrl` objekt odesílal EN_REQUESTRESIZE oznámení do nadřazeného okna.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ Další informace naleznete v [tématu EM_SETEVENTMASK](/windows/win32/Controls/
 
 Nastaví nebo vymaže upravený příznak pro ovládací prvek úprav.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ Další informace naleznete [v tématu EM_SETOLECALLBACK](/windows/win32/Control
 
 Nastaví volby `CRichEditCtrl` pro tento objekt.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ Další informace naleznete v [tématu EM_SETREADONLY](/windows/win32/Controls/e
 
 Nastaví formátovací obdélník `CRichEditCtrl` pro tento objekt.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ Další informace naleznete v [EM_SETRECT](/windows/win32/Controls/em-setrect) s
 
 Nastaví výběr `CRichEditCtrl` v rámci tohoto objektu.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ Tato zpráva je k dispozici pouze v asijských jazykových verzích operačního
 
 Zabrání ovládacímu prvku ve shromažďování dalších akcí zadávání do aktuální akce zpět.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

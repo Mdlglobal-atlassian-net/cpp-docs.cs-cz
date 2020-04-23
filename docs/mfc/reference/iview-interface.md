@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: dfe77699a51ad2670c703d02e13e9062e76debcd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751279"
 ---
 # <a name="iview-interface"></a>Rozhraní IView
 
@@ -35,56 +35,56 @@ interface class IView
 
 |Název|Popis|
 |----------|-----------------|
-|[IView:: OnActivateView](#onactivateview)|Volá se knihovnou MFC při aktivaci nebo deaktivaci zobrazení.|
-|[IView:: OnInitialUpdate](#oninitialupdate)|Volá se rozhraním po prvním připojení zobrazení k dokumentu, ale před tím, než se zobrazení zpočátku zobrazí.|
-|[IView:: inupdate](#onupdate)|Volá se knihovnou MFC po úpravě dokumentu zobrazení; Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odráželo úpravy.|
+|[IView::OnActivateView](#onactivateview)|Volat knihovny MFC při aktivaci nebo deaktivaci zobrazení.|
+|[IView::OnInitialUpdate](#oninitialupdate)|Volat rámci po zobrazení je nejprve připojen k dokumentu, ale před zobrazení je zpočátku zobrazena.|
+|[IView::OnUpdate](#onupdate)|Volat knihovny MFC po změně dokumentu zobrazení; tato funkce umožňuje zobrazení aktualizovat jeho zobrazení tak, aby odráželo změny.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IView` implementuje několik metod, které `CWinFormsView` používá pro přeposílání běžných oznámení o zobrazení do hostovaného spravovaného ovládacího prvku. Jsou to [OnInitialUpdate](#oninitialupdate), [Update](#onupdate) a [OnActivateView](#onactivateview).
+`IView`implementuje několik `CWinFormsView` metod, které se používá k předávání oznámení společného zobrazení hostovanému spravovanému ovládacímu prvku. Jedná [se o OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) a [OnActivateView](#onactivateview).
 
-`IView` je podobná jako [CView](../../mfc/reference/cview-class.md), ale používá se pouze se spravovanými zobrazeními a ovládacími prvky.
+`IView`je podobný [CView](../../mfc/reference/cview-class.md), ale používá se pouze se spravovanými zobrazeními a ovládacími prvky.
 
-Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o používání formulářů Systému Windows naleznete [v tématu Použití ovládacího prvku uživatele formuláře systému Windows v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: afxwinforms. h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
+Záhlaví: afxwinforms.h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
 
-## <a name="onactivateview"></a>IView:: OnActivateView
+## <a name="iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView
 
-Volá se knihovnou MFC při aktivaci nebo deaktivaci zobrazení.
+Volat knihovny MFC při aktivaci nebo deaktivaci zobrazení.
 
-```
+```cpp
 void OnActivateView(bool activate);
 ```
 
 ## <a name="parameters"></a>Parametry
 
 *aktivovat*<br/>
-Označuje, zda se zobrazení aktivuje nebo deaktivuje.
+Označuje, zda je zobrazení aktivováno nebo deaktivováno.
 
-## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
+## <a name="iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate
 
-Volá se rozhraním po prvním připojení zobrazení k dokumentu, ale před tím, než se zobrazení zpočátku zobrazí.
+Volat rámci po zobrazení je nejprve připojen k dokumentu, ale před zobrazení je zpočátku zobrazena.
 
-```
+```cpp
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a>IView:: inupdate
+## <a name="iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate
 
-Volá se knihovnou MFC po úpravě dokumentu zobrazení.
+Volat knihovny MFC po změně dokumentu zobrazení.
 
-```
+```cpp
 void OnUpdate();
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odráželo úpravy.
+Tato funkce umožňuje zobrazení aktualizovat jeho zobrazení tak, aby odrážely změny.
 
 ## <a name="see-also"></a>Viz také
 
-[CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md)<br/>
-[CView – třída](../../mfc/reference/cview-class.md)
+[Třída CWinFormsView](../../mfc/reference/cwinformsview-class.md)<br/>
+[Třída CView](../../mfc/reference/cview-class.md)

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361932"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754142"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Třída CMFCPropertyGridCtrl
 
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Vytvoří `CMFCPropertyGridCtrl` objekt.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Volat rámci načíst podřízený prvek nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Volat rámci načíst aktuální umístění obrazovky zadaného objektu. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::Upravit rozložení](#adjustlayout)|Překreslí ovládací prvek mřížky vlastností a jeho vlastnosti.|
 |[CMFCPropertyGridCtrl::Porovnání rekvizit](#compareprops)|Volat ovládací prvek mřížky vlastností řazení vlastností.|
@@ -380,7 +380,7 @@ Tato metoda přepočítá, jak nakreslit celý ovládací prvek mřížky vlastn
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ TRUE, pokud je metoda úspěšná; jinak NEPRAVDA.
 
 Povolí nebo zakáže oblast popisu, která je zobrazena pod seznamem vlastností v ovládacím prvku mřížky vlastností.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ Oblast popisu se zobrazí v dolní části ovládacího prvku mřížky vlastnos
 
 Povolí nebo zakáže ovládací prvek záhlaví v horní části ovládacího prvku mřížky vlastností.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ PRAVDA, pokud operace úprav úspěšně skončí; FALSE, pokud upravená data v
 
 Posune ovládací prvek mřížky vlastností a rozbalí položky vlastností, dokud není viditelná zadaná vlastnost.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Rozbalí nebo sbalí všechny řídicí uzly mřížky vlastností.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Ukazatel na objekt vlastnosti, který odpovídá vybrané položce v ovládacím
 
 Načte vlastní barvy, které jsou aktuálně definovány pro prvky řízení mřížky vlastností.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ Pomocí metody [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) nastavt
 
 Určuje způsob zobrazení změněných vlastností.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ Ve výchozím nastavení tato metoda odešle [zprávu AFX_WM_PROPERTY_CHANGED](.
 
 Volat rámci při vlastnost, která obsahuje ovládací prvek pole se seznamem je vybrán.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Odebere všechny objekty vlastností z ovládacího prvku mřížky vlastností.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Obnoví původní hodnoty všech vlastností.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Nastaví nebo obnoví abecední režim.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Pokud je ovládací prvek mřížky vlastností v abecedním režimu, ovládací
 
 Určuje text logických popisků.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Vybere vlastnost v ovládacím prvku mřížky vlastností.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Pomocí této metody můžete zrušit výběr aktuální položky v ovládacím 
 
 Určuje vlastní barvy pro různé prvky ovládacího prvku mřížky vlastností.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Chcete-li přizpůsobit vzhled určité vlastnosti, odvoděte třídu z třídy 
 
 Určuje počet řádků, které se mají zobrazit v části popisu aktuálního ovládacího prvku mřížky vlastností.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Určuje, zda se má zobrazit celá šířka názvu kategorie pro skupinu vlastností v aktuálním ovládacím prvku mřížky vlastností.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ Termíny *název skupiny* a *název kategorie* se používají zaměnitelně v t
 
 Definuje znak, který se používá jako oddělovač v seznamu hodnot vlastností.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ Ve výchozím nastavení nastaví konstruktor [CMFCPropertyGridCtrl::CMFCPropert
 
 Určuje, zda rozhraní překreslí sloupce názvu a hodnoty aktuálního ovládacího prvku mřížky vlastností, když uživatel změní velikost sloupců.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ Uživatel může změnit velikost názvu a hodnoty sloupce ovládacího prvku m�
 
 Nastaví vzhled ovládacího prvku mřížky vlastností na styl, který se používá v sadě Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

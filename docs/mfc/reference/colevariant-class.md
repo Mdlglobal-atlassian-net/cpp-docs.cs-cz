@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374827"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753721"
 ---
 # <a name="colevariant-class"></a>COleVariant třída
 
@@ -41,13 +41,13 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleVariant::ColeVariant](#colevariant)|Vytvoří `COleVariant` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleVariant::Připojit](#attach)|Připojí variantu k `COleVariant`.|
 |[COleVariant::ChangeType](#changetype)|Změní typ varianty `COleVariant` tohoto objektu.|
@@ -58,7 +58,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleVariant::operátor LPCVARIANT](#operator_lpcvariant)|Převede `COleVariant` hodnotu `LPCVARIANT`na .|
 |[COleVariant::operátor LPVARIANT](#operator_lpvariant)|Převede `COleVariant` objekt na `LPVARIANT`.|
@@ -93,7 +93,7 @@ Další informace o `COleVariant` třídě a jeho použití v automatizaci OLE n
 
 Volání této funkce připojit daný [objekt](/windows/win32/api/oaidl/ns-oaidl-variant) `COleVariant` VARIANT k aktuálnímu objektu.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ Další informace o kódu SCODE naleznete [v tématu Struktura kódů chyb COM](
 
 Převede typ hodnoty varianty `COleVariant` v tomto objektu.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant)polož
 
 Vymaže `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant)polož
 
 Načte bajtové pole z existujícího pole variant.
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ Operátor `COleVariant` vložení (**\<**) podporuje diagnostický dumping a ukl
 
 Nastaví řetězec na určitý typ.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

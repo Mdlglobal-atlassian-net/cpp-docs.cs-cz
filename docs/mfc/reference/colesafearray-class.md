@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374866"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753770"
 ---
 # <a name="colesafearray-class"></a>Třída COleSafeArray
 
@@ -81,13 +81,13 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleSafeArray::COleSafeArray](#colesafearray)|Vytvoří `COleSafeArray` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleSafeArray::Přístupová data](#accessdata)|Načte ukazatel na data pole.|
 |[COleSafeArray::AllocData](#allocdata)|Přiděluje paměť pro pole.|
@@ -118,7 +118,7 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleSafeArray::operátor LPCVARIANT](#operator_lpcvariant)|Přistupuje k základní `VARIANT` struktuře objektu. `COleSafeArray`|
 |[COleSafeArray::operátor LPVARIANT](#operator_lpvariant)|Přistupuje k základní `VARIANT` struktuře objektu. `COleSafeArray`|
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 Načte ukazatel na data pole.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Přiděluje paměť pro bezpečné pole.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Přidělí paměť pro popisovač bezpečného pole.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Poskytuje objektu kontrolu nad `VARIANT` daty `COleSafeArray` v existujícím poli.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ Typ `VARIANT`zdroje je nastaven na VT_EMPTY. Tato funkce vymaže aktuální pole
 
 Vymaže bezpečné pole.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Vytvoří kopii existujícího bezpečného pole.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Přiděluje a inicializuje data pro pole.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ Tato funkce vymaže aktuální data pole v případě potřeby. Při chybě funk
 
 Vytvoří nový jednorozměrný `COleSafeArray` objekt.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Zničí existující popisovač pole a všechna data v poli.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ Pokud jsou objekty uloženy v poli, každý objekt je uvolněn. Při chybě funk
 
 Zničí všechna data v bezpečném poli.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ Pokud jsou objekty uloženy v poli, každý objekt je uvolněn. Při chybě funk
 
 Zničí popisovač bezpečného pole.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-cla
 
 Zkopíruje obsah bezpečného pole `CByteArray`do .
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ Počet dimenzí v bezpečném poli.
 
 Načte jeden prvek bezpečnépole.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ Velikost prvků bezpečného pole v bajtech.
 
 Vrátí dolní mez pro `COleSafeArray` libovolnou dimenzi objektu.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ Počet prvků v jednorozměrném bezpečném poli.
 
 Vrátí horní mez pro libovolnou dimenzi bezpečného pole.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-cla
 
 Zvětšuje počet zámků pole a umístí ukazatel na data pole v popisovači pole.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 Vrátí ukazatel na prvek určený hodnotami indexu.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ Po návratu ukazatel na prvek identifikovaný hodnotami v *rgIndices*.
 
 Přiřadí jeden prvek do pole.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 Změní nejméně významné (rightmost) vázána bezpečné pole.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-cla
 
 Změní počet prvků v jednorozměrném `COleSafeArray` objektu.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-cla
 
 Sníží počet zámků pole a zruší platnost ukazatele načteného `AccessData`.
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-cla
 
 Sníží počet zámků pole, takže může být uvolněna nebo velikost.
 
-```
+```cpp
 void Unlock();
 ```
 

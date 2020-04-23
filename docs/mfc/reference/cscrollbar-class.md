@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318523"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754399"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar – třída
 
@@ -51,13 +51,13 @@ class CScrollBar : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollBar::CScrollBar](#cscrollbar)|Vytvoří `CScrollBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CScrollBar::Vytvořit](#create)|Vytvoří posuvník systému Windows `CScrollBar` a připojí jej k objektu.|
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|Povolí nebo zakáže jednu nebo obě šipky posuvníku.|
@@ -287,7 +287,7 @@ Aktuální pozice je relativní hodnota, která závisí na aktuální rozsah po
 
 Zkopíruje aktuální minimální a maximální pozice posuvníku pro daný posuvník do umístění určených *lpMinPos* a *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ Nastavte *bRedraw* na FALSE vždy, když posuvník bude překreslen následným 
 
 Nastaví minimální a maximální hodnoty polohy pro daný posuvník.
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ Rozdíl mezi hodnotami určenými *nMinPos* a *nMaxPos* nesmí být větší ne�
 
 Zobrazí nebo skryje posuvník.
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 

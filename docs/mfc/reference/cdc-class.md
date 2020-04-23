@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375712"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753427"
 ---
 # <a name="cdc-class"></a>Třída CDC
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Vytvoří `CDC` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Ukončí aktuální tiskovou úlohu a vymaže vše, co aplikace `StartDoc` napsala do zařízení od posledního volání členské funkce.|
 |[CDC::AbortPath](#abortpath)|Zavře a zahodí všechny cesty v kontextu zařízení.|
@@ -629,13 +629,13 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDC::operátor HDC](#operator_hdc)|Načte popisovač kontextu zařízení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDC::m_hAttribDC](#m_hattribdc)|Kontext atributu zařízení používaný `CDC` tímto objektem.|
 |[CDC::m_hDC](#m_hdc)|Kontext výstupního zařízení používaný `CDC` tímto objektem.|
@@ -1354,7 +1354,7 @@ Kontext zařízení windows.
 
 Tuto funkci použijte, když přidáváte velikosti HIMETRIC ole a převádíte obrazové body na HIMETRIC.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ Pokud je režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLI
 
 Převede jednotky zařízení na logické jednotky.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ Funkce mapuje souřadnice každého bodu nebo dimenze velikosti z souřadnicové
 
 Volání této členské funkce nakreslit trojrozměrný obdélník.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1452,7 +1452,7 @@ Obdélník bude nakreslena s horní a levé strany v barvě určené *clrTopLeft
 
 Volání této členské funkce opakovaně překreslit obdélník přetažení.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1548,7 +1548,7 @@ Když aplikace `DrawEscape`volá , data identifikovaná *nInputSize* a *lpszInpu
 
 Nakreslí obdélník ve stylu, který slouží k označení, že obdélník má fokus.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -2345,7 +2345,7 @@ Po vyplnění jeho vnitřku je cesta zahozena z kontextu zařízení.
 
 Volání této členské funkce vyplnit daný obdélník pomocí zadané stopy.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ Stopa musí být vytvořena `CBrush` pomocí `CreateHatchBrush` `CreatePatternBr
 
 Volání této členské funkce vyplnit daný obdélník se zadanou plnou barvou.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2492,7 +2492,7 @@ Funkce `ExtFloodFill` poskytuje podobné schopnosti, ale větší flexibilitu.
 
 Nakreslí ohraničení kolem obdélníku *určeného lpRect*.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -4123,7 +4123,7 @@ Pokud je rozhraní v režimu náhledu, volání `GrayString` členské `TextOut`
 
 Tuto funkci použijte při převodu velikosti HIMETRIC z OLE na obrazové body.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ Pokud je režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLI
 
 Volání této funkce převést HIMETRIC jednotky do logické jednotky.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI ořízne všechny následné výstupy tak, aby se vešly do nové hranice. �
 
 Invertuje obsah daného obdélníku.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4297,7 +4297,7 @@ Nenulová, pokud je čára nakreslena; jinak 0.
 
 Převede logické jednotky na jednotky zařízení.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ Souřadnice x a y bodů jsou 2bajtová podepsaná celá čísla v rozsahu -32 76
 
 Volání této funkce převést logické jednotky na jednotky HIMETRIC.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -7029,7 +7029,7 @@ Další informace naleznete v tématu [TransparentBlt](/windows/win32/api/wingdi
 
 Aktualizuje klientskou oblast kontextu zařízení porovnáním aktuálních barev v klientské oblasti systémové paletě na základě obrazových bodů po obrazových bodech.
 
-```
+```cpp
 void UpdateColors();
 ```
 

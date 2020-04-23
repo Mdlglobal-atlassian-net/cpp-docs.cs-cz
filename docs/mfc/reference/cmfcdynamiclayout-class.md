@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367515"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752388"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout – třída
 
@@ -36,14 +36,14 @@ class CMFCDynamicLayout : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCDynamicLayout::CMFCDynamicLayout`|Vytvoří `CMFCDynamicLayout` objekt.|
 |`CMFCDynamicLayout::~CMFCDynamicLayout`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDynamicLayout::AddItem](#additem)|Přidá podřízené okno, obvykle ovládací prvek, do seznamu oken, které jsou řízeny správcem dynamického rozložení.|
 |[CMFCDynamicLayout::Upravit](#adjust)|Přidá podřízené okno, obvykle ovládací prvek, do seznamu oken, které jsou řízeny správcem dynamického rozložení.|
@@ -66,7 +66,7 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="nested-types"></a>Vnořené typy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCDynamicLayout::Struktura MoveSettings](#movesettings_structure)|Zapouzdření přesunout data pro ovládací prvky v dynamickém rozložení.|
 |[CMFCDynamicLayout::Struktura nastavení velikosti](#sizesettings_structure)|Zapouzdřuje data změny velikosti ovládacích prvků v dynamickém rozložení.|
@@ -123,7 +123,7 @@ Umístění a velikost podřízeného ovládacího prvku se dynamicky mění př
 
 Přidá podřízené okno, obvykle ovládací prvek, do seznamu oken, které jsou řízeny správcem dynamického rozložení.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ Umístění a velikost podřízeného ovládacího prvku se dynamicky mění př
 
 Načte obdélník pro aktuální klientskou oblast okna.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,7 +383,7 @@ A [MoveSettings](#movesettings_structure) hodnota, která zapouzdřuje požadova
 
 Nastaví velikost okna, pod kterou rozložení není upraveno.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367542"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752425"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame – třída
 
@@ -39,7 +39,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Výchozí konstruktor.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destruktor.|
 
@@ -47,7 +47,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCDropDownFrame::Vytvořit](#create)|Vytvoří `CMFCDropDownFrame` objekt.|
 |`CMFCDropDownFrame::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
 |[CMFCDropDownFrame::Panel getparentmenubar](#getparentmenubar)|Načte nadřazený řádek nabídek rozevíracího rámečku.|
@@ -173,7 +173,7 @@ Rozhraní Framework volá tuto metodu při vytvoření rozevíracího rámce neb
 
 Nastaví, zda bude podřízené okno rozevíracího panelu nástrojů automaticky zničeno.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

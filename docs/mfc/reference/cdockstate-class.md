@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375552"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753256"
 ---
 # <a name="cdockstate-class"></a>Třída CDockState
 
@@ -37,7 +37,7 @@ class CDockState : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockState::Vymazat](#clear)|Vymaže informace o stavu doku.|
 |[CDockState::GetVersion](#getversion)|Načte číslo verze uloženého stavu pruhu.|
@@ -46,7 +46,7 @@ class CDockState : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockState::m_arrBarInfo](#m_arrbarinfo)|Pole ukazatelů na uložené informace o stavu doku s jednou položkou pro každý ovládací panel.|
 
@@ -74,7 +74,7 @@ Další informace o ovládacích panelech ukotvení naleznete v článcích [Ovl
 
 Voláním této funkce vymažte `CDockState` všechny informace o ukotvení uložené v objektu.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ Podpora verzí umožňuje revidovaným pruhům přidat nové trvalé vlastnosti 
 
 Volání této funkce k načtení informací o stavu z registru nebo . INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Voláním této funkce uložíte informace o stavu do registru nebo . INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367688"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752532"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Třída CMFCColorPickerCtrl
 
@@ -61,13 +61,13 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Vytvoří `CMFCColorPickerCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Načte barvu, kterou uživatel vybere.|
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Načte hodnoty odstínu, jasu a sytosti barvy, kterou uživatel vybere.|
@@ -87,7 +87,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Volat rámci před kurzor, který odkazuje na vybranou barvu se zobrazí.|
 
@@ -184,7 +184,7 @@ Hodnota RGB vybrané barvy.
 
 Načte hodnoty odstínu, jasu a sytosti barvy, kterou uživatel vybere.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ Složka sytosti vybrané barvy.
 
 Nastaví aktuální barvu na barvu definovanou zadanými barevnými složkami RGB nebo zadaným šestiúhelníkem buňky.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -292,7 +292,7 @@ Druhé přetížení této metody nastaví aktuální barvu na barvu šestiúhel
 
 Nastaví aktuální barvu na zadanou hodnotu barvy RGB.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Nastaví aktuální barvu na zadanou hodnotu barvy HLS.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Změní odstín aktuálně vybrané barvy.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Změní svítivost aktuálně vybrané barvy.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,7 +365,7 @@ void SetLuminance(double Luminance);
 
 Nastaví šířku pruhu jasu v ovládacím prvku pro výběr barvy.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
@@ -382,7 +382,7 @@ Tuto metodu použijte ke změně velikosti pruhu jasu, který je na kartě **Vla
 
 Nastaví počáteční vybranou barvu.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Tuto metodu zavolejte při inicializování ovládacího prvku výběru barev.
 
 Nastaví aktuální paletu barev.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ Paleta barev definuje pole barev, které je zobrazeno v ovládacím prvku pro v�
 
 Změní sytost aktuálně vybrané barvy.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Nastaví typ ovládacího prvku pro výběr barev, který se má zobrazit.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

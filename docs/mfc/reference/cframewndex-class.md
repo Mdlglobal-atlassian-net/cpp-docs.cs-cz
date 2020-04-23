@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373765"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752923"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx – třída
 
@@ -199,7 +199,7 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Upraví rozložení položky klienta OLE a klientské oblasti rámce.|
 |`CFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|
@@ -316,7 +316,7 @@ Následující příklad ukazuje, jak dědit `CFrameWndEx` třídu z třídy. P�
 
 Upraví rozložení položky klienta OLE a klientské oblasti rámce.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 Ukotví zadané podokno do okna rámce.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ Parametr *dwDockStyle* může mít jednu z následujících hodnot:
 
 Zobrazí nebo skryje hlavní nabídku v režimu celé obrazovky.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Povolí režim celé obrazovky pro okno rámce.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ Chcete-li zachovat hlavní nabídku na obrazovce, zavolejte [CFrameWndEx::Enable
 
 Povolí nebo zakáže načítání stavu ukotvení.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 Povolí nebo zakáže automatické zpracování nabídky podokna.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 Volat rámci při změně barvy systému.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ Tato metoda se nazývá při změně velikosti okna rámce nebo při zobrazení 
 
 Zruší registraci podokna a odebere ho ze správce ukotvení.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,7 +1999,7 @@ Tato metoda slouží k odebrání ovládacího panelu z dokovacího rozvržení 
 
 Obnoví rozložení ukotvení do stavu ukotvení uloženého v registru.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -2012,7 +2012,7 @@ Dokovací stát. Tento parametr je ignorován.
 
 Nastaví okno rámce náhledu tisku.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Vloží uživatelem definované příkazy do nabídky panelu nástrojů.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ Rozhraní framework ukládá uživatelem definované příkazy v seznamu. Použi
 
 Přepíná hlavní snímek mezi režimem celé obrazovky a běžným režimem.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 Zobrazí nebo skryje zadané podokno.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 Volat rámci aktualizovat popisek rámce okna.
 
-```
+```cpp
 void UpdateCaption();
 ```
 

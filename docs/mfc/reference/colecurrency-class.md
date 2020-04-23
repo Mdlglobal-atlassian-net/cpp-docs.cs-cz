@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366147"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753918"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 
@@ -43,13 +43,13 @@ class COleCurrency
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleCurrency::ColeCurrency](#colecurrency)|Vytvoří `COleCurrency` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleCurrency::Formát](#format)|Generuje formátovaný řetězec reprezentace `COleCurrency` objektu.|
 |[COleCurrency::GetStatus](#getstatus)|Získá stav (platnost) tohoto `COleCurrency` objektu.|
@@ -59,7 +59,7 @@ class COleCurrency
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[operátor =](#operator_eq)|Zkopíruje `COleCurrency` hodnotu.|
 |[operátor +, -](#operator_plus_minus)|Přidá, odečte a změní `COleCurrency` znaménko hodnot.|
@@ -73,7 +73,7 @@ class COleCurrency
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleCurrency::m_cur](#m_cur)|Obsahuje základní MĚNU `COleCurrency` pro tento objekt.|
 |[COleCurrency::m_status](#m_status)|Obsahuje stav tohoto `COleCurrency` objektu.|
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 Volání této členské funkce nastavit jednotky a `COleCurrency` zlomkové části tohoto objektu.
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,7 +542,7 @@ Všimněte si, že jednotky a zlomkové části jsou určeny podepsané dlouhé 
 
 Volání této členské funkce nastavit stav (platnost) tohoto `COleCurrency` objektu.
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 

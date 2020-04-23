@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374916"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753829"
 ---
 # <a name="colemessagefilter-class"></a>Třída COleMessageFilter
 
@@ -49,13 +49,13 @@ class COleMessageFilter : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleMessageFilter::COleMessageFilter](#colemessagefilter)|Vytvoří `COleMessageFilter` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleMessageFilter::BeginBusyState](#beginbusystate)|Umístí aplikaci do stavu zaneprázdněn.|
 |[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|Povolí a zakáže dialogové okno, které se zobrazí, když je volaná aplikace zaneprázdněna.|
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 Povolí a zakáže zaneprázdněné dialogové okno, které se zobrazí po vypršení zpoždění čekající na zprávu (viz [SetRetryReply)](#setretryreply)během volání OLE.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ Určuje, zda je dialogové okno Zaneprázdněn povoleno nebo zakázáno.
 
 Povolí a zakáže dialogové okno "neodpovídá", které se zobrazí, pokud během volání OLE čeká na vyřízení zprávy klávesnice nebo myši a časový čas volání bylo zakázáno.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ Výchozí filtr zpráv rozhraní je automaticky zaregistrován během inicializa
 
 Odvolá předchozí registraci provedenou voláním [do rejstříku](#register).
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ Výchozí filtr zpráv, který je vytvořen a automaticky registrován v rámci,
 
 Tato funkce nastaví "zaneprázdněnou odpověď" aplikace.
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ Ve výchozím nastavení je zaneprázdněná odpověď SERVERCALL_RETRYLATER. Ta
 
 Určuje, jak dlouho volající aplikace čeká na odpověď z volané aplikace před provedením další akce.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ Tato funkce funguje ve shodě s [SetRetryReply](#setretryreply).
 
 Určuje akci volající aplikace, když obdrží zaneprázdněnou odpověď z volané aplikace.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

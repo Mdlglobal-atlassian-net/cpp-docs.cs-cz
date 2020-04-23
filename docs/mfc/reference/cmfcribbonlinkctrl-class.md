@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 5d00c17b2ede654b9bdd214a8649f1237b9d9fdc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c0cbe843aac172464683288d61e2aec2af60b68
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753566"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl – třída
 
@@ -54,13 +54,13 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|Vytvoří a inicializuje `CMFCRibbonLinkCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Přepíše `CMFCRibbonButton::CopyFrom`.)|
 |[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Přepíše [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
@@ -259,7 +259,7 @@ Otevře webovou stránku pomocí hypertextového odkazu přidruženého k objekt
 
 Nastaví hodnotu hypertextového odkazu.
 
-```
+```cpp
 void SetLink(LPCTSTR lpszLink);
 ```
 

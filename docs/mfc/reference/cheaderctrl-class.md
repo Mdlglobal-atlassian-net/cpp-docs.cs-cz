@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366857"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750917"
 ---
 # <a name="cheaderctrl-class"></a>Třída CHeaderCtrl
 
@@ -85,13 +85,13 @@ class CHeaderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Vytvoří `CHeaderCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHeaderCtrl::Vymazat všechny filtry](#clearallfilters)|Vymaže všechny filtry pro ovládací prvek záhlaví.|
 |[CHeaderCtrl::Vymazat filtr](#clearfilter)|Vymaže filtr pro ovládací prvek záhlaví.|
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku záhlaví. Popis stylů ovládacích prvků záhlaví naleznete v tématu [Styly řízení záhlaví](/windows/win32/Controls/header-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku záhlaví. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Určuje velikost a umístění ovládacího prvku záhlaví. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku záhlaví, obvykle . Nesmí být null.
@@ -301,7 +301,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Styl ovládacího prvku záhlaví. Popis stylů ovládacích prvků záhlaví naleznete v tématu [Styly řízení záhlaví](/windows/win32/Controls/header-control-styles) v sadě Windows SDK. Seznam dalších stylů najdete v tématu [Vytvoření.](#create)
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametr|Popis|
 |---------------|-----------------|
 |*iPoložka*|[v] Nulový index položky záhlaví, jehož styl je HDF_SPLITBUTTON. Další informace naleznete `fmt` v člen [hditem](/windows/win32/api/commctrl/ns-commctrl-hditemw) struktury.|
-|*lpRect*|[out] Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury pro příjem informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) struktury pro příjem informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Index na základě nuly položky ovládacího prvku záhlaví.
 
 *lpRect*<br/>
-Ukazatel na adresu [rect](/previous-versions/dd162897\(v=vs.85\)) struktury, která přijímá informace ohraničující obdélník.
+Ukazatel na adresu [rect](/windows/win32/api/windef/ns-windef-rect) struktury, která přijímá informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpRect*|[out] Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která přijímá informace ohraničující obdélník.|
+|*lpRect*|[out] Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která přijímá informace ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd1bce7de7ac323dc3099ab4938306768eb95a35
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321957"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754631"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange – třída
 
@@ -41,13 +41,13 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Vytvoří `CDataExchange` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::Selhání](#fail)|Nazývá se při ověření se nezdaří. Obnoví fokus na předchozí ovládací prvek a vyvolá výjimku.|
 |[CDataExchange::PrepareCtrl](#preparectrl)|Připraví zadaný ovládací prvek pro výměnu dat nebo ověření. Používá se pro ovládací prvky bez úprav.|
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Příznak pro směr DDX a DDV.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Dialogové okno nebo okno, ve kterém probíhá výměna dat.|
@@ -107,7 +107,7 @@ Vytvořte `CDataExchange` objekt sami ukládat další informace v objektu vým�
 
 Rozhraní Framework volá tuto členská funkci, když se nezdaří operace ověření dat dialogu (DDV).
 
-```
+```cpp
 void Fail();
 ```
 

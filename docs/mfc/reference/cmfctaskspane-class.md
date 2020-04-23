@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753416"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane – třída
 
@@ -217,13 +217,13 @@ class CMFCTasksPane : public CDockablePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Vytvoří `CMFCTasksPane` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTasksPane::Přidat skupinu](#addgroup)|Přidá do ovládacího prvku podokna úloh novou skupinu úkolů.|
 |[CMFCTasksPane::Přidat popisek](#addlabel)|Přidá nový statický popisek do zadané skupiny úloh.|
@@ -320,7 +320,7 @@ class CMFCTasksPane : public CDockablePane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Volat rámci při aktivaci nové stránky podokna úloh.|
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ Rozbalovací nabídka, kterou tato metoda vytvoří, obsahuje seznam stránek v 
 
 Povolí nebo zakáže animaci, ke které dojde při rozbalení nebo sbalení skupiny úloh.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ Ve výchozím nastavení je povolena animace, ke které dochází při rozbalen�
 
 Určuje, zda může uživatel sbalit skupiny úloh.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ Sbalená skupina úloh zobrazí pouze titulek skupiny. seznam úkolů je skrytý
 
 Povolí rozevírací nabídky na navigačních tlačítkách **Další** a **Předchozí.**
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ Nabídky obsahují historii stránek úkolů, které uživatel použil.
 
 Povolí nebo zakáže navigační panel nástrojů.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ Ve výchozím nastavení se v rámci nezobrazí navigační panel nástrojů. Po
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Povolovací tlačítka místo posuvníku.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ Ve výchozím nastavení se v rámci zobrazí tlačítka posouvání v podokně 
 
 Povolí nebo zakáže zalamování slov pro text v popiscích.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ Ve výchozím nastavení rozhraní nezalomí text v popiscích. Pokud je povolen
 
 Povolí nebo zakáže zalamování slov pro text v úkolech.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ Výchozí mezery mezi podoknem úloh a okrajem klientské oblasti jsou 12 pixel�
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ Počet stránek v podokně úloh.
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::Rozložení_ rozložení
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Odebere všechny skupiny na zadané stránce.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ Odebere všechny skupiny na stránce určené *nPageIdx*nebo všechny skupiny, p
 
 Odebere všechny stránky z podokna úloh kromě výchozí (první) stránky.
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Odebere všechny úkoly ze zadané skupiny.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Odebere skupinu.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ Když rozhraní odebere skupinu, všechny úkoly a uživatelská okna s ní spoj
 
 Odebere zadanou stránku z podokna úloh.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Aktivuje určenou stránku v podokně úloh.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ Tato metoda uplatňuje, pokud *nPageIdx* je neplatný.
 
 Nastaví název titulku podokna úloh.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ Pokud má podokno úloh více stránek, má výchozí stránka titulek, který b
 
 Nastaví výšku titulku skupiny.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ Pokud *n* je -1, framework určuje hodnotu marže `CMFCVisualManager::GetTasksPa
 
 Nastaví vodorovné odsazení titulku skupiny.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 Nastaví svislé odsazení titulku skupiny.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ PRAVDA, pokud byla barva textu skupiny úspěšně změněna; jinak NEPRAVDA.
 
 Nastaví svislé odsazení pro skupinu.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ Volánítéto metody přizpůsobit okraje prvků podokna úloh. Pokud *n* je -1,
 
 Nastaví vodorovný okraj.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ Tato metoda přidruží seznam obrázků k ovládacímu prvku podokna úloh. Chc
 
 Nastaví text titulku pro stránku podokna úloh.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ TRUE, pokud byl název úkolu úspěšně nastaven; jinak NEPRAVDA.
 
 Nastaví vodorovné odsazení pro úkoly.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ Výchozí vodorovné odsazení je 12 pixelů.
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ PRAVDA, pokud byla barva textu úkolu úspěšně nastavena; jinak NEPRAVDA.
 
 Nastaví svislý okraj.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318129"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753102"
 ---
 # <a name="cspinbuttonctrl-class"></a>Třída CSpinButtonCtrl
 
@@ -53,13 +53,13 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Vytvoří `CSpinButtonCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSpinButtonCtrl::Vytvořit](#create)|Vytvoří ovládací prvek číselníku a `CSpinButtonCtrl` připojí jej k objektu.|
 |[CSpinButtonCtrl::CreateEx](#createex)|Vytvoří ovládací prvek číselníku se zadanými rozšířenými styly systému Windows a připojí jej k objektu. `CSpinButtonCtrl`|
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku číselníku. Aplikujte na ovládací prvek libovolnou kombinaci stylů ovládání číselníku. Tyto styly jsou popsány v [části Styly ovládacího prvku nahoru dolů](/windows/win32/Controls/up-down-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a polohu ovládacího prvku číselníku. Může to být buď [cRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [rect](/previous-versions/dd162897\(v=vs.85\)) struktura
+Určuje velikost a polohu ovládacího prvku číselníku. Může to být buď [cRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [rect](/windows/win32/api/windef/ns-windef-rect) struktura
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího `CDialog`prvku číselníku, obvykle . Nesmí být null.
@@ -160,7 +160,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku číselníku. Aplikujte na ovládací prvek libovolnou kombinaci stylů ovládání číselníku. Tyto styly jsou popsány v [části Styly ovládacího prvku nahoru dolů](/windows/win32/Controls/up-down-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -375,7 +375,7 @@ Předchozí pozice (16bitová `SetPos`přesnost pro , 32bitová přesnost pro). 
 
 Nastaví horní a dolní meze (rozsah) pro ovládání číselníku.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

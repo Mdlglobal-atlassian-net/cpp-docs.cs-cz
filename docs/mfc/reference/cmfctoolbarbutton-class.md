@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 5d6b964543a5cbd8a8896fe768e2d57a098ead97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e96740ba6755f489be07fbf8996cfa8b049314a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372218"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754024"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Třída CMFCToolBarButton
 
@@ -181,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Vytvoří a inicializuje `CMFCToolBarButton` objekt.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::Canbedropped](#canbedropped)|Určuje, zda může uživatel během vlastního nastavení umístit tlačítko na panel nástrojů nebo nabídku.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Určuje, zda lze tlačítko uložit.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Určuje, zda se na tlačítku zobrazí obrázek.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Určuje, zda se na tlačítku zobrazí textový popisek.|
@@ -1683,7 +1683,7 @@ Výchozí implementace této metody neprovede žádnou akci. Přepsat tuto metod
 
 Nastaví ohraničovací obdélník tlačítka.
 
-```
+```cpp
 void SetRect(const CRect rect);
 ```
 
@@ -1717,7 +1717,7 @@ Výchozí implementace nastaví datový člen [CMFCToolBarButton:::m_nStyle](#m_
 
 Určuje, zda je tlačítko viditelné.
 
-```
+```cpp
 void SetVisible(BOOL bShow=TRUE);
 ```
 
@@ -1734,7 +1734,7 @@ Tato funkce slouží ke skrytí nebo zobrazení určitého tlačítka panelu ná
 
 Zobrazí nebo skryje tlačítko.
 
-```
+```cpp
 void Show(BOOL bShow);
 ```
 

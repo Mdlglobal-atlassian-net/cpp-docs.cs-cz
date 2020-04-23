@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 41fa3204712749a3b1123a20d31b01ba8b5fbaa4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ebac4e18f65d789d5196266d57184744ad5ad28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753629"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider – třída
 
@@ -107,13 +107,13 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::CPaneDivider](#cpanedivider)||
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||
 |[CPaneDivider::AddPane](#addpane)||
@@ -152,14 +152,14 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::GetPanes](#getpanes)|Vrátí seznam podoken, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.|
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Vrátí seznam oddělovačů panelů, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.|
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Určuje výchozí šířku všech oddělovačů panelů v aplikaci v obrazových bodech.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Obsahuje ukazatel na informace o třídě `CPaneDivider`runtime o odvozeném objektu.|
@@ -194,7 +194,7 @@ Následující příklad ukazuje, jak `CPaneDivider` získat objekt `CWorkspaceB
 
 ## <a name="cpanedividersetautohidemode"></a><a name="setautohidemode"></a>CPaneDivider::SetAutoHideMode
 
-```
+```cpp
 void SetAutoHideMode(BOOL bMode);
 ```
 
@@ -206,7 +206,7 @@ void SetAutoHideMode(BOOL bMode);
 
 ## <a name="cpanedividersetpanecontainermanager"></a><a name="setpanecontainermanager"></a>CPaneDivider::SetPaneContainerManager
 
-```
+```cpp
 void SetPaneContainerManager(CPaneContainerManager* p);
 ```
 
@@ -433,7 +433,7 @@ const CBasePane* GetFirstPane() const;
 
 Vrátí seznam oddělovačů panelů, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.
 
-```
+```cpp
 void GetPaneDividers(CObList& lstSliders);
 ```
 
@@ -460,7 +460,7 @@ DWORD GetPaneDividerStyle() const;
 
 Vrátí seznam podoken, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze k načtení výchozích oddělovačů podokna.
 
-```
+```cpp
 void GetPanes(CObList& lstBars);
 ```
 
@@ -495,7 +495,7 @@ int GetWidth() const;
 
 ## <a name="cpanedividerinit"></a><a name="init"></a>CPaneDivider::Init
 
-```
+```cpp
 void Init(
     BOOL bDefaultSlider = FALSE,
     CWnd* pParent = NULL);
@@ -632,7 +632,7 @@ virtual void OnShowPane(
 
 ## <a name="cpanedividerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPaneDivider::ReleaseEmptyPaneContainers
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -684,7 +684,7 @@ virtual void RepositionPanes(
 
 ## <a name="cpanedividerserialize"></a><a name="serialize"></a>CPaneDivider::Serializovat
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -696,7 +696,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanedividershowwindow"></a><a name="showwindow"></a>CPaneDivider::Zobrazitokno
 
-```
+```cpp
 void ShowWindow(int nCmdShow);
 ```
 
@@ -708,7 +708,7 @@ void ShowWindow(int nCmdShow);
 
 ## <a name="cpanedividerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneDivider::StoreRecentDockSiteInfo
 
-```
+```cpp
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```
 
@@ -720,7 +720,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ## <a name="cpanedividerstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneDivider::StoreRecentTabRelatedInfo
 
-```
+```cpp
 void StoreRecentTabRelatedInfo(
     CDockablePane* pDockingBar,
     CDockablePane* pTabbedBar);

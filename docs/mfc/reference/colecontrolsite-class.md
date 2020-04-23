@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366157"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753955"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite – třída
 
@@ -127,13 +127,13 @@ class COleControlSite : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlSite::COleControlSite](#colecontrolsite)|Vytvoří `COleControlSite` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlSite::Vlastnost BindDefaultProperty](#binddefaultproperty)|Sváže výchozí vlastnost hostovaného ovládacího prvku se zdrojem dat.|
 |[COleControlSite::Vlastnost BindProperty](#bindproperty)|Sváže vlastnost hostovaného ovládacího prvku se zdrojem dat.|
@@ -170,13 +170,13 @@ class COleControlSite : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlSite::GetControlInfo](#getcontrolinfo)|Načte informace o klávesnici a mnemotechnické pomůcky pro hostované ovládací prvek.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControlSite::m_bIsWindowless](#m_biswindowless)|Určuje, zda je hostovaný ovládací prvek ovládací prvek bez oken.|
 |[COleControlSite::m_ctlInfo](#m_ctlinfo)|Obsahuje informace o zpracování klávesnice pro ovládací prvek.|
@@ -454,7 +454,7 @@ Nenulová, pokud bylo okno dříve zakázáno, jinak 0.
 
 Určuje, zda bude lokalita ovládacího prvku zpracovávat nebo ignorovat události vypálené z ovládacího prvku.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ Pokud *bFreeze* je PRAVDA, server ovládacího prvku požaduje ovládací prvek 
 
 Načte informace o ovládacím prvku klávesnice mnemotechnické pomůcky a chování klávesnice.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -1017,7 +1017,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Nastaví ovládací prvek jako výchozí tlačítko.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365107"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752195"
 ---
 # <a name="ctooltipctrl-class"></a>Třída CToolTipCtrl
 
@@ -93,13 +93,13 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Vytvoří `CToolTipCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolTipCtrl::Aktivovat](#activate)|Aktivuje a deaktivuje ovládání špičky nástroje.|
 |[CToolTipCtrl::AddTool](#addtool)|Zaregistruje nástroj s ovládáním špičky nástroje.|
@@ -164,7 +164,7 @@ Další informace o `CToolTipCtrl`použití naleznete v [tématech Ovládací pr
 
 Voláním této funkce aktivujte nebo deaktivujte ovládací prvek špičky nástroje.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Ukazatel na okno, které obsahuje nástroj.
 ID prostředku řetězce, který obsahuje text nástroje.
 
 *lpRectTool*<br/>
-Ukazatel na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) obsahující souřadnice ohraničujícího obdélníku nástroje. Souřadnice jsou relativní k levému hornímu rohu klientské oblasti okna identifikovaného *pomocí pWnd*.
+Ukazatel na strukturu [RECT](/windows/win32/api/windef/ns-windef-rect) obsahující souřadnice ohraničujícího obdélníku nástroje. Souřadnice jsou relativní k levému hornímu rohu klientské oblasti okna identifikovaného *pomocí pWnd*.
 
 *nIDTool*<br/>
 ID nástroje.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje obdélník okna tip nástroje nebo obdélník zobrazení textu.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje obdélník okna tip nástroje nebo obdélník zobrazení textu.
 
 *bVětší*<br/>
 Pokud TRUE, *lprc* se používá k určení obdélníku zobrazení textu a obdrží odpovídající obdélník okna. Pokud FALSE, *lprc* se používá k určení obdélníku okna a obdrží odpovídající obdélník zobrazení textu.
@@ -352,7 +352,7 @@ Musíte volat `Create` po vytvoření objektu.
 
 Odstraní nástroj určený *pWnd* a *nIDTool* z kolekce nástrojů podporovaných ovládáním hrotu nástroje.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Načte horní, levý, dolní a pravý okraj nastavený pro okno tipu nástroje.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Adresa `RECT` struktury, která obdrží informace o marži. Členy [rect](/previous-versions/dd162897\(v=vs.85\)) struktury nedefinují ohraničující obdélník. Pro účely této zprávy jsou členové struktury interpretováni takto:
+Adresa `RECT` struktury, která obdrží informace o marži. Členy [rect](/windows/win32/api/windef/ns-windef-rect) struktury nedefinují ohraničující obdélník. Pro účely této zprávy jsou členové struktury interpretováni takto:
 
 |Člen|Reprezentace|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Tato členská funkce implementuje chování [TTM_GETMAXTIPWIDTH](/windows/win32
 
 Načte text, který ovládací prvek špičky nástroje udržuje pro nástroj.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Načte název aktuálního ovládacího prvku popisku.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Odebere ze zobrazení zobrazené okno tipu nástroje.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Tato členská funkce implementuje chování [TTM_POP](/windows/win32/Controls/t
 
 Způsobí, že aktuální ovládací prvek popisek se zobrazí na souřadnicích poslední zprávy myši.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ Následující příklad kódu zobrazí okno s popisem.
 
 Předá zprávu myši ovládacímu prvku tip nástroje pro zpracování.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Ovládací prvek tip nástroje zpracovává pouze následující zprávy, `Relay
 
 Nastaví dobu zpoždění pro ovládání špičky nástroje.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ Doba zpoždění je doba, po kterou musí kurzor zůstat na nástroji, než se z
 
 Nastaví horní, levý, dolní a pravý okraj okna tipu nástroje.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Nastaví barvu pozadí v okně tipu nástroje.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Tato členská funkce implementuje chování [TTM_SETTIPBKCOLOR](/windows/win32/
 
 Nastaví barvu textu v okně tipu nástroje.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Nastaví informace, které pro nástroj udržuje špička nástroje.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Ukazatel na strukturu [TOOLINFO,](/windows/win32/api/commctrl/ns-commctrl-tttool
 
 Nastaví nový ohraničovací obdélník pro nástroj.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Ukazatel na okno, které obsahuje nástroj.
 ID nástroje.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu určující nový ohraničující obdélník.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu určující nový ohraničující obdélník.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Tato členská funkce emuluje funkce [zprávy TTM_SETWINDOWTHEME,](/windows/win3
 
 Vynutí překreslit aktuální nástroj.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Aktualizuje text tipu nástroje pro nástroje tohoto ovládacího prvku.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

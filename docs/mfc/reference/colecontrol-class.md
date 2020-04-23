@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366199"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753934"
 ---
 # <a name="colecontrol-class"></a>Třída COleControl
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Vytvoří `COleControl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::Ambientappearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu okolní vlastnosti BackColor.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Volat rámci při ovládacího prvku vzhled musí být aktualizován.|
 |[COleControl::DrawMetafile](#drawmetafile)|Volat rámci při použití kontextu zařízení metasouboru.|
@@ -781,7 +781,7 @@ Kontejner může například nastavit na hodnotu FALSE v režimu návrhu.
 
 Signalizuje, že hodnota vázané vlastnosti se změnila.
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ Tato funkce obvykle není volána přímo. Místo toho je ovládací prvek OLE o
 
 Volání této funkce při změně sady mnemotechnické pomůcky podporované ovládacím prvkem.
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ Přepište tuto funkci a přizpůsobte způsob zobrazení chyb.
 
 Simuluje akci kliknutí myší na ovládací mase.
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ Pokud byl k vytvoření řídicího projektu OLE použit Průvodce řízením, b
 
 Překreslí ovládací prvek OLE, který byl podtřídy z ovládacího prvku systému Windows.
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ Další informace o této funkci a podřadných třídách ovládacího prvku sy
 
 Volat rámci při ovládacího prvku vzhled musí být aktualizován.
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ Tato funkce přímo volá `OnDraw` overridable funkce.
 
 Volat rámci při použití kontextu zařízení metasouboru.
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ Obdélníková plocha, která má být nakreslena.
 
 Umožňuje jednoduchou charakteristiku rámce pro ovládací prvek OLE.
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ Tato funkce je obvykle volána `COleControl::DoPropExchange`výchozí implementa
 
 Serializuje nebo inicializuje stav vlastností zásob ovládacího prvku.
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ Další informace o trvalosti a správu verzí naleznete v článku [Ovládací 
 
 Volat rámci při klepnutí myší přes aktivní ovládací prvek.
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ Aby mohlo dojít k automatickému vypálení události Click, musí být na map�
 
 Volat rámci při poklepání myší přes aktivní ovládací prvek.
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ Aby mohlo dojít k automatickému spuštění události DblClick, musí mít map
 
 Spustí událost Stock Error.
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ Chcete-li tento problém vyřešit, ručně změňte parametr SCODE v ovládací
 
 Vyvolá uživatelem definovanou událost z ovládacího prvku s libovolným počtem volitelných argumentů.
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ Argument *pbParams* je seznam **VTS_** oddělený ch od místa . Jedna nebo víc
 
 Volat rámci při stisknutí klávesy, zatímco ovládací prvek je aktivní.
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ Aby mohlo dojít k automatickému spuštění události KeyDown, musí mít mapa
 
 Volat rámci při stisknutí klíče a uvolnění, zatímco vlastní ovládací prvek je aktivní rozhraní v rámci kontejneru.
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ Aby mohlo dojít k automatickému vypalování události KeyPress, musí mít ma
 
 Volat rámci při uvolnění klíče, zatímco vlastní ovládací prvek je aktivní rozhraní v rámci kontejneru.
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ Aby mohlo dojít k automatickému spuštění události KeyUp, musí mít mapa u
 
 Volat rámci při stisknutí tlačítka myši přes aktivní vlastní ovládací prvek.
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1335,7 +1335,7 @@ Aby mohlo dojít k automatickému spouštění události MouseDown, musí být n
 
 Volat rámci při přesunutí kurzoru přes aktivní vlastní ovládací prvek.
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1379,7 +1379,7 @@ Aby mohlo dojít k automatickému spouštění události MouseMove, musí mít m
 
 Volat rámci při uvolnění tlačítka myši přes aktivní vlastní ovládací prvek.
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1423,7 +1423,7 @@ Aby mohlo dojít k automatickému spouštění události MouseUp, musí mít map
 
 Vyvolá událost s aktuální hodnotou stavu řízení připravenosti.
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ Další informace `GetControlFlags` o dalších optimalizacích ovládacích prv
 
 Načte velikost okna ovládacího prvku OLE.
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ Všimněte si, že volající musí uvolnit objekt po dokončení. V rámci prov
 
 Měří textové metriky `CFontHolder` pro libovolný objekt vlastněný ovládacím prvkem.
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ To lze získat zprávu pro zobrazení ve stavovém řádku, zatímco položka na
 
 Zabraňuje přístupu uživatele k hodnotě vlastnosti ovládacího prvku.
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ Obdélník je platný pouze v případě, že je ovládací prvek aktivní na m�
 
 Měří textové metriky pro vlastnost Font na skladě ovládacího prvku, kterou lze vybrat pomocí funkce [SelectStockFont.](#selectstockfont)
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ Za normálních okolností by to vyžadovalo, aby okno ovládacího prvku být r
 
 Informuje základní třídu IID, které bude ovládací prvek používat.
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ Odkaz na textový řetězec ovládacího prvku.
 
 Nastaví stav připravenosti ovládacího prvku.
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ Nejjednodušší ovládací prvky nikdy není třeba rozlišovat mezi LOADED a I
 
 Vynutí překreslení ovládacího prvku.
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ Pokud *lpRect* má hodnotu NULL, celý ovládací prvek bude překreslen. Pokud 
 
 Zruší platnost klientské oblasti okna kontejneru v rámci dané oblasti.
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ Tuto funkci je nutné přepsat a vrátit hodnotu TRUE, pokud ovládací prvek OL
 
 Obnoví všechna předchozí data načtená asynchronně a iniciuje nové načítání asynchronní vlastnosti ovládacího prvku.
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ DWORD popisující, který formulář nebo aspekt objektu má být zobrazen. Pla
 - DVASPECT_TRANSPARENT Obdélník pokrývající všechny průhledné nebo nepravidelné části.
 
 *pRect*<br/>
-Odkazuje na [rectl](/previous-versions/dd162907\(v=vs.85\)) strukturu určující obdélník, ve kterém má být objekt nakreslena. Tento parametr řídí umístění a roztažení objektu.
+Odkazuje na [rectl](/windows/win32/api/windef/ns-windef-rectl) strukturu určující obdélník, ve kterém má být objekt nakreslena. Tento parametr řídí umístění a roztažení objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3513,7 +3513,7 @@ Na vstupní *pPoint* je relativní k původu nadřazené (levý horní roh konte
 
 Upozorní kontejner, že modální dialogové okno bylo uzavřeno.
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ Tuto funkci zavolejte po zobrazení libovolného modálního dialogového okna. 
 
 Upozorní kontejner, že modální dialogové okno se chystá zobrazit.
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ Volání této funkce před zobrazením libovolného modálního dialogového ok
 
 Zničí a znovu vytvoří okno ovládacího prvku.
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ To může být nezbytné, pokud potřebujete změnit bity stylu okna.
 
 Vynutí překreslení ovládacího prvku OLE.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ Volání této funkce obnovit nadřazené ovládacího okna.
 
 Inicializuje stav vlastností `COleControl` zásob na jejich výchozí hodnoty.
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ Binární inicializační výkon ovládacího prvku `ResetStockProps` `ResetVers
 
 Inicializuje číslo verze na zadanou hodnotu.
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ Binární inicializační výkon ovládacího prvku `ResetVersion` `ResetStockPr
 
 Umožňuje objektu OLE bez oken posouvat oblast v rámci aktivního obrazu na místě na obrazovce.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ Ukazatel na dříve `CFont` vybraný objekt. Měli byste použít [CDC::SelectOb
 
 Serializuje nebo inicializuje stav místa zobrazení přiděleného ovládacímu prvku.
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ Pomocí aplikace `SerializeExtent`, a `SerializeStockProps` `SerializeVersion` p
 
 Serializuje nebo inicializuje stav vlastností `COleControl` zásob: Vzhled, BackColor, BorderStyle, Caption, Enabled, Font, ForeColor a Text.
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ Pomocí aplikace `SerializeVersion`, a `SerializeExtent` `SerializeStockProps` p
 
 Nastaví hodnotu vlastnosti vzhledu vašeho ovládacího prvku.
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ Další informace o vlastnostech zásob naleznete [v tématu ActiveX Controls: P
 
 Nastaví hodnotu vlastnosti BackColor vašeho ovládacího prvku.
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ Další informace o použití této vlastnosti a dalších souvisejících vlast
 
 Nastaví hodnotu vlastnosti BorderStyle vašeho ovládacího prvku.
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ Všimněte si, že všechny souřadnice pro ovládací okna jsou relativní vzhl
 
 Nastaví hodnotu vlastnosti Enabled ovládacího prvku.
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ Pokud ovládací prvek není bez oken, tato funkce způsobí, že samotný `CWnd
 
 Nastaví vlastnost stock Font ovládacího prvku.
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ Ukazatel na rozhraní odeslání písma.
 
 Nastaví hodnotu vlastnosti ForeColor vašeho ovládacího prvku.
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ Výchozí implementace určuje dva formáty: CF_METAFILEPICT a trvalé nastaven�
 
 Nastaví velikost ovládacího prvku OLE při prvním zobrazení v kontejneru.
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ Volání této funkce v konstruktoru nastavit počáteční velikost ovládacíh
 
 Změní změněný stav ovládacího prvku.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ Volání této funkce vždy, když dojde ke změně, která by mohla ovlivnit tr
 
 Označuje, že požadavek na úpravu se nezdařil.
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ Volání této `BoundPropertyRequestEdit` funkce při selhání. Tato funkce vyv
 
 Zabrání úpravám hodnoty vlastnosti ovládacího prvku uživatelem.
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ Pokud je ovládací prvek otevřený, jeho velikost se mění; jinak je volána 
 
 Nastaví hodnotu vlastnosti Titulek nebo Text ovládacího prvku.
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ Všimněte si, že vlastnosti Titulek na skladě a Text jsou mapovány na stejno
 
 Signalizuje výskyt chyby v ovládacím prvku.
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ Tato funkce by měla být volána pouze z v rámci Get nebo Set funkce pro vlast
 
 Transformuje hodnoty souřadnic mezi jednotkami HIMETRIC a nativními jednotkami kontejneru.
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,

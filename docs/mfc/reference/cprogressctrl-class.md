@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364010"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751134"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl – třída
 
@@ -63,13 +63,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Vytvoří `CProgressCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CProgressCtrl::Vytvořit](#create)|Vytvoří ovládací prvek indikátor průběhu a `CProgressCtrl` připojí jej k objektu.|
 |[CProgressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek průběhu se zadanými rozšířenými `CProgressCtrl` styly systému Windows a připojí jej k objektu.|
@@ -149,7 +149,7 @@ Určuje styl ovládacího prvku indikátoru průběhu. Použijte libovolnou komb
 - PBS_SMOOTH Zobrazí postupné a hladké vyplnění ovládacího prvku indikátoru průběhu. Bez tohoto příznaku se ovládací prvek naplní bloky.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku indikátoru průběhu. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Vzhledem k tomu, že ovládací prvek musí být podřízené okno, zadané souřadnice jsou relativní vzhledem k klientské oblasti *pParentWnd*.
+Určuje velikost a umístění ovládacího prvku indikátoru průběhu. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury. Vzhledem k tomu, že ovládací prvek musí být podřízené okno, zadané souřadnice jsou relativní vzhledem k klientské oblasti *pParentWnd*.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku indikátoru průběhu, obvykle . Nesmí být null.
@@ -191,7 +191,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku indikátoru průběhu. Použijte libovolnou kombinaci stylů oken popsanou v [createwindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -263,7 +263,7 @@ Pozice ovládacího prvku indikátor průběhu není fyzické umístění na obr
 
 Získá aktuální dolní a horní limity nebo rozsah ovládacího prvku indikátor průběhu.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ Pozice ovládacího prvku indikátor průběhu není fyzické umístění na obr
 
 Nastaví horní a dolní meze rozsahu ovládacího prvku indikátoru průběhu a překreslí pruh tak, aby odrážel nové rozsahy.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370049"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754536"
 ---
 # <a name="cmdiframewndex-class"></a>Třída CMDIFrameWndEx
 
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Přepočítá rozložení aktivní položky.|
 |`CMDIFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|
@@ -259,7 +259,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Určuje, zda lze dokovací podokna převést na podřízená okna MDI.|
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Povolí nebo zakáže optimalizaci překreslení podřízených oken MDI.|
@@ -296,7 +296,7 @@ Následující příklad odvozuje `CMDIFrameWndEx`třídu z . Tento fragment kó
 
 Přepočítá rozložení aktivní položky.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ Ukazatel na nové okno.
 
 Ukotví zadané podokno do okna rámce.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ Následující příklad ukazuje, `EnableDocking` jak se metoda používá v [vi
 
 Zobrazí nebo skryje hlavní nabídku v režimu celé obrazovky.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Povolí režim celé obrazovky pro okno rámce.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ V režimu celé obrazovky jsou všechny řídicí panely, panely nástrojů a na
 
 Povolí nebo zakáže načítání stavu ukotvení.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Povolí nebo zakáže funkci skupin skupin y s kartami MDI pro okno rámce.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ Následující příklad ukazuje, jak `EnableMDITabbedGroups` se používá v [V
 
 Povolí nebo zakáže funkci Tabulátory MDI pro okno rámce MDI. Pokud je tato možnost povolena, okno rámce zobrazí kartu pro každé podřízené okno MDI.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -746,7 +746,7 @@ Následující příklad ukazuje, jak `EnableMDITabs` se používá v [mditabsde
 
 Určuje, zda má být poslední aktivní karta otevřena, když uživatel zavře aktuální kartu.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ Slouží `EnableMDITabsLastActiveActivation` k povolení druhého způsobu aktiv
 
 Povolí nebo zakáže automatické vytváření a správu rozbalovací nabídky, která zobrazuje seznam podoken aplikací.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ Následující příklad ukazuje, jak `EnablePaneMenu` se používá v [VisualSt
 
 Vloží položku nabídky, jejíž ID příkazů volá dialogové okno [CMFCWindowsManagerDialog.](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ Následující příklad ukazuje, jak `LoadMDIState` se používá v [VisualStud
 
 Přesune aktivní kartu z aktuálně aktivního okna s kartami do další nebo předchozí skupiny s kartami.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Vytvoří novou skupinu s kartami, která má jedno okno.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ Tato metoda přepíše [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-c
 
 Zruší registraci podokna a odebere ho ze správce ukotvení.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ Následující příklad ukazuje, jak `SaveMDIState` se používá v [VisualStud
 
 Nastaví okno rámce náhledu tisku.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Změní objekt panelu nástrojů nahrazením fiktivních položek uživateli definovanými položkami.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Přepne hlavní snímek z běžného režimu do režimu celé obrazovky.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Zobrazí nebo skryje zadané podokno.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ Následující příklad ukazuje, jak `ShowPane` se používá v [VisualStudioDe
 
 Vytvoří pole [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) a otevře jej.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ Následující příklad ukazuje, jak `TabbedDocumentToControlBar` se používá
 
 Volat rámci aktualizovat popisek rámce okna.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Nastaví ikonu pro každé podokno s kartami MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

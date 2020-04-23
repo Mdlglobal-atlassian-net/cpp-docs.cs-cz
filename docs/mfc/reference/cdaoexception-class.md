@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: a8a789f4dba06ffe376d8a8e955b026bb23af924
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 935d7870d68554d702e2ad762e83343cb518b2b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369001"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754724"
 ---
 # <a name="cdaoexception-class"></a>CDaoException – třída
 
@@ -39,20 +39,20 @@ class CDaoException : public CException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Výjimka CDao::Výjimka CDao](#cdaoexception)|Vytvoří `CDaoException` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Výjimka CDao::GetErrorCount](#geterrorcount)|Vrátí počet chyb v kolekci chyb databázového stroje.|
 |[Výjimka CDao::GetErrorInfo](#geterrorinfo)|Vrátí informace o chybě o konkrétní objekt chyby v errors kolekce.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Obsahuje rozšířený kód chyby pro všechny chyby ve třídách Knihovny MFC DAO.|
 |[CDaoVýjimka::m_pErrorInfo](#m_perrorinfo)|Ukazatel na objekt [CDaoErrorInfo,](../../mfc/reference/cdaoerrorinfo-structure.md) který obsahuje informace o jednom objektu chyby DAO.|
@@ -138,7 +138,7 @@ Tyto informace jsou užitečné pro opakování prostřednictvím Errors kolekce
 
 Vrátí informace o chybě o konkrétní objekt chyby v errors kolekce.
 
-```
+```cpp
 void GetErrorInfo(int nIndex);
 ```
 

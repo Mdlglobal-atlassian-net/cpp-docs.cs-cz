@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377154"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754677"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset – třída
 
@@ -187,13 +187,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Sada záznamů CDao::CDaoRecordset](#cdaorecordset)|Vytvoří `CDaoRecordset` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Sada záznamů CDao:AddNew](#addnew)|Připravuje se na přidání nového záznamu. [Chcete-li](#update) dokončit přidání, dokončete aktualizaci.|
 |[Sada cdaorekordů::CanAppend](#canappend)|Vrátí nenulovou, pokud lze nové záznamy přidat do sady záznamů pomocí členské funkce [AddNew.](#addnew)|
@@ -270,7 +270,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Sada záznamů CDao::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Obsahuje příznak označující, zda jsou pole automaticky označena jako změněná.|
 |[Sada záznamů CDao::m_nFields](#m_nfields)|Obsahuje počet datových členů pole ve třídě sady záznamů a počet sloupců vybraných sadou záznamů ze zdroje dat.|
@@ -626,7 +626,7 @@ Související informace naleznete v tématech "AddNew Method", "Edit Method", "D
 
 Volání této členské funkce do mezipaměti zadaný počet záznamů ze sady záznamů.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Související informace naleznete v tématu "Count Property" v nápovědě dao.
 
 Volání této členské funkce získat informace o polích v sadě záznamů.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Související informace naleznete v tématu "Vlastnost atributů" v nápovědě 
 
 Volání této členské funkce získat různé druhy informací o indexu definované v základní tabulce základní sadu záznamů.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Související informace naleznete v tématech "Move Method" a "MoveFirst, MoveLa
 
 Volání této členské funkce, chcete-li, aby první záznam v sadě záznamů (pokud existuje) aktuální záznam.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Související informace naleznete v tématech "Move Method" a "MoveFirst, MoveLa
 
 Volání této členské funkce, chcete-li, aby poslední záznam (pokud existuje) v sadě záznamů aktuální záznam.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Související informace naleznete v tématech "Move Method" a "MoveFirst, MoveLa
 
 Volání této členské funkce, chcete-li, aby další záznam v sadě záznamů byl aktuálním záznamem.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Související informace naleznete v tématech "Move Method" a "MoveFirst, MoveLa
 
 Volání této členské funkce, aby předchozí záznam v sadě záznamů byl aktuálním záznamem.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Související informace naleznete v tématu "Seek Method" v nápovědě DAO.
 
 Nastaví relativní počet záznamů aktuálního záznamu objektu sady záznamů.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Související informace naleznete v tématu "Vlastnost absoluteposition" v nápo
 
 Volání této členské funkce umístit sadu záznamů na záznam obsahující zadanou záložku.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Související informace naleznete v tématech "Vlastnost záložky" a Bookmarkab
 
 Voláním této členské funkce nastavte počet záznamů, které mají být uloženy do mezipaměti.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Související informace naleznete v tématu CacheSize, CacheStart Properties v n
 
 Volání této členské funkce určit záložku prvního záznamu v sadě záznamů, které mají být uloženy do mezipaměti.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Související informace naleznete v tématu CacheSize, CacheStart Properties" v 
 
 Volání této členské funkce nastavit index na sadu záznamů typu tabulky.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Související informace naleznete v tématu "Objekt indexu" a definici "aktuáln
 
 Volání této členské funkce příznakem člena dat pole sady záznamů jako změněné nebo jako beze změny.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ To znamená, že nelze nastavit všechna pole **param** na hodnotu NULL, stejně
 
 Volání této členské funkce příznak emitované ho člen dat pole sady záznamů jako Null (konkrétně bez hodnoty) nebo jako non-Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Související informace naleznete v tématech "Objekt pole" a "Vlastnost hodnoty
 
 Volání této členské funkce nastavit pole na hodnotu Null.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Související informace naleznete v tématech "Objekt pole" a "Vlastnost hodnoty
 
 Volání této členské funkce nastavit typ uzamčení pro sadu záznamů.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2458,7 +2458,7 @@ Zadejte hodnotu, `COleVariant` kterou chcete nastavit jako objekt. Informace o n
 
 Volání této členské funkce nastavit parametr na hodnotu Null.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL není stejný jako Null, což v terminologii databáze znamená "bez ho
 
 Voláním této členské funkce nastavte hodnotu, která změní přibližné umístění aktuálního záznamu v objektu sady záznamů na základě procenta záznamů v sadě záznamů.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: bf6399d2a245addb7e2e65100d33643fcd54e893
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369293"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754181"
 ---
 # <a name="cd2dbrushproperties-class"></a>Třída CD2DBrushProperties
 
@@ -31,13 +31,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[VLASTNOSTI CD2DBrushProperties::VLASTNOSTI CD2DBrushProperties](#cd2dbrushproperties)|Přetíženo. Vytvoří `CD2D_BRUSH_PROPERTIES` strukturu|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBrushProperties::CommonInit](#commoninit)|Inicializuje objekt.|
 
@@ -76,7 +76,7 @@ Transformace, která se má aplikovat na stopu
 
 Inicializuje objekt.
 
-```
+```cpp
 void CommonInit();
 ```
 

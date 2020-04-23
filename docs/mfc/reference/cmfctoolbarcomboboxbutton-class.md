@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372193"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754009"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Třída CMFCToolBarComboBoxButton
 
@@ -85,13 +85,13 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Vytvoří `CMFCToolBarComboBoxButton`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::Přidatpoložku](#additem)|Přidá položku na konec seznamu polí se seznamem.|
 |[CMFCToolBarComboBoxButton::Přidat položku Typu Třídění](#addsorteditem)|Přidá položku do seznamu polí se seznamem. Pořadí položek v seznamu je `Compare`určeno .|
@@ -1116,7 +1116,7 @@ TRUE, pokud metoda zpracovává událost; jinak NEPRAVDA.
 
 Odstraní všechny položky ze seznamu a upravit pole.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ Ve výchozím nastavení jsou tlačítka pole se seznamem zarovnána nahoru.
 
 Nastaví ID prostředku místní nabídky pro tlačítko pole se seznamem.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 Nastaví výšku seznamu, když je spadl dolů.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ Seznam stylů tlačítek panelu nástrojů naleznete v tématu [Styly ovládací
 
 Nastaví text v textovém poli tlačítka pole se seznamem.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 

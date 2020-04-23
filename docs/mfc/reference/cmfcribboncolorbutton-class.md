@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 8cf92d8d4b1b113f751bee85ac2a7df6eb06afea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375244"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754853"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Třída CMFCRibbonRibbonColorButton
 
@@ -61,13 +61,13 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonColorButton::CMFCRibbonColorButton](#cmfcribboncolorbutton)||
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonColorButton::AddColorsGroup](#addcolorsgroup)|Přidá skupinu barev do oblasti běžných barev.|
 |[CMFCRibbonColorButton::EnableAutomaticButton](#enableautomaticbutton)|Určuje, zda je povoleno tlačítko **Automaticky.**|
@@ -116,7 +116,7 @@ Následující příklad ukazuje, jak používat různé `CMFCRibbonColorButton`
 
 Přidá skupinu barev do oblasti běžných barev.
 
-```
+```cpp
 void AddColorsGroup(
     LPCTSTR lpszName,
     const CList<COLORREF,COLORREF>& lstColors,
@@ -188,7 +188,7 @@ CMFCRibbonColorButton(
 
 Určuje, zda je povoleno tlačítko **Automaticky.**
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -222,7 +222,7 @@ void EnableAutomaticButton(
 
 Povolí tlačítko **Další.**
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     LPCTSTR lpszToolTip=NULL);
@@ -310,7 +310,7 @@ Barva aktuálně vybraného prvku na rozbalovací paletě barev.
 
 Odstraní všechny skupiny barev z oblasti běžných barev.
 
-```
+```cpp
 void RemoveAllColorGroups();
 ```
 
@@ -318,7 +318,7 @@ void RemoveAllColorGroups();
 
 Vybere barvu z oblasti běžné barvy.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -331,7 +331,7 @@ void SetColor(COLORREF color);
 
 Nastaví velikost všech barevných prvků, které se objeví na pruhu barev.
 
-```
+```cpp
 void SetColorBoxSize(CSize sizeBox);
 ```
 
@@ -366,7 +366,7 @@ Vzhledem `CMFCColorBar::SetColorName`k tomu, že volá , tato `CMFCColorBar` met
 
 Nastaví počet sloupců zobrazených v tabulce barev, která je uživateli zobrazena během procesu výběru barev uživatele.
 
-```
+```cpp
 void SetColumns(int nColumns);
 ```
 
@@ -381,7 +381,7 @@ void SetColumns(int nColumns);
 
 Určuje seznam hodnot RGB, které se mají zobrazit v oblasti barev dokumentu.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -399,7 +399,7 @@ void SetDocumentColors(
 
 Určuje standardní barvy, které se mají zobrazit v tabulce barev, kterou zobrazí tlačítko barva.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -414,7 +414,7 @@ void SetPalette(CPalette* pPalette);
 
 Volat rámci, když uživatel vybere barvu z tabulky barev zobrazí, když uživatel klepne na tlačítko barva.
 
-```
+```cpp
 void UpdateColor(COLORREF color);
 ```
 

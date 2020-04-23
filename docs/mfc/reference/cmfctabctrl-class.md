@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367368"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753460"
 ---
 # <a name="cmfctabctrl-class"></a>Třída CMFCTabCtrl
 
@@ -125,14 +125,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Výchozí konstruktor.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTabctrl::ActivateMDItab](#activatemditab)|Zobrazí zadanou kartu aktuálního ovládacího prvku karty a nastaví fokus na této kartě.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Zabrání ztrátě fokusu aktivního zobrazení při vložení a povolení nové karty.|
 
@@ -256,7 +256,7 @@ Následující příklad ukazuje, jak používat různé `CMFCTabCtrl` metody ve
 
 Zobrazí zadanou kartu aktuálního ovládacího prvku karty a nastaví fokus na této kartě.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Vždy TRUE
 
 Určuje, zda má rozhraní změnit velikost klientské oblasti všech ovládacích oken karet při změně prvku uživatelského rozhraní ovládacího prvku karty.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -381,7 +381,7 @@ Tato metoda se nazývá při změně popisku karty. Tato metoda vyfoukne levé a
 
 Zobrazí nebo skryje tlačítko Zavřít ( **X**) na aktivní kartě.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Přepíná mezi uživatelským rozhraním, které používá dvě tlačítka k posouvání karet oken, a rozhraním, které zobrazuje rozbalovací nabídku oken s kartami.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Tato metoda slouží k přístupu k vloženému posuvníku ovládacího prvku ta
 
 Načte ohraničovací obdélník oblasti popisku tabulátoru v horní nebo dolní části ovládacího prvku tabulátoru.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Načte hranice klientské oblasti aktuálního ovládacího prvku tabulátoru.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Skryje případný vodorovný posuvník v aktivním okně.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Pomocí této metody zabráníte blikání ovládacího prvku tabulátoru při p
 
 Určuje, zda se v rámci zobrazí neaktivní okna ovládacích karet.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Povolí nebo zakáže kreslení oblasti tabulátoru, pokud nejsou žádné viditelné karty.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -846,7 +846,7 @@ Vždy TRUE
 
 Hodnota parametru *stylu* může být jedním `CMFCTabCtrl::Style` z následujících výčtů.
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |STYLE_3D|Zobrazí trojrozměrné obdélníkové karty, které mají zaoblené rohy.|
 |STYLE_3D_ONENOTE|Zobrazí trojrozměrné karty, které mají jednu svislou stranu a jednu šikmou stranu a mají zaoblené rohy.|
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Nastaví aktuální kartu ovládacího prvku karta jako aktivní kartu ve skupině karet rozhraní více dokumentů.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ Metoda `SetActiveTab` automaticky volá [metodu CMFCTabCtrl::HideActiveWindowHor
 
 Povolí nebo zakáže použití tučného písma na aktivních kartách.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Určuje, zda je obdélník rámečku nakreslen kolem vloženého pruhu.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Určuje, zda se má kolem oblasti tabulátoru nakreslit plochý nebo 3D rámeček.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Pomocí metody [CMFCBaseTabCtrl::AddTab,](../../mfc/reference/cmfcbasetabctrl-cl
 
 Určuje, jak lze velikost aktuálního ovládacího prvku karty a jeho opětovné zobrazení.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 Parametr *resizeMode* může být jednou `ResizeMode` z následujících hodnot výčtu.
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |RESIZE_NO|Velikost ovládacího prvku tabulátoru nelze určit.|
 |RESIZE_VERT|Ovládací prvek tabulátoru lze velikost svisle, ale ne vodorovně.|
@@ -1088,7 +1088,7 @@ Parametr *resizeMode* může být jednou `ResizeMode` z následujících hodnot 
 
 Určuje maximální šířku karty v okně s kartami.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Pomocí této metody můžete omezit šířku každé karty v okně s kartami. T
 
 Ukončí aktuální operaci změny velikosti v ovládacím prvku karta.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

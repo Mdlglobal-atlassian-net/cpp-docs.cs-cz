@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364285"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752204"
 ---
 # <a name="ctoolbar-class"></a>CToolBar – třída
 
@@ -65,13 +65,13 @@ class CToolBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Ctoolbar::CToolBar](#ctoolbar)|Vytvoří `CToolBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Vrátí index tlačítka s daným ID příkazu.|
 |[CToolBar::Vytvořit](#create)|Vytvoří panel nástrojů systému Windows `CToolBar` a připojí jej k objektu.|
@@ -292,7 +292,7 @@ Voláním členské funkce [Vytvořit](#create) vytvořte okno panelu nástrojů
 
 Tato členská funkce načte ID ovládacího prvku, styl a index obrázku tlačítka panelu nástrojů nebo oddělovače v umístění určeném *nIndex.*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ Volání `SetBitmap` například změnit bitmapovaný obrázek poté, co uživat
 
 Voláním této členské funkce nastavte ID příkazu, styl a číslo obrázku tlačítka.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ Pokud je *lpIDArray* NULL, přidělí tato funkce místo pro počet položek ur�
 
 Voláním této členské funkce nastavte styl tlačítka nebo oddělovače nebo seskupte tlačítka.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ Nenulová, pokud je úspěšná; jinak 0.
 
 Tato členská funkce nastaví výšku panelu nástrojů na hodnotu v obrazových bodech zadanou v *poli cyHeight*.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ Pokud tato funkce není volána, rozhraní používá velikost tlačítka k urč
 
 Voláním této členské funkce nastavte tlačítka panelu nástrojů na velikost v pixelech zadaná v *poli sizeButton*.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753789"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Vytvoří `COlePropertyPage` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Označuje, zda uživatel změnil hodnotu v ovládacím prvku.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Vrátí pole objektů upravovaných stránkou vlastností.|
@@ -187,7 +187,7 @@ Ovládací prvky a kontejnery spolupracují tak, aby uživatelé mohli procháze
 
 Určuje, které ovládací prvky nepovolují tlačítko Použít.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ Pokud je stav ovládacího prvku stránky vlastností nečistý, když je strán
 
 Nastaví prostředek dialogového okna stránky vlastností.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ Zpracovat prostředek dialogového okna stránky vlastností.
 
 Určuje informace popisku, název souboru nápovědy a kontext nápovědy pro stránku vlastností.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ Kontext nápovědy pro stránku vlastností.
 
 Označuje, zda uživatel změnil stránku vlastností.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ Určuje novou hodnotu upraveného příznaku stránky vlastností.
 
 Nastaví název stránky vlastností, který se rámeček vlastností obvykle zobrazí na kartě stránky.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 

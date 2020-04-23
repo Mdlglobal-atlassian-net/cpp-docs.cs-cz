@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754045"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar – třída
 
@@ -334,14 +334,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|Výchozí konstruktor.|
 |`CMFCToolBar::~CMFCToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Přidá příkaz nabídky do seznamu příkazů, které jsou vždy zobrazeny, když uživatel otevře nabídku.|
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Přírůstky o jeden čítač, který je přidružen k danému příkazu.|
@@ -493,7 +493,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Určuje, zda se panel nástrojů zobrazí v seznamu v podokně **Panely nástrojů** dialogového okna **Přizpůsobit.**|
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítka v panelu nástrojů.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Určuje, zda se mají změnit velikost obrazů panelu nástrojů v režimu dpi s vysokým dpi.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Určuje poměr mezi rozměrem (výškou nebo šířkou) velkých obrazů a rozměrem běžných obrazů.|
@@ -652,7 +652,7 @@ Přepsat tuto metodu poskytnout vlastní dynamické rozložení ve `CMFCToolbar`
 
 Přepočítá velikost panelu nástrojů.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ Rozhraní Framework volá tuto metodu při ukončení aplikace.
 
 Uvolní systémové prostředky přidělené pro zamknuté obrazy panelu nástrojů.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ Přepsat tuto metodu ve třídě odvozené z [CMFCToolBar](../../mfc/reference/c
 
 Povolí nebo zakáže tlačítko Přizpůsobit, které se zobrazí na panelu nástrojů.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ Tato metoda rozšiřuje implementaci základní třídy [CBasePane::EnableDockin
 
 Povolí nebo zakáže velké ikony na tlačítkách panelu nástrojů.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 Povolí nebo zakáže odraz příkazu.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ Další informace o reflexi příkazů naleznete v [tématu TN062: Message Refle
 
 Povolí nebo zakáže textové popisky pod obrázky tlačítek panelu nástrojů.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ Ukazatel na tlačítko panelu nástrojů, pokud existuje; nebo NULL, pokud takov
 
 Vrátí ID příkazu, styl a index obrázku tlačítka v zadaném indexu.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ Viz Explorer ukázku příklad, který používá tuto metodu.
 
 Nastaví ID příkazu, styl a ID obrázku tlačítka panelu nástrojů.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ Tato metoda upraví rozložení a překreslí každý panel nástrojů v aplikac
 
 Určuje, zda jsou nedostupná tlačítka na panelu nástrojů ztlumená nebo zda jsou použity obrázky nedostupné tlačítky.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ Ve výchozím nastavení jsou nedostupná tlačítka ztlumená.
 
 Nastaví výšku panelu nástrojů.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 Určuje, zda jsou tlačítka panelu nástrojů sledována.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ Další informace o tlačítkách panelu nástrojů s aktivním sledováním nal
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ Další informace o dialogovém **okně Přizpůsobit** naleznete v tématu [CMF
 
 Nastaví velikost uzamčených tlačítek a zamknutých obrázků na panelu nástrojů.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ Volání [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) metoda načíst 
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ Tato metoda vymaže předchozí seznam nepovolených příkazů. Ve výchozím n
 
 Umístí panel nástrojů a jeho na stejné řádky.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ Rozhraní framework volá metodu [CMFCToolBar::SetTwoRowsWithSibling,](#settworo
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 Určuje, zda může uživatel zavřít panel nástrojů.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ Volání [CMFCToolBar::CanBeClosed](#canbeclosed) metoda k určení, zda uživat
 
 Určuje, zda nadřazený rámec nebo vlastník odesílá příkazy na panel nástrojů.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ Volání [CMFCToolBar::GetShowTooltips](#getshowtooltips) metoda k určení, zda
 
 Určuje na stejné úrovni panelu nástrojů.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ Volání [CMFCToolBar::GetImageSize](#getimagesize) metoda načíst velikost pan
 
 Určuje vlastnosti tlačítka na panelu nástrojů.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ V sestavení ladění tato metoda generuje selhání kontrolního výrazu, pokud
 
 Umístí panel nástrojů a jeho na stejné úrovni na samostatné řádky.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ Rámec volá tuto metodu při stisknutí klávesy společně s klávesou Alt.
 
 Aktualizuje stav zadaného tlačítka.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

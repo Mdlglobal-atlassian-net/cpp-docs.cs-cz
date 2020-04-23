@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: f30e6f78b0988b791617ee0926cf649377972ce2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cf93d39057f0e235779d47cf24d920d80a807d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368802"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753490"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Třída CMFCRibbonUndoButton
 
@@ -37,13 +37,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Vytvoří nový `CMFCRibbonUndoButton` objekt pomocí zadaného ID příkazu, textového popisku a obrázků ze seznamu obrazů nadřazeného objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Přidá do seznamu akcí novou akci.|
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Vymaže seznam akcí, což je rozevírací seznam.|
@@ -80,7 +80,7 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonUndoButton` t�
 
 Přidá do seznamu akcí novou akci.
 
-```
+```cpp
 void AddUndoAction(LPCTSTR lpszLabel);
 ```
 
@@ -93,7 +93,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 
 Vymaže seznam akcí, což je rozevírací seznam.
 
-```
+```cpp
 void CleanUpUndoList();
 ```
 

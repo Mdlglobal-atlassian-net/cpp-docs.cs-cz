@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363668"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752867"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA – struktura
 
@@ -76,14 +76,14 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Vytvoří `AFX_GLOBAL_DATA` strukturu.|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::Vyčištění](#cleanup)|Uvolní prostředky, které jsou přiděleny v rámci, jako jsou stopy, písma a knihovny DLL.|
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Vytvoří transformaci otočení, která se otáčí o zadaný úhel kolem zadaného bodu.|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Povolí nebo zakáže podporu microsoft active accessibility. Funkce Active Accessibility poskytuje spolehlivé metody pro vystavení informací o prvcích uživatelského rozhraní.|
 |[AFX_GLOBAL_DATA::Podpora Usnadnění přístupu](#isaccessibilitysupport)|Označuje, zda je povolena podpora aktivní hodování společnosti Microsoft.|
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Označuje, zda aktuální operační systém podporuje prolnutí alfa.|
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Označuje, zda je aplikace spuštěna pod systémem Windows 7 OS nebo vyšším|
@@ -170,7 +170,7 @@ PRAVDA označuje, že alfa prolnutí je podporováno; jinak NEPRAVDA.
 
 Uvolní prostředky, které jsou přiděleny v rámci, jako jsou stopy, písma a knihovny DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ Motiv definuje vizuální styl aplikace. Motiv se nepoužívá k nakreslení tex
 
 Povolí nebo zakáže podporu microsoft active accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -676,7 +676,7 @@ Konstruktor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializuje tento člen na 4 pix
 
 Detekuje aktuální stav animace nabídky plochy a funkcí automatického skrytí na hlavním panelu.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Tato metoda vytvoří vodorovné pravidelné písmo, podtržené písmo a tučn�
 
 Reintializes logická písma, které jsou používány v rámci.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Další informace o logických `CFont::CreateFontIndirect`písmech naleznete v t
 
 Inicializuje barvy, hloubku barev, stopy, pera a obrazy, které framework používá.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Celá hodnota s kódované příznaky, které určují umístění automatické 
 
 Uvolní rozhraní získané `GetITaskbarList` prostřednictvím `GetITaskbarList3` a metody.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

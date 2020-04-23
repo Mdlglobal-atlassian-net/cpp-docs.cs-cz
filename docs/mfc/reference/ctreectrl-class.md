@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373310"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752122"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl – třída
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Vytvoří `CTreeCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTreeCtrl::Vytvořit](#create)|Vytvoří ovládací prvek stromového zobrazení `CTreeCtrl` a připojí jej k objektu.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Vytvoří přetahovací bitmapu pro zadanou položku stromového zobrazení.|
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku stromového zobrazení. Použijte styly oken popsané v [createwindow](/windows/win32/api/winuser/nf-winuser-createwindoww)a libovolnou kombinaci [stylů ovládacího prvku stromového zobrazení,](/windows/win32/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku stromového zobrazení. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Určuje velikost a umístění ovládacího prvku stromového zobrazení. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku stromového zobrazení, obvykle . Nesmí být null.
@@ -361,7 +361,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku stromového zobrazení. Použijte styly oken popsané v [createwindow](/windows/win32/api/winuser/nf-winuser-createwindoww)a libovolnou kombinaci [stylů ovládacího prvku stromového zobrazení,](/windows/win32/Controls/tree-view-control-window-styles) jak je popsáno v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hPoložka*|[v] Popisovač položky ovládacího prvku zobrazení stromu.|
 |*nČást*|[v] Identifikátor dílu. Musí být nastavena na TVGIPR_BUTTON.|
-|*lpRect*|[out] Ukazatel na strukturu [RECT.](/previous-versions/dd162897\(v=vs.85\)) Pokud je tato metoda úspěšná, struktura obdrží obdélníkové souřadnice části určené *hItem* a *nPart*.|
+|*lpRect*|[out] Ukazatel na strukturu [RECT.](/windows/win32/api/windef/ns-windef-rect) Pokud je tato metoda úspěšná, struktura obdrží obdélníkové souřadnice části určené *hItem* a *nPart*.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Popisovač položky ovládacího prvku stromového zobrazení.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která přijímá ohraničující obdélník. Souřadnice jsou relativní vzhledem k levému hornímu rohu ovládacího prvku stromového zobrazení.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která přijímá ohraničující obdélník. Souřadnice jsou relativní vzhledem k levému hornímu rohu ovládacího prvku stromového zobrazení.
 
 *bPouze Text*<br/>
 Pokud je tento parametr nenulový, ohraničující obdélník obsahuje pouze text položky. V opačném případě obsahuje celý řádek, který položka zabírá v ovládacím prvku stromového zobrazení.
@@ -1833,7 +1833,7 @@ Ukazatel na předchozí seznam obrázků, pokud existuje; jinak NULL.
 
 Volání této funkce nastavit šířku odsazení pro ovládací prvek stromového zobrazení a překreslit ovládací prvek tak, aby odrážely novou šířku.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ Chcete-li použít popisky, označte `CTreeCtrl` při vytváření objektu styl 
 
 Zobrazí informační tip pro zadanou položku v aktuálním ovládacím prvku zobrazení stromu.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

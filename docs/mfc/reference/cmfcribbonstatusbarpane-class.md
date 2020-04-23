@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368799"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753512"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Třída CMFCRibbonStatusBarPane
 
@@ -53,13 +53,13 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Vytvoří a inicializuje `CMFCRibbonStatusBarPane` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Vrátí řetězec, který definuje nejdelší textový řetězec, který lze zobrazit v podokně bez zkrácení.|
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Vrátí aktuální nastavení zarovnání textu.|
@@ -75,7 +75,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Volat rámci při zastaví animace, která je přiřazena k podokně.|
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 Definujte nejdelší text, který lze zobrazit v podokně stavového řádku bez zkrácení.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ Knihovna vypočítá velikost textu, který *lpszAlmostLargeText* určuje a odpo
 
 Připojí k podokně stavového řádku seznam obrázků, který lze použít pro animaci.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ TRUE, pokud je seznam obrázků úspěšně připojen k podokně stavového řá
 
 Nastaví zarovnání textu popisku podokna stavového řádku.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 Spustí animaci, kterou přiřadíte k podokně.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,7 +355,7 @@ Před voláním pomocí aplikace `StartAnimation` `SetAnimationList`je nutné za
 
 Zastaví animaci přiřazenou podoknu stavového řádku.
 
-```
+```cpp
 void StopAnimation();
 ```
 

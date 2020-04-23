@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365936"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751715"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -839,13 +839,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::CWnd](#cwnd)|Vytvoří `CWnd` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|Volat rámci k provedení výchozí akce objektu.|
 |[CWnd::accHitTest](#acchittest)|Volat rámci načíst podřízený prvek nebo podřízený objekt v daném bodě na obrazovce.|
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::Default](#default)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování pro všechny zprávy okna, které aplikace nezpracovává.|
 |[CWnd::DefWindowProc](#defwindowproc)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování pro všechny zprávy okna, které aplikace nezpracovává.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::operátor HWND](#operator_hwnd)|Volání získat rukojeť k oknu.|
 |[CWnd::operátor !=](#operator_neq)|Určuje, zda okno není stejné jako okno, jehož popisovač je [m_hWnd](#m_hwnd).|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|Označuje HWND připojené k `CWnd`tomuto .|
 
@@ -1576,7 +1576,7 @@ Nevolejte členskou `BeginPaint` funkci s výjimkou odpovědi na [WM_PAINT](#onp
 
 Sváže výchozí vlastnost simple bound volajícího objektu (například ovládací prvek pro úpravy), označenou v knihovně typů, s podkladovým kurzorem definovaným vlastnostmi DataSource, UserName, Password a SQL ovládacího prvku zdroje dat.
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ Objekt, `CWnd` na kterém voláte tuto funkci, musí být ovládací prvek váza
 
 Sváže vlastnost vázanou na kurzor na ovládacím prvku vázaném na data (například ovládací prvek mřížky) s ovládacím prvkem zdroje dat a zaregistruje tento vztah se správcem vazeb knihovny MFC.
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ Objekt, `CWnd` na kterém voláte tuto funkci, musí být ovládací prvek váza
 
 Přenese `CWnd` na začátek stohu překrývajících se oken.
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ TRUE zrušíte tipy nástrojů při stisknutí klávesy a nastavte text stavové
 
 Vystředí okno vzhledem k nadřazené mu.
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ Nenulová, pokud je úspěšná; jinak 0.
 
 Vybere (zaškrtne políčko) nebo vymaže (odstraní zaškrtnutí) tlačítka nebo změní stav třístavového tlačítka.
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ Funkce `CheckDlgButton` odešle [BM_SETCHECK](/windows/win32/Controls/bm-setchec
 
 Vybere (přidá zaškrtnutí) dané přepínací tlačítko ve skupině a vymaže (odstraní zaškrtnutí) všech ostatních přepínacích tlačítek ve skupině.
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ Více než jedno okno může obsahovat daný bod. Tato funkce však `CWnd`vrát�
 
 Převede souřadnice klienta daného bodu nebo obdélníku na displeji na souřadnice obrazovky.
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) `CRect` strukturu n
 
 Minimalizuje okno.
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ Vytvoří proxy server active accessibility pro zadaný objekt.
 
 Vytvoří nový tvar pro systém stříšky a nároky vlastnictví stříšky.
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2207,7 +2207,7 @@ Kóty pro podřízená okna jsou relativní vzhledem k levému hornímu rohu kli
 
 Vytvoří šedý obdélník pro systémstříštosti a nároky vlastnictví stříšky.
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ Systémová stříška je sdílený prostředek. `CWnd`by měl vytvořit stří�
 
 Vytvoří objemový obdélník pro systémstříštosti a nároky vlastnictví stříšky.
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2373,7 +2373,7 @@ Pokud je okno nadřazené všech oken, tato podřízená okna jsou automaticky z
 
 Členská `DestroyWindow` funkce také zničí nemodální dialogová okna vytvořená [cDialog::Create](../../mfc/reference/cdialog-class.md#create).
 
-Pokud `CWnd` je zničená možnost podřízené okno a nemá nastaven [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) styl, je nadřazenému WM_PARENTNOTIFY odeslána zpráva [WM_PARENTNOTIFY.](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)
+Pokud `CWnd` je zničená možnost podřízené okno a nemá nastaven [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) styl, je nadřazenému WM_PARENTNOTIFY odeslána zpráva [WM_PARENTNOTIFY.](/windows/win32/inputmsg/wm-parentnotify)
 
 ### <a name="example"></a>Příklad
 
@@ -2626,7 +2626,7 @@ Další informace o výměně a ověřování dialogových dat naleznete [v tém
 
 Volání této členské funkce z okna `CWnd` pomocí ukazatele ve funkci [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) aplikace označuje, že okno přijímá vynechané soubory ze Správce souborů systému Windows nebo Průzkumníka souborů.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 Určuje typ animace. Pokud zadáte IDANI_CAPTION, titulek okna se animinuje z pozice určené *lprcFrom* do pozice určené *lprcTo*. Efekt je podobný minimalizaci nebo maximalizaci okna.
 
 *lprcFrom*<br/>
-Ukazatel na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) určující umístění a velikost ikony nebo minimalizovaného okna.
+Ukazatel na strukturu [RECT](/windows/win32/api/windef/ns-windef-rect) určující umístění a velikost ikony nebo minimalizovaného okna.
 
 *lprcTo*<br/>
-Ukazatel na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) určující umístění a velikost obnoveného okna
+Ukazatel na strukturu [RECT](/windows/win32/api/windef/ns-windef-rect) určující umístění a velikost obnoveného okna
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2728,7 +2728,7 @@ Tato členská funkce emuluje funkce [DrawCaption](/windows/win32/api/winuser/nf
 
 Překreslí řádek nabídek.
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ Pokud se po vytvoření okna systému Windows změní řádek nabídek, volání
 
 Umožňuje uživatelem definované funkce aktivní přístupnosti.
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ Výchozí podpora aktivní přístupnosti knihovny MFC je dostatečná pro stand
 
 Povolí nebo zakáže správce dynamického rozložení. Pokud je povoleno dynamické rozložení, umístění a velikost podřízených oken lze dynamicky upravit, když uživatel změní velikost okna.
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ Pokud chcete povolit dynamické rozložení, musíte udělat víc než jen volat
 
 Povolí nebo zakáže podporu okna D2D. Volání této metody před inicializování hlavního okna.
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ Nenulová, pokud jsou šipky povoleny nebo zakázány podle specifikace. V opač
 
 Povolí nebo zakáže posuvník pro toto okno.
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 Označuje konec malby v daném okně.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ PRAVDA, pokud je spuštěn prostředek dialogu; jinak FALSE.
 
 Volat rámci pro zobrazení zpráv tip nástroje.
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ ID zaškrtnutého přepínacího tlačítka nebo 0, pokud není vybráno žádn�
 
 Zkopíruje souřadnice `CWnd` klienta klientské oblasti do struktury, na kterou poukazuje *lpRect*.
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -4460,7 +4460,7 @@ Naproti tomu [GetParent](#getparent) funkce vrátí ukazatel na okamžité nadř
 
 Voláním této členské funkce získáte vlastnost ovládacího prvku ActiveX určenou *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ Aktuální pozice je relativní hodnota, která závisí na aktuální rozsah po
 
 Zkopíruje aktuální minimální a maximální pozice posuvníku pro daný posuvník do umístění určených *lpMinPos* a *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Zkopíruje rozměry ohraničujícího obdélníku `CWnd` objektu do struktury, na kterou poukazuje *lpRect*.
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ Tato členská funkce [způsobí,](/windows/win32/winmsg/wm-gettextlength) že `
 
 Skryje stříšku tak, že ji odstraní z obrazovky.
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ Další informace naleznete v [tématu CWinApp::HtmlHelp.](../../mfc/reference/c
 
 Volat rámci inicializovat dynamické rozložení pro okno.
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ Nevolejte tuto metodu přímo.
 
 Zruší platnost celé klientské `CWnd`oblasti aplikace .
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ Systém Windows odešle `CWnd` zprávu [WM_PAINT](#onpaint) vždy, když oblast 
 
 Zruší platnost klientské oblasti v daném obdélníku `CWnd` přidáním tohoto obdélníku do oblasti aktualizace.
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ Systém Windows odešle `CWnd` zprávu [WM_PAINT](#onpaint) vždy, když oblast 
 
 Zruší platnost klientské oblasti v dané oblasti přidáním do `CWnd`aktuální oblasti aktualizace aplikace .
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ Daná oblast musí být dříve vytvořena jednou z funkcí oblasti.
 
 Volání této členské funkce k vyvolání metody nebo vlastnosti ActiveX Control určené *dwDispID*v kontextu určeném *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ Datový `m_hWnd` člen je veřejná proměnná typu HWND.
 
 Převede (mapy) sadu bodů z souřadnicového `CWnd` prostoru souřadnicového prostoru jiného okna.
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ Chcete-li upravit okna pomocí běžných stylů oken, [přečtěte si](#modifys
 
 Změní polohu a kóty.
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5837,7 +5837,7 @@ Funkce `MoveWindow` odešle [zprávu WM_GETMINMAXINFO.](#ongetminmaxinfo) Zpraco
 
 Signalizuje systému, že došlo k předdefinované události. Pokud některé klientské aplikace zaregistrovaly funkci zavěšení pro událost, systém volá funkci zavěšení klienta.
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -8579,7 +8579,7 @@ Tato metoda obdrží [oznámení WM_DWMNCRENDERINGCHANGED,](/windows/win32/dwm/w
 
 Rozhraní Framework volá tuto členskou funkci, když uživatel poklepe na XBUTTON1 nebo XBUTTON2, zatímco kurzor je v oblasti neklientského okna.
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -10601,7 +10601,7 @@ Nenulová, pokud byla zpráva přeložena a neměla by být odeslána; 0, pokud 
 
 Volání této členské funkce k nakreslení aktuálního okna v zadaném kontextu zařízení, což je nejčastěji v kontextu zařízení tiskárny.
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ Určuje volby výkresu. Tento parametr může být jeden nebo více z těchto p�
 
 Volání této členské funkce nakreslit libovolné okno v kontextu zadaného zařízení (obvykle kontext zařízení tiskárny).
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10852,7 +10852,7 @@ Aplikace musí volat `ReleaseDC` členská funkce pro každé volání členské
 
 Nazývá se změna umístění a změna velikosti ovládacích panelů v klientské oblasti okna.
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ Ve výchozím `ContinueModal` nastavení `EndModalLoop` vrátí false po je vol�
 
 Převede souřadnice obrazovky daného bodu nebo obdélníku na displeji na souřadnice klienta.
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ Odkazuje na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [
 
 Posune obsah klientské oblasti aktuálního `CWnd` objektu.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11143,7 +11143,7 @@ Výsledek zpracování zprávy; jeho hodnota závisí na odeslané zprávě.
 
 Volání této členské funkce odeslat zadanou zprávu systému Windows do všech oken potomků.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11313,7 +11313,7 @@ Okno může být libovolné podřízené okno, nejen ovládací prvek v dialogov
 
 Nastaví text daného ovládacího prvku v dialogovém okně na řetězcovou reprezentaci zadané celé hodnoty.
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ Určuje, zda je celá hodnota podepsána nebo nepodepsána. Pokud je tento param
 
 Nastaví titulek nebo text ovládacího prvku vlastněného oknem nebo dialogovým oknem.
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ Pokud je aktuální okno aktivní, ale nemá fokus (to znamená, že žádné ok
 
 Odešle WM_SETFONT zprávu do okna pro použití zadaného písma.
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ Způsobí, že okno, které má být překreslena tak, aby odrážely změny nab
 
 Nastaví vlastníka aktuálního okna na zadaný objekt okna.
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ Pokud je podřízené okno viditelné, systém Windows provede příslušné př
 
 Voláním této členské funkce nastavte vlastnost ovládacího prvku OLE určenou *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ Další informace o použití této členské funkce v kontejnerech ovládacích
 
 Aplikace volá `SetRedraw` povolit změny, které mají být překresleny nebo zabránit změny překreslování.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ Nastavení *bRedraw* na FALSE je užitečné vždy, když bude posuvník překre
 
 Nastaví minimální a maximální hodnoty polohy pro daný posuvník.
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ Je zadána hodnota intervalu a při každém uplynutí intervalu systém odešle
 
 Funkce zpětného volání *lpfnTimer* `TimerProc`nemusí být pojmenována , ale musí být deklarována jako statická a definována následujícím způsobem.
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11949,7 +11949,7 @@ Po úspěšném `SetWindowRgn`volání vlastní operační systém oblast určen
 
 Nastaví název okna na zadaný text.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ Tato funkce [způsobí, že WM_SETTEXT](/windows/win32/winmsg/wm-settext) zpráv
 
 Zobrazí stříšku na obrazovce v aktuální poloze stříšky.
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ Stříška je sdílený prostředek. Okno by mělo zobrazit stříšku pouze v p
 
 Zobrazí nebo skryje všechna automaticky otevíraná okna vlastněná tímto oknem.
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ Určuje, zda mají být automaticky otevíraná okna zobrazena nebo skryta. Poku
 
 Zobrazí nebo skryje posuvník.
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ Tato členská funkce připojí ovládací `CWnd` prvek systému Windows `WndPro
 
 Volání této členské funkce odemknout okno, které bylo uzamčeno s `CWnd::LockWindowUpdate`.
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ Rozhraní Framework `UpdateData` automaticky volá s *bSaveAndValidate* nastaven
 
 Volání této členské funkce aktualizovat stav dialogových tlačítek a dalších ovládacích prvků v dialogovém okně nebo okně, které používá [mechanismus zpětného](message-map-macros-mfc.md#on_update_command_ui) volání ON_UPDATE_COMMAND_UI.
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ Tato členská funkce emuluje funkce [UpdateLayeredWindow](/windows/win32/api/wi
 
 Aktualizuje klientskou oblast odesláním [WM_PAINT](/windows/win32/gdi/wm-paint) zprávu, pokud oblast aktualizace není prázdná.
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ void UpdateWindow();
 
 Ověří klientskou oblast v daném obdélníku odebráním obdélníku z oblasti aktualizace okna.
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ Systém Windows nadále generuje WM_PAINT zpráv, dokud nebude ověřena aktuál
 
 Ověří klientskou oblast v dané oblasti odebráním oblasti z aktuální oblasti aktualizace okna.
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 

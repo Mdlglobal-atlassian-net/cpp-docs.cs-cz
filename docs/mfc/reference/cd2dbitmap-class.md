@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: ce4fe49e8af85c4b63be31bf10e9f196f85c019f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a3cabb00ded7dbc5f9c396a1de767058443a4436
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369309"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754216"
 ---
 # <a name="cd2dbitmap-class"></a>Třída CD2DBitmap
 
@@ -72,20 +72,20 @@ class CD2DBitmap : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Přetíženo. Vytvoří objekt CD2DBitmap z HBITMAP.|
 |[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Nazývá se při zničení bitmapového objektu D2D.|
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Přetíženo. Vytvoří objekt CD2DBitmap.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Zkopíruje zadanou oblast ze zadané bitmapy do aktuální bitmapy.|
@@ -103,19 +103,19 @@ class CD2DBitmap : public CD2DResource;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::CommonInit](#commoninit)|Inicializuje objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::operátor ID2D1Bitmap*](#operator_id2d1bitmap_star)|Vrátí rozhraní ID2D1Bitmap.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|PRAVDA, pokud m_hBmpSrc by měly být zničeny; jinak FALSE.|
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Zdrojový popisovač rastrového plánu.|
@@ -149,7 +149,7 @@ virtual ~CD2DBitmap();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1Bitmap* pResource);
 ```
 
@@ -214,7 +214,7 @@ Zpracovat rastrový obrázek.
 
 Inicializuje objekt.
 
-```
+```cpp
 void CommonInit();
 ```
 

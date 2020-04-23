@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 060e601901fa5725d7ca62f244f66784af3dc11d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0c0a594a84b45ce7bf6f2c2fa5d1a547fa10eaa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751847"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Třída CMFCPreviewCtrlImpl
 
@@ -57,14 +57,14 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Zničí objekt ovládacího prvku náhledu.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Vytvoří objekt ovládacího prvku náhledu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::Vytvořit](#create)|Přetíženo. Volána obslužnou rutinou Rich Preview k vytvoření okna systému Windows.|
 |[CMFCPreviewCtrlImpl::Destroy](#destroy)|Volána obslužnou rutinou rich preview, když potřebuje zničit tento ovládací prvek.|
@@ -78,13 +78,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Volat rámci k vykreslení náhledu.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Barva pozadí okna náhledu.|
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Barva textu okna náhledu.|
@@ -251,7 +251,7 @@ Volána obslužnou rutinou náhledu k vytvoření vztahu mezi implementací doku
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void SetDocument(
    IDocument* pDocument
 );

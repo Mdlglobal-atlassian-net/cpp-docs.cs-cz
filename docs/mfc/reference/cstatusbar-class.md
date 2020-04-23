@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376251"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753053"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar – třída
 
@@ -57,13 +57,13 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStavový řádek::Stavový řádek](#cstatusbar)|Vytvoří `CStatusBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CStavový řádek::Příkaz](#commandtoindex)|Získá index pro dané ID indikátoru.|
 |[CStavový řádek::Vytvořit](#create)|Vytvoří stavový řádek, připojí `CStatusBar` jej k objektu a nastaví počáteční písmo a výšku pruhu.|
@@ -271,7 +271,7 @@ ID indikátoru určeného *nIndex*.
 
 Zkopíruje souřadnice indikátoru určeného *nIndex* do struktury, na kterou poukazuje *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Index indikátoru, jehož obdélníkové souřadnice mají být načteny.
 
 *lpRect*<br/>
-Odkazuje na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obdrží souřadnice indikátoru *určeného nIndex*.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obdrží souřadnice indikátoru *určeného nIndex*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -293,7 +293,7 @@ Souřadnice jsou v obrazových bodech vzhledem k levému hornímu rohu stavovéh
 
 Nastaví *nID*, *nStyle*a *cxWidth* na ID, styl a šířku podokna indikátoru v umístění určeném *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Nenulová, pokud je úspěšná; jinak 0.
 
 Nastaví zadané podokno indikátoru na nové ID, styl a šířku.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Podporovány jsou následující styly indikátorů:
 
 Voláním této členské funkce nastavte styl podokna stavového řádku.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

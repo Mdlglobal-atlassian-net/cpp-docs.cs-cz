@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 203adeac9783da8ea49a8385dad9786865c8a225
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183b30961e4a7d3079fa0d035a4ddc38bc2eebac
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373209"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752031"
 ---
 # <a name="cusertool-class"></a>Třída CUserTool
 
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIkona](#drawtoolicon)|Nakreslí ikonu nástroje uživatele v zadaném obdélníku.|
@@ -64,13 +64,13 @@ class CUserTool : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::Ikona DefaultIcon](#loaddefaulticon)|Načte výchozí ikonu uživatelského nástroje.|
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Argumenty příkazového řádku pro uživatelský nástroj.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Počáteční adresář pro uživatelský nástroj.|
@@ -112,7 +112,7 @@ BOOL CopyIconToClipboard();
 
 Nakreslí ikonu nástroje uživatele ve středu zadaného obdélníku.
 
-```
+```cpp
 void DrawToolIcon(
     CDC* pDC,
     const CRect& rectImage);
@@ -234,7 +234,7 @@ virtual void Serialize(CArchive& ar);
 
 Nastaví aplikaci, kterou spustí uživatelský nástroj.
 
-```
+```cpp
 void SetCommand(LPCTSTR lpszCmd);
 ```
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366123"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753894"
 ---
 # <a name="coledatasource-class"></a>Třída COleDataSource
 
@@ -57,13 +57,13 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDataSource::COleDataSource](#coledatasource)|Vytvoří `COleDataSource` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleDataSource::CacheData](#cachedata)|Nabízí data v určeném `STGMEDIUM` formátu pomocí struktury.|
 |[COleDataSource::CacheGlobalData](#cacheglobaldata)|Nabízí data v určeném formátu pomocí HGLOBAL.|
@@ -104,7 +104,7 @@ Další informace o zdrojích dat a přenosu dat naleznete v článku [Datové o
 
 Volání této funkce k určení formátu, ve kterém jsou data nabízena během operací přenosu dat.
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ Další informace naleznete v tématu [RegisterClipboardFormat](/windows/win32/a
 
 Volání této funkce k určení formátu, ve kterém jsou data nabízena během operací přenosu dat.
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 Volání této funkce k určení formátu, ve kterém jsou data nabízena během operací přenosu dat.
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ Další informace naleznete v tématu [RegisterClipboardFormat](/windows/win32/a
 
 Volání této funkce k určení formátu, ve kterém jsou data nabízena během operací přenosu dat.
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ Další informace naleznete v tématu [RegisterClipboardFormat](/windows/win32/a
 
 Volání této funkce pro podporu změny obsahu zdroje dat.
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ Další informace naleznete v článku [OLE přetažení .](../../mfc/drag-and-d
 
 Volání této funkce `COleDataSource` vyprázdnit objekt dat.
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,7 +482,7 @@ Další informace naleznete v strukturách [STGMEDIUM](/windows/win32/api/objidl
 
 Umístí data obsažená `COleDataSource` v objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata)nebo [DelayRenderFileData](#delayrenderfiledata).
 
-```
+```cpp
 void SetClipboard();
 ```
 

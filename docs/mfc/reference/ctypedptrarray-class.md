@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373282"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752059"
 ---
 # <a name="ctypedptrarray-class"></a>Třída CTypedPtrArray
 
@@ -52,7 +52,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::Přidat](#add)|Přidá nový prvek na konec pole. V případě potřeby pole zvětší|
 |[CTypedPtrArray::Připojit](#append)|Přidá obsah jednoho pole na konec jiného. V případě potřeby pole zvětší|
@@ -65,7 +65,7 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTypedPtrArray::operátor \[\]](#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
@@ -144,7 +144,7 @@ Podrobnější poznámky naleznete v tématu [CObArray::Append](../../mfc/refere
 
 Tato členská `BASE_CLASS`funkce volá **::Copy**.
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
@@ -215,7 +215,7 @@ Podrobnější poznámky naleznete v tématu [CObArray::GetAt](../../mfc/referen
 
 Tato členská `BASE_CLASS`funkce volá **::InsertAt**.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -280,7 +280,7 @@ Ladicí verze knihovny uplatňuje, pokud je dolní index (na levé nebo pravé s
 
 Tato členská `BASE_CLASS`funkce volá **::SetAt**.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -305,7 +305,7 @@ Podrobnější poznámky naleznete v tématu [CObArray::SetAt](../../mfc/referen
 
 Tato členská `BASE_CLASS`funkce volá **::SetAtGrow**.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);

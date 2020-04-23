@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373907"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753148"
 ---
 # <a name="cfiledialog-class"></a>Třída CFileDialog
 
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Vytvoří `CFileDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Přidá do dialogového okna tlačítko kontroly.|
 |[CFileDialog::AddComboBox](#addcombobox)|Přidá do dialogového okna pole se seznamem.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Volána po klepnutí na tlačítko.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Volána, když je zaškrtnuto nebo nezaškrtnuto políčko.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Struktura `OPENFILENAME` systému Windows. Poskytuje přístup k základním parametrům dialogového okna souboru.|
 
@@ -409,7 +409,7 @@ Název nabídky.
 
 Přidá složku do seznamu míst, která má uživatel k dispozici k otevření nebo uložení položek.
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ Textový název.
 
 Aktualizuje aktuální stav [CFileDialog](../../mfc/reference/cfiledialog-class.md) na základě hodnot `m_ofn` uložených v datové struktuře.
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizována se stavem . Všechny změny proměnné [m_ofn](#m_ofn) člen se okamžitě projevily ve stavu dialogového okna. Všechny změny stavu dialogového okna také okamžitě `m_ofn` aktualizují proměnnou člena.
+Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) průběžně synchronizována se stavem . Všechny změny proměnné [m_ofn](#m_ofn) člen se okamžitě projevily ve stavu dialogového okna. Všechny změny stavu dialogového okna také okamžitě `m_ofn` aktualizují proměnnou člena.
 
 V systému Windows Vista nebo `m_ofn` novějším není `CFileDialog` zaručeno, že hodnoty v členské proměnné a stavu členské proměnné budou synchronizovány. Tato funkce vynutí `CFileDialog` stav aktualizovat tak, aby odpovídaly `m_ofn` struktury. Systém Windows volá tuto funkci automaticky během [CFileDialog::DoModal](#domodal).
 
@@ -1029,7 +1029,7 @@ Hodnota POSITION, kterou lze použít pro iteraci; Null, pokud je seznam prázdn
 
 Voláním této členské funkce skryjte zadaný ovládací prvek v dialogovém okně Otevřít nebo Uložit jako běžné.
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ Jedna nebo více hodnot z výčtu CDCONTROLSTATE, které označují aktuální s
 
 Voláním této metody nastavte text pro zadaný ovládací prvek v dialogovém okně **Otevřít** nebo **Uložit jako** ve stylu průzkumníka.
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ Chcete-li použít tuto metodu, musíte vytvořit dialogové okno s OFN_EXPLORER
 
 Voláním této funkce nastavte výchozí příponu názvu souboru pro společné dialogové okno Otevřít nebo Uložit jako v průzkumníku.
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ ID položky, kterou uživatel vybral v ovládacím prvku.
 
 Nastaví šablonu dialogového okna pro objekt [CFileDialog.](../../mfc/reference/cfiledialog-class.md)
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ Název skupiny.
 
 Aktualizuje `m_ofn` datovou strukturu [CFileDialog](../../mfc/reference/cfiledialog-class.md) na základě aktuálního stavu vnitřního objektu.
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizována se stavem . Všechny změny [proměnné m_ofn](#m_ofn) členy přímo ovlivnily stav dialogového okna. Všechny změny stavu dialogového okna také okamžitě aktualizovaly proměnnou m_ofn člena.
+Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) průběžně synchronizována se stavem . Všechny změny [proměnné m_ofn](#m_ofn) členy přímo ovlivnily stav dialogového okna. Všechny změny stavu dialogového okna také okamžitě aktualizovaly proměnnou m_ofn člena.
 
 V systému Windows `m_ofn` Vista nebo novějším není datová struktura automaticky aktualizována. Chcete-li zaručit přesnost dat `m_ofn` v členské proměnné, `UpdateOFNFromShellDialog` měli byste volat funkci před přístupem k datům. Systém Windows volá tuto funkci automaticky během zpracování [iFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

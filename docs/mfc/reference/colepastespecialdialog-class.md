@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376988"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753824"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog – třída
 
@@ -49,13 +49,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ColePasteSpecialDialog::ColePasteSpecialDialog](#colepastespecialdialog)|Vytvoří `COlePasteSpecialDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[ColePasteSpecialDialog::AddFormat](#addformat)|Přidá vlastní formáty do seznamu formátů, které může aplikace vložit.|
 |[ColePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Přidá novou položku do seznamu podporovaných formátů schránky.|
@@ -69,7 +69,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COlePasteSpecialDialog::m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL, která řídí funkci dialogového okna.|
 
@@ -105,7 +105,7 @@ Další informace týkající se dialogových oken specifických pro OLE nalezne
 
 Voláním této funkce přidáte nové formáty do seznamu formátů, které může aplikace podporovat v operaci Vložit jinak.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -178,7 +178,7 @@ Struktura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) o
 
 Voláním této funkce přidáte následující formáty schránky do seznamu formátů, které může aplikace podporovat v operaci Vložit jinak:
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

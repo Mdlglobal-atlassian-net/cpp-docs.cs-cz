@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3f0a7a9a90250ede7b112cfbd9bc1ca14d583356
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 730bea34354b008d641ecc28e7368f79efad12a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318196"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751151"
 ---
 # <a name="csocket-class"></a>CSocket – třída
 
@@ -41,13 +41,13 @@ class CSocket : public CAsyncSocket
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSocket::CSocket](#csocket)|Vytvoří `CSocket` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSocket::Připojit](#attach)|Připojí popisovač SOCKET `CSocket` k objektu.|
 |[CSocket::Zrušit blokování volání](#cancelblockingcall)|Zruší blokování volání, které právě probíhá.|
@@ -57,7 +57,7 @@ class CSocket : public CAsyncSocket
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[csocket::OnMessagePending CSocket::OnMessagePending CSocket::OnMessagePending CSocket](#onmessagepending)|Volána ke zpracování čekajících zpráv při čekání na dokončení blokovacího volání.|
 
@@ -129,7 +129,7 @@ Další informace naleznete [v tématu Windows Sockets: Using Sockets with Archi
 
 Volání této členské funkce zrušit blokování volání právě probíhá.
 
-```
+```cpp
 void CancelBlockingCall();
 ```
 

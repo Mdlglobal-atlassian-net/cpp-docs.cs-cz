@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370106"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754590"
 ---
 # <a name="cmapstringtoob-class"></a>Třída CMapStringToob
 
@@ -55,13 +55,13 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMapStringToob::CMapStringToob](#cmapstringtoob)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMapStringToob::GetCount](#getcount)|Vrátí počet prvků v této mapě.|
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Určuje aktuální počet prvků v tabulce hash.|
@@ -79,7 +79,7 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMapStringToOb::operátor \[\]](#operator_at)|Vloží prvek do mapy – substituce operátora pro `SetAt`.|
 
@@ -201,7 +201,7 @@ V následující tabulce jsou uvedeny `CMapStringToOb::GetHashTableSize`další 
 
 Načte prvek mapy na *rNextPosition*, pak aktualizuje *rNextPosition* odkazovat na další prvek v mapě.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -353,7 +353,7 @@ V následující tabulce jsou uvedeny `CMapStringToOb::HashKey`další členské
 
 Inicializuje tabulku hash.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 Odstraní všechny prvky z této mapy `CString` a zničí klíčové objekty.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 Primární prostředky pro vložení prvku do mapy.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);

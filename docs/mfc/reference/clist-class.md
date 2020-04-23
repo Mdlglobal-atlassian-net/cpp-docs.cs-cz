@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 253cf12033af497115ad600e457630ae834cc69c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc065687f0c2c40b7e66326ff9d1e6210a6962c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372237"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754130"
 ---
 # <a name="clist-class"></a>CList – třída
 
@@ -72,13 +72,13 @@ class CList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CList::CList](#clist)|Vytvoří prázdný seřazený seznam.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CList::Hlavička](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do hlavy seznamu (vytvoří novou hlavu).|
 |[CList::AddTail](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konci seznamu (vytvoří nový ocas).|
@@ -583,7 +583,7 @@ Nenulová, pokud je tento seznam prázdný; jinak 0.
 
 Odebere všechny prvky z tohoto seznamu a uvolní přidružené paměti.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -599,7 +599,7 @@ Pokud je seznam již prázdný, není generována žádná chyba.
 
 Odebere zadaný prvek z tohoto seznamu.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -670,7 +670,7 @@ Před voláním `RemoveTail`je nutné zajistit, aby seznam nebyl prázdný. Poku
 
 Proměnná typu POSITION je klíčem k seznamu.
 
-```
+```cpp
 void SetAt(POSITION pos, ARG_TYPE newElement);
 ```
 

@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367445"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750633"
 ---
 # <a name="crebarctrl-class"></a>Třída CRebarctrl
 
@@ -119,13 +119,13 @@ class CReBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Crebarctrl::crebarctrl](#crebarctrl)|Vytvoří `CReBarCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRebarctrl::BeginDrag](#begindrag)|Přepne ovládací prvek výztuže do režimu přetahování.|
 |[CRebarctrl::Vytvořit](#create)|Vytvoří ovládací prvek výztuže `CReBarCtrl` a připojí jej k objektu.|
@@ -223,7 +223,7 @@ Další informace naleznete [v tématu Použití crebarctrl](../../mfc/using-cre
 
 Implementuje chování [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Určuje kombinaci stylů ovládacích prvků použitých na ovládací prvek. Seznam podporovaných stylů najdete v tématu [Styly ovládacích prvků výztuže](/windows/win32/Controls/rebar-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost ovládacího prvku výztuže.
+Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, což je umístění a velikost ovládacího prvku výztuže.
 
 *pParentWnd*<br/>
 Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku výztuže. Nesmí být null.
@@ -303,7 +303,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje kombinaci stylů ovládacích prvků použitých na ovládací prvek. Seznam podporovaných stylů najdete v tématu [Styly ovládacích prvků výztuže](/windows/win32/Controls/rebar-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -356,7 +356,7 @@ Nenulová, pokud bylo pásmo úspěšně odstraněno; jinak nula.
 
 Implementuje chování zprávy Win32 [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), jak je popsáno v sadě Windows SDK.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ Hodnota DWORD, která obsahuje nové souřadnice myši. Horizontální souřadni
 
 Implementuje chování [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Implementuje chování zprávy Win32 [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders), jak je popsáno v sadě Windows SDK.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 Nulový index pásma, pro které budou načtena ohraničení.
 
 *Člr*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obdrží ohraničení pásma. Pokud má ovládací prvek výztuže RBS_BANDBORDERS styl, každý člen této struktury obdrží počet pixelů na odpovídající straně pásma, které tvoří ohraničení. Pokud ovládací prvek výztuže nemá styl RBS_BANDBORDERS, pouze levý člen této struktury obdrží platné informace. Popis stylů ovládacích prvků naleznete v tématu [Styly ovládacích prvků výztuže](/windows/win32/Controls/rebar-control-styles) v sadě Windows SDK.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obdrží ohraničení pásma. Pokud má ovládací prvek výztuže RBS_BANDBORDERS styl, každý člen této struktury obdrží počet pixelů na odpovídající straně pásma, které tvoří ohraničení. Pokud ovládací prvek výztuže nemá styl RBS_BANDBORDERS, pouze levý člen této struktury obdrží platné informace. Popis stylů ovládacích prvků naleznete v tématu [Styly ovládacích prvků výztuže](/windows/win32/Controls/rebar-control-styles) v sadě Windows SDK.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CRebarctrl::GetBandCount
 
@@ -429,7 +429,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Načte okraje pásma.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Nulový index pásma v ovládacím prvku výztuže.
 
 *Člr*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obdrží hranice pásma výztuže.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obdrží hranice pásma výztuže.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -723,7 +723,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Změní velikost pásu v ovládacím prvku výztuže na jeho největší velikost.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Implementuje chování zprávy Win32 `fIdeal` [RB_MAXIMIZEBAND](/windows/win32/C
 
 Změní velikost pásu v ovládacím prvku výztuže na jeho nejmenší velikost.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ Nenulová, pokud je úspěšná; jinak nula.
 
 Implementuje chování zprávy Win32 [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron), jak je popsáno v sadě Windows SDK.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ Aplikace definovaná 32bitovou hodnotou. Viz *hodnota lAppValue* v [RB_PUSHCHEVR
 
 Změní velikost pásu v ovládacím prvku výztuže na jeho ideální velikost.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ Další informace o tom, kdy nastavit barvu pozadí a jak nastavit výchozí nas
 
 Nastaví barevné schéma tlačítek v ovládacím prvku výztuže.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Je k dispozici pro podporu flexibility barev textu v ovládacím prvku výztuže
 
 Přidruží ovládací prvek špičky nástroje k ovládacímu prvku výztuže.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

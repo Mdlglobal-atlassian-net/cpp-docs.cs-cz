@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 0a6b0cf39861ba995acff71fc40cf44ae5114642
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5140d02c5acbbc430c3b4d175da1933c79c702b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367451"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752355"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl – třída
 
@@ -51,14 +51,14 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Vytvoří `CMFCHeaderCtrl` objekt.|
 |`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Povolí nebo zakáže režim *řazení více sloupců* pro aktuální ovládací prvek záhlaví.|
 |[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Označuje, zda sloupec není seřazen nebo zda je seřazen vzestupně nebo sestupně.|
@@ -72,7 +72,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Volat rámci nakreslit sloupec záhlaví ovládacího prvku.|
 |[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Volat rámci k nakreslení šipky řazení.|
@@ -130,7 +130,7 @@ Tento konstruktor inicializuje následující členské proměnné na zadané ho
 
 Povolí nebo zakáže režim *řazení více sloupců* pro aktuální ovládací prvek záhlaví.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```
 
@@ -295,7 +295,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 Odebere zadaný sloupec ze seznamu sloupců řazení.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -308,7 +308,7 @@ void RemoveSortColumn(int iColumn);
 
 Nastaví pořadí řazení zadaného sloupce v ovládacím prvku záhlaví.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending=TRUE,

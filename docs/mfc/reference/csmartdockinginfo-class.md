@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: c0ccb9f728add37230cbfd88cc8f6c9b1696fa2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebb5e75b5b298097cfce043bd83ec88ca0ab4030
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318230"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751304"
 ---
 # <a name="csmartdockinginfo-class"></a>Třída CSmartDockingInfo
 
@@ -47,19 +47,19 @@ class CSmartDockingInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CSmartDockingInfo::CSmartDockingInfo`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSmartDockingInfo::Kopírovat](#copyto)|Zkopíruje aktuální parametry inteligentních dokovacích informací do poskytnutého objektu [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)|
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Určuje, zda se má použít aktuální barva motivu, když se v rámci zobrazí inteligentní značky ukotvení.|
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Určuje základní barvu pozadí inteligentních značek ukotvení.|
@@ -109,7 +109,7 @@ Následující obrázek znázorňuje příklad inteligentních značek ukotvení
 
 Zkopíruje aktuální inteligentní dokovací parametry do zadaný objekt [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)
 
-```
+```cpp
 void CopyTo(CSmartDockingInfo& params);
 ```
 

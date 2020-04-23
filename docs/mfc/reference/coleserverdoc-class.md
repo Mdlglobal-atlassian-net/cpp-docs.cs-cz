@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376128"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753786"
 ---
 # <a name="coleserverdoc-class"></a>Třída COleServerDoc
 
@@ -103,13 +103,13 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Vytvoří `COleServerDoc` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Aktivuje přidružený dokument DocObject.|
 |[COleServerdoc::Aktivovatinplace](#activateinplace)|Aktivuje dokument pro úpravy na místě.|
@@ -140,7 +140,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleServerdoc::CreateInplaceFrame](#createinplaceframe)|Volat rámci vytvořit okno rámce pro úpravy na místě.|
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Volat rámci zničit okno rámce pro úpravy na místě.|
@@ -192,7 +192,7 @@ Další informace o serverech naleznete v článku [Servery: Implementace server
 
 Aktivuje přidružený dokument DocObject.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ Volá [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), virtuální funkce
 
 Volání `GetItemClipRect` členské funkce získat ořezové obdélník ové souřadnice položky, která je upravována na místě.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ Kreslení by se nemělo vyskytovat mimo ořezový obdélník. Kreslení je obvyk
 
 Volání `GetItemPosition` členské funkce získat souřadnice položky upravovány na místě.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Nenulová, `COleServerDoc` pokud je objekt aktivní na místě; jinak 0.
 
 Voláním této funkce oznámíte všem připojeným položkám připojeným k dokumentu, že dokument byl změněn.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ Obvykle voláte tuto funkci poté, co uživatel změní některé globální atr
 
 Volání této funkce upozornit kontejner (y), že dokument byl uzavřen.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ Když uživatel vybere příkaz Zavřít z nabídky `NotifyClosed` Soubor, `COle
 
 Tuto funkci zavolejte po přejmenování dokumentu serveru uživatelem.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ Když uživatel zvolí příkaz Uložit jako z `NotifyRename` nabídky Soubor, j
 
 Tuto funkci zavolejte po uložení dokumentu serveru uživatelem.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ Výchozí implementace volá [cOleServerDoc::NotifySaved](#notifysaved) a [COleS
 
 Volání této členské funkce, aby aplikace kontejneru změnit pozici položky.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ Tato funkce je obvykle volána (ve spojení s) `UpdateAllItems`při změně dat 
 
 Volání této funkce sdělte aplikaci kontejneru uložení vloženého objektu.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ Kladné hodnoty označují posouvání dolů a doprava; záporné hodnoty označ
 
 Voláním této funkce oznámíte všem připojeným položkám připojeným k dokumentu, že dokument byl změněn.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375611"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753333"
 ---
 # <a name="cdockablepane-class"></a>Třída CDockablePane
 
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Vytvoří a inicializuje `CDockablePane` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Připojí podokno k jinému podoknu. Tím se vytvoří podokno s kartami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Vrátí velikost obdélníku podokna.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Určuje, zda je dokovací podokno skryté (v režimu automatického skrytí).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Určuje, kdy má dokovací podokno s automatickým skrytím přestat klouzat.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Určuje, zda je animace automatického skrytí dokovatelného podokna zakázána.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Určuje chování podokna, když je podokno v režimu automatického skrytí.|
@@ -881,7 +881,7 @@ Přepsat tuto metodu v odvozené třídě přizpůsobit vzhled titulku.
 
 Povolí nebo zakáže režim automatického skrytí pro toto podokno a pro další podokna v kontejneru.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Přepsat tuto metodu v odvozené třídě implementovat vlastní efekty automati
 
 Rozhraní Framework volá tuto metodu při neukotvení podokna.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ PRAVDA, pokud je nahrazení úspěšné; jinak NEPRAVDA.
 
 Při rekonstrukci podokna, rozhraní framework volá tuto metodu k obnovení výchozí oddělovač podokna.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Volání této metody přepnout dokovatelné podokno do režimu automatického s
 
 Nastaví tlačítko automatického skrytí a panel nástrojů pro podokno s automatickým skrytím.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Nastaví procento místa, které podokno zabírá ve svém kontejneru.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ Rozhraní framework upraví podokno tak, aby při přepočítání rozložení p
 
 Nastaví obnovený výchozí oddělovač podokna.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Obnovený výchozí oddělovač podokna je získán při rekonstrukci podokna. D
 
 Nastaví informace o třídě runtime pro okno s kartami, které je vytvořeno, když dvě podokna ukotví společně.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

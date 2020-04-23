@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c07962c017d160cb3ce5841a75f1ae8a8761641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753391"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget – třída
 
@@ -41,13 +41,13 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Vytvoří objekt CDCRenderTarget.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDCRenderTarget::Připojit](#attach)|Připojí k objektu existující cílové rozhraní vykreslení.|
 |[CDCRenderTarget::BindDC](#binddc)|Sváže cíl vykreslení s kontextem zařízení, do kterého vydává příkazy kreslení.|
@@ -57,13 +57,13 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDCRenderTarget::operátor ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Vrátí rozhraní ID2D1DCRenderTarget.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Ukazatel na objekt ID2D1DCRenderTarget.|
 
@@ -83,7 +83,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 Připojí k objektu existující cílové rozhraní vykreslení.
 
-```
+```cpp
 void Attach(ID2D1DCRenderTarget* pTarget);
 ```
 

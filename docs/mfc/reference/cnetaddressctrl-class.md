@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363290"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752784"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Vytvoří `CNetAddressCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CNetAddressCtrl::Vytvořit](#create)|Vytvoří ovládací prvek síťové adresy se zadanými `CNetAddressCtrl` styly a připojí jej k aktuálnímu objektu.|
 |[CNetAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek síťové adresy se zadanými `CNetAddressCtrl` rozšířenými styly a připojí jej k aktuálnímu objektu.|
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parametr|Popis|
 |---------------|-----------------|
 |*dwStyl*|[v] Bitová kombinace stylů, které mají být použity na ovládací prvek. Další informace naleznete v [tématu Úpravy stylů](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[v] Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
+|*Rect*|[v] Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
 |*pParentWnd*|[v] Nenulový ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|
 |*Nid*|[v] ID ovládacího prvku.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyl*|[v] Bitová kombinace (OR) rozšířených stylů, které mají být použity na ovládací prvek. Další informace naleznete v parametru *dwExStyle* funkce [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*dwStyl*|[v] Bitová kombinace (OR) stylů, které mají být použity na ovládací prvek. Další informace naleznete v [tématu Úpravy stylů](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[v] Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
+|*Rect*|[v] Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
 |*pParentWnd*|[v] Nenulový ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|
 |*Nid*|[v] ID ovládacího prvku.|
 

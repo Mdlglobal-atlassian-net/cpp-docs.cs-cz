@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374393"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754243"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl – třída
 
@@ -35,7 +35,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCLinkCtrl::SetURL](#seturl)|Zobrazí jako text tlačítka zadanou adresu URL.|
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Nastaví implicitní protokol (například "http:") adresy URL.|
@@ -43,7 +43,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Volat rámci před nakreslena obdélník fokusu tlačítka.|
 
@@ -102,7 +102,7 @@ Přepsat tuto metodu, pokud chcete použít vlastní kód k nakreslení obdéln�
 
 Zobrazí jako text tlačítka zadanou adresu URL.
 
-```
+```cpp
 void SetURL(LPCTSTR lpszURL);
 ```
 
@@ -117,7 +117,7 @@ void SetURL(LPCTSTR lpszURL);
 
 Nastaví implicitní protokol (například "http:") adresy URL.
 
-```
+```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```
 

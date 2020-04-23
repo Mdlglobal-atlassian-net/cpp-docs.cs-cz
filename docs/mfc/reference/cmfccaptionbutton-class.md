@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: fb47e4373bf53e66dd4af17c89fe2f761858fbfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b0a999f1fd1e3df1b0a971220454397cead02a9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367761"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752594"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton – třída
 
@@ -45,13 +45,13 @@ class CMFCCaptionButton : public CObject
 
 ### <a name="constructors"></a>Konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Vytvoří objekt CMFCCaptionButton.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCCaptionButton::GetHit](#gethit)|Vrátí příkaz reprezentované tlačítkem.|
 |[CMFCcaptionButton::GeticonID](#geticonid)|Vrátí ID obrázku přidružené k tlačítku.|
@@ -226,7 +226,7 @@ TRUE, pokud je titulek nastaven na mini velikost; jinak FALSE.
 
 Nastaví umístění kreslení tlačítek a stav zobrazení okna.
 
-```
+```cpp
 void Move(
     const CPoint& ptTo,
     BOOL bHide = FALSE);
@@ -278,7 +278,7 @@ Parametr *bMaximized* se používá, když je tlačítko maximalizovat nebo mini
 
 Nastaví mini velikost záhlaví.
 
-```
+```cpp
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```
 

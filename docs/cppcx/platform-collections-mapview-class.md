@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354427"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750611"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView – třída
 
@@ -52,13 +52,13 @@ MapView je konkrétní c++ implementace [Windows::Foundation::Collections::IMapV
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[MapView::MapView](#ctor)|Inicializuje novou instanci Třídy MapView.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[MapView::První](#first)|Vrátí iterátor, který je inicializován na první prvek v zobrazení mapy.|
 |[Zobrazení mapy::Haskey](#haskey)|Určuje, zda aktuální MapView obsahuje zadaný klíč.|
@@ -197,7 +197,7 @@ Rozdělí aktuální MapView objekt do dvou MapView objekty. Tato metoda není f
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,

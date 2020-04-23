@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365797"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751655"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 
@@ -124,7 +124,7 @@ Volání této funkce způsobit přerušení (v umístění `AfxDebugBreak`volá
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ Interní funkce, která používá knihovny MFC k výpisu stavu objektu při lad
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 Tato funkce testuje předané SCODE, chcete-li zjistit, zda se jedná o chybu.
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ Tato funkce funguje pouze v ladicí verzi knihovny MFC.
 
 Volání této funkce v ladicím programu vypisuje stav objektu při ladění.
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ Programový kód by `AfxDump`neměl volat , `Dump` ale měl by místo toho volat
 
 Tuto globální funkci lze použít ke generování bitové kopie aktuálního zásobníku.
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ Všimněte si, že konvence volání AFXAPI znamená, že volaný musí odebrat 
 
 Volá zadanou funkci iterace `CObject`pro všechny serializovatelné odvozené třídy v paměťovém prostoru aplikace.
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ Serializovatelné `CObject`odvozené třídy jsou třídy odvozené pomocí DECL
 
 Provede zadanou funkci iterace pro `CObject` všechny objekty odvozené z nich, které byly přiděleny s **new**.
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

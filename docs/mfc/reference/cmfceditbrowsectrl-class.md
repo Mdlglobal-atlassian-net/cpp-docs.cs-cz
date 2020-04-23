@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367536"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752376"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl – třída
 
@@ -47,14 +47,14 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Výchozí konstruktor.|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Povolí nebo zakáže (skryje) tlačítko procházet.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Povolí tlačítko procházet a umístí ovládací prvek pro procházení souborů do režimu *procházení souborů.*|
@@ -133,7 +133,7 @@ Následující příklad ukazuje, jak používat dvě `CMFCEditBrowseCtrl` metod
 
 Zobrazí nebo nezobrazí tlačítko procházet v aktuálním ovládacím prvku procházet.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Pokud je parametr *bEnable* TRUE, je režim `BrowseMode_Default`procházení ovl
 
 Zobrazí tlačítko Procházet v aktuálním ovládacím prvku pro procházení úprav a přepne jej do režimu *procházení souborů.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Když je ovládací prvek pro procházení souborů v režimu procházení soubo
 
 Zobrazí tlačítko Procházet v aktuálním ovládacím prvku pro procházení úprav a umístí ovládací prvek do režimu *procházení složek.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Přepsat tuto funkci v odvozené třídě přizpůsobit vzhled tlačítka proch�
 
 Nastaví vlastní obrázek na tlačítku Procházet ovládacího prvku Upravit procházení.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

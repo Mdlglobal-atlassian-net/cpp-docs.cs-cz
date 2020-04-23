@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: cf0a1e6b7e742e950663f1ed9cc9ff2ddabd9d6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b081b0728514c0fca2eb31462e1bcd9e91a47aa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364028"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753010"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo – struktura
 
@@ -27,7 +27,7 @@ struct CPrintInfo
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPrintInfo::GetFromPage](#getfrompage)|Vrátí číslo první stránky, která se tiskne.|
 |[CPrintInfo::GetMaxPage](#getmaxpage)|Vrátí číslo poslední stránky dokumentu.|
@@ -39,7 +39,7 @@ struct CPrintInfo
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Obsahuje příznak označující, zda by měl rámec pokračovat v tiskové smyčce.|
 |[CPrintInfo::m_bDirect](#m_bdirect)|Obsahuje příznak označující, zda je dokument tištěn přímo (bez zobrazení tiskového dialogového okna).|
@@ -281,7 +281,7 @@ Jako výchozí hodnotu používá rozhraní Framework "Page %u\nPages %u-%u\n". 
 
 Voláním této funkce určete číslo poslední stránky dokumentu.
 
-```
+```cpp
 void SetMaxPage(UINT nMaxPage);
 ```
 
@@ -302,7 +302,7 @@ Tato hodnota je `CPrintDialog` uložena v `m_pPD` objektu, na který člen odkaz
 
 Voláním této funkce určete číslo první stránky dokumentu.
 
-```
+```cpp
 void SetMinPage(UINT nMinPage);
 ```
 

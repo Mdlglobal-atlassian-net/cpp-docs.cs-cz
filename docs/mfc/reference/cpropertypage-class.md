@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364004"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751099"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage – třída
 
@@ -61,13 +61,13 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Vytvoří `CPropertyPage` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertyPage::Zrušituzavření](#canceltoclose)|Změní tlačítko OK na čtení zavřít a zakáže tlačítko Storno po neopravitelné změně na stránce seznamu modálních vlastností.|
 |[CPropertyPage::Konstrukce](#construct)|Vytvoří `CPropertyPage` objekt. Použijte, `Construct` pokud chcete zadat parametry za běhu nebo pokud používáte pole.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertyPage::m_psp](#m_psp)|Struktura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) systému Windows. Poskytuje přístup k základním parametrům stránky vlastností.|
 
@@ -119,7 +119,7 @@ Další informace o vytvoření seznamu vlastností jako průvodce naleznete v [
 
 Volání této funkce po neopravitelné změny byla provedena data na stránce seznamu modální vlastností.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ Tato funkce změní tlačítko OK na Zavřít a zakáže tlačítko Storno. Tato
 
 Volání této členské funkce `CPropertyPage` k vytvoření objektu.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ Pokud stránka vrátí nenulovou hodnotu, seznam vlastností neodešle zprávu n
 
 Volání této členské funkce povolit nebo zakázat použít nyní tlačítko, na základě toho, zda nastavení na stránce vlastností by měla být použita na příslušný externí objekt.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

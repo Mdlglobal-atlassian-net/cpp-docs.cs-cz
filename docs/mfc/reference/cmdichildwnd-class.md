@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370087"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754573"
 ---
 # <a name="cmdichildwnd-class"></a>Třída CMDIChildWnd
 
@@ -43,13 +43,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Vytvoří `CMDIChildWnd` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIChildWnd::Vytvořit](#create)|Vytvoří podřízené okno Windows MDI přidružené k objektu. `CMDIChildWnd`|
 |[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Vrátí nadřazený rámec MDI klientského okna MDI.|
@@ -207,7 +207,7 @@ Vrácený rámec je dva `CMDIChildWnd` nadřazené položky odebrány z a je `CM
 
 Volání této členské funkce k aktivaci podřízené okno MDI nezávisle na okně rámce MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Jakmile se rámeček aktivuje, aktivuje se také podřízené okno, které bylo 
 
 Volání této členské funkce zničit podřízené okno MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ void MDIDestroy();
 
 Volání této členské funkce maximalizovat podřízené okno MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Když je podřízené okno maximalizováno, systém Windows změní jeho velikos
 
 Volání této členské funkce obnovit podřízené okno MDI z maximalizované nebo minimalizované velikosti.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Nastaví úchyty pro prostředky nabídky a akcelerátoru.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

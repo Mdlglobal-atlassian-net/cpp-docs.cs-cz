@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377367"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753399"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog – třída
 
@@ -47,14 +47,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CmFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Vytvoří `CMFCToolBarsCustomizeDialog` objekt.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CmFCToolBarsCustomizeDialog::Tlačítko Přidat](#addbutton)|Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **Příkazy.**|
 |[CmFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Načte nabídku z prostředků a zavolá [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) pro přidání této nabídky do seznamu příkazů na stránce **Příkazy.**|
@@ -80,7 +80,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Volat rámci k určení, zda je platný seznam uživatelem definovaných nástrojů.|
 |[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Volat rámci při změně vlastností uživatelem definovaného nástroje.|
@@ -120,7 +120,7 @@ Následující příklad ukazuje, jak používat různé `CMFCToolBarsCustomizeD
 
 Vloží tlačítko panelu nástrojů do seznamu příkazů na stránce **Příkazy.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ Ve volání `AddMenuCommands`je *bPopup* nepravda. V důsledku toho tato metoda 
 
 Přidá položky do seznamu příkazů na stránce **Příkazy,** aby reprezentovaly všechny položky v zadané nabídce.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Volání `Create` metody pouze po úplné inicializaci třídy.
 
 Povolí nebo zakáže vytváření nových panelů nástrojů pomocí dialogového okna **Přizpůsobit.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ Třída `CMFCMousePropertyPage` používá tuto metodu k naplnění seznamu udá
 
 Naplní poskytnutý `CComboBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ Nové kategorie příkazů můžete přidat pomocí metody [CMFCToolBarsCustomiz
 
 Naplní poskytnutý `CListBox` objekt názvem každé kategorie příkazů v dialogovém okně **Přizpůsobit.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ Název kategorie musí být jedinečný.
 
 Nahradí tlačítko panelu nástrojů v seznamu příkazů na stránce **Příkazy.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

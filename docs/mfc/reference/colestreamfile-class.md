@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 1f53d3bd55fbff45257c06af2ab11f066d421a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 202f8381361881ce3b8b62f81da5bfb81a1f952d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376102"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753755"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile – třída
 
@@ -41,13 +41,13 @@ class COleStreamFile : public CFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleStreamFile::COleStreamFile](#colestreamfile)|Vytvoří `COleStreamFile` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[COleStreamFile::Připojit](#attach)|Přidruží datový proud k objektu.|
 |[COleStreamFile::CreateMemoryStream](#creatememorystream)|Vytvoří datový proud z globální paměti a přidruží jej k objektu.|
@@ -82,7 +82,7 @@ Další informace najdete v tématu [IStream](/windows/win32/api/objidl/nn-objid
 
 Přidruží k `COleStreamFile` objektu zadaný datový proud OLE.
 
-```
+```cpp
 void Attach(LPSTREAM lpStream);
 ```
 

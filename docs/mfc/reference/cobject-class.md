@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: cea4d09a1c1a4680b095a40fa0619287959ff4ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66d76e0062d13b2bd5a16d9b07f99db9e989805a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360429"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753990"
 ---
 # <a name="cobject-class"></a>CObject – třída
 
@@ -41,13 +41,13 @@ class AFX_NOVTABLE CObject
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObject::CObject](#cobject)|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObject::AssertValid](#assertvalid)|Ověří integritu tohoto objektu.|
 |[CObject::Dump](#dump)|Vytvoří diagnostický výpis tohoto objektu.|
@@ -58,7 +58,7 @@ class AFX_NOVTABLE CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CObject::odstranění operátoru](#operator_delete)|Zvláštní **operátor odstranění.**|
 |[CObject::operátor new](#operator_new)|Speciální **nový** operátor.|
@@ -275,7 +275,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Pro verzi verze knihovny, operátor **delete** uvolní paměť přidělenou operátorem **new**.
 
-```
+```cpp
 void PASCAL operator delete(void* p);
 
 void PASCAL operator delete(
@@ -312,7 +312,7 @@ Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis 
 
 Pro verzi vydání knihovny operátor **new** provádí optimální přidělení paměti `malloc`způsobem podobným .
 
-```
+```cpp
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
 

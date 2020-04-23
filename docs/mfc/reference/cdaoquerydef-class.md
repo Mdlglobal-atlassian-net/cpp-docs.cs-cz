@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368955"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754708"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef – třída
 
@@ -87,13 +87,13 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Vytvoří `CDaoQueryDef` objekt. Další `Open` hovor `Create`nebo , v závislosti na vašich potřebách.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoQueryDef::Připojit](#append)|Připojí querydef do databáze QueryDefs kolekce jako uložený dotaz.|
 |[CDaoQueryDef::CanUpdate](#canupdate)|Vrátí nenulovou, pokud dotaz může databázi aktualizovat.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|Ukazatel na rozhraní OLE pro základní objekt DAO querydef.|
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|Ukazatel na `CDaoDatabase` objekt, ke kterému je přidružen querydef. Querydef může být uložen v databázi nebo ne.|
@@ -410,7 +410,7 @@ Počet polí definovaných v dotazu.
 
 Volání této členské funkce získat různé druhy informací o pole definované v querydef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Související informace naleznete v tématech "Objekt parametrů", "Kolekce para
 
 Volání této členské funkce získat informace o parametr definovaný v querydef.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Jakmile querydef je otevřena, můžete volat jeho [execute](#execute) členské
 
 Volání této členské funkce nastavit připojovací řetězec objektu querydef.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Další informace o struktuře připojovacího řetězce a příkladech součás
 
 Volání této členské funkce, pokud chcete změnit název querydef, který není dočasný.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Querydef názvy jsou jedinečné, uživatelem definované názvy. Můžete volat
 
 Voláním této členské funkce nastavte časový limit před dotazem na časový limit zdroje dat ROZHRANÍ ODBC.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Zadejte hodnotu, `COleVariant` kterou chcete nastavit jako objekt. Informace o n
 
 Volání této členské funkce jako součást procesu nastavení předávacího dotazu SQL do externí databáze.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ V takovém případě je nutné vytvořit querydef a `CDaoQueryDef` nastavit jeh
 
 Volání této členské funkce nastavit příkaz SQL, který querydef provede.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

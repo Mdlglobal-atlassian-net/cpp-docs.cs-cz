@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352288"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752709"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Vytvoří `CCmdTarget` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor jako kurzor přesýpacích hodin.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí, že akce určená slovesem OLE má být provedena.|
@@ -121,7 +121,7 @@ Odeslání mapy, podobně jako mapy zpráv, `IDispatch` se používají k vystav
 
 Volání této funkce zobrazí kurzor jako přesýpací hodiny, když očekáváte, že příkaz trvat znatelný časový interval spustit.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ Ukazatel na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) popisují
 Popisovač okna dokumentu obsahujícího objekt.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury obsahující souřadnice v obrazových bodech, které definují ohraničující obdélník objektu v *hwndParent*.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) struktury obsahující souřadnice v obrazových bodech, které definují ohraničující obdélník objektu v *hwndParent*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -183,7 +183,7 @@ Tato členská funkce je v podstatě implementace [IOleObject::DoVerb](/windows/
 
 Volání této funkce povolit automatizaci OLE pro objekt.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ Tato funkce je obvykle volána z konstruktoru objektu a měla by být volána po
 
 Povolí spuštění události přes spojovací body.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ Chcete-li povolit spojovací body, volání této členské funkce v konstruktor
 
 Povolí knihovnu typů objektu.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ Volání této členské funkce v `CCmdTarget`konstruktoru objektu odvozeného, 
 
 Volání této funkce po `BeginWaitCursor` volání členské funkce pro návrat z kurzoru přesýpacích hodin na předchozí kurzor.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-Ukazatel na ID rozhraní [(identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Ukazatel na ID rozhraní (a [GUID](/windows/win32/api/guiddef/ns-guiddef-guid.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Identifikátor národního `LCID`prostředí ( ).
 
-*Identifikátor guid*<br/>
-[Identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)) popisu typu.
+*guid*<br/>
+[GUID](/windows/win32/api/guiddef/ns-guiddef-guid guid of the type description.
 
 *ppTypeInfo*<br/>
 Ukazatel na ukazatel `ITypeInfo` na rozhraní.
@@ -514,7 +514,7 @@ Přepsat tuto funkci poskytnout zvláštní zpracování pro tuto situaci. Vých
 
 Volání této funkce obnovit odpovídající kurzor přesýpacích hodin po změně kurzoru systému (například po otevření a zavření okna se zprávou, zatímco uprostřed zdlouhavé operace).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

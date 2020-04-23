@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 218ed24ccf56854622e20936299fcc2e8a3d0fa9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3664149ef0d7476b460ef06cddaf2b8145ade701
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374794"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753684"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog – třída
 
@@ -51,13 +51,13 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Vytvoří `CPageSetupDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Vytvoří kontext zařízení pro tisk.|
 |[CPageSetupDialog::DoModální](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
@@ -72,7 +72,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::m_psd](#m_psd)|Struktura slouží k `CPageSetupDialog` přizpůsobení objektu.|
 
@@ -253,7 +253,7 @@ Použijte ukazatel na `CString` objekt `GetDriverName` vrácený jako `lpszDrive
 
 Volání této funkce po `DoModal` volání načíst okraje ovladače zařízení tiskárny.
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369299"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754288"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush – třída
 
@@ -63,14 +63,14 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Přetíženo. Vytvoří objekt CD2DBitmapBrush ze souboru.|
 |[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Nazývá se při zničení objektu stopy bitmapy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DBitmapBrush::Vytvořit](#create)|Vytvoří CD2DBitmapBrush. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -88,19 +88,19 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::CommonInit](#commoninit)|Inicializuje objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::operátor ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Vrátí rozhraní ID2D1BitmapBrush.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Uloží ukazatel na objekt CD2DBitmap.|
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Uloží ukazatel na objekt ID2D1BitmapBrush.|
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Ukazatel na řetězec s ukončeným hodnotou null, který obsahuje název soubor
 
 Inicializuje objekt.
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Ukazatel na rozhraní ID2D1BitmapBrush nebo NULL, pokud objekt ještě není ini
 
 Určuje zdroj bitmapy, který tato stopa používá k malování.
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ Zdroj bitmapy používaný stopou
 
 Určuje, jak stopa vodorovně obsadí oblasti, které přesahují její bitmapu.
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Hodnota, která určuje, jak stopa vodorovně dlaždice ty oblasti, které přes
 
 Určuje, jak stopa svisle obsadí oblasti, které přesahují její bitmapu.
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Hodnota, která určuje, jak stopa svisle dlaždice ty oblasti, které přesahuj
 
 Určuje režim interpolace použitý při změna měřítka nebo otočení bitmapy stopy.
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

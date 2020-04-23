@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1669d89183cd971e1afe0f05a1bad040f6b07df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372455"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752699"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget – třída
 
@@ -47,13 +47,13 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Vytvoří objekt CHwndRenderTarget z HWND.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHwndRenderTarget::Připojit](#attach)|Připojí k objektu existující cílové rozhraní vykreslení.|
 |[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Označuje, zda hwnd spojené s tímto cílem vykreslení je uzavřen.|
@@ -66,13 +66,13 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHwndRenderTarget::operátor ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Vrátí rozhraní ID2D1HwndRenderTarget.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Ukazatel na objekt ID2D1HwndRenderTarget.|
 
@@ -92,7 +92,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 Připojí k objektu existující cílové rozhraní vykreslení.
 
-```
+```cpp
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```
 

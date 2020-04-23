@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373969"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753195"
 ---
 # <a name="ceditview-class"></a>Třída CEditView
 
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Vytvoří objekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Vyhledá řetězec v textu.|
 |[CEditView::GetBufferLength](#getbufferlength)|Získá délku vyrovnávací paměti znaků.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CeditView::OnFindNext](#onfindnext)|Vyhledá další výskyt textového řetězce.|
 |[CeditView::OnReplaceAll](#onreplaceall)|Nahradí všechny výskyty daného řetězce novým řetězcem.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro `CEditView`objekty typu .|
 
@@ -259,7 +259,7 @@ Tato funkce slouží k určení aktuálního písma tiskárny. Pokud není poža
 
 Volání `GetSelectedText` zkopírovat vybraný text `CString` do objektu, až do konce výběru nebo znak předcházející první znak carriage-return ve výběru.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ Prvek `rect.bottom` *rectLayout* objektu se změní tak, aby rozměry obdélník
 
 Volání `SerializeRaw` objektu `CArchive` číst nebo zapsat `CEditView` text v objektu do textového souboru.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ Odkaz na `CArchive` objekt, který ukládá serializovaný text.
 
 Voláním `SetPrinterFont` nastavte písmo tiskárny na písmo určené *příkazem pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Pokud chcete, aby zobrazení vždy používalo určité písmo `SetPrinterFont` 
 
 Voláním této funkce nastavte zarážky tabulátoru používané pro zobrazení a tisk.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Tento fragment kódu nastaví zarážky tabulátoru v ovládacím prvku na každ
 
 Volání této členské funkce odemknout vyrovnávací paměti.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

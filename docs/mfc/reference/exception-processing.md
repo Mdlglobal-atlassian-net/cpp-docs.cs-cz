@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751613"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 
@@ -307,7 +307,7 @@ Viz příklad [cfile::Abort](../../mfc/reference/cfile-class.md#abort).
 
 Vyvolá výjimku archivu.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ Odkazuje na řetězec obsahující název `CArchive` objektu, který způsobil v
 
 Vyvolá výjimku souboru.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ Vyvolá výjimku neplatný argument.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ Tato funkce je volána při použití neplatných argumentů.
 
 Vyvolá výjimku paměti.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ Volání této funkce, pokud volání základní alokátory systémové paměti 
 
 Vyvolá výjimku, která je výsledkem požadavku na nepodporovanou funkci.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Vyvolá výjimku prostředku.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ Tato funkce se obvykle nazývá, když nelze načíst prostředek systému Windo
 
 Vyvolá výjimku k zastavení operace koncového uživatele.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ Tato funkce je obvykle `AfxMessageBox` volána ihned poté, co oznámila chybu u
 
 Tato funkce slouží k vyvolání výjimky v rámci funkce automatizace OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ Informace poskytnuté této funkci mohou být zobrazeny aplikací řízení (Mic
 
 Vytvoří objekt typu `COleException` a vyvolá výjimku.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ Verze, která přebírá HRESULT jako argument převede tento kód výsledku do 
 
 Volání této funkce vyvolat výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z vlastního kódu.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ Informace o výjimkách souvisejících s třídami Knihovny `CDaoException` MFC
 
 Volání této funkce vyvolat výjimku typu `CDBException` z vlastního kódu.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ Informace o hodnotách RETCODE definovaných rozhraním ODBC naleznete v kapitol
 
 Výchozí funkce ukončení dodaná knihovnou MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 

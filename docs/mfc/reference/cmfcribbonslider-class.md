@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304581371c68817c6031153c3cec227137771c5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368835"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754071"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider – třída
 
@@ -51,13 +51,13 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Vytvoří a inicializuje ovládací prvek jezdce pásu karet.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCRibbonSlider::GetPos](#getpos)|Vrátí aktuální pozici ovládacího prvku posuvníku.|
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Vrátí maximální hodnotu jezdce.|
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 Nastavte aktuální polohu ovládacího prvku posuvníku.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw=TRUE);
@@ -230,7 +230,7 @@ void SetPos(
 
 Nastavte rozsah hodnot pro ovládací prvek posuvníku.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -252,7 +252,7 @@ Určuje rozsah hodnot pro ovládací prvek posuvníku nastavením minimálních 
 
 Zobrazení nebo skrytí tlačítek lupy.
 
-```
+```cpp
 void SetZoomButtons(BOOL bSet=TRUE);
 ```
 
@@ -264,7 +264,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 Nastavte přírůstek zvětšení pro ovládací prvek posuvníku.
 
-```
+```cpp
 void SetZoomIncrement(int nZoomIncrement);
 ```
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365957"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752318"
 ---
 # <a name="ctabctrl-class"></a>Třída CTabCtrl
 
@@ -93,13 +93,13 @@ class CTabCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTabCtrl::CTabCtrl](#ctabctrl)|Vytvoří `CTabCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CTabCtrl::AdjustRect](#adjustrect)|Vypočítá oblast zobrazení ovládacího prvku tabulátoru s obdélníkem okna nebo vypočítá obdélník okna, který by odpovídal dané oblasti zobrazení.|
 |[CTabCtrl::Vytvořit](#create)|Vytvoří ovládací prvek tabulátoru a `CTabCtrl` připojí jej k instanci objektu.|
@@ -160,7 +160,7 @@ Další informace o `CTabCtrl`použití naleznete v [tématech Ovládací prvky]
 
 Vypočítá oblast zobrazení ovládacího prvku tabulátoru s obdélníkem okna nebo vypočítá obdélník okna, který by odpovídal dané oblasti zobrazení.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Označuje, kterou operaci provést. Pokud je tento parametr TRUE, *lpRect* určuje obdélník zobrazení a obdrží odpovídající obdélník okna. Pokud je tento parametr FALSE, *lpRect* určuje obdélník okna a obdrží odpovídající obdélník zobrazení.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která určuje daný obdélník a obdrží vypočtený obdélník.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která určuje daný obdélník a obdrží vypočtený obdélník.
 
 ### <a name="example"></a>Příklad
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku tabulátoru. Použijte libovolnou kombinaci [stylů ovládacích prvků tabulátorů](/windows/win32/Controls/tab-control-styles)popsanou v sadě Windows SDK. V části **Poznámky** naleznete seznam stylů oken, které můžete použít také pro ovládací prvek.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku tabulátoru. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Určuje velikost a umístění ovládacího prvku tabulátoru. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku tabulátoru, obvykle . Nesmí být null.
@@ -250,7 +250,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku tabulátoru. Použijte libovolnou kombinaci [stylů ovládacích prvků tabulátorů](/windows/win32/Controls/tab-control-styles)popsanou v sadě Windows SDK. V části **Poznámky** [v tématu Vytvoření](#create) obsahuje seznam stylů oken, které můžete použít také na ovládací prvek.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -313,7 +313,7 @@ Nenulová, pokud je úspěšná; jinak 0.
 
 Obnoví položky v ovládacím prvku karty a vymaže všechny, které byly stisknuty.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Nulový index položky karty.
 
 *lpRect*<br/>
-Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obdrží ohraničující obdélník na kartě. Tyto souřadnice používají aktuální režim mapování výřezu.
+Ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obdrží ohraničující obdélník na kartě. Tyto souřadnice používají aktuální režim mapování výřezu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -682,7 +682,7 @@ Index na základě nuly nové karty v případě úspěchu; jinak - 1.
 
 Odebere zadaný obrázek ze seznamu obrázků ovládacího prvku tabulátoru.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ Ovládací prvek karty aktualizuje index obrázku každé karty tak, aby každá
 
 Nastaví fokus na určenou kartu v ovládacím prvku tabulátoru.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -892,7 +892,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/t
 
 Nastaví velikost místa (odsazení) kolem ikony a popisku každé karty v ovládacím prvku karty.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
@@ -905,7 +905,7 @@ Nastaví velikost místa (odsazení) kolem ikony a popisku každé karty v ovlá
 
 Přiřadí ovládací prvek špičky nástroje ovládacímu prvku tabulátoru.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

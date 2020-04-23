@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367724"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752558"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton – třída
 
@@ -65,13 +65,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Vytvoří nový `CMFCColorButton` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí a zakáže "automatické" tlačítko, které je umístěno nad běžnými barevnými tlačítky. (Standardní automatické tlačítko systému je označeno **automaticky**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Povolí a zakáže tlačítko "ostatní", které je umístěno pod běžnými barevnými tlačítky. (Standardní systémové tlačítko "ostatní" je označeno **více barev**.)|
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Označuje, zda je aktuální tlačítko barvy zobrazeno ve vizuálním stylu systému Windows XP.|
 |[CMFCColorButton::Ondraw](#ondraw)|Volat rámci zobrazit obrázek tlačítka.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bAltColorDlg`|Logická hodnota. Pokud true, rozhraní zobrazí dialogové okno barva [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) při klepnutí na *druhé* tlačítko, nebo pokud FALSE, dialogové okno barva systému. Výchozí hodnota je TRUE. Další informace naleznete v tématu [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Logická hodnota. Pokud TRUE, rozhraní nastaví fokus na nabídku barev při zobrazení nabídky, nebo pokud FALSE, nezmění fokus. Výchozí hodnota je TRUE.|
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 Povolte nebo zakažte tlačítko "automatické" ovládacího prvku pro výběr barvy a nastavte automatickou (výchozí) barvu.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 Povolte nebo zakažte tlačítko "ostatní", které se zobrazí pod běžnými barevnými tlačítky.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 Inicializuje `m_pPalette` chráněný datový člen na zadanou paletu nebo výchozí systémovou paletu.
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 Určuje barvu tlačítka.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ Seznam názvů barev je globální pro aplikaci. V důsledku toho tato metoda p�
 
 Definuje počet sloupců, které jsou zobrazeny v tabulce barev, která je zobrazena uživateli během procesu výběru barev uživatele.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ Uživatel může vybrat barvu z rozbalovacího panelu barev, který zobrazuje ta
 
 Určuje sadu barev a název sady. Sada barev se zobrazí pomocí objektu [třídy CMFCColorBar.](../../mfc/reference/cmfccolorbar-class.md)
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ Objekt `CMFCColorButton` udržuje seznam hodnot RGB, které jsou přeneseny do o
 
 Určuje standardní barvy, které se mají zobrazit na vyskakovacím panelu barev.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 

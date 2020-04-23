@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377066"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753122"
 ---
 # <a name="carchive-class"></a>Třída CArchiv
 
@@ -73,13 +73,13 @@ class CArchive
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArchiv::CArchiv](#carchive)|Vytvoří `CArchive` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArchiv::Přerušit](#abort)|Zavře archiv bez vyvolání výjimky.|
 |[CArchiv::Zavřít](#close)|Vyprázdní nepsaná data `CFile`a odpojí se od .|
@@ -105,14 +105,14 @@ class CArchive
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArchiv::operátor&lt;&lt;](#operator_lt_lt)|Ukládá objekty a primitivní typy do archivu.|
 |[CArchiv::operátor&gt;&gt;](#operator_gt_gt)|Načte objekty a primitivní typy z archivu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CArchiv::m_pDocument](#m_pdocument)||
 
@@ -146,7 +146,7 @@ Další informace `CArchive`naleznete v článcích [Serializace](../../mfc/seri
 
 Volání této funkce zavřete archiv bez vyvolání výjimky.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ Operace nesmíte `CFile` měnit stav souboru, dokud archiv nezavřete. Každá t
 
 Vyprázdní všechna data zbývající do vyrovnávací paměti, zavře archiv a odpojí archiv od souboru.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ void Close();
 
 Vynutí všechna zbývající data ve vyrovnávací paměti archivu, která mají být zapsána do souboru.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ Pokud `IsStoring` je stav archivu nenulový, pak je jeho `IsLoading` stav 0 a na
 
 Volání této členské funkce umístit objekty v mapě, které nejsou skutečně serializovány do souboru, ale které jsou k dispozici pro podobjekty odkazovat.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ Ve verzi členské funkce s parametrem *nMax* bude vyrovnávací paměť držet 
 
 Volání této členské funkce, pokud chcete uložit a načíst informace o verzi základní třídy.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ Pomocí [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#ru
 
 Volání, `SetLoadParams` když budete číst velký `CObject`počet odvozených objektů z archivu.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ Nesmíte volat `SetLoadParams` po načtení žádného objektu nebo po volání 
 
 Volánítéto členské funkce nastavte schéma objektu uložené v objektu archivu na *nSchema*.
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ Používá `SetObjectSchema` se pro pokročilou správu verzí; například poku
 
 Používá `SetStoreParams` se při ukládání velkého `CObject`počtu odvozených objektů do archivu.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ Nesmíte volat `SetStoreParams` po uložení objektů nebo po [volání MapObjec
 
 Zapíše do archivu zadaný počet bajtů.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ Archiv neformátuje bajty.
 
 Slouží `WriteClass` k uložení informací o verzi a třídě základní třídy během serializace odvozené třídy.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ Můžete použít [SerializeClass](#serializeclass) `WriteClass`místo , který 
 
 Zadaný `CObject` soubor ukládá do archivu.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ Definice třídy `CAge`naleznete v příkladu [pro CObList::CObList](../../mfc/r
 
 Tato členská funkce slouží k zápisu dat `CArchive` z vyrovnávací paměti do souboru přidruženého k objektu.
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376968"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753700"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl – třída
 
@@ -69,13 +69,13 @@ class CPagerCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Vytvoří `CPagerCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPagerCtrl::Vytvořit](#create)|Vytvoří ovládací prvek pageru se zadanými `CPagerCtrl` styly a připojí jej k aktuálnímu objektu.|
 |[CPagerCtrl::CreateEx](#createex)|Vytvoří ovládací prvek pageru se zadanými rozšířenými styly a připojí jej k aktuálnímu `CPagerCtrl` objektu.|
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametr|Popis|
 |---------------|-----------------|
 |*dwStyl*|[v] Bitová kombinace (OR) [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a stylů [ovládacího prvku pageru,](/windows/win32/Controls/pager-control-styles) která má být použita na ovládací prvek.|
-|*Rect*|[v] Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku v souřadnicích klienta.|
+|*Rect*|[v] Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje umístění a velikost ovládacího prvku v souřadnicích klienta.|
 |*pParentWnd*|[v] Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|
 |*Nid*|[v] ID ovládacího prvku.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyl*|[v] Bitová kombinace rozšířených stylů, které mají být použity na ovládací prvek. Další informace naleznete v parametru *dwExStyle* funkce [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*dwStyl*|[v] Bitová kombinace (OR) [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a stylů [ovládacího prvku pageru,](/windows/win32/Controls/pager-control-styles) která má být použita na ovládací prvek.|
-|*Rect*|[v] Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku v souřadnicích klienta.|
+|*Rect*|[v] Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje umístění a velikost ovládacího prvku v souřadnicích klienta.|
 |*pParentWnd*|[v] Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|
 |*Nid*|[v] ID ovládacího prvku.|
 
@@ -202,7 +202,7 @@ Chcete-li vytvořit ovládací prvek `CPagerCtrl` pager, deklarujte proměnnou a
 
 Povolí nebo zakáže předávání [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) zpráv do okna, které je obsaženo v aktuálním ovládacím prvku pageru.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ Tato metoda odešle [zprávu PGM_GETBUTTONSTATE,](/windows/win32/Controls/pgm-ge
 
 Způsobí, že aktuální ovládací prvek pageru přepočítat velikost obsaženého okna.
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ Následující příklad vytvoří ovládací prvek pageru a potom použije meto
 
 Nastaví uzavřené okno pro aktuální ovládací prvek pageru.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ Následující příklad vytvoří ovládací prvek pageru a potom použije meto
 
 Nastaví pozici posouvání aktuálního ovládacího prvku pageru.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363949"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750969"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet – třída
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Vytvoří `CPropertySheet` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Přidá stránku do seznamu vlastností.|
 |[CPropertySheet::Konstrukce](#construct)|Vytvoří `CPropertySheet` objekt.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CPropertySheet::m_psh](#m_psh)|Struktura WINDOWS [PROPSHEETHEADER.](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) Poskytuje přístup k základním parametrům seznamu vlastností.|
 
@@ -165,7 +165,7 @@ Další informace o použití `CPropertySheet` objektů naleznete v článku [Se
 
 Přidá dodanou stránku s záložkou zcela vpravo v seznamu vlastností.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ Pokud zavoláte `AddPage` po zobrazení stránky vlastností, řádek karty bude
 
 Vytvoří `CPropertySheet` objekt.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ Viz příklad [pro CPropertySheet::AddPage](#addpage).
 
 Označuje, zda se mají řádky tabulátorů skládat do seznamu vlastností.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ Musíte volat `EnableStackedTabs` při vytváření modální nebo nemodální s
 
 Ukončí seznam vlastností.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ Další informace o této struktuře, včetně výpisu jejích členů, naleznet
 
 Převede jednotky dialogového okna obdélníku na jednotky obrazovky.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje dialogové okno souřadnice, které mají být převedeny.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje dialogové okno souřadnice, které mají být převedeny.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -641,7 +641,7 @@ Pro tuto členskou funkci nepotřebujete položku mapy zpráv.
 
 Simuluje volbu zadaného tlačítka v seznamu vlastností.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Volání `PressButton` neodešle [oznámení PSN_APPLY](/windows/win32/Controls/
 
 Odebere stránku z seznamu vlastností a zničí přidružené okno.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ Viz příklad [pro CPropertySheet::GetActivePage](#getactivepage).
 
 Nastaví text v příkazovém tlačítku Dokončit.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ Volání `SetFinishText` zobrazítext na příkazovém tlačítku Dokončit a sk
 
 Určuje titulek seznamu vlastností (text zobrazený v záhlaví okna rámečku).
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ Ve výchozím nastavení používá seznam vlastností parametr titulku v konstr
 
 Povolí nebo zakáže tlačítko Zpět, Další nebo Dokončit v seznamu vlastností průvodce.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A `CPropertySheet` má tři stránky `CStylePage` `CColorPage`vlastností `CShap
 
 Vytvoří stránku vlastností jako průvodce.
 
-```
+```cpp
 void SetWizardMode();
 ```
 

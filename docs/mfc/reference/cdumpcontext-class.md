@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374009"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753206"
 ---
 # <a name="cdumpcontext-class"></a>Třída CDumpContext
 
@@ -39,13 +39,13 @@ class CDumpContext
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDumpContext::CDumpContext](#cdumpcontext)|Vytvoří `CDumpContext` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDumpContext::DumpAsHex](#dumpashex)|Vypíše uvedenou položku v šestnáctkovém formátu.|
 |[CDumpContext::Flush](#flush)|Vyprázdní všechna data ve vyrovnávací paměti kontextu výpisu.|
@@ -55,7 +55,7 @@ class CDumpContext
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDumpContext::operátor&lt;&lt;](#operator_lt_lt)|Vloží proměnné a objekty do kontextu výpisu.|
 
@@ -145,7 +145,7 @@ Volání této členské funkce vypisovat položku zadaného typu jako šestnác
 
 Vynutí všechna zbývající data ve vyrovnávacích pamětnicích, které mají být zapsány do souboru připojeného k kontextu výpisu stavu.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -173,7 +173,7 @@ Hloubka výpisu, jak `SetDepth`je nastavena .
 
 Vypíše pole bajtů formátovaných jako šestnáctková čísla.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -249,7 +249,7 @@ Pokud použijete IMPLEMENT_DYNAMIC nebo IMPLEMENT_SERIAL makro v implementaci va
 
 Nastaví hloubku pro výpis.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 

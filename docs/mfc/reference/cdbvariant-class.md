@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bb70acb43f2e73ade86b753ebbb7949759ce88d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376456"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754596"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
@@ -55,25 +55,25 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Vytvoří `CDBVariant` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::Vymazat](#clear)|Vymaže `CDBVariant` objekt.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Obsahuje datový typ aktuálně uložené hodnoty. Zadejte `DWORD`.|
 
 ### <a name="public-union-members"></a>Členové veřejných odborů
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Obsahuje hodnotu typu **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **nepodepsaný znak**.|
@@ -119,7 +119,7 @@ Nastaví datový člen [m_dwType](#m_dwtype) na DBVT_NULL.
 
 Volání této členské funkce `CDBVariant` vymazat objekt.
 
-```
+```cpp
 void Clear();
 ```
 

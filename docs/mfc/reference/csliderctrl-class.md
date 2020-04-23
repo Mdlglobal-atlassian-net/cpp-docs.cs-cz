@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318218"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751272"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl – třída
 
@@ -95,13 +95,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Vytvoří `CSliderCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSliderCtrl::Vymazat se](#clearsel)|Vymaže aktuální výběr v ovládacím prvku jezdce.|
 |[CSliderCtrl::ClearTics](#cleartics)|Odstraní aktuální značky z ovládacího prvku posuvníku.|
@@ -169,7 +169,7 @@ Další informace o `CSliderCtrl`použití naleznete v [tématech Ovládací prv
 
 Vymaže aktuální výběr v ovládacím prvku jezdce.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Překreslit vlajku. Pokud je tento parametr TRUE, jezdec se překreslí po výb�
 
 Odstraní aktuální značky z ovládacího prvku posuvníku.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku posuvníku. Použijte libovolnou kombinaci [stylů ovládacího prvku posuvníku](/windows/win32/Controls/trackbar-control-styles), popsané v sadě Windows SDK, na ovládací prvek.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku posuvníku. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Určuje velikost a umístění ovládacího prvku posuvníku. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího `CDialog`prvku posuvníku, obvykle . Nesmí být null.
@@ -251,7 +251,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Určuje styl ovládacího prvku posuvníku. Použijte libovolnou kombinaci [stylů ovládacího prvku posuvníku](/windows/win32/Controls/trackbar-control-styles), popsané v sadě Windows SDK, na ovládací prvek.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -304,7 +304,7 @@ Tato členská funkce implementuje chování [TBM_GETBUDDY](/windows/win32/Contr
 
 Načte velikost a umístění ohraničovacího obdélníku pro kanál ovládacího prvku posuvníku.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ Aktuální pozice.
 
 Načte maximální a minimální pozice jezdce v ovládacím prvku posuvníku.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ Minimální poloha ovládacího prvku.
 
 Načte počáteční a koncovou pozici aktuálního výběru v ovládacím prvku posuvníku.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Tato metoda odešle [zprávu TBM_GETTHUMBLENGTH,](/windows/win32/Controls/tbm-ge
 
 Načte velikost a umístění ohraničovacího obdélníku pro jezdec (palec) v ovládacím prvku jezdce.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ Velikost stránky ovlivňuje, o kolik se jezdec přesune pro TB_PAGEUP a TB_PAGE
 
 Nastaví aktuální polohu jezdce v ovládacím prvku jezdce.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Určuje novou polohu jezdce.
 
 Nastaví rozsah (minimální a maximální polohy) jezdce v ovládacím prvku posuvníku.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ Překreslit vlajku. Pokud je tento parametr TRUE, posuvník se po nastavení roz
 
 Nastaví maximální rozsah jezdce v ovládacím prvku posuvníku.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ Překreslit vlajku. Pokud je tento parametr TRUE, posuvník se po nastavení roz
 
 Nastaví minimální rozsah jezdce v ovládacím prvku posuvníku.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ Překreslit vlajku. Pokud je tento parametr TRUE, posuvník se po nastavení roz
 
 Nastaví počáteční a koncovou pozici pro aktuální výběr v ovládacím prvku posuvníku.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Koncová pozice pro posuvník.
 
 Nastaví délku jezdce v aktuálním ovládacím prvku trackbaru.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Nenulová, pokud je značka nastavena; jinak 0.
 
 Nastaví frekvenci, s jakou jsou značky zobrazeny v posuvníku.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Tato členská funkce implementuje chování zprávy Win32 TBM_SETTIPSIDE, jak j
 
 Přiřadí ovládací prvek popisu ovládacímu prvku jezdce.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

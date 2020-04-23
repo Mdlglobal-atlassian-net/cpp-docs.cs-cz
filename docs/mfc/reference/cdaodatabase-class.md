@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369022"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754738"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase – třída
 
@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Databáze CDao::Databáze CDao](#cdaodatabase)|Vytvoří `CDaoDatabase` objekt. Volání `Open` pro připojení objektu k databázi.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Databáze CDao::CanTransact](#cantransact)|Vrátí nenulovou, pokud databáze podporuje transakce.|
 |[Databáze CDao::CanUpdate](#canupdate)|Vrátí nenulovou, pokud je `CDaoDatabase` objekt aktualizovatelný (není jen pro čtení).|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoDatabáze::m_pDAODatabase](#m_pdaodatabase)|Ukazatel na základní databázový objekt DAO.|
 |[CDaoDatabáze::m_pWorkspace](#m_pworkspace)|Ukazatel na objekt [CDaoWorkspace,](../../mfc/reference/cdaoworkspace-class.md) který obsahuje databázi a definuje její transakční prostor.|
@@ -315,7 +315,7 @@ Pokud vynechete konstantu šifrování, vytvoří se nešifrovaná databáze. M�
 
 Volání této členské funkce k vytvoření vztahu mezi jedním nebo více poli v primární tabulce v databázi a jedním nebo více poli v cizí tabulce (jiná tabulka v databázi).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ Související informace naleznete v tématu "CreateRelation Method" v nápověd�
 
 Volání této členské funkce odstranit zadaný querydef `CDaoDatabase` – uložený dotaz – z kolekce QueryDefs objektu.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ Informace o vytváření objektů querydef naleznete v tématu class [CDaoQueryD
 
 Volání této členské funkce odstranit existující vztah z kolekce vztahy objektu databáze.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ Související informace naleznete v tématu "Delete Method" v nápovědě dao.
 
 Volání této členské funkce odstranit zadanou tabulku a `CDaoDatabase` všechna její data z kolekce Objekt TableDefs.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ Související informace naleznete v tématu "Delete Method" v nápovědě dao.
 
 Volání této členské funkce spustit akční dotaz nebo spustit příkaz SQL v databázi.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ Počet dotazů definovaných v databázi.
 
 Volání této členské funkce získat různé druhy informací o dotaz definovaný chvatvá v databázi.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ Chcete-li ilustrovat koncept relace, zvažte tabulku Dodavatelé a tabulku Produ
 
 Volání této členské funkce získat informace o zadaný vztah v kolekci vztahy databáze.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ Počet tabledefs definované v databázi.
 
 Volání této členské funkce získat různé druhy informací o tabulce definované v databázi.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ Připojovací řetězec můžete také použít pro více úrovní `CDaoDatabase
 
 Volání této členské funkce přepsat výchozí počet sekund povolit před následné operace na připojené databáze časový limit.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

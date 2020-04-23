@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: e1ce6e13b9c6045881cc0bb4114a6e11d58365c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86f12f78338d1c60e3dd13614ccedc2868f28d81
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368996"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754717"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange – třída
 
@@ -37,14 +37,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Vrátí nenulovou hodnotu, pokud je aktuální operace vhodná pro typ aktualizovaného pole.|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|Určuje typ datového člena sady záznamů – sloupec nebo parametr – reprezentovaný `SetFieldType`všemi následnými voláními funkcí DFX až do dalšího volání .|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoFieldExchange::m_nOperation](#m_noperation)|Operace DFX prováděné aktuální volání `DoFieldExchange` členské funkce sady záznamů.|
 |[CDaoFieldExchange::m_prs](#m_prs)|Ukazatel na sadu záznamů, na kterém jsou prováděny operace DFX.|
@@ -136,7 +136,7 @@ Obsahuje ukazatel na objekt [CDaoRecordset](../../mfc/reference/cdaorecordset-cl
 
 Zavolejte `SetFieldType` `CDaoRecordset` `DoFieldExchange` na třídu.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 

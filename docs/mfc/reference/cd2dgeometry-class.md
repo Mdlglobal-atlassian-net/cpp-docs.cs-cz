@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 2631005fcedfb8d5db69667e22c375f585b4f044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369249"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754781"
 ---
 # <a name="cd2dgeometry-class"></a>Třída CD2DGeometry
 
@@ -67,14 +67,14 @@ class CD2DGeometry : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Vytvoří objekt CD2DGeometry.|
 |[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Nazývá se při zničení objektu geometrie D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometry::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Zkombinuje tuto geometrii se zadanou geometrií a uloží výsledek do id2D1SimplifiedGeometrySink.|
@@ -97,13 +97,13 @@ class CD2DGeometry : public CD2DResource;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometry::operátor ID2D1Geometry*](#operator_id2d1geometry_star)|Vrátí rozhraní ID2D1Geometry.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|Ukazatel na ID2D1Geometry.|
 
@@ -131,7 +131,7 @@ virtual ~CD2DGeometry();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1Geometry* pResource);
 ```
 

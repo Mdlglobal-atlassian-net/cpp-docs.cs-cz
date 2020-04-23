@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: d03fb6f398e18957f68fc18c78d8a397efc67506
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 536d84fe2c2f68d62490e1ce2b65085426762e87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369282"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754191"
 ---
 # <a name="cd2dbrush-class"></a>Třída CD2DBrush
 
@@ -51,14 +51,14 @@ class CD2DBrush : public CD2DResource;
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|Vytvoří objekt CD2DBrush.|
 |[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Destruktor. Volána při zničení objektu stopy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DBrush::Destroy](#destroy)|Zničí objekt CD2DBrush. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
@@ -72,13 +72,13 @@ class CD2DBrush : public CD2DResource;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBrush::operátor ID2D1Brush*](#operator_id2d1brush_star)|Vrátí rozhraní ID2D1Brush.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DBrush::m_pBrush](#m_pbrush)|Uloží ukazatel na objekt ID2D1Brush.|
 |[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Vlastnosti stopy.|
@@ -107,7 +107,7 @@ virtual ~CD2DBrush();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
@@ -186,7 +186,7 @@ Hodnota mezi nulou a 1, která označuje krytí stopy. Tato hodnota je konstantn
 
 Získá aktuální transformace cíle vykreslení
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
@@ -239,7 +239,7 @@ Ukazatel na rozhraní ID2D1Brush nebo NULL, pokud objekt ještě není inicializ
 
 Nastaví stupeň krytí této stopy.
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
@@ -252,7 +252,7 @@ Hodnota mezi nulou a 1, která označuje krytí stopy. Tato hodnota je konstantn
 
 Aplikuje zadanou transformaci na cíl vykreslení a nahradí existující transformaci. Všechny následné operace kreslení probíhají v transformovaném prostoru.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 

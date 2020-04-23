@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367706"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752514"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton – třída
 
@@ -65,13 +65,13 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Vytvoří `CMFCColorMenuButton` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Povolí a zakáže "automatické" tlačítko, které je umístěno nad běžnými barevnými tlačítky. (Standardní automatické tlačítko systému je označeno **automaticky**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Umožňuje zobrazení barev specifických pro dokument namísto systémových barev.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Zkopíruje jiné tlačítko panelu nástrojů na aktuální tlačítko.|
 |[CMFCColorMenuButton::Nabídka CreatePopupMenu](#createpopupmenu)|Vytvoří dialogové okno pro výběr barvy.|
@@ -193,7 +193,7 @@ Tato metoda je volána rámci, když uživatel stiskne tlačítko nabídky barev
 
 Povolí a zakáže "automatické" tlačítko, které je umístěno nad běžnými barevnými tlačítky. (Standardní automatické tlačítko systému je označeno **automaticky**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ Automatické tlačítko aplikuje aktuální výchozí barvu.
 
 Umožňuje zobrazení barev specifických pro dokument namísto systémových barev.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ Tato metoda slouží k zobrazení aktuálních barev dokumentu nebo barev systé
 
 Povolí a zakáže tlačítko "ostatní", které je umístěno pod běžnými barevnými tlačítky. (Standardní systémové tlačítko "ostatní" je označeno **více barev**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 Umožňuje odtrhnout podokno barev.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 Nastaví počet sloupců, které se mají zobrazit v ovládacím prvku výběru barev (objekt [CMFCColorBar).](../../mfc/reference/cmfccolorbar-class.md)
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

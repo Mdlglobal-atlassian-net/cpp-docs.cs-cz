@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366838"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750668"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -213,13 +213,13 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinApp::CWinApp](#cwinapp)|Vytvoří `CWinApp` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinApp::AddDocTemplate](#adddoctemplate)|Přidá šablonu dokumentu do seznamu dostupných šablon dokumentů aplikace.|
 |[Cwinapp::AddtoRecentFileList](#addtorecentfilelist)|Přidá název souboru do seznamu naposledy použitých souborů (MRU).|
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Umožňuje uživateli otevírat datové soubory ze Správce souborů systému Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Zatížení standardní . INI nastavení souboru a umožňuje funkci seznamu souborů MRU.|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Označuje, zda je uživatel v režimu kontextu nápovědy (obvykle vyvolána s SHIFT + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Určuje typ nápovědy používané aplikací.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Příznaky, které určují, jak se chová správce restartování.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Doba v milisekundách mezi automatickým ukládáním.|
@@ -377,7 +377,7 @@ Datový `m_hPrevInstance` člen již neexistuje. Chcete-li zjistit, zda je spuš
 
 Voláním této členské funkce přidáte šablonu dokumentu do seznamu dostupných šablon dokumentů, které aplikace spravuje.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ Chcete-li přizpůsobit chování, přepište tuto funkci v odvozené [třídě 
 
 Volání této členské funkce zavřít všechny otevřené dokumenty před ukončením.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ Vrátí hodnotu PRAVDA, pokud byla povolena podpora D2D, NEPRAVDA - jinak
 
 Volání této členské funkce z v `CWinApp`rámci konstruktoru vaší odvozené třídy použít HTMLHelp pro pomoc vaší aplikace.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 Volání této funkce, obvykle `InitInstance` z přepsání, aby uživatelé aplikace mohli otevřít datové soubory při poklepání na soubory ze Správce souborů systému Windows.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ klávesa section, pokud je funkce úspěšná; jinak NULL.
 
 Volánítéto členské funkce skrýt aplikaci před zavřením otevřené dokumenty.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ Pomocí `LoadStandardIcon` členské funkce [nebo LoadOEMIcon](#loadoemicon) mů
 
 Volání této členské funkce z členské funkce [InitInstance](#initinstance) povolit a načíst seznam naposledy použitých souborů (MRU) a poslední stav náhledu.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ Pokud je dokument, který má tento název již otevřen, první okno rámce, kt
 
 Volání této členské funkce analyzovat příkazový řádek a odeslat parametry, jeden po druhém, [cCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam).
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1920,7 +1920,7 @@ Výchozí implementace jednoduše vrátí hodnotu TRUE. Přepište tuto funkci a
 
 Volání této členské funkce zaregistrovat všechny typy dokumentů aplikace ve Správci souborů systému Windows.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ Výchozí implementace této členské funkce volá členská funkce [CDocument:
 
 Voláním této členské funkce vyberte určitou tiskárnu a uvolněte tiskárnu, která byla dříve vybrána v tiskovém dialogovém okně.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ Pokud jsou *hodnoty hDevMode* i *hDevNames* null, `SelectPrinter` použije aktu�
 
 Nastaví typ nápovědy aplikace.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ Chcete-li nastavit typ nápovědy aplikace na nápovědu HTMLHelp, můžete vola
 
 Způsobí, že nastavení aplikace, které mají být uloženy v registru namísto souborů INI.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ Přepište tuto funkci a proveďte vlastní kroky zrušení registrace.
 
 Volánítéto členské funkce zrušit registraci všech typů dokumentů aplikace pomocí Správce souborů systému Windows.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ Další příklad naleznete v příkladu [cwinapp::GetProfileInt](#getprofileint
 
 Explicitně nastaví ID modelu uživatele aplikace pro aplikaci. Tato metoda by měla být volána před jakékoli uživatelské rozhraní je předloženuživateli (nejlepší místo je konstruktor aplikace).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

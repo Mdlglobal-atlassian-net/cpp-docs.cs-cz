@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365283"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754224"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit – třída
 
@@ -45,14 +45,14 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Výchozí konstruktor.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Zakáže ověřování vstupu uživatele.|
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Určuje, zda `GetWindowText` metoda načte pouze maskované znaky.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Volat rámci k ověření zadaný znak proti odpovídající znak masky.|
 
@@ -113,7 +113,7 @@ Následující příklad ukazuje, jak nastavit masku (například telefonní č�
 
 Zakáže ověřování vstupu uživatele.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ Pokud je ověření vstupu uživatele zakázáno, maskovaný ovládací prvek ú
 
 Určuje, zda `GetWindowText` metoda načte pouze maskované znaky.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ Tuto metodu použijte k povolení načítání maskovaných znaků. Potom vytvo�
 
 Inicializuje maskovaný ovládací prvek úprav.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ V následující tabulce jsou uvedeny výchozí znaky masky:
 
 Určuje, zda maskovaný ovládací prvek úprav umožňuje uživateli vybrat konkrétní vstup skupin nebo všechny vstupy.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ Pokud je povolen výběr podle skupiny, uživatel může načíst pouze skupiny 
 
 Určuje, zda je text ověřen pouze proti maskovaným znakům nebo proti celé masce.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ Přepsat tuto metodu ověřit vstupní znaky na vlastní pěst. Další informac
 
 Určuje řetězec platných znaků, který může uživatel zadat.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 Zobrazí výzvu v ovládacím prvku maskovaných úprav.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

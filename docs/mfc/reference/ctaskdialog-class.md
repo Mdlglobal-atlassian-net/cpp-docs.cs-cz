@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366637"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752281"
 ---
 # <a name="ctaskdialog-class"></a>Třída CTaskDialog
 
@@ -255,7 +255,7 @@ Ukázka ctaskdialog
 
 Přidá do pole `CTaskDialog`.
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ Když uživatel vybere ovládací prvek příkazového tlačítka, `CTaskDialog`
 
 Přidá k souboru `CTaskDialog`.
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ Pomocí této funkce můžete určit za běhu, pokud počítač, ve který je sp
 
 Přidá ovládací prvky příkazového tlačítka pomocí dat z tabulky řetězců.
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ Ve výchozím nastavení jsou nové ovládací prvky příkazového tlačítka p
 
 Přidá ovládací prvky přepínacích tlačítek pomocí dat z tabulky řetězců.
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ Přepsat tuto metodu v odvozené třídě implementovat vlastní chování.
 
 Odebere všechny ovládací prvky `CTaskDialog`příkazového tlačítka z rozhraní .
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 Odstraní všechna přepínací `CTaskDialog`tlačítka z .
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 Aktualizuje ovládací prvek příkazového tlačítka na ovládacím prvku `CTaskDialog`.
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ Pomocí této metody můžete změnit, zda je ovládací prvek příkazového `C
 
 Aktualizuje podmnožinu běžných tlačítek, která mají být povolena a vyžadují zvýšení počtu registrací.
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ Tato metoda umožňuje jakékoli tlačítko, `CTaskDialog` které je k dispozici
 
 Přidá do aplikace `CTaskDialog`tlačítka běžné tlačítka.
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ Ve výchozím nastavení jsou všechna běžná tlačítka povolena a nevyžaduj
 
 Aktualizuje obsah . `CTaskDialog`
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ Obsah třídy `CTaskDialog` je text, který se zobrazí uživateli v hlavní č�
 
 Určuje výchozí ovládací prvek příkazového tlačítka.
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ Tato metoda vyvolá výjimku, pokud nemůže najít ovládací prvek příkazov�
 
 Určuje výchozí přepínací tlačítko.
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ Tato metoda vyvolá výjimku, pokud nemůže najít přepínací tlačítko urč
 
 Upraví šířku `CTaskDialog`.
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ Pokud je *hodnota nWidth* nastavena na hodnotu 0, tato metoda nastaví dialogov�
 
 Aktualizuje oblast rozšíření `CTaskDialog`oblasti .
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ Oblast rozšíření třídy `CTaskDialog` umožňuje poskytnout uživateli dal�
 
 Aktualizuje ikonu zápatí `CTaskDialog`aplikace .
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ Ikona `CTaskDialog` `HICON` zápatí `LPCWSTR` může přijmout pouze ikonu záp
 
 Aktualizuje text v zápatí `CTaskDialog`.
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ Ikona zápatí se zobrazí vedle textu zápatí v dolní části . `CTaskDialog`
 
 Aktualizuje hlavní ikonu `CTaskDialog`aplikace .
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ A `CTaskDialog` může přijmout `HICON` `LPCWSTR` pouze nebo jako hlavní ikonu
 
 Aktualizuje hlavní instrukce `CTaskDialog`.
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ Hlavní instrukce třídy `CTaskDialog` je text zobrazený uživateli velkým tu
 
 Konfiguruje `CTaskDialog`možnosti pro rozhraní .
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ V následující tabulce jsou uvedeny všechny platné možnosti.
 
 Nakonfiguruje pruh `CTaskDialog` výběru pro a přidá jej do dialogového okna.
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ Tato metoda vyvolá výjimku s [makro zajistit,](diagnostic-services.md#ensure) 
 
 Upraví pozici indikátoru průběhu.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ Tato metoda vyvolá výjimku s [makro zajistit,](diagnostic-services.md#ensure) 
 
 Upraví rozsah indikátoru průběhu.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ Tato metoda vyvolá výjimku s [makro ZAJISTIT,](diagnostic-services.md#ensure) 
 
 Nastaví stav indikátoru průběhu a `CTaskDialog`zobrazí jej na .
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ Můžete nastavit, kde se indikátor průběhu zastaví pomocí [CTaskDialog::Se
 
 Povolí nebo zakáže přepínací tlačítko.
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ Tato metoda vyvolá výjimku s [makro ZAJISTIT,](diagnostic-services.md#ensure) 
 
 Nastaví zaškrtnutý stav ověřovacího zaškrtávacího políčka.
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 Nastaví text, který se zobrazí vpravo od ověřovacího zaškrtávacího políčka.
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ Tato metoda vyvolá výjimku s [makro zajistit,](diagnostic-services.md#ensure) 
 
 Nastaví název `CTaskDialog`.
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

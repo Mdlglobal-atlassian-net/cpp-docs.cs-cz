@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371700"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753061"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Volání k `CSplitterWnd` vytvoření objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::AktivovatDalší](#activatenext)|Provede příkaz Další podokno nebo Předchozí podokno.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Zkontroluje, zda je aktuálně možný příkaz Další podokno nebo Předchozí podokno.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Volat rámci k nakreslení okno rozdělovače.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Vykreslí obrázek rozděleného okna.|
@@ -619,7 +619,7 @@ Vrátí aktuální počet sloupců v rozdělovači. Pro statický rozdělovač t
 
 Vrátí informace v zadaném sloupci.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ Vrátí aktuální počet řádků v okně rozdělovače. Pro statické okno roz
 
 Vrátí informace na zadaném řádku.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ Určete podokno zadáním řádku a sloupce **nebo** zadáním *pWnd*.
 
 Volání nastavení informací o zadaném sloupci.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ Když rozhraní zobrazí okno rozdělovače, rozkládá podokna ve sloupcích a 
 
 Volání pro nastavení informací o zadaném řádku.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ Když rozhraní zobrazí okno rozdělovače, rozkládá podokna ve sloupcích a 
 
 Určuje nový styl posouvání pro podporu sdíleného posuvníku v okně rozdělovače.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 

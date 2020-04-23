@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361816"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754099"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty – třída
 
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::VLASTNOST CMFCPropertyProperty](#cmfcpropertygridproperty)|Vytvoří `CMFCPropertyGridProperty` objekt.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Přidá novou položku seznamu do ovládacího prvku seznamu vlastností.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Přidá podřízenou položku do vlastnosti.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Volat rámci přidat pole se seznamem do vlastnosti.|
 |[CMFCPropertyGridProperty::hasButton](#hasbutton)|Označuje, zda vlastnost obsahuje tlačítko.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Formátovací řetězec pro hodnotu typu double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Formátovací řetězec pro hodnotu typu float.|
@@ -400,7 +400,7 @@ Oblast hodnoty vlastnosti se skládá z textového pole a případně *přepína
 
 Vytvoří vlastnost upravitelnou nebo jen pro čtení.
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ Volání [metody CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol
 
 Povolí nebo zakáže vlastnost.
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 Povolí nebo zakáže ovládací prvek číselníku, který se používá k úpravě hodnoty vlastnosti.
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ Typ vlastnosti, který je určen parametrem *varValue* konstruktoru [CMFCPropert
 
 Rozbalí nebo sbalí vlastnost, která obsahuje dílčí vlastnosti.
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -912,7 +912,7 @@ V následující tabulce jsou uvedeny hodnoty, které lze vrátit do parametru *
 
 Volat rámci inicializovat objekt vlastnosti.
 
-```
+```cpp
 void Init();
 ```
 
@@ -1556,7 +1556,7 @@ Tato metoda podporuje vlastnost, která je seznam hodnot nebo jeden z následuj�
 
 Překreslí vlastnost.
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 Odebere všechny možnosti (položky) z vlastnosti.
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 Přidruží hodnotu DWORD k vlastnosti.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ K načtení hodnoty DWORD použijte metodu [CMFCPropertyGridProperty::GetData.](
 
 Určuje text, který popisuje aktuální vlastnost.
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 Nastaví název vlastnosti.
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 Zobrazí nebo skryje vlastnost.
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);

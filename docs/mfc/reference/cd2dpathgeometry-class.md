@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 59ef82151983720b654502ccf3ca647e55366268
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 91460e3435130530ecc57bdcc09d1c7301333a3b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369173"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753073"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry – třída
 
@@ -47,13 +47,13 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Vytvoří objekt CD2DPathGeometry.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DPathGeometry::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DPathGeometry::Vytvořit](#create)|Vytvoří CD2DPathGeometry. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -66,7 +66,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Ukazatel na ID2D1PathGeometry.|
 
@@ -88,7 +88,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1PathGeometry* pResource);
 ```
 

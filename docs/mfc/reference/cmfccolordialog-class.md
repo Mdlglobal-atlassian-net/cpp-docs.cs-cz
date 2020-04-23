@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: 987e4f1e5e89c3c56b58adaad76cfd23d5e26c52
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d4bd31d5095f572ee80f0357a2d7526482f1caa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367721"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752541"
 ---
 # <a name="cmfccolordialog-class"></a>Třída CMFCColorDialog
 
@@ -43,14 +43,14 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::DIALOGOVÉ OKNO CMFCColorDialog](#cmfccolordialog)|Vytvoří `CMFCColorDialog` objekt.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Vrátí aktuální vybranou barvu.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Vrátí paletu barvy.|
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`m_bIsMyPalette`|PRAVDA, pokud dialogové okno výběru barev používá vlastní paletu barev, nebo NEPRAVDA, pokud dialogové okno používá paletu určenou v konstruktoru. `CMFCColorDialog`|
 |`m_bPickerMode`|TRUE, když uživatel vybírá barvu z dialogového okna výběru; jinak NEPRAVDA.|
@@ -174,7 +174,7 @@ Paleta barev určuje barvy, které si uživatel může vybrat.
 
 Odvozuje paletu ze systémové palety.
 
-```
+```cpp
 void RebuildPalette();
 ```
 
@@ -182,7 +182,7 @@ void RebuildPalette();
 
 Nastaví aktuální barvu dialogového okna.
 
-```
+```cpp
 void SetCurrentColor(COLORREF rgb);
 ```
 
@@ -197,7 +197,7 @@ void SetCurrentColor(COLORREF rgb);
 
 Nastaví aktuální barvu na barvu v aktuální paletě, která je nejvíce podobná.
 
-```
+```cpp
 void SetNewColor(COLORREF rgb);
 ```
 
@@ -212,7 +212,7 @@ void SetNewColor(COLORREF rgb);
 
 Explicitně určuje červenou, zelenou a modrou složku vybrané barvy na první stránce vlastností barevného dialogu.
 
-```
+```cpp
 void SetPageOne(
     BYTE R,
     BYTE G,
@@ -236,7 +236,7 @@ void SetPageOne(
 
 Explicitně určuje červenou, zelenou a modrou složku vybrané barvy na druhé stránce vlastností barevného dialogu.
 
-```
+```cpp
 void SetPageTwo(
     BYTE R,
     BYTE G,

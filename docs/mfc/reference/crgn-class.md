@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368296"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754488"
 ---
 # <a name="crgn-class"></a>Třída CRgn
 
@@ -67,13 +67,13 @@ class CRgn : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRgn::CRgn](#crgn)|Vytvoří `CRgn` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRgn::CombineRgn](#combinergn)|Nastaví `CRgn` objekt tak, aby byl ekvivalentní `CRgn` sjednocení dvou zadaných objektů.|
 |[CRgn::CopyRgn](#copyrgn)|Nastaví `CRgn` objekt tak, aby se `CRgn` jedná o kopii zadaného objektu.|
@@ -97,7 +97,7 @@ class CRgn : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRgn::operátor HRGN](#operator_hrgn)|Vrátí popisovač systému `CRgn` Windows obsažený v objektu.|
 
@@ -805,7 +805,7 @@ Nenulová, pokud některá část zadaného obdélníku leží uvnitř hranic ob
 
 Vytvoří obdélníkovou oblast.
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,

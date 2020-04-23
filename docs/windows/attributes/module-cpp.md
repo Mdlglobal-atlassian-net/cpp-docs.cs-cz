@@ -1,21 +1,21 @@
 ---
-title: Module (C++ atribut com)
+title: modul (atribut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9d4f9e23aaf182e28930ba3a4462b07533ba9015
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754379"
 ---
 # <a name="module-c"></a>module (C++)
 
-Definuje blok knihovny v souboru. idl.
+Definuje blok knihovny v souboru .idl.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,95 +25,95 @@ Definuje blok knihovny v souboru. idl.
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
-Volitelné Může to být jedna z následujících:
+*Typ*<br/>
+(Nepovinné) Může to být jedna z následujících možností:
 
-- `dll` přidává funkce a třídy, které umožňují výsledné knihovně DLL fungovat jako vnitroprocesové server COM. Toto je výchozí hodnota.
+- `dll`Přidá funkce a třídy, které umožňují výslednou dll fungovat jako neprocesový server COM. Toto je výchozí hodnota.
 
-- `exe` přidává funkce a třídy, které umožňují výslednému spustitelnému souboru fungovat jako nezpracovaný server COM.
+- `exe`Přidá funkce a třídy, které umožňují výsledný spustitelný soubor fungovat jako mimo proces COM server.
 
-- `service` přidá funkce a třídy, které umožní výslednému spustitelnému souboru fungovat jako služba NT.
+- `service`Přidá funkce a třídy, které umožňují výsledný spustitelný soubor fungovat jako služba NT.
 
-- `unspecified` zakáže vkládání kódu ATL, který se vztahuje k atributu modulu: vkládání třídy modulu ATL, globální instance _AtlModule a funkce vstupního bodu. Nezakáže vkládání kódu ATL z důvodu jiných atributů v projektu.
+- `unspecified`Zakáže vkládání kódu KNIHOVNY ATL souvisejícího s atributem modulu: vkládání třídy modulu ATL, globální instance _AtlModule a funkce vstupního bodu. Nezakáže vkládání kódu KNIHOVNY ATL z důvodu jiných atributů v projektu.
 
 *Jméno*<br/>
-Volitelné Název bloku knihovny.
+(Nepovinné) Název bloku knihovny.
 
-*version*<br/>
-Volitelné Číslo verze, které chcete přiřadit k bloku knihovny. Výchozí hodnota je 1,0.
+*Verze*<br/>
+(Nepovinné) Číslo verze, které chcete přiřadit bloku knihovny. Výchozí hodnota je 1,0.
 
-*uuid*<br/>
-Jedinečné ID knihovny. Pokud tento parametr vynecháte, ID se pro knihovnu vygeneruje automaticky. Možná budete muset načíst *UUID* bloku vaší knihovny, který můžete provést pomocí identifikátoru **__uuidof (** *Library* **)** .
+*Uuid*<br/>
+Jedinečné ID knihovny. Pokud tento parametr vynecháte, bude pro knihovnu automaticky vygenerováno ID. Možná budete muset načíst *uuid* bloku knihovny, který můžete udělat pomocí identifikátoru **__uuidof(** *název knihovny* **).**
 
 *lcid*<br/>
-Parametr Localization Další informace naleznete v tématu [LCID](/windows/win32/Midl/lcid) .
+Lokalizační parametr. Viz [lcid](/windows/win32/Midl/lcid) pro více informací.
 
-*control*<br/>
-Volitelné Určuje, že všechny třídy coclass v knihovně jsou ovládací prvky.
+*Ovládací prvek*<br/>
+(Nepovinné) Určuje, že všechny spolutřídy v knihovně jsou ovládací prvky.
 
 *helpstring*<br/>
 Určuje knihovnu typů.
 
 *helpstringdll*<br/>
-Volitelné Nastaví název souboru. dll, který se má použít k provedení vyhledávání řetězce dokumentu. Další informace najdete v tématu [helpstringdll](/windows/win32/Midl/helpstringdll) .
+(Nepovinné) Nastaví název souboru DLL, který se má použít k provedení vyhledávání řetězců dokumentu. Další informace naleznete v [tématu helpstringdll.](/windows/win32/Midl/helpstringdll)
 
 *helpfile*<br/>
-Volitelné Název souboru s **nápovědu** pro knihovnu typů
+(Nepovinné) Název souboru **nápovědy** pro knihovnu typů.
 
 *helpcontext*<br/>
-Volitelné **ID nápovědu** pro tuto knihovnu typů
+(Nepovinné) **ID nápovědy** pro tuto knihovnu typů.
 
 *helpstringcontext*<br/>
-Volitelné Další informace najdete v tématu [helpstringcontext](helpstringcontext.md) .
+(Nepovinné) Další informace naleznete [v tématu helpstringcontext.](helpstringcontext.md)
 
-*hidden*<br/>
-Volitelné Zabraňuje zobrazení celé knihovny. Toto použití je určeno pro použití s ovládacími prvky. Hostitelé musí vytvořit novou knihovnu typů, která ovládací prvek zabalí pomocí rozšířených vlastností. Další informace naleznete u [skrytého](/windows/win32/Midl/hidden) atributu MIDL.
+*Skryté*<br/>
+(Nepovinné) Zabrání zobrazení celé knihovny. Toto použití je určeno pro použití s ovládacími prvky. Hostitelé musí vytvořit novou knihovnu typů, která obtéká ovládací prvek s rozšířenými vlastnostmi. Další informace naleznete v [atributu hidden](/windows/win32/Midl/hidden) MIDL.
 
 *restricted*<br/>
-Volitelné Členy knihovny nelze volat libovolně. Další informace naleznete u atributu [Restricted](/windows/win32/Midl/restricted) MIDL.
+(Nepovinné) Členy knihovny nelze volat libovolně. Další informace naleznete v atributu [MIDL s omezeným](/windows/win32/Midl/restricted) přístupem.
 
-*custom*<br/>
-Volitelné Jeden nebo více atributů; To se podobá [vlastnímu](custom-cpp.md) atributu. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
+*Vlastní*<br/>
+(Nepovinné) Jeden nebo více atributů; To je podobné [vlastní](custom-cpp.md) atribut. První parametr *vlastní* je GUID atributu. Příklad:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
 *resource_name*<br/>
-ID prostředku řetězce souboru. rgs používaného k registraci ID aplikace DLL, spustitelného souboru nebo služby. Pokud je modul typu služba, tento argument slouží také k získání ID řetězce obsahujícího název služby.
+ID prostředku řetězce souboru RGS použitého k registraci ID aplikace DLL, spustitelného souboru nebo služby. Pokud je modul typu služby, tento argument se také používá k získání ID řetězce obsahující název služby.
 
 > [!NOTE]
-> Soubor. rgs i řetězec obsahující název služby by měly obsahovat stejnou číselnou hodnotu.
+> Soubor RGS i řetězec obsahující název služby by měly obsahovat stejnou číselnou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud nezadáte parametr *s omezením* na [emitidl](emitidl.md), **modul** je vyžadován v jakémkoli programu, C++ který používá atributy.
+Pokud nezadáte *parametr restricted* pro [emitidl](emitidl.md), **modul** je vyžadován v libovolném programu, který používá atributy Jazyka C++.
 
-Blok knihovny bude vytvořen, pokud kromě atributu **modulu** používá zdrojový kód také funkci [IDispatch](dispinterface.md), [Dual](dual.md), [Object](object-cpp.md)nebo atribut, který implikuje [třídu typu coclass](coclass.md).
+Blok knihovny bude vytvořen, pokud kromě atributu **modulu** zdrojový kód také používá [dispinterface](dispinterface.md), [dual](dual.md), [object](object-cpp.md)nebo atribut, který implikuje [coclass](coclass.md).
 
-V souboru IDL je povolen jeden blok knihovny. Bude sloučeno více položek modulu ve zdrojovém kódu s nejnovějšími hodnotami parametrů, které jsou implementovány.
+V souboru .idl je povolen jeden blok knihovny. Více položek modulu ve zdrojovém kódu bude sloučeno s nejnovějšími hodnotami parametrů, které jsou implementovány.
 
-Pokud se tento atribut používá v rámci projektu, který používá ATL, chování atributu se změní. Kromě výše uvedeného chování atribut také vloží globální objekt (nazývaný `_AtlModule`) správného typu a další kód podpory. Pokud je atribut samostatný, vloží třídu odvozenou ze správného typu modulu. Pokud je atribut použit pro třídu, přidá základní třídu správného typu modulu. Správný typ je určen hodnotou parametru *typu* :
+Pokud tento atribut se používá v rámci projektu, který používá KNIHOVNU ATL, chování atributu se změní. Kromě výše uvedeného chování atribut také vloží globální `_AtlModule`objekt (nazývaný) správného typu a další kód podpory. Pokud je atribut samostatný, vloží třídu odvozenou od správného typu modulu. Pokud je atribut použit pro třídu, přidá základní třídu správného typu modulu. Správný typ je určen hodnotou parametru *typu:*
 
-- **knihovna dll** `type` = 
+- `type` = **Knihovny dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) se používá jako základní třída a standardní vstupní body knihovny DLL vyžadované pro server com. Tyto vstupní body jsou [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DLLUnregisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)a [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\)).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) se používá jako základní třída a standardní vstupní body DLL požadované pro server COM. Tyto vstupní body jsou [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)a [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
-- `type` = **exe**
+- `type` = **Exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) se používá jako základní třída a standardní spustitelný vstupní bod [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- **služba** `type` = 
+- `type` = **Služby**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) se používá jako základní třída a standardní spustitelný vstupní bod [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- **neurčený** `type` = 
+- `type` = **Nespecifikované**
 
-   Zakáže vkládání kódu ATL, který souvisí s atributem Module.
+   Zakáže vkládání kódu KNIHOVNY ATL souvisejícího s atributem modulu.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak vytvořit blok knihovny v generovaném souboru IDL.
+Následující kód ukazuje, jak vytvořit blok knihovny v generovaném souboru .idl.
 
 ```cpp
 // cpp_attr_ref_module1.cpp
@@ -121,7 +121,7 @@ Následující kód ukazuje, jak vytvořit blok knihovny v generovaném souboru 
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-Následující kód ukazuje, že můžete poskytnout vlastní implementaci funkce, která by se zobrazila v kódu, který byl vložen jako výsledek použití **modulu**. Další informace o zobrazení vloženého kódu naleznete v tématu [/FX](../../build/reference/fx-merge-injected-code.md) . Chcete-li přepsat jednu z funkcí, které jsou vloženy atributem **Module** , vytvořte třídu, která bude obsahovat vaši implementaci funkce, a nastavte u této třídy atribut **Module** .
+Následující kód ukazuje, že můžete poskytnout vlastní implementaci funkce, která by se objevila v kódu, který byl vložen v důsledku použití **modulu**. Viz [/Fx](../../build/reference/fx-merge-injected-code.md) další informace o zobrazení vloženého kódu. Chcete-li přepsat jednu z funkcí vložených atributem **modulu,** vytvořte třídu, která bude obsahovat implementaci funkce, a proveďte atribut **modulu** pro tuto třídu.
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -152,22 +152,22 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 |||
 |-|-|
-|**Platí pro**|Jakékoli|
-|**REPEATABLE**|Ne|
-|**Požadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Platí pro**|Kdekoliv|
+|**Opakovatelnou**|Ne|
+|**Povinné atributy**|Žádná|
+|**Neplatné atributy**|Žádná|
 
-Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v [tématu Kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](idl-attributes.md)<br/>
+[Atributy IDL](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>
-[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributy Typedef, Enum, Union a Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Knihovna](/windows/win32/Midl/library)<br/>
+[Knihovny](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[version](version-cpp.md)
+[Verze](version-cpp.md)

@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365707"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751596"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -91,7 +91,7 @@ Pro podporu OLE z běžné knihovny DLL knihovny MFC, která je dynamicky propoj
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ Pro podporu soketů knihovny MFC z běžné knihovny DLL knihovny MFC, která je
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -244,7 +244,7 @@ Tato funkce slouží k nastavení příznaku stavu modulu, který ovlivňuje cho
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,7 +279,7 @@ Volání této funkce povolit knihovny MFC vyčistit knihovnu DLL rozšíření 
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 

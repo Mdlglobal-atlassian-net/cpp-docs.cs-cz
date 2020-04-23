@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353029"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753026"
 ---
 # <a name="casyncsocket-class"></a>Třída CAsyncSocket
 
@@ -95,13 +95,13 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|Vytvoří `CAsyncSocket` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAsyncSocket::Přijmout](#accept)|Přijme připojení na soketu.|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Požaduje oznámení události pro soket.|
@@ -132,7 +132,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAsyncSocket::OnAccept](#onaccept)|Upozorní naslouchání soketu, který může přijímat `Accept`čekající požadavky na připojení voláním .|
 |[CAsyncSocket::OnClose](#onclose)|Upozorní soketu, že zásuvka, která je k němu připojena, byla uzavřena.|
@@ -143,14 +143,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAsyncSocket::operátor =](#operator_eq)|Přiřadí objektu novou `CAsyncSocket` hodnotu.|
 |[CAsyncSocket::OPERÁTOR SOCKET](#operator_socket)|Tento operátor slouží k načtení `CAsyncSocket` popisovače SOCKET objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAsyncSocket::m_hSocket](#m_hsocket)|Označuje popisovač SOCKET připojený `CAsyncSocket` k tomuto objektu.|
 
@@ -1112,7 +1112,7 @@ Další informace naleznete v tématu [Windows Sockets: Socket Notifications](..
 
 Přiřadí objektu novou `CAsyncSocket` hodnotu.
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 

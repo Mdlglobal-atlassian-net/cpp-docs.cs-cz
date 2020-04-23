@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 64f5dd7b40853a86dc7f964ecd3701f132a94e16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eaecdb6ba6f1382f16177e0567b31c9fd09da6ff
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369184"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753091"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh – třída
 
@@ -45,14 +45,14 @@ class CD2DMesh : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Vytvoří objekt CD2DMesh.|
 |[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|Destruktor. Nazývá se při zničení objektu sítě D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DMesh::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
 |[CD2DMesh::Vytvořit](#create)|Vytvoří cd2DMesh. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -64,13 +64,13 @@ class CD2DMesh : public CD2DResource;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DMesh::operátor ID2D1Mesh*](#operator_id2d1mesh_star)|Vrátí rozhraní ID2D1Mesh.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CD2DMesh::m_pMesh](#m_pmesh)|Ukazatel na ID2D1Mesh.|
 
@@ -98,7 +98,7 @@ virtual ~CD2DMesh();
 
 Připojí k objektu existující rozhraní prostředků.
 
-```
+```cpp
 void Attach(ID2D1Mesh* pResource);
 ```
 

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367781"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754867"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton – třída
 
@@ -101,14 +101,14 @@ class CMFCButton : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCButton::CMFCButton`|Výchozí konstruktor.|
 |`CMFCButton::~CMFCButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::Vyčištění](#cleanup)|Obnoví vnitřní proměnné a uvolní přidělené prostředky, jako jsou obrázky, bitmapy a ikony.|
 |`CMFCButton::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
@@ -143,7 +143,7 @@ class CMFCButton : public CButton
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::Ondraw](#ondraw)|Volat rámci nakreslit tlačítko.|
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Volat rámci k nakreslení hranice tlačítka.|
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Určuje zarovnání textu tlačítka.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Určuje, zda se mají používat motivy systému Windows XP.|
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Určuje, zda se má zobrazit úplný text popisku ve velkém okně popisku nebo zkrácenou verzi textu v malém okně popisku.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Určuje, zda je písmo textu tlačítka stejné jako písmo nabídky aplikace.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Přepsat tuto metodu použít vlastní kód k načtení písma.
 
 Nastaví tlačítko do režimu automatického opakování.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Tato metoda způsobí, že tlačítko neustále odesílat WM_COMMAND zprávy do 
 
 Nastaví obrázek pro zaškrtnuté tlačítko.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Nastaví barvu pozadí textu tlačítka.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Tato metoda slouží k definování nové barvy výplně pro pozadí tlačítka 
 
 Nastaví obrázek tlačítka.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ Následující příklad ukazuje, jak používat různé `SetImage` verze metody
 
 Nastaví obraz kurzoru.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ Následující příklad ukazuje, jak `SetMouseCursor` používat metodu ve `CMF
 
 Nastaví kurzor na obraz ruky.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Pomocí této metody můžete přidružit obrázek kurzoru ruky k tlačítku. Ku
 
 Používá `CMenuImages` objekt k nastavení obrazu tlačítka.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Nastaví barvu textu tlačítka pro tlačítko, které není vybráno.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Nastaví barvu textu tlačítka pro vybrané tlačítko.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Přidruží popis ekponovacího tlačítka.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 
