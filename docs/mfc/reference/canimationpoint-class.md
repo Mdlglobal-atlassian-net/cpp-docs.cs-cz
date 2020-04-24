@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369737"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755150"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint – třída
 
@@ -47,13 +47,13 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationPoint::CAnimationPoint](#canimationpoint)|Přetíženo. Vytvoří cAnimationPoint objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationPoint::AddTransition](#addtransition)|Přidá přechody pro souřadnice X a Y.|
 |[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnoty pro souřadnice X a Y.|
@@ -64,20 +64,20 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřené proměnné animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationPoint::operátor CPoint](#operator_cpoint)|Převede CAnimationPoint na CPoint.|
 |[CAnimationPoint::operátor=](#operator_eq)|Přiřadí ptSrc CAnimationPoint.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationPoint::m_xValue](#m_xvalue)|Zapouzdřená proměnná animace, která představuje souřadnici X bodu animace.|
 |[CAnimationPoint::m_yValue](#m_yvalue)|Zapouzdřená proměnná animace, která představuje souřadnici Y bodu animace.|
@@ -102,7 +102,7 @@ Třída CAnimationPoint zapouzdřuje dva objekty CAnimationVariable a může v a
 
 Přidá přechody pro souřadnice X a Y.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže,
 
 Přiřadí ptSrc CAnimationPoint.
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ Přiřadí ptSrc CAnimationPoint. Doporučuje se to provést před zahájením a
 
 Nastaví výchozí hodnotu.
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 

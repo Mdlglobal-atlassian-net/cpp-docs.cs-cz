@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363809"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032223"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView – třída
 
@@ -40,19 +40,19 @@ Určuje binární predikát pro testování rovnosti `T`s hodnotami typu . Vých
 
 ### <a name="remarks"></a>Poznámky
 
-Třída `VectorView` implementuje [rozhraní Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) rozhraní a podporu pro iterátory knihovny standardníšablony.
+Třída `VectorView` implementuje [rozhraní Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) rozhraní a podporu pro iterátory knihovny standardníšablony.
 
 ### <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Vektorové zobrazení::Vektorové zobrazení](#ctor)|Inicializuje novou instanci třídy VectorView.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[VectorView::První](#first)|Vrátí iterátor, který určuje první prvek v VectorView.|
 |[Vektorové zobrazení::Getat](#getat)|Načte prvek aktuální VectorView, který je označen zadaným indexem.|
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*value*<br/>
 Položka, kterou chcete najít.
 
 *Index*<br/>
@@ -253,7 +253,7 @@ Počet prvků v kolekci objektů, který se používá k inicializaci aktuální
 *Velikost*<br/>
 Počet prvků v VectorView.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která se používá k inicializaci každého prvku v aktuálním VectorView.
 
 *V*<br/>

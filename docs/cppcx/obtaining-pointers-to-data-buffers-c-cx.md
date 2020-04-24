@@ -2,24 +2,24 @@
 title: Získání ukazatelů do vyrovnávací paměti dat (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162311"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032366"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C++/CX)
 
-V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.
+V modulu Windows Runtime poskytuje rozhraní [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) pro přístup k datovým vyrovnávacím bodům jazykově neutrální prostředky založené na datovém proudu. V jazyce C++ můžete získat nezpracovaný ukazatel základního bajtového pole pomocí rozhraní IBufferByteAccess knihovny prostředí Windows Runtime, které je definováno v souboru robuffer.h. Pomocí tohoto přístupu můžete upravit bajtpole na místě bez vytváření zbytečných kopií dat.
 
-Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.
+Následující diagram znázorňuje obrazový prvek XAML, jehož zdrojem je [windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Klientská aplikace, která je napsaná v `WriteableBitmap` libovolném jazyce, může předat odkaz na kód Jazyka C++ a pak c++ můžete použít odkaz získat na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++, můžete funkci v následujícím příkladu použít přímo ve zdrojovém kódu bez jeho zabalení do součásti prostředí Windows Runtime.
 
-![C&#43; &#43; kód, který přistupuje k datům pixel přímo](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; kód, který přistupuje k datům pixel přímo")
+![C&#43;&#43; kód, který přistupuje k datům pixelů přímo](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; kód, který přistupuje k datům pixelů přímo")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-Následující metoda přijímá [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) vlastnost.
+Následující metoda přijímá [systém Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) a vrací nezpracovaný ukazatel do základního pole bajtů. Chcete-li volat funkci, předejte vlastnost [WriteableBitmap::PixelBuffer.](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer)
 
 ```cpp
 #include <wrl.h>
@@ -51,15 +51,15 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>Kompletní příklad
 
-Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Platform, který předá `WriteableBitmap` ke komponentě ve C++ Windows Runtime knihovny DLL. Kód jazyka C++ získá ukazatel do vyrovnávací paměti pixelů a provádí jednoduchých úprav na místě v imagi. Jako alternativu můžete vytvořit klientskou aplikaci v jazyce Visual Basic, JavaScriptu nebo C++ místo C#. Pokud používáte C++, není nutné komponentu knihovny DLL; Tyto metody můžete přidat jenom přímo do třídy MainPage nebo jiné třídy, které definujete.
+Následující kroky ukazují, jak vytvořit aplikaci c# `WriteableBitmap` univerzální platformy Windows, která předává dll součásti Prostředí Pro prostředí Windows++ systému Windows Runtime. Kód Jazyka C++ získá ukazatel na vyrovnávací paměť obrazového bodu a provede jednoduchou úpravu na místě v obraze. Jako alternativu můžete vytvořit klientskou aplikaci v jazyce Visual Basic, JavaScript nebo C++ místo Jazyka C#. Pokud používáte C++, nepotřebujete dll komponenty; tyto metody můžete přidat přímo do třídy MainPage nebo do jiné třídy, kterou definujete.
 
 #### <a name="create-the-client"></a>Vytvoření klienta
 
-1. Použijte šablonu projektu prázdnou aplikaci pro vytvoření aplikace v jazyce C# Universal Windows Platform.
+1. Šablona projektu blank aplikace slouží k vytvoření aplikace C# Universal Windows Platform.
 
-1. In MainPage.xaml
+1. V souboru MainPage.xaml
 
-   - Použít tento XAML k nahrazení `Grid` element:
+   - Pomocí tohoto xaml `Grid` nahradit prvek:
 
         ```xml
         <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
@@ -70,7 +70,7 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         </Grid>
         ```
 
-1. In MainPage.xaml.cs
+1. V MainPage.xaml.cs
 
    1. Přidejte tyto deklarace oboru názvů:
 
@@ -82,13 +82,13 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         using Windows.Storage.Pickers;
         ```
 
-   1. Přidat `WriteableBitmap` členské proměnné `MainPage` třídy a pojmenujte ho `m_bm`.
+   1. Přidejte `WriteableBitmap` do třídy `MainPage` proměnnou `m_bm`člena a pojmenujte ji .
 
         ```csharp
         private WriteableBitmap m_bm;
         ```
 
-   1. Použijte následující kód k nahrazení `OnNavigatedTo` pahýl metody. Otevře se okno pro výběr souboru při spuštění aplikace. (Všimněte si, že `async` – klíčové slovo se přidá k signatuře funkce).
+   1. Použijte následující kód nahradit `OnNavigatedTo` metodu se zakázaným inzerováním. Tím se při spuštění aplikace otevře výběr souborů. (Všimněte `async` si, že klíčové slovo je přidán do podpisu funkce).
 
         ```csharp
         async protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -116,7 +116,7 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         }
         ```
 
-   1. Přidáte obslužnou rutinu události pro kliknutí na tlačítko. (Protože `ImageManipCPP` nebyl vytvořen odkaz na obor názvů, ale může mít podtržení vlnovkou v okně editoru.)
+   1. Přidejte obslužnou rutinu události pro tlačítko. (Vzhledem `ImageManipCPP` k tomu, že odkaz na obor názvů ještě nebyl vytvořen, může mít v okně editoru podtržení vlnovkou.)
 
         ```csharp
         async private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -127,35 +127,35 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         }
         ```
 
-#### <a name="create-the-c-component"></a>Vytvořit komponentu C++
+#### <a name="create-the-c-component"></a>Vytvoření komponenty C++
 
-1. Přidat novou součást modulu Windows Runtime C++ do stávajícího řešení a pojmenujte ho `ImageManipCPP`. Přidejte na ni odkaz v projektu C# kliknutím pravým tlačítkem na tento projekt v **Průzkumníka řešení** a zvolíte **přidat**, **odkaz**.
+1. Přidejte novou komponentu prostředí Windows Runtime systému `ImageManipCPP`C++ do existujícího řešení a pojmenujte ji . Přidejte odkaz na něj v projektu C# kliknutím pravým tlačítkem myši na tento projekt v **Průzkumníku řešení** a výběrem **add**, **reference**.
 
-1. V Class1.h
+1. Ve třídě1.h
 
-   1. Přidejte tuto `typedef` na druhý řádek jenom po `#pragma once`:
+   1. Přidejte `typedef` to na druhý `#pragma once`řádek, těsně po :
 
         ```cpp
         typedef uint8 byte;
         ```
 
-   1. Přidat `WebHostHidden` atribut přímo nad začátku `Class1` deklarace.
+   1. Přidejte `WebHostHidden` atribut těsně nad `Class1` začátek deklarace.
 
         ```cpp
         [Windows::Foundation::Metadata::WebHostHidden]
         ```
 
-   1. Přidejte tento podpis veřejnou metodu `Class1`:
+   1. Přidat podpis této `Class1`veřejné metody do :
 
         ```cpp
         Windows::Foundation::IAsyncAction^ Negativize(Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ bm);
         ```
 
-   1. Přidání podpisu z `GetPointerToPixelData` metodu, která se zobrazí ve starší fragmentu kódu. Ujistěte se, že tato metoda je privátní.
+   1. Přidejte podpis `GetPointerToPixelData` z metody, která je zobrazena v předchozím fragmentu kódu. Ujistěte se, že tato metoda je soukromá.
 
-1. V Class1.cpp
+1. Ve třídě 1.cpp
 
-   1. Přidejte tyto `#include` direktivy a deklarace oboru názvů:
+   1. Přidejte `#include` tyto direktivy a deklarace oboru názvů:
 
         ```cpp
         #include <ppltasks.h>
@@ -168,9 +168,9 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         using namespace Microsoft::WRL;
         ```
 
-   1. Přidat implementaci `GetPointerToPixelData` z předchozích fragmentu kódu.
+   1. Přidejte implementaci `GetPointerToPixelData` z předchozího fragmentu kódu.
 
-   1. Přidat implementaci `Negativize`. Tato metoda vytvoří efekt, který se podobá negativní filmu přehozením hodnotu každé hodnoty RGB v pixelech. Usnadňujeme metodu asynchronní vzhledem k tomu, že na větší Image může trvat postřehnutelné množství času na dokončení.
+   1. Přidejte implementaci `Negativize`. Tato metoda vytvoří efekt, který se podobá filmu negativní obrácením hodnoty každé hodnoty RGB v obrazovém bodu. Metodu provedeme asynchronní, protože na větších obrázcích může trvat znatelné množství času na dokončení.
 
         ```cpp
         IAsyncAction^ Class1::Negativize(WriteableBitmap^ bm)
@@ -200,6 +200,6 @@ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Pla
         ```
 
       > [!NOTE]
-      > Tato metoda může pracovat rychleji, pokud použijete AMP nebo knihovny Ppl pro paralelní zpracování operace.
+      > Tato metoda může běžet rychleji, pokud používáte AMP nebo paralelní vzorky knihovny paralelizovat operace.
 
-1. Zajistěte, aby mít alespoň jeden obrázek do složky Obrázky a stiskněte klávesu F5 ke kompilaci a spuštění programu.
+1. Ujistěte se, že máte ve složce obrázky alespoň jeden obrázek, a stisknutím klávesy F5 program zkompilujte a spusťte.

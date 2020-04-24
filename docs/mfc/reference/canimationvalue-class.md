@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321975"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755084"
 ---
 # <a name="canimationvalue-class"></a>Třída CAnimationValue
 
@@ -41,13 +41,13 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationValue::CAnimationValue](#canimationvalue)|Přetíženo. Vytvoří objekt CAnimationValue.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationValue::AddTransition](#addtransition)|Přidá přechod, který má být použit na hodnotu.|
 |[CAnimationValue::Hodnota GetValue](#getvalue)|Přetíženo. Načte aktuální hodnotu.|
@@ -56,13 +56,13 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřenou proměnnou animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationValue::operátor DOUBLE](#operator_double)|Poskytuje převod mezi CAnimationValue a DOUBLE.|
 |[CAnimationValue::operátor INT32](#operator_int32)|Poskytuje převod mezi CAnimationValue a INT32.|
@@ -70,7 +70,7 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationValue::m_value](#m_value)|Zapouzdřená proměnná animace, která představuje hodnotu animace.|
 
@@ -94,7 +94,7 @@ Třída CAnimationValue zapouzdřuje jeden objekt CAnimationVariable a může v 
 
 Přidá přechod, který má být použit na hodnotu.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ Poskytuje převod mezi CAnimationValue a INT32. Tato metoda interně volá GetVa
 
 Přiřadí hodnotu DOUBLE hodnotě CAnimationValue.
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ Přiřadí hodnotu DOUBLE hodnotě CAnimationValue. Tato hodnota je nastavena ja
 
 Nastaví výchozí hodnotu.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 

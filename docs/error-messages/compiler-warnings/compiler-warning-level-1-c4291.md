@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175711"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754865"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Upozornění kompilátoru (úroveň 1) C4291
 
-deklarace: nenašel se žádný vyhovující operátor delete; paměť nebude uvolněna, pokud inicializace vyvolá výjimku.
+"prohlášení" : nebyl nalezen žádný odpovídající výmaz operátoru; paměť nebude uvolněna, pokud inicializace vyvolá výjimku
 
-[Nové](../../cpp/new-operator-cpp.md) umístění se používá, pro které neexistuje žádné [odstranění](../../cpp/delete-operator-cpp.md)umístění.
+Umístění [nové](../../cpp/new-operator-cpp.md) se používá pro které neexistuje žádné umístění [odstranit](../../cpp/delete-operator-cpp.md).
 
-Pokud je paměť přidělena objektu s operátorem **New**, je volána konstruktor objektu. Pokud konstruktor vyvolá výjimku, měla by být uvolněna jakákoli paměť, která byla přidělena objektu. Tato situace nemůže proběhnout, pokud neexistuje funkce **Delete** operátoru, která odpovídá operátoru **New**.
+Při přidělení paměti pro objekt s operátorem **new**, objekt ustaví konstruktor. Pokud konstruktor vyvolá výjimku, všechny paměti, která byla přidělena pro objekt by měl být přidělen. K tomu nemůže dojít, pokud neexistuje funkce **odstranění** operátoru, která odpovídá **operátoru new**.
 
-Použijete-li operátor **New** bez dalších argumentů a zkompilujete s možnostmi [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)nebo/EHa pro povolení zpracování výjimek, kompilátor vygeneruje kód pro volání operátoru **Delete** , pokud konstruktor vyvolá výjimku.
+Pokud použijete operátor **new** bez jakýchkoli dalších argumentů a zkompilujete s [možnostmi /GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md)nebo /EHa, který povolí zpracování výjimek, kompilátor vygeneruje kód pro volání **operátoru delete,** pokud konstruktor vyvolá výjimku.
 
-Použijete-li formulář umístění operátoru **New** (formulář s argumenty kromě velikosti přidělení) a konstruktor objektu vyvolá výjimku, kompilátor stále vygeneruje kód pro volání operátoru **Delete**; to ale uděláte jenom v případě, že je tvar operátoru **Odstranit** shodný s tvarem umístění operátoru **New** , který paměť přidělil. Příklad:
+Pokud použijete formulář umístění **nového** operátoru (formulář s argumenty kromě velikosti přidělení) a konstruktor objektu vyvolá výjimku, kompilátor bude stále generovat kód pro volání **operátoru delete**; ale bude tak učinit pouze v případě, že existuje forma umístění **operátoru delete** odpovídající formě umístění operátoru **new,** který přidělil paměť. Příklad:
 
 ```cpp
 // C4291.cpp
@@ -74,9 +74,9 @@ int main(void)
 }
 ```
 
-Výše uvedený příklad generuje upozornění C4291, protože nebyla definována žádná forma operátoru **Delete** , která by odpovídala tvaru umístění operátoru **New**. Chcete-li vyřešit tento problém, vložte následující kód nad **Hlavní**. Všimněte si, že všechny parametry přetíženého operátoru **Delete** se shodují s funkcemi přetíženého operátoru **New**, s výjimkou prvního parametru.
+Výše uvedený příklad generuje upozornění C4291, protože nebyla definována žádná forma umístění **operátoru delete,** která odpovídá formě umístění operátoru **new**. Chcete-li problém vyřešit, vložte následující kód nad **hlavní**. Všimněte si, že všechny přetížené operátor **odstranit** parametry funkce odpovídají těm přetížené operátor **new**, s výjimkou první parametr.
 
-```
+```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)
 {
    free(pMem);

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354418"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031495"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
@@ -52,7 +52,7 @@ Povolené typy jsou:
 
 - třída veřejného výčtu
 
-**UnorderedMap** je v podstatě obálka pro [std::unordered_map,](../standard-library/unordered-map-class.md) která podporuje ukládání typů prostředí Windows Runtime. Jedná se o konkrétní implementaci [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předávány přes veřejné rozhraní prostředí Windows Runtime. Pokud se pokusíte `Platform::Collections::UnorderedMap` použít typ ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo vrácené hodnoty [systému Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** je v podstatě obálka pro [std::unordered_map,](../standard-library/unordered-map-class.md) která podporuje ukládání typů prostředí Windows Runtime. Jedná se o konkrétní implementaci [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) a [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) typy, které jsou předávány přes veřejné rozhraní prostředí Windows Runtime. Pokud se pokusíte `Platform::Collections::UnorderedMap` použít typ ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo vrácené hodnoty [systému Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md).
 
@@ -60,13 +60,13 @@ Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[UnorderedMap::UnorderedMap](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[UnorderedMap::Vymazat](#clear)|Odebere všechny dvojice klíč-hodnota z aktuálního objektu Map.|
 |[UnorderedMap::První](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
@@ -81,7 +81,7 @@ Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[Mapa::Událost MapChanged](#mapchanged)|Vyvolá se při změně mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap::První metoda
 
-Vrátí iterátor, který určuje první [prvek Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvek v neuspořádané mapě.
+Vrátí iterátor, který určuje první [prvek Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) prvek v neuspořádané mapě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -126,7 +126,7 @@ Pohodlný způsob, jak podržet iterátor vrácený First() je přiřadit vráce
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap::Metoda GetView
 
-Vrátí zobrazení pro čtení aktuální hodu Neuspořádané mapy. to znamená [platforma::Collections::UnorderedMapView Class,](../cppcx/platform-collections-unorderedmapview-class.md) která implementuje rozhraní [Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Vrátí zobrazení pro čtení aktuální hodu Neuspořádané mapy. to znamená [platforma::Collections::UnorderedMapView Class,](../cppcx/platform-collections-unorderedmapview-class.md) která implementuje rozhraní [Windows::Foundation::Collections::IMapView::IMapView.](/uwp/api/windows.foundation.collections.imapview-2)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
-*Hodnotu*<br/>
+*value*<br/>
 Část hodnoty dvojice klíč hodnota. Typ *hodnoty* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-[A MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) který obsahuje informace o objektu, který vyvolal událost a druh změny, ke které došlo. Viz také [\<IMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange Výčet](/uwp/api/windows.foundation.collections.collectionchange).
+[A MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) který obsahuje informace o objektu, který vyvolal událost a druh změny, ke které došlo. Viz také [\<IMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) a [CollectionChange Výčet](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
@@ -241,7 +241,7 @@ Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap::Metoda velikosti
 
-Vrátí počet [windows::foundation::collections::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvky v UnorderedMap.
+Vrátí počet [windows::foundation::collections::iKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) prvky v UnorderedMap.
 
 ### <a name="syntax"></a>Syntaxe
 

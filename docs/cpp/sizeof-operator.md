@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365571"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032288"
 ---
 # <a name="sizeof-operator"></a>sizeof – operátor
 
 Výnosy velikost i jeho operandu vzhledem k velikosti typu **char**.
 
 > [!NOTE]
-> Informace o `sizeof ...` operátorovi naleznete v [tématu Ellipses a Variadic Templates](../cpp/ellipses-and-variadic-templates.md).
+> Informace o `sizeof ...` operátorovi naleznete v [tématu Tři tečky a variadické šablony](../cpp/ellipses-and-variadic-templates.md).
 
 ## <a name="syntax"></a>Syntaxe
 

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369510"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754832"
 ---
 # <a name="ccombobox-class"></a>Třída CComboBox
 
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Vytvoří `CComboBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBox::Přidat řetězec](#addstring)|Přidá řetězec na konec seznamu v seznamu pole se seznamem nebo na seřazené pozici seznamů se stylem CBS_SORT.|
 |[CComboBox::Vymazat](#clear)|Odstraní (vymaže) aktuální výběr, pokud existuje, v ovládacím prvku upravit.|
@@ -308,7 +308,7 @@ CComboBox();
 
 Odstraní (vymaže) aktuální výběr, pokud existuje, v ovládacím prvku upravit pole se seznamem.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ Ve výchozím nastavení tato členská funkce neprovede žádné. Pokud vytvoř
 
 Zkopíruje aktuální výběr, pokud existuje, v ovládacím prvku upravit pole se seznamem do schránky ve formátu CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Použijte následující [styly oken](../../mfc/reference/styles-used-by-mfc.md#
 
 Odstraní (vyjme) aktuální výběr, pokud existuje, v ovládacím prvku úprav se seznamem a zkopíruje odstraněný text do schránky ve formátu CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ Index aktuálně vybrané položky založený na nule v seznamu pole se seznamem
 
 Volání `GetDroppedControlRect` členské funkce načíst souřadnice obrazovky viditelného (vynechání) seznamu rozevíracího pole se seznamem.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ Obsahuje nulový index položky v seznamu pole se seznamem.
 
 Načte 32bitovou hodnotu dodanou aplikací přidruženou k zadané položce pole se seznamem jako ukazatel (**void** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Viz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pro p
 
 Vloží data ze schránky do ovládacího prvku upravit pole se seznamem v aktuální pozici kurzoru.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ Data se vkládají pouze v případě, že schránka obsahuje data v CF_TEXT for
 
 Odebere všechny položky ze seznamu a upravit ovládací prvek pole se seznamem.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ Posouvání ve statickém ovládacím prvku je zakázáno, pokud není seznam po
 
 Nastaví šířku v obrazových bodech, o kterou lze pole se seznamem posouvat vodorovně.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ Systém posouvá seznam, dokud se v horní části seznamu nezobrazí položka u
 
 Zobrazí nebo skryje seznam pole se seznamem, ve které je [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) nebo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stylu.
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377086"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755041"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler – třída
 
@@ -31,13 +31,13 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Vytvoří `CAnimationVariableChangeHandler` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CreateInstance`|Vytvoří instanci objektu. `CAnimationVariableChangeHandler`|
 |[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Nazývá se při změně hodnoty proměnné animace. (Přepíše `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|
@@ -93,7 +93,7 @@ Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód c
 
 Ukládá ukazatel na řadič animace pro směrování událostí.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 

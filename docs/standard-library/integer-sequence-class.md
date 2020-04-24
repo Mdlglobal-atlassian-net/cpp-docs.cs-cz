@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: d0de2e56e1f6b8e68e5989f21ecd89b9646caa1b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076463"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031469"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence – třída
 
-Představuje posloupnost celého čísla. Dá se použít k odvození a rozbalení balíčků parametrů v variadické typech, jako je std:: Tuple\<T... >, které jsou předány jako argumenty funkce.
+Představuje sekvenci celého čísla. Lze použít k odvodit a rozbalit balíčky parametrů v variadických typech, jako je std::n-tple\<T...>, které jsou předány jako argumenty funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,29 +35,29 @@ struct integer_sequence
 ### <a name="parameters"></a>Parametry
 
 *T*\
-Typ hodnot; musí se jednat o celočíselný typ: bool, char, char16_t, char32_t, wchar_t nebo signed nebo unsigned integer Types.
+Typ hodnot; musí být integrální typ: bool, char, char16_t, char32_t, wchar_t nebo podepsané nebo nepodepsané typy celého čísla.
 
 *Vals*\
-Sada parametrů bez typu, která představuje sekvenci hodnot integrálního typu T.
+Netypový balíček parametrů, který představuje posloupnost hodnot integrálního typu T.
 
 ## <a name="members"></a>Členové
 
 |||
 |-|-|
-|`static size_t size() noexcept`|Počet prvků v sekvenci.|
-|`typedef T value_type`|Typ každého prvku v sekvenci. Musí být integrálního typu.|
+|`static size_t size() noexcept`|Počet prvků v pořadí.|
+|`typedef T value_type`|Typ každého prvku v sekvenci. Musí být integrální typ.|
 
 ## <a name="remarks"></a>Poznámky
 
-Balíček parametrů, který se předává přímo funkci, můžete rozbalit bez jakýchkoli speciálních pomocníků knihovny. Když je balíček parametrů součástí typu, který je předán funkci, a potřebujete indexy pro přístup k prvkům, pak nejjednodušší způsob, jak ho rozbalit, je použít `integer_sequence` a jeho související aliasy typu `make_integer_sequence`, `index_sequence`, `make_index_sequence`a `index_sequence_for`.
+Balíček parametrů, který je předán přímo funkci, lze rozbalit bez zvláštních pomocníků knihovny. Pokud je balíček parametrů součástí typu, který je předán funkci, a potřebujete indexy pro přístup k prvkům, `integer_sequence` je nejjednodušším `make_integer_sequence`způsobem, jak jej rozbalit, a jeho souvisejícím aliasům typu , `index_sequence` `make_index_sequence`, a `index_sequence_for`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je založen na původním návrhu [N3658](https://wg21.link/n3658). Ukazuje, jak použít `integer_sequence` k vytvoření `std::tuple` z `std::array<T,N>`a o tom, jak použít `integer_sequence` k získání na členy řazené kolekce členů.
+Následující příklad vychází z původního návrhu [N3658](https://wg21.link/n3658). Ukazuje, jak použít `integer_sequence` a `std::tuple` vytvořit `std::array<T,N>`z , a `integer_sequence` jak použít získat na členy řazené kolekce členů.
 
-Ve funkci `a2t` je `index_sequence` aliasem `integer_sequence` na základě `size_t` integrálního typu. `make_index_sequence` je alias, který v době kompilace vytvoří `index_sequence` na základě nuly se stejným počtem elementů jako pole, které je předáno volajícím. `a2t` předá `index_sequence` hodnotou `a2t_`, kde výraz `a[I]...` rozbalí `I`a pak se tyto prvky dodávají do `make_tuple`, který je spotřebovává jako jednotlivé argumenty. Například pokud sekvence obsahuje tři prvky, pak `make_tuple` je volána jako make_tuple (a [0], [1], a [2]). Prvky pole samotné můžou být samozřejmě libovolný typ.
+Ve `a2t` funkci `index_sequence` je alias `integer_sequence` založený na `size_t` integrálním typu. `make_index_sequence`je alias, který v době kompilace vytvoří nulu `index_sequence` se stejným počtem prvků jako pole, které je předáno volajícím. `a2t`předává `index_sequence` hodnotu `a2t_` podle na `a[I]...` , `I`kde se výraz rozbalí `make_tuple` , a potom jsou prvky přiváděny, které je pohlcují jako jednotlivé argumenty. Například pokud sekvence obsahuje tři `make_tuple` prvky, pak se nazývá jako make_tuple(a[0], a[1], a[2]). Samotné prvky pole mohou být samozřejmě libovolným typem.
 
-Funkce Apply akceptuje [std:: Tuple](../standard-library/tuple-class.md)a vytvoří `integer_sequence` pomocí pomocné třídy `tuple_size`. Všimněte si, že [std::d ecay_t](../standard-library/decay-class.md) je nutné, protože [tuple_size](../standard-library/tuple-size-class-tuple.md) nepracuje s odkazovým typem. Funkce `apply_` rozbalí členy řazené kolekce členů a předá je jako samostatné argumenty volání funkce. V tomto příkladu je funkce jednoduchý výraz lambda, který tiskne hodnoty.
+Funkce apply přijímá [std::n-tice](../standard-library/tuple-class.md)a `integer_sequence` vytváří pomocí `tuple_size` pomocné třídy. Všimněte si, že [std::decay_t](../standard-library/decay-class.md) je [nezbytné,](../standard-library/tuple-size-class-tuple.md) protože tuple_size nefunguje s typy odkazů. Funkce `apply_` rozbalí členy řazené kolekce členů a předá je jako samostatné argumenty volání funkce. V tomto příkladu je funkce jednoduchý lambda výraz, který vytiskne hodnoty.
 
 ```cpp
 #include <stddef.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Chcete-li nastavit `index_sequence` pro sadu parametrů, použijte `index_sequence_for`\<T... >, což je alias pro `make_index_sequence`\<sizeof... (T) >
+Chcete-li `index_sequence` vytvořit pro balíček parametrů, použijte `index_sequence_for` \<T...> což je alias pro `make_index_sequence` \<sizeof... (T)>
 
 ## <a name="requirements"></a>Požadavky
 
 Záhlaví: \<type_traits\>
 
-Statements: std
+Namepace: std
 
 ## <a name="see-also"></a>Viz také
 
-[Tři tečky a variadické šablony](../cpp/ellipses-and-variadic-templates.md)
+[Tři tečky a variadické šablony](../cpp/ellipses-and-variadic-templates.md)

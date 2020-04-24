@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: 80a90dfa37bc1d2c3c84e6451ae23af7ded767c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f4a5b8b52d8bd37d1ed83618e7451dd85f84c32
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369707"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755117"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize – třída
 
@@ -47,13 +47,13 @@ class CAnimationSize : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationSize::CAnimationSize](#canimationsize)|Přetíženo. Vytvoří objekt velikosti animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationSize::AddTransition](#addtransition)|Přidá přechody pro Šířka a Výška.|
 |[CAnimationSize::GetCX](#getcx)|Poskytuje přístup k CAnimationVariable představující šířku.|
@@ -64,20 +64,20 @@ class CAnimationSize : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřené proměnné animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationSize::operátor CSize](#operator_csize)|Převede CAnimationSize csize CSize.|
 |[CAnimationVelikost::operátor=](#operator_eq)|Přiřadí szSrc CAnimationSize.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationSize::m_cxValue](#m_cxvalue)|Zapouzdřená proměnná animace, která představuje šířku velikosti animace.|
 |[CAnimationSize::m_cyValue](#m_cyvalue)|Zapouzdřená proměnná animace, která představuje výšku velikosti animace.|
@@ -102,7 +102,7 @@ Třída CAnimationSize zapouzdřuje dva objekty CAnimationVariable a může pře
 
 Přidá přechody pro Šířka a Výška.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pCXTransition,
     CBaseTransition* pCYTransition);
@@ -272,7 +272,7 @@ Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže,
 
 Přiřadí szSrc CAnimationSize.
 
-```
+```cpp
 void operator=(const CSize& szSrc);
 ```
 
@@ -289,7 +289,7 @@ Přiřadí szSrc CAnimationSize. Doporučuje se to provést před zahájením an
 
 Nastaví výchozí hodnotu.
 
-```
+```cpp
 void SetDefaultValue(const CSize& szDefault);
 ```
 

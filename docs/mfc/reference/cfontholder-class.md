@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373814"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754993"
 ---
 # <a name="cfontholder-class"></a>CFontHolder – třída
 
@@ -47,13 +47,13 @@ class CFontHolder
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontHolder::CFontHolder](#cfontholder)|Vytvoří `CFontHolder` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontHolder::GetDisplayString](#getdisplaystring)|Načte řetězec zobrazený v prohlížeči vlastností kontejneru.|
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|Vrátí rozhraní písma. `IDispatch`|
@@ -66,7 +66,7 @@ class CFontHolder
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontHolder::m_pFont](#m_pfont)|Ukazatel na `CFontHolder` `IFont` rozhraní objektu.|
 
@@ -170,7 +170,7 @@ Verze bez parametrů vrátí popisovač písma velikosti správně pro obrazovku
 
 Inicializuje `CFontHolder` objekt.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 Načte informace o fyzické písmo reprezentované objektem. `CFontHolder`
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ Ukazatel na [strukturu TEXTMETRIC,](/windows/win32/api/wingdi/ns-wingdi-textmetr
 
 Tato funkce odpojí `CFontHolder` `IFont` objekt od jeho rozhraní.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ Viz [GetFontHandle](#getfonthandle) pro diskusi o *cyLogical* a *cyHimetric para
 
 Uvolní všechny existující písmo `CFontHolder` a připojí `IFont` objekt k rozhraní.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369414"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754802"
 ---
 # <a name="ccontextmenumanager-class"></a>Třída CContextMenuManager
 
@@ -49,14 +49,14 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Vytvoří `CContextMenuManager` objekt.|
 |`CContextMenuManager::~CContextMenuManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CContextMenuManager::AddMenu](#addmenu)|Přidá novou místní nabídku.|
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Vrátí popisovač do nabídky přidružené k ID poskytnutého prostředku.|
@@ -187,7 +187,7 @@ Pokud tato metoda najde nabídku, která `GetMenuByName` odpovídá *lpszName*, 
 
 Vrátí seznam názvů nabídek přidaných do [aplikace CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ Pomocí metody [CContextMenuManager::LoadState](#loadstate) načtěte místní n
 
 Určuje, zda [cContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) zavře aktivní rozbalovací nabídku, když se zobrazí nová rozbalovací nabídka.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 

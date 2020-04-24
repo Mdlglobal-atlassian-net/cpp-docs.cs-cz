@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367807"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754885"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager – třída
 
@@ -55,7 +55,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Vytvoří a inicializuje `CMFCBaseVisualManager` objekt.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destruktor.|
 
@@ -63,7 +63,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Nakreslí ovládací prvek zaškrtávacího políčka pomocí aktuálního motivu systému Windows.|
 |[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Nakreslí ohraničení pole se seznamem pomocí aktuálního motivu systému Windows.|
 |[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Nakreslí rozevírací tlačítko pole se seznamem pomocí aktuálního motivu systému Windows.|
@@ -77,7 +77,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Vyžaduje `CloseThemeData` všechny popisovače `UpdateSystemColors`získané v .|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Volání `OpenThemeData` získat popisovače pro kreslení různých ovládacích prvků: okna, panely nástrojů, tlačítka a tak dále.|
 
@@ -101,7 +101,7 @@ Vzhledem k tomu, že se jedná o základní třídu pro všechny vizuální mana
 
 Vyžaduje `CloseThemeData` všechny popisovače `UpdateSystemColors`získané v .
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -400,7 +400,7 @@ Aktuálně vybraná barva motivu systému Windows. Může se na pokládá někte
 
 Volání `OpenThemeData` získat popisovače pro kreslení různých ovládacích prvků: okna, panely nástrojů, tlačítka a tak dále.
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 

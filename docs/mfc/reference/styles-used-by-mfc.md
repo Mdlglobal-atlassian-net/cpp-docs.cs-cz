@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372920"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032392"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC
 
@@ -418,7 +418,7 @@ Statické styly platí pro [objekty třídy CStatic.](../../mfc/reference/cstati
 |SS_BLACKRECT|Určuje obdélník vyplněný barvou použitou k kreslení okenních rámečků. Výchozí hodnota je černá.|
 |SS_CENTER|Označuje jednoduchý obdélník a zobrazí daný text vystředěný v obdélníku. Text je před zobrazením formátován. Slova, která by přesahovaly konec řádku, jsou automaticky zalomena na začátek další vystředěné čáry.|
 |SS_CENTERIMAGE|Určuje, že pokud je bitmapa nebo ikona menší než klientská oblast statického ovládacího prvku, bude zbytek klientské oblasti vyplněn barvou obrazového bodu v levém horním rohu bitmapy nebo ikony. Pokud statický ovládací prvek obsahuje jeden řádek textu, text je vystředěn svisle v klientské oblasti ovládacího prvku.|
-|SS_ENDELLIPSIS|nebo SS_PATHELLIPSIS Nahradí část daného řetězce elipsami, pokud je to nutné, tak, aby výsledek se vejde do zadaného obdélníku. <br /><br />Můžete určit SS_END_ELLIPSIS nahradit znaky na konci řetězce nebo SS_PATHELLIPSIS nahradit znaky uprostřed řetězce. Pokud řetězec obsahuje znaky\\zpětného lomítka ( ), SS_PATHELLIPSIS zachová co největší část textu za posledním zpětným lomítkem.|
+|SS_ENDELLIPSIS|nebo SS_PATHELLIPSIS Nahradí část daného řetězce třemi tečkami, pokud je to nutné, tak, aby výsledek se vejde do zadaného obdélníku. <br /><br />Můžete určit SS_END_ELLIPSIS nahradit znaky na konci řetězce nebo SS_PATHELLIPSIS nahradit znaky uprostřed řetězce. Pokud řetězec obsahuje znaky\\zpětného lomítka ( ), SS_PATHELLIPSIS zachová co největší část textu za posledním zpětným lomítkem.|
 |SS_ENHMETAFILE|Určuje rozšířený metasoubor, který má být zobrazen ve statickém ovládacím prvku. Daný text je název metasouboru. Vylepšený statický ovládací prvek metasouboru má pevnou velikost; velikost metasouboru se změní tak, aby odpovídal klientské oblasti statického ovládacího prvku.|
 |SS_ETCHEDFRAME|Nakreslí snímek statického ovládacího prvku pomocí stylu EDGE_ETCHED hrany.|
 |SS_ETCHEDHORZ|Nakreslí horní a dolní okraje statického ovládacího prvku pomocí stylu EDGE_ETCHED hrany.|

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377054"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755067"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable – třída
 
@@ -65,14 +65,14 @@ class CAnimationVariable;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::Proměnná CAnimation](#canimationvariable)|Vytvoří objekt proměnné animace.|
 |[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|Destruktor. Volána při zničení objektu CAnimationVariable.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::AddTransition](#addtransition)|Přidá přechod.|
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Přidá přechody z vnitřního seznamu do scénáře.|
@@ -89,19 +89,19 @@ class CAnimationVariable;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Nastaví vztah mezi proměnnou animace a objektem animace.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Proměnná CAnimation::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda mají být odstraněny související objekty přechodu.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Proměnná CAnimation::m_dblDefaultValue](#m_dbldefaultvalue)|Určuje výchozí hodnotu, která je šířena na proměnnou IUIAnimationVariable.|
 |[Proměnná CAnimation::m_lstTransitions](#m_lsttransitions)|Obsahuje seznam přechodů, které animují tuto proměnnou animace.|
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Přidá přechod.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Tato metoda je volána přidat přechod do vnitřního seznamu přechodů, kter�
 
 Přidá přechody z vnitřního seznamu do scénáře.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Vytvoří objekt proměnné animace a nastaví jeho výchozí hodnotu. Výchozí
 
 Vymaže přechody.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ Tato metoda je volána v rámci, když potřebuje vytvořit přechody, které by
 
 Povolí nebo zakáže událost IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Pokud je povolena událost ValueChanged, framework volá virtuální metodu CAni
 
 Povolí nebo zakáže událost ValueChanged.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Nastaví výchozí hodnotu a uvolní objekt COM IUIAnimationVariable.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Tuto metodu použijte k obnovení výchozí hodnoty. Tato metoda uvolní vnitřn
 
 Nastaví vztah mezi proměnnou animace a objektem animace.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372342"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754960"
 ---
 # <a name="cipaddressctrl-class"></a>Třída CIPAddressCtrl
 
@@ -45,13 +45,13 @@ class CIPAddressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Vytvoří `CIPAddressCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CIPAddressCtrl::Vymazat adresu](#clearaddress)|Vymaže obsah ovládacího prvku IP address.|
 |[CIPAddressCtrl::Vytvořit](#create)|Vytvoří ovládací prvek IP adresy a `CIPAddressCtrl` připojí jej k objektu.|
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 Vymaže obsah ovládacího prvku IP address.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Styl ovládacího prvku IP adresa. Použijte kombinaci stylů oken. Je nutné zahrnout styl WS_CHILD, protože ovládací prvek musí být podřízeným oknem. Seznam stylů oken najdete v tématu [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na velikost a umístění ovládacího prvku IP adresy. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+Odkaz na velikost a umístění ovládacího prvku IP adresy. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího prvku IP. Nesmí být null.
@@ -166,7 +166,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Styl ovládacího prvku IP adresa. Použijte kombinaci stylů oken. Je nutné zahrnout styl WS_CHILD, protože ovládací prvek musí být podřízeným oknem. Seznam stylů oken najdete v tématu [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v sadě Windows SDK.
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.
@@ -248,7 +248,7 @@ Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/i
 
 Nastaví hodnoty adres pro všechna čtyři pole v ovládacím prvku IP Address Control.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ Tato členská funkce implementuje chování [IPM_SETADDRESS](/windows/win32/Con
 
 Nastaví fokus klávesnice na zadané pole v ovládacím prvku IP Address Control.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ Tato členská funkce implementuje chování [IPM_SETFOCUS](/windows/win32/Contr
 
 Nastaví rozsah v zadaném poli v ovládacím prvku IP address.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,

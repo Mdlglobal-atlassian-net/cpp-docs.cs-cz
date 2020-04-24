@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373792"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754973"
 ---
 # <a name="cframewnd-class"></a>Třída CFrameWnd
 
@@ -127,13 +127,13 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWnd::CFrameWnd](#cframewnd)|Vytvoří `CFrameWnd` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWnd::Aktivovatrámeč](#activateframe)|Zviditelní rámeček a zpřístupní jej uživateli.|
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Nastaví okno rámce na modální.|
@@ -182,7 +182,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWnd::OnCreateClient](#oncreateclient)|Vytvoří okno klienta pro rámec.|
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Volána před nabídkou v aktuální aplikaci knihovny MFC je skryta.|
@@ -190,7 +190,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Řídí automatické povolovací a zakazovací funkce pro položky nabídky.|
 |[CFrameWnd::rectDefault](#rectdefault)|Předejte `CRect` tuto statickou hodnotu jako parametr při vytváření objektu, `CFrameWnd` který umožní systému Windows zvolit počáteční velikost a polohu okna.|
@@ -384,7 +384,7 @@ Tato členská funkce slouží k vytvoření `CView`"zobrazení", které nejsou 
 
 Způsobí, že ovládací panel, který má být ukotven do okna rámce.
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ Ovládací panel bude ukotven k jedné ze stran okna rámce určenému ve volán
 
 Volání této funkce povolit dokovatelné ovládací panely v okně rámce.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 Volání této funkce způsobí, že ovládací panel není ukotven do okna rámce.
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,7 +570,7 @@ Parametr *nID* odkazuje na jedinečný identifikátor `Create` předaný metodě
 
 Volání této členské funkce k uložení informací o stavu `CDockState` ovládacích panelů okna rámce v objektu.
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 Volat `IntitialUpdateFrame` po vytvoření nového rámce s . `Create`
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ Pokud voláte `LoadFrame` k vytvoření okna rámce, rozhraní načte tabulku ak
 
 Volánítéto funkce obnovit nastavení každého ovládacího panelu ve vlastnictví okna rámce.
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 Volání této funkce k uložení informací o každém ovládacím panelu vlastněném oknem rámce.
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ Tyto informace lze číst z inicializačního souboru pomocí [LoadBarState](#lo
 
 Označuje zadané zobrazení jako aktivní zobrazení pro rozšířený náhled.
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ Ukazatel na zobrazení, které má být aktivováno.
 
 Volánítéto členské funkce pro nastavení aktivního zobrazení.
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,7 +1068,7 @@ Rozhraní Framework bude tuto funkci volat automaticky, když uživatel změní 
 
 Volání této členské funkce použít informace `CDockState` o stavu uložené v objektu na ovládací panely okna rámce.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -1127,7 +1127,7 @@ Tato metoda ovlivňuje stav nabídek v aplikacích napsaných pro systém Window
 
 Volání této funkce umístit řetězec v podokně stavového řádku, který má ID 0.
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ Obvykle se jedná o podokno stavového řádku zcela vlevo a nejdéle.
 
 Nastaví aktuální pozici indikátoru průběhu systému Windows 7 zobrazeného na hlavním panelu.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ Určuje polohu, kterou chcete nastavit. Musí být v rozsahu `SetProgressBarRang
 
 Nastaví rozsah indikátoru průběhu systému Windows 7 zobrazený na hlavním panelu.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ Maximální hodnota.
 
 Nastaví typ a stav indikátoru průběhu zobrazeného na tlačítku hlavního panelu.
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ PRAVDA v případě úspěchu; FALSE, pokud je verze operačního systému menš
 
 Nastaví název objektu okna.
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ Ukazatel na řetězec znaku obsahující název objektu okna.
 
 Volání této členské funkce zobrazí nebo skryje ovládací panel.
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ Pokud true, zpoždění zobrazující ovládací panel. Pokud false, okamžitě 
 
 Volání této členské funkce zobrazí všechna okna, `CFrameWnd` která jsou potomky objektu.
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

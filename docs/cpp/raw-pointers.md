@@ -1,19 +1,26 @@
 ---
 title: Nezpracované ukazatele (C++)
 description: Jak používat nezpracované ukazatele v jazyce C++
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374669"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032093"
 ---
 # <a name="raw-pointers-c"></a>Nezpracované ukazatele (C++)
 
-Ukazatel je typ proměnné, která ukládá adresu objektu v paměti a slouží k přístupu k tomuto objektu. Nezpracovaný *ukazatel* je ukazatel, jehož životnost není řízena zapouzdřením objektu, jako je inteligentní [ukazatel](smart-pointers-modern-cpp.md). Nezpracovaný ukazatel může být přiřazena adresa jiné proměnné bez ukazatele, nebo může být přiřazena hodnota [nullptr](nullptr.md). Ukazatel, kterému nebyla přiřazena hodnota, obsahuje náhodná data.
+*Ukazatel* je typ proměnné. Ukládá adresu objektu v paměti a slouží k přístupu k tomuto objektu. Nezpracovaný *ukazatel* je ukazatel, jehož životnost není řízena zapouzdřením objektu, jako je například [inteligentní ukazatel](smart-pointers-modern-cpp.md). Nezpracovaný ukazatel může být přiřazena adresa jiné proměnné bez ukazatele, [nullptr](nullptr.md)nebo může být přiřazena hodnota . Ukazatel, kterému nebyla přiřazena hodnota, obsahuje náhodná data.
 
 Ukazatel může být také *odkazováno* načíst hodnotu objektu, který odkazuje na. *Operátor přístupu člena* poskytuje přístup k členům objektu.
 
@@ -23,19 +30,17 @@ Ukazatel může být také *odkazováno* načíst hodnotu objektu, který odkazu
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Ukazatel může ukazovat na zadaný objekt nebo **na void**. Když program přidělí nový objekt na [haldě](https://wikipedia.org/wiki/Heap) v paměti, obdrží adresu tohoto objektu ve formě ukazatele. Tyto ukazatele se nazývají *vlastnící ukazatele*; vlastnící ukazatel (nebo jeho kopie) musí být použit k explicitnímu odstranění objektu přiděleného haldou, pokud již není potřeba. Pokud neodstraníte paměť, bude *nevracení paměti* k dispozici žádnému jinému programu v počítači. Další informace naleznete v [tématu new and delete operators](new-and-delete-operators.md).
+Ukazatel může ukázat na zadaný **void** objekt nebo na . Když program přidělí objekt na [haldě](https://wikipedia.org/wiki/Heap) v paměti, obdrží adresu tohoto objektu ve formě ukazatele. Tyto ukazatele se nazývají *vlastnící ukazatele*. Vlastnící ukazatel (nebo jeho kopie) musí být použit k explicitnímu uvolnění objektu přiděleného haldou, když již není potřeba. Selhání uvolnění paměti má za následek *nevracení paměti*a vykreslí, že umístění paměti není k dispozici pro jakýkoli jiný program v počítači. Paměť přidělená **new** pomocí musí **delete** být uvolněna pomocí (nebo ** delete \[]**). Další informace naleznete [ new delete v](new-and-delete-operators.md)tématu a operátory .
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Ukazatel (pokud není deklarován jako **const)** může být zpřísňován nebo snížen tak, aby odkazuje na nové umístění v paměti. To se nazývá *aritmetika ukazatele* a používá se v programování ve stylu C k iteřovat přes prvky v polích nebo jiných datových struktur. **Const** ukazatel nelze provést přejděte na jiné umístění paměti a v tomto smyslu je velmi podobný [odkaz](references-cpp.md). Další informace naleznete [v tématu const a volatile ukazatele](const-and-volatile-pointers.md).
+Ukazatel (pokud není deklarován jako **const**) může být zpřísňován nebo snížen tak, aby ukazoval na jiné umístění v paměti. Tato operace se nazývá *aritmetika ukazatele*. Používá se v programování ve stylu C k itetovat přes prvky v polích nebo jiných datových struktur. Ukazatel **const** nelze provést odkazovat na jiné umístění paměti a v tomto smyslu je podobný [odkaz](references-cpp.md). Další informace naleznete v tématu [ const a nestálé ukazatele](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Ukazatel (pokud není deklarován jako **const)** může být zpřísňován neb
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-V 64bitových operačních systémech má ukazatel velikost 64 bitů. Velikost ukazatele systému určuje, kolik adresovatelné paměti může mít. Všechny kopie ukazatele odkazují na stejné umístění v paměti. Ukazatele (spolu s odkazy) se používají značně v jazyce C++ předat větší objekty do a z funkcí, protože je obvykle mnohem efektivnější kopírovat 64bitovou adresu objektu, než kopírovat celý objekt. Při definování funkce zadejte parametry ukazatele jako **const,** pokud nechcete, aby funkce upravovala objekt. Obecně **platí const** odkazy jsou upřednostňovaný způsob, jak předat objekty funkce, pokud hodnota objektu může být případně **nullptr**.
+V 64bitových operačních systémech má ukazatel velikost 64 bitů. Velikost ukazatele systému určuje, kolik adresovatelné paměti může mít. Všechny kopie ukazatele odkazují na stejné umístění v paměti. Ukazatele (spolu s odkazy) se používají značně v jazyce C++ předat větší objekty do a z funkcí. Je to proto, že je často efektivnější kopírovat adresu objektu než kopírovat celý objekt. Při definování funkce zadejte parametry **const** ukazatele, jako byste nezamýšleli, aby funkce objekt upravovala. Obecně platí, že odkazy jsou upřednostňovaným způsobem předání objektů **const** funkcím, **nullptr** pokud hodnota objektu nemůže být .
 
 [Ukazatele na funkce](#pointers_to_functions) umožňují, aby funkce byly předány jiným funkcím, a používají se pro "zpětná volání" v programování ve stylu Jazyka C. Moderní C++ používá [lambda výrazy](lambda-expressions-in-cpp.md) pro tento účel.
 
 ## <a name="initialization-and-member-access"></a>Inicializace a přístup k členům
 
-Následující příklad ukazuje, jak deklarovat nezpracovaný ukazatel a inicializovat jej s objektem přiděleným na haldě a pak jak ho použít. To také ukazuje několik nebezpečí spojených s syrové ukazatele. (Pamatujte si, že je to C-styl programování a ne moderní C ++!)
+Následující příklad ukazuje, jak deklarovat, inicializovat a používat nezpracovaný ukazatel. Je inicializován **new** pomocí bodu objekt udělovaný na haldě, které je nutné explicitně **delete**. Příklad také ukazuje několik nebezpečí spojených s nezpracovanými ukazateli. (Nezapomeňte, že tento příklad je programování ve stylu C a ne moderní C++!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Některé aritmetické operace lze provádět na neconst ukazatele, aby byly přejděte na nové umístění paměti. Ukazatel může být zpřísněn a snížen **++** **+=** pomocí **-=** **--** , a operátory. Tento postup lze použít v polích a je zvláště užitečné ve vyrovnávacích paměti netypových dat. **Neplatné\* ** přírůstky podle velikosti **char** (1 bajt). Zadaný ukazatel se zvětšuje podle velikosti typu, na který odkazuje.
+Některé aritmetické operace lze použítconst na jiné ukazatele, aby byly překážet na jiné umístění paměti. Ukazatele jsou zbydřené a sníženy **++** **+=** pomocí **-=** **--** , a operátory. Tento postup lze použít v polích a je zvláště užitečné ve vyrovnávacích paměti netypových dat. A ** void ** se zvětší o velikost **char** (1 bajt). Zadaný ukazatel se zvětší podle velikosti typu, na který odkazuje.
 
-Následující příklad ukazuje, jak lze aritmetiku ukazatele použít pro přístup k jednotlivým obrazovým bodům v bitmapě v systému Windows. Všimněte si použití **new** and **delete**a operátordereference.
+Následující příklad ukazuje, jak lze aritmetiku ukazatele použít pro přístup k jednotlivým obrazovým bodům v bitmapě v systému Windows. Všimněte si **new** **delete** použití a , a dereference operátor.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* ukazatele
+## <a name="opno-locvoid-pointers"></a>void* ukazatele
 
-Ukazatel **void** jednoduše odkazuje na umístění nezpracované paměti. Někdy je nutné použít **void\* ** ukazatele, například při předávání mezi c++ kód a C funkce.
+Ukazatel na **void** jednoduše odkazuje na umístění nezpracované paměti. Někdy je nutné použít ** void ** ukazatele, například při předávání mezi c++ kód a C funkce.
 
-Pokud je zadaný ukazatel přetypován na ukazatel void, obsah umístění paměti se nezmění, ale informace o typu se ztratí, takže nelze provádět operace přírůstek nebo snížení. Umístění paměti může být přetypována, například z MyClass* pro void* a zpět na MyClass*. Tyto operace jsou ze své podstaty náchylné k chybám a vyžadují velkou péči, aby se zabránilo chybám. Moderní C++ nedoporučuje použití void ukazatele, pokud to není nezbytně nutné.
+Pokud je zadaný ukazatel void přetypován na ukazatel, obsah umístění paměti se nezmění. Informace o typu jsou však ztraceny, takže nelze provést operace přírůstek nebo snížení. Umístění paměti lze přetypovat například z `MyClass*` na `void*` a zpět do `MyClass*`. Tyto operace jsou ze své podstaty náchylné k chybám a vyžadují velkou péči, aby se zabránilo chybám. Moderní C++ odrazuje void od použití ukazatelů téměř za všech okolností.
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Ukazatele na funkce
 
-V programování ve stylu Jazyka C se ukazatele funkcí používají především k předání funkcí jiným funkcím. V tomto scénáři volající můžete přizpůsobit chování funkce bez úpravy. V moderním jazyce C++ [poskytují výrazy lambda](lambda-expressions-in-cpp.md) stejnou schopnost s větší bezpečností typů a dalšími výhodami.
+V programování ve stylu Jazyka C se ukazatele funkcí používají především k předání funkcí jiným funkcím. Tato technika umožňuje volajícímu přizpůsobit chování funkce bez úprav. V moderním jazyce C++ [poskytují výrazy lambda](lambda-expressions-in-cpp.md) stejnou schopnost s větší bezpečností typů a dalšími výhodami.
 
 Deklarace ukazatele funkce určuje podpis, který musí mít funkce špičatá:
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-Následující příklad ukazuje `combine` funkci, která bere jako parametr `std::string` libovolnou `std::string`funkci, která přijímá a vrátí . V závislosti na funkci, `combine` která je předána bude buď předřadit nebo připojit řetězec.
+Následující příklad ukazuje `combine` funkci, která bere jako parametr `std::string` libovolnou `std::string`funkci, která přijímá a vrátí . V závislosti na funkci, `combine`která je předána , předcvažení nebo připojí řetězec.
 
 ```cpp
 #include <iostream>

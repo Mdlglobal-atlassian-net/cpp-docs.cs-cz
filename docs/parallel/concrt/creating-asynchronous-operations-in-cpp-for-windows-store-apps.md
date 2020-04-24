@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353409"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032184"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace UPW
 
@@ -54,13 +54,13 @@ Pomocí prostředí Windows Runtime můžete použít nejlepší funkce různýc
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Představuje asynchronní akci.
 
-[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 Představuje asynchronní akci, která hlásí průběh.
 
-[Windows::Foundation::IAsyncOperation\<TResult>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 Představuje asynchronní operaci, která vrací výsledek.
 
-[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 Představuje asynchronní operaci, která vrací výsledek a hlásí průběh.
 
 Pojem *akce* znamená, že asynchronní úloha nevytváří hodnotu (představte si funkci, která vrátí). `void` Pojem *operace* znamená, že asynchronní úloha vytváří hodnotu. Pojem *průběhu* znamená, že úkol může hlásit zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a Visual C++ poskytují svůj vlastní způsob vytváření instancí těchto rozhraní pro použití přes hranice ABI. Pro Visual C++ ppl poskytuje [funkci souběžnosti::create_async.](reference/concurrency-namespace-functions.md#create_async) Tato funkce vytvoří asynchronní akci nebo operaci prostředí Windows Runtime, která představuje dokončení úlohy. Funkce `create_async` přebírá pracovní funkci (obvykle výraz lambda), interně vytvoří `task` objekt a zabalí tuto úlohu do jednoho ze čtyř asynchronních rozhraní prostředí Windows Runtime.
@@ -92,7 +92,7 @@ Následující příklad ukazuje různé způsoby `IAsyncAction` vytvoření obj
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Příklad: Vytvoření součásti prostředí Windows Runtime pro systém C++ a její spotřeba z jazyka C\#
 
-Zvažte aplikaci, která používá XAML a C# k definování uživatelského prostředí a komponenty Prostředí Windows Runtime pro prostředí C++ windows runtime k provádění operací náročných na výpočetní výkon. V tomto příkladu komponenta C++ vypočítá, která čísla v daném rozsahu jsou prvočísla. Chcete-li ilustrovat rozdíly mezi čtyřmi asynchronními rozhraními modulu Windows Runtime, spusťte `Primes`v sadě Visual Studio vytvořením **prázdného řešení** a jeho pojmenováním . Potom přidejte do řešení projekt **součásti prostředí Windows Runtime a** pojmenujte jej `PrimesLibrary`. Přidejte následující kód do generovaného souboru hlaviček jazyka C++ (tento příklad přejmenuje Class1.h na Primes.h). Každá `public` metoda definuje jedno ze čtyř asynchronních rozhraní. Metody, které vracejí hodnotu, vrátí objekt [Windows::Foundation::Collections::IVector\<int>](/uwp/api/Windows.Foundation.Collections.IVector_T_) objekt. Metody, které hlásí `double` průběh, vytvářejí hodnoty, které definují procento celkové dokončené práce.
+Zvažte aplikaci, která používá XAML a C# k definování uživatelského prostředí a komponenty Prostředí Windows Runtime pro prostředí C++ windows runtime k provádění operací náročných na výpočetní výkon. V tomto příkladu komponenta C++ vypočítá, která čísla v daném rozsahu jsou prvočísla. Chcete-li ilustrovat rozdíly mezi čtyřmi asynchronními rozhraními modulu Windows Runtime, spusťte `Primes`v sadě Visual Studio vytvořením **prázdného řešení** a jeho pojmenováním . Potom přidejte do řešení projekt **součásti prostředí Windows Runtime a** pojmenujte jej `PrimesLibrary`. Přidejte následující kód do generovaného souboru hlaviček jazyka C++ (tento příklad přejmenuje Class1.h na Primes.h). Každá `public` metoda definuje jedno ze čtyř asynchronních rozhraní. Metody, které vracejí hodnotu, vrátí objekt [Windows::Foundation::Collections::IVector\<int>](/uwp/api/windows.foundation.collections.ivector-1) objekt. Metody, které hlásí `double` průběh, vytvářejí hodnoty, které definují procento celkové dokončené práce.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

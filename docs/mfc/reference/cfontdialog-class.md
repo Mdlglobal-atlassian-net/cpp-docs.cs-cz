@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 6ece239496def9fd65a95a622ac3c475fe5becea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a8e24b68f377235c1f1e21fbcd5618aebbe299a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373824"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755014"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog – třída
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Vytvoří `CFontDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::DoModální](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Načte formátování znaků vybraného písma.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Struktura slouží k `CFontDialog` přizpůsobení objektu.|
 
@@ -196,7 +196,7 @@ Pokud `DoModal` vrátí hodnotu IDOK, můžete volat další členské funkce a 
 
 Načte formátování znaků vybraného písma.
 
-```
+```cpp
 void GetCharFormat(CHARFORMAT& cf) const;
 ```
 
@@ -225,7 +225,7 @@ Barva vybraného písma.
 
 Volání této funkce přiřadit vlastnosti aktuálně vybrané písmo členům struktury [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
-```
+```cpp
 void GetCurrentFont(LPLOGFONT lplf);
 ```
 

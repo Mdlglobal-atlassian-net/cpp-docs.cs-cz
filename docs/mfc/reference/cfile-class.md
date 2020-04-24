@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373923"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754997"
 ---
 # <a name="cfile-class"></a>CFile – třída
 
@@ -81,13 +81,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFile::CFile](#cfile)|Vytvoří `CFile` objekt z cesty nebo popisovače souboru.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFile::Přerušit](#abort)|Zavře soubor, který ignoruje všechna upozornění a chyby.|
 |[CFile::Zavřít](#close)|Zavře soubor a odstraní objekt.|
@@ -115,20 +115,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFile::POPISOVAČ operátora](#operator_handle)|Úchyt `CFile` k objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFile::hSouborNull](#hfilenull)|Určuje, zda `CFile` má objekt platný popisovač.|
 |[CFile::m_hFile](#m_hfile)|Obvykle obsahuje popisovač souborů operačního systému.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Ukazatel `CAtlTransactionManager` na objekt.|
 
@@ -751,7 +751,7 @@ Obslužná rutina výjimky pro tuto metodu musí odstranit objekt výjimky po zp
 
 Nastaví hodnotu ukazatele souboru na začátek souboru.
 
-```
+```cpp
 void SeekToBegin();
 ```
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354399"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031482"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView – třída
 
@@ -39,19 +39,19 @@ Typ, který poskytuje objekt funkce, který může porovnat dvě klíčové hodn
 
 ### <a name="remarks"></a>Poznámky
 
-UnorderedMapView je konkrétní implementace [C++ systému Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) rozhraní, které je předáváno přes binární rozhraní aplikace (ABI). Další informace naleznete v [tématu Kolekce (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView je konkrétní implementace [C++ systému Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) rozhraní, které je předáváno přes binární rozhraní aplikace (ABI). Další informace naleznete v [tématu Kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[UnorderedMapView::UnorderedMapView](#ctor)|Inicializuje novou instanci unorderedMapView třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[UnorderedMapView::První](#first)|Vrátí iterátor, který je inicializován na první prvek v zobrazení mapy.|
 |[UnorderedMapView::HasKey](#haskey)|Určuje, zda aktuální UnorderedMapView obsahuje zadaný klíč.|
@@ -71,7 +71,7 @@ UnorderedMapView je konkrétní implementace [C++ systému Windows::Foundation::
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapView::První metoda
 
-Vrátí iterátor, který určuje první [prvek Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvek v neuspořádané mapě.
+Vrátí iterátor, který určuje první [prvek Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) prvek v neuspořádané mapě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -129,7 +129,7 @@ Hodnota, která je `key`spárována s . Typ vrácené hodnoty je typename *V*.
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView::Metoda velikosti
 
-Vrátí počet [windows::foundation::collections::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvky v UnorderedMapView.
+Vrátí počet [windows::foundation::collections::iKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) prvky v UnorderedMapView.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -242,4 +242,4 @@ Vstupní iterátor prvního prvku po rozsahu prvků použitých k inicializaci U
 ## <a name="see-also"></a>Viz také
 
 [Platforma::Obor názvů kolekcí](../cppcx/platform-collections-namespace.md)<br/>
-[Okna::Založení::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Okna::Založení::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

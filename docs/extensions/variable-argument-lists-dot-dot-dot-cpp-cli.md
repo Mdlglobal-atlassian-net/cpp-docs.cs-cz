@@ -6,25 +6,25 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171876"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032301"
 ---
 # <a name="variable-argument-lists--ccli"></a>Seznamy argumentů s proměnnou délkou (...) (C++/CLI)
 
-Tento příklad ukazuje, jak lze použít syntaxi `...` v C++/CLI k implementaci funkcí, které mají proměnný počet argumentů.
+Tento příklad ukazuje, jak `...` můžete použít syntaxi v jazyce C++/CLI k implementaci funkcí, které mají proměnný počet argumentů.
 
 > [!NOTE]
-> Toto téma se C++týká/CLI. Informace o použití `...` v normě C++ISO najdete v tématu [elipsy a šablony variadické](../cpp/ellipses-and-variadic-templates.md) a tři tečky a výchozí argumenty ve [výrazech přípony](../cpp/postfix-expressions.md).
+> Toto téma se týkajících se C++/CLI. Informace o použití `...` normy ISO Standard C++ naleznete v [tématu Tři tečky a variadické šablony](../cpp/ellipses-and-variadic-templates.md) a tři tečky a výchozí argumenty ve [výrazech Postfix](../cpp/postfix-expressions.md).
 
-Parametr, který používá `...`, musí být posledním parametrem v seznamu parametrů.
+Parametr, který `...` používá, musí být posledním parametrem v seznamu parametrů.
 
 ## <a name="example"></a>Příklad
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // mcppv2_paramarray.cpp
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="code-example"></a>Příklad kódu
 
-Následující příklad ukazuje, jak volat z C# vizuální C++ funkce, která přijímá proměnný počet argumentů.
+Následující příklad ukazuje, jak volat z Jazyka C# visual c++ funkce, která má proměnný počet argumentů.
 
 ```cpp
 // mcppv2_paramarray2.cpp
@@ -64,9 +64,9 @@ public:
 };
 ```
 
-Funkci `f` lze volat z C# nebo Visual Basic, například jako by byla funkce, která může převzít proměnný počet argumentů.
+Funkce `f` může být volána z jazyka C# nebo Visual Basic, například, jako by to byla funkce, která může trvat proměnný počet argumentů.
 
-V C#, argument, který je předán parametru `ParamArray`, může být volán proměnným počtem argumentů. Následující ukázka kódu je v C#.
+V c#, argument, který `ParamArray` je předán parametru může být volána proměnný počet argumentů. Následující ukázka kódu je v c#.
 
 ```csharp
 // mcppv2_paramarray3.cs
@@ -83,7 +83,7 @@ public class X {
 }
 ```
 
-Volání `f` v vizuálu C++ může předat inicializované pole nebo pole s proměnnou délkou.
+Volání v `f` jazyce Visual C++ může předat inicializované pole nebo pole proměnné délky.
 
 ```cpp
 // mcpp_paramarray4.cpp

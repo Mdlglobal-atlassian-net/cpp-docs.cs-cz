@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 066918bf2c76b17f06871ee08be674be9b36c161
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372569"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032457"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs – třída
 
@@ -41,10 +41,10 @@ Třída, která implementuje *TEventArgsInterface*.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name (Název)                                                         | Popis
------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Získá odkaz na [deferral](/uwp/api/windows.foundation.deferral) objekt, který představuje odložené události.
-[DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Volána k označení, že veškeré zpracování pro zpracování odložené události je dokončena.
+| Název | Popis |
+|--|--|
+| [DeferrableEventArgs::GetDeferral](#getdeferral) | Získá odkaz na [deferral](/uwp/api/windows.foundation.deferral) objekt, který představuje odložené události. |
+| [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Volána k označení, že veškeré zpracování pro zpracování odložené události je dokončena. |
 
 ## <a name="remarks"></a>Poznámky
 

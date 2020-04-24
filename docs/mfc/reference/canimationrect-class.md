@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373327"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755132"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect – třída
 
@@ -59,13 +59,13 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::CAnimationRect](#canimationrect)|Přetíženo. Vytvoří objekt rect animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::AddTransition](#addtransition)|Přidá přechody pro souřadnice vlevo, nahoře, vpravo a dole.|
 |[CAnimationRect::GetBottom](#getbottom)|Poskytuje přístup k CAnimationVariable představující dolní souřadnice.|
@@ -78,26 +78,26 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřené proměnné animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::operátor RECT](#operator_rect)|Převede CAnimationRect na RECT.|
 |[CAnimationRect::operátor=](#operator_eq)|Přiřadí rect CAnimationRect.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Určuje, zda má obdélník pevnou velikost.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|Zapouzdřená proměnná animace, která představuje dolní vazbu obdélníku animace.|
 |[CAnimationRect::m_leftValue](#m_leftvalue)|Zapouzdřená proměnná animace, která představuje left bound animace obdélníku.|
@@ -125,7 +125,7 @@ Třída CAnimationRect zapouzdřuje čtyři objekty CAnimationVariable a může 
 
 Přidá přechody pro souřadnice vlevo, nahoře, vpravo a dole.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -405,7 +405,7 @@ Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže,
 
 Přiřadí rect CAnimationRect.
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
@@ -422,7 +422,7 @@ Doporučuje se to provést před zahájením animace, protože tento operátor v
 
 Nastaví výchozí hodnotu.
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 

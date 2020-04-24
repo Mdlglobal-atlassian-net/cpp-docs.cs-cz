@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354451"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032444"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map – třída
 
-Představuje *mapu*, což je kolekce párů klíč hodnota. Implementuje [Windows::Foundation::Collections::IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) který vám pomůže s [datovou vazbou](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Představuje *mapu*, což je kolekce párů klíč hodnota. Implementuje [Windows::Foundation::Collections::IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) který vám pomůže s [datovou vazbou](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,7 +63,7 @@ Povolené typy jsou:
 
 - třída veřejného výčtu
 
-Mapa je v podstatě obálka pro [std::map](../standard-library/map-class.md). Jedná se o konkrétní implementaci [jazyka Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předávány přes veřejné rozhraní prostředí Windows Runtime. Pokud se pokusíte `Platform::Collections::Map` použít typ ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo vrácené hodnoty [systému Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Mapa je v podstatě obálka pro [std::map](../standard-library/map-class.md). Jedná se o konkrétní implementaci [jazyka Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2) a [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) typy, které jsou předávány přes veřejné rozhraní prostředí Windows Runtime. Pokud se pokusíte `Platform::Collections::Map` použít typ ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo vrácené hodnoty [systému Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md).
 
@@ -71,13 +71,13 @@ Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Mapa::Mapa](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Mapa::Vymazat](#clear)|Odebere všechny dvojice klíč-hodnota z aktuálního objektu Map.|
 |[Mapa::První](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
@@ -92,7 +92,7 @@ Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[Mapa::Událost MapChanged](#mapchanged)|Vyvolá se při změně mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -136,7 +136,7 @@ Pohodlný způsob, jak podržet iterátor vrácený First() je přiřadit vráce
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Mapa::Metoda GetView
 
-Vrátí zobrazení aktuální mapy jen pro čtení. to znamená [platforma::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), která implementuje rozhraní [Windows::Foundation::Collections::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Vrátí zobrazení aktuální mapy jen pro čtení. to znamená [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), která implementuje [Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) rozhraní.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
-*Hodnotu*<br/>
+*value*<br/>
 Část hodnoty dvojice klíč hodnota. Typ *hodnoty* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-[A MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) který obsahuje informace o objektu, který vyvolal událost a druh změny, ke které došlo. Viz také [\<IMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange Výčet](/uwp/api/windows.foundation.collections.collectionchange).
+[A MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) který obsahuje informace o objektu, který vyvolal událost a druh změny, ke které došlo. Viz také [\<IMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) a [CollectionChange Výčet](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
@@ -281,7 +281,7 @@ Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Mapa::Metoda velikosti
 
-Vrátí počet [prvků systému Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvků v mapě.
+Vrátí počet [prvků systému Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) prvků v mapě.
 
 ### <a name="syntax"></a>Syntaxe
 

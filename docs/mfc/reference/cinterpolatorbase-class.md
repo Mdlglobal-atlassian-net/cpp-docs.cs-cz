@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372357"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754957"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase – třída
 
@@ -47,13 +47,13 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Vytvoří `CInterpolatorBase` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CInterpolatorBase::CreateInstance](#createinstance)|Vytvoří instanci `CInterpolatorBase` a uloží ukazatel na vlastní interpolátor, který bude zpracovávat události.|
 |[CInterpolatorBase::GetDependencies](#getdependencies)|Získá závislosti interpolátoru. (Přepíše `CUIAnimationInterpolatorBase::GetDependencies`.)|
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*value*<br/>
 Výstup. Konečná hodnota proměnné na konci přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *Posun*<br/>
 Posun od začátku přechodu. Posun je vždy větší než nebo rovna nule a menší než doba trvání přechodu. Tato metoda není volána, pokud je doba trvání přechodu nula.
 
-*Hodnotu*<br/>
+*value*<br/>
 Výstup. Interpolovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -217,7 +217,7 @@ Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL pokud Není nastaven C
 
 Ukládá ukazatel na vlastní interpolátor, který bude zpracovávat události.
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 

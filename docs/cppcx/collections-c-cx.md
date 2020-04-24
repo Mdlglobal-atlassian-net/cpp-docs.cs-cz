@@ -2,70 +2,70 @@
 title: Kolekce (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: ff3fb9899355ec05083dc15c16d74c9aa1d3fd8f
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 59e73b803a0878e88361c7fe75cff556b8eeedcd
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70740321"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032314"
 ---
 # <a name="collections-ccx"></a>Kolekce (C++/CX)
 
-V programu C++/CX můžete využít bezplatné použití kontejnerů knihovny STL (Standard Template Library) nebo jakýkoli jiný uživatelem definovaný typ kolekce. Pokud však předáte kolekce zpátky a zpátky v binárním rozhraní aplikace prostředí Windows Runtime (ABI) – například na ovládací prvek XAML nebo na klienta jazyka JavaScript – je nutné použít typy kolekce prostředí Windows Runtime.
+V programu C++/CX můžete bezplatně využívat kontejnery knihovny šablon (STL) nebo jakýkoli jiný uživatelem definovaný typ kolekce. Však při předání kolekce tam a zpět přes binární rozhraní aplikace Prostředí Windows Runtime (ABI) – například do ovládacího prvku XAML nebo do klienta JavaScriptu – je nutné použít typy kolekcí prostředí Windows Runtime.
 
-Prostředí Windows Runtime definuje rozhraní pro kolekce a související typy a C++/CX poskytuje konkrétní C++ implementace v souboru hlaviček Collection. h. Tento obrázek znázorňuje vztahy mezi typy kolekce:
+Prostředí Windows Runtime definuje rozhraní pro kolekce a související typy a C++/CX poskytuje konkrétní implementace jazyka C++ v souboru hlavičky collection.h. Tento obrázek znázorňuje vztahy mezi typy kolekcí:
 
-![Strom&#43;&#43;&#47;dědičnosti C CX pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "Strom&#43;&#43;&#47;dědičnosti C CX pro typy kolekcí")
+![C&#43;&#43;&#47;Strom dědičnosti CX pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;Strom dědičnosti CX pro typy kolekcí")
 
-- [Třída Platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) se podobá [třídě std:: Vector](../standard-library/vector-class.md).
+- [Platforma::Kolekce::Vector třída](../cppcx/platform-collections-vector-class.md) se podobá [std::vector class](../standard-library/vector-class.md).
 
-- Třída [Platform:: Collections:: map](../cppcx/platform-collections-map-class.md) se podobá [třídě std:: map](../standard-library/map-class.md).
+- [Platforma::Kolekce::Třída Map](../cppcx/platform-collections-map-class.md) se podobá [třídě std::map](../standard-library/map-class.md).
 
-- [Platform:: Collections:: VectorView Class](../cppcx/platform-collections-vectorview-class.md) a[Platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md) jsou verze `Vector` a `Map` jen pro čtení.
+- [Platforma::Kolekce::VectorView Class](../cppcx/platform-collections-vectorview-class.md) a[Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md) jsou `Vector` verze `Map`třídy a .
 
-- Iterátory jsou definovány v [oboru názvů Platform:: Collections](../cppcx/platform-collections-namespace.md). Tyto iterátory splňují požadavky na iterátory STL a umožňují použití algoritmů [std:: Find](../standard-library/algorithm-functions.md#find), [std:: count_if](../standard-library/algorithm-functions.md#count_if)a dalších algoritmů STL na libovolných typech rozhraní [Windows:: Foundation:: Collections](/uwp/api/windows.foundation.collections) nebo [Platform:: Collections.](../cppcx/platform-collections-namespace.md) konkrétní typ. Například to znamená, že můžete iterovat kolekci ve prostředí Windows Runtime komponentě, která je vytvořena v C# a použít pro ni algoritmus STL.
+- Iterátory jsou definovány v [platformě::Collections Namespace](../cppcx/platform-collections-namespace.md). Tyto iterátory splňují požadavky na iterátory STL a umožňují použití [std::find](../standard-library/algorithm-functions.md#find), [std::count_if](../standard-library/algorithm-functions.md#count_if)a dalších algoritmů STL v libovolném [systému Windows::Foundation::Collections](/uwp/api/windows.foundation.collections) typ rozhraní nebo [platforma::Kolekce](../cppcx/platform-collections-namespace.md) konkrétní typ. Například to znamená, že můžete iterate kolekce v komponentě prostředí Windows Runtime, která je vytvořena v C# a použít algoritmus STL na něj.
 
    > [!IMPORTANT]
-   > Iterátory proxy `VectorIterator` a `VectorViewIterator` využívají proxy objekty `VectoryProxy<T>` a `ArrowProxy<T>`, aby bylo možné použití s kontejnery STL. Další informace naleznete v části "VectorProxy elementy" dále v tomto článku.
+   > Proxy iterátory `VectorIterator` `VectorViewIterator` a využít `VectoryProxy<T>` `ArrowProxy<T>` proxy objekty a povolit použití s KONTEJNERY STL. Další informace naleznete v části "VectorProxy prvky" dále v tomto článku.
 
-- Typy C++kolekce/CX podporují stejné záruky bezpečnosti vlákna, které podporují kontejnery STL.
+- Typy kolekce C++/CX podporují stejné záruky bezpečnosti podprocesu, které podporují kontejnery STL.
 
-- [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) a [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) definují události, které se aktivují, když se kolekce mění různými způsoby. Implementací těchto rozhraní [Platform:: Collections:: map](../cppcx/platform-collections-map-class.md) a [Platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) podporují datovou vazbu s kolekcemi XAML. Například pokud máte `Vector`, které jsou vázány na data `Grid`, když přidáte položku do kolekce, projeví se změna v uživatelském rozhraní mřížky.
+- [Windows::Foundation::Collections::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) a [Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) definují události, které jsou aktivovány, když se kolekce mění různými způsoby. Implementací těchto rozhraní [platforma::Kolekce::Map](../cppcx/platform-collections-map-class.md) a [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) podporují datové vazby s kolekcemi XAML. Například pokud `Vector` máte, který je vázán `Grid`na data , při přidání položky do kolekce, změna se projeví v gridu uj.
 
-## <a name="vector-usage"></a>Využití vektoru
+## <a name="vector-usage"></a>Využití vektorů
 
-Pokud vaše třída musí předat kontejneru sekvence jiné součásti prostředí Windows Runtime, použijte [Windows:: Foundation:: Collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) jako parametr nebo návratový typ a [Platform:: Collections:: Vector \<T >](../cppcx/platform-collections-vector-class.md) jako konkrétní implementace. Pokud se pokusíte použít typ `Vector` ve veřejné návratové hodnotě nebo parametru, bude vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou `Vector` na `IVector`.
+Když vaše třída má předat kontejner sekvence do jiné součásti prostředí Windows Runtime, použijte [Windows::Foundation::Collections:: IVector\<T>](/uwp/api/windows.foundation.collections.ivector-1) jako parametr nebo návratový typ a [Platform::Collections::Vector\<T>](../cppcx/platform-collections-vector-class.md) jako konkrétní implementace. Pokud se pokusíte `Vector` použít typ ve veřejné vrácené hodnotě nebo parametru, bude vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou `Vector` na `IVector`.
 
 > [!IMPORTANT]
-> Pokud předáváte sekvenci ve vlastním programu, použijte buď `Vector`, nebo `std::vector`, protože jsou efektivnější než `IVector`. @No__t_0 použijte pouze v případě, že předáte kontejner napříč ABI.
+> Pokud předáváte sekvenci v rámci `Vector` `std::vector` vlastního programu, použijte `IVector`buď nebo protože jsou efektivnější než . Používejte `IVector` pouze v případě, že předáte kontejner přes ABI.
 >
-> Systém typů prostředí Windows Runtime nepodporuje koncept vícenásobných polí, a proto nelze předat IVector < Platform:: Array \<T > > jako návratovou hodnotu nebo parametr metody. Chcete-li předat vícenásobné pole nebo sekvenci sekvencí v rámci ABI, použijte `IVector<IVector<T>^>`.
+> Systém typu Prostředí Windows Runtime nepodporuje koncept zubatých polí, a proto nelze\<předat platformu IVector<::Array T>> jako parametr návratové hodnoty nebo metody. Chcete-li předat zubaté pole nebo posloupnost `IVector<IVector<T>^>`sekvencí přes ABI, použijte .
 
-`Vector<T>` poskytuje metody, které jsou požadovány pro přidání, odebrání a přístup k položkám v kolekci a je implicitně převoditelná na `IVector<T>`. Můžete také použít algoritmy STL na instancích `Vector<T>`. Následující příklad znázorňuje základní použití. [Funkce Begin](../cppcx/begin-function.md) a [End Function](../cppcx/end-function.md) tady je z oboru názvů `Platform::Collections`, nikoli z oboru názvů `std`.
+`Vector<T>`Poskytuje metody, které jsou požadovány pro přidání, odebrání a přístup k položkám v kolekci a je implicitně převoditelný na `IVector<T>`. Algoritmy STL můžete také použít `Vector<T>`na instancích . Následující příklad ukazuje některé základní použití. Počáteční [a](../cppcx/begin-function.md) [koncová funkce](../cppcx/end-function.md) zde `Platform::Collections` jsou z `std` oboru názvů, nikoli z oboru názvů.
 
 [!code-cpp[cx_collections#01](../cppcx/codesnippet/CPP/collections/class1.cpp#01)]
 
-Pokud máte existující kód, který používá `std::vector` a chcete ho znovu použít v komponentě prostředí Windows Runtime, stačí použít jeden z konstruktorů `Vector`, které přebírají `std::vector` nebo dvojici iterátory k sestavení `Vector` v místě, kde předáte kolekci. v rámci ABI. Následující příklad ukazuje, jak použít konstruktor `Vector` Move pro efektivní inicializaci z `std::vector`. Po operaci přesunu již není původní proměnná `vec` platná.
+Pokud máte existující kód, který `std::vector` používá a chcete jej znovu použít v součásti prostředí Windows Runtime, stačí použít jeden z `Vector` `Vector` konstruktorů, který trvá `std::vector` nebo pár iterátorů k vytvoření v místě, kde předáte kolekci přes ABI. Následující příklad ukazuje, jak `Vector` použít konstruktor move pro `std::vector`efektivní inicializaci z . Po operaci přesunutí původní `vec` proměnná již není platná.
 
 [!code-cpp[cx_collections#02](../cppcx/codesnippet/CPP/collections/class1.cpp#02)]
 
-Pokud máte vektor řetězců, které je nutné předat v rámci určitého budoucího bodu, musíte se rozhodnout, zda chcete vytvořit řetězce původně jako `std::wstring` typy nebo jako `Platform::String^` typů. Pokud je nutné provést v řetězcích velké množství zpracování, použijte `wstring`. V opačném případě vytvořte řetězce jako `Platform::String^` typy a vyhněte se nákladům na jejich převod později. Také je nutné rozhodnout, zda mají být tyto řetězce vloženy do `std:vector` nebo `Platform::Collections::Vector` interně. Obecně je vhodné použít `std::vector` a pak vytvořit `Platform::Vector` z něj pouze v případě, že předáte kontejner v rámci ABI.
+Pokud máte vektor řetězců, které je nutné předat přes ABI v určitém budoucím okamžiku, musíte `std::wstring` se `Platform::String^` rozhodnout, zda chcete vytvořit řetězce zpočátku jako typy nebo jako typy. Pokud máte udělat hodně zpracování na řetězce, pak `wstring`použijte . V opačném případě vytvořte řetězce jako `Platform::String^` typy a vyhněte se nákladům na jejich pozdější převod. Musíte se také rozhodnout, zda `std:vector` chcete `Platform::Collections::Vector` umístit tyto řetězce do nebo interně. Jako obecné postupy, `std::vector` použijte a `Platform::Vector` potom vytvořit z něj pouze při předání kontejneru přes ABI.
 
-## <a name="value-types-in-vector"></a>Typy hodnot v vektoru
+## <a name="value-types-in-vector"></a>Typy hodnot ve vektoru
 
-Všechny prvky, které mají být uloženy v [Platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) , musí podporovat porovnání rovnosti implicitně nebo pomocí vlastního typu [std:: equal_to](../standard-library/equal-to-struct.md) komparátor, který zadáte. Všechny typy odkazů a všechny skalární typy implicitně podporují porovnání rovnosti. Pro neskalární typy hodnot, jako je například [Windows:: Foundation::D atetime](/uwp/api/windows.foundation.datetime)nebo pro vlastní porovnávání – například `objA->UniqueID == objB->UniqueID`, je nutné zadat objekt vlastní funkce.
+Každý prvek, který má být uložen v [platformě::Collections::Vector](../cppcx/platform-collections-vector-class.md) musí podporovat porovnání rovnosti, implicitně nebo pomocí vlastního srovnávače [std::equal_to,](../standard-library/equal-to-struct.md) který zadáte. Všechny typy odkazů a všechny skalární typy implicitně podporují porovnání rovnosti. Pro jiné než skalární typy hodnot, jako je [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime) `objA->UniqueID == objB->UniqueID`, nebo pro vlastní porovnání – například – je nutné zadat vlastní objekt funkce.
 
-## <a name="vectorproxy-elements"></a>VectorProxy elementy
+## <a name="vectorproxy-elements"></a>Prvky VectorProxy
 
-[Platform:: Collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) a [Platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) povolí použití smyček `range for` a algoritmů, jako je například [std:: sort](../standard-library/algorithm-functions.md#sort) pomocí kontejneru [IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Ale k elementům `IVector` nelze přistoupit prostřednictvím C++ zpětného odkazování ukazatele; k nim lze přistupovat pouze prostřednictvím metod [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) a [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Proto tyto iterátory používají třídy proxy `Platform::Details::VectorProxy<T>` a `Platform::Details::ArrowProxy<T>` k poskytnutí přístupu k jednotlivým prvkům prostřednictvím operátorů __\*__ , __->__ a __\[]__ , jak je vyžadováno standardní knihovnou. V případě, že `IVector<Person^> vec`, je typ `*begin(vec)` `VectorProxy<Person^>`. Objekt proxy je však téměř vždy transparentní pro váš kód. Tyto objekty proxy nejsou zdokumentovány, protože jsou pouze pro interní použití iterátory, ale je užitečné zjistit, jak mechanismus funguje.
+[Platforma::Kolekce::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) a [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) umožňují `range for` použití smyček a algoritmů, jako [je std::sort](../standard-library/algorithm-functions.md#sort) s [\<kontejnerem IVector T>.](/uwp/api/windows.foundation.collections.ivector-1) Ale `IVector` prvky nelze přistupovat prostřednictvím c++ ukazatel dereference; jsou přístupné pouze prostřednictvím [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) a [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) metody. Proto tyto iterátory používají proxy `Platform::Details::VectorProxy<T>` `Platform::Details::ArrowProxy<T>` třídy a poskytují přístup __\*__ __->__ k jednotlivým prvkům prostřednictvím , a __ \[]__ operátory, jak to vyžaduje standardní knihovny. Přísně vzato, `IVector<Person^> vec`vzhledem `*begin(vec)` k `VectorProxy<Person^>`tomu, , typ je . Objekt proxy je však téměř vždy transparentní pro váš kód. Tyto proxy objekty nejsou dokumentovány, protože jsou určeny pouze pro vnitřní použití iterátory, ale je užitečné vědět, jak funguje mechanismus.
 
-Použijete-li smyčku `range for` přes `IVector` kontejnery, použijte `auto&&` k povolení správné vazby proměnné iterátoru na `VectorProxy` elementy. Použijete-li `auto` nebo `auto&`, je vyvolána C4239 upozornění kompilátoru a v textu upozornění je uvedeno `VectoryProxy`.
+Při použití `range for` smyčky `IVector` přes kontejnery, použijte `auto&&` k povolení iterátor `VectorProxy` proměnné správně vázat na prvky. Pokud `auto` používáte `auto&`nebo , upozornění kompilátoru `VectoryProxy` C4239 je aktivována a je uvedeno v textu upozornění.
 
-Na následujícím obrázku je znázorněna `range for`ová smyčka přes `IVector<Person^>`. Všimněte si, že provádění je zastaveno na zarážce na řádku 64. Okno **QuickWatch** ukazuje, že proměnná iterátoru `p` je ve skutečnosti `VectorProxy<Person^>`, která má `m_v` a `m_i` členské proměnné. Nicméně při volání `GetType` u této proměnné vrátí stejný typ jako `p2` instance `Person`. Poznatkem je, že i když se `VectorProxy` a `ArrowProxy` mohou objevit v **QuickWatch**, ladicí program některé chyby kompilátoru nebo jiná místa, obvykle nemusíte pro ně explicitně kódovat kód.
+Následující obrázek `range for` znázorňuje `IVector<Person^>`smyčku přes . Všimněte si, že spuštění je zastaveno na zarážky na řádku 64. Okno **QuickWatch** ukazuje, že proměnná `p` iterátoru je ve skutečnosti proměnná, `VectorProxy<Person^>` která má `m_v` a `m_i` členské proměnné. Však při `GetType` volání na tuto proměnnou vrátí `Person` stejný `p2`typ instance . Stánek s jídlem `VectorProxy` `ArrowProxy` je, že i když a může se objevit v **QuickWatch**, ladicí program některé chyby kompilátoru, nebo na jiných místech, obvykle není třeba explicitně kód pro ně.
 
-![VectorProxy v rozsahu&#45;založeném na smyčce](../cppcx/media/vectorproxy-1.png "VectorProxy v rozsahu&#45;založeném na smyčce")
+![VectorProxy v rozsahu&#45;založené na smyčce](../cppcx/media/vectorproxy-1.png "VectorProxy v rozsahu&#45;založené na smyčce")
 
-Jeden scénář, ve kterém je nutné kód kolem objektu proxy, je v případě, že je nutné provést `dynamic_cast` na prvcích, například při hledání objektů XAML určitého typu v kolekci elementů `UIElement`. V takovém případě je nutné nejprve přetypovat element na [Platform:: Object](../cppcx/platform-object-class.md)^ a pak provést dynamické přetypování:
+Jeden scénář, ve kterém budete muset kód kolem proxy `dynamic_cast` objektu je, když máte provést na prvky – například `UIElement` při hledání XAML objekty určitého typu v kolekci prvků. V takovém případě musíte nejprve přetypovat prvek [platformy::Object](../cppcx/platform-object-class.md)^ a potom provést dynamické přetypádku:
 
 ```cpp
 void FindButton(UIElementCollection^ col)
@@ -82,68 +82,68 @@ void FindButton(UIElementCollection^ col)
 }
 ```
 
-## <a name="map-usage"></a>Použití mapy
+## <a name="map-usage"></a>Využití mapy
 
-Tento příklad ukazuje, jak vložit položky a vyhledat je v objektu [Platform:: Collections:: map](../cppcx/platform-collections-map-class.md)a pak vrátit `Map` jako typ jen pro čtení [Windows:: Foundation:: Collections:: IMapView]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_).
+Tento příklad ukazuje, jak vložit položky a vyhledat je v [platformě::Collections::Map](../cppcx/platform-collections-map-class.md), a potom vrátit `Map` jako Windows jen pro [čtení::Foundation::Collections::IMapView](/uwp/api/windows.foundation.collections.imapview-2) typ.
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
-Obecně platí, že pro funkce interní mapy preferovat `std::map` typ z hlediska výkonu. Pokud je nutné předat kontejner napříč ABI, sestavte [Platform:: Collections:: map](../cppcx/platform-collections-map-class.md) z [std:: map](../standard-library/map-class.md) a vraťte `Map` jako [Windows:: Foundation:: Collections:: IMAP](/uwp/api/Windows.Foundation.Collections.IMap_K_V_). Pokud se pokusíte použít typ `Map` ve veřejné návratové hodnotě nebo parametru, bude vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou `Map` na `IMap`. V některých případech – například pokud neprovádíte velký počet hledání nebo vkládání a často předáváte kolekci v rámci ABI, může být levnější použít `Platform::Collections::Map` od začátku a vyhnout se nákladům na převod `std::map`. V každém případě se vyhněte operacím vyhledávání a vkládání na `IMap`, protože se jedná o nejméně tyto tři typy. Převést na `IMap` pouze v bodě, který kontejner předává napříč ABI.
+Obecně platí pro funkce vnitřní mapy, upřednostňujte `std::map` typ z důvodů výkonu. Pokud máte předat kontejner přes ABI, postavit [platformu::Collections::Map](../cppcx/platform-collections-map-class.md) z [std::map](../standard-library/map-class.md) a vrátit `Map` jako [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2). Pokud se pokusíte `Map` použít typ ve veřejné vrácené hodnotě nebo parametru, bude vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou `Map` na `IMap`. V některých případech – například pokud neprovádíte velký počet vyhledávání nebo vložení a často předáváte kolekci přes ABI – `Platform::Collections::Map` může být levnější používat od `std::map`začátku a vyhnout se nákladům na převod . V každém případě se vyhněte `IMap` vyhledávání a vložení operace na, protože se jedná o nejméně výkonný ze tří typů. Převést `IMap` pouze v okamžiku, kdy předáte kontejner přes ABI.
 
 ## <a name="value-types-in-map"></a>Typy hodnot v mapě
 
-Prvky v objektu [Platform:: Collections:: map](../cppcx/platform-collections-map-class.md) jsou seřazené. Všechny prvky, které mají být uloženy v `Map`, musí podporovat méně než porovnání s přísným slabým řazením implicitně nebo pomocí vlastní [STL:: less](../standard-library/less-struct.md) komparátor, kterou zadáte. Skalární typy podporují porovnání implicitně. Pro neskalární typy hodnot, jako je například `Windows::Foundation::DateTime`, nebo pro vlastní porovnávání – například `objA->UniqueID < objB->UniqueID`, je třeba zadat vlastní komparátor.
+Prvky v [platformě::Collections::Map](../cppcx/platform-collections-map-class.md) jsou seřazeny. Jakýkoli prvek, který `Map` má být uložen v musí podporovat méně než porovnání s přísné slabé řazení, implicitně nebo pomocí vlastní [stl::less](../standard-library/less-struct.md) comparator, který zadáte. Scalární typy podporují porovnání implicitně. Pro neskalární typy hodnot, jako `Windows::Foundation::DateTime`je například , `objA->UniqueID < objB->UniqueID`nebo pro vlastní porovnání – musíte zadat vlastní komparátor.
 
 ## <a name="collection-types"></a>Typy kolekcí
 
-Kolekce spadají do čtyř kategorií: upravitelné verze a verze kolekcí sekvencí a asociativní kolekce pouze pro čtení. Kromě toho C++/CX vylepšuje kolekce tím, že poskytuje tři třídy iterátoru, které zjednodušují přístup k kolekcím.
+Kolekce spadají do čtyř kategorií: upravitelné verze a verze kolekce sekvence jen pro čtení a asociativní kolekce. Kromě toho C++/CX vylepšuje kolekce tím, že poskytuje tři iterátor třídy, které zjednodušují přístup k kolekcím.
 
-Prvky s upravitelnou kolekcí lze změnit, ale prvky kolekce jen pro čtení, které se označují jako *zobrazení*, lze číst pouze. K prvkům kolekce [Platform:: Collections:: Vector](../cppcx/platform-collections-vector-class.md) nebo[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) lze přistupovat pomocí iterátoru nebo [vektoru kolekce:: GetAt](../cppcx/platform-collections-vector-class.md#getat) a indexu. K prvkům asociativní kolekce lze přistupovat pomocí [mapování:: Lookup](../cppcx/platform-collections-map-class.md#lookup) a Key.
+Prvky upravitelné kolekce lze změnit, ale prvky kolekce jen pro čtení, která se označuje jako *zobrazení*, lze číst pouze. Prvky [Platform::Collections:::Vector](../cppcx/platform-collections-vector-class.md) nebo[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) kolekce lze přistupovat pomocí iterátoru nebo [kolekce Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) a index. Prvky asociativní kolekce lze přistupovat pomocí [mapy kolekce::Vyhledávání](../cppcx/platform-collections-map-class.md#lookup) a klíč.
 
 [Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)<br/>
-Upravitelná, asociativní kolekce. Prvky mapy jsou páry klíč-hodnota. Vyhledání klíče pro načtení přidružené hodnoty a iterace všemi páry klíč-hodnota jsou podporovány.
+Upravitelné, asociativní kolekce. Prvky mapy jsou dvojice klíč-hodnota. Vyhledání klíče pro načtení přidružené hodnoty a iterace prostřednictvím všech párů klíč-hodnota jsou podporovány.
 
-`Map` a `MapView` jsou šablonou `<K, V, C = std::less<K>>`; Proto můžete přizpůsobit komparátor.  Kromě toho jsou `Vector` a `VectorView` šablonou `<T, E = std::equal_to<T>>`, takže můžete přizpůsobit chování `IndexOf()`. To je důležité hlavně pro `Vector` a `VectorView` struktur hodnot. Chcete-li například vytvořit vektor \<Windows:: Foundation::D ateTime >, je nutné zadat vlastní komparátor, protože DateTime neprovádí přetížení operátoru = =.
+`Map`a `MapView` jsou přeřazeny na `<K, V, C = std::less<K>>`; proto můžete přizpůsobit komparátor.  Navíc `Vector` a `VectorView` jsou šablony `<T, E = std::equal_to<T>>` na tak, že můžete `IndexOf()`přizpůsobit chování . To je důležité `Vector` `VectorView` především pro a hodnoty struktur. Chcete-li například\<vytvořit vektorový systém Windows::Foundation::DateTime>, musíte zadat vlastní komparátor, protože DateTime nepřetěžuje operátor ==.
 
 [Platform::Collections::MapView – třída](../cppcx/platform-collections-mapview-class.md)<br/>
-Verze `Map` jen pro čtení.
+Verze aplikace jen pro `Map`čtení .
 
 [Platform::Collections::Vector – třída](../cppcx/platform-collections-vector-class.md)<br/>
-Kolekce sekvencí s upravitelnou příponou. `Vector<T>` podporuje náhodný přístup s náhodným přístupem a operace [připojení](../cppcx/platform-collections-vector-class.md#append) s konstantním časem.
+Modifikovatelné sekvence kolekce. `Vector<T>`podporuje konstantní čas náhodný přístup a amortizované-konstantní čas [připojit](../cppcx/platform-collections-vector-class.md#append) operace..
 
 [Platform::Collections::VectorView – třída](../cppcx/platform-collections-vectorview-class.md)<br/>
-Verze `Vector` jen pro čtení.
+Verze aplikace jen pro `Vector`čtení .
 
 [Platform::Collections::InputIterator – třída](../cppcx/platform-collections-inputiterator-class.md)<br/>
 Iterátor STL, který splňuje požadavky vstupního iterátoru STL.
 
 [Platform::Collections::VectorIterator – třída](../cppcx/platform-collections-vectoriterator-class.md)<br/>
-Iterátor STL, který splňuje požadavky aplikace STL proměnlivý iterátor s náhodným přístupem.
+Iterátor STL, který splňuje požadavky stl mutable random-access iterator.
 
-[Platform::Collections::VectorViewIterator – třída](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Iterátor STL, který splňuje požadavky STL `const` iterátoru s náhodným přístupem.
+[Platforma::Kolekce::Třída VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
+Iterátor STL, který splňuje požadavky iterátoru náhodného přístupu STL. `const`
 
-### <a name="begin-and-end-functions"></a>funkce begin () a end ()
+### <a name="begin-and-end-functions"></a>begin() a end() funkce
 
-Pro zjednodušení použití aplikace STL pro zpracování `Vector`, `VectorView`, `Map`, `MapView` a libovolných `Windows::Foundation::Collections` objektů, C++/CX podporuje přetížení [funkcí Begin](../cppcx/begin-function.md) a [End Function](../cppcx/end-function.md) , které nečlení funkce.
+Pro zjednodušení použití STL ke `Vector` `VectorView`zpracování `Map` `MapView`, , `Windows::Foundation::Collections` , a libovolných objektů podporuje C++/CX přetížení [nečlenských](../cppcx/begin-function.md) funkcí počáteční funkce a [koncové funkce.](../cppcx/end-function.md)
 
-V následující tabulce jsou uvedené dostupné iterátory a funkce.
+V následující tabulce jsou uvedeny dostupné iterátory a funkce.
 
-|Iterátory|Funkce|
+|Iterátory|Functions|
 |---------------|---------------|
-|[Platform:: Collections:: VectorIterator \<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Interně ukládá [Windows:: Foundation:: Collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) a int.)|[začátek](../cppcx/begin-function.md) / [End](../cppcx/end-function.md)([Windows:: Foundation:: collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
-|[Platform:: Collections:: VectorViewIterator \<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Interně ukládá [IVectorView \<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ a int.)|[začátek](../cppcx/begin-function.md) / [end](../cppcx/end-function.md) ([IVectorView \<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
-|[Platform:: Collections:: InputIterator \<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ a t.)|[začátek](../cppcx/begin-function.md) / [end](../cppcx/end-function.md) ([IIterable \<T >](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
-|[Platform:: Collections:: InputIterator < IKeyValuePair \<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ a t.)|[začátek](../cppcx/begin-function.md) / [end](../cppcx/end-function.md) ([IMAP \<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).|
-|[Platform:: Collections:: InputIterator < IKeyValuePair \<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ a t.)|[begin](../cppcx/begin-function.md) / [End](../cppcx/end-function.md) ([Windows:: Foundation:: Collections:: IMapView]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_))|
+|[Platforma::Kolekce::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Interně ukládá [Windows::Foundation::Collections::\<IVector T>](/uwp/api/windows.foundation.collections.ivector-1) a int.)|[začátek](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections::\<IVector T>](/uwp/api/windows.foundation.collections.ivector-1))|
+|[Platforma::Kolekce::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Interně ukládá [IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)^ a int.)|[začátek](../cppcx/begin-function.md)/ [(](../cppcx/end-function.md) [\<IVectorView T>](/uwp/api/windows.foundation.collections.ivectorview-1)^)|
+|[Platforma::Kolekce::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [\<IIterator T>](/uwp/api/windows.foundation.collections.iiterator-1)^ a T.)|[začátek](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IIterable\<T>](/uwp/api/windows.foundation.collections.iiterable-1))|
+|[Platforma::Kolekce::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [\<IIterator T>](/uwp/api/windows.foundation.collections.iiterator-1)^ a T.)|[začátek](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).|
+|[Platforma::Kolekce::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Interně ukládá [\<IIterator T>](/uwp/api/windows.foundation.collections.iiterator-1)^ a T.)|[začátek](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](/uwp/api/windows.foundation.collections.imapview-2))|
 
 ### <a name="collection-change-events"></a>Události změny kolekce
 
-`Vector` a `Map` podporují datovou vazbu v kolekcích XAML implementací událostí, ke kterým dochází při změně nebo obnovení objektu kolekce, nebo při vložení, odebrání nebo změně jakéhokoliv prvku kolekce. Můžete napsat vlastní typy, které podporují datovou vazbu, i když nemůžete dědit z `Map` nebo `Vector`, protože tyto typy jsou zapečetěné.
+`Vector`a `Map` podporují datové vazby v kolekcích XAML implementací událostí, ke kterým dochází při změně nebo resetování objektu kolekce nebo při vložení, odebrání nebo změně libovolného prvku kolekce. Můžete napsat vlastní typy, které podporují datové vazby, i když nelze dědit z `Map` nebo `Vector` protože tyto typy jsou zapečetěny.
 
-Delegáty [Windows:: Foundation:: Collections:: VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) a [Windows:: Foundation:: Collections:: MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) určují signatury obslužných rutin událostí pro události změny kolekce. Třídy s veřejným výčtem [Windows:: Foundation:: Collections:: CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) a `Platform::Collection::Details::MapChangedEventArgs` a `Platform::Collections::Details::VectorChangedEventArgs` ref Classes, uložte argumenty události, abyste zjistili, co způsobilo událost. @No__t_0 typy jsou definovány v oboru názvů `Details`, protože nemusíte je vytvářet ani je nespotřebovávat explicitně při použití `Map` nebo `Vector`.
+Delegáti [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) a [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) delegáti určují podpisy pro obslužné rutiny událostí pro události změny kolekce. [Windows::Foundation::Collections::CollectionChange třídy](/uwp/api/windows.foundation.collections.collectionchange) veřejnévýčtáčtu a `Platform::Collection::Details::MapChangedEventArgs` a `Platform::Collections::Details::VectorChangedEventArgs` ref třídy, uložte argumenty události k určení, co způsobilo událost. Typy `*EventArgs` jsou definovány `Details` v oboru názvů, protože není třeba je explicitně vytvářet nebo využívat při použití `Map` nebo `Vector`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

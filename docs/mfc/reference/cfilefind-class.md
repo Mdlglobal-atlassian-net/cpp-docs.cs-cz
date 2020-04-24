@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: f01aa84593afed5a4f2f102da7d161ad42917080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bb53a6abf7040bd6ee9f5f2cf56b0feb4d62e66
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755028"
 ---
 # <a name="cfilefind-class"></a>CFileFind – třída
 
@@ -77,13 +77,13 @@ class CFileFind : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileFind::CFileFind](#cfilefind)|Vytvoří `CFileFind` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileFind::Zavřít](#close)|Zavře požadavek na hledání.|
 |[CFileFind::FindFile](#findfile)|Vyhledá v adresáři zadaný název souboru.|
@@ -110,13 +110,13 @@ class CFileFind : public CObject
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileFind::CloseContext](#closecontext)|Zavře soubor určený aktuálním popisovačem hledání.|
 
 ### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFileFind::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objekt.|
 
@@ -166,7 +166,7 @@ Ukazatel na objekt CAtlTransactionManager
 
 Volání této členské funkce ukončit hledání, obnovit kontext a uvolnit všechny prostředky.
 
-```
+```cpp
 void Close();
 ```
 

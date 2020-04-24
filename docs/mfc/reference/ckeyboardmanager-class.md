@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 5d0f544943cc8584960bb2668ee7ce326547e2fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8053ab33a2b49eb2c447cdaa1cb2b9e356bc696
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372319"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754926"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager – třída
 
@@ -53,14 +53,14 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Vytvoří `CKeyboardManager` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Name (Název)|Popis|
+|Název|Popis|
 |[CKeyboardManager::Vyčištění](#cleanup)|Vymaže tabulky klávesových zkratek.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Načte výchozí klávesovou zkratku pro zadaný příkaz a okno.|
 |[CKeyboardManager::IskeyHandled](#iskeyhandled)|Určuje, zda je klíč zpracován tabulkou akcelerátoru.|
@@ -256,7 +256,7 @@ Pokud nezadáte výchozí okno, bude použito okno hlavního rámce aplikace.
 
 Znovu načte tabulky klávesových zkratek z prostředku aplikace.
 
-```
+```cpp
 void ResetAll();
 ```
 

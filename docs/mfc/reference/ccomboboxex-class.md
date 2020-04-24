@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369476"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754821"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx – třída
 
@@ -57,13 +57,13 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Vytvoří `CComboBoxEx` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComboBoxEx::Vytvořit](#create)|Vytvoří pole se seznamem a `CComboBoxEx` připojí jej k objektu.|
 |[CComboBoxEx::CreateEx](#createex)|Vytvoří pole se seznamem se zadanými rozšířenými `ComboBoxEx` styly systému Windows a připojí jej k objektu.|
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Určuje kombinaci stylů pole se seznamem aplikovaných na pole se seznamem. Další informace o stylech naleznete níže v **poznámkách.**
 
 *Rect*<br/>
-Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, což je umístění a velikost pole se seznamem.
+Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, což je umístění a velikost pole se seznamem.
 
 *pParentWnd*<br/>
 Ukazatel na [cwnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené `CDialog`okno pole se seznamem (obvykle a). Nesmí být null.
@@ -210,7 +210,7 @@ Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířen
 Styl ovládacího prvku pole se seznamem. Seznam stylů najdete v tématu [Vytvoření.](#create)
 
 *Rect*<br/>
-Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
+Odkaz na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
 Ukazatel na okno, které je nadřazený ovládací prvek.

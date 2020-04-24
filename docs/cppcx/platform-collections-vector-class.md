@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354377"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032119"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector – třída
 
-Představuje sekvenční kolekci objektů, které lze jednotlivě přistupovat index. Implementuje [Windows::Foundation::Collections::IObservableVector,](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) který pomáhá s [datovou vazbou](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Představuje sekvenční kolekci objektů, které lze jednotlivě přistupovat index. Implementuje [Windows::Foundation::Collections::IObservableVector,](/uwp/api/windows.foundation.collections.iobservablevector-1) který pomáhá s [datovou vazbou](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,21 +61,21 @@ Povolené typy jsou:
 
 1. třída veřejného výčtu
 
-Vector **Vector** Třída je C++ konkrétní implementace [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) rozhraní.
+Vector **Vector** Třída je C++ konkrétní implementace [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1) rozhraní.
 
-Pokud se pokusíte použít **typ Vector** ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou parametru nebo typu vrácené hodnoty [systému Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Další informace naleznete v [tématu Kolekce (C++/CX)](../cppcx/collections-c-cx.md).
+Pokud se pokusíte použít **typ Vector** ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou parametru nebo typu vrácené hodnoty [systému Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Další informace naleznete v [tématu Kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Vektor::Vektor](#ctor)|Inicializuje novou instanci třídy Vector.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Vektor::Připojit](#append)|Vloží zadanou položku za poslední položku v aktuální vektorové položce.|
 |[Vektor::Vymazat](#clear)|Odstraní všechny prvky v aktuálním vektoru.|
@@ -95,8 +95,8 @@ Pokud se pokusíte použít **typ Vector** ve veřejné vrácené hodnotě nebo 
 
 |||
 |-|-|
-|Name (Název)|Popis|
-|událost [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vyvolá se při změně vektoru.|
+|Název|Popis|
+|událost [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vyvolá se při změně vektoru.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*value*<br/>
 Položka, kterou chcete najít.
 
 *Index*<br/>
@@ -375,7 +375,7 @@ Počet prvků v kolekci objektů, který se používá k inicializaci aktuální
 *Velikost*<br/>
 Počet prvků ve Vektoru.
 
-*Hodnotu*<br/>
+*value*<br/>
 Hodnota, která se používá k inicializaci každého prvku v aktuálním Vector.
 
 *V*<br/>

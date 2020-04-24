@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369396"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754801"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar – třída
 
@@ -65,13 +65,13 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CControlBar::Ovládací panel CControlBar](#ccontrolbar)|Vytvoří `CControlBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Vrátí velikost dynamického ovládacího panelu jako [objektc CSize.](../../atl-mfc-shared/reference/csize-class.md)|
 |[CControlBar::CalcFixedLayout](#calcfixedlayout)|Vrátí velikost ovládacího panelu jako objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)|
@@ -92,7 +92,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Pokud je nenulová, `CControlBar` objekt je odstraněn při zničení ovládacího panelu systému Windows.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Vlastník ovládacího panelu na místě.|
@@ -293,7 +293,7 @@ Přepište tuto funkci a přizpůsobte vzhled úchopného zařízení ovládací
 
 Volání této funkce povolit ovládací panel, který má být ukotven.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ Chcete-li aktualizovat jednotlivé tlačítko nebo podokno, nastavte správně p
 
 Voláním této funkce nastavte požadované **CBRS_** styly ovládacího panelu.
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ Nemá vliv na nastavení **WS_** (styl okna).
 
 Voláním této funkce nastavte velikost ohraničení ovládacího panelu.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ Následující příklad kódu nastaví horní a dolní okraj ovládacího panel
 
 Změní vlastníka ovládacího panelu na místě.
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

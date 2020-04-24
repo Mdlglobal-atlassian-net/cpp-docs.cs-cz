@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746592"
+ms.locfileid: "82032131"
 ---
 # <a name="cpatht-class"></a>Třída CPathT
 
@@ -102,8 +102,8 @@ Třída řetězce ATL/MFC, která má být pro cestu používána (viz [CStringT
 |[CPathT::Kanoián](#canonicalize)|Volání této metody převést cestu do kanonického formuláře.|
 |[CPatht::Kombinovat](#combine)|Volání této metody zřetězit řetězec představující název adresáře a řetězec představující název cesty souboru do jedné cesty.|
 |[CPathT::CommonPrefix](#commonprefix)|Volání této metody k určení, zda zadaná cesta sdílí společnou předponu s aktuální cestou.|
-|[CPathT::CompactPath](#compactpath)|Volání této metody zkrátit cestu souboru, aby se vešly do dané šířky obrazových bodů nahrazením součástí cesty s elipsy.|
-|[CPathT::CompactPathEx](#compactpathex)|Volání této metody zkrátit cestu k souboru, aby se vešly do daného počtu znaků nahrazením součásti cesty s elipsy.|
+|[CPathT::CompactPath](#compactpath)|Volání této metody zkrátit cestu souboru, aby se vešly do dané šířky obrazových bodů nahrazením součásti cesty se třemi tečkami.|
+|[CPathT::CompactPathEx](#compactpathex)|Volání této metody zkrátit cestu k souboru, aby se vešly do daného počtu znaků nahrazením součásti cesty se třemi tečkami.|
 |[CPathT::FileExists](#fileexists)|Volání této metody ke kontrole, zda soubor v tomto názvu cesty existuje.|
 |[CPatht::FindExtension](#findextension)|Volání této metody najít pozici přípony souboru v rámci cesty.|
 |[CPatht::FindFileName](#findfilename)|Volání této metody najít pozici názvu souboru v rámci cesty.|
@@ -288,7 +288,7 @@ Předpona je jedním z těchto\\\\typů: "C: ", ".", "..", "..", ".. \\\\". Dal�
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Volání této metody zkrátit cestu souboru, aby se vešly do dané šířky obrazových bodů nahrazením součástí cesty s elipsy.
+Volání této metody zkrátit cestu souboru, aby se vešly do dané šířky obrazových bodů nahrazením součásti cesty se třemi tečkami.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ Další informace naleznete v tématu [PathCompactPath](/windows/win32/api/shlwa
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Volání této metody zkrátit cestu k souboru, aby se vešly do daného počtu znaků nahrazením součásti cesty s elipsy.
+Volání této metody zkrátit cestu k souboru, aby se vešly do daného počtu znaků nahrazením součásti cesty se třemi tečkami.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
