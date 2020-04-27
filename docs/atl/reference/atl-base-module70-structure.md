@@ -1,5 +1,5 @@
 ---
-title: _Atl_base_module70 – struktura
+title: Struktura _ATL_BASE_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_ATL_BASE_MODULE70
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260984"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168641"
 ---
-# <a name="atlbasemodule70-structure"></a>_Atl_base_module70 – struktura
+# <a name="_atl_base_module70-structure"></a>Struktura _ATL_BASE_MODULE70
 
-Používat jakýkoli projekt, který používá knihovnu ATL.
+Používáno jakýmkoli projektem, který používá ATL.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInst;
@@ -38,37 +38,37 @@ struct _ATL_BASE_MODULE70 {
 ## <a name="members"></a>Členové
 
 `cbSize`<br/>
-Velikost struktury, použít pro správu verzí.
+Velikost struktury, která se používá pro správu verzí.
 
 `m_hInst`<br/>
-`hInstance` Pro tento modul (exe nebo dll).
+`hInstance` Pro tento modul (buď exe nebo DLL).
 
 `m_hInstResource`<br/>
-Výchozí instance prostředků popisovač.
+Výchozí popisovač prostředku instance
 
 `m_bNT5orWin98`<br/>
-Informace o verzi operačního systému. Vnitřně jej používá knihovnu ATL.
+Informace o verzi operačního systému. Interně používá ATL.
 
 `dwAtlBuildVer`<br/>
-Obsahuje verzi knihovny ATL. Aktuálně 0x0700.
+Ukládá verzi knihovny ATL. Aktuálně se 0x0700.
 
 `pguidVer`<br/>
-ATL interní identifikátor GUID.
+Vnitřní identifikátor GUID knihovny ATL
 
 `m_csResource`<br/>
-Používá k synchronizaci přístupu k `m_rgResourceInstance` pole. Vnitřně jej používá knihovnu ATL.
+Slouží k synchronizaci přístupu k `m_rgResourceInstance` poli. Interně používá ATL.
 
 `m_rgResourceInstance`<br/>
-Pole použitá k vyhledání prostředků ve všech instancích prostředků, které ATL je vědět. Vnitřně jej používá knihovnu ATL.
+Pole, které slouží k hledání prostředků ve všech instancích prostředků, na kterých je aplikace ATL vědoma. Interně používá ATL.
 
 ## <a name="remarks"></a>Poznámky
 
-[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) je definován jako typedef _atl_base_module70 –.
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) je definován jako definice typu _ATL_BASE_MODULE70.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcore.h
+**Záhlaví:** atlcore. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../../atl/reference/atl-classes.md)

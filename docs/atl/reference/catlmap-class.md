@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlMap
+title: CAtlMap – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlMap
@@ -37,20 +37,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b79e6cbd796569e6ba11c96158099de6c30b310a
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748663"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168056"
 ---
-# <a name="catlmap-class"></a>Třída CAtlMap
+# <a name="catlmap-class"></a>CAtlMap – třída
 
-Tato třída poskytuje metody pro vytváření a správu objektu mapy.
+Tato třída poskytuje metody pro vytvoření a správu objektu mapy.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename K,
           typename V,
           class KTraits = CElementTraits<K>,
@@ -58,106 +58,106 @@ template <typename K,
 class CAtlMap
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klíčového prvku.
+Klíčový typ elementu.
 
-*V*<br/>
-Typ prvku hodnoty.
+*ICES*<br/>
+Typ elementu hodnoty.
 
-*KTraity*<br/>
-Kód používaný ke kopírování nebo přesunutí klíčových prvků. Další podrobnosti najdete v [části CElementTraits Class.](../../atl/reference/celementtraits-class.md)
+*KTraits*<br/>
+Kód použitý ke kopírování nebo přesunutí klíčových prvků. Další podrobnosti najdete v tématu [Třída CElementTraits](../../atl/reference/celementtraits-class.md) .
 
 *VTraits*<br/>
-Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
+Kód použitý ke zkopírování nebo přesunutí hodnot prvků.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné typedefs
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|[CAtlMap::KINARGTYPE](#kinargtype)|Typ použitý při předání klíče jako vstupní argument|
-|[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ použitý při vrácení klíče jako výstupního argumentu.|
-|[CAtlMap::VINARGTYPE](#vinargtype)|Typ použitý při předání hodnoty jako vstupní argument.|
-|[CAtlMap::VOUTARGTYPE](#voutargtype)|Typ použitý při předání hodnoty jako výstupní argument.|
+|[CAtlMap::KINARGTYPE](#kinargtype)|Typ, který se použije, když se klíč předává jako vstupní argument.|
+|[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ, který se použije, když se klíč vrátí jako výstupní argument.|
+|[CAtlMap::VINARGTYPE](#vinargtype)|Typ, který se použije, když se hodnota předává jako vstupní argument.|
+|[CAtlMap::VOUTARGTYPE](#voutargtype)|Typ, který se použije, když se hodnota předává jako výstupní argument.|
 
 ### <a name="public-classes"></a>Veřejné třídy
 
 |Název|Popis|
 |----------|-----------------|
-|[CAtlMap::Třída CPair](#cpair_class)|Třída obsahující klíčové a hodnotové prvky.|
+|[CAtlMap:: CPair – třída](#cpair_class)|Třída obsahující prvky klíče a hodnoty.|
 
-### <a name="cpair-data-members"></a>CPair Data Members
+### <a name="cpair-data-members"></a>Datové členy CPair
 
 |Název|Popis|
 |----------|-----------------|
-|[CPair::m_key](#m_key)|Datový člen ukládání klíčový prvek.|
-|[CPair::m_value](#m_value)|Datový člen ukládání elementvalue.|
+|[CPair:: m_key](#m_key)|Datový člen, který ukládá klíč elementu.|
+|[CPair:: m_value](#m_value)|Datový člen, který ukládá prvek hodnoty.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
 |Název|Popis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor|
-|[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
+|[CAtlMap:: ~ CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CAtlMap::AssertValid](#assertvalid)|Volání této metody způsobit ASSERT, `CAtlMap` pokud není platný.|
-|[CAtlMap::DisableAutoRehash](#disableautorehash)|Volání této metody zakázat automatické předhasování objektu. `CAtlMap`|
-|[CAtlMap::Povolitautorehash](#enableautorehash)|Volání této metody povolit automatické předhasování objektu. `CAtlMap`|
-|[CAtlMap::GetAt](#getat)|Volání této metody vrátit prvek na zadanou pozici v mapě.|
-|[CAtlMap::GetCount](#getcount)|Volání této metody načíst počet prvků v mapě.|
-|[CAtlMap::GetHashTableSize](#gethashtablesize)|Volánítéto metody k určení počtu přihrádek v tabulce hash mapy.|
-|[CAtlMap::GetKeyAt](#getkeyat)|Volání této metody načíst klíč uložený `CAtlMap` na dané pozici v objektu.|
-|[CAtlMap::GetNext](#getnext)|Volání této metody získat ukazatel na další dvojici elementu uložené v objektu. `CAtlMap`|
-|[CAtlMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
-|[CAtlMap::GetNextKey](#getnextkey)|Volání této metody načíst další `CAtlMap` klíč z objektu.|
-|[CAtlMap::Hodnota GetNextValue](#getnextvalue)|Volání této metody získat další `CAtlMap` hodnotu z objektu.|
-|[CAtlMap::GetStartPosition](#getstartposition)|Volání této metody ke spuštění iterace mapy.|
-|[CAtlMap::GetValueAt](#getvalueat)|Volání této metody načíst hodnotu uloženou `CAtlMap` na dané pozici v objektu.|
-|[CAtlMap::InitHashTable](#inithashtable)|Volání této metody k inicializaci tabulky hash.|
-|[CAtlMap::IsEmpty](#isempty)|Volání této metody k testování objektu prázdné mapy.|
-|[CAtlMap::Vyhledávání](#lookup)|Volání této metody vyhledat klíče nebo `CAtlMap` hodnoty v objektu.|
-|[CAtlMap::Přehasit](#rehash)|Volání této metody přemístit `CAtlMap` objekt.|
-|[CAtlMap::OdstranitVše](#removeall)|Volání této metody odebrat `CAtlMap` všechny prvky z objektu.|
-|[CAtlMap::RemoveAtPos](#removeatpos)|Volání této metody odebrat prvek na `CAtlMap` dané pozici v objektu.|
-|[CAtlMap::Odebrat klíč](#removekey)|Volání této metody odebrat `CAtlMap` prvek z objektu, daný klíč.|
-|[CAtlMap::SetAt](#setat)|Volání této metody vložit pár elementů do mapy.|
-|[CAtlMap::SetOptimalLoad](#setoptimalload)|Volání této metody nastavit optimální `CAtlMap` zatížení objektu.|
-|[CAtlMap::SetValueAt](#setvalueat)|Volání této metody změnit hodnotu uloženou `CAtlMap` na dané pozici v objektu.|
+|[CAtlMap::AssertValid](#assertvalid)|Zavolejte tuto metodu, aby způsobila kontrolní výraz `CAtlMap` , pokud není platný.|
+|[CAtlMap::D isableAutoRehash](#disableautorehash)|Voláním této metody zakážete automatické přegenerování hodnot hash `CAtlMap` objektu.|
+|[CAtlMap::EnableAutoRehash](#enableautorehash)|Zavolejte tuto metodu, pokud chcete povolit automatické převrácení hodnot `CAtlMap` hash objektu.|
+|[CAtlMap::GetAt](#getat)|Voláním této metody vrátí prvek na zadané pozici v mapě.|
+|[CAtlMap:: GetCount](#getcount)|Voláním této metody načtete počet prvků v mapě.|
+|[CAtlMap::GetHashTableSize](#gethashtablesize)|Voláním této metody určíte počet přihrádek v tabulce hash mapy.|
+|[CAtlMap::GetKeyAt](#getkeyat)|Voláním této metody načtete klíč uložený na dané pozici v `CAtlMap` objektu.|
+|[CAtlMap:: GetNext](#getnext)|Zavolejte tuto metodu, chcete-li získat ukazatel na další pár prvků uložený `CAtlMap` v objektu.|
+|[CAtlMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iteraci.|
+|[CAtlMap::GetNextKey](#getnextkey)|Voláním této metody načtete další klíč z `CAtlMap` objektu.|
+|[CAtlMap::GetNextValue](#getnextvalue)|Zavolejte tuto metodu pro získání další hodnoty z `CAtlMap` objektu.|
+|[CAtlMap::GetStartPosition](#getstartposition)|Voláním této metody spustíte iteraci mapy.|
+|[CAtlMap::GetValueAt](#getvalueat)|Voláním této metody načtete hodnotu uloženou v dané pozici v `CAtlMap` objektu.|
+|[CAtlMap::InitHashTable](#inithashtable)|Voláním této metody inicializujete zatřiďovací tabulku.|
+|[CAtlMap::-Empty](#isempty)|Voláním této metody otestujete prázdný objekt mapy.|
+|[CAtlMap:: Lookup](#lookup)|Zavolejte tuto metodu pro vyhledání klíčů nebo hodnot v `CAtlMap` objektu.|
+|[CAtlMap:: rehash – hodnota](#rehash)|Voláním této metody znovu vyhodnotit hodnotu hash `CAtlMap` objektu.|
+|[CAtlMap::RemoveAll](#removeall)|Voláním této metody odeberete všechny prvky z `CAtlMap` objektu.|
+|[CAtlMap::RemoveAtPos](#removeatpos)|Zavolejte tuto metodu pro odebrání prvku na dané pozici v `CAtlMap` objektu.|
+|[CAtlMap::RemoveKey](#removekey)|Voláním této metody odeberete prvek z `CAtlMap` objektu, který je daným klíčem.|
+|[CAtlMap::SetAt](#setat)|Voláním této metody vložíte dvojici elementů do mapy.|
+|[CAtlMap::SetOptimalLoad](#setoptimalload)|Zavolejte tuto metodu pro nastavení optimálního zatížení `CAtlMap` objektu.|
+|[CAtlMap::SetValueAt](#setvalueat)|Voláním této metody změníte hodnotu uloženou v dané pozici v `CAtlMap` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CAtlMap::operátor\[\]](catlmap-class.md#operator_at)|Nahradí nebo přidá nový prvek `CAtlMap`do .|
+|[CAtlMap:: operator\[\]](catlmap-class.md#operator_at)|Nahradí nebo přidá nový prvek do `CAtlMap`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAtlMap`poskytuje podporu pro mapování pole libovolného daného typu, správa neuspořádané pole klíčových prvků a jejich přidružené hodnoty. Prvky (skládající se z klíče a hodnoty) jsou uloženy pomocí algoritmu hash, což umožňuje efektivně ukládat a načítat velké množství dat.
+`CAtlMap`poskytuje podporu pro pole mapování libovolného daného typu a spravuje neuspořádané pole klíčových prvků a jejich přidružených hodnot. Prvky (skládající se z klíče a hodnoty) jsou uloženy pomocí algoritmu hash, který umožňuje efektivně Uložit a načíst velké množství dat.
 
-*Parametry KTraits* a *VTraits* jsou třídy vlastností, které obsahují jakýkoli doplňkový kód potřebný ke kopírování nebo přesouvání prvků.
+Parametry *KTraits* a *VTraits* jsou vlastnosti třídy, které obsahují jakýkoliv doplňkový kód potřebný ke kopírování nebo přesunutí prvků.
 
-Alternativu `CAtlMap` k nabízí třída [CRBMap.](../../atl/reference/crbmap-class.md) `CRBMap`také ukládá dvojice klíč/hodnota, ale vykazuje různé charakteristiky výkonu. Doba, která byla doba, která byla tázat `CRBMap` vložením položky, vyhledáním klíče nebo odstraněním klíče z objektu, je *příkazlog(n)*, kde *n* je počet prvků. Pro `CAtlMap`všechny tyto operace obvykle trvat konstantní čas, i když nejhorší scénáře mohou být pořadí *n*. Proto `CAtlMap` je v typickém případě rychlejší.
+Alternativa k `CAtlMap` je nabízena třídou [CRBMap](../../atl/reference/crbmap-class.md) . `CRBMap`také ukládá páry klíč/hodnota, ale vykazuje různé charakteristiky výkonu. Čas potřebný k vložení položky, vyhledání klíče nebo odstranění klíče z `CRBMap` objektu je pořadí *protokolu (n)*, kde *n* je počet prvků. U `CAtlMap`všech těchto operací obvykle trvá konstantní čas, ale nejhorších případů může být objednávka *n*. Proto `CAtlMap` je v typickém případě rychlejší.
 
-Další rozdíl `CRBMap` mezi `CAtlMap` a se projeví při itací prostřednictvím uložených prvků. V `CRBMap`a , prvky jsou navštíveny v seřazené pořadí. V `CAtlMap`a , prvky nejsou uspořádány a nelze odvodit žádné pořadí.
+Druhý rozdíl mezi `CRBMap` a `CAtlMap` se projeví při iteraci prostřednictvím uložených prvků. V `CRBMap`, jsou prvky navštíveny v seřazeném pořadí. V `CAtlMap`, prvky nejsou seřazené a nelze odvodit žádnou objednávku.
 
-Když malý počet prvků, které mají být uloženy, zvažte použití [CSimpleMap](../../atl/reference/csimplemap-class.md) třídy místo.
+Pokud je třeba uložit malý počet prvků, zvažte místo toho použití třídy [CSimpleMap](../../atl/reference/csimplemap-class.md) .
 
-Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekcí ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcoll.h
+**Záhlaví:** atlcoll. h
 
 ## <a name="catlmapassertvalid"></a><a name="assertvalid"></a>CAtlMap::AssertValid
 
-Volání této metody způsobit ASSERT, `CAtlMap` pokud objekt není platný.
+Zavolejte tuto metodu, aby způsobila kontrolní výraz `CAtlMap` , pokud je objekt neplatný.
 
 ```cpp
 void AssertValid() const;
@@ -165,17 +165,17 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění tato metoda způsobí ASSERT, `CAtlMap` pokud objekt není platný.
+V ladicích sestaveních Tato metoda vyvolá kontrolní výraz, pokud `CAtlMap` je objekt neplatný.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
 ## <a name="catlmapcatlmap"></a><a name="catlmap"></a>CAtlMap::CAtlMap
 
 Konstruktor
 
-```
+```cpp
 CAtlMap(
     UINT nBins = 17,
     float fOptimalLoad = 0.75f,
@@ -187,67 +187,67 @@ CAtlMap(
 ### <a name="parameters"></a>Parametry
 
 *nBins*<br/>
-Počet přihrádek poskytujících ukazatele na uložené prvky. Vysvětlení přihrádek naleznete dále v tématu poznámky.
+Počet přihrádek, které poskytují ukazatele na uložené prvky. Vysvětlení přihrádek najdete v části poznámky dále v tomto tématu.
 
 *fOptimalLoad*<br/>
 Optimální poměr zatížení.
 
 *fLoThreshold*<br/>
-Nižší prahová hodnota pro poměr zatížení.
+Dolní prahová hodnota poměru zatížení.
 
 *fHiThreshold*<br/>
-Horní práh pro poměr zatížení.
+Horní prahová hodnota pro poměr zatížení.
 
 *nBlockSize*<br/>
-Velikost bloku.
+Velikost bloku
 
 ### <a name="remarks"></a>Poznámky
 
-`CAtlMap`odkazuje na všechny jeho uložené prvky nejprve vytvořením indexu pomocí algoritmu hash na klíč. Tento index odkazuje na "bin", který obsahuje ukazatel na uložené prvky. Pokud je přihrádka již používána, vytvoří se propojený seznam pro přístup k následujícím prvkům. Procházení seznamu je pomalejší než přímý přístup ke správnému prvku, a proto struktura mapy potřebuje vyvážit požadavky na úložiště oproti výkonu. Výchozí parametry byly vybrány tak, aby ve většině případů poskytly dobré výsledky.
+`CAtlMap`odkazuje na všechny uložené prvky nejprve vytvořením indexu pomocí algoritmu hash na klíč. Tento index odkazuje na "přihrádku", která obsahuje ukazatel na uložené prvky. Pokud je přihrádka již používána, je vytvořen propojený seznam pro přístup k dalším prvkům. Procházení seznamu je pomalejší než přímý přístup ke správnému prvku, takže struktura mapy musí vyvážit požadavky na úložiště proti výkonu. Ve většině případů byly zvoleny výchozí parametry k poskytnutí dobrých výsledků.
 
-Poměr vytížení je poměr počtu přihrádek k počtu prvků uložených v objektu mapy. Po přepočítání struktury mapy se hodnota *parametru fOptimalLoad* použije k výpočtu počtu požadovaných přihrádek. Tuto hodnotu lze změnit pomocí metody [CAtlMap::SetOptimalLoad.](#setoptimalload)
+Poměr zatížení je poměr počtu přihrádek k počtu prvků uložených v objektu map. Při přepočítání struktury mapy se hodnota parametru *fOptimalLoad* použije k výpočtu počtu požadovaných přihrádek. Tuto hodnotu lze změnit pomocí metody [CAtlMap:: SetOptimalLoad](#setoptimalload) .
 
-Parametr *fLoThreshold* je nižší hodnota, které může `CAtlMap` poměr zatížení dosáhnout, než přepočítá optimální velikost mapy.
+Parametr *fLoThreshold* je nižší hodnota, kterou může poměr zatížení dosáhnout, než `CAtlMap` bude přepočítána optimální velikost mapy.
 
-Parametr *fHiThreshold* je horní hodnota, které může `CAtlMap` poměr zatížení dosáhnout, než objekt přepočítá optimální velikost mapy.
+Parametr *fHiThreshold* je horní hodnota, kterou může poměr zatížení dosáhnout, než bude `CAtlMap` objekt přepočítat optimální velikost mapy.
 
-Tento proces přepočtu (označovaný jako předhasování) je ve výchozím nastavení povolen. Pokud chcete zakázat tento proces, možná při zadávání velké množství dat najednou, volejte [CAtlMap::DisableAutoRehash](#disableautorehash) metoda. Znovu jej aktivujte metodou [CAtlMap::EnableAutoRehash.](#enableautorehash)
+Tento proces přepočítání (označovaný jako rehashing) je ve výchozím nastavení povolený. Pokud chcete tento proces zakázat, třeba při současném zadání velkého množství dat, zavolejte metodu [CAtlMap::D isableautorehash](#disableautorehash) . Znovu ji aktivujte pomocí metody [CAtlMap:: EnableAutoRehash](#enableautorehash) .
 
-Parametr *nBlockSize* je míra velikosti paměti přidělené při použití nového prvku. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků.
+Parametr *nBlockSize* je míra množství paměti přidělené při požadování nového prvku. Větší velikosti bloků snižují volání rutin přidělování paměti, ale používají více prostředků.
 
-Před uložením všech dat je nutné inicializovat tabulku hash voláním [CAtlMap::InitHashTable](#inithashtable).
+Předtím, než mohou být data uložena, je nutné inicializovat zatřiďovací tabulku voláním metody [CAtlMap:: InitHashTable](#inithashtable).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-## <a name="catlmapcatlmap"></a><a name="dtor"></a>CAtlMap::~CAtlMap
+## <a name="catlmapcatlmap"></a><a name="dtor"></a>CAtlMap:: ~ CAtlMap
 
 Destruktor.
 
-```
+```cpp
 ~CAtlMap() throw();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené zdroje.
+Uvolní všechny přidělené prostředky.
 
-## <a name="catlmapcpair-class"></a><a name="cpair_class"></a>CAtlMap::Třída CPair
+## <a name="catlmapcpair-class"></a><a name="cpair_class"></a>CAtlMap:: CPair – třída
 
-Třída obsahující klíčové a hodnotové prvky.
+Třída obsahující prvky klíče a hodnoty.
 
-```
+```cpp
 class CPair : public __POSITION
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída se používá metody [CAtlMap::GetNext](#getnext) a [CAtlMap::Lookup](#lookup) pro přístup ke klíči a hodnotě prvků uložených ve struktuře mapování.
+Tuto třídu používají metody [CAtlMap:: GetNext](#getnext) a [CAtlMap:: Lookup](#lookup) pro přístup k klíčovým a hodnotovým prvkům uloženým ve struktuře mapování.
 
-## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a>CAtlMap::DisableAutoRehash
+## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a>CAtlMap::D isableAutoRehash
 
-Volání této metody zakázat automatické předhasování objektu. `CAtlMap`
+Voláním této metody zakážete automatické přegenerování hodnot hash `CAtlMap` objektu.
 
 ```cpp
 void DisableAutoRehash() throw();
@@ -255,13 +255,13 @@ void DisableAutoRehash() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je povoleno automatické předělávka (což je ve výchozím nastavení), počet přihrádek v tabulce hash bude automaticky přepočítán, pokud hodnota načtení (poměr počtu přihrádek k počtu prvků uložených v poli) překročí maximální nebo minimální hodnoty zadané v době, kdy byla mapa vytvořena.
+Pokud je povoleno automatické opětovné použití algoritmu hash (což je ve výchozím nastavení), počet přihrádek v zatřiďovací tabulce bude automaticky přepočítán, pokud hodnota zatížení (poměr počtu přihrádek k počtu prvků uložených v poli) překračuje maximální nebo minimální hodnoty zadané v době vytvoření mapy.
 
-`DisableAutoRehash`je nejužitečnější, když bude na mapu přidáno velké množství prvků najednou. Namísto spuštění procesu předhasování pokaždé, když jsou překročeny limity, `DisableAutoRehash`je efektivnější volat , přidat prvky a nakonec volat [CAtlMap::EnableAutoRehash](#enableautorehash).
+`DisableAutoRehash`je nejužitečnější, když se do mapy najednou přidá velký počet prvků. Namísto aktivace procesu rehashování při každém překročení omezení je efektivnější volat `DisableAutoRehash`, přidat prvky a nakonec zavolat [CAtlMap:: EnableAutoRehash](#enableautorehash).
 
-## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a>CAtlMap::Povolitautorehash
+## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a>CAtlMap::EnableAutoRehash
 
-Volání této metody povolit automatické předhasování objektu. `CAtlMap`
+Zavolejte tuto metodu, pokud chcete povolit automatické převrácení hodnot `CAtlMap` hash objektu.
 
 ```cpp
 void EnableAutoRehash() throw();
@@ -269,13 +269,13 @@ void EnableAutoRehash() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je povoleno automatické předělávka (což je ve výchozím nastavení), počet přihrádek v tabulce hash bude automaticky přepočítán, pokud hodnota načtení (poměr počtu přihrádek k počtu prvků uložených v poli) překročí maximální nebo minimální hodnoty zadané v době vytvoření mapy.
+Pokud je povoleno automatické opětovné použití algoritmu hash (což je ve výchozím nastavení), počet přihrádek v zatřiďovací tabulce bude automaticky přepočítán, pokud hodnota zatížení (poměr počtu přihrádek k počtu prvků uložených v poli) překračuje maximální nebo minimální hodnoty zadané v době vytvoření mapy.
 
-`EnableAutoRefresh`se nejčastěji používá po volání [CAtlMap::DisableAutoRehash](#disableautorehash).
+`EnableAutoRefresh`se nejčastěji používá po volání [CAtlMap::D isableautorehash](#disableautorehash).
 
 ## <a name="catlmapgetat"></a><a name="getat"></a>CAtlMap::GetAt
 
-Volání této metody vrátit prvek na zadanou pozici v mapě.
+Voláním této metody vrátí prvek na zadané pozici v mapě.
 
 ```cpp
 void GetAt(
@@ -288,10 +288,10 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
-*key*<br/>
+*zkrat*<br/>
 Parametr šablony určující typ klíče mapy.
 
 *value*<br/>
@@ -299,82 +299,82 @@ Parametr šablony určující typ hodnoty mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na aktuální dvojici prvků klíč/hodnota uložená v mapě.
+Vrátí ukazatel na aktuální dvojici prvků klíč/hodnota uložených v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestaveních ladění dojde k chybě kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud je *POS* rovna hodnotě null.
 
-## <a name="catlmapgetcount"></a><a name="getcount"></a>CAtlMap::GetCount
+## <a name="catlmapgetcount"></a><a name="getcount"></a>CAtlMap:: GetCount
 
-Volání této metody načíst počet prvků v mapě.
+Voláním této metody načtete počet prvků v mapě.
 
-```
+```cpp
 size_t GetCount() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet prvků v objektu mapy. Jeden prvek je pár klíč/hodnota.
+Vrátí počet prvků v objektu map. Jediným prvkem je pár klíč/hodnota.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
 ## <a name="catlmapgethashtablesize"></a><a name="gethashtablesize"></a>CAtlMap::GetHashTableSize
 
-Volánítéto metody k určení počtu přihrádek v tabulce hash mapy.
+Voláním této metody určíte počet přihrádek v tabulce hash mapy.
 
-```
+```cpp
 UINT GetHashTableSize() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet přihrádek v tabulce hash. Vysvětlení naleznete [v tématu CAtlMap::CAtlMap.](#catlmap)
+Vrátí počet přihrádek v zatřiďovací tabulce. Vysvětlení naleznete v tématu [CAtlMap:: CAtlMap](#catlmap) .
 
 ## <a name="catlmapgetkeyat"></a><a name="getkeyat"></a>CAtlMap::GetKeyAt
 
-Volání této metody načíst klíč uložený `CAtlMap` na dané pozici v objektu.
+Voláním této metody načtete klíč uložený na dané pozici v `CAtlMap` objektu.
 
-```
+```cpp
 const K& GetKeyAt(POSITION pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na klíč uložený na `CAtlMap` dané pozici v objektu.
+Vrátí odkaz na klíč uložený na dané pozici v `CAtlMap` objektu.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
-## <a name="catlmapgetnext"></a><a name="getnext"></a>CAtlMap::GetNext
+## <a name="catlmapgetnext"></a><a name="getnext"></a>CAtlMap:: GetNext
 
-Volání této metody získat ukazatel na další dvojici elementu uložené v objektu. `CAtlMap`
+Zavolejte tuto metodu, chcete-li získat ukazatel na další pár prvků uložený `CAtlMap` v objektu.
 
-```
+```cpp
 CPair* GetNext(POSITION& pos) throw();
 const CPair* GetNext(POSITION& pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na další dvojici prvků klíč/hodnota uložená v mapě. Čítač pozice *pos* je aktualizován po každém volání. Pokud načtený prvek je poslední v mapě, *pos* je nastavena na HODNOTU NULL.
+Vrátí ukazatel na další dvojici prvků klíč/hodnota uložených v mapě. Čítač pozice *POS* se aktualizuje po každém volání. Pokud je načtený element poslední v mapě, *POS* je nastaven na hodnotu null.
 
 ## <a name="catlmapgetnextassoc"></a><a name="getnextassoc"></a>CAtlMap::GetNextAssoc
 
-Získá další prvek pro iterace.
+Získá další prvek pro iteraci.
 
 ```cpp
 void GetNextAssoc(
@@ -385,10 +385,10 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
-*key*<br/>
+*zkrat*<br/>
 Parametr šablony určující typ klíče mapy.
 
 *value*<br/>
@@ -396,20 +396,20 @@ Parametr šablony určující typ hodnoty mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-Čítač pozice *pos* je aktualizován po každém volání. Pokud načtený prvek je poslední v mapě, *pos* je nastavena na HODNOTU NULL.
+Čítač pozice *POS* se aktualizuje po každém volání. Pokud je načtený element poslední v mapě, *POS* je nastaven na hodnotu null.
 
 ## <a name="catlmapgetnextkey"></a><a name="getnextkey"></a>CAtlMap::GetNextKey
 
-Volání této metody načíst další `CAtlMap` klíč z objektu.
+Voláním této metody načtete další klíč z `CAtlMap` objektu.
 
-```
+```cpp
 const K& GetNextKey(POSITION& pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -417,21 +417,21 @@ Vrátí odkaz na další klíč v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje aktuální čítač *pozice, pos*. Pokud nejsou žádné další položky v mapě, čítač pozice je nastavena na hodnotu NULL.
+Aktualizuje čítač aktuální pozice, *POS*. Pokud na mapě nejsou žádné další položky, je čítač pozice nastaven na hodnotu NULL.
 
-## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a>CAtlMap::Hodnota GetNextValue
+## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a>CAtlMap::GetNextValue
 
-Volání této metody získat další `CAtlMap` hodnotu z objektu.
+Zavolejte tuto metodu pro získání další hodnoty z `CAtlMap` objektu.
 
-```
+```cpp
 V& GetNextValue(POSITION& pos) throw();
 const V& GetNextValue(POSITION& pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -439,58 +439,58 @@ Vrátí odkaz na další hodnotu v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje aktuální čítač *pozice, pos*. Pokud nejsou žádné další položky v mapě, čítač pozice je nastavena na hodnotu NULL.
+Aktualizuje čítač aktuální pozice, *POS*. Pokud na mapě nejsou žádné další položky, je čítač pozice nastaven na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
 ## <a name="catlmapgetstartposition"></a><a name="getstartposition"></a>CAtlMap::GetStartPosition
 
-Volání této metody ke spuštění iterace mapy.
+Voláním této metody spustíte iteraci mapy.
 
-```
+```cpp
 POSITION GetStartPosition() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počáteční pozici nebo null je vrácena, pokud je mapa prázdná.
+Vrátí počáteční pozici, nebo je vrácena hodnota NULL, pokud je mapa prázdná.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této metody spustit iteraci mapy vrácením position hodnotu, která může být předána metodě. `GetNextAssoc`
+Voláním této metody spustíte iteraci mapy vrácením hodnoty pozice, kterou lze předat `GetNextAssoc` metodě.
 
 > [!NOTE]
-> Pořadí iterace není předvídatelné.
+> Posloupnost iterace není předvídatelná.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
 ## <a name="catlmapgetvalueat"></a><a name="getvalueat"></a>CAtlMap::GetValueAt
 
-Volání této metody načíst hodnotu uloženou `CAtlMap` na dané pozici v objektu.
+Voláním této metody načtete hodnotu uloženou v dané pozici v `CAtlMap` objektu.
 
-```
+```cpp
 V& GetValueAt(POSITION pos) throw();
 const V& GetValueAt(POSITION pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na hodnotu uloženou na `CAtlMap` dané pozici v objektu.
+Vrátí odkaz na hodnotu uloženou na dané pozici v `CAtlMap` objektu.
 
 ## <a name="catlmapinithashtable"></a><a name="inithashtable"></a>CAtlMap::InitHashTable
 
-Volání této metody k inicializaci tabulky hash.
+Voláním této metody inicializujete zatřiďovací tabulku.
 
-```
+```cpp
 bool InitHashTable(
     UINT nBins,
     bool bAllocNow = true);
@@ -499,58 +499,58 @@ bool InitHashTable(
 ### <a name="parameters"></a>Parametry
 
 *nBins*<br/>
-Počet přihrádek používaných v tabulce hash. Vysvětlení naleznete [v tématu CAtlMap::CAtlMap.](#catlmap)
+Počet přihrádek využívaných zatřiďovací tabulkou. Vysvětlení naleznete v tématu [CAtlMap:: CAtlMap](#catlmap) .
 
-*bAllocNyní*<br/>
-Označení příznaku, kdy by měla být přidělena paměť.
+*bAllocNow*<br/>
+Označení příznaku, když má být přidělena paměť
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA při úspěšné inicializaci, nepravda při selhání.
+Vrátí hodnotu TRUE při úspěšné inicializaci, hodnota FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`InitHashTable`musí být volána před uložením všech prvků do tabulky hash.  Pokud tato metoda není volána explicitně, bude volána automaticky při prvním přidání `CAtlMap` prvku pomocí výpočtu přihrádky určeného konstruktorem.  V opačném případě bude mapa inicializována pomocí nového počtu přihrádek určeného parametrem *nBins.*
+`InitHashTable`musí být volána před tím, než jsou všechny prvky uloženy v zatřiďovací tabulce.  Pokud tato metoda není volána explicitně, bude volána automaticky při prvním přidání prvku pomocí počtu přihrádek určeného `CAtlMap` konstruktorem.  V opačném případě se mapa inicializuje pomocí nového počtu přihrádek zadaného parametrem *nBins* .
 
-Pokud je parametr *bAllocNow* false, paměť vyžadovaná tabulkou hash nebude přidělena, dokud nebude nejprve požadována. To může být užitečné, pokud není jisté, zda bude mapa použita.
+Pokud má parametr *bAllocNow* hodnotu false, paměť vyžadovaná zatřiďovací tabulkou nebude přidělena, dokud není nejprve vyžadováno. To může být užitečné, pokud není jisté, jestli se mapa použije.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
-## <a name="catlmapisempty"></a><a name="isempty"></a>CAtlMap::IsEmpty
+## <a name="catlmapisempty"></a><a name="isempty"></a>CAtlMap::-Empty
 
-Volání této metody k testování objektu prázdné mapy.
+Voláním této metody otestujete prázdný objekt mapy.
 
-```
+```cpp
 bool IsEmpty() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je mapa prázdná, jinak NEPRAVDA.
+Vrátí hodnotu TRUE, pokud je mapa prázdná, jinak FALSE.
 
 ## <a name="catlmapkinargtype"></a><a name="kinargtype"></a>CAtlMap::KINARGTYPE
 
-Typ použitý při předání klíče jako vstupní argument.
+Typ, který se použije, když se klíč předává jako vstupní argument.
 
-```
+```cpp
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
 ## <a name="catlmapkoutargtype"></a><a name="koutargtype"></a>CAtlMap::KOUTARGTYPE
 
-Typ použitý při vrácení klíče jako výstupního argumentu.
+Typ, který se použije, když se klíč vrátí jako výstupní argument.
 
-```
+```cpp
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-## <a name="catlmaplookup"></a><a name="lookup"></a>CAtlMap::Vyhledávání
+## <a name="catlmaplookup"></a><a name="lookup"></a>CAtlMap:: Lookup
 
-Volání této metody vyhledat klíče nebo `CAtlMap` hodnoty v objektu.
+Zavolejte tuto metodu pro vyhledání klíčů nebo hodnot v `CAtlMap` objektu.
 
-```
+```cpp
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const;
 const CPair* Lookup(KINARGTYPE key) const throw();
 CPair* Lookup(KINARGTYPE key) throw();
@@ -558,32 +558,32 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*zkrat*<br/>
 Určuje klíč, který identifikuje prvek, který má být vyhledán.
 
 *value*<br/>
-Proměnná, která obdrží hodnotu vyhledat.
+Proměnná, která přijímá vyhledaná hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První forma metody vrátí true, pokud je nalezen klíč, jinak false. Druhý a třetí formulář vrátit ukazatel [CPair,](#cpair_class) který lze použít jako pozici pro volání [CAtlMap::GetNext](#getnext) a tak dále.
+První forma metody vrátí hodnotu true, pokud je klíč nalezen, v opačném případě false. Druhý a třetí formulář vrátí ukazatel na [CPair](#cpair_class) , který lze použít jako pozici pro volání [CAtlMap:: GetNext](#getnext) a tak dále.
 
 ### <a name="remarks"></a>Poznámky
 
-`Lookup`používá algoritmus hash rychle najít prvek mapy obsahující klíč, který přesně odpovídá danému klíčovému parametru.
+`Lookup`používá algoritmus hash k rychlému nalezení mapového prvku obsahujícího klíč, který přesně odpovídá zadanému klíčovému parametru.
 
-## <a name="catlmapoperator-"></a><a name="operator_at"></a>CAtlMap::operátor\[\]
+## <a name="catlmapoperator-"></a><a name="operator_at"></a>CAtlMap:: operator\[\]
 
-Nahradí nebo přidá nový prvek `CAtlMap`do .
+Nahradí nebo přidá nový prvek do `CAtlMap`.
 
-```
+```cpp
 V& operator[](kinargtype key) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč prvku přidat nebo nahradit.
+*zkrat*<br/>
+Klíč elementu, který má být přidán nebo nahrazen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -591,11 +591,11 @@ Vrátí odkaz na hodnotu přidruženou k danému klíči.
 
 ### <a name="example"></a>Příklad
 
-Pokud klíč již existuje, prvek je nahrazen. Pokud klíč neexistuje, je přidán nový prvek. Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Pokud klíč již existuje, element je nahrazen. Pokud klíč neexistuje, je přidán nový prvek. Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
-## <a name="catlmaprehash"></a><a name="rehash"></a>CAtlMap::Přehasit
+## <a name="catlmaprehash"></a><a name="rehash"></a>CAtlMap:: rehash – hodnota
 
-Volání této metody přemístit `CAtlMap` objekt.
+Voláním této metody znovu vyhodnotit hodnotu hash `CAtlMap` objektu.
 
 ```cpp
 void Rehash(UINT nBins = 0);
@@ -604,15 +604,15 @@ void Rehash(UINT nBins = 0);
 ### <a name="parameters"></a>Parametry
 
 *nBins*<br/>
-Nový počet přihrádek, které mají být v tabulce hash používány. Vysvětlení naleznete [v tématu CAtlMap::CAtlMap.](#catlmap)
+Nový počet přihrádek, které se mají použít v zatřiďovací tabulce. Vysvětlení naleznete v tématu [CAtlMap:: CAtlMap](#catlmap) .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *nBins* je `CAtlMap` 0, vypočítá přiměřené číslo na základě počtu prvků v mapě a optimální nastavení zatížení. Normálně proces předhasování je automatické, ale pokud [CAtlMap::DisableAutoRehash](#disableautorehash) byla volána, tato metoda provede potřebnou velikost.
+Pokud je *nBins* 0, `CAtlMap` vypočítá přiměřené číslo na základě počtu prvků v mapě a optimálního nastavení zatížení. Proces rehashování je obvykle automatický, ale pokud byl volán [CAtlMap::D isableautorehash](#disableautorehash) , tato metoda provede potřebné změny velikosti.
 
-## <a name="catlmapremoveall"></a><a name="removeall"></a>CAtlMap::OdstranitVše
+## <a name="catlmapremoveall"></a><a name="removeall"></a>CAtlMap::RemoveAll
 
-Volání této metody odebrat `CAtlMap` všechny prvky z objektu.
+Voláním této metody odeberete všechny prvky z `CAtlMap` objektu.
 
 ```cpp
 void RemoveAll() throw();
@@ -620,11 +620,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vymaže `CAtlMap` objekt, uvolnění paměti používané k uložení prvků.
+Vymaže `CAtlMap` objekt a uvolní paměť, která se používá k uložení prvků.
 
 ## <a name="catlmapremoveatpos"></a><a name="removeatpos"></a>CAtlMap::RemoveAtPos
 
-Volání této metody odebrat prvek na `CAtlMap` dané pozici v objektu.
+Zavolejte tuto metodu pro odebrání prvku na dané pozici v `CAtlMap` objektu.
 
 ```cpp
 void RemoveAtPos(POSITION pos) throw();
@@ -632,39 +632,39 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere dvojici klíč/hodnota uloženou na zadané pozici. Paměť použitá k uložení prvku je uvolněna. POZICE odkazovaná *pos* se stane neplatnou a zatímco POZICE jiných prvků v mapě zůstává platná, nemusí nutně zachovat stejné pořadí.
+Odebere dvojici klíč/hodnota uloženou na určené pozici. Paměť použitá k uložení elementu je uvolněna. POZICE, na kterou se odkazuje v *POS* , se změní na neplatnou, a když pozice všech ostatních prvků v mapě zůstane platná, nemusí nutně uchovávat stejnou objednávku.
 
-## <a name="catlmapremovekey"></a><a name="removekey"></a>CAtlMap::Odebrat klíč
+## <a name="catlmapremovekey"></a><a name="removekey"></a>CAtlMap::RemoveKey
 
-Volání této metody odebrat `CAtlMap` prvek z objektu, daný klíč.
+Voláním této metody odeberete prvek z `CAtlMap` objektu, který je daným klíčem.
 
-```
+```cpp
 bool RemoveKey(KINARGTYPE key) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč odpovídající dvojici prvků, kterou chcete odebrat.
+*zkrat*<br/>
+Klíč odpovídající páru prvků, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je klíč nalezen a odebrán, nepravda při selhání.
+Vrátí hodnotu TRUE, pokud se klíč najde a odebere, hodnota FALSE při selhání.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [CAtlMap::CAtlMap](#catlmap).
+Podívejte se na příklad pro [CAtlMap:: CAtlMap](#catlmap).
 
 ## <a name="catlmapsetat"></a><a name="setat"></a>CAtlMap::SetAt
 
-Volání této metody vložit pár elementů do mapy.
+Voláním této metody vložíte dvojici elementů do mapy.
 
-```
+```cpp
 POSITION SetAt(
     KINARGTYPE key,
     VINARGTYPE value);
@@ -672,23 +672,23 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Hodnota klíče, kterou `CAtlMap` chcete přidat k objektu.
+*zkrat*<br/>
+Hodnota klíče, která se má přidat `CAtlMap` do objektu.
 
 *value*<br/>
-Hodnota, kterou chcete `CAtlMap` přidat k objektu.
+Hodnota, která má být přidána `CAtlMap` do objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí pozici páru prvků klíč/hodnota `CAtlMap` v objektu.
+Vrátí pozici páru prvků klíč/hodnota v `CAtlMap` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetAt`nahradí existující prvek, pokud je nalezen odpovídající klíč. Pokud klíč není nalezen, vytvoří se nový pár klíč/hodnota.
+`SetAt`nahradí existující prvek, pokud se najde shodný klíč. Pokud se klíč nenajde, vytvoří se nový pár klíč/hodnota.
 
 ## <a name="catlmapsetoptimalload"></a><a name="setoptimalload"></a>CAtlMap::SetOptimalLoad
 
-Volání této metody nastavit optimální `CAtlMap` zatížení objektu.
+Zavolejte tuto metodu pro nastavení optimálního zatížení `CAtlMap` objektu.
 
 ```cpp
 void SetOptimalLoad(
@@ -704,21 +704,21 @@ void SetOptimalLoad(
 Optimální poměr zatížení.
 
 *fLoThreshold*<br/>
-Nižší prahová hodnota pro poměr zatížení.
+Dolní prahová hodnota poměru zatížení.
 
 *fHiThreshold*<br/>
-Horní práh pro poměr zatížení.
+Horní prahová hodnota pro poměr zatížení.
 
 *bRehashNow*<br/>
-Příznak označující, zda má být tabulka hash přepočítána.
+Příznak označující, zda by měla být přepočítána zatřiďovací tabulka
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda předefinuje optimální hodnotu `CAtlMap` zatížení pro objekt. Viz [CAtlMap::CAtlMap](#catlmap) pro diskusi o různých parametrech. Pokud *bRehashNow* je true a počet prvků je mimo minimální a maximální hodnoty, je přepočítána tabulka hash.
+Tato metoda předefinuje optimální hodnotu zatížení `CAtlMap` objektu. Diskuzi o různých parametrech najdete v tématu [CAtlMap:: CAtlMap](#catlmap) . Pokud má *bRehashNow* hodnotu true a počet prvků je mimo minimální a maximální hodnoty, zatřiďovací tabulka se přepočítá.
 
 ## <a name="catlmapsetvalueat"></a><a name="setvalueat"></a>CAtlMap::SetValueAt
 
-Volání této metody změnit hodnotu uloženou `CAtlMap` na dané pozici v objektu.
+Voláním této metody změníte hodnotu uloženou v dané pozici v `CAtlMap` objektu.
 
 ```cpp
 void SetValueAt(
@@ -728,60 +728,60 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Pos*<br/>
-Čítač pozice vrácený předchozím voláním [CAtlMap::GetNextAssoc](#getnextassoc) nebo [CAtlMap::GetStartPosition](#getstartposition).
+*POS*<br/>
+Čítač pozice vrácený předchozím voláním [CAtlMap:: GetNextAssoc](#getnextassoc) nebo [CAtlMap:: GetStartPosition](#getstartposition).
 
 *value*<br/>
-Hodnota, kterou chcete `CAtlMap` přidat k objektu.
+Hodnota, která má být přidána `CAtlMap` do objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Změní prvek hodnoty uložený v `CAtlMap` dané pozici v objektu.
+Změní element Value uložený na dané pozici v `CAtlMap` objektu.
 
 ## <a name="catlmapvinargtype"></a><a name="vinargtype"></a>CAtlMap::VINARGTYPE
 
-Typ použitý při předání hodnoty jako vstupní argument.
+Typ, který se použije, když se hodnota předává jako vstupní argument.
 
-```
+```cpp
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
 ## <a name="catlmapvoutargtype"></a><a name="voutargtype"></a>CAtlMap::VOUTARGTYPE
 
-Typ použitý při předání hodnoty jako výstupní argument.
+Typ, který se použije, když se hodnota předává jako výstupní argument.
 
-```
+```cpp
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="catlmapcpairm_key"></a><a name="m_key"></a>CAtlMap::CPair::m_key
+## <a name="catlmapcpairm_key"></a><a name="m_key"></a>CAtlMap:: CPair:: m_key
 
-Datový člen ukládání klíčový prvek.
+Datový člen, který ukládá klíč elementu.
 
-```
+```cpp
 const K m_key;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klíčového prvku.
+Klíčový typ elementu.
 
-## <a name="catlmapcpairm_value"></a><a name="m_value"></a>CAtlMap::CPair::m_value
+## <a name="catlmapcpairm_value"></a><a name="m_value"></a>CAtlMap:: CPair:: m_value
 
-Datový člen ukládání elementvalue.
+Datový člen, který ukládá prvek hodnoty.
 
-```
+```cpp
 V  m_value;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*V*<br/>
-Typ prvku hodnoty.
+*ICES*<br/>
+Typ elementu hodnoty.
 
 ## <a name="see-also"></a>Viz také
 
-[Vzorek výběru](../../overview/visual-cpp-samples.md)<br/>
-[Ukázka updatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
+[Ukázka běžícího textu](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

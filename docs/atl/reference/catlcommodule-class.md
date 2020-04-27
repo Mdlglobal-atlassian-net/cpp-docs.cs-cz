@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlComModule
+title: CAtlComModule – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlComModule
@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 68fdb48edc9304d9d74df6f36bd208cfd35ff307
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321486"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168815"
 ---
-# <a name="catlcommodule-class"></a>Třída CAtlComModule
+# <a name="catlcommodule-class"></a>CAtlComModule – třída
 
-Tato třída implementuje serverový modul COM.
+Tato třída implementuje modul COM serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
@@ -33,25 +33,25 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor|
-|[CAtlComModule::~CAtlComModule](#dtor)|Destruktor.|
+|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlComModule::RegisterServer](#registerserver)|Volání této metody aktualizovat systémový registr pro každý objekt v mapě objektu.|
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Volání této metody zaregistrovat knihovnu typů.|
-|[CAtlComModule::UnregisterServer](#unregisterserver)|Volání této metody zrušit registraci každého objektu v mapě objektu.|
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Volání této metody zrušit registraci knihovny typů.|
+|[CAtlComModule::RegisterServer](#registerserver)|Voláním této metody aktualizujete systémový registr pro každý objekt v mapě objektů.|
+|[CAtlComModule::RegisterTypeLib](#registertypelib)|Voláním této metody zaregistrujete knihovnu typů.|
+|[CAtlComModule::UnregisterServer](#unregisterserver)|Voláním této metody zrušíte registraci každého objektu v mapě objektů.|
+|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Voláním této metody zrušíte registraci knihovny typů.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAtlComModule`implementuje serverový modul COM, který umožňuje klientovi přístup ke komponentám modulu.
+`CAtlComModule`implementuje modul COM serveru a umožňuje klientovi přístup k součástem modulu.
 
-Tato třída nahrazuje zastaralou třídu [CComModule](../../atl/reference/ccommodule-class.md) používanou v dřívějších verzích atl. Další podrobnosti naleznete [v části Třídy modulů ATL.](../../atl/atl-module-classes.md)
+Tato třída nahrazuje zastaralou třídu [CComModule](../../atl/reference/ccommodule-class.md) , která se používá v dřívějších verzích knihovny ATL. Další podrobnosti naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -61,13 +61,13 @@ Tato třída nahrazuje zastaralou třídu [CComModule](../../atl/reference/ccomm
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
 ## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 Konstruktor
 
-```
+```cpp
 CAtlComModule() throw();
 ```
 
@@ -75,37 +75,37 @@ CAtlComModule() throw();
 
 Inicializuje modul.
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule::~CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule
 
 Destruktor.
 
-```
+```cpp
 ~CAtlComModule();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Osvobozuje všechny třídní továrny.
+Uvolní všechny továrny tříd.
 
 ## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
 
-Volání této metody aktualizovat systémový registr pro každý objekt v mapě objektu.
+Voláním této metody aktualizujete systémový registr pro každý objekt v mapě objektů.
 
-```
+```cpp
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-TRUE, pokud má být knihovna typů registrována. Výchozí hodnota je FALSE.
+TRUE, pokud má být zaregistrována knihovna typů. Výchozí hodnota je FALSE (NEPRAVDA).
 
 *pCLSID*<br/>
-Odkazuje na CLSID objektu, který má být registrován. Pokud null (výchozí hodnota), budou zaregistrovány všechny objekty v mapě objektů.
+Odkazuje na CLSID objektu, který má být zaregistrován. Pokud má hodnotu NULL (výchozí hodnota), budou zaregistrovány všechny objekty v mapě objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -113,9 +113,9 @@ Volá globální funkci [AtlComModuleRegisterServer](server-registration-global-
 
 ## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
-Volání této metody zaregistrovat knihovnu typů.
+Voláním této metody zaregistrujete knihovnu typů.
 
-```
+```cpp
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
@@ -123,21 +123,21 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>Parametry
 
 *lpszIndex*<br/>
-Řetězec ve formátu\\\N, kde N je index celéčíslo prostředku TYPELIB.
+Řetězec ve formátu "\\\n", kde N je celočíselný index prostředku TYPELIB.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidá informace o knihovně typů do systémového registru. Pokud instance modulu obsahuje více knihoven typů, použijte první verzi této metody k určení, která knihovna typů má být použita.
+Přidá do systémového registru informace o knihovně typů. Pokud instance modulu obsahuje více knihoven typů, použijte první verzi této metody k určení, která knihovna typů má být použita.
 
 ## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
-Volání této metody zrušit registraci každého objektu v mapě objektu.
+Voláním této metody zrušíte registraci každého objektu v mapě objektů.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
@@ -146,14 +146,14 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-TRUE, pokud má být knihovna typů neregistrována. Výchozí hodnota je FALSE.
+TRUE, pokud má být zrušena registrace knihovny typů. Výchozí hodnota je FALSE (NEPRAVDA).
 
 *pCLSID*<br/>
-Odkazuje na CLSID objektu, který má být neregistrován. Pokud null (výchozí hodnota), všechny objekty v mapě objektu budou unregistered.
+Odkazuje na CLSID objektu, který se má odregistrovat. Pokud má hodnotu NULL (výchozí hodnota), všechny objekty v mapě objektů budou odregistrovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -161,9 +161,9 @@ Volá globální funkci [AtlComModuleUnregisterServer](server-registration-globa
 
 ## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
-Volání této metody zrušit registraci knihovny typů.
+Voláním této metody zrušíte registraci knihovny typů.
 
-```
+```cpp
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
@@ -171,7 +171,7 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>Parametry
 
 *lpszIndex*<br/>
-Řetězec ve formátu\\\N, kde N je index celéčíslo prostředku TYPELIB.
+Řetězec ve formátu "\\\n", kde N je celočíselný index prostředku TYPELIB.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -179,7 +179,7 @@ Odebere informace o knihovně typů ze systémového registru. Pokud instance mo
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ## <a name="see-also"></a>Viz také
 

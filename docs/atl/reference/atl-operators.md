@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 8c15daa1d2b12c58323ef5ef75559a2ab911ad93
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe5363d3d05123c17e45254898e2210797400022
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319225"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168849"
 ---
 # <a name="atl-operators"></a>Operátory ATL
 
@@ -17,149 +17,149 @@ Tato část obsahuje referenční témata pro globální operátory ATL.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[operátor ==](#operator_eq_eq)|Porovná dva `CSid` objekty nebo `SID` struktury pro rovnost.|
-|[operátor !=](#operator_neq)|Porovná dva `CSid` objekty nebo `SID` struktury pro nerovnost.|
-|[<operátora](#operator_lt)|Testuje, `CSid` zda `SID` je objekt nebo struktura na levé `CSid` straně `SID` operátoru menší než objekt nebo struktura na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).|
-|[>operátora](#operator_gt)|Testuje, `CSid` zda `SID` je objekt nebo struktura na levé `CSid` straně `SID` operátoru větší než objekt nebo struktura na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).|
-|[operátor <=](#operator_lt__eq)|Testuje, `CSid` zda `SID` je objekt nebo struktura na levé straně operátoru menší nebo rovna objektu `CSid` nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).|
-|[operátor >=](#operator_gt__eq)|Testuje, `CSid` zda `SID` je objekt nebo struktura na levé straně operátoru větší nebo rovna objektu `CSid` nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).|
+|[operator = = – operátor](#operator_eq_eq)|Porovná `CSid` dva objekty `SID` nebo struktury pro rovnost.|
+|[! = – operátor](#operator_neq)|Porovná `CSid` dva objekty `SID` nebo struktury pro nerovnost.|
+|[operátor <](#operator_lt)|Testuje, `CSid` zda je objekt `SID` nebo struktura na levé straně operátoru menší než `CSid` objekt nebo `SID` struktura na pravé straně (v případě kompatibility standardní knihovny C++).|
+|[operátor >](#operator_gt)|Testuje, `CSid` zda je objekt `SID` nebo struktura na levé straně operátoru větší než `CSid` objekt nebo `SID` struktura na pravé straně (pro kompatibilitu standardní knihovny C++).|
+|[operátor <=](#operator_lt__eq)|Testuje, zda `CSid` je objekt `SID` nebo struktura na levé straně operátoru menší než nebo rovna `CSid` objektu nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny C++).|
+|[operátor >=](#operator_gt__eq)|Testuje, zda `CSid` je objekt `SID` nebo struktura na levé straně operátoru větší než nebo rovna `CSid` objektu nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny C++).|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h.
+**Hlavička:** atlsecurity. h.
 
-## <a name="operator-"></a><a name="operator_eq_eq"></a>operátor ==
+## <a name="operator-"></a><a name="operator_eq_eq"></a>operator = = – operátor
 
-Porovnává `CSid` objekty `SID` nebo (identifikátor zabezpečení) struktury pro rovnost.
+Porovná `CSid` struktury `SID` objektů nebo (identifikátorů zabezpečení) pro rovnost.
 
-```
+```cpp
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud jsou objekty stejné, NEPRAVDA, pokud nejsou stejné.
+Vrátí hodnotu TRUE, pokud jsou objekty stejné, FALSE, pokud nejsou stejné.
 
-## <a name="operator-"></a><a name="operator_neq"></a>operátor !=
+## <a name="operator-"></a><a name="operator_neq"></a>! = – operátor
 
-Porovnává `CSid` objekty `SID` nebo (identifikátor zabezpečení) struktury pro nerovnost.
+Porovná `CSid` struktury `SID` objektů nebo (identifikátorů zabezpečení) pro nerovnost.
 
-```
+```cpp
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud objekty nejsou stejné, NEPRAVDA, pokud jsou stejné.
+Vrátí hodnotu TRUE, pokud jsou objekty stejné, FALSE, pokud jsou stejné.
 
 ## <a name="operator-"></a><a name="operator_lt"></a>operátor <
 
-Testuje, `CSid` zda `SID` je objekt nebo struktura na levé `CSid` straně `SID` operátoru menší než objekt nebo struktura na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).
+Testuje, `CSid` zda je objekt `SID` nebo struktura na levé straně operátoru menší než `CSid` objekt nebo `SID` struktura na pravé straně (v případě kompatibility standardní knihovny C++).
 
-```
+```cpp
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je adresa objektu *lhs* menší než adresa objektu *rhs,* FALSE jinak.
+Vrátí hodnotu TRUE, pokud je adresa objektu *LHS* menší než adresa objektu *Zarovnání INDIREKCE RHS* , jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor funguje na `CSid` adresu `SID` objektu nebo struktury a je implementován k zajištění kompatibility s třídami kolekce standardní knihovny jazyka C++.
+Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je implementován pro zajištění kompatibility s třídami kolekce knihovny Standard C++.
 
 ## <a name="operator-"></a><a name="operator_gt"></a>operátor >
 
-Testuje, `CSid` zda `SID` je objekt nebo struktura na levé `CSid` straně `SID` operátoru větší než objekt nebo struktura na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).
+Testuje, `CSid` zda je objekt `SID` nebo struktura na levé straně operátoru větší než `CSid` objekt nebo `SID` struktura na pravé straně (pro kompatibilitu standardní knihovny C++).
 
-```
+```cpp
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je adresa *lhs* větší než adresa *rhs*, FALSE jinak.
+Vrátí hodnotu TRUE, pokud je adresa *LHS* větší než adresa *Zarovnání indirekce RHS*, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor funguje na `CSid` adresu `SID` objektu nebo struktury a je implementován k zajištění kompatibility s třídami kolekce standardní knihovny jazyka C++.
+Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je implementován pro zajištění kompatibility s třídami kolekce knihovny Standard C++.
 
 ## <a name="operator-"></a><a name="operator_lt__eq"></a>operátor <=
 
-Testuje, `CSid` zda `SID` je objekt nebo struktura na levé straně operátoru menší nebo rovna objektu `CSid` nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).
+Testuje, zda `CSid` je objekt `SID` nebo struktura na levé straně operátoru menší než nebo rovna `CSid` objektu nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny C++).
 
-```
+```cpp
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je adresa *lhs* menší nebo rovna adrese *rhs*, FALSE jinak.
+Vrátí hodnotu TRUE, pokud je adresa *LHS* menší nebo rovna adrese *Zarovnání indirekce RHS*, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor funguje na `CSid` adresu `SID` objektu nebo struktury a je implementován k zajištění kompatibility s třídami kolekce standardní knihovny jazyka C++.
+Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je implementován pro zajištění kompatibility s třídami kolekce knihovny Standard C++.
 
 ## <a name="operator-"></a><a name="operator_gt__eq"></a>operátor >=
 
-Testuje, `CSid` zda `SID` je objekt nebo struktura na levé straně operátoru větší nebo rovna objektu `CSid` nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny jazyka C++).
+Testuje, zda `CSid` je objekt `SID` nebo struktura na levé straně operátoru větší než nebo rovna `CSid` objektu nebo `SID` struktuře na pravé straně (pro kompatibilitu standardní knihovny C++).
 
-```
+```cpp
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lhs*<br/>
-První `CSid` objekt `SID` nebo struktura porovnat.
+*lhs*<br/>
+První `CSid` objekt nebo `SID` struktura, které mají být porovnány.
 
-*rhs*<br/>
-Druhý `CSid` objekt `SID` nebo strukturu porovnat.
+*zarovnání indirekce RHS*<br/>
+Druhý `CSid` objekt nebo `SID` struktura pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je adresa *lhs* větší nebo rovna adrese *rhs*, FALSE jinak.
+Vrátí hodnotu TRUE, pokud je adresa *LHS* větší než nebo rovna adrese *Zarovnání indirekce RHS*, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor funguje na `CSid` adresu `SID` objektu nebo struktury a je implementován k zajištění kompatibility s třídami kolekce standardní knihovny jazyka C++.
+Tento operátor funguje na adrese `CSid` objektu nebo `SID` struktury a je implementován pro zajištění kompatibility s třídami kolekce knihovny Standard C++.

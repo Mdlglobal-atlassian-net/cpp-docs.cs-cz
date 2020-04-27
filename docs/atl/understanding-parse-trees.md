@@ -1,48 +1,52 @@
 ---
-title: Registrátor ATL a stromů analýzy
+title: Registrátor ATL a stromy analýz
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: e1aea573e78e6f6a9a86bc4e3987ee448815f329
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196165"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168693"
 ---
 # <a name="understanding-parse-trees"></a>Principy stromů analýzy
 
-Můžete definovat jeden nebo více stromů analýzy ve skriptu registrátoru, kde každý strom analýzy má následující formát:
+Ve svém skriptu registrátora můžete definovat jednu nebo více stromů analýz, kde každý strom analýz má následující tvar:
 
-```
-<root key>{<registry expression>}+
-```
+> \<kořenový klíč> {\<výraz registru>} +
 
 kde:
 
-```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
-    HKEY_LOCAL_MACHINE | HKEY_USERS |
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |
-    HKLM | HKU | HKPD | HKDD | HKCC
-<registry expression> ::= <Add Key> | <Delete Key>
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
-<Delete Key> ::= Delete<Key Name>
-<Key Name> ::= '<AlphaNumeric>+'
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
-<Key Value> ::== <Key Type><Key Name>
-<Key Type> ::= s | d
-<Key Value> ::= '<AlphaNumeric>'
-```
+> \<> kořenového klíče:: = HKEY_CLASSES_ROOT | HKEY_CURRENT_USER | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE | HKEY_USERS | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG | HKCR | HKCU | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKLM | HKU | HKPD | HKDD | HKCC
+
+> \<výraz registru>:: = \<přidat klíčovou> | \<Odstranit> klíčů
+
+> \<Přidat klíčovou>:: =**[ForceRemove** | **. Remove** | **Val**\<] název klíče>\<[hodnota klíče>] [\<{Add Key>}]
+
+> \<Odstranit klíč>:: = **Odstranit**\<název klíče>
+
+> \<Název klíče>:: = **'**\<alfanumerické>+**'**
+
+> \<Alfanumerické>:: = *libovolný znak není null, tj. ASCII 0*
+
+> \<Hodnota klíče>:: = \<typ klíče>\<název klíče>
+
+> \<Typ klíče>:: = **s** | **d**
+
+> \<Hodnota klíče>:: = **'**\<alfanumerický>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT` a `HKCR` jsou ekvivalentní; `HKEY_CURRENT_USER` a `HKCU` jsou ekvivalentní; a tak dále.
+> `HKEY_CLASSES_ROOT`a `HKCR` jsou ekvivalentní; `HKEY_CURRENT_USER` a `HKCU` jsou ekvivalentní; a tak dále.
 
-Strom analýzy můžete přidat více klíčů a podklíče \<kořenového klíče >. Přitom, uchová podklíč popisovač otevřené až analyzátor byla dokončena analýza všem příslušným podklíčům. Tento přístup je efektivnější než pracující na jeden klíč najednou, jak je znázorněno v následujícím příkladu:
+Strom analýzy může přidat více klíčů a podklíčů do \<kořenového klíče>. V takovém případě udržuje popisovač podklíče otevřený, dokud analyzátor nedokončí analýzu všech jeho podklíčů. Tento přístup je efektivnější než provoz na jednom klíči, jak je vidět v následujícím příkladu:
 
-```
+```rgs
 HKEY_CLASSES_ROOT
 {
     'MyVeryOwnKey'
@@ -55,8 +59,8 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-Tady doménový Registrátor zpočátku otevře (vytvoří) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Pak uvidí, který `MyVeryOwnKey` obsahuje podklíč. Místo klíč, který chcete zavřít `MyVeryOwnKey`, doménový Registrátor uchovává popisovač a otevře (vytvoří) `HasASubKey` pomocí tohoto úchytu nadřazené. (Systémového registru může být pomalejší při otevření bez nadřazené popisovač.) Proto otevírání `HKEY_CLASSES_ROOT\MyVeryOwnKey` a poté otevřou `HasASubKey` s `MyVeryOwnKey` je rychlejší než otevření nadřazené `MyVeryOwnKey`uzavřen `MyVeryOwnKey`a poté otevřou `MyVeryOwnKey\HasASubKey`.
+Tady se zpočátku otevře registrátor (vytvoří) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Pak uvidí, že `MyVeryOwnKey` obsahuje podklíč. Místo toho, aby `MyVeryOwnKey`se klíč zavřel, registrátor zachová popisovač a otevře (vytvoří) `HasASubKey` pomocí tohoto nadřazeného popisovače. (Systémový registr může být pomalejší, pokud není otevřený žádný nadřazený popisovač.) Proto je otevření `HKEY_CLASSES_ROOT\MyVeryOwnKey` a pak otevření `HasASubKey` s `MyVeryOwnKey` nadřazeným objektem rychlejší než otevírání `MyVeryOwnKey`, zavírání `MyVeryOwnKey`a pak otevírání `MyVeryOwnKey\HasASubKey`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
+[Vytváření skriptů registrátora](../atl/creating-registrar-scripts.md)

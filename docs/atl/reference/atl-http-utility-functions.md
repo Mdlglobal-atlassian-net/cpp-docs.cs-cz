@@ -2,12 +2,12 @@
 title: Funkce nástrojů ATL HTTP
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418179"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168602"
 ---
 # <a name="atl-http-utility-functions"></a>Funkce nástrojů ATL HTTP
 
@@ -28,7 +28,7 @@ Tyto funkce podporují manipulaci s adresami URL.
 
 **Záhlaví:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Voláním této funkce převedete adresu URL na kanonický tvar, přičemž problematické znaky a mezery se převedou na řídicí sekvence.
 
@@ -76,7 +76,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Se chová jako aktuální verze [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , ale nevyžaduje instalaci rozhraní WinInet nebo Internet Explorer.
 
-## <a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
 
 Voláním této funkce zkombinujete základní a relativní adresu URL do jedné kanonické adresy URL.
 
@@ -114,7 +114,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Se chová jako aktuální verze [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) , ale nevyžaduje instalaci rozhraní WinInet nebo Internet Explorer.
 
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
 
 Voláním této funkce převedete všechny problematické znaky na řídicí sekvence.
 
@@ -155,11 +155,11 @@ ATL_URL příznaky ovládající chování této funkce. Možné hodnoty najdete
 
 Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
-## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 Voláním této funkce získáte výchozí číslo portu přidružené ke konkrétnímu protokolu nebo schématu Internetu.
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
@@ -172,11 +172,11 @@ Hodnota [ATL_URL_SCHEME](atl-url-scheme-enum.md) identifikující schéma, pro k
 
 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) přidružené k zadanému schématu nebo ATL_URL_INVALID_PORT_NUMBER, pokud schéma není rozpoznáno.
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 Voláním této funkce zjistíte, zda lze znak bezpečně použít v adrese URL.
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
@@ -193,7 +193,7 @@ Vrátí hodnotu TRUE, pokud je vstupní znak nebezpečný, jinak FALSE.
 
 Znaky, které by neměly být použity v adresách URL, lze testovat pomocí této funkce a převést pomocí [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
 
 Voláním této funkce převedete řídicí znaky zpět na jejich původní hodnoty.
 
@@ -233,7 +233,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Obrátí proces převodu, který používá [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
 
 Převede hodnotu [COLORREF](/windows/win32/gdi/colorref) na text HTML odpovídající této hodnotě barvy.
 
@@ -246,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parametry
 
-*barevných*<br/>
+*color*<br/>
 Hodnota barvy RGB.
 
 *pbOut*<br/>
@@ -263,7 +263,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Hodnota barvy HTML je znak křížku následovaný hexadecimální hodnotou o hodnotě 6 číslic pomocí 2 číslic pro každou z červených, zelených a modrých komponent barvy (například #FFFFFF je bílá).
 
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 Systémový čas, který má být získán jako řetězec formátu HTTP.
 
 *strTime*<br/>
-Odkaz na proměnnou řetězce pro příjem data a času protokolu HTTP, jak je definován v dokumentu RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) a RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
+Odkaz na proměnnou řetězce pro příjem data a času protokolu HTTP, jak je definován v dokumentu RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () a RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
 
 ## <a name="see-also"></a>Viz také
 

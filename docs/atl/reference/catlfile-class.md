@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlFile
+title: CAtlFile – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFile
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 39f323874ccde5178722235b9beb34c2572407a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83a0a89bf6e2e21be33cf8c6003228111eff5394
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318968"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168108"
 ---
-# <a name="catlfile-class"></a>Třída CAtlFile
+# <a name="catlfile-class"></a>CAtlFile – třída
 
-Tato třída poskytuje tenký obálku kolem rozhraní API pro zpracování souborů systému Windows.
+Tato třída poskytuje tenké obálky kolem rozhraní API pro zpracování souborů systému Windows.
 
 > [!IMPORTANT]
-> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
+> Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CAtlFile : public CHandle
 ```
 
@@ -44,35 +44,35 @@ class CAtlFile : public CHandle
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlFile::CAtlFile](#catlfile)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlFile::Vytvořit](#create)|Volání této metody k vytvoření nebo otevření souboru.|
-|[CAtlFile::Vyprázdnění](#flush)|Volání této metody vymazat vyrovnávací paměti pro soubor a způsobit všechna data ve vyrovnávací paměti, které mají být zapsány do souboru.|
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Volání této metody získat výsledky překrývající se operace v souboru.|
-|[CAtlFile::GetPosition](#getposition)|Volání této metody získat aktuální pozici ukazatele souboru ze souboru.|
-|[CAtlFile::GetSize](#getsize)|Volání této metody získat velikost v bajtů souboru.|
-|[CAtlFile::LockRange](#lockrange)|Volání této metody uzamknout oblast v souboru zabránit jiným procesům v přístupu k němu.|
-|[CAtlFile::Číst](#read)|Volání této metody ke čtení dat ze souboru začínající na pozici označené ukazatelem souboru.|
-|[CAtlFile::Hledat](#seek)|Volání této metody přesunout ukazatel souboru.|
-|[CAtlFile::SetSize](#setsize)|Volání této metody nastavit velikost souboru.|
-|[CAtlFile::UnlockRange](#unlockrange)|Volání této metody odemknout oblast souboru.|
-|[CAtlFile::Zápis](#write)|Volání této metody pro zápis dat do souboru začíná na pozici označené ukazatelem souboru.|
+|[CAtlFile:: Create](#create)|Voláním této metody vytvoříte nebo otevřete soubor.|
+|[CAtlFile:: flush](#flush)|Voláním této metody vymažete vyrovnávací paměti pro daný soubor a způsobí, že všechna data uložená do vyrovnávací paměti budou zapsána do souboru.|
+|[CAtlFile:: funkce GetOverlappedResult](#getoverlappedresult)|Voláním této metody získáte výsledky překrývající operace v souboru.|
+|[CAtlFile:: GetPosition](#getposition)|Voláním této metody získá aktuální pozice ukazatele na soubor ze souboru.|
+|[CAtlFile:: GetSize](#getsize)|Voláním této metody získáte velikost souboru v bajtech.|
+|[CAtlFile::LockRange](#lockrange)|Voláním této metody zamknete oblast v souboru, abyste zabránili ostatním procesům v přístupu k ní.|
+|[CAtlFile:: Read](#read)|Voláním této metody načtete data ze souboru, který začíná na pozici označené ukazatelem souboru.|
+|[CAtlFile:: Seek](#seek)|Voláním této metody přesunete ukazatel souboru souboru.|
+|[CAtlFile:: SetSize](#setsize)|Voláním této metody nastavíte velikost souboru.|
+|[CAtlFile::UnlockRange](#unlockrange)|Zavolejte tuto metodu pro odemčení oblasti souboru.|
+|[CAtlFile:: Write](#write)|Voláním této metody zapíšete data do souboru počínaje pozicí určenou ukazatelem souboru.|
 
-### <a name="protected-data-members"></a>Členové chráněných dat
+### <a name="protected-data-members"></a>Chránění členové dat
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlFile::m_pTM](#m_ptm)|Ukazatel `CAtlTransactionManager` na objekt|
+|[CAtlFile:: m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objekt|
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto třídu použijte, pokud jsou potřeby zpracování souborů poměrně jednoduché, ale je vyžadováno více abstrakce, než poskytuje rozhraní API systému Windows, bez zahrnutí závislostí knihovny MFC.
+Tuto třídu použijte, když jsou potřeby zpracování souborů relativně jednoduché, ale vyžaduje se více abstrakcí, než je vyžadováno rozhraní API systému Windows, aniž by to mělo zahrnovat závislosti MFC.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -82,13 +82,13 @@ Tuto třídu použijte, pokud jsou potřeby zpracování souborů poměrně jedn
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlfile.h
+**Záhlaví:** atlfile. h
 
 ## <a name="catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile
 
 Konstruktor
 
-```
+```cpp
 CAtlFile() throw();
 CAtlFile(CAtlTransactionManager* pTM = NULL) throw();
 CAtlFile(CAtlFile& file) throw();
@@ -97,24 +97,24 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor*<br/>
+*souborů*<br/>
 Objekt souboru.
 
-*hSoubor*<br/>
+*hFile*<br/>
 Popisovač souboru.
 
-*Ptm*<br/>
+*pTM*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor kopie přenese vlastnictví popisovače `CAtlFile` souboru z původního objektu na nově vytvořený objekt.
+Kopírovací konstruktor převádí vlastnictví popisovače souboru z původního `CAtlFile` objektu na nově vytvořený objekt.
 
-## <a name="catlfilecreate"></a><a name="create"></a>CAtlFile::Vytvořit
+## <a name="catlfilecreate"></a><a name="create"></a>CAtlFile:: Create
 
-Volání této metody k vytvoření nebo otevření souboru.
+Voláním této metody vytvoříte nebo otevřete soubor.
 
-```
+```cpp
 HRESULT Create(
     LPCTSTR szFilename,
     DWORD dwDesiredAccess,
@@ -127,56 +127,56 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Parametry
 
-*szNázev_souboru*<br/>
+*szFilename*<br/>
 Název souboru
 
 *dwDesiredAccess*<br/>
-Požadovaný přístup. Viz *dwDesiredAccess* v [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) v sadě Windows SDK.
+Požadovaný přístup. Viz *dwDesiredAccess* v [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) v Windows SDK.
 
 *dwShareMode*<br/>
 Režim sdílení. Viz *dwShareMode* v `CreateFile`.
 
-*dwCreationDispozice*<br/>
-Stvoření dispozice. Viz *dwCreationDisposition* in `CreateFile`.
+*dwCreationDisposition*<br/>
+Dispozice při vytváření. Viz *dwCreationDisposition* v `CreateFile`.
 
 *dwFlagsAndAttributes*<br/>
 Příznaky a atributy. Viz *dwFlagsAndAttributes* v `CreateFile`.
 
-*LPSA*<br/>
-Atributy zabezpečení. Viz *lpSecurityAttributes* in `CreateFile`.
+*lpsa*<br/>
+Atributy zabezpečení Viz *lpSecurityAttributes* v `CreateFile`.
 
 *hTemplateFile*<br/>
 Soubor šablony. Viz *hTemplateFile* v `CreateFile`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) vytvořit nebo otevřít soubor.
+Volá [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) pro vytvoření nebo otevření souboru.
 
-## <a name="catlfileflush"></a><a name="flush"></a>CAtlFile::Vyprázdnění
+## <a name="catlfileflush"></a><a name="flush"></a>CAtlFile:: flush
 
-Volání této metody vymazat vyrovnávací paměti pro soubor a způsobit všechna data ve vyrovnávací paměti, které mají být zapsány do souboru.
+Voláním této metody vymažete vyrovnávací paměti pro daný soubor a způsobí, že všechna data uložená do vyrovnávací paměti budou zapsána do souboru.
 
-```
+```cpp
 HRESULT Flush() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [FlushFileBuffers vyprázdnění](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers) dat ve vyrovnávací paměti do souboru.
+Zavolá [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers) k vyprázdnění dat do vyrovnávací paměti do souboru.
 
-## <a name="catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult
+## <a name="catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile:: funkce GetOverlappedResult
 
-Volání této metody získat výsledky překrývající se operace v souboru.
+Voláním této metody získáte výsledky překrývající operace v souboru.
 
-```
+```cpp
 HRESULT GetOverlappedResult(
     LPOVERLAPPED pOverlapped,
     DWORD& dwBytesTransferred,
@@ -185,49 +185,49 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Parametry
 
-*přeskakované*<br/>
-Překrývající se struktura. Viz *lpOverlapped* in [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) in the Windows SDK.
+*pOverlapped*<br/>
+Překrytá struktura. Viz *lpOverlapped* v [funkce GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) ve Windows SDK.
 
-*dwBytesPřevedeno*<br/>
-Přenesené bajty. Viz *lpNumberOfBytesTransferred* in `GetOverlappedResult`.
+*dwBytesTransferred*<br/>
+Přenesené bajty. Viz *lpNumberOfBytesTransferred* v `GetOverlappedResult`.
 
-*bPočkejte*<br/>
-Možnost čekání. Viz *bWait* in `GetOverlappedResult`.
+*bWait*<br/>
+Možnost čekání. Viz *bWait* v `GetOverlappedResult`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) získat výsledky překrývající se operace v souboru.
+Volá [funkce GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) k získání výsledků překrývající se operace v souboru.
 
-## <a name="catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition
+## <a name="catlfilegetposition"></a><a name="getposition"></a>CAtlFile:: GetPosition
 
-Volání této metody získat aktuální pozici ukazatele souboru.
+Zavolejte tuto metodu pro získání aktuálního umístění ukazatele na soubor.
 
-```
+```cpp
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-Pozice v bajtů.
+Pozice v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) získat aktuální pozici ukazatele souboru.
+Volá [funkce SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) k získání aktuálního umístění ukazatele na soubor.
 
-## <a name="catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize
+## <a name="catlfilegetsize"></a><a name="getsize"></a>CAtlFile:: GetSize
 
-Volání této metody získat velikost v bajtů souboru.
+Voláním této metody získáte velikost souboru v bajtech.
 
-```
+```cpp
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```
 
@@ -238,51 +238,51 @@ Počet bajtů v souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize) získat velikost v bajtů souboru.
+Volá [funkce GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize) , aby získala velikost souboru v bajtech.
 
 ## <a name="catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange
 
-Volání této metody uzamknout oblast v souboru zabránit jiným procesům v přístupu k němu.
+Voláním této metody zamknete oblast v souboru, abyste zabránili ostatním procesům v přístupu k ní.
 
-```
+```cpp
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-Pozice v souboru, kde by měl začít zámek.
+Pozice v souboru, kde má zámek začínat.
 
 *nCount*<br/>
 Délka rozsahu bajtů, který má být uzamčen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [LockFile](/windows/win32/api/fileapi/nf-fileapi-lockfile) zamknout oblast v souboru. Zamykání bajtů v souboru zabraňuje přístupu k těmto bajtům jinými procesy. Můžete zamknout více než jednu oblast souboru, ale nejsou povoleny žádné překrývající se oblasti. Při odemknutí oblasti pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. `LockRange`neslučuje sousední oblasti; Pokud jsou dvě uzamčené oblasti sousedící, musíte je odemknout samostatně.
+Volá [LockFile](/windows/win32/api/fileapi/nf-fileapi-lockfile) k uzamknutí oblasti v souboru. Uzamykání bajtů v souboru brání v přístupu k těmto bajtům jiným procesům. Můžete uzamknout více než jednu oblast souboru, ale nejsou povoleny žádné překrývající se oblasti. Když odemknete oblast pomocí [CAtlFile:: UnlockRange](#unlockrange), musí rozsah bajtů přesně odpovídat oblasti, která byla dříve uzamčena. `LockRange`neslučuje sousední oblasti; Pokud se dvě uzamčené oblasti sousedí, je nutné je všechny samostatně odemknout.
 
-## <a name="catlfilem_ptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM
+## <a name="catlfilem_ptm"></a><a name="m_ptm"></a>CAtlFile:: m_pTM
 
 Ukazatel na `CAtlTransactionManager` objekt.
 
-```
+```cpp
 CAtlTransactionManager* m_pTM;
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="catlfileread"></a><a name="read"></a>CAtlFile::Číst
+## <a name="catlfileread"></a><a name="read"></a>CAtlFile:: Read
 
-Volání této metody ke čtení dat ze souboru začínající na pozici označené ukazatelem souboru.
+Voláním této metody načtete data ze souboru, který začíná na pozici označené ukazatelem souboru.
 
-```
+```cpp
 HRESULT Read(
     LPVOID pBuffer,
     DWORD nBufSize) throw();
@@ -306,34 +306,34 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Parametry
 
-*pVyrovnávací paměť*<br/>
-Ukazatel na vyrovnávací paměť, která obdrží data přečtená ze souboru.
+*pBuffer*<br/>
+Ukazatel na vyrovnávací paměť, která bude přijímat data načtená ze souboru.
 
-*nBufVelikost*<br/>
-Velikost vyrovnávací paměti v bajtů.
+*nBufSize*<br/>
+Velikost vyrovnávací paměti v bajtech.
 
-*nBajtyČíst*<br/>
+*nBytesRead*<br/>
 Počet přečtených bajtů.
 
-*přeskakované*<br/>
-Překrývající se struktura. Viz *lpOverlapped* in [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile) v sadě Windows SDK.
+*pOverlapped*<br/>
+Překrytá struktura. Viz *lpOverlapped* v funkci [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile) v Windows SDK.
 
 *pfnCompletionRoutine*<br/>
-Rutina dokončení. Viz *lpCompletionRoutine* v [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) v sadě Windows SDK.
+Rutina dokončení. Viz *lpCompletionRoutine* v [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) ve Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-První tři formuláře volají [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), poslední [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) pro čtení dat ze souboru. Pomocí [catlfile::Seek](#seek) přesuňte ukazatel souboru.
+První tři formuláře volají funkci [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), poslední [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) ke čtení dat ze souboru. Použijte [CAtlFile:: Seek](#seek) pro přesunutí ukazatele na soubor.
 
-## <a name="catlfileseek"></a><a name="seek"></a>CAtlFile::Hledat
+## <a name="catlfileseek"></a><a name="seek"></a>CAtlFile:: Seek
 
-Volání této metody přesunout ukazatel souboru.
+Voláním této metody přesunete ukazatel souboru souboru.
 
-```
+```cpp
 HRESULT Seek(
     LONGLONG nOffset,
     DWORD dwFrom = FILE_CURRENT) throw();
@@ -342,69 +342,69 @@ HRESULT Seek(
 ### <a name="parameters"></a>Parametry
 
 *nOffset*<br/>
-Posun od počátečního bodu dané *dwFrom*.
+Posun od počátečního bodu, který je dán hodnotou *dwFrom*.
 
 *dwFrom*<br/>
 Výchozí bod (FILE_BEGIN, FILE_CURRENT nebo FILE_END).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) přesunout ukazatel souboru.
+Volá [funkce SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) , aby se přesunul ukazatel na soubor.
 
-## <a name="catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize
+## <a name="catlfilesetsize"></a><a name="setsize"></a>CAtlFile:: SetSize
 
-Volání této metody nastavit velikost souboru.
+Voláním této metody nastavíte velikost souboru.
 
-```
+```cpp
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *nNewLen*<br/>
-Nová délka souboru v bajtů.
+Nová délka souboru v bajtech
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) a [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) nastavit velikost souboru. Při návratu je ukazatel souboru umístěn na konci souboru.
+Zavolá [funkce SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) a [funkce SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) , aby se nastavila velikost souboru. Při návratu je ukazatel na soubor umístěný na konci souboru.
 
 ## <a name="catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange
 
-Volání této metody odemknout oblast souboru.
+Zavolejte tuto metodu pro odemčení oblasti souboru.
 
-```
+```cpp
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-Pozice v souboru, kde by mělo začít odemknutí.
+Pozice v souboru, kde má začít odemčení.
 
 *nCount*<br/>
 Délka rozsahu bajtů, který má být odemčen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [UnlockFile](/windows/win32/api/fileapi/nf-fileapi-unlockfile) odemknout oblast souboru.
+Volá [UnlockFile](/windows/win32/api/fileapi/nf-fileapi-unlockfile) k odemknutí oblasti souboru.
 
-## <a name="catlfilewrite"></a><a name="write"></a>CAtlFile::Zápis
+## <a name="catlfilewrite"></a><a name="write"></a>CAtlFile:: Write
 
-Volání této metody pro zápis dat do souboru začíná na pozici označené ukazatelem souboru.
+Voláním této metody zapíšete data do souboru počínaje pozicí určenou ukazatelem souboru.
 
-```
+```cpp
 HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
@@ -424,31 +424,31 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Parametry
 
-*pVyrovnávací paměť*<br/>
+*pBuffer*<br/>
 Vyrovnávací paměť obsahující data, která mají být zapsána do souboru.
 
-*nBufVelikost*<br/>
+*nBufSize*<br/>
 Počet bajtů, které mají být přeneseny z vyrovnávací paměti.
 
-*přeskakované*<br/>
-Překrývající se struktura. Viz *lpOverlapped* in [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) v sadě Windows SDK.
+*pOverlapped*<br/>
+Překrytá struktura. Viz *lpOverlapped* v [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) v Windows SDK.
 
 *pfnCompletionRoutine*<br/>
-Rutina dokončení. Viz *lpCompletionRoutine* v [WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex) v sadě Windows SDK.
+Rutina dokončení. Viz *lpCompletionRoutine* v [WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex) ve Windows SDK.
 
 *pnBytesWritten*<br/>
-Napsané bajty.
+Zapsané bajty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-První tři formuláře volání [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), poslední volání [WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex) zapisovat data do souboru. Pomocí [catlfile::Seek](#seek) přesuňte ukazatel souboru.
+První tři formuláře volají metodu [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)a poslední volá [WriteFileEx](/windows/win32/api/fileapi/nf-fileapi-writefileex) k zápisu dat do souboru. Použijte [CAtlFile:: Seek](#seek) pro přesunutí ukazatele na soubor.
 
 ## <a name="see-also"></a>Viz také
 
-[Vzorek výběru](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka běžícího textu](../../overview/visual-cpp-samples.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
-[Třída CHandle](../../atl/reference/chandle-class.md)
+[CHandle – třída](../../atl/reference/chandle-class.md)

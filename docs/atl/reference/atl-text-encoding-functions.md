@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f5587e6b8bdafaef328c27407f04febbfe4395cc
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418165"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168818"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -66,11 +66,11 @@ Tyto funkce podporují kódování textu a dekódování.
 
 **Záhlaví:** atlenc. h
 
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a><a name="atlgethexvalue"></a>AtlGetHexValue
 
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.
 
-```
+```cpp
 inline char AtlGetHexValue(char chIn) throw();
 ```
 
@@ -83,11 +83,11 @@ Hexadecimální znak 0-"9", "a-'F" nebo "a-'F".
 
 Číselná hodnota vstupního znaku interpretována jako šestnáctková číslice. Například vstup ' 0 ' vrátí hodnotu 0 a vstup ' A ' vrátí hodnotu 10. Pokud vstupní znak není hexadecimální číslice, vrátí tato funkce hodnotu-1.
 
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a><a name="atlgetversion"></a>AtlGetVersion
 
 Voláním této funkce získáte verzi knihovny ATL, kterou používáte.
 
-```
+```cpp
 ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
@@ -110,11 +110,11 @@ Funkce by měla být volána následujícím způsobem.
 
 **Záhlaví:** atlbase. h
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a><a name="atlhexdecode"></a>AtlHexDecode
 
 Dekóduje řetězec dat, který byl kódován jako šestnáctkový text, například předchozí volání [AtlHexEncode](#atlhexencode).
 
-```
+```cpp
 inline BOOL AtlHexDecode(
    LPCSTR pSrcData,
    int nSrcLen,
@@ -140,11 +140,11 @@ Ukazatel na proměnnou, která obsahuje délku v bajtech *pbDest*. Pokud je funk
 
 Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a><a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z šestnáctkově zakódovaného řetězce zadané délky.
 
-```
+```cpp
 inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -157,11 +157,11 @@ Počet znaků v zakódovaném řetězci.
 
 Počet bajtů vyžadovaných pro vyrovnávací paměť, která by mohla obsahovat Dekódovatelné řetězce *nSrcLen* znaků.
 
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a><a name="atlhexencode"></a>AtlHexEncode
 
 Voláním této funkce zakódujete data jako řetězec šestnáctkového textu.
 
-```
+```cpp
 inline BOOL AtlHexEncode(
    const BYTE * pbSrcData,
    int nSrcLen,
@@ -191,11 +191,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Každý bajt zdrojových dat je kódovaný jako 2 šestnáctkové znaky.
 
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a><a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```
+```cpp
 inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -208,11 +208,11 @@ Počet bajtů dat, která mají být zakódována.
 
 Počet znaků vyžadovaných pro vyrovnávací paměť, která by mohla uchovávat kódovaná data *nSrcLen* bajtů.
 
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a><a name="atlhexvalue"></a>AtlHexValue
 
 Voláním této funkce získáte číselnou hodnotu šestnáctkové číslice.
 
-```
+```cpp
 inline short AtlHexValue(char chIn) throw();
 ```
 
@@ -225,11 +225,11 @@ Hexadecimální znak 0-"9", "a-'F" nebo "a-'F".
 
 Číselná hodnota vstupního znaku interpretována jako šestnáctková číslice. Například vstup ' 0 ' vrátí hodnotu 0 a vstup ' A ' vrátí hodnotu 10. Pokud vstupní znak není hexadecimální číslice, vrátí tato funkce hodnotu-1.
 
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a><a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
 
 Voláním této funkce převedete řetězec s kódováním Unicode na UTF-8.
 
-```
+```cpp
 ATL_NOINLINE inline int AtlUnicodeToUTF8(
    LPCWSTR wszSrc,
    int nSrc,
@@ -259,11 +259,11 @@ Vrátí počet znaků pro převedený řetězec.
 
 Chcete-li určit velikost vyrovnávací paměti vyžadované pro převedený řetězec, zavolejte tuto funkci předávání 0 pro *szDest* a *nDest*.
 
-## <a name="bencode"></a>BEncode
+## <a name="bencode"></a><a name="bencode"></a>BEncode
 
 Voláním této funkce převedete data pomocí kódování B.
 
-```
+```cpp
 inline BOOL BEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -297,11 +297,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Schéma kódování "B" je popsané v dokumentu RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength
+## <a name="bencodegetrequiredlength"></a><a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```
+```cpp
 inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
@@ -321,11 +321,11 @@ Počet znaků vyžadovaných pro vyrovnávací paměť, která by mohla uchováv
 
 Schéma kódování "B" je popsané v dokumentu RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a><a name="escapexml"></a>EscapeXML
 
 Voláním této funkce převedete znaky, které jsou problematické pro použití v kódu XML, na jejich bezpečné ekvivalenty.
 
-```
+```cpp
 inline int EscapeXML(
    const wchar_t * szIn,
    int nSrcLen,
@@ -352,7 +352,7 @@ Délka ve znacích vyrovnávací paměti přidělené volajícímu.
 ATL_ESC příznaky popisující, jak má být proveden převod.
 
 - ATL_ESC_FLAG_NONE výchozí chování. Uvozovky a apostrofy nejsou převedeny.
-- ATL_ESC_FLAG_ATTR uvozovky a apostrofy se převedou na `&quot;` a `&apos;` v uvedeném pořadí.
+- ATL_ESC_FLAG_ATTR uvozovky a apostrofy se převedou `&quot;` na `&apos;` a v uvedeném pořadí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -367,14 +367,14 @@ Možné převody provedené touto funkcí jsou uvedeny v tabulce:
 |\<|&lt;|
 |>|&gt;|
 |&|&amp;|
-|tokenu prostředku|&apos;|
-|.|&quot;|
+|'|&apos;|
+|"|&quot;|
 
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a><a name="getextendedchars"></a>GetExtendedChars
 
 Voláním této funkce získáte počet znaků s diakritikou v řetězci.
 
-```
+```cpp
 inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
@@ -390,11 +390,11 @@ Délka řetězce ve znacích.
 
 Vrátí počet rozšířených znaků nalezených v rámci řetězce, který určuje [IsExtendedChar](#isextendedchar).
 
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a><a name="isextendedchar"></a>IsExtendedChar
 
 Voláním této funkce zjistíte, zda je daný znak rozšířený znak (menší než 32, větší než 126, a ne karta, posun řádku nebo návrat vozíku).
 
-```
+```cpp
 inline int IsExtendedChar(char ch) throw();
 ```
 
@@ -407,11 +407,11 @@ Testovaný znak
 
 TRUE, pokud je znak rozšířený, jinak FALSE.
 
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a><a name="qencode"></a>QEncode
 
 Voláním této funkce převedete data pomocí kódování Q.
 
-```
+```cpp
 inline BOOL QEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -449,11 +449,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Schéma kódování "Q" je popsané v dokumentu RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
+## <a name="qencodegetrequiredlength"></a><a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```
+```cpp
 inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
@@ -473,11 +473,11 @@ Počet znaků vyžadovaných pro vyrovnávací paměť, která by mohla uchováv
 
 Schéma kódování "Q" je popsané v dokumentu RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a><a name="qpdecode"></a>QPDecode
 
 Dekóduje řetězec dat, která byla zakódována v formátu v uvozovkách, například předchozí volání [QPEncode](#qpencode).
 
-```
+```cpp
 inline BOOL QPDecode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -511,11 +511,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Schéma kódování v uvozovkách je popsané v dokumentu RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a><a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného ve formátu quoted-printable.
 
-```
+```cpp
 inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
@@ -532,11 +532,11 @@ Počet bajtů vyžadovaných pro vyrovnávací paměť, která by mohla obsahova
 
 Schéma kódování v uvozovkách je popsané v dokumentu RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a><a name="qpencode"></a>QPEncode
 
 Voláním této funkce zakódujete data do formátu quoted-printable.
 
-```
+```cpp
 inline BOOL QPEncode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -576,11 +576,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Schéma kódování v uvozovkách je popsané v dokumentu RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a><a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```
+```cpp
 inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
@@ -597,11 +597,11 @@ Počet znaků vyžadovaných pro vyrovnávací paměť, která by mohla uchováv
 
 Schéma kódování v uvozovkách je popsané v dokumentu RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a><a name="uudecode"></a>UUDecode
 
 Dekóduje řetězec dat, který byl uuencode jako předchozí volání do [kódování uuencode](#uuencode).
 
-```
+```cpp
 inline BOOL UUDecode(
    BYTE* pbSrcData,
    int nSrcLen,
@@ -631,11 +631,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato implementace uuencoding se řídí specifikací POSIX P 1003.2 b/D11.
 
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a><a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného do kódování UUENCODE.
 
-```
+```cpp
 inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
@@ -652,11 +652,11 @@ Počet bajtů vyžadovaných pro vyrovnávací paměť, která by mohla obsahova
 
 Tato implementace uuencoding se řídí specifikací POSIX P 1003.2 b/D11.
 
-## <a name="uuencode"></a>Kódování
+## <a name="uuencode"></a><a name="uuencode"></a>Kódování
 
 Voláním této funkce zakódujete data do kódování UUENCODE.
 
-```
+```cpp
 inline BOOL UUEncode(
    const BYTE* pbSrcData,
    int nSrcLen,
@@ -700,11 +700,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato implementace uuencoding se řídí specifikací POSIX P 1003.2 b/D11.
 
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a><a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
 
 Voláním této funkce získáte znakovou velikost vyrovnávací paměti, která by mohla obsahovat řetězec zakódovaný z dat zadané velikosti.
 
-```
+```cpp
 inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
