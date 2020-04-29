@@ -2,20 +2,20 @@
 title: Automatická paralelizace a automatická vektorizace
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: adc0dd9346cc2850b02e01804e26044c367f2d14
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450235"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538618"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatická paralelizace a automatická vektorizace
 
-Automatický Paralelizér a automatický Vektorizér jsou navržená k poskytování zvýšení výkonu automatické smyčky ve vašem kódu.
+Automatické paralelizace a auto-vektorizace jsou navržené tak, aby poskytovaly automatické nárůsty výkonu pro smyčky ve vašem kódu.
 
-## <a name="auto-parallelizer"></a>Automatický Paralelizér
+## <a name="auto-parallelizer"></a>Automatické paralelizace
 
-[/Qpar](../build/reference/qpar-auto-parallelizer.md) umožňuje přepínač kompilátoru *automatickou paralelizaci* smyček ve vašem kódu. Při zadání tohoto příznaku beze změny stávajícího kódu, vyhodnotí kompilátor kód a nalezení smyček, které by mohly mít prospěch z paralelního zpracování. Protože může najít smyček, které nechcete provést mnoho práce a nebude proto těžit z paralelizace a vzhledem k tomu, že všechny nepotřebné paralelizace může způsobit vytváření podřízeného procesu vlákna fondu, další synchronizace, nebo jiné zpracování, která by obvykle ke zpomalení výkon místo jeho vylepšení kompilátoru je konzervativní při výběru smyček, které ho parallelizes. Zvažte například následující příklad, ve kterém horní mez smyčky není znám v době kompilace:
+Přepínač kompilátoru [/Qpar](../build/reference/qpar-auto-parallelizer.md) umožňuje *Automatické paralelismuing* smyček ve vašem kódu. Při zadání tohoto příznaku beze změny stávajícího kódu kompilátor vyhodnotí kód pro hledání smyček, které by mohly těžit z paralelismu. Vzhledem k tomu, že by mohlo dojít k nalezení smyček, které nedělají spoustu práce, a proto nebude výhoda paralelního zpracování, protože každý zbytečný paralelismus může engender vytváření fondu vláken, další synchronizaci nebo jiné zpracování, které by pomohly zpomalit výkon namísto jeho vylepšení, je při výběru smyček, které parallelizes, kompilátor konzervativní. Zvažte například následující příklad, ve kterém není horní mez smyčky v době kompilace známa:
 
 ```cpp
 void loop_test(int u) {
@@ -24,7 +24,7 @@ void loop_test(int u) {
 }
 ```
 
-Protože `u` může být malou hodnotu, kompilátor nebude automaticky paralelizovat tuto smyčku. Nicméně stále můžete paralelizovaná protože víte, že `u` bude vždy velké. Chcete-li povolit Automatická paralelizace, zadejte [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), kde `n` je počet vláken pro paralelní zpracování napříč. V následujícím příkladu kompilátor se pokusí paralelizovat smyčku napříč 8 vlákny.
+Vzhledem `u` k tomu, že by mohla být malá hodnota, kompilátor tuto smyčku automaticky paralelizovat. Přesto ale budete chtít, aby byl váš i stále rovnoběžný, `u` protože víte, že budou vždy velké. Chcete-li povolit automatické paralelismuing, zadejte [#pragma smyčka (hint_parallel (n))](../preprocessor/loop.md), `n` kde je počet vláken, která se mají paralelizovat napříč. V následujícím příkladu se kompilátor pokusí paralelizovat smyčku napříč 8 vlákny.
 
 ```cpp
 void loop_test(int u) {
@@ -34,9 +34,9 @@ void loop_test(int u) {
 }
 ```
 
-Stejně jako u všech [direktivy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), syntaxi alternativní – Direktiva pragma `__pragma(loop(hint_parallel(n)))` je také podporována.
+Stejně jako u všech [direktiv pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)je také podporována alternativní `__pragma(loop(hint_parallel(n)))` syntaxe pragma.
 
-Existují některé smyček, které kompilátor nemůže paralelní zpracování i v případě, že chcete, aby. Tady je příklad:
+Existují některé cykly, které kompilátor nemůže paralelizovat, i když chcete. Tady je příklad:
 
 ```cpp
 #pragma loop(hint_parallel(8))
@@ -44,7 +44,7 @@ for (int i=0; i<upper_bound(); ++i)
     A[i] = B[i] * C[i];
 ```
 
-Funkce `upper_bound()` může změnit pokaždé, když je volána. Protože je známa horní mez, kompilátor může vysílat diagnostickou zprávu, která vysvětluje, proč ho nemůžete paralelizovat tuto smyčku. Následující příklad znázorňuje smyčku, která může být paralelizována, smyčku, která nemůže být paralelizována, použijte na příkazovém řádku ve výstupu kompilátoru pro jednotlivé možnosti příkazového řádku kompilátoru syntaxi:
+Funkce `upper_bound()` se může změnit pokaždé, když je volána. Vzhledem k tomu, že horní mez nelze znát, kompilátor může vygenerovat diagnostickou zprávu s vysvětlením, proč nemůže tuto smyčku paralelizovat. Následující příklad ukazuje smyčku, která může být paralelní, smyčka, která nemůže být paralelní, syntaxe kompilátoru použitá na příkazovém řádku a výstup kompilátoru pro jednotlivé parametry příkazového řádku:
 
 ```cpp
 int A[1000];
@@ -60,22 +60,22 @@ void test() {
 }
 ```
 
-Kompilování pomocí tohoto příkazu:
+Kompilace pomocí tohoto příkazu:
 
 `cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:1`
 
-poskytuje tento výstup:
+vypočítá tento výstup:
 
 ```Output
 --- Analyzing function: void __cdecl test(void)
 d:\myproject\mytest.cpp(4) : loop parallelized
 ```
 
-Kompilování pomocí tohoto příkazu:
+Kompilace pomocí tohoto příkazu:
 
 `cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:2`
 
-poskytuje tento výstup:
+vypočítá tento výstup:
 
 ```Output
 --- Analyzing function: void __cdecl test(void)
@@ -83,17 +83,17 @@ d:\myproject\mytest.cpp(4) : loop parallelized
 d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
 ```
 
-Všimněte si, že ve výstupu rozdíl mezi dvě různé [/Qpar-report (úroveň sestav automatický Paralelizér)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) možnosti. `/Qpar-report:1` Vypíše automatickou paralelizací zprávy pouze pro smyčky, které jsou úspěšně paralelizována. `/Qpar-report:2` zprávy nástrojů pro obě smyčky úspěšné a neúspěšné parallelizations výstupů.
+Všimněte si rozdílu ve výstupu mezi dvěma různými možnostmi [/Qpar-Report (úroveň vytváření sestav auto-paralelizace)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) . `/Qpar-report:1`Vytvoří výstup zpráv paralelizace jenom pro cykly, které jsou úspěšně paralelismuované. `/Qpar-report:2`Vypíše zprávy paralelizace pro úspěšné i neúspěšné parallelizations smyčky.
 
-Další informace o kódech příčiny a zprávy v tématu [zprávy nástrojů pro vektorizaci a](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
+Další informace o kódech a zprávách důvodů naleznete v tématu [vektorizace and paralelizace Messages](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-## <a name="auto-vectorizer"></a>Automatický Vektorizér
+## <a name="auto-vectorizer"></a>Automatické vektorizace
 
-Automatický Vektorizér analyzuje smyčky ve vašem kódu a používá vektorové registry a pokynů v cílovém počítači ke spouštění, pokud je to možné. Tím lze vylepšit výkon kódu. Kompilátor zaměřuje na pokyny SSE2, AVX a AVX2 u procesorů Intel nebo AMD nebo pokynů NEON na ARM procesorech podle [/arch](../build/reference/arch-minimum-cpu-architecture.md) přepnout.
+Automatické vektorizace analyzuje smyčky v kódu a používá vektorové registry a pokyny v cílovém počítači k jejich spuštění, pokud je může. To může zlepšit výkon kódu. Kompilátor cílí na instrukce SSE2, AVX a AVX2 v procesorech Intel nebo AMD nebo na procesorech ARM v závislosti na přepínači [/arch](../build/reference/arch-minimum-cpu-architecture.md) .
 
-Automatický Vektorizér mohou generovat různé pokyny, než je zadáno v `/arch` přepnout. Tyto pokyny jsou strážený kontroly za běhu, abyste měli jistotu, že kód stále běží správně. Například pokud kompilujete `/arch:SSE2`, může být vygenerován SSE4.2 pokyny. Kontroly za běhu ověří, zda je k dispozici na cílový procesor SSE4.2 a přejde na verzi jiné SSE4.2 smyčky, pokud procesor nepodporuje tyto pokyny.
+Automatické vektorizace můžou vygenerovat jiné pokyny, než je zadané v `/arch` přepínači. Tyto pokyny jsou chráněny pomocí kontroly za běhu, aby se zajistilo, že kód stále běží správně. Například když kompilujete `/arch:SSE2`, mohou být vygenerovány pokyny SSE 4.2. Při kontrole za běhu se ověří, jestli je v cílovém procesoru k dispozici SSE 4.2, a přejde na verzi smyčky, která není SSE 4.2, pokud procesor tyto pokyny nepodporuje.
 
-Ve výchozím nastavení je automatický Vektorizér zapnutý. Pokud chcete porovnat výkon kódu v rámci vektorizace, můžete použít [#pragma loop(no_vector)](../preprocessor/loop.md) zakázat vektorizace jakékoli dané smyčky.
+Ve výchozím nastavení je povolená možnost auto-vektorizace. Chcete-li porovnat výkon kódu v rámci vektorování, můžete použít [#pragma smyčka (no_vector)](../preprocessor/loop.md) , chcete-li zakázat rozvektorování kterékoli dané smyčky.
 
 ```cpp
 #pragma loop(no_vector)
@@ -101,19 +101,19 @@ for (int i = 0; i < 1000; ++i)
    A[i] = B[i] + C[i];
 ```
 
-Stejně jako u všech [direktivy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), syntaxi alternativní – Direktiva pragma `__pragma(loop(no_vector))` je také podporována.
+Stejně jako u všech [direktiv pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)je také podporována alternativní `__pragma(loop(no_vector))` syntaxe pragma.
 
-Podobně jako u na automatický Paralelizér, můžete zadat [/Qvec-report (úroveň sestav automatickou vektorizací)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) možnost příkazového řádku, buď sestavy úspěšně vektorizovaná smyčky pouze –`/Qvec-report:1`– nebo oba úspěšně a neúspěšně vektorizovaná smyčky –`/Qvec-report:2`).
+Stejně jako u auto-paralelizace můžete zadat možnost příkazového řádku [/Qvec-Report (auto-vektorizace Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , která bude hlásit buď úspěšně vektorové smyčky,`/Qvec-report:1`nebo úspěšné i neúspěšně vektorové smyčky –`/Qvec-report:2`).
 
-Další informace o kódech příčiny a zprávy v tématu [zprávy nástrojů pro vektorizaci a](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
+Další informace o kódech a zprávách důvodů naleznete v tématu [vektorizace and paralelizace Messages](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Příklad znázorňující, jak automatickou vektorizací funguje v praxi, najdete v části [projektu Austin část 2 ze 6: Stránka kulmy](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
+Příklad ukazující, jak vektorizace funguje v praxi, najdete v tématu [Project Austin Part 2 of 6: Vystránkování stránky.](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [loop](../preprocessor/loop.md)<br/>
-[Paralelní programování v nativním kódu](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Paralelní programování v nativním kódu](/archive/blogs/nativeconcurrency)<br/>
 [/Qpar (automatická paralelizace)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-report (úroveň generování sestav s automatickou paralelizací)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qpar-report (úroveň generování sestav s automatickou vektorizací)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
+[/Qvec-report (Úroveň sestavy s automatickou vektorizací)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
 [Zprávy nástrojů pro vektorizaci a paralelní zpracování](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)

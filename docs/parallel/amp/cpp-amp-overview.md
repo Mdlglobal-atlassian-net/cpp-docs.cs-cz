@@ -8,32 +8,32 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f0b46065371b8cb70802cfc38b7365fd2db14bf5
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449945"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538637"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 
-C++ Accelerated Massive Parallelism (C++ AMP) urychluje provádění kódu jazyka C++ využitím hardwaru paralelizovaného pro data, jako jsou grafický procesor (GPU) na samostatné grafické kartě. S použitím jazyka C++ AMP, vám umožní kódování algoritmy vícerozměrnými daty tak, aby provádění bude urychleno pomocí paralelismu na heterogenním hardwaru. Model programování C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, rozložení a knihovnu matematických funkcí. Rozšíření jazyka C++ AMP můžete řídit, jak jsou data přenášena z procesoru do GPU a zpět, takže můžete zlepšit výkon.
+C++ Accelerated Massive Parallelism (C++ AMP) zrychlí provádění kódu jazyka C++ využitím hardwaru, jako je například grafický procesor (GPU) na samostatné grafické kartě. Pomocí C++ AMP můžete kódovat multidimenzionální datové algoritmy, aby bylo možné spuštění zrychlit pomocí paralelismu na heterogenním hardwaru. C++ AMP programovací model zahrnuje multidimenzionální pole, indexování, přenos paměti, dělení a knihovnu matematické funkce. Pomocí C++ AMP jazykové rozšíření můžete řídit, jak se data přesunou z procesoru do GPU a zpět, abyste mohli zvýšit výkon.
 
-## <a name="system-requirements"></a>Požadavky na systém
+## <a name="system-requirements"></a>Systémové požadavky
 
 - Windows 7 nebo novější
 
 - Windows Server 2008 R2 nebo novější
 
-- Rozhraní DirectX 11 úroveň funkce 11.0 nebo novější hardware
+- DirectX 11 – úroveň funkcí 11,0 nebo novější hardware
 
-- Pro ladění v softwarovém emulátoru se vyžaduje systém Windows 8 nebo Windows Server 2012. Pro ladění na hardwaru, je nutné nainstalovat ovladače pro grafickou kartu. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).
+- Pro ladění v emulátoru softwaru se vyžaduje Windows 8 nebo Windows Server 2012. Pro ladění na hardwaru je nutné nainstalovat ovladače pro grafickou kartu. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- Poznámka: AMP není aktuálně podporována u ARM64.
+- Poznámka: v ARM64 se v tuto chvíli nepodporuje AMP.
 
 ## <a name="introduction"></a>Úvod
 
-Následující dva příklady ilustrují primární součásti knihovny C++ AMP. Předpokládejme, že chcete přidat odpovídající prvky dvou jednorozměrných polí. Například můžete chtít přidat `{1, 2, 3, 4, 5}` a `{6, 7, 8, 9, 10}` získat `{7, 9, 11, 13, 15}`. Bez používání modelu C++ AMP, můžete například napsat následující kód pro přidání čísel a zobrazení výsledků.
+Následující dva příklady ilustrují primární součásti C++ AMP. Předpokládejme, že chcete přidat odpovídající prvky 2 1 polí. Například můžete chtít přidat `{1, 2, 3, 4, 5}` a `{6, 7, 8, 9, 10}` získat. `{7, 9, 11, 13, 15}` Bez použití C++ AMP může napsat následující kód pro přidání čísel a zobrazení výsledků.
 
 ```cpp
 #include <iostream>
@@ -58,13 +58,13 @@ void StandardMethod() {
 
 Důležité části kódu jsou následující:
 
-- Data: Data obsahují tři pole. Všechny mají stejný počet rozměrů (jeden) a délku (pět).
+- Data: data se skládají ze tří polí. Všechny mají stejný rozměr (jedna) a length (pět).
 
-- Iterace: První `for` smyčky poskytuje mechanismus pro procházení prvků v polích. Kód, který chcete spustit pro výpočet součtu je obsažen v prvním `for` bloku.
+- Iterace: první `for` smyčka poskytuje mechanismus pro iteraci prvků v polích. Kód, který chcete spustit pro výpočet součtu, je obsažen v prvním `for` bloku.
 
-- Rejstřík: `idx` Proměnnou přistupuje k jednotlivým prvkům polí.
+- Index: `idx` proměnná přistupuje k jednotlivým prvkům polí.
 
-Používání modelu C++ AMP, můžete například napsat následující kód místo.
+Pomocí C++ AMP můžete místo toho napsat následující kód.
 
 ```cpp
 #include <amp.h>
@@ -100,23 +100,23 @@ void CppAmpMethod() {
 }
 ```
 
-Stejné základní prvky jsou k dispozici, ale jsou použity konstrukce knihovny C++ AMP:
+Jsou k dispozici stejné základní prvky, ale C++ AMP konstrukce jsou použity:
 
-- Data: Použijete C++ pole k sestavení kompletních tři C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objekty. Zadat čtyři hodnoty k vytvoření `array_view` objektu: hodnoty dat, počet rozměrů, typ elementu a délku `array_view` objektu v každém rozměru. Počet rozměrů a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je jednorozměrné pole jazyka C++, která je předána do konstruktoru. Počet rozměrů a délka se používají k tvorbě obdélníkového tvaru dat `array_view` objektu a datové hodnoty jsou použity k vyplnění pole. Běhová knihovna také zahrnuje [array – třída](../../parallel/amp/reference/array-class.md), která má podobné rozhraní `array_view` třídy a je popsána dále v tomto článku.
+- Data: k vytvoření tří objektů C++ AMP [Array_view](../../parallel/amp/reference/array-view-class.md) lze použít pole jazyka C++. Zadáte čtyři hodnoty pro vytvoření `array_view` objektu: hodnoty dat, pořadí, typ prvku a délku `array_view` objektu v každé dimenzi. Pořadí a typ jsou předány jako parametry typu. Data a délka jsou předány jako parametry konstruktoru. V tomto příkladu je pole C++, které je předáno konstruktoru, jednorozměrné. Pořadí a délka slouží k vytvoření obdélníkového tvaru dat v `array_view` objektu a hodnoty dat slouží k vyplnění pole. Běhová knihovna také obsahuje [třídu Array](../../parallel/amp/reference/array-class.md), která má rozhraní, které se podobá `array_view` třídě a je popsána dále v tomto článku.
 
-- Iterace: [Parallel_for_each – funkce (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro procházení datových prvků, nebo *výpočetní domény*. V tomto příkladu je výpočetní domény určené `sum.extent`. Kód, který chcete spustit je obsažen ve výrazu lambda nebo *funkce jádra*. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.
+- Iterace: [funkce parallel_for_each (C++ amp)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro iteraci v datových prvcích nebo *výpočetní doméně*. V tomto příkladu je výpočetní doména určena pomocí `sum.extent`. Kód, který chcete spustit, je obsažen ve výrazu lambda nebo ve *funkci jádra*. `restrict(amp)` Určuje, že se používá pouze podmnožina jazyka C++, kterou C++ amp může zrychlit.
 
-- Rejstřík: [Index – třída](../../parallel/amp/reference/index-class.md) proměnnou, `idx`, je deklarována s rozměrem jedna, aby odpovídala pořadí `array_view` objektu. Pomocí indexu lze přistupovat k jednotlivým prvkům `array_view` objekty.
+- Index: proměnná [třídy indexu](../../parallel/amp/reference/index-class.md) , `idx`, je deklarována s rozměrem jednoho, aby odpovídala rozměru `array_view` objektu. Pomocí indexu můžete přistupovat k jednotlivým prvkům `array_view` objektů.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Tvarování a indexování dat: index a rozsah
 
-Musíte definovat hodnoty dat a deklarovat tvar dat. před spuštěním kódu jádra. Všechna data je definován jako poli (obdélníkovém) a můžete definovat pole, které chcete mít jakékoliv řazení (počet rozměrů). Data mohou být libovolné velikosti v libovolný počet rozměrů.
+Než budete moci spustit kód jádra, je nutné definovat hodnoty dat a deklarovat tvar dat. Všechna data jsou definovaná jako pole (pravoúhlá) a můžete definovat, že pole bude mít libovolné pořadí (počet dimenzí). Data mohou mít libovolnou velikost v libovolné z dimenzí.
 
 ### <a name="index-class"></a>index – třída
 
-[Index – třída](../../parallel/amp/reference/index-class.md) Určuje umístění v `array` nebo `array_view` objekt zapouzdřením posunu od začátku v každém rozměru do jednoho objektu. Při přístupu k umístění, do pole, předáte `index` objekt indexujícímu operátoru `[]`, namísto seznamu celočíselných indexů. Pomocí můžete přístup k prvkům v každém rozměru [array:: operator() – operátor](reference/array-class.md#operator_call) nebo [array_view:: Operator() – operátor](reference/array-view-class.md#operator_call).
+[Třída index](../../parallel/amp/reference/index-class.md) určuje umístění v objektu `array` nebo `array_view` zapouzdřením posunu od počátku v každé dimenzi do jednoho objektu. Při přístupu k umístění v poli předáte `index` objektu operátoru `[]`indexování místo seznamu indexů celých čísel. K prvkům v jednotlivých dimenzích můžete přistupovat pomocí [operátoru Array:: operator ()](reference/array-class.md#operator_call) nebo [operátoru array_view:: operator ()](reference/array-view-class.md#operator_call).
 
-Následující příklad vytvoří jednorozměrný index, který určuje třetí prvek v jednorozměrném `array_view` objektu. Index je použit ke zobrazení třetího prvku `array_view` objektu. Výstup je 3.
+Následující příklad vytvoří jednorozměrné index, který určuje třetí prvek v jednorozměrném `array_view` objektu. Index se používá k vytištění třetího prvku v `array_view` objektu. Výstup má hodnotu 3.
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5};
@@ -128,7 +128,7 @@ std::cout << a[idx] << "\n";
 // Output: 3
 ```
 
-Následující příklad vytváří dvojrozměrný index, který určuje prvek kde na řádku 1 a ve sloupci = 2 v dvourozměrném `array_view` objektu. První parametr v `index` konstruktor je řádek a druhý parametr zase sloupec. Výstup je 6.
+Následující příklad vytvoří dvourozměrný index, který určuje prvek, kde řádek = 1 a sloupec = 2 v dvojrozměrném `array_view` objektu. Prvním parametrem v `index` konstruktoru je komponenta řádku a druhý parametr je komponenta sloupce. Výstup je 6.
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6};
@@ -140,7 +140,7 @@ std::cout <<a[idx] << "\n";
 // Output: 6
 ```
 
-Následující příklad vytvoří trojrozměrný index, který určuje prvek kde hloubka = 0, na řádku 1 a ve sloupci = 3 v trojrozměrném `array_view` objektu. Všimněte si, že první parametr je hloubka, druhý parametr je řádek a třetí parametr zase sloupec. Výstup je 8.
+Následující příklad vytvoří prostorový index, který určuje prvek, kde hloubka = 0, řádek = 1 a sloupec = 3 v trojrozměrném `array_view` objektu. Všimněte si, že první parametr je hloubka komponenty, druhým parametrem je komponenta řádku a třetí parametr je komponenta sloupce. Výstup je 8.
 
 ```cpp
 int aCPP[] = {
@@ -158,7 +158,7 @@ std::cout << a[idx] << "\n";
 
 ### <a name="extent-class"></a>extent – třída
 
-[Extent – třída](../../parallel/amp/reference/extent-class.md) určuje délku dat v každém rozměru objektu `array` nebo `array_view` objektu. Můžete vytvořit rozsah a použít ho k vytvoření `array` nebo `array_view` objektu. Můžete také získat rozsah existujícího `array` nebo `array_view` objektu. Následující příklad vytiskne délku rozsahu v každém rozměru objektu `array_view` objektu.
+[Třída rozsahu](../../parallel/amp/reference/extent-class.md) určuje délku dat v každém rozměru objektu `array` or. `array_view` Můžete vytvořit rozsah a použít ho k vytvoření objektu `array` nebo. `array_view` Můžete také načíst rozsah existujícího `array` objektu nebo. `array_view` Následující příklad vytiskne délku rozsahu v každém rozměru `array_view` objektu.
 
 ```cpp
 int aCPP[] = {
@@ -173,7 +173,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 std::cout << "Length in most significant dimension is " << a.extent[0] << "\n";
 ```
 
-Následující příklad vytvoří `array_view` objekt, který má stejné rozměry jako objekt v předchozím příkladu, ale v tomto příkladu používá `extent` namísto použití explicitních parametrů v objektu `array_view` konstruktoru.
+Následující příklad vytvoří `array_view` objekt, který má stejné rozměry jako objekt v předchozím příkladu, ale v tomto příkladu se místo použití explicitních `extent` parametrů v `array_view` konstruktoru používá objekt.
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24};
@@ -186,13 +186,13 @@ std::cout << "The number of rows is " << a.extent[1] << "\n";
 std::cout << "The depth is " << a.extent[0] << "\n";
 ```
 
-## <a name="moving-data-to-the-accelerator-array-and-arrayview"></a>Přesun dat na akcelerátor: array a array_view
+## <a name="moving-data-to-the-accelerator-array-and-array_view"></a>Přesun dat do akcelerátoru: pole a array_view
 
-Dva datové kontejnery používají pro přesun dat do akcelerátoru jsou definovány v knihovně modulu runtime. Jsou [array – třída](../../parallel/amp/reference/array-class.md) a [array_view – třída](../../parallel/amp/reference/array-view-class.md). `array` Třída je třídou kontejneru, která při vytvoření objektu vytvoří hlubokou kopii dat. `array_view` Třída je třídou obálky, která zkopíruje data při funkce jádra přistupuje k datům. Při potřebě dat na zdrojovém zařízení jsou data zkopírována zpět.
+Dva datové kontejnery, které slouží k přesunu dat do akcelerátoru, jsou definovány v knihovně modulu runtime. Jsou to [Třída Array](../../parallel/amp/reference/array-class.md) a [třída array_view](../../parallel/amp/reference/array-view-class.md). `array` Třída je třída kontejneru, která vytvoří hloubkovou kopii dat, když je objekt vytvořen. `array_view` Třída je Obálková třída, která kopíruje data v případě, že funkce jádra přistupuje k datům. Když jsou na zdrojovém zařízení potřebná data, data se zkopírují zpátky.
 
 ### <a name="array-class"></a>array – třída
 
-Když `array` objekt je vytvořen, hluboká kopie dat se vytvoří v akcelerátoru, pokud je použit konstruktor, který obsahuje ukazatel na datové sadě. Funkce jádra modifikuje kopii v akcelerátoru. Po dokončení spuštění funkce jádra musí zkopírovat data zpět do struktury zdrojových dat. Následující příklad vynásobí každý prvek vektoru 10. Po dokončení funkce jádra `vector conversion operator` se použije ke zkopírování dat zpět do objektu vektoru.
+Pokud je `array` vytvořen objekt, je vytvořena hluboká kopie dat v akcelerátoru, pokud použijete konstruktor, který obsahuje ukazatel na datovou sadu. Funkce jádra upraví kopii v akcelerátoru. Po dokončení spuštění funkce jádra je nutné zkopírovat data zpět do struktury zdrojových dat. Následující příklad vynásobí každý prvek ve vektoru hodnotou 10. Po dokončení `vector conversion operator` funkce jádra se použije ke zkopírování dat zpět do objektu Vector.
 
 ```cpp
 std::vector<int> data(5);
@@ -217,32 +217,32 @@ for (int i = 0; i < 5; i++)
 }
 ```
 
-### <a name="arrayview-class"></a>array_view – třída
+### <a name="array_view-class"></a>array_view – třída
 
-`array_view` Má téměř stejné členy jako `array` třídy, ale základní chování není totéž. Data předaná do `array_view` konstruktor není v GPU replikována tak jako u `array` konstruktoru. Místo toho data zkopírována do akcelerátoru při provádění funkce jádra. Proto pokud jsou vytvořeny dva `array_view` objekty, které používají stejná data, oba `array_view` objekty odkazují na stejném paměťovém prostoru. Když toto provedete, budete muset synchronizovat vícevláknový přístup. Hlavní výhodou používání `array_view` třída je, že data se přesunou pouze v případě potřeby.
+`array_view` Má skoro stejné členy jako `array` třída, ale základní chování není stejné. Data předaná `array_view` konstruktoru nejsou replikována na GPU, protože se jedná o `array` konstruktor. Místo toho se data zkopírují do akcelerátoru, když se spustí funkce jádra. Proto pokud vytvoříte dva `array_view` objekty, které používají stejná data, oba `array_view` objekty budou odkazovat na stejný paměťový prostor. Když to uděláte, musíte synchronizovat jakýkoli vícevláknový přístup. Hlavní výhodou použití `array_view` třídy je, že data se přesunou pouze v případě, že je to nezbytné.
 
-### <a name="comparison-of-array-and-arrayview"></a>Porovnání třídy array a array_view
+### <a name="comparison-of-array-and-array_view"></a>Porovnání pole a array_view
 
-Následující tabulka shrnuje podobnosti a rozdíly mezi `array` a `array_view` třídy.
+Následující tabulka shrnuje podobnosti a rozdíly mezi třídami `array` a. `array_view`
 
 |Popis|array – třída|array_view – třída|
 |-----------------|-----------------|-----------------------|
-|Pokud je určen počet rozměrů|V době kompilace.|V době kompilace.|
-|Kdy je stanoven rozsah|V době běhu.|V době běhu.|
-|Obrazec|Obdélníkový.|Obdélníkový.|
+|Při určení pořadí|V době kompilace.|V době kompilace.|
+|Když se určí rozsah|V době běhu.|V době běhu.|
+|Obrazec|–.|–.|
 |Úložiště dat|Je datový kontejner.|Je obálka dat.|
-|Kopírovat|Explicitní a hluboká kopie při definici.|Implicitní kopie při přístupu funkce jádra.|
-|Načítání dat|Kopírování dat pole zpět do objektu ve vlákně procesoru.|Pomocí přímého přístupu `array_view` objektu nebo pomocí volání metody [array_view::synchronize – metoda](reference/array-view-class.md#synchronize) nadále přístup k datům v původním kontejneru.|
+|Kopírovat|Explicitní a hluboká kopie v definici|Implicitní kopírování, je-li k němu přistupovaná funkce jádra.|
+|Načítání dat|Zkopírováním dat pole zpět do objektu ve vlákně procesoru.|Přímým přístupem k `array_view` objektu nebo voláním [metody array_view:: Synchronize](reference/array-view-class.md#synchronize) pro pokračování přístupu k datům v původním kontejneru.|
 
-### <a name="shared-memory-with-array-and-arrayview"></a>Sdílená paměť s objekty array a array_view
+### <a name="shared-memory-with-array-and-array_view"></a>Sdílená paměť s polem a array_view
 
-Sdílená paměť je paměť, která je přístupná pomocí procesoru a akcelerátoru. Využití sdílené paměti eliminuje nebo významně snižuje režijní náklady na kopírování dat mezi CPU a akcelerátorem. I když je paměť sdílená, se nedá přistupovat souběžně CPU a akcelerátorem a tím proto způsobí nedefinované chování.
+Sdílená paměť je paměť, ke které je možné použít procesor i akcelerátor. Použití sdílené paměti eliminuje nebo významně snižuje nároky na kopírování dat mezi CPU a akcelerátorem. I když je paměť sdílená, nelze k ní současně přistupovat pomocí procesoru i akcelerátoru, což způsobí nedefinované chování.
 
-`array` objekty lze použít k určení velice přesně kontrolovat využití sdílené paměti, pokud přidružený akcelerátor podporuje. Určuje, zda akcelerátor podporuje sdílenou paměť je určeno akcelerátoru [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) vlastnost, která vrací **true** při je podporována sdílená paměť. Pokud je podporována sdílená paměť, výchozí [access_type – výčet](reference/concurrency-namespace-enums-amp.md#access_type) paměti je určeno přidělení v akcelerátoru `default_cpu_access_type` vlastnost. Ve výchozím nastavení `array` a `array_view` objekty trvají na stejném `access_type` jako primárně spojený `accelerator`.
+`array`objekty lze použít k určení jemně odstupňované kontroly nad použitím sdílené paměti, pokud je příslušný akcelerátor podporuje. Zda akcelerátor podporuje sdílenou paměť, je určena vlastností [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) akcelerátoru, která vrací **hodnotu true** , pokud je sdílená paměť podporována. Pokud je podporovaná sdílená paměť, [vyčíslení výchozího Access_type výčtu](reference/concurrency-namespace-enums-amp.md#access_type) pro přidělení paměti v akcelerátoru `default_cpu_access_type` je určené vlastností. Ve výchozím nastavení `array` objekty `array_view` a převezmou `access_type` objekty, které jsou přidruženy k `accelerator`primárnímu objektu.
 
-Tím, že nastavíte [Array::cpu_access_type data – datový člen](reference/array-class.md#cpu_access_type) vlastnost `array` explicitně, které můžete procvičit jemné doladění řízení nad tím, jak sdílené paměti se používají, aby mohli optimalizovat aplikace pro výkon hardwaru vlastnosti závislosti na vzorech přístupu paměti jádra jeho výpočtu těží. `array_view` Odráží stejné `cpu_access_type` jako `array` , který je spojen s; nebo, pokud objekt array_view konstruován beze zdroje dat, jeho `access_type` odráží prostředí, které nejprve vyvolá přidělení úložiště. To znamená, pokud je nejprve otevřen hostitelem (CPU), pak se chová jako by byl vytvořen ze zdrojů dat procesoru a sdílených složek `access_type` z `accelerator_view` spojeného při vzniku; nicméně, pokud je první přistupuje `accelerator_view`, pak se chová jako by šlo vytváří přes `array` vytvořeném u tohoto `accelerator_view` a sdílených složek `array`společnosti `access_type`.
+Nastavením vlastnosti [pole datového členu Array:: cpu_access_type](reference/array-class.md#cpu_access_type) `array` explicitně můžete vykonat jemně odstupňovanou kontrolu nad tím, jak se používá sdílená paměť, takže můžete optimalizovat aplikaci pro výkonnostní charakteristiky hardwaru, a to na základě vzorců přístupu k paměti pro výpočetní jádra. `array_view` Odpovídá stejnému `cpu_access_type` jako k `array` , ke kterému je přidružen; nebo pokud je array_view vytvořená bez zdroje dat, `access_type` odráží prostředí, které nejdřív způsobí, že mu přidělí úložiště. To znamená, že pokud je poprvé k němu přistupující hostitel (CPU), chová se, jako by byl vytvořen přes zdroj dat procesoru, a sdílí `access_type` objekt `accelerator_view` přidružený pomocí zachycení. Pokud je však poprvé k `accelerator_view`dispozici, bude se chovat, jako by byl vytvořen pomocí `array` vytvořeného objektu `accelerator_view` a sdílí. `array` `access_type`
 
-Následující příklad kódu ukazuje, jak určit, zda výchozí akcelerátor podporuje sdílenou paměť a potom vytvoří několik polí, která mají různou konfiguraci cpu_access_type.
+Následující příklad kódu ukazuje, jak určit, zda výchozí akcelerátor podporuje sdílenou paměť, a poté vytvoří několik polí, které mají různé konfigurace cpu_access_type.
 
 ```cpp
 #include <amp.h>
@@ -282,9 +282,9 @@ int main()
 }
 ```
 
-## <a name="executing-code-over-data-parallelforeach"></a>Provádění kódu nad daty: parallel_for_each
+## <a name="executing-code-over-data-parallel_for_each"></a>Spouští se kód pro data: parallel_for_each
 
-[Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) funkce definuje kód, který chcete spustit na akcelerátoru nad daty v `array` nebo `array_view` objektu. Vezměte v úvahu následující kód z úvodu tohoto tématu.
+Funkce [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) definuje kód, který chcete spustit v akcelerátoru proti datům v objektu `array` nebo. `array_view` Vezměte v úvahu následující kód z úvodu tohoto tématu.
 
 ```cpp
 #include <amp.h>
@@ -314,13 +314,13 @@ void AddArrays() {
 }
 ```
 
-`parallel_for_each` Metoda přebírá dva argumenty, výpočetní doménu a výraz lambda.
+`parallel_for_each` Metoda přijímá dva argumenty, výpočetní doménu a výraz lambda.
 
-*Výpočetní domény* je `extent` objektu nebo `tiled_extent` objekt, který definuje sadu vláken pro vytvoření pro paralelní zpracování. Pro každý prvek ve výpočetní doméně je generováno jedno vlákno. V takovém případě `extent` objekt je jednorozměrný a má pět prvků. Proto je spuštěno pět vláken.
+*Výpočetní doména* je `extent` objekt nebo `tiled_extent` objekt, který definuje sadu vláken, která se má vytvořit pro paralelní spuštění. Jedno vlákno je vygenerováno pro každý prvek ve výpočetní doméně. V tomto případě je `extent` objekt jednorozměrné a má pět prvků. Proto se spustí pět vláken.
 
-*Výraz lambda* definuje kód, který chcete spustit v každém vláknu. Klauzule zachycení `[=]`, určuje, že hlavní část výrazu lambda přistupuje všem zaznamenaným proměnným podle hodnoty, které jsou v tomto případě `a`, `b`, a `sum`. V tomto příkladu vytváří seznam parametrů jednorozměrnou `index` proměnnou s názvem `idx`. Hodnota `idx[0]` je 0 v prvním vlákně a zvýší o 1 v každém následném vlákně. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.  Omezení ve funkcích, které obsahují modifikátor restrict, jsou popsány v [omezení (C++ AMP)](../../cpp/restrict-cpp-amp.md). Další informace najdete v tématu, [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md).
+*Výraz lambda* definuje kód, který se má spustit v každém vlákně. Klauzule `[=]`Capture, určuje, že tělo výrazu lambda přistupuje ke všem zachyceným proměnným podle hodnoty, což v tomto případě `a`jsou, `b`a. `sum` V tomto příkladu seznam parametrů vytvoří jednorozměrné `index` proměnné s názvem. `idx` Hodnota `idx[0]` je 0 v prvním vlákně a v každém dalším vlákně se zvyšuje o jednu. `restrict(amp)` Určuje, že se používá pouze podmnožina jazyka C++, kterou C++ amp může zrychlit.  Omezení funkcí, které mají modifikátor omezení, jsou popsána v tématu [restrict (C++ amp)](../../cpp/restrict-cpp-amp.md). Další informace naleznete v tématu, [syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md).
 
-Výraz lambda může obsahovat kód pro spuštění nebo může volat samostatnou funkci jádra. Funkce jádra musí zahrnovat `restrict(amp)` modifikátor. Následující příklad je ekvivalentní předchozí příklad, ale volá samostatnou funkci jádra.
+Výraz lambda může zahrnovat kód, který se má provést, nebo může volat samostatnou funkci jádra. Funkce jádra musí zahrnovat `restrict(amp)` modifikátor. Následující příklad je ekvivalentní k předchozímu příkladu, ale volá samostatnou funkci jádra.
 
 ```cpp
 #include <amp.h>
@@ -358,15 +358,15 @@ void AddArraysWithFunction() {
 }
 ```
 
-## <a name="accelerating-code-tiles-and-barriers"></a>Urychlování kódu: Dlaždice a překážky
+## <a name="accelerating-code-tiles-and-barriers"></a>Zrychlení kódu: dlaždice a bariéry
 
-Další zrychlení lze získat pomocí rozložení. Dělení do bloků rozděluje vlákna do rovnoměrných obdélníkových podmnožin nebo *dlaždice*. Můžete určit velikost odpovídající dlaždice na základě sady dat a algoritmu, který píšete. Pro každé vlákno, máte přístup k *globální* umístění datového prvku, relativnímu k celému `array` nebo `array_view` a přístup k *místní* umístění, relativnímu k dlaždici. Používání hodnoty místního indexu zjednodušuje kód, protože není nutné napsat kód pro převod hodnot indexu z globálních na místní. Chcete-li použít dělení do bloků, zavolejte [Extent::Tile – metoda](reference/extent-class.md#tile) ve výpočetní doméně v `parallel_for_each` metoda a použití [tiled_index](../../parallel/amp/reference/tiled-index-class.md) objektu ve výrazu lambda.
+Další akceleraci můžete získat pomocí dělení na sebe. Dělení rozdělí vlákna na stejné pravoúhlé podmnožiny nebo *dlaždice*. Určíte velikost příslušné dlaždice na základě vaší sady dat a algoritmu, který kódujete. Pro každé vlákno máte přístup k *globálnímu* umístění datového prvku relativně k celému `array` nebo `array_view` a přístup k *místnímu* umístění vzhledem k dlaždici. Použití hodnoty místního indexu zjednodušuje váš kód, protože nemusíte psát kód pro převod hodnot indexu z globálních na místní. Chcete-li použít dělení na více objektů, zavolejte [metodu rozsah:: Tile](reference/extent-class.md#tile) ve výpočetní doméně `parallel_for_each` v metodě a použijte objekt [tiled_index](../../parallel/amp/reference/tiled-index-class.md) ve výrazu lambda.
 
-V typických aplikacích prvky v dlaždici nějakým způsobem související a kód má přístup k a sledovat hodnoty napříč dlaždicí. Použití [tile_static – klíčové slovo](../../cpp/tile-static-keyword.md) – klíčové slovo a [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait) jak toho dosáhnout. Proměnná, která má **tile_static** – klíčové slovo má rozsah přes celou dlaždici a instance proměnné je vytvořena pro každou dlaždici. Je třeba ošetřit synchronizaci přístupu vláken dlaždic k proměnné. [Tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait) zastaví provádění aktuálního vlákna, dokud všechna vlákna v dlaždici nedosáhnou volání `tile_barrier::wait`. Takto lze nashromáždit hodnoty napříč dlaždicí pomocí **tile_static** proměnné. Poté mohou být dokončeny všechny výpočty, které vyžadují přístup ke všem hodnotám.
+V typických aplikacích se prvky v dlaždici vztahují nějakým způsobem a kód musí mít přístup a sledovat hodnoty napříč dlaždicí. K tomuto účelu použijte klíčové slovo [tile_static](../../cpp/tile-static-keyword.md) a [metodu tile_barrier:: wait](reference/tile-barrier-class.md#wait) . Proměnná, která má klíčové slovo **tile_static** má obor v celé dlaždici a instance proměnné je vytvořena pro každou dlaždici. Je nutné zpracovat synchronizaci přístupu vlákna dlaždice k proměnné. [Metoda tile_barrier:: wait](reference/tile-barrier-class.md#wait) zastaví provádění aktuálního vlákna, dokud všechna vlákna v dlaždici nedosáhnou volání `tile_barrier::wait`. Takže můžete nashromáždit hodnoty přes dlaždici pomocí **tile_static** proměnných. Pak můžete dokončit jakékoli výpočty, které vyžadují přístup ke všem hodnotám.
 
-Následující diagram představuje dvojrozměrné pole dat vzorkování, která jsou uspořádána v dlaždicích.
+Následující diagram představuje dvojrozměrné pole dat vzorkování, která jsou uspořádána do dlaždic.
 
-![Index hodnoty v dlaždic](../../parallel/amp/media/camptiledgridexample.png "Index hodnoty v dlaždic")
+![Indexovat hodnoty v dlaždicovém rozsahu](../../parallel/amp/media/camptiledgridexample.png "Indexovat hodnoty v dlaždicovém rozsahu")
 
 Následující příklad kódu používá data vzorkování z předchozího diagramu. Kód nahradí každou hodnotu v dlaždici průměrem hodnot v dlaždici.
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Matematické knihovny
 
-C++ AMP obsahuje dvě matematické knihovny. Knihovna s dvojitou přesností v [Concurrency::precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce s dvojitou přesností. Také poskytuje podporu pro funkce s jednoduchou přesností, i když je nutné použít podporu dvojité přesnosti na hardwaru. Odpovídá [dle specifikace C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerátor musí podporovat plnou dvojitou přesnost. Můžete určit, zda ji provede pomocí kontroly hodnoty [Accelerator::supports_double_precision – datový člen](reference/accelerator-class.md#supports_double_precision). Rychlé matematické knihovny v [Concurrency::fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), obsahuje jinou sadu matematických funkcí. Tyto funkce, které podporují pouze `float` operandy, prováděny rychleji, ale nejsou tak přesné jako ty v knihovně matematiku s dvojitou přesností. Funkce jsou obsaženy v \<amp_math.h > hlavičkový soubor a všechny jsou deklarovány pomocí `restrict(amp)`. Funkce \<cmath > soubor hlaviček jsou importovány do obou `fast_math` a `precise_math` obory názvů. **Omezit** – klíčové slovo se používá pro rozlišení \<cmath > verze a verze C++ AMP. Následující kód vypočítá logaritmus o základu 10, pomocí rychlé metody pro každou hodnotu, která je ve výpočetní doméně.
+C++ AMP obsahuje dvě matematické knihovny. Knihovna s dvojitou přesností v [oboru názvů Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce s dvojitou přesností. Poskytuje taky podporu pro funkce s jednoduchou přesností, i když je u hardwaru pořád povinná podpora s dvojitou přesností. Je v souladu se [specifikací C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerátor musí podporovat celou dvojitou přesnost. Můžete určit, zda se jedná, kontrolou hodnoty [datového členu akcelerátor:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). Rychlá knihovna matematického [zpracování v oboru názvů Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md)obsahuje další sadu matematických funkcí. Tyto funkce, které podporují jenom `float` operandy, se spouštějí rychleji, ale nejsou tak přesné jako ty v matematické knihovně s dvojitou přesností. Funkce jsou obsaženy v souboru hlaviček \<> amp_math. h a všechny jsou deklarovány pomocí `restrict(amp)`. Funkce v souboru hlaviček \<> cmath jsou importovány do obou oborů názvů `fast_math` a `precise_math` . Klíčové slovo **restrict** slouží k odlišení \<cmath verze> a C++ amp verzi. Následující kód vypočítá logaritmus o základu 10 pomocí rychlé metody každé hodnoty, která je ve výpočetní doméně.
 
 ```cpp
 #include <amp.h>
@@ -457,35 +457,35 @@ void MathExample() {
 }
 ```
 
-## <a name="graphics-library"></a>Grafické knihovny
+## <a name="graphics-library"></a>Knihovna grafiky
 
-C++ AMP obsahuje grafickou knihovnu, která je navržena pro urychlené programování grafiky. Tato knihovna se používá jenom na zařízeních, která podporují nativní grafické funkce. Metody jsou v [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md) a jsou obsaženy v \<amp_graphics.h > soubor hlaviček. Klíčové součásti grafické knihovny jsou:
+C++ AMP obsahuje knihovnu grafiky, která je navržena pro urychlené programování grafiky. Tato knihovna se používá jenom na zařízeních, která podporují nativní grafické funkce. Metody jsou v [oboru názvů Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) a jsou obsaženy v souboru hlaviček \<> amp_graphics. h. Klíčové komponenty knihovny grafiky jsou:
 
-- [Texture – třída](../../parallel/amp/reference/texture-class.md): Tuto třídu textur lze použít pro tvorbu textur z paměti nebo ze souboru. Textury se podobají polím, protože obsahují data a připomínají kontejnery ve standardní knihovně jazyka C++ s ohledem na přiřazení a konstrukci kopie. Další informace najdete v tématu [kontejnery standardní knihovny C++](../../standard-library/stl-containers.md). Parametry šablony `texture` třídy jsou typ prvku a počet rozměrů. Počet rozměrů může být 1, 2 nebo 3. Typ prvku může být jeden z typů krátkých vektorů, popsaných dále v tomto článku.
+- [Texture – třída](../../parallel/amp/reference/texture-class.md): lze použít třídu textury k vytváření textur z paměti nebo ze souboru. Textury připomínají pole, protože obsahují data a připomínají se kontejnery ve standardní knihovně C++ s ohledem na přiřazení a konstrukci kopírování. Další informace najdete v tématu [kontejnery knihovny Standard C++](../../standard-library/stl-containers.md). Parametry šablony pro `texture` třídu jsou typ prvku a pořadí. Pořadí může být 1, 2 nebo 3. Typ prvku může být jeden z typů krátkých vektorů, které jsou popsány dále v tomto článku.
 
-- [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md): Poskytuje přístup jen pro zápis pro všechny textury.
+- [Writeonly_texture_view třída](../../parallel/amp/reference/writeonly-texture-view-class.md): poskytuje přístup jen pro zápis k libovolné textuře.
 
-- Knihovna krátkých vektorů: Definuje sadu typů krátkých vektorů o délce 2, 3 a 4, které jsou založeny na **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), nebo [unorm](../../parallel/amp/reference/unorm-class.md).
+- Krátká vektorová knihovna: definuje sadu krátkých vektorových typů délky 2, 3 a 4, které jsou založené na **int**, `uint`, **float**, **Double**, [normě](../../parallel/amp/reference/norm-class.md)nebo [unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>Aplikace Universal Windows Platform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>Aplikace Univerzální platforma Windows (UWP)
 
-Stejně jako ostatní knihovny jazyka můžete použít C++ AMP v aplikacích pro UPW. Tyto články popisují, jak zahrnout kód jazyka C++ AMP v aplikacích, která je vytvořena pomocí C++, C#, Visual Basic nebo JavaScript:
+Stejně jako jiné knihovny jazyka C++ můžete ve svých aplikacích pro UWP použít C++ AMP. Tyto články popisují, jak zahrnout kód C++ AMP v aplikacích, které jsou vytvořeny pomocí jazyků C++, C#, Visual Basic nebo JavaScript:
 
-- [Používání modelu C++ AMP v aplikacích pro UPW](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
+- [Používání C++ AMP v aplikacích pro UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání komponenty z jazyka JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a její volání z JavaScriptu](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Optimalizátor cest, app Store okno v jazyce JavaScript a C++ map Bing](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Optimalizátor cest mapy Bingu, aplikace pro Windows Store v JavaScriptu a C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Jak používat c ++ AMP z C# s použitím prostředí Windows Runtime](https://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Použití C++ AMP z jazyka C# pomocí prostředí Windows Runtime](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
-- [Jak používat c ++ AMP z C#](https://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Použití C++ AMP z jazyka C #](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c/)
 
 - [Volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md)
 
-## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP a vizualizér souběžnosti
+## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP a Vizualizér souběžnosti
 
-Vizualizátor souběžnosti zahrnuje podporu pro analýzu výkonu kódu jazyka C++ AMP. Tyto články popisují tyto funkce:
+Vizualizátor souběžnosti zahrnuje podporu pro analýzu výkonu C++ AMPho kódu. Tyto články popisují tyto funkce:
 
 - [Graf aktivity GPU](/visualstudio/profiling/gpu-activity-graph)
 
@@ -497,15 +497,15 @@ Vizualizátor souběžnosti zahrnuje podporu pro analýzu výkonu kódu jazyka C
 
 - [Kanály (Zobrazení vláken)](/visualstudio/profiling/channels-threads-view)
 
-- [Analýza kódu C++ AMP pomocí Vizualizéru souběžnosti](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [Analýza kódu C++ AMP pomocí Vizualizátor souběžnosti](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
 
 ## <a name="performance-recommendations"></a>Doporučení k výkonu
 
-Operace modulo a dělení celých čísel bez znaménka mají výrazně lepší výkon než operace modulo a dělení celých čísel se znaménkem. Doporučujeme používat celá čísla bez znaménka Pokud je to možné.
+Modulo a dělení celých čísel bez znaménka mají výrazně lepší výkon než modul a dělení celých čísel se znaménkem. Pokud je to možné, doporučujeme použít celá čísla bez znaménka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[Syntaxe výrazů lambda](../../cpp/lambda-expression-syntax.md)<br/>
+[Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referenční dokumentace (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
 [Paralelní programování v blogu nativního kódu](https://go.microsoft.com/fwlink/p/?linkid=238472)
