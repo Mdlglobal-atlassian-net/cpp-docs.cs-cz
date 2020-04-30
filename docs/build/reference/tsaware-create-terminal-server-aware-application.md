@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498189"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587381"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 
@@ -36,13 +36,13 @@ Pokud používáte/TSAWARE a vaše aplikace stále používá soubory INI, soubo
 
 Možnost/TSAWARE je ve výchozím nastavení povolená pro aplikace pro Windows a konzolové aplikace. Informace najdete v tématu [/Subsystem](subsystem-specify-subsystem.md) a [/Version](version-version-information.md) .
 
-/TSAWARE není platný pro ovladače, VxDs nebo knihovny DLL.
+/TSAWARE není platný pro ovladače nebo knihovny DLL.
 
 Pokud byla aplikace propojená s/TSAWARE, zobrazí se v tomto efektu DUMPBIN [/Headers](headers.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení kompilátoru C++ a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Klikněte na složku **linker** .
 
@@ -52,9 +52,9 @@ Pokud byla aplikace propojená s/TSAWARE, zobrazí se v tomto efektu DUMPBIN [/H
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)<br/>

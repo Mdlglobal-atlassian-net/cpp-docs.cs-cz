@@ -11,29 +11,35 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167673"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587372"
 ---
-# <a name="opno-locswitch-statement-c"></a>switch– Příkaz (C)
+# <a name="switch-statement-c"></a>`switch`– Příkaz (C)
 
-Příkazy **switch** a **case** slouží k řízení složitých operací podmíněného a větvení. **switch** Příkaz přenáší řízení do příkazu v rámci jeho těla.
+Příkazy __`switch`__ a __`case`__ slouží k řízení složitých operací podmíněného a větvení. __`switch`__ Příkaz přenáší řízení do příkazu v rámci jeho těla.
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz výběru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *příkaz* výrazu
+> *`selection-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-*příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *příkaz konstantního výrazu***`:`***statement*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *vydá*
+> *`labeled-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-Řízení se předá příkazu, **case** *konstantní výraz* odpovídá hodnotě ** switch (** *výraz* **)**. **switch** Příkaz může obsahovat libovolný počet **case** instancí. Nicméně žádné dvě case konstanty v rámci stejného **switch** příkazu nemohou mít stejnou hodnotu. Provádění těla příkazu začíná na vybraném příkazu. Pokračuje až do konce těla nebo do doby, než **break** příkaz přenese řízení z těla.
+## <a name="remarks"></a>Poznámky
 
-Použití **switch** příkazu obvykle vypadá nějak takto:
+__`switch`__ Příkaz způsobí, že se ovládací prvek převede *`labeled-statement`* na jeden v těle jeho příkazu v závislosti na hodnotě *`expression`*.
+
+Hodnoty *`expression`* a Each *`constant-expression`* musí mít celočíselný typ. *`constant-expression`* Musí mít v době kompilace nejednoznačnou konstantní celočíselnou hodnotu.
+
+Řízení se předá **`case`** příkazu, *`constant-expression`* jehož hodnota odpovídá hodnotě *`expression`*. __`switch`__ Příkaz může obsahovat libovolný počet __`case`__ instancí. Avšak žádné dvě *`constant-expression`* hodnoty v rámci stejného __`switch`__ příkazu nemohou mít stejnou hodnotu. Provádění těla __`switch`__ příkazu začíná prvním příkazem v nebo po shodě *`labeled-statement`*. Spuštění pokračuje až do konce těla nebo do doby, než __`break`__ příkaz přenese řízení mimo tělo.
+
+Použití __`switch`__ příkazu obvykle vypadá nějak takto:
 
 ```C
 switch ( expression )
@@ -50,18 +56,18 @@ switch ( expression )
 }
 ```
 
-**break** Příkaz můžete použít k ukončení zpracování určitého popisku příkazu v rámci **switch** příkazu. Větví je na konec **switch** příkazu. Bez **break** příkazu, program pokračuje dalším příkazem s popiskem, spouští příkazy až do chvíle **break** , kdy je dosaženo konce příkazu. V některých situacích může být toto pokračování žádoucí.
+__`break`__ Příkaz můžete použít k ukončení zpracování určitého popisku příkazu v rámci __`switch`__ příkazu. Větví je na konec __`switch`__ příkazu. Bez __`break`__ příkazu, program pokračuje dalším příkazem s popiskem, spouští příkazy až do chvíle __`break`__ , kdy je dosaženo konce příkazu. V některých situacích může být toto pokračování žádoucí.
 
-Příkaz **default** je proveden, **case** Pokud není *konstantní výraz* roven hodnotě ** switch (** *výraz* **)**. Pokud není žádný **default** příkaz a nenajde se žádná **case** shoda, není proveden žádný příkaz v **switch** těle. Může existovat maximálně jeden **default** příkaz. **default** Příkaz nemusí být na konci. Může se objevit kdekoli v těle **switch** příkazu. Popisek **case** nebo **default** se může vyskytovat jenom uvnitř **switch** příkazu.
+Příkaz __`default`__ je proveden, pokud není __`case`__ *`constant-expression`* žádná hodnota rovna hodnotě *`expression`*. Pokud není žádný __`default`__ příkaz a nenajde se žádná __`case`__ shoda, není proveden žádný příkaz v __`switch`__ těle. Může existovat maximálně jeden __`default`__ příkaz. __`default`__ Příkaz nemusí být na konci. Může se objevit kdekoli v těle __`switch`__ příkazu. Popisek __`case`__ nebo __`default`__ se může vyskytovat jenom uvnitř __`switch`__ příkazu.
 
-Typ **switch** *výrazu* a **case** *konstantní výraz* musí být integrální. Hodnota každého **case** *konstantního výrazu* musí být jedinečná v rámci těla příkazu.
+Typ __`switch`__ *`expression`* __`case`__ a *`constant-expression`* musí být integrální. Hodnota každého __`case`__ *`constant-expression`* musí být jedinečná v rámci těla příkazu.
 
-Popisky **case** a **default** textu **switch** příkazu jsou významné pouze v počátečním testu, který určuje, kde se spustí spuštění v těle příkazu. **switch** příkazy mohou být vnořené. Všechny statické proměnné jsou inicializovány před provedením **switch** do libovolných příkazů.
+Popisky __`case`__ a __`default`__ textu __`switch`__ příkazu jsou významné pouze v počátečním testu, který určuje, kde se spustí spuštění v těle příkazu. __`switch`__ příkazy mohou být vnořené. Všechny statické proměnné jsou inicializovány před provedením __`switch`__ do libovolných příkazů.
 
 > [!NOTE]
-> Deklarace mohou být uvedeny na začátku složeného příkazu tvořícího **switch** tělo, ale inicializace obsažená v deklaracích se neprovádí. **switch** Příkaz přenáší řízení přímo do spustitelného příkazu v rámci těla a vynechá řádky, které obsahují inicializace.
+> Deklarace mohou být uvedeny na začátku složeného příkazu tvořícího __`switch`__ tělo, ale inicializace obsažená v deklaracích se neprovádí. __`switch`__ Příkaz přenáší řízení přímo do spustitelného příkazu v rámci těla a vynechá řádky, které obsahují inicializace.
 
-Následující příklady ilustrují **switch** příkazy:
+Následující příklady ilustrují __`switch`__ příkazy:
 
 ```C
 switch( c )
@@ -75,7 +81,7 @@ switch( c )
 }
 ```
 
-Všechny tři **switch** příkazy těla v tomto příkladu jsou spuštěny `c` `'A'`, pokud je rovno, protože žádný **break** příkaz není zobrazen před následujícím case. Ovládací prvek spuštění se přenese do prvního příkazu`capital_a++;`() a pokračuje v pořadí podle zbytku těla. Pokud `c` je rovno `'a'`, `letter_a` a `total` jsou zvýšeny. Je `total` zvýšena pouze v `c` případě, `'A'` že `'a'`není rovno nebo.
+Všechny tři __`switch`__ příkazy těla v tomto příkladu jsou spuštěny `c` `'A'`, pokud je rovno, protože žádný __`break`__ příkaz není zobrazen před následujícím __`case`__. Ovládací prvek spuštění se přenese do prvního příkazu`capital_a++;`() a pokračuje v pořadí podle zbytku těla. Pokud `c` je rovno `'a'`, `letter_a` a `total` jsou zvýšeny. Je `total` zvýšena pouze v `c` případě, `'A'` že `'a'`není rovno nebo.
 
 ```C
 switch( i )
@@ -92,9 +98,9 @@ switch( i )
 }
 ```
 
-V tomto příkladu **break** příkaz sleduje jednotlivé příkazy **switch** těla. **break** Příkaz vynutí ukončení od těla příkazu po provedení jednoho příkazu. Pokud `i` je rovno-1, je `n` pouze zvýšena. **break** Následující příkaz `n++;` způsobí, že řízení provádění vychází z těla příkazu a vynechává zbývající příkazy. Podobně, pokud `i` je rovno 0, je `z` pouze zvýšena hodnota; Pokud `i` je rovno 1, pouze `p` se zvýší. Poslední **break** příkaz není nezbytně nutný, protože ovládací prvek předá tělo na konci složeného příkazu. Zahrnuje konzistenci.
+V tomto příkladu __`break`__ příkaz sleduje jednotlivé příkazy __`switch`__ těla. __`break`__ Příkaz vynutí ukončení od těla příkazu po provedení jednoho příkazu. Pokud `i` je rovno-1, je `n` pouze zvýšena. __`break`__ Následující příkaz `n++;` způsobí, že řízení provádění vychází z těla příkazu a vynechává zbývající příkazy. Podobně, pokud `i` je rovno 0, je `z` pouze zvýšena hodnota; Pokud `i` je rovno 1, pouze `p` se zvýší. Poslední __`break`__ příkaz není nezbytně nutný, protože ovládací prvek předá tělo na konci složeného příkazu. Zahrnuje konzistenci.
 
-Jeden příkaz může obsahovat více **case** popisků, jak ukazuje následující příklad:
+Jeden příkaz může obsahovat více __`case`__ popisků, jak ukazuje následující příklad:
 
 ```C
 switch( c )
@@ -112,7 +118,7 @@ V tomto příkladu, pokud *konstantní výraz* se rovná jakémukoliv písmenu m
 
 ### <a name="microsoft-specific"></a>specifické pro společnost Microsoft
 
-Microsoft C neomezuje počet case hodnot v **switch** příkazu. Počet je omezen pouze dostupnou pamětí. ANSI C vyžaduje, aby v case **switch** příkazu bylo povolené aspoň 257 popisků.
+Microsoft C neomezuje počet __`case`__ hodnot v __`switch`__ příkazu. Počet je omezen pouze dostupnou pamětí. ANSI C vyžaduje, aby v __`case`__ __`switch`__ příkazu bylo povolené aspoň 257 popisků.
 
 V default případě Microsoft C je povolena rozšíření společnosti Microsoft. Tato rozšíření zakažte pomocí možnosti kompilátoru [/za](../build/reference/za-ze-disable-language-extensions.md) .
 
