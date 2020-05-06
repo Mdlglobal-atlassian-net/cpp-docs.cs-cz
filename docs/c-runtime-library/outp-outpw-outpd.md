@@ -41,20 +41,20 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988370"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825925"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
-Vrátí výstup na portu, bajt (`outp`, `_outp`), slovo (`outpw`, `_outpw`) nebo dvojité slovo (`_outpd`).
+Výstupy, na portu,`outp`bajt (, `_outp`), slovo (`outpw`, `_outpw`) nebo dvojité slovo (`_outpd`).
 
 > [!IMPORTANT]
-> Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT.  
-> Toto API nelze použít v aplikacích, které jsou spuštěny v modulu Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT. \
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,31 +75,31 @@ unsigned long _outpd(
 
 ### <a name="parameters"></a>Parametry
 
-\ *portu*
+*přístavní*\
 Číslo portu.
 
-*databyte,\ datawordu*
+*databyte, dataword*\
 Výstupní hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce vrací datový výstup. Není vrácena žádná chyba.
+Funkce vrátí výstup dat. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `_outp`, `_outpw` a `_outpd` zapíšou byte, word, resp. double word do zadaného výstupního portu. Argument *port* může být libovolný unsigned integer v rozsahu 0 – 65 535; *databyte* může být libovolné celé číslo v rozsahu 0-255; a *dataword* může být libovolná hodnota v rozsahu celého čísla, krátké celé číslo bez znaménka a dlouhé celé číslo bez znaménka v uvedeném pořadí.
+Funkce `_outp`, `_outpw`a `_outpd` zapisují do zadaného výstupního portu bajt, slovo a Dvojitá slova. Argument *port* může být libovolný unsigned integer v rozsahu 0 – 65 535; *databyte* může být libovolné celé číslo v rozsahu 0-255; a *dataword* může být libovolná hodnota v rozsahu celého čísla, krátké celé číslo bez znaménka a dlouhé celé číslo bez znaménka v uvedeném pořadí.
 
-Vzhledem k tomu, že tyto funkce zapisují přímo do vstupně-výstupního portu, nelze je použít v uživatelském kódu. Informace o použití I/O portů v těchto operačních systémech získáte po vyhledání "Sériové komunikace ve Win32" na webu MSDN.
+Vzhledem k tomu, že tyto funkce zapisují přímo do vstupně-výstupního portu, nelze je použít v uživatelském kódu. Informace o používání vstupně-výstupních portů v těchto operačních systémech najdete v tématu "sériová komunikace v systému Win32" na webu MSDN.
 
-Názvy `outp` a `outpw` jsou starší, zastaralé názvy pro `_outp` a `_outpw` funkce. Další informace najdete v tématu [názvy funkcí POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Názvy `outp` a `outpw` jsou starší, zastaralé názvy pro funkce `_outp` a. `_outpw` Další informace najdete v tématu [názvy funkcí POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_outp`|\<CONIO. h >|
-|`_outpw`|\<CONIO. h >|
-|`_outpd`|\<CONIO. h >|
+|`_outp`|\<CONIO. h>|
+|`_outpw`|\<CONIO. h>|
+|`_outpd`|\<CONIO. h>|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
 
@@ -107,7 +107,7 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runt
 
 Všechny verze [knihoven run-time jazyka C](../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[I/O\ konzoly a portu](../c-runtime-library/console-and-port-i-o.md)
+[I/O konzoly a portu](../c-runtime-library/console-and-port-i-o.md)\
 [INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

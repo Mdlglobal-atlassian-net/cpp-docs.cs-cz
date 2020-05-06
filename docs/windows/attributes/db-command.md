@@ -1,19 +1,19 @@
 ---
-title: db_command (C++ atributů COM)
+title: db_command (atribut COM C++)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148195"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825427"
 ---
-# <a name="dbcommand"></a>db_command
+# <a name="db_command"></a>db_command
 
 Vytvoří příkaz OLE DB.
 
@@ -26,49 +26,54 @@ Vytvoří příkaz OLE DB.
 
 ### <a name="parameters"></a>Parametry
 
-*Příkaz*<br/>
-Příkaz řetězec obsahující text příkazu technologie OLE DB. Je jednoduchý příklad:
+*systému*<br/>
+Řetězec příkazu, který obsahuje text příkazu OLE DB. Jednoduchý příklad:
 
 ```cpp
 [ db_command ( command = "Select * from Products" ) ]
 ```
 
-*Příkaz* syntaxe vypadá takto:
+Syntaxe *příkazu* je následující:
 
-> Vazba parametru bloku 1 &nbsp; &nbsp;OLE DB příkaz vazby parametru bloku 2 &nbsp; &nbsp;pokračování OLE DB příkaz vazby parametru bloku 3...
+> blok parametrů vazby 1 \
+> &nbsp;&nbsp;OLE DB příkaz \
+> blok parametrů vazby 2 \
+> &nbsp;&nbsp;pokračování příkazu OLE DB Command \
+> blok parametrů vazby 3 \
+> ...
 
-A *bloku vazby parametrů* je definovaná následujícím způsobem:
+*Blok parametrů vazby* je definován následujícím způsobem:
 
-> **(\[**  *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[;...]]] **)**
+> **(\[ ** *BindType* **]** *szVar1* szVar1 \[, *szVar2* szVar2 \[, *nVar3* nVar3 \[,...]]] **)**
 
 kde:
 
-- **(** označuje začátek příslušného datového bloku vazby.
+- **(** označuje začátek bloku datové vazby.
 
-- **\[** *bindtype* **]** je jedním z následujících řetězců velká a malá písmena:
+- **\[***BindType* **]** je jedním z následujících řetězců nerozlišujících velká a malá písmena:
 
-  - **\[db_column]** všechny proměnné členů váže ke sloupci v sadě řádků.
+  - ** \[db_column]** váže každou členskou proměnnou na sloupec v sadě řádků.
 
-  - **\[bindto]** (stejné jako  **\[db_column]**).
+  - ** \[BindTo]** (stejné jako ** \[db_column]**).
 
-  - **\[v]** váže členské proměnné jako vstupní parametry.
+  - ** \[v]** váže členské proměnné jako vstupní parametry.
 
-  - **\[out]** váže členské proměnné jako výstupní parametry.
+  - ** \[out]** váže členské proměnné jako výstupní parametry.
 
-  - **\[in, out]** váže členské proměnné jako vstupní a výstupní parametry.
+  - v, out] ** \[** váže členské proměnné jako vstupní a výstupní parametry.
 
-- *szVarX*, *nVarX* přeložit na proměnnou člena v aktuálním oboru.
+- *szVarX*, *nVarX* se přeloží na členskou proměnnou v rámci aktuálního oboru.
 
-- **)** označuje konec datového bloku vazby.
+- **)** označuje konec bloku datové vazby.
 
-Pokud řetězec příkazu obsahuje jeden nebo více specifikátory jako \[v], \[out], nebo \[vstup a výstup], **db_command** vytvoří mapu parametr.
+Pokud řetězec příkazu obsahuje jeden nebo více specifikátorů, jako je \[například in] \[, out] nebo \[in/out], **db_command** sestavení mapování parametrů.
 
-Pokud řetězec příkazu obsahuje jeden nebo více parametrů jako \[db_column] nebo \[bindto], **db_command** generuje sadu řádků a mapování přístupový objekt pro tyto vazby proměnné. Zobrazit [db_accessor](db-accessor.md) Další informace.
+Pokud řetězec příkazu obsahuje jeden nebo více parametrů, například \[db_column] nebo \[BindTo], **db_command** vygeneruje sadu řádků a mapu přístupového objektu pro obsluhu těchto vázaných proměnných. Další informace najdete v tématu [db_accessor](db-accessor.md) .
 
 > [!NOTE]
-> \[*bindtype*] syntaxe a *vazby* parametru jsou neplatné, při použití **db_command** na úrovni třídy.
+> \[*BindType*] syntaxe a parametr *Bindings* nejsou platné při použití **db_command** na úrovni třídy.
 
-Tady je několik příkladů vazby parametru bloky. Následující příklad vytvoří vazbu `m_au_fname` a `m_au_lname` datové členy `au_fname` a `au_lname` sloupce, z tabulky Autoři databáze pubs:
+Tady jsou některé příklady bloků parametrů vazby. Následující příklad váže datové `m_au_fname` členy a `m_au_lname` s sloupci `au_fname` a `au_lname` v tabulce Autoři v databázi pubs:
 
 ```cpp
 TCHAR m_au_fname[21];
@@ -82,47 +87,47 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *Jméno*<br/>
-(Volitelné) Název popisovače, který můžete použít pro práci se v sadě řádků. Pokud zadáte *název*, **db_command** vygeneruje třídu se zadaným *název*, které lze použít k procházení řádků nebo chcete-li spustit více dotazů akce. Pokud nezadáte *název*, nebude možné vrátit více než jeden řádek výsledků pro uživatele.
+Volitelné Název popisovače, který používáte pro práci se sadou řádků. Pokud zadáte *název*, **db_command** vygeneruje třídu se zadaným *názvem*, který lze použít k procházení sady řádků nebo k provedení více dotazů akce. Pokud *název*nezadáte, nebude možné vrátit uživatele více než jeden řádek výsledků.
 
 *source_name*<br/>
-(Volitelné) `CSession` Proměnnou nebo instance třídy, která má `db_source` atribut WebMethod na kterém příkaz spustí. Zobrazit [db_source](db-source.md).
+Volitelné `CSession` Proměnná nebo instance třídy, u které je použit `db_source` atribut, na kterém se příkaz spustí. Viz [db_source](db-source.md).
 
-**db_command** kontroluje, ujistěte se, že proměnné použité pro *source_name* je platný, funkce nebo globální rozsah by tak měly být zadané proměnné.
+**db_command** kontroluje, zda je proměnná použitá pro *source_name* platná, takže zadaná proměnná by měla být ve funkci nebo globálním oboru.
 
-*Hodnota HRESULT*<br/>
-(Volitelné) Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.
+*HRESULT*<br/>
+Volitelné Identifikuje proměnnou, která dostane hodnotu HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, bude automaticky vložena atributem.
 
-*Vazby*<br/>
-(Volitelné) Umožňuje oddělit vazby parametrů příkazu technologie OLE DB.
+*vazeb*<br/>
+Volitelné Umožňuje oddělit parametry vazby z příkazu OLE DB.
 
-Pokud zadáte hodnotu pro *vazby*, **db_command** provede analýzu přidruženou hodnotu a nebude analyzovat \[ *bindtype*] parametru. Toto použití můžete použít syntaxi zprostředkovatele OLE DB. Chcete-li zakázat analýzy bez vazby parametrů, zadejte `Bindings=""`.
+Pokud zadáte hodnotu pro *vazby*, **db_command** bude analyzovat přidruženou hodnotu a nebude analyzovat \[parametr *BindType*]. Toto použití vám umožňuje použít syntaxi poskytovatele OLE DB. Chcete-li zakázat analýzu bez parametrů vazby, `Bindings=""`zadejte.
 
-Pokud nezadáte hodnotu *vazby*, **db_command** provede analýzu bloku parametrů vazby, hledá "**(**" následovaný **\[** _bindtype_**]** v závorkách, následovaný jednou nebo více dříve deklarovány C++ členské proměnné, za nímž následuje "**)**". Veškerý text v závorkách se odstraní z výsledné příkazu a tyto parametry se použije k vytvoření sloupce a parametr vazby tohoto příkazu.
+Pokud nezadáte hodnotu pro *vazby*, **db_command** bude analyzovat blok parametrů vazby, hledání "**(**", následované **\[** _BindType_**]** v závorkách, následované jednou nebo více dříve deklarovanými členskými proměnnými jazyka C++ následovanými znakem "**)**". Veškerý text mezi závorkami bude z výsledného příkazu odstraněn a tyto parametry budou použity k vytvoření vazeb sloupců a parametrů pro tento příkaz.
 
 *bulk_fetch*<br/>
-(Volitelné) Celočíselná hodnota, která určuje počet řádků, které mají načíst.
+Volitelné Celočíselná hodnota, která určuje počet řádků, které se mají načíst.
 
-Výchozí hodnota je 1, která určuje načítání jednoho řádku (řádků budou typu [CRowset](../../data/oledb/crowset-class.md)).
+Výchozí hodnota je 1, což určuje, že se načítají jednotlivé řádky (sada řádků bude typu [CRowset](../../data/oledb/crowset-class.md)).
 
-Hodnota, která je větší než 1 představuje hromadné načítání řádků. Hromadné načítání řádků s možností hromadné sady řádků k načtení více popisovačů řádků odkazuje (v sadě řádků budou typu [CBulkRowset](../../data/oledb/cbulkrowset-class.md) a bude volat `SetRows` s zadaný počet řádků).
+Hodnota větší než 1 určuje hromadné načítání řádků. Hromadné načítání řádků odkazuje na schopnost hromadných sad řádků načíst více popisovačů řádků (sada řádků bude typu [CBulkRowset](../../data/oledb/cbulkrowset-class.md) a bude volat `SetRows` se zadaným počtem řádků).
 
-Pokud *bulk_fetch* je menší než 1, `SetRows` vrátí nulu.
+Pokud je *bulk_fetch* menší než jedna, `SetRows` vrátí se nula.
 
 ## <a name="remarks"></a>Poznámky
 
-**db_command** vytvoří [CCommand](../../data/oledb/ccommand-class.md) objekt, který používá příjemce technologie OLE DB ke spuštění příkazu.
+**db_command** vytvoří objekt [CCommand](../../data/oledb/ccommand-class.md) , který je používán příjemcem OLE DB ke spuštění příkazu.
 
-Můžete použít **db_command** s rozsahem třídy nebo funkce; Hlavní rozdíl je v oboru `CCommand` objektu. V oboru funkce data, jako jsou třeba vazby ukončit na konci funkce. Použití oboru třídy a funkce zahrnují třídy šablona příjemce technologie OLE DB `CCommand<>`, ale liší se argumenty šablony pro případy funkce a třídy. V případě funkce bude proveden vazby `Accessor` , která zahrnuje místní proměnné při použití třídy odvodí `CAccessor`-odvozené třídy jako argument. Když se použije jako atribut třídy **db_command** funguje ve spojení s **db_column**.
+Můžete použít **db_command** s oborem třídy nebo funkce; Hlavním rozdílem je rozsah `CCommand` objektu. S rozsahem funkcí jsou data, jako jsou například vazby ukončena na funkci end. Jak třída, tak použití oboru funkcí zahrnují třídu `CCommand<>`šablony příjemce OLE DB, ale argumenty šablony se pro funkce a případy třídy liší. V případě funkce budou vazby provedeny do `Accessor` , který zahrnuje místní proměnné, zatímco použití třídy odvodí `CAccessor`odvozenou třídu jako argument. Při použití jako atributu class **db_command** pracuje ve spojení s **db_column**.
 
-**db_command** lze použít ke spuštění příkazů, které nevrací sadu výsledků dotazu.
+**db_command** lze použít ke spuštění příkazů, které nevracejí sadu výsledků dotazu.
 
-Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.
+Pokud poskytovatel atributu příjemce použije tento atribut pro třídu, kompilátor \_přejmenuje třídu na přistupující objekt *YourClassName*, kde *YourClassName* je název, který jste přiřadili třídě, a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_přístupového objektu *YourClassName*.  V Zobrazení tříd se zobrazí obě třídy.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka definuje příkaz, který vybere jména a příjmení z tabulky, jejichž sloupce pro stát odpovídá "CA". **db_command** vytvoří a načte sadu řádků, na kterém bude možné volat generované v Průvodci funkce, jako [OpenAll a CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), stejně jako `CRowset` členské funkce, jako například [MoveNext](../../data/oledb/crowset-movenext.md).
+Tato ukázka definuje příkaz, který vybere první a poslední název z tabulky, kde sloupec State odpovídá "CA". **db_command** vytvoří a přečte sadu řádků, na které můžete volat funkce generované průvodcem, jako jsou [OpenAll a CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), a `CRowset` také členské funkce, jako je například [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Upozorňujeme, že tento kód vyžaduje, abyste zadali vlastní připojovací řetězec, který se připojuje k databázi pubs. Informace o tom, jak to udělat ve vývojovém prostředí najdete v tématu [jak: Připojení k databázi a procházejí existujících objektů](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) a [přidat nové připojení](/visualstudio/data-tools/add-new-connections).
+Všimněte si, že tento kód vyžaduje, abyste zadali vlastní připojovací řetězec, který se připojuje k databázi pubs. Informace o tom, jak to udělat ve vývojovém prostředí, najdete v tématech [Postup: připojení k databázi a procházení existujících objektů](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) a [Přidání nových připojení](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h
@@ -190,7 +195,7 @@ int main(int argc, _TCHAR* argv[]) {
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka používá `db_source` ve třídě zdroje dat `CMySource`, a `db_command` na třídy příkazů `CCommand1` a `CCommand2`.
+Tato ukázka používá `db_source` třídu `CMySource`zdroje dat a `db_command` třídy `CCommand1` příkazů a. `CCommand2`
 
 ```cpp
 // db_command_2.cpp
@@ -233,18 +238,18 @@ int main() {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|**Třída**, **Struktura**, člen, metoda, místní|
+|**REPEATABLE**|No|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)

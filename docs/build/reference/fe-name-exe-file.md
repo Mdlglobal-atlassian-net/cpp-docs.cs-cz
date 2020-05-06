@@ -10,49 +10,50 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292612"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825575"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (název souboru EXE)
 
-Určuje název a adresář pro soubor .exe nebo knihovnu DLL vytvořený kompilátorem.
+Určuje název a adresář pro soubor. exe nebo knihovnu DLL vytvořenou kompilátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/FE**[_cesta_] **/Fe:** _cesta_
+> **/FE**[_cesta_] \
+> **/FE:** _cesta_
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumenty
 
-*pathname*<br/>
-Relativní nebo absolutní cesta a název základního souboru nebo relativní nebo absolutní cesta k adresáři, nebo název základního souboru pro generované spustitelné soubory.
+*název*<br/>
+Relativní nebo absolutní cesta a základní název souboru nebo relativní nebo absolutní cesta k adresáři nebo název základního souboru, který se má použít pro vygenerovaný spustitelný soubor.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Fe** možnost umožňuje zadat výstupní adresář, název výstupního spustitelného souboru nebo obojí pro vygenerovaný spustitelný soubor. Pokud *cesta* končí oddělovačem cesty (**&#92;**), se předpokládá, že zadejte výstupní adresář. V opačném případě poslední součástí *cesta* slouží jako základní název výstupního souboru a zbytek *cesta* Určuje výstupní adresář. Pokud *cesta* nemá žádné oddělovače cesty, předpokládá se, zadejte název výstupního souboru v aktuálním adresáři. *Cesta* musí být umístěn do dvojitých uvozovek (**"**) pokud obsahují znaky, které nelze v krátkou cestu, jako jsou mezery, rozšířené znaky nebo součástí cesty více než osm znaků dlouhé.
+Možnost **/FE** umožňuje zadat výstupní adresář, název výstupního souboru nebo obojí pro vygenerovaný spustitelný soubor. Pokud *cesta* končí oddělovačem cesty (**&#92;**), předpokládá se, že zadáte pouze výstupní adresář. V opačném případě se jako základní název výstupního souboru použije poslední součást *cesty* a zbytek *cesty* určuje výstupní adresář. Pokud *cesta* neobsahuje žádné oddělovače cest, předpokládá se, že v aktuálním adresáři určíte název výstupního souboru. *Cesta* musí být uzavřena do dvojitých uvozovek (**"**), pokud obsahuje znaky, které nemohou být v krátké cestě, například mezery, rozšířené znaky nebo součásti cesty delší než osm znaků.
 
-Když **/Fe** možnost nezadáte, nebo pokud nějaký soubor základní název není zadán v *cesta*, kompilátor dává výstupnímu souboru výchozí název, pomocí základní název zadaný první soubor pro zdrojové i Objektové na příkazovém řádku a příponou .exe nebo .dll.
+Pokud není zadána možnost **/FE** nebo není-li zadán základní název souboru v *cestě*, kompilátor poskytne výstupnímu souboru výchozí název pomocí základního názvu prvního zdrojového nebo souborového souboru zadaného v příkazovém řádku a příponou. exe nebo. dll.
 
-Pokud zadáte [/c (Kompilovat bez propojení)](c-compile-without-linking.md) možnost **/Fe** nemá žádný vliv.
+Pokud zadáte možnost [/c (kompilovat bez propojení)](c-compile-without-linking.md) , **/FE** nemá žádný vliv.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení kompilátoru C++ a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Otevřít **vlastnosti konfigurace** > **Linkeru** > **Obecné** stránku vlastností.
+1. Otevřete stránku **vlastnosti** > konfigurace**Obecné** vlastnosti**linkeru** > .
 
-1. Upravit **výstupní soubor** vlastnost. Zvolte **OK** uložte provedené změny.
+1. Upravte vlastnost **výstupní soubor** . Kliknutím na **tlačítko OK** uložte změny.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz zkompiluje a propojí všechny zdrojové soubory jazyka C v aktuálním adresáři. Výsledný spustitelný soubor má název PROCESS.exe a vytvoří se v adresáři "C:\Users\User Name\repos\My Project\bin".
+Následující příkazový řádek zkompiluje a propojí všechny zdrojové soubory C v aktuálním adresáři. Výsledný spustitelný soubor má název PROCESs. exe a je vytvořen v adresáři "C:\Users\User Name\repos\My Project\bin".
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -60,13 +61,13 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz vytvoří spustitelný soubor v `C:\BIN` se stejným základním názvem jako první zdrojový soubor v aktuálním adresáři:
+Následující příkazový řádek vytvoří spustitelný soubor v `C:\BIN` se stejným základním názvem jako první zdrojový soubor v aktuálním adresáři:
 
 ```
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>

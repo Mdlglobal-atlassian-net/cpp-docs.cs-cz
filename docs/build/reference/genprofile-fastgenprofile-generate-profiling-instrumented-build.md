@@ -1,5 +1,5 @@
 ---
-title: / GENPROFILE, -fastgenprofile (generování profilace instrumentovaného sestavení)
+title: /GENPROFILE, -FASTGENPROFILE (generování profilace instrumentovaného sestavení)
 ms.date: 03/14/2018
 f1_keywords:
 - GENPROFILE
@@ -10,65 +10,65 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ddf56d92cc2d8fbbfaf635c8e1602443e35b5b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825781"
 ---
-# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ GENPROFILE, -fastgenprofile (generování profilace instrumentovaného sestavení)
+# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, -FASTGENPROFILE (generování profilace instrumentovaného sestavení)
 
-Určuje generování souboru .pgd linkerem pro podporu profilováním řízené optimalizace (PGO). **/ GENPROFILE** a **/FASTGENPROFILE** používají různé výchozí parametry. Použití **/genprofile** , aby přesnosti upřednostnil před rychlostí a využití paměti během profilace. Použití **/FASTGENPROFILE** do menších využití paměti a rychlost upřednostnil před přesnosti.
+Určuje generování souboru. pgd linkerem, který podporuje optimalizaci na základě profilu (PGO). **/GENPROFILE** a **/FASTGENPROFILE** používají jiné výchozí parametry. Pomocí **/GENPROFILE** můžete upřednostnit přesnost využití rychlosti a paměti během profilace. Pomocí **/FASTGENPROFILE** můžete upřednostnit menší využití paměti a zrychlit jejich přesnost.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**Cesta**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]<br/>
-> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**Cesta**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
+> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **Přesná**|**Shoda] |** **MEMMAX =**_#_|**MEMMIN =**_#_| [**cesta k cestě**|**] |** [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}] \
+> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **Přesná**|**Shoda] |** **MEMMAX =**_#_|**MEMMIN =**_#_| [**cesta k cestě**|**] |** [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumenty
 
-Některý z následujících argumentů dají **/genprofile** nebo **/FASTGENPROFILE**. Zde uvedené argumenty oddělená znakem | (**|**) znaků se vzájemně vylučují. Čárkami (**,**) znak k oddělení možností.
+Pro **/GENPROFILE** nebo **/FASTGENPROFILE**lze zadat kterýkoli z následujících argumentů. Argumenty, které jsou zde uvedeny, oddělené**|** znakem svislé čáry () se vzájemně vylučují. K oddělení možností použijte znak čárky (**,**).
 
-**COUNTER32** &AMP;#124; **COUNTER64**<br/>
-Použít **COUNTER32** použít, použijte 32bitový test čítačů a **COUNTER64** k určení testu 64-bit čítače. Pokud zadáte **/genprofile**, výchozí hodnota je **COUNTER64**. Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **COUNTER32**.
+**COUNTER32** &#124; **COUNTER64**<br/>
+Použijte **COUNTER32** k určení použití 32 čítačů sondy a **COUNTER64** pro určení 64 čítačů testu paměti. Když zadáte **/GENPROFILE**, výchozí hodnota je **COUNTER64**. Když zadáte **/FASTGENPROFILE**, výchozí hodnota je **COUNTER32**.
 
-**EXACT** &#124; **NOEXACT**<br/>
-Použití **EXACT** k určení propojené přírůstky bezpečným pro vlákno pro testy. **NOEXACT** určuje operace Inkrementace nechráněné pro testy. Výchozí hodnota je **NOEXACT**.
+**Přesný** &#124; **nepřesný**<br/>
+Použijte **přesně** k zadání přístupných dat zabezpečených pro přístup z více vláken pro sondy. **Nepřesně** určuje nechráněné operace přírůstku pro sondy. Výchozí hodnota je **přesně**.
 
-**MEMMAX**=*hodnotu*, **MEMMIN**=*hodnota*<br/>
-Použití **MEMMAX** a **MEMMIN** k určení rezervace maximální a minimální velikosti pro trénovací data v paměti. Hodnota je množství paměti pro rezervaci v bajtech. Ve výchozím nastavení tyto hodnoty jsou určeny interní heuristiky.
+**MEMMAX**=*Hodnota*MEMMAX, **MEMMIN**=*hodnota* MEMMIN<br/>
+Pomocí **MEMMAX** a **MEMMIN** určete maximální a minimální velikost rezervací pro školicí data v paměti. Hodnota je velikost paměti, která se má rezervovat v bajtech. Ve výchozím nastavení jsou tyto hodnoty určeny interní heuristickou.
 
-**PATH**  &#124; **NOPATH** <br/>
-Použití **cesta** zadat samostatnou sadu čítačů PGO pro každou jedinečnou cestu k funkci. Použití **NOPATH** zadat pouze jednu sadu čítačů pro každou funkci. Pokud zadáte **/genprofile**, výchozí hodnota je **cesta** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOPATH** .
+**Cesta** &#124; **NOPATH** cesta <br/>
+Použijte **cestu** k určení samostatné sady čítačů PGO pro každou jedinečnou cestu k funkci. Použijte **cestu** k určení pouze jedné sady čítačů pro každou funkci. Když zadáte **/GENPROFILE**, výchozí hodnota je **cesta** . Když zadáte **/FASTGENPROFILE**, výchozí hodnota je **cesta** .
 
-**TRACKEH** &AMP;#124; **NOTRACKEH** <br/>
-Určuje, jestli se má použít další čítače zachovat přesný počet, pokud jsou výjimky vyvolány během cvičení. Použití **TRACKEH** zadat další čítače pro přesný počet. Použít **NOTRACKEH** k určení jednoho čítače pro kód, který nepoužívá výjimky zpracování nebo, který není nastat výjimky ve vašich scénářích školení.  Pokud zadáte **/genprofile**, výchozí hodnota je **TRACKEH** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOTRACKEH** .
+**TRACKEH** &#124; **NOTRACKEH** <br/>
+Určuje, zda se mají použít čítače navíc pro zachování přesného počtu, kdy jsou výjimky vyvolány během školení. Pomocí **TRACKEH** můžete určit nadbytečné čítače pro přesný počet. Použijte **NOTRACKEH** k určení jednoduchých čítačů pro kód, který nepoužívá zpracování výjimek nebo který ve školicích scénářích nenalezne výjimky.  Když zadáte **/GENPROFILE**, výchozí hodnota je **TRACKEH** . Když zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOTRACKEH** .
 
-**PGD**=*filename*<br/>
-Určuje název základního souboru pro soubor .pgd. Ve výchozím nastavení používá propojovací program spustitelná image, která základní název souboru s příponou .pgd.
+**PGD**=*Název souboru* PGD<br/>
+Určuje základní název souboru pro soubor. pgd. Ve výchozím nastavení Linker používá základní název spustitelného souboru bitové kopie s příponou. pgd.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Genprofile** a **/FASTGENPROFILE** řekněte možnosti linkeru, aby generoval soubor profilování instrumentace potřeba k podpoře aplikace školení pro optimalizace na základě profilu (PGO). Tyto možnosti jsou nové v sadě Visual Studio 2015. Preferovat tyto možnosti se zastaralou **/LTCG:PGINSTRUMENT**, **/PGD** a **/POGOSAFEMODE** možnosti a **PogoSafeMode**,  **Vcprofile_alloc_scale –** a **vcprofile_path –** proměnné prostředí. Profilování informace generované aplikace školení se používá jako vstup provádět cílené optimalizace celého programu během sestavení. Můžete nastavit další možnosti ovládání různých funkcí profilování výkonu během cvičení aplikace a sestavení. Výchozí možnosti nastavené podle **/genprofile** poskytnout nejpřesnější možné výsledky, hlavně pro velké a komplexní vícevláknové aplikace. **/FASTGENPROFILE** možnost používá různé výchozí hodnoty pro nižší paměťové nároky a vyšší výkon při školení, ovšem na úkor přesnosti.
+Možnosti **/GENPROFILE** a **/FASTGENPROFILE** říká linkeru, aby vygeneroval soubor instrumentace potřebný k podpoře školení aplikací pro optimalizaci na základě profilu (PGO). Tyto možnosti jsou v aplikaci Visual Studio 2015 nové. Preferovat tyto možnosti jako zastaralé možnosti **/LTCG: PGINSTRUMENT**, **/PGD** a **/POGOSAFEMODE** a proměnné prostředí **POGOSAFEMODE**, **VCPROFILE_ALLOC_SCALE** a **VCPROFILE_PATH** . Informace profilování vygenerované školením aplikací se používají jako vstup k provádění optimalizací cíleného celého programu během sestavení. Můžete nastavit další možnosti pro řízení různých funkcí profilování pro výkon během školení a sestavení aplikace. Výchozí možnosti určené **/GENPROFILE** poskytují nejpřesnější výsledky, zejména pro velké komplexní aplikace s více vlákny. Možnost **/FASTGENPROFILE** používá jiné výchozí hodnoty pro nižší nároky na paměť a rychlejší výkon během školení na úkor přesnosti.
 
-Informace pro profilaci jsou zachyceny po spuštění instrumentované aplikace po sestavení s použitím **/genprofile** z **/FASTGENPROFILE**. Tyto informace jsou zachyceny při zadávání [/useprofile](useprofile.md) – možnost linkeru provádět profilaci krok a pak použije k provedou kroky optimalizovaných sestavení. Další informace o tom, jak trénovat vaší aplikace a podrobnosti o shromážděných datech najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md).
+Informace profilování se zachycuje při spuštění instrumentované aplikace po sestavení pomocí **/GENPROFILE** z **/FASTGENPROFILE**. Tyto informace jsou zachyceny, když zadáte možnost linkeru [/USEPROFILE](useprofile.md) pro provedení kroku profilování a potom použijete k nastavení optimalizovaného kroku sestavení. Další informace o tom, jak ve shromážděných datech naučit svoji aplikaci a podrobnosti, najdete v tématu Optimalizace na základě [profilu](../profile-guided-optimizations.md).
 
-Musíte zadat také **parametru/LTCG** při zadání **/genprofile** nebo **/FASTGENPROFILE**.
+Je nutné zadat také **/LTCG** při zadání **/GENPROFILE** nebo **/FASTGENPROFILE**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení kompilátoru C++ a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností**příkazový řádek**  > **linkeru** >  **vlastností konfigurace**.
 
-1. Zadejte **/genprofile** nebo **/FASTGENPROFILE** možnosti a argumenty do **další možnosti** pole. Zvolte **OK** uložte provedené změny.
+1. Do pole **Další možnosti** zadejte možnosti a argumenty **/GENPROFILE** nebo **/FASTGENPROFILE** . Kliknutím na **tlačítko OK** uložte změny.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)<br/>
