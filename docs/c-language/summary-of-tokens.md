@@ -12,38 +12,38 @@ ms.locfileid: "62345133"
 # <a name="summary-of-tokens"></a>Souhrn tokenů
 
 *token*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klíčové slovo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*změnil*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*řetězcový literál*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*– Operátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*interpunkci*
+&nbsp;&nbsp;&nbsp;&nbsp;*podnikatel*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*preprocessing-token*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*název hlavičky*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*character-constant*<br/>
+*předzpracování tokenu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*záhlaví – název*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-Number*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Znaková konstanta*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*řetězcový literál*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*interpunkci – operátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Každý neprázdný znak, který nemůže být jedním z výše uvedených
+&nbsp;&nbsp;&nbsp;&nbsp;*operátor punctuator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Každý neprázdný znak, který nemůže být jeden z výše uvedených
 
 *název hlavičky*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *Path-spec*  **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"***specifikace cesty***"**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *cesta – specifikace*  **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"**  *specifikace cesty*  **"**
 
-*path-spec*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Cesta k souboru právní
+*specifikace cesty*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Platná cesta k souboru
 
-*pp-number*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *digit* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *nondigit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*číslo PP***e***přihlašování*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*číslo PP***E***přihlašování*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*číslo PP* **.**
+*PP-Number*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*základní*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**.** *základní*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP – číslo* *číslice* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP – číslo nečíselné* *nondigit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-číslo***e**–*znak*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-číslo***E**–*znak*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-Number*  **.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)

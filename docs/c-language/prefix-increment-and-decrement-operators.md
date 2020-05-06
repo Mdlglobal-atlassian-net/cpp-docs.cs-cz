@@ -15,23 +15,23 @@ ms.locfileid: "62325491"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operátory přírůstku a snížení předpony
 
-Unární operátory (`++` a **--**) se nazývají "předponu" Inkrementace nebo dekrementace operátory, když se objeví před operand operátorů zvýšení nebo snížení. Přípona Inkrementace a dekrementace má vyšší prioritu než předpony Inkrementace a dekrementace. Operand musí mít typ integral, plovoucí nebo ukazatel a musí být výraz upravitelná l hodnota (výraz bez **const** atributu). Výsledkem je l hodnotou.
+Unární operátory (`++` a **--**) se nazývají "prefix" nebo "operátory snížení" při zobrazení operátorů přírůstku nebo snížení před operandem. Přírůstek a snížení přípony mají vyšší prioritu než přírůstek a snížení předpony. Operand musí být typu integrální, plovoucí nebo ukazatel a musí být upravitelný výraz l-hodnoty (výraz bez atributu **const** ). Výsledkem je l-hodnota.
 
-Pokud se operátor vyskytuje před jeho operandu, operand je zvýšena nebo snížena a její nová hodnota je výsledek výrazu.
+Když se operátor objeví před operandem, je operand zvýšen nebo snížen a jeho nová hodnota je výsledkem výrazu.
 
-Typ s plovoucí desetinnou čárkou nebo celočíselné operandy je zvýšena nebo snížena celočíselnou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatel, je zvýšena nebo snížena velikost objektu, který se zaměřuje. Zvýšena ukazatel odkazuje na další objekt. snížen ukazatel odkazuje na předchozí objekt.
+Operand integrálního nebo plovoucího typu se zvýší nebo sníží o celočíselnou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatele je zvětšen nebo snížen o velikost objektu, na který odkazuje. Zvýšený ukazatel ukazuje na další objekt; Snížený ukazatel ukazuje na předchozí objekt.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje unární operátor dekrementace předpony:
+Tento příklad ukazuje operátor odkládání unární předpony:
 
 ```
 if( line[--i] != '\n' )
     return;
 ```
 
-V tomto příkladu je proměnná `i` je snížen, než bude použit jako index do `line`.
+V tomto příkladu je proměnná `i` snížena předtím, než je použita jako dolní index. `line`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Unární operátory jazyka C](../c-language/c-unary-operators.md)

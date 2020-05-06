@@ -19,22 +19,22 @@ Deklarace určuje interpretaci a atributy sady identifikátorů. Deklarace, kter
 ## <a name="syntax"></a>Syntaxe
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;atribut *deklarace-specifikátor* *-SEQ*<sub>opt</sub> *-deklarátor-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – atribut specifikátors* *-SEQ*<sub>opt</sub> *init-deklarátor-list*<sub>opt</sub>**;**
 
-/\* *atribut – vlastnost SEQ*<sub>je specifická</sub> pro společnost Microsoft */
+/\**atribut-seq*<sub>opt</sub> je specifický pro společnost Microsoft */
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru třídy úložiště* – *specifikátory*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru typu* *– Povolit specifikátory*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ-specifikátor deklarace kvalifikátoru* *– specifikátory*<sub>opt</sub>
 
-*init-declarator-list*:<br/>
+*init-deklarátor-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor-list* **,** *init-deklarátor*
 
 *init-deklarátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicializátor* deklarátor
 
 > [!NOTE]
 > Tato syntaxe *deklarace* se neopakuje v následujících oddílech. Syntaxe v následujících oddílech obvykle začíná *deklarátor* neterminálem.
@@ -43,21 +43,21 @@ Deklarace v *seznamu init-deklarátor-list* obsahují identifikátory s názvem;
 
 Deklarace mohou obsahovat jeden nebo více volitelných atributů uvedených v *atributu-SEQ*; *SEQ* je zkratka pro sekvenci. Tyto atributy specifické pro společnost Microsoft provádějí celou řadu funkcí, které jsou podrobně popsány v celé této příručce.
 
-V obecné formě deklarace proměnné *typ specifikátor* poskytuje datový typ proměnné. *Specifikátor typu* může být složený, jako když je typ upraven pomocí **const** nebo `volatile`. `declarator` poskytuje název proměnné, případně změněno k deklaraci pole nebo typu ukazatele. Například
+V obecné formě deklarace proměnné *typ specifikátor* poskytuje datový typ proměnné. *Specifikátor typu* může být složený, jako když je typ upraven pomocí **const** nebo `volatile`. `declarator` Obsahuje název proměnné, případně změněno k deklaraci pole nebo typu ukazatele. Například:
 
 ```C
 int const *fp;
 ```
 
-deklaruje proměnnou s názvem `fp` jako ukazatel na hodnotu neupravitelné (**const**) `int`. V deklaraci můžete definovat více než jednu proměnnou pomocí více deklarátory, oddělených čárkami.
+deklaruje proměnnou s názvem `fp` jako ukazatel na hodnotu neupravitelné (**const**). `int` V deklaraci můžete definovat více než jednu proměnnou pomocí více deklarátory, oddělených čárkami.
 
-Deklarace musí mít alespoň jeden deklarátor, nebo jeho specifikátor typu musí deklarovat značku struktury, značku sjednocení nebo členy výčtu. Deklarátory poskytují jakékoli zbývající informace o identifikátoru. Deklarátor je identifikátor, který lze upravit pomocí hranatých závorek ( **[]** ), hvězdičky (<strong>\*</strong>) nebo závorek ( **()** ) k deklaraci pole, ukazatele nebo typu funkce v uvedeném pořadí. Při deklaraci jednoduchých proměnných (jako je znak, celé číslo a plovoucí desetinné čárky) nebo struktur a sjednocení jednoduchých proměnných je `declarator` pouze identifikátor. Další informace o deklarátory naleznete v tématu [deklarace deklarátory a proměnných](../c-language/declarators-and-variable-declarations.md).
+Deklarace musí mít alespoň jeden deklarátor, nebo jeho specifikátor typu musí deklarovat značku struktury, značku sjednocení nebo členy výčtu. Deklarátory poskytují jakékoli zbývající informace o identifikátoru. Deklarátor je identifikátor, který lze upravit pomocí hranatých závorek (**[]**), hvězdičky<strong>\*</strong>() nebo závorek ( **()** ) pro deklaraci pole, ukazatele nebo typu funkce v uvedeném pořadí. Při deklaraci jednoduchých proměnných (jako jsou znak, celé číslo a plovoucí desetinné čárky) nebo struktur a sjednocení jednoduchých proměnných `declarator` je pouze identifikátor. Další informace o deklarátory naleznete v tématu [deklarace deklarátory a proměnných](../c-language/declarators-and-variable-declarations.md).
 
-Všechny definice jsou implicitně deklarace, ale ne všechny deklarace jsou definice. Například deklarace proměnných, které začínají na `extern` specifikátor Storage-Class, jsou "odkazující" "místo" definování "deklarací. Pokud je externí proměnná odkazována před definováním nebo pokud je definována v jiném zdrojovém souboru, než který je použit, deklarace `extern` je nezbytná. Úložiště není přidělené deklaracemi, které neodkazují, ani proměnné se v deklaracích nedají inicializovat.
+Všechny definice jsou implicitně deklarace, ale ne všechny deklarace jsou definice. Například deklarace proměnných, které začínají specifikátorem třídy `extern` úložiště, jsou "odkazující" "místo" definování "deklarací. Pokud je externí proměnná označována před definováním, nebo pokud je definována v jiném zdrojovém souboru, než který je použit, `extern` deklarace je nezbytná. Úložiště není přidělené deklaracemi, které neodkazují, ani proměnné se v deklaracích nedají inicializovat.
 
-V deklaracích proměnných je vyžadována třída úložiště nebo typ (nebo obojí). S výjimkou `__declspec`je v deklaraci povolen pouze jeden specifikátor třídy úložiště a ne všechny specifikátory třídy úložiště jsou povoleny v každém kontextu. Třída úložiště `__declspec` je povolena s dalšími specifikátory třídy úložiště a je povolena více než jednou. Specifikátor třídy úložiště deklarace má vliv na to, jak je deklarovaná položka uložená a inicializovaná a které části programu mohou odkazovat na položku.
+V deklaracích proměnných je vyžadována třída úložiště nebo typ (nebo obojí). `__declspec`S výjimkou je povolen pouze jeden specifikátor třídy úložiště v deklaraci a ne všechny specifikátory třídy úložiště jsou povoleny v každém kontextu. Třída `__declspec` úložiště je povolena s dalšími specifikátory třídy úložiště a je povolena více než jednou. Specifikátor třídy úložiště deklarace má vliv na to, jak je deklarovaná položka uložená a inicializovaná a které části programu mohou odkazovat na položku.
 
-Koncoví *specifikátory třídy úložiště* definované v jazyce C zahrnují **auto**, `extern`, **Register**, **static**a `typedef`. Kromě toho Microsoft C zahrnuje `__declspec`terminálu *specifikátorů úložiště* . Všechny terminály *specifikátoru třídy úložiště* s výjimkou `typedef` a `__declspec` jsou popsány v tématu [třídy úložiště](../c-language/c-storage-classes.md). Informace o `typedef`naleznete v tématu [deklarace typedef](../c-language/typedef-declarations.md) . Informace o `__declspec`najdete v tématu [Rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md) .
+Koncoví *specifikátory třídy úložiště* definované v jazyce C zahrnují **auto**, `extern`, **Register**, **static**a `typedef`. Kromě toho Microsoft C zahrnuje terminál `__declspec` *specifikátoru úložiště* . Všechny terminály *specifikátoru třídy úložiště* s `typedef` výjimkou a `__declspec` jsou popsány v tématu [třídy úložiště](../c-language/c-storage-classes.md). Informace o `typedef`naleznete v tématu [deklarace typedef](../c-language/typedef-declarations.md) . Informace o nástroji `__declspec`najdete v tématu [Rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md) .
 
 Umístění deklarace v rámci zdrojového programu a přítomnost nebo absence jiných deklarací proměnné představují důležité faktory při určování životnosti proměnných. Může existovat více změněných deklarací, ale pouze jedna definice. Definice se ale může objevit ve více než jedné jednotce překladu. U objektů s interní vazbou se toto pravidlo vztahuje samostatně na každou jednotku překladu, protože interně propojené objekty jsou jedinečné pro jednotku překladu. Pro objekty s vnějším propojením se toto pravidlo vztahuje na celý program. Další informace o viditelnosti najdete v tématu [Doba života, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) .
 
@@ -65,7 +65,7 @@ Specifikátory typu poskytují některé informace o datových typech identifik�
 
 Existují dva terminály *kvalifikátoru typu* : **const** a `volatile`. Tyto kvalifikátory určují další vlastnosti typů, které jsou relevantní pouze při přístupu k objektům daného typu prostřednictvím l-Values. Další informace o **const** a `volatile`naleznete v tématu [kvalifikátory typu](../c-language/type-qualifiers.md). Definice l-Values naleznete v tématu [výrazy l-value a R-Value](../c-language/l-value-and-r-value-expressions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)<br/>
 [Deklarace a typy](../c-language/declarations-and-types.md)<br/>

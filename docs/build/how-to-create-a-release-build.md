@@ -14,12 +14,12 @@ ms.locfileid: "62273518"
 ---
 # <a name="how-to-create-a-release-build"></a>Postupy: Vytváření sestavení pro vydání
 
-### <a name="to-generate-a-release-build-of-your-program"></a>Ke generování sestavení pro vydání aplikace
+### <a name="to-generate-a-release-build-of-your-program"></a>Vygenerování sestavení pro vydání programu
 
-1. Vyberte **vydání** z **konfigurace řešení** rozevíracího seznamu, který se nachází na **standardní** nástrojů.
+1. V rozevíracím seznamu **Konfigurace řešení** , který je na **standardním** panelu nástrojů, vyberte **vydaná verze** .
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **sestavení**.
+1. V nabídce **sestavení** klikněte na položku **sestavit**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sestavení pro vydání](release-builds.md)

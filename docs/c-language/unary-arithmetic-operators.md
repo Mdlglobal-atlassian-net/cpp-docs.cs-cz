@@ -29,7 +29,7 @@ V následujícím seznamu jsou uvedeny operátory jazyka C unární plus, aritme
 |**+**|Operátor unární plus předcházející výrazu v závorkách vynutí seskupení uzavřených operací. Používá se s výrazy, které zahrnují více než jeden komutativní nebo asociativní binární operátor. Operand musí být aritmetického typu. Výsledkem je hodnota operandu. Celočíselný operand projde celočíselným povýšením. Typ výsledku je typ povýšeného operandu.|
 |**-**|Operátor aritmetické negace vytvoří zápor (dvojkový doplněk) svého operandu. Operand musí být celočíselná hodnota nebo hodnota čísla s plovoucí desetinnou čárkou. Tento operátor provádí běžné aritmetické převody.|
 |`~`|Operátor bitového doplňku (nebo bitový operátor NOT) vytvoří bitový doplněk svého operandu. Operand musí být celočíselného typu. Tento operátor provádí běžné aritmetické převody, výsledek je typem operandu po převodu.|
-|**\!**|Operátor logické negace (logický operátor NOT) vytvoří hodnotu 0, pokud má jeho operand hodnotu true (nenulovou), a hodnotu 1, pokud má jeho operand hodnotu false (0). Výsledek je typu `int`. Operand musí být celočíselná hodnota, hodnota čísla s plovoucí desetinnou čárkou nebo hodnota ukazatele.|
+|**!**|Operátor logické negace (logický operátor NOT) vytvoří hodnotu 0, pokud má jeho operand hodnotu true (nenulovou), a hodnotu 1, pokud má jeho operand hodnotu false (0). Výsledek je typu `int`. Operand musí být celočíselná hodnota, hodnota čísla s plovoucí desetinnou čárkou nebo hodnota ukazatele.|
 
 Unární aritmetické operace u ukazatelů jsou neplatné.
 
@@ -42,7 +42,7 @@ short x = 987;
     x = -x;
 ```
 
-V příkladu výše, nová hodnota `x` záporná 987 nebo-987.
+V předchozím příkladu `x` je nová hodnota záporné hodnoty 987 nebo-987.
 
 ```
 unsigned short y = 0xAAAA;
@@ -57,6 +57,6 @@ if( !(x < y) )
 
 Pokud je hodnota proměnné `x` větší nebo rovna hodnotě proměnné `y`, je výsledkem výrazu hodnota 1 (true). Pokud je hodnota proměnné `x` menší než hodnota proměnné `y`, je výsledkem hodnota 0 (false).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)

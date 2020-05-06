@@ -20,14 +20,14 @@ Příkaz `continue` předá řízení následující iteraci nejbližšího ohra
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz-skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pokračování**
+*příkaz skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pokraeovat**
 
 Další iterace příkazu `do`, `for` nebo `while` se určí takto:
 
 - V rámci příkazu `do` nebo `while` začíná další iterace přehodnocením výrazu příkazu `do` nebo `while`.
 
-- Příkaz `continue` v příkazu `for` způsobí vyhodnocení výrazu smyčky `for`. Poté kompilátor přehodnotí podmíněný výraz a podle výsledku buď ukončí, nebo provede iteraci těla příkazu. Naleznete v tématu [pro příkaz](../c-language/for-statement-c.md) Další informace o `for` příkazu a jeho neterminálech.
+- Příkaz `continue` v příkazu `for` způsobí vyhodnocení výrazu smyčky `for`. Poté kompilátor přehodnotí podmíněný výraz a podle výsledku buď ukončí, nebo provede iteraci těla příkazu. Další informace o `for` příkazu a jeho neterminálech naleznete v [příkazu for](../c-language/for-statement-c.md) .
 
 Zde je příklad příkazu `continue`:
 
@@ -43,6 +43,6 @@ while ( i-- > 0 )
 
 V tomto příkladu je tělo příkazu prováděno, dokud je proměnná `i` větší než 0. První `f(i)` je přiřazeno do proměnné `x`, když se poté proměnná `x` rovná 1, je proveden příkaz `continue`. Ostatní příkazy v těle jsou ignorovány a provádění pokračuje v horní části smyčky vyhodnocením testu smyčky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[continue – příkaz](../cpp/continue-statement-cpp.md)
+[Continue – příkaz](../cpp/continue-statement-cpp.md)

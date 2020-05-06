@@ -19,14 +19,14 @@ ms.locfileid: "62312598"
 
 - [Znakové sady](../c-language/character-sets1.md)
 
-- [Nezastoupené znakové konstanty](../c-language/unrepresented-character-constants.md)
+- [Nereprezentované konstanty znaků](../c-language/unrepresented-character-constants.md)
 
-- [Široké znaky](../c-language/wide-characters.md)
+- [Velké znaky](../c-language/wide-characters.md)
 
 - [Převod vícebajtových znaků](../c-language/converting-multibyte-characters.md)
 
 - [Rozsah hodnot typu char](../c-language/range-of-char-values.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

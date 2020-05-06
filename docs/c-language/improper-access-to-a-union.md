@@ -11,12 +11,12 @@ ms.locfileid: "62326128"
 ---
 # <a name="improper-access-to-a-union"></a>Nevhodný přístup ke sjednocení
 
-**ANSI 3.3.2.3** člen sjednocení objektu se přistupuje pomocí členem jiného typu
+**3.3.2.3 ANSI** K členu objektu Union je přistup přes člen jiného typu.
 
-Pokud je deklarována jako spojení dva typy a jedna hodnota je uložena, ale sjednocení je přistupováno pomocí jiného typu, nespolehlivé výsledky.
+Pokud je deklarováno sjednocení dvou typů a je uložena jedna hodnota, ale sjednocení je dostupné s jiným typem, výsledky jsou nespolehlivé.
 
-Například spojení **float** a `int` je deklarována. A **float** hodnota je uložena, ale program později přistupuje k hodnotě jako `int`. V takové situaci, hodnota bude trvat, závisí na vnitřní **float** hodnoty. Celočíselná hodnota nemusí být spolehlivé.
+Například sjednocení typu **float** a `int` je deklarováno. Hodnota **typu float** je uložena, ale program později k hodnotě přistupuje jako `int`. V takové situaci bude hodnota záviset na interním úložišti hodnot **float** . Celočíselná hodnota by nebyla spolehlivá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

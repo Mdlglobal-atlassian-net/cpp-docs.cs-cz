@@ -13,22 +13,22 @@ ms.locfileid: "62326193"
 ---
 # <a name="c-pragmas"></a>Pragmas jazyka C
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-A *– Direktiva pragma* dává pokyn kompilátoru k provedení určité akce v době kompilace. Direktivy pragma se v různých kompilátorech liší. Například můžete použít **optimalizovat** – Direktiva pragma se nastavit optimalizace, které budou pro program provedeny. Direktivy pragma jazyka Microsoft C jsou tyto:
+*Direktiva pragma* instruuje kompilátor, aby provedl určitou akci v době kompilace. Direktivy pragma se v různých kompilátorech liší. Například můžete použít direktivu pragma **optimize** k nastavení optimalizace, které mají být provedeny v programu. Direktivy pragma jazyka Microsoft C jsou tyto:
 
 |||||
 |-|-|-|-|
 |**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|
-|**auto_inline**|**– funkce**|**intrinsic**|**warning**|
-|**check_stack**|**hdrstop**|**message**||
-|**code_seg**|**include_alias**|**optimize**||
-|**Komentář**|**inline_depth**|**pack**||
+|**auto_inline**|**slouží**|** – vnitřní funkce**|**upozornění**|
+|**check_stack**|**hdrstop**|**Zpráva**||
+|**code_seg**|**include_alias**|**zvýšit**||
+|**vytvořena**|**inline_depth**|**jazykové**||
 
-Zobrazit [direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) popis direktiv pragma kompilátoru C společnosti Microsoft.
+V tématu direktivy [pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) pro popis direktiv pragma kompilátoru jazyka Microsoft C.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

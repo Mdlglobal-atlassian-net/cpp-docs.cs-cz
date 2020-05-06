@@ -24,7 +24,7 @@ ms.locfileid: "64343422"
 
 ## <a name="remarks"></a>Poznámky
 
-Příkazy, jako **proveďte**, **pro**, **Pokud**, a `while` vyžadují, aby byl spustitelný příkaz zobrazí jako těla příkazu. Příkaz null splňuje požadavek syntaxe v případech, které nepotřebují důležité tělo příkazu.
+Příkazy jako **do**, **pro**, **if**a `while` vyžadují, aby byl spustitelný příkaz zobrazen jako tělo příkazu. Příkaz null splňuje požadavek syntaxe v případech, které nepotřebují důležité tělo příkazu.
 
 Stejně jako u jiných příkazů jazyka C lze před příkaz null umístit popisek. Chcete-li položce, která není příkazem, například složené závorce složeného příkazu, dát popisek, lze příkaz null popsat a vložit jej těsně před položku, čímž docílíte stejného efektu.
 
@@ -35,8 +35,8 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-V tomto příkladu výraz smyčky **pro** příkaz `line[i++] = 0` inicializuje prvních 10 prvků pole `line` na hodnotu 0. Tělo příkazu je příkaz null, protože žádné další příkazy nejsou nezbytné.
+V tomto příkladu výraz smyčky příkazu `line[i++] = 0` `line` **for** inicializuje prvních 10 prvků na 0. Tělo příkazu je příkaz null, protože žádné další příkazy nejsou nezbytné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy](../c-language/statements-c.md)

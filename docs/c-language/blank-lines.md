@@ -11,10 +11,10 @@ ms.locfileid: "62325933"
 ---
 # <a name="blank-lines"></a>Prázdné řádky
 
-**ANSI 4.9.2** zda znaky mezery, které jsou zapsané do proudu textu bezprostředně před znak nového řádku zobrazí při čtení
+**4.9.2 ANSI** Určuje, zda jsou znaky, které jsou zapsány do textového streamu těsně před znakem nového řádku, zobrazeny při čtení v
 
 Znaky mezery jsou zachovány.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62313659"
 ---
 # <a name="addition-"></a>Sčítání (+)
 
-Operátor sčítání (**+**) způsobí, že mají být přidány dva operandy. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.
+Operátor sčítání (**+**) způsobí, že se přidají dva operandy. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.
 
-Při přidání celého čísla na ukazatel celočíselnou hodnotu (*můžu*) je převeden vynásobením velikostí hodnoty, kterou tento ukazatel odkazuje. Po převodu představuje celočíselná hodnota *můžu* pozice v paměti, kde má každá pozice délku určený typem ukazatele. Když je převedená celočíselná hodnota se přidá k hodnotě ukazatele, výsledkem je nová hodnota ukazatele představující adresu *můžu* pozice z původní adresou. Nová hodnota ukazatele adresuje hodnotu stejného typu jako původní hodnotou ukazatele a proto je stejný jako indexování pole (viz [One-Dimensional pole](../c-language/one-dimensional-arrays.md) a [vícerozměrná pole](../c-language/multidimensional-arrays-c.md)). Pokud součet ukazatel ukazuje mimo pole, s výjimkou první umístění za koncem vysoké, výsledek není definován. Další informace najdete v tématu [aritmetické operace ukazatele](../c-language/pointer-arithmetic.md).
+Když je celé číslo přidáno k ukazateli, je celočíselná hodnota (*i*) převedena vynásobením její velikosti hodnotou ukazatele. Po převodu celočíselná *hodnota představuje pozici* v paměti, kde každá pozice má délku určenou typem ukazatele. Když je do hodnoty ukazatele přidána převedená celočíselná hodnota, výsledkem je nová hodnota ukazatele představující adresu *i* pozice z původní adresy. Nová hodnota ukazatele adresuje hodnotu stejného typu jako původní hodnota ukazatele, a proto je stejná jako indexování pole [(viz jednorozměrné pole a](../c-language/one-dimensional-arrays.md) [multidimenzionální pole](../c-language/multidimensional-arrays-c.md)). Pokud součtové body ukazatele mimo pole, s výjimkou prvního umístění nad rámec vysokého konce, není výsledek definován. Další informace naleznete v tématu [aritmetický ukazatel](../c-language/pointer-arithmetic.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Sčítací operátory jazyka C](../c-language/c-additive-operators.md)
+[Operátory sčítání jazyka C](../c-language/c-additive-operators.md)

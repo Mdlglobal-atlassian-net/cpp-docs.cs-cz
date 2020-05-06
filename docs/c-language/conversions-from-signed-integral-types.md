@@ -35,7 +35,7 @@ Informace o velikosti integrálních a plovoucích bodů naleznete v tématu [St
 
 Následující tabulka shrnuje převody z podepsaných integrálních typů. Předpokládá, že typ **znaku** je ve výchozím nastavení podepsaný. Použijete-li možnost v době kompilace ke změně výchozí hodnoty typu **char** na hodnotu unsigned, místo převodů v této tabulce se použije převod uvedený v tabulce [nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md) pro typ **znaku bez znaménka** .
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 V kompilátoru společnosti Microsoft jsou hodnoty **int** a **Long** jedinečné, ale ekvivalentní typy. Převod hodnoty typu **int** pokračuje stejným způsobem jako převod **dlouhého**typu.
 
@@ -43,51 +43,51 @@ V kompilátoru společnosti Microsoft jsou hodnoty **int** a **Long** jedinečn�
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tabulka převodů z celočíselných typů se znaménkem
 
-|From|Chcete-li|Metoda|
+|From|Akce|Metoda|
 |----------|--------|------------|
 |**znak**<sup>1</sup>|**short**|Znaménko – rozšiřování|
 |**char**|**long**|Znaménko – rozšiřování|
-|**char**|**Long Long**|Znaménko – rozšiřování|
-|**char**|**znak bez znaménka**|Zachovat vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
-|**char**|**krátký unsigned**|Znaménko – zvětšit na **krátké**; převod **krátkých** na **unsigned short**|
+|**char**|**long long**|Znaménko – rozšiřování|
+|**char**|**unsigned char**|Zachovat vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
+|**char**|**unsigned short**|Znaménko – zvětšit na **krátké**; převod **krátkých** na **unsigned short**|
 |**char**|**unsigned long**|Znaménko – prodloužit na **dlouhou dobu**; převod **Long** na **unsigned long**|
 |**char**|**dlouhý unsigned long**|Znaménko – prodloužit na **dlouhou**dobu; převod **dlouhého** dlouhého na **unsigned long long**|
-|**char**|**float**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **float**|
+|**char**|**Plovák**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **float**|
 |**char**|**double**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **Double**|
 |**char**|**Long Double**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **Double**|
 |**short**|**char**|Zachovat bajty s nižším pořadím|
 |**short**|**long**|Znaménko – rozšiřování|
-|**short**|**Long Long**|Znaménko – rozšiřování|
-|**short**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
-|**short**|**krátký unsigned**|Zachovat bitový vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
+|**short**|**long long**|Znaménko – rozšiřování|
+|**short**|**unsigned char**|Zachovat bajty s nižším pořadím|
+|**short**|**unsigned short**|Zachovat bitový vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
 |**short**|**unsigned long**|Znaménko – prodloužit na **dlouhou dobu**; převod **Long** na **unsigned long**|
 |**short**|**dlouhý unsigned long**|Znaménko – prodloužit na **dlouhou**dobu; převod **dlouhého** dlouhého na **unsigned long long**|
-|**short**|**float**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **float**|
+|**short**|**Plovák**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **float**|
 |**short**|**double**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **Double**|
 |**short**|**Long Double**|Znaménko – prodloužit na **dlouhou dobu**; převést **Long** na **Double**|
 |**long**|**char**|Zachovat bajty s nižším pořadím|
 |**long**|**short**|Zachovat slovo s nižším pořadím|
-|**long**|**Long Long**|Znaménko – rozšiřování|
-|**long**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
-|**long**|**krátký unsigned**|Zachovat slovo s nižším pořadím|
+|**long**|**long long**|Znaménko – rozšiřování|
+|**long**|**unsigned char**|Zachovat bajty s nižším pořadím|
+|**long**|**unsigned short**|Zachovat slovo s nižším pořadím|
 |**long**|**unsigned long**|Zachovat bitový vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
 |**long**|**dlouhý unsigned long**|Znaménko – prodloužit na **dlouhou**dobu; převod **dlouhého** dlouhého na **unsigned long long**|
-|**long**|**float**|Představuje typ **float**. Pokud se **Long** nemůže přesně reprezentovat, dojde ke ztrátě přesnosti.|
+|**long**|**Plovák**|Představuje typ **float**. Pokud se **Long** nemůže přesně reprezentovat, dojde ke ztrátě přesnosti.|
 |**long**|**double**|Představuje **typ Double**. Pokud **Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
 |**long**|**Long Double**|Představuje **typ Double**. Pokud **Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
-|**Long Long**|**char**|Zachovat bajty s nižším pořadím|
-|**Long Long**|**short**|Zachovat slovo s nižším pořadím|
-|**Long Long**|**long**|Zachovat hodnotu DWORD s nižším pořadím|
-|**Long Long**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
-|**Long Long**|**krátký unsigned**|Zachovat slovo s nižším pořadím|
-|**Long Long**|**unsigned long**|Zachovat hodnotu DWORD s nižším pořadím|
-|**Long Long**|**dlouhý unsigned long**|Zachovat bitový vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
-|**Long Long**|**float**|Představuje typ **float**. Pokud se **Long Long** nemůže přesně reprezentovat, dojde ke ztrátě přesnosti.|
-|**Long Long**|**double**|Představuje **typ Double**. Pokud **Long Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
-|**Long Long**|**Long Double**|Představuje **typ Double**. Pokud **Long Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
+|**long long**|**char**|Zachovat bajty s nižším pořadím|
+|**long long**|**short**|Zachovat slovo s nižším pořadím|
+|**long long**|**long**|Zachovat hodnotu DWORD s nižším pořadím|
+|**long long**|**unsigned char**|Zachovat bajty s nižším pořadím|
+|**long long**|**unsigned short**|Zachovat slovo s nižším pořadím|
+|**long long**|**unsigned long**|Zachovat hodnotu DWORD s nižším pořadím|
+|**long long**|**dlouhý unsigned long**|Zachovat bitový vzor; bit vysokého řádu ztratí funkci jako bit znaménka.|
+|**long long**|**Plovák**|Představuje typ **float**. Pokud se **Long Long** nemůže přesně reprezentovat, dojde ke ztrátě přesnosti.|
+|**long long**|**double**|Představuje **typ Double**. Pokud **Long Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
+|**long long**|**Long Double**|Představuje **typ Double**. Pokud **Long Long** nemůže být reprezentován přesně jako **Dvojitá**přesnost, dojde ke ztrátě určité přesnosti.|
 
 <sup>1</sup> všechny položky typu **char** předpokládají, že typ **znaku** je ve výchozím nastavení podepsán.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

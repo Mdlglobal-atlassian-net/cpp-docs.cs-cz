@@ -19,8 +19,8 @@ Příkaz `break` ukončí spouštění nejbližšího nadřazeného příkazu `d
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz-skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Konec;**
+*příkaz skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**rozdělován**
 
 Příkaz `break` se často používá k ukončení zpracování konkrétního případu v příkazu `switch`. Absence nadřazeného iterativního příkazu nebo příkazu `switch` způsobí chybu.
 
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [break – příkaz](../cpp/break-statement-cpp.md)

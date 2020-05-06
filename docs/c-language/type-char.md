@@ -15,14 +15,14 @@ ms.locfileid: "62345042"
 ---
 # <a name="type-char"></a>Znakový typ
 
-`char` Typ se používá k ukládání celočíselnou hodnotu členu reprezentovatelné znakové sady. Tuto hodnotu celého čísla je kód ASCII odpovídající zadanému znaku.
+`char` Typ se používá k uložení celočíselné hodnoty členu reprezentovatelné znakové sady. Tato celočíselná hodnota je kód ASCII, který odpovídá zadanému znaku.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Znak hodnoty typu `unsigned char` mají rozsah od 0 do 0xFF šestnáctkové. A **podepsané char** má rozsah 0x80 do 0x7F. Tyto rozsahy přeložit a 0 až 255 desetinné -128 do + 127 decimal, v uvedeném pořadí. Možnost kompilátoru /J změní výchozí z **podepsané** k `unsigned`.
+Hodnoty znaků typu `unsigned char` mají rozsah od 0 do hexadecimální hodnoty 0xFF. **Znak typu signed** má rozsah 0X80 až 0x7F. Tyto rozsahy se převádějí na 0 až 255 desetinných míst a-128 na + 127 desítkové číslo v uvedeném pořadí. Možnost kompilátoru/J změní výchozí hodnotu z **signed** na `unsigned`.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

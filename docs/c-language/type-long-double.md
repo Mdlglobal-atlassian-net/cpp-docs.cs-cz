@@ -14,8 +14,8 @@ ms.locfileid: "62344808"
 ---
 # <a name="type-long-double"></a>long double – typ
 
-`long double` Je stejný jako typů [double](../c-language/type-double.md) typu.
+`long double` Typ je stejný jako typ [Double](../c-language/type-double.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

@@ -17,7 +17,7 @@ ms.locfileid: "62326284"
 ---
 # <a name="c-comments"></a>Komentáře v jazyce C
 
-"Komentář" je posloupnost znaků začínající kombinací lomítka a hvězdičky (<strong>/\*</strong>), který je považován za jeden prázdný znak kompilátorem a je jinak ignorována. Komentář může obsahovat libovolnou kombinaci znaků znakové sady, včetně znaků nového řádku, s výjimkou oddělovače "konec komentáře" (<strong>\*/</strong>). Komentáře mohou zaujímat více než jeden řádek, ale nelze je vnořovat.
+"Comment" je posloupnost znaků začínající kombinací lomítka a hvězdičky (<strong>/</strong>), která je považována za jeden prázdný znak kompilátorem a je jinak ignorována. Komentář může obsahovat libovolnou kombinaci znaků ze sady reprezentující znak, včetně znaků nového řádku, ale bez oddělovače "koncový komentář" (<strong>\*</strong>). Komentáře mohou zaujímat více než jeden řádek, ale nelze je vnořovat.
 
 Komentáře se mohou vyskytovat kdekoliv, kde je povolen prázdný znak. Protože kompilátor považuje komentáře za jeden prázdný znak, nelze komentáře zadávat v tokenech. Kompilátor ignoruje znaky v komentáři.
 
@@ -57,17 +57,17 @@ Protože nemohou komentáře nemohou vnořené komentáře, tento příklad způ
 
 K této chybě dochází, protože kompilátor rozpozná první znak `*/` za slovy `Open file` jako konec komentáře. Pokusí se zpracovat zbývající text a po nalezení znaku `*/` mimo komentář vygeneruje chybu.
 
-Ačkoli lze komentáře použít k deaktivaci určitých řádků kódu za účelem testování, jsou užitečnou alternativou pro tento úkol direktivy preprocesoru `#if` a `#endif` a podmíněné kompilace. Další informace najdete v tématu [direktivy preprocesoru](../preprocessor/preprocessor-directives.md) v *odkazu preprocesoru*.
+Ačkoli lze komentáře použít k deaktivaci určitých řádků kódu za účelem testování, jsou užitečnou alternativou pro tento úkol direktivy preprocesoru `#if` a `#endif` a podmíněné kompilace. Další informace naleznete v tématu [direktivy preprocesoru](../preprocessor/preprocessor-directives.md) v *odkazu preprocesoru*.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kompilátor společnosti Microsoft podporuje také Jednořádkové komentáře, které předchází dvě lomítka (__//__). Je-li program kompilován s možností /Za (standard ANSI), vygenerují tyto komentáře chyby. Tyto komentáře nemohou přesahovat na druhý řádek.
+Kompilátor společnosti Microsoft také podporuje Jednořádkový komentář, před kterým jsou vložena dvě lomítka (__//__). Je-li program kompilován s možností /Za (standard ANSI), vygenerují tyto komentáře chyby. Tyto komentáře nemohou přesahovat na druhý řádek.
 
 ```C
 // This is a valid comment
 ```
 
-Komentáře začínající dvěma lomítky (__//__) jsou ukončeny následujícím znakem, který není předcházen řídicím znakem. V následujícím příkladu je znak nového řádku předcházen zpětným lomítkem (**\\**), vytváření "řídicí sekvence". Díky této řídicí sekvenci kompilátor považuje další řádek za součást předchozího řádku. (Další informace najdete v tématu [řídicí sekvence](../c-language/escape-sequences.md).)
+Komentáře začínající dvěma lomítky (__//__) jsou ukončeny dalším znakem nového řádku, který nepředchází řídicí znak. V dalším příkladu před znakem nového řádku je zpětné lomítko (**\\**), které vytváří "řídicí sekvence". Díky této řídicí sekvenci kompilátor považuje další řádek za součást předchozího řádku. (Další informace najdete v tématu [řídicí sekvence](../c-language/escape-sequences.md).)
 
 ```C
 // my comment \
@@ -76,10 +76,10 @@ Komentáře začínající dvěma lomítky (__//__) jsou ukončeny následujíc�
 
 Příkaz `i++;` je proto zakomentován.
 
-Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Chcete-li tato rozšíření zakázat, použijte možnost /Za.
+Výchozí hodnota pro Microsoft C znamená, že jsou rozšíření společnosti Microsoft povolena. Chcete-li tato rozšíření zakázat, použijte možnost /Za.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Tokeny jazyka C](../c-language/c-tokens.md)

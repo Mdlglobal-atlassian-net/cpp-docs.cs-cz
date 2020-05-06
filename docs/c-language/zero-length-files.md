@@ -14,10 +14,10 @@ ms.locfileid: "62290648"
 ---
 # <a name="zero-length-files"></a>Pole s nulovou délkou
 
-**ANSI 4.9.3** Určuje, zda skutečně existuje soubor nulové délky
+**4.9.3 ANSI** Zda soubor s nulovou délkou skutečně existuje
 
 Soubory s nulovou délkou jsou povoleny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -21,43 +21,43 @@ ms.locfileid: "82032067"
 ---
 # <a name="parameters"></a>Parametry
 
-Argumenty jsou názvy hodnot předaných funkci voláním funkce. Parametry jsou hodnoty, které funkce očekává. V prototypu funkce obsahují závorky za názvem funkce úplný seznam parametrů funkce a jejich typů. Deklarace parametrů určují typy, velikosti a identifikátory hodnot uložených v parametrech.
+Argumenty jsou názvy hodnot předaných funkci voláním funkce. Parametry jsou hodnoty, které funkce očekává k přijetí. V prototypu funkce závorky následující po názvu funkce obsahují úplný seznam parametrů funkce a jejich typy. Deklarace parametrů určují typy, velikosti a identifikátory hodnot uložených v parametrech.
 
 ## <a name="syntax"></a>Syntaxe
 
 *definice funkce*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace specifikátory*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory*<sub>opt</sub> *atribut – seq*<sub>opt</sub> *deklarátor* *deklarace-list*<sub>opt</sub> – *složený* příkaz
 
-/\**atribut-seq* je specifický pro společnost Microsoft\*/
+/\**atribut – seq* je specifický pro společnost Microsoft\*/
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*přímý deklarátor*\* : / Deklarátor funkce\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator***(***parametr-type-list***)**  / \* Deklarátor nového stylu      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator***(***identifier-list*<sub>opt</sub> **)**  / \* Deklarátor zastaralého stylu    \*/
+*Direct-deklarátor*:/\* A – funkce deklarátor\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(***parametr-Type-list***)**  / \* – nový styl deklarátor      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(opt***-list*<sub>opt</sub> **)**  / \* zastaralý styl deklarátor    \*/
 
-*seznam parametrů*typu :\* / Seznam parametrů\*/<br/>
+*seznam parametrů-typu*:/\* seznam parametrů\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* **, ...**
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* **,...**
 
 *seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* **,**  *deklarace parametrů*
+&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* **,**  *parametr-Declaration*
 
 *deklarace parametru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* *specifikátorů deklarací*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*volba* *abstraktně specifikátorů*<sub>deklarací deklarací deklarací deklarací deklarací</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory* *deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace-specifikátory* *abstract-deklarátor*<sub>opt</sub>
 
-*Seznam typu parametru* je posloupnost deklarací parametrů oddělených čárkami. Forma každého parametru v seznamu parametrů vypadá takto:
+*Parametr-Type-list* je posloupnost deklarací parametrů oddělených čárkami. Forma každého parametru v seznamu parametrů vypadá takto:
 
 ```C
 [register]  type-specifier [declarator]
 ```
 
-Parametry funkce deklarované s **automatickým** atributem generují chyby. Identifikátory parametrů se používají v těle funkce odkazovat na hodnoty předané funkci. Parametry v prototypu můžete pojmenovat, ale názvy jsou mimo rozsah na konci deklarace. Proto mohou být názvy parametrů přiřazeny stejným způsobem nebo odlišně v definici funkce. Tyto identifikátory nelze předefinovat v nejvzdálenějším bloku těla funkce, ale mohou být předefinovány ve vnitřních vnořených blocích, jako by seznam parametrů byl ohraničujícíblok.
+Parametry funkce deklarované s atributem **auto** generují chyby. Identifikátory parametrů se používají v těle funkce k odkazování na hodnoty předané do funkce. Parametry můžete pojmenovat v prototypu, ale názvy se na konci deklarace dostanou mimo rozsah. Proto lze názvy parametrů přiřadit stejným způsobem nebo jinak odlišně v definici funkce. Tyto identifikátory nelze předefinovat v vnějším bloku těla funkce, ale lze je předefinovat ve vnitřních vnořených blocích, jako by seznam parametrů byl nadřazeným blokem.
 
-Každému identifikátoru v *seznamu typů parametrů* musí předcházet jeho příslušný specifikátor typu, jak je znázorněno v tomto příkladu:
+Každý identifikátor v *seznamu parametrů-typu* musí předcházet jeho vhodné specifikátoru typu, jak je znázorněno v následujícím příkladu:
 
 ```C
 void new( double x, double y, double z )
@@ -66,13 +66,13 @@ void new( double x, double y, double z )
 }
 ```
 
-Pokud v seznamu parametrů dojde alespoň k jednomu parametru, může seznam končit čárkou následovanou třemi tečkami (**, ...**). Tato konstrukce, nazývaná "zápis se třemi tečkami", označuje proměnný počet argumentů funkce. (Další informace naleznete [v tématu Volání s proměnným počtem argumentů.)](../c-language/calls-with-a-variable-number-of-arguments.md) Volání funkce však musí mít alespoň tolik argumentů, kolik je parametrů před poslední čárkou.
+Pokud je v seznamu parametrů k dispozici alespoň jeden parametr, může seznam končit čárkou následovanou třemi tečkami (**,...**). Tato konstrukce označovaná jako "Notation se třemi tečkami" označuje proměnný počet argumentů funkce. (Další informace naleznete v tématu [volání s proměnlivým počtem argumentů](../c-language/calls-with-a-variable-number-of-arguments.md) .) Nicméně volání funkce musí mít alespoň tolik argumentů, protože existují parametry před poslední čárkou.
 
-Pokud nemají být funkci předány žádné argumenty, bude seznam parametrů `void`nahrazen klíčovým slovem . Toto `void` použití je odlišné od jeho použití jako specifikátor typu.
+Pokud do funkce nebudou předány žádné argumenty, je seznam parametrů nahrazen klíčovým slovem `void`. Toto použití `void` je odlišné od svého použití jako specifikátor typu.
 
-Pořadí a typ parametrů, včetně použití zápisu se třemi tečkami, musí být stejné ve všech deklaracích funkcí (pokud existuje) a v definici funkce. Typy argumentů po obvyklých aritmetických převodech musí být kompatibilní s typy odpovídajících parametrů. (Informace o aritmetických konverzích naleznete v tématu [Obvyklé aritmetické převody.)](../c-language/usual-arithmetic-conversions.md) Argumenty následující tři tečky nejsou kontrolovány. Parametr může mít libovolný základní, struktura, sjednocení, ukazatel nebo typ pole.
+Pořadí a typ parametrů, včetně jakéhokoliv použití notace tři tečky, musí být stejné ve všech deklaracích funkce (pokud existují) a v definici funkce. Typy argumentů po obvyklých aritmetických převodech musí být kompatibilní s typy odpovídajících parametrů. (Další informace o aritmetických převodech naleznete v tématu [obvyklé aritmetické převody](../c-language/usual-arithmetic-conversions.md) .) Argumenty za třemi tečkami nejsou zaškrtnuté. Parametr může mít jakýkoli základní typ, strukturu, sjednocení, ukazatel nebo typ pole.
 
-Kompilátor provádí obvyklé aritmetické převody nezávisle na každém parametru a na každém argumentu, v případě potřeby. Po převodu žádný parametr `int`je kratší než , a žádný parametr má **plovoucí** typ, pokud typ parametru je explicitně zadán jako **float** v prototypu. To například znamená, že deklarování parametru jako parametru `char` `int`má stejný účinek jako deklarování jako .
+Kompilátor provádí běžné aritmetické převody nezávisle na každém parametru a v každém argumentu, pokud je to nutné. Po převodu žádný parametr není kratší než a žádný `int`parametr nemá typ **float** , pokud není typ parametru explicitně zadaný jako **float** v prototypu. To znamená, že například, který deklaruje parametr jako `char` má stejný účinek jako deklarace jako. `int`
 
 ## <a name="see-also"></a>Viz také
 

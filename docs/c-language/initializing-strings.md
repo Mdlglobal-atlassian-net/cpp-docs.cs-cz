@@ -46,12 +46,12 @@ char s[]  = {'a', 'b', 'c', '\0'},
 
 Je-li řetězec kratší než zadaná velikost pole, jsou zbývající prvky pole inicializovány na hodnotu 0.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 V jazyce Microsoft C mohou být textové literály dlouhé až 2048 bajtů.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Inicializace](../c-language/initialization.md)
+[Operace](../c-language/initialization.md)

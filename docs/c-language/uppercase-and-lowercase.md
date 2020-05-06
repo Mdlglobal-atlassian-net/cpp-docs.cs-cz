@@ -11,12 +11,12 @@ ms.locfileid: "62290895"
 ---
 # <a name="uppercase-and-lowercase"></a>Velká a malá písmena
 
-**ANSI 3.1.2** Určuje, zda jsou významné rozlišování velikosti písmen
+**ANSI 3.1.2** Zda jsou odlišnosti velikosti písmen významné
 
-Microsoft C zpracovává identifikátory v rámci kompilační jednotky jako malá a velká písmena.
+Jazyk Microsoft C považuje identifikátory v rámci jednotky kompilace za rozlišování velkých a malých písmen.
 
-Propojovací program společnosti Microsoft je velká a malá písmena. Je nutné zadat všechny identifikátory konzistentně podle případ.
+Linker společnosti Microsoft rozlišuje velká a malá písmena. Je nutné zadat všechny identifikátory konzistentně podle velikosti písmen.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování identifikátorů](../c-language/behavior-of-identifiers.md)

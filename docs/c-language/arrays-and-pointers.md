@@ -13,10 +13,10 @@ ms.locfileid: "62313412"
 ---
 # <a name="arrays-and-pointers"></a>Pole a ukazatelé
 
-- [Maximální velikost pole](../c-language/largest-array-size.md)
+- [Největší velikost pole](../c-language/largest-array-size.md)
 
 - [Odečtení ukazatele](../c-language/pointer-subtraction.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

@@ -1,5 +1,5 @@
 ---
-title: Určit, kterou exportovací metodu použít
+title: Výběr použité metody exportu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
@@ -14,45 +14,45 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273734"
 ---
-# <a name="determine-which-exporting-method-to-use"></a>Určit, kterou exportovací metodu použít
+# <a name="determine-which-exporting-method-to-use"></a>Výběr použité metody exportu
 
-Můžete exportovat funkce v některém ze dvou způsobů – soubor .def nebo `__declspec(dllexport)` – klíčové slovo. Chcete-li pomoci při rozhodování, jakým způsobem je lepší pro vaši knihovnu DLL, zvažte tyto otázky:
+Funkce můžete exportovat jedním ze dvou způsobů – souboru. def nebo `__declspec(dllexport)` klíčovým slovem. Pro snazší rozhodování o tom, jaký je lepší pro vaši knihovnu DLL, zvažte tyto otázky:
 
-- Chystáte se exportovat později další funkce?
+- Plánujete export dalších funkcí později?
 
-- Je vaše knihovna DLL použita pouze u aplikací, které můžete znovu sestavit nebo se používá u aplikací, které nelze znovu sestavit, například aplikace, které jsou vytvořené třetími stranami?
+- Je vaše knihovna DLL používána pouze aplikacemi, které lze znovu sestavit, nebo je používá aplikace, které nelze znovu sestavit – například aplikace, které jsou vytvořeny třetími stranami?
 
-## <a name="pros-and-cons-of-using-def-files"></a>Výhody a nevýhody pomocí souborů .def
+## <a name="pros-and-cons-of-using-def-files"></a>Specialisté a nevýhody používání souborů. def
 
-Export funkcí v .def souboru získáte tak kontrolu nad řadové číslovky exportu. Když přidáte exportované funkce knihovny DLL, ji můžete přiřadit ordinální vyšší hodnotu než ostatní exportované funkce. Když toto provedete, není potřeba znovu propojit s importovanou knihovnou, která obsahuje nové funkce aplikace, které používají implicitní propojení. To je velmi vhodné, pokud navrhujete knihovny DLL pro použití mnoha aplikacemi vzhledem k tomu, že můžete přidat nové funkce a také se ujistěte, že i nadále fungovat správně s aplikacemi, které už jsou na něm závislí. Například knihovny DLL MFC jsou vytvořeny pomocí souborů .def.
+Exportování funkcí v souboru. def vám umožní řídit pořadí exportu. Když do své knihovny DLL přidáte exportovanou funkci, můžete jí přiřadit vyšší pořadové číslo než jakákoli jiná exportovaná funkce. Když to uděláte, aplikace, které používají implicitní propojení, se nemusí znovu propojit s knihovnou import, která obsahuje novou funkci. To je velmi užitečné, pokud navrhujete knihovnu DLL pro použití v mnoha aplikacích, protože můžete přidat nové funkce a také zajistit, aby i nadále fungovaly správně s aplikacemi, které už na ně spoléhají. Například knihovny MFC DLL jsou sestaveny pomocí souborů. def.
 
-Další výhodou použití .def souboru je, že můžete použít `NONAME` atribut exportovat funkce. To umístí pouze pořadí v tabulce exportů v knihovně DLL. Pro knihovny DLL, které mají velký počet exportovaných funkcí pomocí `NONAME` atribut můžete zmenšit velikost souboru knihovny DLL. Informace o tom, jak psát modulu definice příkazu najdete v tématu [pravidla pro příkazy definice modulu](reference/rules-for-module-definition-statements.md). Informace o ordinální export najdete v tématu [export funkcí z DLL Knihovny podle řádu, než podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+Další výhodou použití souboru. def je, že můžete použít `NONAME` atribut k exportu funkce. Tím se v knihovně DLL vloží pouze ordinální číslo v tabulce EXPORTS. V případě knihoven DLL, které mají velký počet exportovaných funkcí, `NONAME` lze pomocí atributu zmenšit velikost souboru DLL. Informace o tom, jak napsat příkaz definice modulu, najdete v tématu [pravidla pro příkazy definice modulu](reference/rules-for-module-definition-statements.md). Informace o ordinálním exportu naleznete v tématu [Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-Pomocí souboru .def nevýhodou je, že pokud exportujete funkce v souboru jazyka C++, je buď potřeba umístit .def dekorované názvy souborů nebo definovat exportované funkce tak, že používání příkazu extern "C", aby názvovou dekoraci, která se má provést kompilátorem MSVC.
+Nevýhodou použití souboru. def je, že pokud exportujete funkce v souboru jazyka C++, je buď nutné umístit dekorované názvy do souboru. def, nebo definovat exportované funkce pomocí extern "C", abyste se vyhnuli dekorování názvů, které provádí kompilátor MSVC.
 
-Když vložíte do .def souboru dekorované názvy, můžete je získat pomocí [DUMPBIN](reference/dumpbin-reference.md) nástroj nebo pomocí volby propojovacího programu [/MAP](reference/map-generate-mapfile.md) možnost. Dekorované názvy, které jsou produkované kompilátorem jsou specifické pro kompilátor; Proto pokud umístíte dekorované názvy, které jsou vytvářeny pomocí kompilátoru do souboru .def, aplikace, které na knihovnu DLL musí také být sestaveny pomocí stejné verze kompilátoru tak, aby dekorované názvy ve volání aplikace odpovídaly exportovaný názvy i n souboru .def knihovny DLL.
+Pokud vložíte dekorované názvy do souboru. def, můžete je získat pomocí nástroje [DUMPBIN](reference/dumpbin-reference.md) nebo pomocí možnosti linker [/map](reference/map-generate-mapfile.md) . Dekorované názvy, které jsou vytvořeny kompilátorem, jsou specifické pro kompilátor; Proto pokud vložíte dekorované názvy, které jsou vyprodukovány kompilátorem, do souboru. def, aplikace, které odkazují na knihovnu DLL, musí být také sestaveny pomocí stejné verze kompilátoru, aby dekorované názvy v volající aplikaci odpovídaly exportovaným názvům v souboru. def knihovny DLL.
 
-## <a name="pros-and-cons-of-using-declspecdllexport"></a>Výhody a nevýhody pomocí deklarace __declspec(dllexport)
+## <a name="pros-and-cons-of-using-__declspecdllexport"></a>Specialisté a nevýhody použití __declspec (dllexport)
 
-Pomocí `__declspec(dllexport)` je pohodlné, protože není nutné se starat o údržbu souboru .def a získání dekorované názvy exportovaných funkcí. Užitečnost tímto způsobem exportu je však omezen počet propojených aplikací, které jste ochotni znovu sestavit. Pokud je znovu sestavit knihovnu DLL s novými exporty, máte také znovu sestavit aplikace, protože dekorované názvy pro exportované funkce jazyka C++ může změnit, pokud používáte jinou verzi kompilátoru její opětovné sestavení.
+Použití `__declspec(dllexport)` je pohodlné, protože se nemusíte starat o údržbu souboru. def a získat dekorované názvy exportovaných funkcí. Nicméně užitečnost tohoto způsobu exportu je omezená počtem propojených aplikací, které jste ochotni znovu sestavit. Při opětovném sestavení knihovny DLL s novými exporty je také nutné znovu sestavit aplikace, protože dekorované názvy pro exportované funkce jazyka C++ mohou být změněny, pokud použijete jinou verzi kompilátoru pro opětovné sestavení.
 
 ### <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí. DEF soubory](exporting-from-a-dll-using-def-files.md)
+- [Exportujte z knihovny DLL pomocí. Soubory DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
 - [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializovat knihovnu DLL](run-time-library-behavior.md#initializing-a-dll)
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+### <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 
@@ -60,6 +60,6 @@ Pomocí `__declspec(dllexport)` je pohodlné, protože není nutné se starat o 
 
 - [Dekorované názvy](reference/decorated-names.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Export z knihovny DLL](exporting-from-a-dll.md)

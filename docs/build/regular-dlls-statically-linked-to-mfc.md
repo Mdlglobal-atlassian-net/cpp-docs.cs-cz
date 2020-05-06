@@ -18,68 +18,68 @@ ms.locfileid: "62314777"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Běžné knihovny MFC DLL staticky propojené do MFC
 
-Knihovnu DLL, která používá knihovnu MFC interně je běžný, které knihovny MFC DLL staticky propojené do MFC a spustitelnými soubory knihovny MFC nebo knihovny non-MFC lze volat exportované funkce v knihovně DLL. Podle popisu v názvu, je tento druh knihovny DLL vytvořené pomocí statické propojení knihovní verze knihovny MFC. Funkce jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardních rozhraní C. Příklad toho, jak zapisovat, vytvářet a využívat běžné knihovny MFC DLL, najdete v ukázce [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).
+Běžná knihovna MFC DLL staticky propojená s knihovnou MFC je knihovna DLL, která interně používá knihovnu MFC a exportované funkce v knihovně DLL mohou být volány spustitelnými soubory MFC nebo non-MFC. Jak popisuje název, tento druh knihovny DLL je sestaven pomocí verze knihovny MFC statického propojení. Funkce jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardního rozhraní jazyka C. Příklad, jak napsat, sestavit a použít regulární knihovnu MFC DLL, naleznete v ukázce [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).
 
-Všimněte si, že v dokumentaci k Visual C++ se již nepoužívá termín USRDLL. Běžné knihovny MFC DLL staticky propojené do MFC má stejné vlastnosti jako dosavadní USRDLL.
+Všimněte si, že pojem USRDLL již není v dokumentaci Visual C++ používán. Pravidelná knihovna MFC DLL, která je staticky propojena s knihovnou MFC, má stejné charakteristiky jako předchozí USRDLL.
 
-Běžné knihovny DLL MFC staticky propojené do MFC, má následující funkce:
+Pravidelná knihovna MFC DLL, staticky propojená s knihovnou MFC, má následující funkce:
 
-- Klientský spustitelný soubor lze zapsat v libovolném jazyce, který podporuje použití knihoven DLL (C, C++, Pascal, Visual Basic a tak dále); nemusí být aplikace knihovny MFC.
+- Spustitelný soubor klienta lze zapsat v jakémkoli jazyce, který podporuje použití knihoven DLL (C, C++, Pascal, Visual Basic a tak dále); nemusí to být aplikace MFC.
 
-- Knihovny DLL můžete propojit stejným statickém propojení knihoven MFC používané aplikacemi. Je již nebude samostatnou verzi knihovny statických odkazů pro knihovny DLL.
+- Knihovna DLL může odkazovat na stejné knihovny statických odkazů knihovny MFC používané aplikacemi. Pro knihovny DLL už neexistuje samostatná verze statických knihoven odkazů.
 
-- Dříve než ve verzi 4.0 knihovna MFC poskytuje USRDLL stejného typu funkce jako obvyklé knihovny MFC DLL staticky propojené do MFC. Od verze Visual C++ verze 4.0, termín USRDLL je zastaralý.
+- Před verzí 4,0 knihovny MFC poskytoval USRDLL stejný typ funkčnosti jako běžné knihovny MFC DLL staticky propojené s knihovnou MFC. Od Visual C++ verze 4,0 je pojem USRDLL zastaralý.
 
-Běžné knihovny DLL MFC staticky propojené do MFC, má následující požadavky:
+Pravidelná knihovna MFC DLL, staticky propojená s knihovnou MFC, má následující požadavky:
 
-- Tento druh knihovny DLL musíte vytvořit instanci třídy odvozené od `CWinApp`.
+- Tento typ knihovny DLL musí vytvořit instanci třídy odvozené z `CWinApp`.
 
-- Tento typ používá knihovnu DLL `DllMain` poskytované knihovny MFC. Umístit všechny kód inicializace knihovnu DLL `InitInstance` členské funkce a ukončovacího kódu v `ExitInstance` stejně jako v běžné aplikace knihovny MFC.
+- Tento typ knihovny DLL používá modul `DllMain` , který poskytuje knihovna MFC. Všechny inicializační kódy specifické pro DLL umístěte do `InitInstance` členské funkce a ukončovací kód v `ExitInstance` normální aplikaci MFC.
 
-- Přestože termín USRDLL je zastaralý, je nutné definovat "**_USRDLL**" na příkazový řádek kompilátoru. Tato definice určuje, které deklarace se použije souborech hlaviček knihovny MFC.
+- I když je pojem USRDLL zastaralý, je stále nutné definovat "**_USRDLL**" na příkazovém řádku kompilátoru. Tato definice určuje, které deklarace jsou získány ze souborů hlaviček knihovny MFC.
 
-regulární knihovny DLL MFC musí mít `CWinApp`-odvozené třídy a jeden objekt třídy aplikace, stejně jako aplikace knihovny MFC. Ale `CWinApp` objekt knihovny DLL nemá hlavní zprávy odeslané, stejně jako `CWinApp` objektu aplikace.
+běžné knihovny MFC DLL musí mít `CWinApp`třídu odvozenou od třídy a jeden objekt třídy aplikace, stejně jako aplikace MFC. Nicméně `CWinApp` objekt knihovny DLL nemá hlavní čerpadlo zpráv, stejně jako `CWinApp` objekt aplikace.
 
-Všimněte si, že `CWinApp::Run` mechanismus se nevztahuje na knihovnu DLL, protože aplikace vlastní hlavní pumpu zpráv. Pokud knihovna DLL otevře nemodální dialogová okna, nebo má vlastní okna hlavního rámce, pumpa zpráv aplikace musí volat rutinu exportovaných knihovnou DLL, která volá `CWinApp::PreTranslateMessage` členské funkce objektu aplikaci knihovny DLL.
+Všimněte si, `CWinApp::Run` že mechanismus se nevztahuje na knihovnu DLL, protože aplikace vlastní hlavní pumpu zpráv. Pokud knihovna DLL otevře nemodální dialogová okna nebo má hlavní okno rámce vlastní, musí hlavní pumpa zpráv aplikace volat rutinu exportovanou knihovnou DLL, která zase volá `CWinApp::PreTranslateMessage` členskou funkci objektu aplikace knihovny DLL.
 
-Příklad této funkce najdete v ukázce DLLScreenCap.
+Příklad této funkce naleznete v ukázce DLLScreenCap.
 
-Symboly jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardních rozhraní C. Deklarace funkce exportované z běžné knihovny MFC DLL by vypadat přibližně takto:
+Symboly jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardního rozhraní jazyka C. Deklarace funkce exportované z běžné knihovny MFC DLL by vypadala přibližně takto:
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-Všechna přidělení paměti v rámci běžné knihovny MFC DLL by mělo zůstat v rámci knihovny DLL; Knihovna DLL by neměla předat do nebo přijímat volání spustitelnému souboru kterýkoli z následujících:
+Všechna přidělení paměti v rámci běžné knihovny MFC DLL by měla zůstat v rámci knihovny DLL; Knihovna DLL by neměla předávat ani přijímat volání z následujících spustitelných souborů:
 
-- ukazatelé na objekty MFC
+- Ukazatelé na objekty MFC
 
-- ukazatele na paměť přidělenou v prostředí MFC
+- Ukazatelé na paměť přidělenou knihovnou MFC
 
-Pokud je potřeba provádět žádnou z výše uvedených nebo potřebujete předat mezi voláním spustitelného souboru a knihovny DLL MFC odvozené objekty, musíte sestavit rozšiřující knihovny DLL MFC.
+Pokud potřebujete provést některý z výše uvedených kroků nebo potřebujete předat objekty odvozené od knihovny MFC mezi volajícím spustitelným souborem a knihovnou DLL, je nutné vytvořit rozšiřující knihovnu DLL knihovny MFC.
 
-Je bezpečné předat ukazatele na paměti, které byly přiděleny podle běhových knihoven C mezi aplikace a knihovny DLL pouze v případě, že můžete vytvořit kopii data. Nesmí odstranění nebo změna velikosti tyto ukazatele nebo použít bez vytvoření kopie paměti.
+Je bezpečné předat ukazatelům do paměti, které byly přiděleny knihovnami run-time jazyka C mezi aplikací a knihovnou DLL pouze v případě, že vytvoříte kopii dat. Nesmíte odstranit ani změnit velikost těchto ukazatelů ani je použít bez toho, aby bylo možné vytvořit kopii paměti.
 
-Knihovnu DLL, která je staticky propojené do MFC nelze propojit také dynamické sdílené knihovny MFC DLL. Knihovnu DLL, která je staticky propojené do MFC je dynamicky vázán k aplikaci stejně jako ostatní knihovny DLL; aplikace je odkaz na něj stejně jako ostatní knihovny DLL.
+Knihovna DLL, která je staticky propojena s knihovnou MFC, nemůže také dynamicky propojit sdílené knihovny MFC DLL. Knihovna DLL, která je staticky propojena s knihovnou MFC, je dynamicky svázána s aplikací stejně jako jakákoli jiná knihovna DLL. aplikace na ni odkazují stejně jako všechny jiné knihovny DLL.
 
-Standardní statickém propojení knihoven MFC jsou pojmenovány podle konvence je popsáno v [zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). S knihovnou MFC verze 3.0 nebo novější, je však již nebude nutné ručně zadat do linkeru verzi knihovny MFC, kterou chcete propojit. Soubory hlaviček knihovny MFC místo toho automaticky určit, definuje správnou verzi knihovny MFC pro propojení v závislosti na preprocesoru, jako například  **\_ladění** nebo **_UNICODE**. Soubory hlaviček knihovny MFC Přidání direktivy /DEFAULTLIB propojovací program na odkaz v konkrétní verzi knihovny MFC.
+Standardní knihovny statických odkazů knihovny MFC jsou pojmenovány podle konvence popsaných v tématu zásady [vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Avšak s knihovnou MFC verze 3,0 a novější již není nutné ručně zadávat do linkeru verzi knihovny MFC, kterou chcete propojit. Místo toho soubory hlaviček knihovny MFC automaticky určí správnou verzi knihovny MFC, která bude propojena v závislosti na definici preprocesoru, jako je například ** \_ladění** nebo **_UNICODE**. Soubory hlaviček knihovny MFC přidávají/DEFAULTLIB direktivy, které řídí linker k propojení v konkrétní verzi knihovny MFC.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializovat obvyklé knihovny DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicializovat běžné knihovny MFC DLL](run-time-library-behavior.md#initializing-regular-dlls)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
-- [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+- [Použití knihovny MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 - [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Vytváření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)
+- [Vytvoření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
 - [Běžné knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC – rozšiřující knihovny DLL](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Typy knihoven DLL](kinds-of-dlls.md)
+[Druhy knihoven DLL](kinds-of-dlls.md)

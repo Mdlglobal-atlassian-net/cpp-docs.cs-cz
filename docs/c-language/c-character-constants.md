@@ -16,42 +16,42 @@ ms.locfileid: "62326297"
 ---
 # <a name="c-character-constants"></a>Konstanty znaků jazyka C
 
-"Znaková konstanta" je tvořena uzavřením jednoho znaku reprezentovatelné znakové sady do jednoduchých uvozovek (**""**). Znakové konstanty se používají k vyjádření znaků ve [znaková sada spuštění](../c-language/execution-character-set.md).
+"Znaková konstanta" je tvořena uzavřením jednoho znaku z množiny reprezentovatelné znakové sady v jednoduchých uvozovkách (**' '**). Znakové konstanty slouží k reprezentaci znaků ve [znakové sadě spuštění](../c-language/execution-character-set.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-*Znaková konstanta*: **"** *c-char pořadí* **.**
+*znaková konstanta*: **'** *c-char-Sequence* **'**
 
-**L "** *c-char pořadí* **.**
+**L '** *c-char-Sequence* **'**
 
-*c – znak sekvence*: *c-char*
+*c-char-Sequence*: *c-char*
 
-*c – znak sekvence jazyka c-char*
+*c-char-Sequence c-char*
 
-*c-char*: Každý člen zdrojové znakové sady kromě jednoduché uvozovky (**"**), zpětného lomítka (**\\**), nebo znak nového řádku
+*c-char*: libovolný člen zdrojové znakové sady s výjimkou jednoduché uvozovky (**'**), zpětného lomítka**\\**() nebo znaku nového řádku
 
 *řídicí sekvence*
 
-*řídicí sekvence*: *simple-escape-sequence*
+*sekvence escape*: *Jednoduchá řídicí* sekvence
 
-*octal-escape-sequence*
+*osmičková – řídicí sekvence*
 
-*hexadecimal-escape-sequence*
+*hexadecimální sekvence znaků*
 
-*Simple-escape-sequence*: jeden z **\a \b \f \n \r \t \v**
+*Jednoduchá řídicí sekvence*: jedna z **\a \b \f \n \r \t \v**
 
 **\\' \\" \\\ \\?**
 
-*osmičková řídicí sekvence*: **\\** *uveden jako osmičková číslice*
+*osmičková-řídicí sekvence*: **\\** *osmičková číslice*  
 
-**\\**  *uveden jako osmičková číslice osmičkovými číslicemi*
+**\\**  *osmičková číslice osmičkové číslice*
 
-**\\**  *uveden jako osmičková číslice uveden jako osmičková číslice osmičkovými číslicemi*
+**\\**  *osmičková číslice osmičkové číslice číslice*
 
-*šestnáctková řídicí sekvence*: **\x**  *šestnáctkové číslice*
+*šestnáctkový řídicí znak sekvence*: **\x**  *hexadecimální číslice*
 
-*šestnáctková řídicí sekvence šestnáctkové číslice*
+*šestnáctkové znaky-sekvence – hexadecimální číslice*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty jazyka C](../c-language/c-constants.md)

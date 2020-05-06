@@ -18,35 +18,35 @@ ms.locfileid: "62325674"
 ---
 # <a name="c-floating-point-constants"></a>Konstanty jazyka C s plovoucí desetinnou čárkou
 
-"S plovoucí desetinnou čárkou konstanta" je desetinné číslo představující reálné číslo se znaménkem. Reprezentace reálné číslo se znaménkem obsahuje celočíselnou část desetinné části a exponent. Konstanty s plovoucí desetinnou čárkou použijte k reprezentaci hodnoty s plovoucí desetinnou čárkou, které se nedá změnit.
+Konstanta s plovoucí desetinnou čárkou je desítkové číslo, které představuje číslo se znaménkem v čísle. Reprezentace čísla se znaménkem (reálné číslo) obsahuje celočíselnou část, zlomkovou část a exponent. Použijte konstanty s plovoucí desetinnou čárkou k vyjádření hodnot s plovoucí desetinnou čárkou, které nelze změnit.
 
 ## <a name="syntax"></a>Syntaxe
 
-*floating-point-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *exponent část*<sub>optimalizované</sub> *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *exponent část* *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub>
+*plovoucí desetinná*čárka – konstanta:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*zlomek – konstanta* *exponentu –* volitelná<sub>možnost souhlasu</sub> *s plovoucí příponou*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;exponent *číselné sekvence* – *část* s *plovoucí desetinnou čárkou*– možnost<sub>výslovného</sub> názvu
 
-*desetinná konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
+*zlomková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>výslovný souhlas</sub> *číselné posloupnosti* **.** *sekvence číslic*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*  **.**
 
-*exponent-part*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*
+*exponent – část*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *symbol*<sub>opt</sub> e *-číslice opt – posloupnost*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**E** *Symbol*<sub>opt</sub> E *-číslice opt – posloupnost*
 
-*znaménko*: jeden z<br/>
+*Sign*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
 *sekvence číslic*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
+&nbsp;&nbsp;&nbsp;&nbsp;*základní*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;číslice *sekvence číslic* *digit*
 
-*číslo s plovoucí čárkou přípona*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**l f F L**
+*plovoucí přípona*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**f l F L**
 
-Můžete vynechat buď číslic od desetinné čárky (celočíselnou část hodnoty) nebo číslice za desetinnou čárkou (zlomkové části), ale ne obě možnosti současně. Můžete ponechat si desetinné čárky pouze v případě, že zahrnete exponent. Žádné prázdné znaky mohou oddělit číslic nebo znaků konstanty.
+Můžete vynechat číslice před desetinnou čárkou (celočíselnou část hodnoty) nebo číslicemi za desetinnou čárkou (zlomkovou část), ale ne obojí. Desetinnou čárku můžete opustit pouze v případě, že zadáte exponent. Žádné prázdné znaky nemohou oddělovat číslice nebo znaky konstanty.
 
-Následující příklady znázorňují některé formy konstanty s plovoucí desetinnou čárkou a výrazů:
+Následující příklady ilustrují některé formy konstant a výrazů s plovoucí desetinnou čárkou:
 
 ```C
 15.75
@@ -56,18 +56,18 @@ Následující příklady znázorňují některé formy konstanty s plovoucí de
 25E-4     /* =  0.0025 */
 ```
 
-Konstanty s plovoucí desetinnou čárkou jsou kladné, pokud jsou uvozená znakem minus (**-**). Znaménko minus v tomto případě je považován za unární operátor aritmetické negace. Konstanty s plovoucí desetinnou čárkou, mají typ `float`, `double`, nebo `long double`.
+Konstanty s plovoucí desetinnou čárkou jsou kladné, pokud nejsou předcházejí znaménkem mínus (**-**). V tomto případě se znaménko mínus považuje za unární operátor aritmetické negace. Konstanty s plovoucí desetinnou `float`čárkou mají typ, `double`nebo `long double`.
 
-Konstanty s plovoucí desetinnou čárkou bez **f**, **F**, **l**, nebo **L** přípona nemá typ `double`. Pokud písmeno **f** nebo **F** je přípona, má typ konstanty `float`. Pokud příponou písmenem **l** nebo **L**, má typ `long double`. Příklad:
+Konstanta s plovoucí desetinnou čárkou bez přípony **f**, **f**, **l**nebo **l** je `double`typu. Pokud je písmeno **f** nebo **f** příponou, konstanta je typu `float`. Pokud je přípona v písmenu **l** nebo **l**, má typ `long double`. Příklad:
 
 ```C
 10.0L  /* Has type long double  */
 10.0F  /* Has type float        */
 ```
 
-Všimněte si, že kompilátor Microsoft C interně představuje `long double` stejný jako typ `double`. Zobrazit [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o typu `double`, `float`, a `long double`.
+Všimněte si, že kompilátor jazyka Microsoft C `long double` interně reprezentuje stejný `double`typ jako typ. Informace o typu `double`, a `float` `long double`jsou uvedeny v části [úložiště základních typů](../c-language/storage-of-basic-types.md) .
 
-Vynechat celočíselnou část konstanty s plovoucí desetinnou čárkou, jak je znázorněno v následujícím příkladu. Číslo.75 může být vyjádřena v mnoha způsoby, včetně následujících:
+Můžete vynechat celočíselnou část konstanty s plovoucí desetinnou čárkou, jak je znázorněno v následujících příkladech. Číslo. 75 lze vyjádřit mnoha způsoby, včetně následujících:
 
 ```C
 .0075e2
@@ -76,6 +76,6 @@ Vynechat celočíselnou část konstanty s plovoucí desetinnou čárkou, jak je
 75e-2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty jazyka C](../c-language/c-constants.md)

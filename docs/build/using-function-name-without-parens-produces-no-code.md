@@ -13,7 +13,7 @@ ms.locfileid: "62314595"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Použití názvu funkce bez závorek () nevygeneruje žádný kód
 
-Při použití názvu funkce deklarované ve svém programu bez závorek kompilátor nevytvoří kódu. K tomu dojde bez ohledu na to, jestli funkce má parametry, protože kompilátor vypočítá adresa funkce; ale vzhledem k tomu, že operátor volání funkce "()" není k dispozici, žádný Přišla žádost. Tento výsledek je podobný následujícímu:
+Pokud je název funkce deklarovaný v programu použit bez závorek, kompilátor nevytvoří kód. K tomu dochází bez ohledu na to, zda funkce přebírá parametry, protože kompilátor vypočítá adresu funkce; Protože však operátor volání funkce "()" není k dispozici, volání není provedeno. Výsledek je podobný následujícímu:
 
 ```
 // compile with /Wall to generate a warning
@@ -21,9 +21,9 @@ int a;
 a;      // no code generated here either
 ```
 
-V jazyce Visual C++ dokonce i pomocí úroveň upozornění 4 generuje žádný výstup diagnostiky. Objeví se bez upozornění; není vytvořen žádný kód.
+V Visual C++ ani pomocí úrovně upozornění 4 negeneruje výstup diagnostiky. Není vydáno žádné upozornění; není vytvořen žádný kód.
 
-Níže uvedený ukázkový kód (s upozorněním) zkompiluje a propojí správně bez chyb ale nevygeneruje žádný kód v reference na `funcn( )`. Aby to fungovalo správně přidejte operátor volání funkce "()".
+Vzorový kód níže kompiluje (s upozorněním) a správně odkazuje bez chyb, ale nevytváří v referenci odkaz na `funcn( )`. Aby to fungovalo správně, přidejte operátor volání funkce "()".
 
 ```
 #include <stdio.h>
@@ -39,6 +39,6 @@ void funcn() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace kódu](optimizing-your-code.md)

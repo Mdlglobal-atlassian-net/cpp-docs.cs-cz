@@ -18,19 +18,19 @@ ms.locfileid: "62326011"
 ---
 # <a name="c-enumeration-declarations"></a>Deklarace výčtů v jazyce C
 
-Výčet se skládá sada pojmenovaných celočíselných konstant. Typ deklarace výčtu obsahuje název značky (volitelné) výčet a definuje sadu pojmenovaných celočíselných identifikátory (nazývá "výčet sada," "konstanty enumerátoru," "enumerátory" nebo "členy"). Proměnnou s typem výčtu ukládá jedna z hodnot výčtu množiny definované podle tohoto typu.
+Výčet se skládá ze sady pojmenovaných celočíselných konstant. Deklarace výčtového typu poskytuje název (volitelné) značky výčtu a definuje sadu pojmenovaných celočíselných identifikátorů (označované jako "množina výčtu", "konstanty enumerátoru", enumerátory "nebo" Členové "). Proměnná s typem výčtu ukládá jednu z hodnot sady výčtu definované tímto typem.
 
-Proměnné `enum` typ lze použít ve výrazech indexování a jako operandy všechny aritmetické a relační operátory. Výčty jako alternativu k `#define` direktivy preprocesoru, že hodnoty mohou být generovány pro vás a dodržují normální pravidel stanovení rozsahu inicializací výhody.
+Proměnné `enum` typu lze použít ve výrazech indexování a jako operandy všech aritmetických a relačních operátorů. Výčty poskytují alternativu ke `#define` direktivě preprocesoru s výhodami, které lze vygenerovat pro vás a dodržují normální pravidla určování rozsahu.
 
-Ve standardu ANSI C, výrazy, které definují hodnoty pro konstantu enumerátoru vždy mít `int` typ; proto je úložiště spojené s proměnnou výčet úložiště potřebné pro jeden `int` hodnotu. Konstanta výčtu nebo hodnotu Výčtový typ lze použít kdekoli jazyka C umožňuje se celočíselný výraz.
+Ve standardu ANSI C jsou výrazy definující hodnotu konstanty enumerátoru vždy `int` typu; Proto úložiště přidružené k proměnné výčtu je úložiště vyžadované pro jednu `int` hodnotu. Konstanta výčtu nebo hodnota výčtového typu může být použita kdekoli jazyk C, který povoluje celočíselný výraz.
 
 ## <a name="syntax"></a>Syntaxe
 
-*specifikátoru výčtu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**výčet** *identifikátor*<sub>optimalizované</sub> **{** *enumerátor seznam* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**výčet** *identifikátor*
+*specifikátor výčtu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>výslovný souhlas</sub> s *identifikátorem* **výčtu** **{** *Enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifikátor* výčtu
 
-Volitelný *identifikátor* názvy typu výčtu definované v *enumerátor seznam*. Tento identifikátor se často nazývá "značka" výčet určeno v seznamu. Specifikátor typu formuláře
+Nepovinný *identifikátor* název typ výčtu definovaný *seznamem výčtu*. Tento identifikátor se často označuje jako "tag" výčtu určeného seznamem. Specifikátor typu formuláře
 
 ```
 enum identifier
@@ -39,38 +39,38 @@ enum identifier
 }
 ```
 
-deklaruje *identifikátor* být značka výčet určené *enumerátor seznam* neterminálu. *Enumerátor seznam* definuje "obsah enumerátoru." *Enumerátor seznam* je podrobně popsaná níže.
+deklaruje *identifikátor* , který bude značka výčtu určeného neterminálovým *seznamem výčtu* . *Seznam enumerátor-list* definuje "obsah enumerátoru". *Seznam enumerátor-list* je podrobněji popsán níže.
 
-Pokud deklarace značky je viditelné, následující deklarace využívající značky, ale vynechejte *enumerátor seznam* zadejte dříve deklarovaný výčtového typu. Značka musí odkazovat na typ výčtu definované a typu výčtu musí být v aktuálním oboru. Protože typ výčtu je definována jinde, *enumerátor seznam* zřejmě není v této deklaraci. Deklarace typů odvozených z výčtů a `typedef` deklarace pro výčtové typy lze použít výčet značku, než je definován typ výčtu.
+Pokud je deklarace značky viditelná, následné deklarace, které používají značku, ale vynechat *seznam výčtu* , určují dříve deklarovaný typ výčtu. Značka musí odkazovat na definovaný typ výčtu a tento typ výčtu musí být v aktuálním oboru. Vzhledem k tomu, že je typ výčtu definován jinde, *seznam výčtu* se v této deklaraci nezobrazí. Deklarace typů odvozených z výčtů a `typedef` deklarací pro výčtové typy mohou používat značku výčtu před definováním typu výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
-*Enumerátor seznam*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Enumerátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Enumerátor seznam* **,** *enumerátoru*
+*seznam enumerátorů*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*čítače*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerátor – seznam* **,** *enumerátor*
 
 *enumerátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu* **=** *konstantního výrazu.*
+&nbsp;&nbsp;&nbsp;&nbsp;*výčet – konstanta*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumeration –* **=** konstantní *výraz*
 
-*Konstanta výčtu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
+*konstanta výčtu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*
 
-Každý *konstanta výčtu* v *seznam výčtu* názvy hodnotu výčtu sady. Ve výchozím nastavení první *konstanta výčtu* souvisí s hodnotou 0. Další *konstanta výčtu* v seznamu je přiřazena hodnota ( *konstantní výraz* + 1), pokud ji explicitně spojit s jinou hodnotou. Název *konstanta výčtu* je ekvivalentní k jeho hodnotu.
+Každá *konstanta Enumeration* v *seznamu výčtu* vyjmenovává hodnotu sady výčtu. Ve výchozím nastavení je první *konstanta výčtu* přidružena k hodnotě 0. Další *konstanta výčtu* v seznamu je přidružena k hodnotě ( *konstantní výraz* + 1), pokud ji explicitně nepřidružíte k jiné hodnotě. Název *konstanty Enumeration* je ekvivalentní hodnotě.
 
-Můžete použít *konstanta výčtu = konstantní výraz* přepsat výchozí pořadí hodnot. Proto pokud *konstanta výčtu = konstantní výraz* se zobrazí v *enumerátor seznam*, *konstanta výčtu* souvisí s hodnotou Dal *konstantní výraz*. *Konstantní výraz* musí mít `int` typu a mohou být záporná.
+Výchozí sekvenci hodnot můžete přepsat pomocí *výrazu Enumeration-Constant = constant-expression* . Proto pokud se v *seznamu enumerátorů*objeví *výčet-konstanta = konstantní-výraz* , je *konstanta výčtu* přidružena k hodnotě zadané *konstantním výrazem*. *Konstantní výraz* musí mít `int` typ a může být záporný.
 
-Na členy sady výčet platí následující pravidla:
+Následující pravidla platí pro členy sady výčtu:
 
-- Skupinu výčet může obsahovat duplicitní hodnoty konstant. Je třeba přidružit hodnota 0 se dva různé identifikátory, třeba s názvem `null` a `zero`, ve stejné sadě.
+- Sada výčtu může obsahovat duplicitní konstantní hodnoty. Například můžete přidružit hodnotu 0 ke dvěma různým identifikátorům, které jsou pravděpodobně pojmenované `null` a `zero`, ve stejné sadě.
 
-- Identifikátory v seznam výčtu musí být odlišný od jiné identifikátory ve stejném oboru se stejnou viditelností, včetně běžné názvy proměnných a identifikátory v seznamech výčtu.
+- Identifikátory v seznamu výčtu musí být odlišné od jiných identifikátorů ve stejném oboru se stejnou viditelností, včetně běžných názvů proměnných a identifikátorů v jiných výčtových seznamech.
 
-- Výčtové tagy dodržují běžných pravidel oboru. Musí být odlišné od jiných výčet, struktury a sjednocení značky se stejnou viditelností.
+- Značky výčtu dodržují normální pravidla oboru. Musí se lišit od jiných značek výčtu, struktury a sjednocení se stejnou viditelností.
 
 ## <a name="examples"></a>Příklady
 
-Tyto příklady ilustrují deklarace výčtů:
+Tyto příklady ilustrují deklarace výčtu:
 
 ```
 enum DAY            /* Defines an enumeration type    */
@@ -85,23 +85,23 @@ enum DAY            /* Defines an enumeration type    */
 } workday;
 ```
 
-Hodnota 0 je spojená s `saturday` ve výchozím nastavení. Identifikátor `sunday` je explicitně nastaveno na hodnotu 0. Zbývajících identifikátorů jsou uvedeny hodnoty 1 až 5 ve výchozím nastavení.
+Hodnota 0 je `saturday` ve výchozím nastavení přidružena. Identifikátor `sunday` je explicitně nastaven na hodnotu 0. Zbývajícím identifikátorem jsou ve výchozím nastavení zadány hodnoty od 1 do 5.
 
-V tomto příkladu hodnota ze sady `DAY` je přiřazená k proměnné `today`.
+V tomto příkladu je hodnota ze sady `DAY` přiřazena proměnné. `today`
 
 ```
 enum DAY today = wednesday;
 ```
 
-Všimněte si, že název konstanta výčtu slouží k přiřazení hodnoty. Protože `DAY` typ výčtu se dřív deklaroval, pouze značky výčet `DAY` je nezbytné.
+Všimněte si, že název konstanty výčtu slouží k přiřazení hodnoty. Vzhledem k `DAY` tomu, že byl již dříve deklarován typ výčtu, `DAY` je nutné zadat pouze značku výčtu.
 
-Pokud chcete explicitně přiřadit celočíselnou hodnotu proměnné výčtový datový typ, použijte přetypování typu:
+Chcete-li explicitně přiřadit celočíselnou hodnotu proměnné výčtového typu dat, použijte přetypování typu:
 
 ```
 workday = ( enum DAY ) ( day_value - 1 );
 ```
 
-Toto přetypování se doporučuje v jazyce C, ale není potřeba.
+Toto přetypování je doporučeno v jazyce C, ale není vyžadováno.
 
 ```
 enum BOOLEAN  /* Declares an enumeration data type called BOOLEAN */
@@ -113,7 +113,7 @@ enum BOOLEAN  /* Declares an enumeration data type called BOOLEAN */
 enum BOOLEAN end_flag, match_flag; /* Two variables of type BOOLEAN */
 ```
 
-Toto prohlášení je taky možné specifikovat jako
+Tato deklarace se dá taky zadat jako
 
 ```
 enum BOOLEAN { false, true } end_flag, match_flag;\
@@ -126,7 +126,7 @@ enum BOOLEAN { false, true } end_flag;
 enum BOOLEAN match_flag;
 ```
 
-Příklad, který používá tyto proměnné může vypadat takto:
+Příklad, který používá tyto proměnné, může vypadat takto:
 
 ```
 if ( match_flag == false )
@@ -138,12 +138,12 @@ if ( match_flag == false )
     end_flag = true;
 ```
 
-Lze také deklarovat nepojmenované výčet datových typů. Název datového typu, je tento parametr vynechán, ale můžete deklarovat proměnné. Proměnná `response` je proměnná typu definovaného:
+Lze také deklarovat nepojmenované datové typy enumerátoru. Název datového typu je vynechán, ale proměnné lze deklarovat. Proměnná `response` je proměnná typu, který je definován:
 
 ```
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výčty](../cpp/enumerations-cpp.md)

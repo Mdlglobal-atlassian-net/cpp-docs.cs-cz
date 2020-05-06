@@ -13,10 +13,10 @@ ms.locfileid: "62312580"
 ---
 # <a name="clock-function-c"></a>clock – funkce (C)
 
-**ANSI 4.12.2.1** éru pro `clock` – funkce
+**4.12.2.1 ANSI** Období `clock` funkce
 
-Doba funkce `clock` začíná (hodnotou 0) při spuštění programu v jazyce C. Vrátí čas měřený v 1 /**CLOCKS_PER_SEC** (což se rovná 1/1 000 pro Microsoft C).
+Doba funkce `clock` začíná (hodnotou 0) při spuštění programu v jazyce C. Vrátí časy měřené v 1/**CLOCKS_PER_SEC** (což se rovná 1/1000 pro Microsoft C).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62313451"
 ---
 # <a name="abort-function-c"></a>abort – funkce (C)
 
-**ANSI 4.10.4.1** chování **přerušit** funkce s ohledem na otevřené a dočasné soubory
+**4.10.4.1 ANSI** Chování funkce **Abort** s ohledem na otevřené a dočasné soubory
 
-**Přerušit** funkce nezavře otevřené nebo dočasné soubory. Nevyprázdní vyrovnávací paměť datového proudu. Další informace najdete v tématu [přerušit](../c-runtime-library/reference/abort.md).
+Funkce **Abort** nezavře otevřené nebo dočasné soubory. Nevyprázdní vyrovnávací paměť datového proudu. Další informace najdete v tématu [přerušení](../c-runtime-library/reference/abort.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

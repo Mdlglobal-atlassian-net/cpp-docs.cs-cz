@@ -16,30 +16,30 @@ ms.locfileid: "62336165"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Uchovávání a zarovnání struktur
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Členy struktury jsou postupně uloženy v pořadí, ve kterém jsou deklarovány: první člen má nejnižší adresu paměti a poslední člen nejvyšší.
 
-Každý datový objekt má *požadavek zarovnání*. U struktur je požadavek ten největší ze svých členů. Každému objektu je přiřazen *posun* tak, aby
+Každý datový objekt má *požadavek na zarovnání*. U struktur je požadavek ten největší ze svých členů. Každému objektu je přidělen *posun* , aby
 
-*Posun* `%` *požadavek zarovnání* `==` 0
+zarovnání *odsazení* `%` *– požadavek* `==` 0
 
 Sousední bitová pole jsou zkomprimována do stejné 1, 2, a 4bajtové alokační jednotky, pokud mají celočíselné typy stejnou velikost a pokud další bitové pole zapadá do aktuální alokační jednotky bez překročení hranice stanovené běžnými požadavky zarovnání bitových polí.
 
-Z důvodu úspory místa nebo vyhovění existujícím datovým strukturám, lze struktury uložit více či méně kompaktně. [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] – možnost kompilátoru a [#pragma pack](../preprocessor/pack.md) ovládacího prvku, jak data struktury "komprimace" do paměti. Při použití/zp [*n*] možnost, kde *n* je 1, 2, 4, 8 nebo 16, každý člen struktury po prvním uložen v bajtu hranice, které jsou buď dané požadavkem zarovnání pole nebo komprimaci velikost () *n*), podle toho, co je menší. Vyjádřené jako vzorec, jsou hranice bajtu
+Z důvodu úspory místa nebo vyhovění existujícím datovým strukturám, lze struktury uložit více či méně kompaktně. Možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md)[*n*] a [sada #pragma pack](../preprocessor/pack.md) řídí způsob, jakým jsou data struktury "zabalena" do paměti. Použijete-li možnost/Zp [*n*], kde *n* je 1, 2, 4, 8 nebo 16, každý člen struktury po prvním je uložen na hranicích bajtů, které jsou buď požadavkem na zarovnání pole, nebo velikostí balení (*n*), podle toho, která hodnota je menší. Vyjádřené jako vzorec, jsou hranice bajtu
 
 ```
 min( n, sizeof( item ) )
 ```
 
-kde *n* je velikost komprimace vyjádřená/zp [*n*] možnost a *položky* je člen struktury. Výchozí velikost komprimace je /Zp8.
+kde *n* je velikost balení vyjádřená možností/zp [*n*] a *položka* je členem struktury. Výchozí velikost komprimace je /Zp8.
 
 Chcete-li pomocí direktivy pragma `pack` pro danou strukturu určit jinou komprimaci než specifikovanou příkazovým řádkem, použijte před touto strukturou direktivu pragma `pack`, kde je velikost komprimace 1, 2, 4, 8 nebo 16. Chcete-li obnovit komprimaci zadanou na příkazovém řádku, zadejte direktivu pragma `pack` bez argumentů.
 
-Bitová pole výchozí velikost **dlouhé** pro kompilátor Microsoft C. Členy struktury jsou zarovnány velikostí typu nebo/zp [*n*] velikost, podle toho, co je menší. Výchozí velikost je 4.
+Pro kompilátor jazyka C společnosti Microsoft je **výchozí velikost bitových polí velká.** Členy struktury jsou zarovnané na velikost typu nebo velikost/zp [*n*], podle toho, která hodnota je menší. Výchozí velikost je 4.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace struktury](../c-language/structure-declarations.md)

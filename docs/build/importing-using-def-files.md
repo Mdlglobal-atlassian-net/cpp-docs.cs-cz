@@ -17,7 +17,7 @@ ms.locfileid: "62273414"
 ---
 # <a name="importing-using-def-files"></a>Import pomocí souborů DEF
 
-Pokud se rozhodnete použít **__declspec(dllimport)** spolu se souborem .def, měli byste změnit .def souboru na základě dat namísto – KONSTANTA snížit pravděpodobnost, že nesprávné kódování bude způsobovat problémy:
+Pokud se rozhodnete použít **__declspec (dllimport)** spolu se souborem. def, měli byste změnit soubor. def tak, aby používal data namísto konstanty, aby se snížila pravděpodobnost, že při nesprávném kódování dojde k problému:
 
 ```
 // project.def
@@ -26,30 +26,30 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-V následující tabulce jsou uvedeny důvod, proč.
+V následující tabulce je uveden důvod.
 
-|Klíčové slovo|Vysílá v knihovně importu|Exporty|
+|Klíčové slovo|Generuje v knihovně importu.|Vývozních|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-Pomocí **__declspec(dllimport)** a oba seznamy – KONSTANTA `imp` verze a nedekorovaný název v lib knihovny DLL pro import knihovny, která je vytvořena umožňuje explicitní propojení. Pomocí **__declspec(dllimport)** a zobrazí DATA jenom `imp` verzí názvu.
+Pomocí **__declspec (dllimport)** a konstanta uvádí jak `imp` verzi, tak i neupravený název v knihovně importu knihovny DLL, která je vytvořena za účelem umožnění explicitního propojení. Použití **__declspec (dllimport)** a seznamů dat je `imp` pouze verze názvu.
 
-Pokud používáte – KONSTANTA, následující konstrukce kódu lze použít pro přístup k `ulDataInDll`:
+Použijete-li KONSTANTu, lze použít kteroukoli z následujících konstrukcí kódu pro přístup `ulDataInDll`k:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-\-or-
+\-ani
 
 ```
 ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-Pokud používáte DATA v souboru .def, však můžete pouze kód zkompilovaný s následující definici přístup proměnné `ulDataInDll`:
+Pokud však použijete DATA v souboru. def, bude mít přístup k proměnné `ulDataInDll`pouze kód kompilovaný s následující definicí:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,10 +57,10 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-Použití – KONSTANTA je více nebezpečné, protože pokud zapomenete používat vyšší úroveň dereference, může potenciálně zpřístupnit tabulky importních adres ukazatel na proměnnou, není proměnná. Tento druh problému může často manifestovat jako narušení přístupu, protože tabulky importních adres se aktuálně jen pro čtení v kompilátoru a propojovacího programu.
+Použití KONSTANTy je více riskantní, protože pokud zapomenete použít vyšší úroveň dereference, můžete potenciálně získat přístup k proměnné v tabulce importních adres, nikoli na proměnné samotné. Tento typ problému se může často manifestovat jako porušení přístupu, protože je v současnosti pro kompilátor a linker aktuálně vytvořená tabulka importních adres.
 
-Aktuální MSVC linker vydá upozornění, pokud nalezne CONSTANT v .def souboru pro tento případ. Pouze skutečný důvod pro použití – KONSTANTA je-li některý soubor objektu, kde hlavičkového souboru v seznamu nelze znovu zkompilovat **__declspec(dllimport)** na prototypu.
+Aktuální linker MSVC vydá upozornění, pokud se v souboru. def zobrazí jako pro účet v tomto případě jako KONSTANTa. Jediný skutečný důvod pro použití KONSTANTy je, pokud nemůžete znovu kompilovat soubor s hlavičkou, kde hlavičkový soubor neobsahoval **__declspec (dllimport)** na prototypu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Import do aplikace](importing-into-an-application.md)

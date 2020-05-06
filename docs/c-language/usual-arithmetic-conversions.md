@@ -18,29 +18,29 @@ ms.locfileid: "62344834"
 ---
 # <a name="usual-arithmetic-conversions"></a>Obvyklé aritmetické převody
 
-Většina operátory jazyka C provádět převody typů převést na společný typ. operandy výrazu nebo rozšiřovat krátký hodnot použitých v operacích počítač velikosti celého čísla. Převody prováděné operátory jazyka C jsou závislé na konkrétní operátor a typu operandu či operandů. Ale mnoho operátorů převodů podobně jako u operandů typu s plovoucí desetinnou čárkou a celočíselné typy. Tyto převody jsou označovány jako "aritmetické převody". Převod hodnoty operandu kompatibilní typ způsobí ignorování jakýchkoli změn na jeho hodnotu.
+Většina operátorů jazyka C provádí převody typu za účelem převedení operandů výrazu na společný typ nebo pro prodloužení krátkých hodnot na celočíselnou velikost použitou v operacích počítače. Převody prováděné operátory jazyka C závisí na specifickém operátoru a typu operandu nebo operandů. Mnoho operátorů však provádí podobné převody na operandech integrálního a plovoucího typu. Tyto převody se označují jako "aritmetické převody". Převod hodnoty operandu na kompatibilní typ způsobí nezměně hodnoty.
 
-Aritmetické převody shrnuté níž jsou označovány jako "obvyklé aritmetické převody." Tyto kroky se použijí pouze pro binární operátory, které očekávají aritmetického typu. Účelem je poskytovat společný typ, který je také typ výsledku. Pokud chcete zjistit, které převody skutečně proběhnout, kompilátor platí následující požadovaný algoritmus pro binární operace ve výrazu. Následující postup nejsou pořadí priority.
+Aritmetické převody, které jsou shrnuty níže, se nazývají "obvyklé aritmetické převody". Tyto kroky jsou aplikovány pouze pro binární operátory, které očekávají aritmetický typ. Účelem je poskytnout společný typ, který je také typem výsledku. Chcete-li určit, které převody skutečně probíhají, kompilátor použije následující algoritmus pro binární operace ve výrazu. Následující postup není pořadím priority.
 
-1. Pokud některý operand je typu `long double`, je druhý operand je převeden na typ `long double`.
+1. Pokud je jeden operand typu `long double`, je druhý operand převeden na typ. `long double`
 
-1. Pokud výše uvedené podmínka není splněna a některý operand je typu **double**, je druhý operand je převeden na typ **double**.
+1. Pokud výše uvedená podmínka není splněna a jeden operand je typu **Double**, je druhý operand převeden na typ **Double**.
 
-1. Pokud nejsou splněny obě uvedené podmínky a některý operand je typu **float**, je druhý operand je převeden na typ **float**.
+1. Pokud nejsou splněny výše uvedené dvě podmínky a jeden operand je typu **float**, je druhý operand převeden na typ **float**.
 
-1. Nejsou-li výše uvedené tři podmínky splněny (žádný z operandů jsou typy s plovoucí desetinnou čárkou), pak jsou prováděny celočíselné převody na operandy následujícím způsobem:
+1. Pokud nejsou splněny výše uvedené tři podmínky (žádný z operandů není plovoucího typu), pak jsou celočíselné převody provedeny na operandech následujícím způsobem:
 
-   - Pokud některý operand je typu `unsigned long`, je druhý operand je převeden na typ `unsigned long`.
+   - Pokud je jeden operand typu `unsigned long`, je druhý operand převeden na typ. `unsigned long`
 
-   - Pokud výše uvedené podmínka není splněna a některý operand je typu **dlouhé** a druhý operand typu `unsigned int`, jsou oba operandy převedeny na typ `unsigned long`.
+   - Pokud výše uvedená podmínka není splněna a jeden operand je typu **Long** a druhý typ `unsigned int`, jsou oba operandy převedeny na typ. `unsigned long`
 
-   - Pokud nejsou splněny obě uvedené podmínky a některý operand je typu **dlouhé**, je druhý operand je převeden na typ **dlouhé**.
+   - Pokud nejsou splněny výše uvedené dvě podmínky a jeden operand je typu **Long**, je druhý operand převeden na typ **Long**.
 
-   - Pokud nejsou splněny výše uvedených tří podmínek a některý operand je typu `unsigned int`, je druhý operand je převeden na typ `unsigned int`.
+   - Pokud nejsou splněny výše uvedené tři podmínky a jeden operand je typu `unsigned int`, je druhý operand převeden na typ. `unsigned int`
 
-   - Pokud jsou splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ `int`.
+   - Pokud není splněna žádná z výše uvedených podmínek, jsou oba operandy převedeny na `int`typ.
 
-Následující kód znázorňuje tato pravidla převodu:
+Následující kód ilustruje tato pravidla převodu:
 
 ```
 float   fVal;
@@ -58,6 +58,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory jazyka C](../c-language/c-operators.md)

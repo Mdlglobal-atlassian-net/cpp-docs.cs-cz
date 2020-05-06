@@ -19,18 +19,18 @@ ms.locfileid: "62326661"
 ---
 # <a name="c-language-reference"></a>Referenční dokumentace jazyka C
 
-*Referenční dokumentace jazyka C* popisuje programovací jazyk C, jak je implementován v Microsoft C. V organizace knihy je založena na standardu ANSI C (někdy označované jako C89) s dalšími informacemi o rozšíření standardu ANSI c společnosti Microsoft.
+*Referenční dokumentace jazyka c* popisuje programovací jazyk c, jak je implementován v Microsoft C. Organizace knihy je založená na standardu ANSI C (někdy označovaném jako c89) s dalšími materiály o rozšířeních Microsoftu pro standard ANSI C.
 
-- [Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)
+- [Organizace Referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)
 
-Další referenční materiál o jazyce C++ a preprocesoru naleznete v tématu:
+Další referenční materiály k jazyku C++ a preprocesoru naleznete zde:
 
-- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+- [Reference jazyka C++](../cpp/cpp-language-reference.md)
 
-- [Referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)
+- [Reference preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)
 
-Možnosti kompilátoru a propojovacího programu jsou dokumentovány v článku [Reference sestavení C/C++](../build/reference/c-cpp-building-reference.md).
+Možnosti kompilátoru a linkeru jsou zdokumentovány v [Referenční příručce pro sestavení C/C++](../build/reference/c-cpp-building-reference.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+[Reference jazyka C++](../cpp/cpp-language-reference.md)

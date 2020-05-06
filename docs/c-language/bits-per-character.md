@@ -11,10 +11,10 @@ ms.locfileid: "62326037"
 ---
 # <a name="bits-per-character"></a>Bity na znak
 
-**ANSI 2.2.4.2.1** počet bitů ve znaku
+**2.2.4.2.1 ANSI** Počet bitů ve znaku
 
-Počet bitů ve znaku je reprezentována konstanta manifestu **CHAR_BIT**. OMEZENÍ. H soubor definuje **CHAR_BIT** jako 8.
+Počet bitů ve znaku je reprezentován konstantou manifestu **CHAR_BIT**. OMEZENÍ. Soubor H definuje **CHAR_BIT** jako 8.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)

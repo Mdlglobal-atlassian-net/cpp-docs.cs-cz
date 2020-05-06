@@ -14,8 +14,8 @@ ms.locfileid: "62345159"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Specifikátory třídy úložiště pro deklarace na interní úrovni
 
-Můžete použít některý ze čtyř *storage-class-specifier* terminály pro deklarace proměnných na vnitřní úrovni. Pokud vynecháte *storage-class-specifier* z takové deklarace je výchozí třídou úložiště **automaticky**. Proto, – klíčové slovo **automaticky** zřídka dochází v programu jazyka C.
+Pro deklarace proměnných na vnitřní úrovni můžete použít libovolný ze čtyř terminálů *specifikátorů úložiště* . Pokud z takové deklarace vynecháte *specifikátor třídy úložiště* , je výchozí třída úložiště **automaticky**. Klíčové slovo **auto** se proto zřídka zobrazuje v programu v jazyce C.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)

@@ -16,19 +16,19 @@ ms.locfileid: "62327428"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C)
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-[__based (C++ odkaz)](../cpp/based-pointers-cpp.md)
+[__based (Referenční dokumentace jazyka C++)](../cpp/based-pointers-cpp.md)
 
-Pro Microsoft 32bitové a 64bitové kompilátory jazyka C je 32bitová nebo 64bitová verze posun z 32bitové nebo 64bitové ukazatele na základní ukazatel. Na základě adresování je užitečné pro kontrolu nad části, kde jsou přidělené objekty výkonu, a tím zmenšit velikost spustitelný soubor a zvýšit rychlost provádění. Obecně je formulář pro určení ukazatele
+V případě kompilátorů jazyka C pro Microsoft 32 a 64 64 32 je ukazatel na základě verze v 32 nebo v základní části ukazatele s neplatným. Základní adresování je užitečné pro uplatnění kontroly nad oddíly, kde jsou objekty přidělené, a tím zmenšuje velikost spustitelného souboru a zvyšuje rychlost spuštění. Obecně platí, že formulář pro určení ukazatele based je
 
-> *typ* **__based (** *základní* **)** *deklarátorů*
+> *typ* **__based (** *základní* **)** *deklarátor*
 
-"Podle ukazatel" varianta založené na adresování umožňuje specifikaci ukazatele jako základ. Ukazatel based, pak je posun do oddílu paměti začínající na začátku ukazatel, na které je založená. Ukazatele založené na adresách ukazatelů jsou jedinou formou `__based` – klíčové slovo platná ve 32bitových a 64bitových kompilacích. V takových kompilace jsou 32bitové nebo 64bitové posunutí z 32bitové nebo 64bitové base.
+"Založený na" variantě vycházejícího adresování umožňuje specifikace ukazatele jako základu. Ukazatel na základě, pak je posun do oddílu paměti začínající na začátku ukazatele, na kterém je založena. Ukazatele založené na adresách ukazatelů jsou jedinou formou `__based` klíčového slova platným v 32 bitových a 64 bitových kompilacích. V takových kompilacích jsou 32 nebo 64 bity z 32-bit 64 nebo z 16bitové základny.
 
 Jedním použitím ukazatelů na základě ukazatelů jsou trvalé identifikátory, které obsahují ukazatele. Propojený seznam, který se skládá z ukazatelů založených na ukazateli lze uložit na disk a následně jej lze znovu načíst na jiné místo v paměti, při současném zachování platnosti ukazatelů.
 
-Následující příklad ukazuje ukazatel založených na ukazateli.
+Následující příklad ukazuje ukazatel na základě ukazatele.
 
 ```C
 void *vpBuffer;
@@ -42,8 +42,8 @@ struct llist_t
 
 Ukazateli `vpBuffer` je přiřazena adresa paměti, která je přidělena v programu později. Propojený seznam je přemístěn vzhledem k hodnotě `vpBuffer`.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

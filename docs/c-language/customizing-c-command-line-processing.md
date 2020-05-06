@@ -21,12 +21,12 @@ ms.locfileid: "62290680"
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C
 
-Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá **_setargv** (nebo **_wsetargv** v prostředí širokých znaků), jak je popsáno v [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md). Pro potlačení je třeba definovat rutinu, která nemá žádný účinek v obsahující soubor **hlavní** fungovat a pojmenujte ho **_setargv** (nebo **_wsetargv** v širokého znaku prostředí). Volání **_setargv** nebo **_wsetargv** je následně splněno definicí **_setargv** nebo **_wsetargv** , a je knihovní verze Nelze načíst.
+Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá **_setargv** (nebo **_wsetargv** v prostředí s velkým znakem), jak je popsáno v tématu [rozšiřování zástupných argumentů](../c-language/expanding-wildcard-arguments.md). Chcete-li potlačit použití, definujte rutinu, která nedělá nic v souboru obsahujícím funkci **Main** a pojmenujte ji **_setargv** (nebo **_wsetargv** v prostředí s velkým znakem). Volání **_setargv** nebo **_wsetargv** je pak vyhovující vaší definicí **_setargv** nebo **_wsetargv** a verze knihovny není načtena.
 
-Podobně pokud nikdy přístup k tabulce prostředí skrze `envp` argument, můžete poskytnout vlastní prázdnou rutinu, který se má použít místo **_setenvp** (nebo **_wsetenvp**), rutiny zpracování prostředí.
+Podobně pokud nikdy nepřistupujete k tabulce prostředí pomocí `envp` argumentu, můžete poskytnout vlastní prázdnou rutinu, která bude použita místo **_setenvp** (nebo **_wsetenvp**), rutiny zpracování prostředí.
 
-Pokud váš program provede volání **_spawn** nebo **_exec** řadu rutin v knihovny run-time jazyka C, by neměla potlačení rutiny zpracování prostředí, protože tato rutina slouží k předání prostředí z procesu trdliště novému procesu.
+Pokud váš program volá **_spawn** nebo **_exec** rodinu rutin v knihovně run-time jazyka C, neměli byste potlačit rutinu zpracování prostředí, protože tato rutina slouží k předání prostředí z procesu vytváření do nového procesu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

@@ -16,9 +16,9 @@ ms.locfileid: "62325517"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Výrazy hodnot L-Value a R-Value
 
-Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. L hodnota představuje hodnotu oblasti úložiště "lokátoru" nebo "levou" hodnotu, zdání, může se objevit na levé straně znaménka rovnosti (**=**). L-hodnoty jsou často identifikátory.
+Výrazy, které odkazují na umístění v paměti, se nazývají výrazy „l-hodnota“. L-hodnota představuje hodnotu "lokátoru" oblasti úložiště nebo "levou" hodnotu, což znamená, že se může objevit vlevo od znaménka rovná se (**=**). L-hodnoty jsou často identifikátory.
 
-Výrazy odkazující na upravitelná umístění se nazývají „upravitelné l-hodnoty“. Upravitelná l hodnota nemůže mít typ pole, neúplný typ nebo typ s **const** atribut. Struktury a sjednocení bude upravitelná l hodnotami, nesmějí obsahovat žádné členy s **const** atribut. Název identifikátoru označuje umístění úložiště, zatímco hodnota proměnné je hodnota uložená v tomto umístění.
+Výrazy odkazující na upravitelná umístění se nazývají „upravitelné l-hodnoty“. Upravitelná l-hodnota nemůže mít typ pole, nekompletní typ ani typ s atributem **const** . Aby bylo možné struktury a sjednocení upravovat l-hodnoty, nesmí mít žádné členy s atributem **const** . Název identifikátoru označuje umístění úložiště, zatímco hodnota proměnné je hodnota uložená v tomto umístění.
 
 Identifikátor je upravitelná l-hodnota, odkazuje-li na umístění v paměti a je-li její typ aritmetický, struktura, sjednocení nebo ukazatel. Například pokud je `ptr` ukazatel na oblast úložiště, pak je `*ptr` upravitelná l-hodnota, jež určuje oblast úložiště, na které `ptr` ukazuje.
 
@@ -26,21 +26,21 @@ Jakýkoli z těchto výrazů jazyka C může být výrazem l-hodnoty:
 
 - Identifikátor celočíselného typu, typu s plovoucí desetinnou čárkou, typu ukazatele, struktury nebo sjednocení
 
-- Index (**[] č.**) výraz, který není vyhodnocen na pole
+- Výraz dolního indexu (**[]**), který se nevyhodnocuje na pole.
 
 - Výraz výběru členů (**->** nebo **.**)
 
-- Unární indirection (<strong>\*</strong>) výraz, který není odkaz na pole
+- Výraz unárního-dereference (<strong>\*</strong>), který neodkazuje na pole
 
 - Výraz l-hodnoty v závorkách
 
-- A **const** objekt (neupravitelná l hodnota)
+- Objekt **const** (neupravitelná l-hodnota)
 
 Pojem „r-hodnota“ se někdy používá k popisu hodnoty výrazu a pro jeho odlišení od l-hodnoty. Všechny l-hodnoty jsou r-hodnotami, ale ne všechny r-hodnoty jsou l-hodnotami.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace.) Tuto funkci znázorňuje následující příklad:
+Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Další informace najdete v tématu [převody typu přetypování](../c-language/type-cast-conversions.md) .) Následující příklad znázorňuje tuto funkci:
 
 ```
 char *p ;
@@ -51,10 +51,10 @@ long l;
 (long) i = l ;          /* Illegal cast */
 ```
 
-Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Pomocí možnosti kompilátoru /Za pro zákaz těchto rozšíření.
+Výchozí hodnota pro Microsoft C znamená, že jsou rozšíření společnosti Microsoft povolena. Tato rozšíření zakažte pomocí možnosti kompilátoru/za.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operandy a výrazy](../c-language/operands-and-expressions.md)

@@ -14,30 +14,30 @@ ms.locfileid: "62313191"
 ---
 # <a name="c-type-specifiers"></a>Specifikátory typu jazyka C
 
-Specifikátory typu v deklaracích definování typu deklarace proměnné nebo funkce.
+Specifikátory typu v deklaracích definují typ deklarace proměnné nebo funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
-*Specifikátor typu*: &nbsp; &nbsp; &nbsp; &nbsp; **void** &nbsp; &nbsp; &nbsp; &nbsp; **char** &nbsp; &nbsp; &nbsp; &nbsp; **krátký** &nbsp; &nbsp; &nbsp; &nbsp; **int** &nbsp; &nbsp; &nbsp; &nbsp; **dlouhé** &nbsp; &nbsp; &nbsp; &nbsp; **float** &nbsp; &nbsp; &nbsp; &nbsp; **double** &nbsp; &nbsp; &nbsp; &nbsp; **podepsané** &nbsp; &nbsp; &nbsp; &nbsp; **bez znaménka** &nbsp; &nbsp; &nbsp; &nbsp; *struct nebo sjednocení – specifikátor* &nbsp; &nbsp; &nbsp; &nbsp; *specifikátoru výčtu* &nbsp; &nbsp; &nbsp; &nbsp; *název typedef*
+*specifikátor typu* &nbsp; &nbsp; &nbsp;: &nbsp; **void** &nbsp; **float** **char** &nbsp; **short** &nbsp; *typedef-name* **unsigned** **long** **double** **int** &nbsp; **signed** *struct-or-union-specifier* *enum-specifier* char short Celé_číslo Long &nbsp;int Double signed &nbsp;unsigned struct-or- &nbsp;Union- &nbsp;Specifikátor-specifikátor-specifikátore enum &nbsp;-name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-**Podepsané char**, **znaménkem**, **podepsané krátká celočíselná**, a **podepsané long int** typy, společně s jejich **bez znaménka**  protějšky a **výčtu**, se nazývají *integrální* typy. **Float**, **double**, a **long double** specifikátory typu jsou označovány jako *s plovoucí desetinnou čárkou* nebo *splovoucídesetinnoučárkou* typy. Můžete použít libovolný typ s plovoucí desetinnou čárkou nebo celočíselné specifikátor v deklaraci proměnné nebo funkce. Pokud *specifikátor typu* není k dispozici v deklaraci, je slov za **int**.
+Typ **signed char**, **signed int**, **signed short int**a **signed long int** , spolu s jejich **nepodepsanými** protějšky a **výčty**, se nazývají *celočíselné* typy. Specifikátory typu **float**, **Double**a **Long** jsou označovány jako typy s *plovoucí desetinnou* čárkou nebo s *plovoucí* desetinnou čárkou. V deklaraci proměnné nebo funkce můžete použít libovolný specifikátor typu integrálního nebo plovoucího bodu. Pokud není v deklaraci *specifikátor typu* k dispozici, bude se jednat o typ **int**.
 
-Volitelné klíčová slova **podepsané** a **bez znaménka** lze předcházet nebo postupovat podle některého z celočíselných typů s výjimkou **výčtu**a je také možné samostatně jako specifikátory typu, v takovém případě jsou chápat jako **znaménkem** a **unsigned int**v uvedeném pořadí. Při použití samostatného klíčové slovo **int** je považován za **podepsané**. Při použití samostatného klíčová slova **dlouhé** a **krátký** vyplývají z jako **long int** a **krátká celočíselná**.
+Volitelná klíčová slova **signed** a **unsigned** mohou předcházet nebo následovat za libovolnými celočíselnými typy s výjimkou **výčtu**a lze je také použít samostatně jako specifikátory typu. v takovém případě se rozumí jako **signed int** a **unsigned int**v uvedeném pořadí. Při samostatném použití se předpokládá, že klíčové slovo **int** bude **Podepsáno**. Při samostatném použití se klíčová slova **Long** a **short** považují za **Long int** a **short int**.
 
-Výčtové typy jsou považovány za základní typy. Specifikátory typu pro typy výčtu jsou popsány v [deklarace výčtů](../c-language/c-enumeration-declarations.md).
+Výčtové typy se považují za základní typy. Specifikátory typu pro výčtové typy jsou popsány v tématu [deklarace výčtu](../c-language/c-enumeration-declarations.md).
 
-Klíčové slovo **void** má tři použití: Chcete-li určit funkce, návratový typ, můžete určit přehledu typ argumentu pro funkci, která nepřijímá žádné argumenty a zadejte ukazatel neurčeného typu. Můžete použít **void** typu k deklaraci funkce, které vrací žádná hodnota nebo deklarovat ukazatel na neurčeného typu. V tématu [argumenty](../c-language/arguments.md) informace o **void** když se zobrazí pouze v závorkách za názvem funkce.
+Klíčové slovo **void** má tři použití: k určení návratového typu funkce pro určení seznamu typu argumentu pro funkci, která nepřijímá žádné argumenty, a pro určení ukazatele na nespecifikovaný typ. Typ **void** lze použít k deklarování funkcí, které nevrací žádnou hodnotu, nebo k deklaraci ukazatele na nespecifikovaný typ. Viz [argumenty](../c-language/arguments.md) pro informace o **void** , když se objeví samostatně v závorkách za názvem funkce.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kontrola typu je nyní vyhovující standardu ANSI, což znamená, že tento typ **krátký** a typ **int** jsou odlišné typy. Například toto je nová definice v kompilátoru C společnosti Microsoft, který byl přijat předchozími verzemi kompilátoru.
+Kontrola typu je nyní kompatibilní se standardem ANSI, což znamená, že typ **short** a typ **int** jsou odlišné typy. Toto je například předefinování v kompilátoru jazyka Microsoft C, které bylo přijato předchozími verzemi kompilátoru.
 
 ```C
 int   myfunc();
 short myfunc();
 ```
 
-Tento další příklad také vygeneruje varování týkající se nepřímý odkaz na různé typy:
+Tento další příklad také vygeneruje upozornění na nepřímý odkaz na různé typy:
 
 ```C
 int *pi;
@@ -46,7 +46,7 @@ short *ps;
 ps = pi;  /* Now generates warning */
 ```
 
-Kompilátor Microsoft C také vygeneruje upozornění na rozdíly v přihlašování. Příklad:
+Kompilátor jazyka Microsoft C také generuje upozornění na rozdíly v Sign. Příklad:
 
 ```C
 signed int *pi;
@@ -55,14 +55,14 @@ unsigned int *pu
 pi = pu;  /* Now generates warning */
 ```
 
-Typ **void** vedlejší účinky, se vyhodnotí výrazy. Nelze použít hodnotu (neexistující), která má typ výrazu **void** v libovolné způsobem, ani použít převedete **void** výrazu (podle implicitní nebo explicitní konverze) na libovolný typ s výjimkou **void.** . Pokud použijete výraz libovolného typu v rámci kde **void** výraz je vyžadován, jeho hodnota se zahodí.
+Pro vedlejší účinky se vyhodnotí výrazy typu **void** . Nemůžete použít hodnotu (neexistující) výrazu, který má typ **void** , ani převést výraz **void** (implicitní nebo explicitní převod) na libovolný typ s výjimkou **void**. Pokud použijete výraz jiného typu v kontextu, kde je požadován výraz **void** , jeho hodnota je zahozena.
 
-Chcete-li se řídí specifikací ANSI <strong>void\* \*</strong>  nelze použít jako <strong>int\*\*</strong>. Pouze **void** <strong>\*</strong> může sloužit jako ukazatel na neurčeného typu.
+Aby bylo možné v souladu se specifikací ANSI, nelze použít <strong>void\* </strong> jako <strong>int\*</strong>. Pouze typ **void** <strong>\*</strong> lze použít jako ukazatel na nespecifikovaný typ.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Můžete vytvořit další typ specifikátory s **typedef** deklarace, jak je popsáno v [deklarace Typedef](../c-language/typedef-declarations.md). Zobrazit [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o velikosti každého typu.
+Můžete vytvořit další Specifikátory typu s deklaracemi **typedef** , jak je popsáno v tématu [deklarace typedef](../c-language/typedef-declarations.md). Informace o velikosti každého typu najdete v tématu [úložiště základních typů](../c-language/storage-of-basic-types.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

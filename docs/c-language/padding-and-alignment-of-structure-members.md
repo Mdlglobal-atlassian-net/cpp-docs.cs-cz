@@ -13,16 +13,16 @@ ms.locfileid: "62325354"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Odsazení a zarovnání členů struktury
 
-**ANSI 3.5.2.1** odsazení a zarovnání členů struktury a určuje, zda lze bitového pole obtížemi hranici jednotky úložiště
+**3.5.2.1 ANSI** Odsazení a zarovnání členů struktur a zda bitové pole může přetažný hranici jednotky úložiště
 
 Členy struktury jsou postupně uloženy v pořadí, ve kterém jsou deklarovány: první člen má nejnižší adresu paměti a poslední člen nejvyšší.
 
-Každý datový objekt má požadavek zarovnání. Požadavek zarovnání pro všechna data s výjimkou struktury, sjednocení a pole je velikost objektu nebo aktuální velikost komprimace (zadaný buď/zp nebo `pack` – Direktiva pragma, podle toho, co je menší). Struktury, sjednocení a pole je požadavkem zarovnání největšího požadavku zarovnání jeho členů. Každému objektu je přiřazen posun tak, aby
+Každý datový objekt má požadavek na zarovnání. Zarovnání – požadavek pro všechna data s výjimkou struktur, sjednocení a polí je buď velikost objektu, nebo aktuální velikost balení (určená buď pomocí/zp nebo `pack` direktiva pragma, podle toho, co je menší). U struktur, sjednocení a polí jsou požadavky na zarovnání největší zarovnání požadavku členů. Každému objektu je přidělen posun, aby
 
-*Posun* **%** *požadavek zarovnání* **== 0**
+*offset* **%** *Zarovnání odsazení – požadavek* **= = 0**
 
 Sousední bitová pole jsou zkomprimována do stejné 1, 2, a 4bajtové alokační jednotky, pokud mají celočíselné typy stejnou velikost a pokud další bitové pole zapadá do aktuální alokační jednotky bez překročení hranice stanovené běžnými požadavky zarovnání bitových polí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

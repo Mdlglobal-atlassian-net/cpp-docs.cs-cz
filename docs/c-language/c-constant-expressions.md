@@ -15,34 +15,34 @@ ms.locfileid: "62325738"
 ---
 # <a name="c-constant-expressions"></a>Výrazy konstant v jazyce C
 
-Konstantní výraz je vyhodnocen v době kompilace, ne doby běhu a můžou používat v jakémkoli místě lze konstantu. Konstantní výraz se musí vyhodnotit na konstantu, která je v rozsahu reprezentovatelných hodnot typu. Operandy a konstantní výraz může být celočíselné konstanty, znakové konstanty, konstanty s plovoucí desetinnou čárkou, výčtu konstant typu přetypování, **sizeof** výrazů a jiných konstantní výrazy.
+Konstantní výraz je vyhodnocen v době kompilace, nikoli v době spuštění, a lze jej použít na jakémkoli místě, které lze použít konstantou. Konstantní výraz se musí vyhodnotit na konstantu, která je v rozsahu reprezentovatelné hodnoty pro tento typ. Operandy konstantního výrazu mohou být celočíselné konstanty, znakové konstanty, konstanty s plovoucí desetinnou čárkou, výčty typu, přetypování, výrazy **sizeof** a další konstantní výrazy.
 
 ## <a name="syntax"></a>Syntaxe
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*konstantní výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*podmíněný výraz*
 
-*conditional-expression*:<br/>
+*podmíněný výraz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **?** *výraz* **:** *podmíněného výrazu*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz or* **?** *výraz* **:** *podmíněný výraz*
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *přiřazení – výraz*
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+*výraz přiřazení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*podmíněný výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;přiřazení *unárního výrazu* – *výraz přiřazení* *operátoru*
 
-*operátor přiřazení*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+*Assignment-operátor*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=****&#42;** **/=** **%=** = **+=** **-=** **&#124;** = ** \< \< ** **>>=** **&=** **^=**
 
-Neterminály deklarátor – struktura, enumerátoru, s přímým přístupem deklarátor, přímo abstraktní deklarátor a příkaz s popiskem obsahují *konstantní výraz* neterminálu.
+Neterminály pro struktury deklarátor, Enumerator, Direct deklarátor, Direct-abstract deklarátor a Label obsahují neterminály *konstantního výrazu* .
 
-Celočíselný konstantní výraz musí použít k určení velikosti bitového pole člena struktury, hodnota konstanty výčtu, velikost pole nebo hodnoty **případ** konstantní.
+K určení velikosti bitového pole člena struktury, hodnoty konstanty výčtu, velikosti pole nebo hodnoty konstanty **případu** je nutné použít integrální konstantní výraz.
 
-Konstantní výrazy direktivy preprocesoru jsou i další omezení. V důsledku toho jsou označovány jako "s omezeným přístupem konstantní výrazy." S omezeným přístupem konstantní výraz nemůže obsahovat **sizeof** výrazy konstanty výčtu typu přetypování na typ nebo konstanty s plovoucí desetinnou čárkou typu. Může ale obsahovat speciální konstantní výraz **definované (** _identifikátor_ **)**.
+Konstantní výrazy používané v direktivách preprocesoru se vztahují na další omezení. V důsledku toho jsou známé jako "omezené konstantní výrazy". Omezený konstantní výraz nemůže obsahovat výrazy **sizeof** , konstanty výčtu, přetypování typu na jakýkoliv typ nebo konstanty s plovoucího typu. Může však obsahovat speciální konstantní výraz konstanty **(** _identifikátor_ **)**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Operandy a výrazy](../c-language/operands-and-expressions.md)

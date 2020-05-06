@@ -25,8 +25,8 @@ Převody typu závisí na zadaném operátoru a typu operandu nebo operátorů. 
 
 - pokud je hodnota předána jako argument funkci nebo pokud je navrácen typ z funkce.
 
-Znak, short integer nebo celočíselné bitové pole, které mají nebo nemají znaménko, případně objekt typu výčtu lze použít ve výrazu všude tam, kde lze použít celé číslo. Pokud může `int` představovat všechny hodnoty původního typu, pak je hodnota převedena na `int`, jinak je převedena na `unsigned int`. Tento proces se nazývá „integrální povýšení“. Integrální povýšení zachovává hodnotu. To znamená, že hodnota po povýšení zůstane stejná jako před povýšením. Zobrazit [obvyklé aritmetické převody](../c-language/usual-arithmetic-conversions.md) Další informace.
+Znak, short integer nebo celočíselné bitové pole, které mají nebo nemají znaménko, případně objekt typu výčtu lze použít ve výrazu všude tam, kde lze použít celé číslo. Pokud může `int` představovat všechny hodnoty původního typu, pak je hodnota převedena na `int`, jinak je převedena na `unsigned int`. Tento proces se nazývá „integrální povýšení“. Integrální povýšení zachovává hodnotu. To znamená, že hodnota po povýšení zůstane stejná jako před povýšením. Další informace najdete v tématu [obvyklé aritmetické převody](../c-language/usual-arithmetic-conversions.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy a přiřazení](../c-language/expressions-and-assignments.md)

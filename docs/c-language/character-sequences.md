@@ -11,7 +11,7 @@ ms.locfileid: "62312684"
 ---
 # <a name="character-sequences"></a>Sekvence znaků
 
-**ANSI 3.8.2** mapování znakové sekvence zdrojového souboru
+**3.8.2 ANSI** Mapování znakových sekvencí zdrojového souboru
 
 Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru s tím rozdílem, že nejsou podporovány řídicí sekvence.
 
@@ -27,6 +27,6 @@ Ve zdrojovém kódu jsou zapotřebí dvě zpětná lomítka:
 fil = fopen( "path1\\path2\\myfile", "rt" );
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

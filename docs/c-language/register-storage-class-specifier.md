@@ -14,12 +14,12 @@ ms.locfileid: "62325244"
 ---
 # <a name="register-storage-class-specifier"></a>register – specifikátor třídy úložiště
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kompilátor jazyka C/C++ společnosti Microsoft nerespektuje požadavky uživatele na proměnné registru. Ale pro přenositelnost všechny ostatní sémantiky přidružené **zaregistrovat** – klíčové slovo jsou kompilátorem respektovány. Například nelze použít unární address-of – operátor (**&**) na objekt registru ani použít **zaregistrovat** klíčové slovo se používá pro pole.
+Kompilátor jazyka C/C++ společnosti Microsoft nerespektuje požadavky uživatele na proměnné registru. Pro přenositelnost všech ostatních sémantik přidružených k klíčovému slovu **Register** jsou však kompilátorem respektovány. Například nemůžete použít unární operátor address-of (**&**) na objekt Register ani použít klíčové slovo **Register** v polích.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

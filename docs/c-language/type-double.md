@@ -16,14 +16,14 @@ ms.locfileid: "62290729"
 ---
 # <a name="type-double"></a>Double – typ
 
-Hodnoty s dvojitou přesností typů double mají 8 bajtů. Tento formát je podobný formátu plovoucí desetinné čárky kromě toho, že obsahuje 11bitový exponent s přesahem 1023, 52bitovou mantisu a implikovaný 1 bit vyššího řádu. Tento formát poskytuje celou řadu přibližně 1.7E-308 až 1.7E + 308 pro typ double.
+Hodnoty s dvojitou přesností typů double mají 8 bajtů. Tento formát je podobný formátu plovoucí desetinné čárky kromě toho, že obsahuje 11bitový exponent s přesahem 1023, 52bitovou mantisu a implikovaný 1 bit vyššího řádu. Tento formát poskytuje pro typ Double rozsah přibližně 1.7 E-308 až 1.7 E + 308.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Typ double obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/-1.7E308 s alespoň 15 číslicemi přesnosti.
+Typ double obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/-1.7E308 s minimálně 15 číslicemi přesnosti.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

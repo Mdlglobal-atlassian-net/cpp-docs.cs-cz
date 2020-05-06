@@ -11,7 +11,7 @@ ms.locfileid: "62326050"
 ---
 # <a name="c-declarations-and-definitions"></a>Deklarace a definice jazyka C
 
-„Deklarace“ vytvoří přidružení mezi určitou proměnnou, funkcí nebo typem a jejich atributy. [Přehled deklarací](../c-language/overview-of-declarations.md) poskytuje syntaxi standardu ANSI pro `declaration` neterminálu. Deklarace také určuje, kdy a kde lze k identifikátoru přistupovat („propojení“ identifikátoru). Zobrazit [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) Další informace o propojení.
+„Deklarace“ vytvoří přidružení mezi určitou proměnnou, funkcí nebo typem a jejich atributy. [Přehled deklarací](../c-language/overview-of-declarations.md) poskytuje syntaxi ANSI pro `declaration` neterminál. Deklarace také určuje, kdy a kde lze k identifikátoru přistupovat („propojení“ identifikátoru). Informace o propojení naleznete v tématu [Doba života, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) .
 
 „Definice“ proměnné vytváří stejné přidružení jako deklarace, ale také způsobí přiřazení úložiště proměnné.
 
@@ -28,6 +28,6 @@ int count( double f ) {}
 
 Proměnné `var` a `val` lze použít ve funkcích `find` a `count` a nejsou požadovány žádné další deklarace. Ale tyto názvy nejsou ve funkci `main` viditelné (přístupné).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

@@ -15,7 +15,7 @@ ms.locfileid: "62325543"
 ---
 # <a name="inline-functions"></a>Vložené funkce
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Klíčové slovo `__inline` přikazuje kompilátoru nahradit kód uvnitř definice funkce pro každou instanci jejího volání. K nahrazení však dochází pouze dle rozhodnutí kompilátoru. Kompilátor například nevloží funkci, je-li její adresa použita nebo je-li pro vložení příliš velká.
 
@@ -23,7 +23,7 @@ Aby byla funkce považována za vhodnou k vložení, musí pro svou definici pou
 
 Chcete-li zadat vloženou funkci, použijte tento tvar:
 
-> **__inline** *typ*<sub>optimalizované</sub> *definice funkce*
+> **__inline** *typ*funkce<sub>opt</sub> *– definice*
 
 Použití vložených funkcí generuje rychlejší a někdy i menší kód, než jaký generuje ekvivalentní volání funkce, a to z následujících důvodů:
 
@@ -33,10 +33,10 @@ Použití vložených funkcí generuje rychlejší a někdy i menší kód, než
 
 - Funkce generované jako vložené jsou předmětem optimalizací kódu, které nejsou běžným funkcím dostupné, protože kompilátor neprovádí meziprocedurální optimalizace.
 
-Funkce používající klíčové slovo `__inline` by neměly být zaměněny s vloženým kódem assembleru. Zobrazit [vložený Assembler](../c-language/inline-assembler-c.md) Další informace.
+Funkce používající klíčové slovo `__inline` by neměly být zaměněny s vloženým kódem assembleru. Další informace najdete v tématu [Inline assembler](../c-language/inline-assembler-c.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
+[inline, __inline \_, _forceinline](../cpp/inline-functions-cpp.md)

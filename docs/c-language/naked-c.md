@@ -16,14 +16,14 @@ ms.locfileid: "62325777"
 ---
 # <a name="naked-c"></a>Naked (C)
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Atribut třídy úložiště naked je rozšíření jazyka C specifické pro společnost Microsoft. Pro funkce deklarované s atributem třídy úložiště naked generuje kompilátor kód bez kódu prologu a epilogu. Neviditelné funkce jsou užitečné, potřebujete-li napsat vlastní sekvence kódu prologu a epilogu pomocí vloženého kódu assembleru. Neviditelné funkce jsou užitečné k psaní ovladačů virtuálních zařízení.
 
-Konkrétní informace o použití atributu naked naleznete v tématu [neviditelné funkce](../c-language/naked-functions.md).
+Konkrétní informace o použití atributu s atributem, naleznete v tématu [holé funkce](../c-language/naked-functions.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozšířené atributy třídy úložiště jazyka C](../c-language/c-extended-storage-class-attributes.md)

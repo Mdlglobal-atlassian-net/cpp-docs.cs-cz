@@ -13,10 +13,10 @@ ms.locfileid: "62344977"
 ---
 # <a name="time-zone"></a>Časové pásmo
 
-**ANSI 4.12.1** místní časové pásmo a letní čas
+**4.12.1 ANSI** Místní časové pásmo a letní čas
 
 Místní časové pásmo je Tichomoří (běžný čas). Microsoft C podporuje letní čas.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

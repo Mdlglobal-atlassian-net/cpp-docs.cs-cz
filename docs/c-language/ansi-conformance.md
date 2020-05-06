@@ -18,6 +18,6 @@ Microsoft C odpovídá standardu pro jazyk C podle edice 9899:1990 standardu ANS
 
 Rozšíření standardu ANSI C společnosti Microsoft jsou uvedena v textu a v syntaxi této knihy a také na odkazu na webu. Vzhledem k tomu, že rozšíření nejsou součástí standardu ANSI C, může jejich použití omezit přenositelnost programů mezi systémy. Ve výchozím nastavení jsou rozšíření společnosti Microsoft povolena. Pro zakázání těchto rozšíření použijte možnost kompilátoru /Za. Veškerý kód, který není ANSI kódem, generuje chyby nebo varování pomocí možnosti /Za.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)
+[Organizace Referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)

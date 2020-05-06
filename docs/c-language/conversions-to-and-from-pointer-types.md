@@ -32,10 +32,10 @@ Celočíselný typ lze naopak převést na typ ukazatele dle následujících pr
 
 - Je-li celočíselný typ stejné velikosti jako typ ukazatele, převod pouze zajistí, že je celočíselný typ považován za ukazatel (celé číslo bez znaménka).
 
-- Je-li velikost celočíselného typu se liší od velikosti typu ukazatele, celočíselný typ nejprve převeden na velikost ukazatele pomocí cest převodu dle tabulek [převod z celočíselných typů se znaménkem](../c-language/conversions-from-signed-integral-types.md) a [ Převod z celočíselných typů bez znaménka](../c-language/conversions-from-unsigned-integral-types.md). Poté je považován za hodnotu ukazatele.
+- Pokud je velikost integrálního typu odlišná od velikosti typu ukazatele, je celočíselný typ nejprve převeden na velikost ukazatele pomocí cest převodu předaných v tabulkách v rámci převodů [z](../c-language/conversions-from-signed-integral-types.md) celočíselných typů a [převodů z nepodepsaných integrálních typů](../c-language/conversions-from-unsigned-integral-types.md). Poté je považován za hodnotu ukazatele.
 
-Celočíselný konstantní výraz s hodnotou 0 nebo takový výraz přetypovaný na typ **void** <strong>\*</strong> lze převést přetypováním, přiřazením nebo porovnáním ukazatelem libovolného typu. Tím dojde k vytvoření nulového ukazatele, který je roven jinému nulovému ukazateli stejného typu, avšak tento nulový ukazatel není roven jinému ukazateli na funkci nebo objekt. Celá čísla jiná než konstantní 0 lze převést na typ ukazatele, ale výsledek není přenosný.
+Celočíselný konstantní výraz s hodnotou 0 nebo přetypování výrazu na typ **void** <strong>\*</strong> lze převést pomocí přetypování typu, přiřazením nebo porovnáním s ukazatelem libovolného typu. Tím dojde k vytvoření nulového ukazatele, který je roven jinému nulovému ukazateli stejného typu, avšak tento nulový ukazatel není roven jinému ukazateli na funkci nebo objekt. Celá čísla jiná než konstantní 0 lze převést na typ ukazatele, ale výsledek není přenosný.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

@@ -19,29 +19,29 @@ ms.locfileid: "62344795"
 ---
 # <a name="type-qualifiers"></a>Kvalifikátory typu
 
-Kvalifikátory typu poskytnout jednu ze dvou vlastností na identifikátor rozhraní. **Const** kvalifikátor typu deklaruje objekt bude neupravitelnými. `volatile` Kvalifikátor typu deklaruje položku, jehož hodnota může oprávněně změnit něco mimo ovládací prvek programu, ve kterém se zobrazí, jako je například souběžně prováděným vláknem.
+Kvalifikátory typu poskytují jednu ze dvou vlastností identifikátoru. Kvalifikátor typu **const** deklaruje objekt, který nemůže být upravitelný. Kvalifikátor `volatile` typu deklaruje položku, jejíž hodnotu lze legitimně změnit o něco mimo ovládací prvek programu, ve kterém se zobrazí, jako je například souběžné provádění vlákna.
 
-Kvalifikátory, zadejte dva **const** a `volatile`, může být použito pouze jednou v deklaraci. Kvalifikátory typu se může zobrazit všechny specifikátorem typu; však nemůže objevit po první čárku v deklaraci více položek. Například následující deklarace jsou platné:
+Dva kvalifikátory typu, **const** a `volatile`, mohou být v deklaraci uvedeny pouze jednou. Kvalifikátory typu se můžou objevit u libovolného specifikátoru typu; nemohou však být zobrazeny za první čárkou v deklaraci více položek. Například následující deklarace jsou platné:
 
 ```
 typedef volatile int VI;
 const int ci;
 ```
 
-Nejsou povoleny tyto deklarace:
+Tyto deklarace nejsou platné:
 
 ```
 typedef int *i, volatile *vi;
 float f, const cf;
 ```
 
-Kvalifikátory typu jsou relevantní pouze v případě, že přístup k identifikátory jako l hodnoty ve výrazech. Zobrazit [výrazy L-Value a R-Value](../c-language/l-value-and-r-value-expressions.md) informace o l hodnoty a výrazy.
+Kvalifikátory typu jsou relevantní pouze při přístupu k identifikátorům jako l-hodnoty ve výrazech. Informace o l-hodnotách a výrazech naleznete v tématu [výrazy l-value a R-Value](../c-language/l-value-and-r-value-expressions.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-*Kvalifikátor typu*: **constvolatile**
+*kvalifikátor typu*: **constvolatile**
 
-Následující jsou přípustné **const** a `volatile` deklarace:
+Níže jsou platné **const** a `volatile` deklarace:
 
 ```
 int const *p_ci;       /* Pointer to constant int */
@@ -51,18 +51,18 @@ int (*const cp_i);     /* Constant pointer to int */
 int volatile vint;     /* Volatile integer        */
 ```
 
-Pokud specifikace typu pole obsahuje kvalifikátory typu, je kvalifikován elementu, není typu pole. Pokud specifikace typu funkce obsahuje kvalifikátory, není chování definováno. Ani `volatile` ani **const** má vliv na rozsah hodnot nebo aritmetické vlastností objektu.
+Pokud specifikace typu pole obsahuje kvalifikátory typu, je element kvalifikován, nikoli typu pole. Pokud specifikace typu funkce zahrnuje kvalifikátory, chování není definováno. `volatile` Ani **konstanta** nemá vliv na rozsah hodnot nebo aritmetických vlastností objektu.
 
-Tento seznam popisuje způsob použití **const** a `volatile`.
+Tento seznam popisuje, jak použít **const** a `volatile`.
 
-- **Const** – klíčové slovo lze použít k úpravě jakékoli základní nebo agregační typ nebo ukazatel na objekt typu, nebo `typedef`. Pokud položka je deklarována s pouze **const** kvalifikátor typu, jeho typ slov za **const int**. A **const** lze inicializovat proměnnou nebo mohou být umístěny v oblasti úložiště, jen pro čtení. **Const** – klíčové slovo je užitečné k deklaraci ukazatele na **const** vzhledem k tomu, že to vyžaduje funkce nebudou je moci měnit ukazatel žádným způsobem.
+- Klíčové slovo **const** lze použít pro úpravu jakéhokoli základního nebo agregačního typu nebo ukazatele na objekt libovolného typu nebo `typedef`. Pokud je položka deklarována pouze s kvalifikátorem **const** Type, jeho typ je **const int**. **Konstantní** proměnnou lze inicializovat nebo lze umístit do oblasti úložiště jen pro čtení. Klíčové slovo **const** je užitečné pro deklaraci ukazatelů na **const** , protože to vyžaduje, aby funkce neměnila ukazatel jakýmkoli způsobem.
 
-- Kompilátor předpokládá, že, kdekoli v programu, `volatile` proměnná je možný přes neznámý proces, který používá nebo upravuje jeho hodnotu. Proto, bez ohledu na to, na příkaz určených optimalizacích řádek kódu pro každé přiřazení nebo odkaz na `volatile` proměnnou je nutné vygenerovat i v případě, že se zobrazuje v nemají žádný vliv.
+- Kompilátor předpokládá, že v jakémkoli okamžiku v programu je k `volatile` proměnné možné přistupovat neznámým procesem, který používá nebo upravuje jeho hodnotu. Bez ohledu na optimalizace, které jsou zadány na příkazovém řádku, musí být kód pro každé přiřazení nebo odkaz na `volatile` proměnnou generován i v případě, že se zdá být neúčinným.
 
-   Pokud `volatile` použitý samostatně, `int` se předpokládá, že. `volatile` Specifikátor typu je možné poskytovat spolehlivý přístup k umístění v paměti speciální. Použití `volatile` s datové objekty, které může získat přístup nebo upravené pomocí obslužné rutiny signálu souběžně prováděných programů nebo speciální hardware jako mapované paměti zaregistruje řízení vstupně-výstupních operací. Je možné deklarovat jako proměnnou `volatile` pro svého životního cyklu, nebo můžete přetypovat jeden odkaz bude `volatile`.
+   Pokud `volatile` se používá samostatně, `int` předpokládá se. Specifikátor `volatile` typu lze použít k zajištění spolehlivého přístupu ke speciálním umístěním v paměti. Používejte `volatile` s datovými objekty, které mohou být k dispozici nebo změněny obslužnými rutinami signálu, souběžným spouštěním programů nebo speciálním hardwarem, jako jsou například vstupně-výstupní Registry mapované paměti. Proměnnou můžete deklarovat jako `volatile` pro její dobu života, nebo můžete přetypovat jeden odkaz. `volatile`
 
-- Položka může být obojí **const** a `volatile`, v takovém případě položky nelze je změnit oprávněně vlastní program, ale může změnit některé asynchronní proces.
+- Položka může být současně **const** a `volatile`, v takovém případě by položka nemohla být oprávněně upravena vlastním programem, ale mohla by být upravena pomocí nějakého asynchronního procesu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

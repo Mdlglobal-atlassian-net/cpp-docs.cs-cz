@@ -15,32 +15,32 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221368"
 ---
-# <a name="mfc-extension-dlls-overview"></a>MFC – rozšiřující knihovny DLL: Přehled
+# <a name="mfc-extension-dlls-overview"></a>Rozšiřující knihovny MFC DLL: Přehled
 
-MFC – rozšiřující knihovny DLL je knihovnu DLL, která se obvykle implementují opakovaně použitelné třídy odvozené z existujících tříd knihovny Microsoft Foundation Class. Rozšiřující knihovny DLL MFC jsou vytvořené pomocí knihovny DLL verze knihovny MFC (označované také jako sdílených verzí knihovny MFC). Pouze spustitelné soubory knihovny MFC (aplikace nebo běžných knihovnách MFC DLL), které jsou integrovány s sdílených verzí knihovny MFC můžete použít rozšiřující knihovny DLL MFC. S rozšiřující knihovny DLL MFC lze odvozovat nové vlastní třídy knihovny MFC a potom nabídnout tato rozšířená verze knihovny MFC k aplikacím, které volají vaši knihovnu DLL.
+Rozšiřující knihovna MFC DLL je knihovna DLL, která obvykle implementuje opakovaně použitelné třídy odvozené z existujících tříd knihovna Microsoft Foundation Class. Rozšiřující knihovny DLL knihovny MFC jsou sestaveny pomocí verze knihovny MFC dynamického propojení (označované také jako sdílená verze knihovny MFC). Knihovny DLL rozšíření MFC mohou používat pouze spustitelné soubory knihovny MFC (buď aplikace nebo běžné knihovny MFC DLL), které jsou vytvořeny pomocí sdílené verze knihovny MFC. Pomocí knihovny DLL rozšíření knihovny MFC můžete odvodit nové vlastní třídy z knihovny MFC a následně nabízet tuto rozšířenou verzi knihovny MFC aplikacím, které volají vaši DLL knihovnu.
 
-Rozšiřující knihovny DLL lze použít také pro předávání mezi aplikací a knihovny DLL MFC odvozené objekty. Členské funkce související s předaným objektem existovat v modulu, ve kterém byl objekt vytvořen. Protože tyto funkce se správně vyexportovala při použití sdílené knihovny DLL verze knihovny MFC, můžete předat volně knihovny MFC nebo knihovny MFC odvozenému objektu ukazatele mezi aplikací a MFC – rozšiřující knihovny DLL načte.
+Rozšiřující knihovny DLL lze také použít pro předávání objektů odvozených od knihovny MFC mezi aplikací a knihovnou DLL. Členské funkce přidružené k předanému objektu existují v modulu, ve kterém byl objekt vytvořen. Vzhledem k tomu, že tyto funkce jsou správně exportovány při použití sdílené knihovny DLL verze knihovny MFC, je možné volně předat ukazatele objektů MFC nebo MFC odvozené od aplikace a rozšiřujících knihoven DLL MFC, které načte.
 
-Příklad knihovny DLL, která splňuje základní požadavky pro rozšiřující knihovny DLL MFC, najdete v ukázce MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk). Konkrétně se podívejte na Testdll1.cpp a Testdll2.cpp soubory.
+Příklad knihovny DLL, která splňuje základní požadavky knihovny DLL rozšíření MFC, naleznete v tématu [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)Sample MFC. Zejména se podívejte na soubory Testdll1. cpp a Testdll2. cpp.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializace rozšiřující knihovny DLL MFC](run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicializace knihovny DLL rozšíření MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [MFC – rozšiřující knihovny DLL](extension-dlls.md)
 
 - [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Knihovny DLL mimo MFC: Přehled](non-mfc-dlls-overview.md)
+- [Knihovny DLL mimo MFC – přehled](non-mfc-dlls-overview.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-statically-linked-to-mfc.md)
+- [Běžné knihovny MFC DLL staticky propojené s knihovnou MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
+- [Běžné knihovny MFC DLL dynamicky propojené s knihovnou MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Vytváření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)
+- [Vytvoření knihovny MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Typy knihoven DLL](kinds-of-dlls.md)
+[Druhy knihoven DLL](kinds-of-dlls.md)

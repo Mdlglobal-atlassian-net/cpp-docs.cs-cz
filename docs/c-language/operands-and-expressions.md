@@ -23,8 +23,8 @@ ms.locfileid: "64343240"
 
 - vygeneruje vedlejší účinky.
 
-Operandy v jazyce C obsahují konstanty, identifikátory, řetězce, volání funkce, výrazy indexu, výrazy výběru členů a složené výrazy, které jsou vytvořené kombinací operandů s operátory nebo uzavřením operandů do závorek. Syntaxe těchto operandů je uvedena v [primární výrazy](../c-language/c-primary-expressions.md).
+Operandy v jazyce C obsahují konstanty, identifikátory, řetězce, volání funkce, výrazy indexu, výrazy výběru členů a složené výrazy, které jsou vytvořené kombinací operandů s operátory nebo uzavřením operandů do závorek. Syntaxe pro tyto operandy je uvedena v [primárních výrazech](../c-language/c-primary-expressions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy a přiřazení](../c-language/expressions-and-assignments.md)

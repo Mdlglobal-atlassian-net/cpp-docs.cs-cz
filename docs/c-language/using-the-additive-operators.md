@@ -29,14 +29,14 @@ px = &x[4 + i];
 px = &x[4] + i;
 ```
 
-Hodnota `i` je vynásobena délkou **float** a přidán do `&x[4]`. Výsledná hodnota ukazatele je adresa prvku `x[8]`.
+Hodnota `i` je vynásobena délkou **float** a přidána do `&x[4]`. Výsledná hodnota ukazatele je adresa prvku `x[8]`.
 
 ```
 j = &x[i] - &x[i-2];
 ```
 
-V tomto příkladu je adresa třetího prvku pole `x` (určená pomocí `x[i-2]`) odečtena od adresy pátého prvku pole `x` (určené pomocí `x[i]`). Rozdíl je vydělen délkou z **float**; výsledkem je celočíselná hodnota 2.
+V tomto příkladu je adresa třetího prvku pole `x` (určená pomocí `x[i-2]`) odečtena od adresy pátého prvku pole `x` (určené pomocí `x[i]`). Rozdíl je dělený délkou **float**; Výsledkem je celočíselná hodnota 2.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Sčítací operátory jazyka C](../c-language/c-additive-operators.md)
+[Operátory sčítání jazyka C](../c-language/c-additive-operators.md)
