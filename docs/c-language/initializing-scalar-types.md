@@ -21,74 +21,74 @@ ms.locfileid: "62232940"
 ---
 # <a name="initializing-scalar-types"></a>Inicializace skalárních typů
 
-Při inicializaci Skalární typy, hodnota *výrazu přiřazení* je přiřazená k proměnné. Pravidla převodu pro přiřazení použít. (Viz [převody typů](../c-language/type-conversions-c.md) o pravidla převodu.)
+Při inicializaci skalárních typů je hodnota *přiřazení výrazu* přiřazena proměnné. Pravidla převodu pro přiřazení platí. (Další informace o pravidlech převodu naleznete v tématu [převody typů](../c-language/type-conversions-c.md) .)
 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *init-declarator-list*<sub>optimalizované</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory* *init-deklarátor-list*<sub>opt</sub> **;**
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru třídy úložiště* – *specifikátory*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru typu* *– Povolit specifikátory*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ-specifikátor deklarace kvalifikátoru* *– specifikátory*<sub>opt</sub>
 
-*init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
+*init-deklarátor-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor-list* **,** *init-deklarátor*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*  / \* pro skalární inicializace \*/
+*init-deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=**  / *initializer* inicializátor\* pro skalární inicializaci\*/
 
-*Inicializátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*
+*inicializátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*
 
-Můžete inicializovat proměnné libovolného typu, za předpokladu, že dodržují následující pravidla:
+Můžete inicializovat proměnné libovolného typu za předpokladu, že dodržujete následující pravidla:
 
-- Je možné inicializovat proměnné deklarované na úrovni rozsahu souboru. Pokud proměnnou na externí úrovni neinicializujete explicitně, je ve výchozím nastavení inicializována na hodnotu 0.
+- Proměnné deklarované na úrovni oboru souborů lze inicializovat. Pokud neinicializujete explicitně proměnnou na externí úrovni, je ve výchozím nastavení inicializována na hodnotu 0.
 
-- Konstantní výraz lze použít k inicializaci všechny globální proměnná deklarovaná pomocí **statické** *storage-class-specifier*. Proměnné deklarované jako **statické** jsou inicializovány při zahájení provádění programu. Pokud neinicializujete explicitně globální **statické** proměnné, je inicializován na 0 ve výchozím nastavení, a každý člen, který má typ ukazatele se přiřadí ukazatel s hodnotou null.
+- Konstantní výraz lze použít k inicializaci jakékoli globální proměnné deklarované se *specifikátorem třídy úložiště* **static** . Proměnné deklarované jako **static** jsou inicializovány při zahájení provádění programu. Pokud explicitně neinicializujete globální **statickou** proměnnou, je ve výchozím nastavení inicializována na hodnotu 0 a každý člen, který má typ ukazatele, je přiřazen ukazatel s hodnotou null.
 
-- Proměnné deklarované s **automaticky** nebo **zaregistrovat** – specifikátor třídy úložiště se inicializuje pokaždé, když předává řízení provádění do bloku ve kterém jsou deklarovány. Při vynechání inicializátoru od deklarace **automaticky** nebo **zaregistrovat** proměnné, počáteční hodnota proměnné není definována. Pro automatické a hodnot registru, inicializátor není omezen na právě konstanty. To může být libovolný výraz zahrnující dříve definované hodnoty, dokonce i funkce volání.
+- Proměnné deklarované pomocí specifikátoru třídy úložiště **auto** nebo **Register** jsou inicializovány pokaždé, když ovládací prvek pro spuštění projde do bloku, ve kterém jsou deklarovány. Vynecháte-li inicializátor z deklarace proměnné **auto** nebo **Register** , není definována počáteční hodnota proměnné. Pro automatické a registrační hodnoty není inicializátor omezen na konstantu; může to být libovolný výraz, který zahrnuje dříve definované hodnoty, dokonce i volání funkcí.
 
-- Počáteční hodnoty pro externí deklarace proměnných a pro všechny **statické** proměnné, externí nebo interní, musí být konstantní výrazy. (Další informace najdete v tématu [konstantní výrazy](../c-language/c-constant-expressions.md).) Adresa jakékoli externě deklarovaná nebo statická proměnná je konstantní, lze použít k inicializaci interně deklarované **statické** proměnné ukazatele. Ale adresu **automaticky** proměnnou nelze použít jako statický inicializátor, protože se může lišit pro každé spuštění bloku. Konstanty a proměnné hodnoty můžete použít k inicializaci **automaticky** a **zaregistrovat** proměnné.
+- Počáteční hodnoty pro deklarace externích proměnných a pro všechny **statické** proměnné, ať už externí nebo interní, musí být konstantní výrazy. (Další informace naleznete v tématu [konstantní výrazy](../c-language/c-constant-expressions.md).) Vzhledem k tomu, že adresa všech externě deklarovaných nebo statických proměnných je konstantní, lze ji použít k inicializaci vnitřně deklarované **statické** proměnné ukazatele. Adresa proměnné **auto** však nemůže být použita jako statický inicializátor, protože může být pro každé spuštění bloku odlišná. Pro inicializaci proměnných **auto** a **Register** lze použít buď konstanty nebo hodnoty proměnných.
 
-- Pokud deklarace identifikátoru s rozsahem bloku, a má identifikátor vnější propojení, deklarace nemůže mít inicializace.
+- Pokud deklarace identifikátoru má rozsah bloku a identifikátor má vnější propojení, deklarace nemůže mít inicializaci.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklady znázorňují inicializace:
+Následující příklady ilustrují inicializace:
 
 ```C
 int x = 10;
 ```
 
-Celočíselné proměnné `x` je inicializován na konstantní výraz `10`.
+Proměnná `x` celého čísla je inicializována do konstantního `10`výrazu.
 
 ```C
 register int *px = 0;
 ```
 
-Ukazatel `px` je inicializován na hodnotu 0, vytváření ukazatel s "hodnotou null".
+Ukazatel `px` je inicializován na hodnotu 0 a vytváří ukazatel "null".
 
 ```C
 const int c = (3 * 1024);
 ```
 
-Tento příklad používá konstantní výraz `(3 * 1024)` inicializovat `c` na konstantní hodnotu, která nejde změnit z důvodu **const** – klíčové slovo.
+V tomto příkladu se používá konstantní `(3 * 1024)` výraz pro `c` inicializaci na konstantní hodnotu, kterou nelze upravovat z důvodu klíčového slova **const** .
 
 ```C
 int *b = &x;
 ```
 
-Tento příkaz inicializuje ukazatele `b` adresou jiné proměnné `x`.
+Tento příkaz inicializuje ukazatel `b` na adresu jiné proměnné,. `x`
 
 ```C
 int *const a = &z;
 ```
 
-Ukazatel `a` inicializovat pomocí adresy proměnné s názvem `z`. Ale od té doby je zadán jako **const**, proměnná `a` lze inicializovat pouze, nikdy nemění. Vždy odkazuje na stejném umístění.
+Ukazatel `a` je inicializován s adresou proměnné s názvem `z`. Je-li však tento parametr uveden jako **const**, lze proměnnou `a` pouze inicializovat, nikdy Neupravovat. Vždy odkazuje na stejné umístění.
 
 ```C
 int GLOBAL ;
@@ -102,8 +102,8 @@ int function( void )
 }
 ```
 
-Globální proměnná `GLOBAL` je deklarované na vnější úrovni, má globální životnost. Lokální proměnná `LOCAL` má **automaticky** třídu úložiště a má jenom adresy během spuštění funkce, ve kterém je deklarována. Proto se pokus o inicializaci **statické** proměnné ukazatele `lp` adresou `LOCAL` není povolená. **Statické** proměnné ukazatele `gp` mohou být inicializovány na adresu `GLOBAL` vzhledem k tomu, že tato adresa je vždy stejný. Obdobně `*rp` lze inicializovat, protože `rp` místní proměnnou, která může mít nekonstantním inicializátor. Pokaždé, když je blok proveden, `LOCAL` má novou adresu, která je poté přiřazen `rp`.
+Globální proměnná `GLOBAL` je deklarována na externí úrovni, takže má globální životnost. Místní proměnná `LOCAL` má třídu **automatického** úložiště a má adresu pouze během provádění funkce, ve které je deklarována. Proto pokus o inicializaci proměnné `lp` `LOCAL` **statického** ukazatele s adresou není povolen. **Statickou** proměnnou `gp` ukazatele lze inicializovat na adresu, `GLOBAL` protože tato adresa je vždy stejná. Podobně lze `*rp` inicializovat, protože `rp` je místní proměnná a může mít nekonstantní inicializátor. Pokaždé, když je zapsán `LOCAL` blok, má novou adresu, která je pak přiřazena `rp`k.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Inicializace](../c-language/initialization.md)
+[Operace](../c-language/initialization.md)

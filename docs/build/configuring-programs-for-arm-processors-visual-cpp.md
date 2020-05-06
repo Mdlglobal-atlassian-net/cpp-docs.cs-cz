@@ -21,13 +21,13 @@ Popisuje binární rozhraní aplikace používané systémem Windows na ARM pro 
 [Přehled konvencí ARM64 ABI](arm64-windows-abi-conventions.md)\
 Popisuje binární rozhraní aplikace používané systémem Windows na ARM64 pro použití registrací, konvence volání a zpracování výjimek.
 
-[Běžné problémy s MIGRACÍ MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
-Popisuje C++ prvky kódu, které se obvykle předpokládají pro přenos mezi architekturami, ale které poskytují různé výsledky pro ARM, než pro x86 a x64.
+[Běžné problémy s migrací MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
+Popisuje prvky kódu jazyka C++, které se obvykle předpokládají pro přenos mezi architekturami, ale které poskytují různé výsledky pro ARM, než pro x86 a x64.
 
-\ [zpracování výjimek ARM](arm-exception-handling.md)
+[Zpracování výjimek ARM](arm-exception-handling.md)\
 Popisuje schéma kódování pro odvinutí zásobníku během strukturovaného zpracování výjimek ve Windows v ARM.
 
-\ [zpracování výjimek ARM64](arm64-exception-handling.md)
+[Zpracování výjimek ARM64](arm64-exception-handling.md)\
 Popisuje schéma kódování pro odvinutí zásobníku během strukturovaného zpracování výjimek ve Windows v ARM64.
 
 ## <a name="related-sections"></a>Související oddíly
@@ -35,5 +35,5 @@ Popisuje schéma kódování pro odvinutí zásobníku během strukturovaného z
 [Vnitřní objekty ARM](../intrinsics/arm-intrinsics.md)\
 Popisuje vnitřní prvky kompilátoru pro procesory, které používají architekturu ARM.
 
-[Vnitřní\ ARM64](../intrinsics/arm-intrinsics.md)
+[Vnitřní objekty ARM64](../intrinsics/arm-intrinsics.md)\
 Popisuje vnitřní prvky kompilátoru pro procesory, které používají architekturu ARM64.

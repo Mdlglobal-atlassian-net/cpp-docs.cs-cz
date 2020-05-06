@@ -13,10 +13,10 @@ ms.locfileid: "62312399"
 ---
 # <a name="converting-multibyte-characters"></a>Převod vícebajtových znaků
 
-**ANSI 3.1.3.4** aktuálního národního prostředí používá k převodu vícebajtových znaků na odpovídající široké znaky (kódy) pro konstantu širokého znaku
+**3.1.3.4 ANSI** Aktuální národní prostředí použité pro převod vícebajtových znaků na odpovídající znaky (Code) pro konstantu s velkým znakem
 
-Aktuální národní prostředí je ve výchozím nastavení národní prostředí jazyka „C“. Je možné měnit pomocí [#pragma setlocale](../preprocessor/setlocale.md).
+Aktuální národní prostředí je ve výchozím nastavení národní prostředí jazyka „C“. Dá se změnit pomocí [#pragma setlocale](../preprocessor/setlocale.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)

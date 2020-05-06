@@ -17,7 +17,7 @@ ms.locfileid: "62233831"
 ---
 # <a name="extern-storage-class-specifier"></a>extern – specifikátor třídy úložiště
 
-Proměnná deklarovaná pomocí **extern** – specifikátor třídy úložiště je odkaz na proměnnou se stejným názvem, které jsou definovány v jiném zdrojovém souboru. Používá se k definice proměnné na vnější úrovni zviditelnit. Proměnná deklarovaná jako **extern** nemá žádné úložiště přidělené sama za sebe, je pouze název.
+Proměnná deklarovaná pomocí specifikátoru třídy úložiště **extern** je odkaz na proměnnou se stejným názvem definovaným v jiném zdrojovém souboru. Slouží k tomu, aby byla definice proměnné na externí úrovni viditelná. Proměnná deklarovaná jako **extern** nemá žádné přidělené úložiště. je pouze název.
 
 ## <a name="example"></a>Příklad
 
@@ -59,10 +59,10 @@ void func(void)
 }
 ```
 
-V tomto příkladu je proměnná `i` je definována v Source1.c s počáteční hodnotou 1. **Extern** deklarace v Source2.c je je "i" viditelný v tomto souboru.
+V tomto příkladu je proměnná `i` definována v source1. c s počáteční hodnotou 1. **Externí** deklarace v SOURCE2. c znamená, že je v tomto souboru vidět "i".
 
-V `func` funkce, adresa globální proměnné `i` slouží k inicializaci **statické** proměnné ukazatele `external_i`. Tento postup funguje, protože globální proměnná má **statické** životnost, což znamená její adresa během provádění programu nezmění. Další, proměnná `i` je definována v rámci oboru `func` jako místní proměnná s počáteční hodnotou 16. Tato definice nemá vliv na hodnotu na vnější úrovni `i`, což je skrytý pomocí jejího názvu jako lokální proměnné. Hodnota globální proměnné `i` je teď přístupný pouze prostřednictvím ukazatele `external_i`.
+Ve `func` funkci je adresa globální proměnné `i` použita k inicializaci **statické** proměnné `external_i`ukazatele. Tato operace funguje, protože globální proměnná má **statickou** životnost, což znamená, že se její adresa nemění během provádění programu. Dále je proměnná `i` definována v rámci oboru `func` jako místní proměnná s počáteční hodnotou 16. Tato definice nemá vliv na hodnotu hodnoty na externí úrovni `i`, která je skrytá pomocí jejího názvu pro místní proměnnou. Hodnota globální `i` je teď dostupná jenom přes ukazatel `external_i`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

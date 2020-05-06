@@ -11,10 +11,10 @@ ms.locfileid: "62158290"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Důležité znaky bez externího propojení
 
-**ANSI 3.1.2** počet významných znaků bez externího propojení
+**ANSI 3.1.2** Počet významných znaků bez vnějšího propojení
 
 Identifikátory jsou významné do 247 znaků. Kompilátor neomezuje počet znaků, které lze v identifikátoru použít. Znaky nad limit jednoduše ignoruje.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

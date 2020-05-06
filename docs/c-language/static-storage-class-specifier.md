@@ -15,13 +15,13 @@ ms.locfileid: "62157939"
 ---
 # <a name="static-storage-class-specifier"></a>Statický specifikátor třídy úložiště
 
-Proměnná deklarovaná na vnitřní úrovni **statické** – specifikátor třídy úložiště má globální dobu platnosti, ale je viditelný pouze v rámci bloku ve kterém je deklarována. Pro konstantní řetězce je použití **statické** je užitečné, protože zmírňuje režii časté inicializace v často volaných funkcích.
+Proměnná deklarovaná na vnitřní úrovni se specifikátorem třídy úložiště **static** má globální životnost, ale je viditelná pouze v rámci bloku, ve kterém je deklarována. V případě konstantních řetězců je použití **static** užitečné, protože řeší režii časté inicializace v často volaných funkcích.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud neinicializujete explicitně **statické** proměnné, je inicializován na 0 ve výchozím nastavení. Uvnitř funkce **statické** způsobí, že je přiděleno úložiště a slouží jako definice. Vnitřní statické proměnné poskytují trvalé soukromé úložiště, které je viditelné pouze jedinou funkcí.
+Pokud **statickou** proměnnou explicitně neinicializujete, je ve výchozím nastavení inicializována na hodnotu 0. Uvnitř funkce **statická** způsobí přidělení úložiště a slouží jako definice. Vnitřní statické proměnné poskytují trvalé soukromé úložiště, které je viditelné pouze jedinou funkcí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy úložiště jazyka C](c-storage-classes.md)<br/>
 [Třídy úložiště (C++)](../cpp/storage-classes-cpp.md)

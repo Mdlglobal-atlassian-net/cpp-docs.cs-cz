@@ -34,19 +34,19 @@ Následující tabulka shrnuje úložiště přidružená ke každému základn�
 
 ## <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
 
-|Typ|Úložiště|
+|Typ|Storage|
 |----------|-------------|
 |**char**, **unsigned char**, **signed char**|1 bajt|
 |**krátký**, **unsigned short**|2 bajty|
 |**int**, **unsigned int**|4 bajty|
 |**Long**, **bez znaménka**|4 bajty|
 |**Long Long**, **bez znaménka Long Long**|8 bajtů|
-|**float**|4 bajty|
+|**Plovák**|4 bajty|
 |**double**|8 bajtů|
 |**Long Double**|8 bajtů|
 
 Datové typy jazyka C spadají do hlavních kategorií. *Integrální typy* zahrnují **int**, **char**, **short**, **Long**a **Long Long**. Tyto typy mohou být kvalifikovány **se znaménkem nebo** **bez**znaménka **a samotné samotný podpis lze** použít jako zkratku pro **unsigned int**. Výčtové typy (**Enum**) jsou také považovány za integrální typy pro většinu účelů. *Typy s plovoucí desetinnou* čárkou zahrnují **float**, **Double**a **Long Double**. *Aritmetické typy* zahrnují všechny plovoucí a integrální typy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

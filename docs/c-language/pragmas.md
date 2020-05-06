@@ -20,11 +20,11 @@ Následující [direktivy pragma jazyka c](../c-language/c-pragmas.md) jsou defi
 |||||
 |-|-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[data_seg](../preprocessor/data-seg.md)|[include_alias](../preprocessor/include-alias.md)|[setlocale](../preprocessor/setlocale.md)|
-|[auto_inline](../preprocessor/auto-inline.md)|[slouží](../preprocessor/function-c-cpp.md)|[intrinsic](../preprocessor/intrinsic.md)|[warning](../preprocessor/warning.md)|
-|[check_stack](../preprocessor/check-stack.md)|[hdrstop](../preprocessor/hdrstop.md)|[message](../preprocessor/message.md)||
-|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[optimize](../preprocessor/optimize.md)||
-|[vytvořena](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[pack](../preprocessor/pack.md)||
+|[auto_inline](../preprocessor/auto-inline.md)|[slouží](../preprocessor/function-c-cpp.md)|[ – vnitřní funkce](../preprocessor/intrinsic.md)|[upozornění](../preprocessor/warning.md)|
+|[check_stack](../preprocessor/check-stack.md)|[hdrstop](../preprocessor/hdrstop.md)|[Zpráva](../preprocessor/message.md)||
+|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[zvýšit](../preprocessor/optimize.md)||
+|[vytvořena](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[jazykové](../preprocessor/pack.md)||
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

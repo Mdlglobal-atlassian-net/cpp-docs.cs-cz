@@ -11,12 +11,12 @@ ms.locfileid: "62232953"
 ---
 # <a name="including-quoted-filenames"></a>Zahrnutí názvů souboru v uvozovkách
 
-**ANSI 3.8.2** podpora pro názvy v uvozovkách u zahrnutelných zdrojových souborů
+**3.8.2 ANSI** Podpora názvů v uvozovkách pro zdrojové soubory zahrnutelných
 
 Pokud zadáte jednoznačnou kompletní specifikaci cesty k souboru zahrnutí mezi dvě sady dvojitých uvozovek (" "), preprocesor prohledá pouze specifikaci cesty a ignoruje standardní adresáře.
 
-Při zahrnutí souborů zadaných jako [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec" hledání začne s adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdrojový soubor, který se právě zpracovává. Pokud není žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání pokračuje, jako by název souboru byl uzavřen do lomených závorek.
+Pro zahrnuté soubory zadané jako [#include](../preprocessor/hash-include-directive-c-cpp.md) "cesta-specifikace" začíná hledání adresáře adresáři nadřazeného souboru a pak pokračuje přes adresáře všech souborů prarodičů. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdrojový soubor, který se právě zpracovává. Pokud neexistuje žádný soubor @ a soubor nebyl nalezen, hledání pokračuje, jako by název souboru byl uzavřen do lomených závorek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

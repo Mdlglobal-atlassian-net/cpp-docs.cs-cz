@@ -16,9 +16,9 @@ ms.locfileid: "62232125"
 ---
 # <a name="recursive-functions"></a>Rekurzivní funkce
 
-Všechny funkce v programu jazyka C lze volat rekurzivně, což znamená, že volají samy sebe. Počet rekurzivních volání je omezen velikostí zásobníku. Zobrazit [/Stack (přidělení zásobníku)](../build/reference/stack-stack-allocations.md) (/ STACK) – možnost linkeru informace o linkeru možnostech tohoto nastavení velikosti zásobníku. Pokaždé, když je volána funkce přiděleno nové úložiště pro parametry a **automaticky** a **zaregistrovat** proměnné tak, aby jejich hodnoty v předchozím nedokončeném volání se nepřepíšou. Parametry jsou přímo přístupné pouze instanci funkce, ve které jsou vytvořeny. Předchozí parametry nejsou následné instanci funkce přímo přístupné.
+Všechny funkce v programu jazyka C lze volat rekurzivně, což znamená, že volají samy sebe. Počet rekurzivních volání je omezen velikostí zásobníku. Informace o možnostech linkeru, které nastavují velikost zásobníku, naleznete v tématu [/Stack (alokace zásobníku)](../build/reference/stack-stack-allocations.md) (/Stack). Pokaždé, když je funkce volána, je přiděleno nové úložiště pro parametry a proměnné **auto** a **Register** tak, aby jejich hodnoty v předchozích nedokončených voláních nebyly přepsány. Parametry jsou přímo přístupné pouze instanci funkce, ve které jsou vytvořeny. Předchozí parametry nejsou následné instanci funkce přímo přístupné.
 
-Všimněte si, že proměnné deklarované s **statické** nevyžadují nové úložiště s každým rekurzivním voláním. Jejich úložiště existuje po dobu životnosti programu. Každý odkaz na takovou proměnnou přistupuje do stejné oblasti úložiště.
+Všimněte si, že proměnné deklarované pomocí **statického** úložiště nevyžadují nové úložiště s každým rekurzivním voláním. Jejich úložiště existuje po dobu životnosti programu. Každý odkaz na takovou proměnnou přistupuje do stejné oblasti úložiště.
 
 ## <a name="example"></a>Příklad
 
@@ -46,6 +46,6 @@ int factorial( int num )      /* Function definition */
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Volání funkcí](../c-language/function-calls.md)

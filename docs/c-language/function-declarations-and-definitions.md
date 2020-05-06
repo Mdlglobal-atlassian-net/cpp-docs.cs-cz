@@ -24,8 +24,8 @@ Prototypy funkce zavádí název funkce, její návratový typ a typ a počet je
 
 ## <a name="remarks"></a>Poznámky
 
-Deklarace funkcí i proměnných se mohou vyskytovat uvnitř nebo vně definice funkce. O deklaraci uvnitř definice funkce se říká, že se vyskytuje na „vnitřní“ nebo „místní“ úrovni. O deklaracích mimo všechny definice funkcí se říká, že se vyskytují na úrovni „vnější“, „globální“ nebo na úrovni „oboru souboru“. Definice proměnných se mohou podobně jako deklarace vyskytovat na vnitřní (uvnitř definice funkce) nebo vnější (mimo všechny definice funkcí) úrovni. Definice funkcí se vždy vyskytují na vnější úrovni. Definice funkcí jsou popsány dále v [definice funkcí](../c-language/c-function-definitions.md). Prototypy funkcí jsou popsané v [prototypy](../c-language/function-prototypes.md).
+Deklarace funkcí i proměnných se mohou vyskytovat uvnitř nebo vně definice funkce. O deklaraci uvnitř definice funkce se říká, že se vyskytuje na „vnitřní“ nebo „místní“ úrovni. O deklaracích mimo všechny definice funkcí se říká, že se vyskytují na úrovni „vnější“, „globální“ nebo na úrovni „oboru souboru“. Definice proměnných se mohou podobně jako deklarace vyskytovat na vnitřní (uvnitř definice funkce) nebo vnější (mimo všechny definice funkcí) úrovni. Definice funkcí se vždy vyskytují na vnější úrovni. Definice funkcí jsou podrobněji popsány v tématu [definice funkcí](../c-language/c-function-definitions.md). Prototypy funkcí jsou pokryté v [prototypech funkcí](../c-language/function-prototypes.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

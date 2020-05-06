@@ -13,7 +13,7 @@ ms.locfileid: "64344184"
 ---
 # <a name="integers"></a>Celá čísla
 
-- [Rozsah hodnoty typu Integer](../c-language/range-of-integer-values.md)
+- [Rozsah hodnot typu Integer](../c-language/range-of-integer-values.md)
 
 - [Degradace celých čísel](../c-language/demotion-of-integers.md)
 
@@ -23,6 +23,6 @@ ms.locfileid: "64344184"
 
 - [Posuny doprava](../c-language/right-shifts.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

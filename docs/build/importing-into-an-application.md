@@ -17,20 +17,20 @@ ms.locfileid: "62188883"
 
 Funkce můžete importovat do aplikace pomocí dvou metod:
 
-- Pomocí klíčových slov **__declspec(dllimport)** v definici funkce v hlavní aplikaci
+- Použití klíčových slov **__declspec (dllimport)** v definici funkce v hlavní aplikaci
 
-- Pomocí souboru modulu definice (.def) společně s **deklarace __declspec(dllimport)**
+- Použijte soubor definice modulu (. def) spolu s **__declspec (dllimport)** .
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Import do aplikace pomocí __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Import volání funkcí pomocí deklarace __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
+- [Import volání funkcí pomocí __declspec (dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Import dat pomocí deklarace __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
+- [Import dat pomocí __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Import pomocí souborů DEF](importing-using-def-files.md)
+- [Import pomocí DEF souborů](importing-using-def-files.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Import a export](importing-and-exporting.md)

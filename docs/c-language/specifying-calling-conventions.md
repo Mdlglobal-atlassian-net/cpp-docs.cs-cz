@@ -11,12 +11,12 @@ ms.locfileid: "62158208"
 ---
 # <a name="specifying-calling-conventions"></a>Určení konvencí volání
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Informace o konvencích volání naleznete v tématu [témata o konvencích volání](../cpp/calling-conventions.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy funkce](../c-language/function-attributes.md)

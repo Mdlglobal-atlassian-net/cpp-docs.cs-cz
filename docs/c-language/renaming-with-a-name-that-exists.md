@@ -11,10 +11,10 @@ ms.locfileid: "62232041"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>Přejmenování s názvem, který existuje.
 
-**ANSI 4.9.4.2** vliv, pokud existuje soubor s novým názvem před voláním **přejmenovat** – funkce
+**4.9.4.2 ANSI** Efekt, pokud před voláním funkce **přejmenování** existuje soubor s novým názvem
 
-Pokud při pokusu o přejmenování souboru s názvem, který existuje, **přejmenovat** funkce selže a vrátí kód chyby.
+Pokud se pokusíte přejmenovat soubor pomocí názvu, který existuje, funkce **přejmenování** se nezdaří a vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

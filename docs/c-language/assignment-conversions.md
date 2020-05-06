@@ -16,7 +16,7 @@ ms.locfileid: "71998707"
 
 V operacích přiřazení je typ přiřazené hodnoty převeden na typ proměnné, která obdrží přiřazení. Jazyk C umožňuje převod mezi celočíselnými typy a typy s plovoucí desetinnou čárkou i v případě, že je informace při převodu ztracena. Použitá metoda převodu závisí na typech zahrnutých v přiřazení, jak je popsáno v tématu [obvyklé aritmetické převody](../c-language/usual-arithmetic-conversions.md) a v následujících částech:
 
-- [Převody z podepsaných integrálních typů](../c-language/conversions-from-signed-integral-types.md)
+- [Převody z integrálních typů se znaménkem](../c-language/conversions-from-signed-integral-types.md)
 
 - [Převody z celočíselných typů bez znaménka](../c-language/conversions-from-unsigned-integral-types.md)
 
@@ -28,6 +28,6 @@ V operacích přiřazení je typ přiřazené hodnoty převeden na typ proměnn�
 
 Kvalifikátory typu neovlivňují možnost Povolit převod, i když na levé straně přiřazení nelze použít **konstantní** l-value.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody typu](../c-language/type-conversions-c.md)

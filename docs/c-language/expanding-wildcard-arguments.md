@@ -16,21 +16,21 @@ ms.locfileid: "62233804"
 ---
 # <a name="expanding-wildcard-arguments"></a>Rozbalení argumentů zástupných znaků
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Při spuštění programu v jazyce C, můžete použít buď dva zástupné znaky – otazník (?) a hvězdičku (*) – chcete zadat cestu a název souboru argument v příkazovém řádku.
+Když spustíte program v jazyce C, můžete použít kterýkoli ze dvou zástupných znaků – otazník (?) a hvězdička (*) – pro zadání názvů filename a Path na příkazovém řádku.
 
-Zástupné znaky nejsou ve výchozím nastavení, rozbalení argumentů příkazového řádku. Můžete nahradit vektoru normální argument `argv` načítání rutinu s verzí, díky propojení s setargv.obj nebo wsetargv.obj soubor rozšiřovat zástupné znaky. Pokud program používá `main` funkce, propojení s knihovnou setargv.obj. Pokud program používá `wmain` funkce, propojení s knihovnou wsetargv.obj. Obě tyto mají ekvivalentní chování.
+Ve výchozím nastavení nejsou zástupné znaky rozbaleny v argumentech příkazového řádku. Můžete nahradit rutinu normálního `argv` načítání normální argument pomocí verze, která rozbalí zástupné znaky, propojením se souborem setargv. obj nebo wsetargv. obj. Pokud program používá `main` funkci, připojte se k setargv. obj. Pokud program používá `wmain` funkci, připojte se k wsetargv. obj. Oba mají stejné chování.
 
-Chcete-li propojit s setargv.obj nebo wsetargv.obj, použijte **/link** možnost. Příklad:
+Chcete-li vytvořit propojení s setargv. obj nebo wsetargv. obj, použijte možnost **/Link** . Příklad:
 
-**cl example.c/Link setargv.obj**
+**Příklad: c/Link setargv. obj**
 
-Zástupné znaky jsou rozbaleny stejným způsobem jako příkazy operačního systému. (Viz příručka uživatele operačního systému, pokud nejste obeznámeni se zástupnými znaky.)
+Zástupné znaky se rozšíří stejným způsobem jako příkazy operačního systému. (Pokud neznáte zástupné znaky, přečtěte si uživatelskou příručku k operačnímu systému.)
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Možnosti odkazů](../c-runtime-library/link-options.md)<br/>
+[Možnosti propojení](../c-runtime-library/link-options.md)<br/>
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

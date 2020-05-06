@@ -14,8 +14,8 @@ ms.locfileid: "62232836"
 ---
 # <a name="linkage"></a>Propojení
 
-Názvy identifikátorů mohou odkazovat na různé identifikátory v různých rozsazích. Identifikátor deklarovaný v různých rozsazích nebo ve stejném rozsahu více než jednou může odkazovat na stejný identifikátor nebo funkci pomocí procesu nazývaného „propojení“. Propojení určuje části programu, ve kterých lze identifikátor odkazovat (jeho „viditelnost“). Existují tři typy propojení: [interní](../c-language/internal-linkage.md), [externí](../c-language/external-linkage.md), a [bez propojení](../c-language/no-linkage.md).
+Názvy identifikátorů mohou odkazovat na různé identifikátory v různých rozsazích. Identifikátor deklarovaný v různých rozsazích nebo ve stejném rozsahu více než jednou může odkazovat na stejný identifikátor nebo funkci pomocí procesu nazývaného „propojení“. Propojení určuje části programu, ve kterých lze identifikátor odkazovat (jeho „viditelnost“). Existují tři druhy propojení: [interní](../c-language/internal-linkage.md), [externí](../c-language/external-linkage.md)a [bez propojení](../c-language/no-linkage.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

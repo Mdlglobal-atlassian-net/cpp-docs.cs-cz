@@ -13,21 +13,21 @@ ms.locfileid: "64342254"
 ---
 # <a name="checking-for-memory-overwrites"></a>Kontrola přepisů paměti
 
-Pokud dojde k narušení přístupu při volání funkce haldy manipulaci s je možné, že má váš program poškození haldy. Běžné příznakem této situaci by byl:
+Pokud dojde k narušení přístupu při volání funkce manipulace s haldou, je možné, že váš program poškodil haldu. Běžným příznakem této situace by bylo:
 
 ```
 Access Violation in _searchseg
 ```
 
-[_Heapchk –](../c-runtime-library/reference/heapchk.md) funkce je k dispozici v obou ladění a verze sestavení (pouze Windows NT) pro ověřování integrity haldy knihovny běhu. Můžete použít `_heapchk` stejným způsobem jako `AfxCheckMemory` funkce haldy přepsat, izolovat například:
+Funkce [_heapchk](../c-runtime-library/reference/heapchk.md) je k dispozici v sestavení ladění i vydaných verzí (pouze systém Windows NT) pro ověření integrity haldy běhové knihovny. Můžete použít `_heapchk` podobným způsobem jako `AfxCheckMemory` funkce pro izolaci haldy, například:
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-Pokud se tato funkce někdy nezdaří, je třeba izolovat v tomto okamžiku byla poškozena halda.
+Pokud tato funkce někdy neproběhne úspěšně, je nutné izolovat, v jakém okamžiku byla halda poškozena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Oprava problémů se sestavením pro vydání](fixing-release-build-problems.md)

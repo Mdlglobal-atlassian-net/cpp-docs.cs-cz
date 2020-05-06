@@ -14,7 +14,7 @@ ms.locfileid: "62233126"
 ---
 # <a name="functions-c"></a>Funkce (C)
 
-Funkce je základní modulární jednotkou v jazyce C. Funkce je obvykle určena k provedení určitého úkolu a její jméno často odráží tento úkol. Funkce obsahuje deklarace a příkazy. Tato část popisuje, jak deklarovat, definovat a volat funkce jazyka C. Další popsána témata jsou:
+Funkce je základní modulární jednotka v jazyce C. Funkce je obvykle navržena k provedení konkrétního úkolu a její název často odráží tuto úlohu. Funkce obsahuje deklarace a příkazy. Tato část popisuje, jak deklarovat, definovat a volat funkce jazyka C. Další popsaná témata:
 
 - [Přehled funkcí](../c-language/overview-of-functions.md)
 
@@ -24,7 +24,7 @@ Funkce je základní modulární jednotkou v jazyce C. Funkce je obvykle určena
 
 - [Vložené funkce](../c-language/inline-functions.md)
 
-- [Knihovna DLL funkce exportu a importu](../c-language/dll-import-and-export-functions.md)
+- [Funkce exportu a importu DLL](../c-language/dll-import-and-export-functions.md)
 
 - [Holé funkce](../c-language/naked-functions.md)
 
@@ -36,6 +36,6 @@ Funkce je základní modulární jednotkou v jazyce C. Funkce je obvykle určena
 
 - [Parametry](../c-language/parameters.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

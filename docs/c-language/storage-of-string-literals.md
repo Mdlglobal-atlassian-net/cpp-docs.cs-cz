@@ -13,16 +13,16 @@ ms.locfileid: "62157861"
 ---
 # <a name="storage-of-string-literals"></a>Ukládání textových literálů
 
-Znaky textového literálu jsou uloženy v pořadí v oblastech souvislé paměti. Řídicí sekvence (jako například **\\ \\** nebo  **\\"**) v rámci textového literálu počítá jako jeden znak. Znak null (reprezentovaný **\0** sekvence escape) se automaticky připojí a označí konce každého řetězce literálu. (K tomu dochází během [fáze překladu](../preprocessor/phases-of-translation.md) 7.) Všimněte si, že kompilátor nesmí uložit dva shodné řetězce na dvě různá místa. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) vynutí, aby kompilátor umístí jednu kopii shodného řetězce do spustitelného souboru.
+Znaky textového literálu jsou uloženy v pořadí v oblastech souvislé paměti. Sekvence escape (například ** \\ ** nebo ** \\"**) v rámci řetězcového literálu se počítá jako jeden znak. Znak null (reprezentovaný řídicí sekvencí **\ 0** ) je automaticky připojen k a označuje konec, každý řetězcový literál. (K tomu dochází během [fáze překladu](../preprocessor/phases-of-translation.md) 7.) Všimněte si, že kompilátor nemůže uložit dva identické řetězce na dvou různých adresách. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) vynutí, aby kompilátor umístil jednu kopii stejných řetězců do spustitelného souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Řetězce mají statickou dobu ukládání. Zobrazit [třídy úložiště](../c-language/c-storage-classes.md) informace o dobou trvání úložiště.
+Řetězce mají statickou dobu ukládání. Informace o době trvání úložiště najdete v tématu [třídy úložiště](../c-language/c-storage-classes.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Textové literály jazyka C](../c-language/c-string-literals.md)

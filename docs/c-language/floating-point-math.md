@@ -17,6 +17,6 @@ ms.locfileid: "62233693"
 
 - [Zkrácení hodnot s plovoucí desetinnou čárkou](../c-language/truncation-of-floating-point-values.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

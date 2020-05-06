@@ -14,30 +14,30 @@ ms.locfileid: "62312560"
 ---
 # <a name="compound-statement-c"></a>Složený příkaz (C)
 
-Složený příkaz (také nazývané "blok") se obvykle zobrazuje jako text jiného příkazu, jako **Pokud** příkazu. [Deklarace a typy](../c-language/declarations-and-types.md) popisuje formulář opravdu zavřít a význam deklarace, které se mohou objevit v čele složený příkaz.
+Složený příkaz (označovaný také jako "Block") se obvykle zobrazuje jako tělo jiného příkazu, jako je například příkaz **if** . [Deklarace a typy](../c-language/declarations-and-types.md) popisují formu a význam deklarací, které se mohou objevit na začátku složeného příkazu.
 
 ## <a name="syntax"></a>Syntaxe
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam deklarací*<sub>optimalizované</sub> *seznamu příkazů*<sub>optimalizované</sub> **}**
+*složený příkaz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklarace-seznam*příkazů<sub>opt</sub> *-list*<sub>opt</sub> **}**
 
 *seznam deklarací*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam deklarací* *deklarace*
+&nbsp;&nbsp;&nbsp;&nbsp;*změny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *seznamu deklarací* *declaration*
 
 *seznam příkazů*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam příkazů* *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;*vydá*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;příkaz *-list –* *příkaz*
 
-Pokud existují deklarace, musí předcházet všechny příkazy. Obor jednotlivé identifikátory deklarované na začátku složený příkaz sahá od jeho deklarace konec bloku. Je viditelné v rámci bloku deklaraci stejný identifikátor neexistuje ve vnitřním bloku.
+Pokud existují deklarace, musí být před všemi příkazy. Rozsah každého identifikátoru deklarovaného na začátku složeného příkazu se rozšíří z jeho bodu deklarace na konec bloku. Je viditelný v rámci bloku, pokud v vnitřním bloku neexistuje deklarace stejného identifikátoru.
 
-Identifikátory v složeného příkazu se předpokládá, že **automaticky** Pokud nejsou explicitně deklarovány jinak s **zaregistrovat**, **statické**, nebo `extern`, s výjimkou funkcí, která může být pouze `extern`. Můžete vynechat `extern` specifikátor v deklaracích funkcí a funkci, bude i nadále `extern`.
+Identifikátory v složeném příkazu jsou považovány za **Automatické** , pokud nejsou explicitně deklarovány jinak s **Registry**, **static**nebo `extern`, s výjimkou funkcí `extern`, které mohou být pouze. Můžete ponechat `extern` specifikátor v deklaracích funkcí a funkce bude i nadále `extern`.
 
-Úložiště není přidělená a inicializace není povolena, pokud proměnné nebo funkce je deklarována v složený příkaz pomocí třídy úložiště `extern`. Deklarace odkazuje na externí proměnné nebo funkce definována jinde.
+Úložiště není přidělené a inicializace není povolená, pokud je v složeném příkazu s třídou `extern`úložiště deklarovaná proměnná nebo funkce. Deklarace odkazuje na externí proměnnou nebo funkci definovanou jinde.
 
-Proměnné deklarované v bloku s **automaticky** nebo **zaregistrovat** – klíčové slovo se a nevyčerpané prostředky se, pokud je potřeba, inicializuje pokaždé, když se zadá složený příkaz. Tyto proměnné nejsou definovány po složený příkaz je ukončen. Pokud je proměnná deklarována uvnitř bloku **statické** atribut, proměnná je inicializována při provádění programu začíná a udržuje její hodnotu v celém programu. Zobrazit [třídy úložiště](../c-language/c-storage-classes.md) informace o **statické**.
+Proměnné deklarované v bloku s klíčovým slovem **auto** nebo **Register** jsou znovu přiděleny a v případě potřeby inicializovány při každém zadání složeného příkazu. Tyto proměnné nejsou definovány po ukončení složeného příkazu. Pokud Proměnná deklarovaná uvnitř bloku má **statický** atribut, je proměnná inicializována při zahájení provádění programu a udržuje její hodnotu v celém programu. Informace o **statických**třídách naleznete v tématu [třídy úložiště](../c-language/c-storage-classes.md) .
 
-Tento příklad ukazuje složený příkaz:
+Tento příklad znázorňuje složený příkaz:
 
 ```
 if ( i > 0 )
@@ -48,8 +48,8 @@ if ( i > 0 )
 }
 ```
 
-V tomto příkladu Pokud `i` je větší než 0, všechny příkazy uvnitř složeného příkazu jsou provedeny v pořadí.
+V tomto příkladu, pokud `i` je větší než 0, všechny příkazy uvnitř složeného příkazu jsou spouštěny v pořadí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy](../c-language/statements-c.md)

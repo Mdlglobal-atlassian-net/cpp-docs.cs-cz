@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytváření komponent COM bez registrace'
+title: 'Postupy: Sestavení součásti modelu COM bez registrace'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
@@ -11,22 +11,22 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188935"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Postupy: Vytváření komponent COM bez registrace
+# <a name="how-to-build-registration-free-com-components"></a>Postupy: Sestavení součásti modelu COM bez registrace
 
-Komponenty modelu COM bez registrace jsou komponenty modelu COM, které mají manifestů, které jsou součástí knihovny DLL.
+Komponenty modelu COM bez registrace jsou komponenty modelu COM, které mají manifesty integrované do knihoven DLL.
 
-### <a name="to-build-manifests-into-com-components"></a>K vytvoření manifestů do komponenty modelu COM
+### <a name="to-build-manifests-into-com-components"></a>Sestavení manifestů do komponent modelu COM
 
-1. Otevření stránek vlastností projektu pro komponenty modelu COM.
+1. Otevřete stránky vlastností projektu pro komponentu COM.
 
-1. Rozbalte **vlastnosti konfigurace** uzel a potom rozbalte **Nástroj Manifest** uzlu.
+1. Rozbalte uzel **Vlastnosti konfigurace** a poté rozbalte uzel **Nástroj manifest** .
 
-1. Vyberte **vstupní a výstupní** stránku vlastností a pak nastavte **vložit Manifest** vlastností **Ano**.
+1. Vyberte stránku vlastností **vstup a výstup** a nastavte vlastnost pro **vložení manifestu** na **hodnotu Ano**.
 
-1. Klikněte na **OK**.
+1. Klikněte na tlačítko **OK**.
 
 1. Sestavte řešení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Postupy: Sestavení izolované aplikace pro zpracování součástí modelu COM](how-to-build-isolated-applications-to-consume-com-components.md)

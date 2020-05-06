@@ -13,107 +13,107 @@ ms.locfileid: "62157737"
 ---
 # <a name="summary-of-constants"></a>Souhrn konstant
 
-*konstantní*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*floating-point-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*integer-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*character-constant*
+*konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*plovoucí desetinná čárka – konstanta*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*celočíselná konstanta*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výčet – konstanta*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Znaková konstanta*
 
-*floating-point-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *exponent část*<sub>optimalizované</sub> *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *exponent část* *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub>
+*plovoucí desetinná*čárka – konstanta:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*zlomek – konstanta* *exponentu –* volitelná<sub>možnost souhlasu</sub> *s plovoucí příponou*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;exponent *číselné sekvence* – *část* s *plovoucí desetinnou čárkou*– možnost<sub>výslovného</sub> názvu
 
-*desetinná konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
+*zlomková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>výslovný souhlas</sub> *číselné posloupnosti* **.** *sekvence číslic*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*  **.**
 
-*exponent-part*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*
+*exponent – část*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *symbol*<sub>opt</sub> e *-číslice opt – posloupnost*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**E** *Symbol*<sub>opt</sub> E *-číslice opt – posloupnost*
 
-*znaménko*: jeden z<br/>
+*Sign*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
 *sekvence číslic*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
+&nbsp;&nbsp;&nbsp;&nbsp;*základní*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;číslice *sekvence číslic* *digit*
 
-*číslo s plovoucí čárkou přípona*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**l f F L**
+*plovoucí přípona*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**f l F L**
 
-*integer-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*binární soubor konstanta* *číselnou příponou*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
+*celočíselná konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Volitelná možnost pro *celočíselnou příponu*<sub>opt</sub> typu *Decimal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*binární-konstanta* *-celočíselná přípona –*<sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičková* , *celočíselná přípona –*<sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ předpony*<sub>opt</sub> v *šestnáctkové soustavě konstanty*
 
-*decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
+*Desítková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nenulová číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*desítková číslice s konstantou* *digit*
 
-*binární soubor konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0b** *binary-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0B** *binary-digit*
+*binární konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0b** *binární číslice* 0b<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0B** *binární číslice* 0b
 
-*osmičkové konstanty*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
+*osmičková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0,8**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičková-konstantní* *osmičková číslice*
 
-*hexadecimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0X**  *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
+*šestnáctková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x***šestnáctkové číslice* 0x  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0X***šestnáctkové číslice* 0x  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;šestnáctková *číslice* v *šestnáctkové soustavě*
 
-*nenulovou číslicí*: jeden z<br/>
+*nenulová číslice*: jedna hodnota z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
 
-*uveden jako osmičková číslice*: jeden z<br/>
+*osmičková číslice*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**
 
-*šestnáctkové číslice*: jeden z<br/>
+*šestnáctková číslice*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**
 
-*unsigned-suffix*: jeden z<br/>
+*přípona bez znaménka*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
-*Long-suffix*: jeden z<br/>
+*Long-přípona*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
-*character-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *c-char pořadí* **.**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L "** *c-char pořadí* **.**
+*znaková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**'** *c-char-Sequence* **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L '** *c-char-Sequence* **'**
 
-*integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long-suffix* *unsigned-suffix*<sub>optimalizované</sub>
+*celočíselná přípona*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přípona* *dlouhé*<sub>přípony</sub> bez přípony<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přípona*<sub>opt</sub> *dlouhé přípony bez přípony*
 
-*c-char-sequence*:<br/>
+*sekvence c-char-Sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*c-char*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*c – znak sekvence* *c-char*
+&nbsp;&nbsp;&nbsp;&nbsp;*c-char-Sequence* *c-char*
 
 *c-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě jednoduché uvozovky (**"**), zpětného lomítka (**\\**), nebo sekvence escape znaků nového řádku
+&nbsp;&nbsp;&nbsp;&nbsp;Libovolný člen zdrojové znakové sady s výjimkou jednoduchých uvozovek (**'**), zpětného lomítka (**\\**) nebo znaku nového řádku řídicí sekvence
 
-*řídicí sekvence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*simple-escape-sequence*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-escape-sequence*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence*
+*sekvence escape*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jednoduchá sekvence escape*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičková – řídicí sekvence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimální sekvence znaků*
 
-*Simple-escape-sequence*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \V**<br/>
+*Jednoduchá sekvence escape*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \v**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**\\' \\" \\\ \\?**
 
-*osmičková řídicí sekvence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *uveden jako osmičková číslice*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit* *octal-digit*
+*osmičková-řídicí sekvence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\***osmičková číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\***osmičková číslice* *osmičkové* číslice<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\***osmičková číslice* *osmičkové* *číslice číslice*
 
-*hexadecimal-escape-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\x** *šestnáctkové číslice*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence* *hexadecimal-digit*
+*hexadecimální sekvence znaků*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\x** *hexadecimální číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové znaky-sekvence* – *hexadecimální číslice*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)<br/>

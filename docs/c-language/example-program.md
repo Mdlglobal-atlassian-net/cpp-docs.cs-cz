@@ -11,7 +11,7 @@ ms.locfileid: "62233932"
 ---
 # <a name="example-program"></a>Ukázkový program
 
-Následující zdrojová aplikace jazyka C se skládá ze dvou zdrojových souborů. Poskytuje přehled o různých deklaracích a definicích, které je možné v aplikaci jazyka C použít. V této příručce dalších částech popisují, jak psát tyto deklarace, definice a inicializace a jak používat klíčová slova jazyka C, jako **statické** a `extern`. Funkce `printf` je deklarována v souboru záhlaví STDIO.H jazyka C.
+Následující zdrojová aplikace jazyka C se skládá ze dvou zdrojových souborů. Poskytuje přehled o různých deklaracích a definicích, které je možné v aplikaci jazyka C použít. Pozdější části této knihy popisují, jak napsat tyto deklarace, definice a inicializace a jak používat klíčová slova jazyka C, jako jsou **statické** a `extern`. Funkce `printf` je deklarována v souboru záhlaví STDIO.H jazyka C.
 
 Funkce `main` a `max` jsou považovány za umístěné v samostatných souborech a provádění aplikace začíná funkcí `main`. Před funkcí `main` nejsou spuštěny žádné explicitní uživatelské funkce.
 
@@ -67,12 +67,12 @@ int max( int a, int b )          // Note formal parameters are
 
 FILE1.C obsahuje prototyp funkce `max`. Tento druh deklarace se někdy nazývá „dopředná deklarace“, protože funkce je deklarována před jejím použitím. Definice funkce `main` zahrnuje volání funkce `max`.
 
-Řádky začínající `#define` jsou direktivy preprocesoru. Tyto direktivy sdělují preprocesoru, že má nahradit identifikátory `ONE`, `TWO` a `THREE` v celém souboru FILE1.C čísly `1`, `2` a `3`. Direktivy se však nevztahují na soubor FILE2.C, který je kompilován samostatně a následně připojen k souboru FILE1.C. Řádek začínající příkazem `#include` sděluje kompilátoru, že je třeba zahrnout soubor STDIO.H, který obsahuje prototyp funkce `printf`. [Direktivy preprocesoru](../preprocessor/preprocessor-directives.md) jsou vysvětlené v *odkazu preprocesoru*.
+Řádky začínající `#define` jsou direktivy preprocesoru. Tyto direktivy sdělují preprocesoru, že má nahradit identifikátory `ONE`, `TWO` a `THREE` v celém souboru FILE1.C čísly `1`, `2` a `3`. Direktivy se však nevztahují na soubor FILE2.C, který je kompilován samostatně a následně připojen k souboru FILE1.C. Řádek začínající příkazem `#include` sděluje kompilátoru, že je třeba zahrnout soubor STDIO.H, který obsahuje prototyp funkce `printf`. [Direktivy preprocesoru](../preprocessor/preprocessor-directives.md) jsou vysvětleny v *odkazu preprocesoru*.
 
 FILE1.C používá pro inicializaci globálních proměnných `a` a `b` definující deklarace. Místní proměnné `c` a `d` jsou deklarovány, ale nejsou inicializovány. Úložiště je alokováno pro všechny tyto proměnné. Statické i externí proměnné `u` a `v` jsou automaticky inicializovány na hodnotu 0. Proto pouze `a`, `b`, `u` a `v` obsahují při deklaraci smysluplné hodnoty, protože jsou inicializovány explicitně nebo implicitně. FILE2.C obsahuje definici funkce `max`. Tato definice obsluhuje volání `max` v souboru FILE1.C.
 
-Životnost a viditelnost identifikátorů, které jsou popsány v [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md). Další informace o funkcích, naleznete v tématu [funkce](../c-language/functions-c.md).
+Doba života a viditelnosti identifikátorů je popsána v tématu [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md). Další informace o funkcích naleznete v tématu [Functions](../c-language/functions-c.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

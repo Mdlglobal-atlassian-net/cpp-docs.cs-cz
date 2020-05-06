@@ -16,12 +16,12 @@ ms.locfileid: "62188752"
 ---
 # <a name="improving-compiler-throughput"></a>Zvýšení propustnosti kompilátoru
 
-Použijte soubory předkompilovaných hlaviček na svůj projekt sestavit rychleji. To je důležité, pokud používáte ATL, MFC nebo soubory hlaviček sady Windows SDK.
+Pomocí předkompilovaných hlavičkových souborů můžete sestavit projekt rychleji. To je důležité, pokud používáte knihovny ATL, MFC nebo soubory hlaviček Windows SDK.
 
-Zobrazit [/Yc](reference/yc-create-precompiled-header-file.md) a [/Yu](reference/yu-use-precompiled-header-file.md).
+Viz [/YC](reference/yc-create-precompiled-header-file.md) a [/Yu](reference/yu-use-precompiled-header-file.md).
 
-Další informace o předkompilovaných hlaviček, naleznete v tématu [Předkompilované soubory hlaviček](creating-precompiled-header-files.md).
+Další informace o předkompilovaných hlavičkách naleznete v tématu [předkompilované soubory hlaviček](creating-precompiled-header-files.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace kódu](optimizing-your-code.md)

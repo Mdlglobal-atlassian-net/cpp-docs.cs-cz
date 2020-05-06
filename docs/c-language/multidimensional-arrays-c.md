@@ -21,7 +21,7 @@ Výraz dolního indexu může mít také více dolních indexů následovně:
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Výrazy dolního indexu se přiřazují zleva doprava. Výraz dolního indexu v levé části, *Výraz1* **[** *Výraz2* **]** , je vyhodnocen jako první. Adresa, která je výsledkem přidávání *Výraz1* a *Výraz2* Forms, výrazu ukazatele; pak se do tohoto výrazu ukazatele přidá *expression3* , aby se vytvořil nový výraz ukazatele, a tak dále, dokud se nepřidá poslední výraz dolního indexu. Operátor dereference (<strong>\*</strong>) je použit po vyhodnocení posledního výrazu v dolním indexu, pokud hodnota koncového ukazatele neadresuje typ pole (viz příklady níže).
+Výrazy dolního indexu se přiřazují zleva doprava. Výraz dolního indexu v levé části, *Výraz1* **[** *Výraz2* **]**, je vyhodnocen jako první. Adresa, která je výsledkem přidávání *Výraz1* a *Výraz2* Forms, výrazu ukazatele; pak se do tohoto výrazu ukazatele přidá *expression3* , aby se vytvořil nový výraz ukazatele, a tak dále, dokud se nepřidá poslední výraz dolního indexu. Operátor dereference (<strong>\*</strong>) je použit po vyhodnocení posledního výrazu v dolním indexu, pokud hodnota koncového ukazatele neadresuje typ pole (viz příklady níže).
 
 Výrazy s více dolními indexy odkazují na prvky „vícerozměrných polí“. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole.
 
@@ -68,6 +68,6 @@ V prvním z těchto příkazů je výraz `prop[2][1]` platným odkazem na trojro
 
 Podobně, výsledek výrazu `prop[2]` v druhém příkazu `ipp = prop[2];` je hodnota ukazatele odkazující na dvourozměrné pole.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátor dolního indexu: []](../cpp/subscript-operator.md)
+[Operátor dolního indexu:](../cpp/subscript-operator.md)

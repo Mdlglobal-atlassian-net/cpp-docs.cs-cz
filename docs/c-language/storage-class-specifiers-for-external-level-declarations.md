@@ -25,13 +25,13 @@ ms.locfileid: "62157952"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specifikátory třídy úložiště pro deklarace na externí úrovni
 
-Externí proměnné jsou proměnné v rozsahu souboru. Jsou definovány mimo jakoukoliv funkci a jsou potenciálně dostupné pro mnoho funkcí. Funkce lze definovat pouze na externí úrovni, a proto nemohou být vnořeny. Ve výchozím nastavení jsou všechny odkazy na vnější proměnné a funkce se stejným názvem odkazy na stejný objekt, což znamená, že mají „vnější propojení“. (Můžete použít **statické** – klíčové slovo chcete toto chování změnit. Zobrazit informace dále v této části Další podrobnosti o **statické**.)
+Externí proměnné jsou proměnné v rozsahu souboru. Jsou definovány mimo jakoukoliv funkci a jsou potenciálně dostupné pro mnoho funkcí. Funkce lze definovat pouze na externí úrovni, a proto nemohou být vnořeny. Ve výchozím nastavení jsou všechny odkazy na vnější proměnné a funkce se stejným názvem odkazy na stejný objekt, což znamená, že mají „vnější propojení“. (K přepsání můžete použít klíčové slovo **static** . Další informace o **statických**verzích najdete v části Další informace v této části.)
 
 Deklarace proměnných na externí úrovni jsou buď definice proměnných („definující deklarace“), nebo odkazy na proměnné definované jinde („odkazující deklarace“).
 
 Externí deklarace proměnné, která také inicializuje proměnnou (implicitně nebo explicitně), je definující deklarací proměnné. Definici na externí úrovni lze provést několika způsoby:
 
-- Proměnná deklarovaná pomocí **statické** specifikátor storage-class. Můžete explicitně inicializovat **statické** proměnné pomocí konstantního výrazu, jak je popsáno v [inicializace](../c-language/initialization.md). Při vynechání inicializátoru je ve výchozím nastavení proměnná inicializována na hodnotu 0. Například tyto dva příkazy jsou oba považovány za definice proměnné `k`.
+- Proměnná, kterou deklarujete se specifikátorem třídy úložiště **static** . **Statickou** proměnnou lze explicitně inicializovat pomocí konstantního výrazu, jak je popsáno v tématu [inicializace](../c-language/initialization.md). Při vynechání inicializátoru je ve výchozím nastavení proměnná inicializována na hodnotu 0. Například tyto dva příkazy jsou oba považovány za definice proměnné `k`.
 
     ```
     static int k = 16;
@@ -40,17 +40,17 @@ Externí deklarace proměnné, která také inicializuje proměnnou (implicitně
 
 - Proměnná, která je explicitně inicializována na externí úrovni. Například `int j = 3;` je definicí proměnné `j`.
 
-V deklaracích proměnných na externí úrovni (tedy mimo všechny funkce), můžete použít **statické** nebo `extern` – specifikátor třídy úložiště nebo specifikátor třídy úložiště zcela vynechat. Nelze použít **automaticky** a **zaregistrovat** *storage-class-specifier* terminály na vnější úrovni.
+V deklaracích proměnných na externí úrovni (tj. mimo všechny funkce) můžete použít specifikátor třídy úložiště **static** nebo `extern` Storage nebo zcela vynechat specifikátor třídy úložiště. Na externí úrovni nemůžete použít terminály specifikátoru úložiště **auto** a **Register** *úložiště-Class* .
 
 Jakmile je proměnná definována na externí úrovni, je viditelná ve zbytku jednotky překladu. Proměnná není viditelná před deklarací ve stejném zdrojovém souboru. Také se nezobrazuje v jiných zdrojových souborech programu, pokud není umožněno její zobrazení pomocí odkazující deklarace, jak je popsáno níže.
 
-Pravidla týkající se **statické** patří:
+Pravidla týkající se **statického** zahrnutí:
 
-- Proměnné deklarované mimo všechny bloky bez **statické** – klíčové slovo zachování hodnot v celém programu. Chcete-li omezit jejich přístup k určitým jednotkám překladu, je nutné použít **statické** – klíčové slovo. To jim umožňuje „vnitřní propojení“. Aby mohly být globálními v rámci celého programu, je třeba vynechat třídu explicitního úložiště a použít klíčové slovo `extern` (viz pravidla v dalším seznamu). To jim umožňuje „vnější propojení“. Vnitřní a vnější propojení jsou popsány také v [propojení](../c-language/linkage.md).
+- Proměnné deklarované mimo všechny bloky bez klíčového slova **static** vždy uchovávají jejich hodnoty v celém programu. Chcete-li omezit přístup k určité jednotce překladu, je nutné použít klíčové slovo **static** . To jim umožňuje „vnitřní propojení“. Aby mohly být globálními v rámci celého programu, je třeba vynechat třídu explicitního úložiště a použít klíčové slovo `extern` (viz pravidla v dalším seznamu). To jim umožňuje „vnější propojení“. Vnitřní a vnější propojení jsou také popsána v tématu [propojení](../c-language/linkage.md).
 
-- V rámci programu lze definovat proměnné na externí úrovni pouze jednou. Můžete definovat další proměnnou se stejným názvem a **statické** specifikátor třídy úložiště v jiné jednotce překladu. Protože každý **statické** definice je viditelná pouze v rámci vlastní jednotky překladu, nedochází ke konfliktům. To poskytuje vhodný způsob, jak skrýt názvy identifikátorů, které musejí být sdíleny mezi funkcemi překladu jedné jednotky, ale nesmějí být viditelné pro ostatní jednotky překladu.
+- V rámci programu lze definovat proměnné na externí úrovni pouze jednou. Můžete definovat další proměnnou se stejným názvem a **statickým** specifikátorem třídy úložiště v jiné jednotce překladu. Vzhledem k tomu, že každá **statická** definice je viditelná pouze v rámci vlastní jednotky překladu, nedochází k žádnému konfliktu. To poskytuje vhodný způsob, jak skrýt názvy identifikátorů, které musejí být sdíleny mezi funkcemi překladu jedné jednotky, ale nesmějí být viditelné pro ostatní jednotky překladu.
 
-- **Statické** – specifikátor třídy úložiště můžete použít také na funkce. Pokud deklarujete funkci **statické**, je její název neviditelný mimo soubor, ve kterém je deklarována.
+- Specifikátor třídy úložiště **static** se může vztahovat i na funkce. Pokud deklarujete funkci **statickou**, její název je neviditelný mimo soubor, ve kterém je deklarována.
 
 Pravidla pro používání specifikátoru třídy úložiště `extern` jsou:
 
@@ -123,8 +123,8 @@ zobrazí v jiné jednotce překladu programu.
 
 Všechny tři funkce, `main`, `next` a `other`, provádějí stejný úkol: zvyšují proměnnou `i` a vypíší ji. Jsou vypsány hodnoty 4, 5 a 6.
 
-Nebyla-li proměnná `i` inicializována, měla by být automaticky nastavena na hodnotu 0. V tomto případě by byly vypsány hodnoty 1, 2 a 3. Zobrazit [inicializace](../c-language/initialization.md) informace o inicializaci proměnné.
+Nebyla-li proměnná `i` inicializována, měla by být automaticky nastavena na hodnotu 0. V tomto případě by byly vypsány hodnoty 1, 2 a 3. Viz [inicializace](../c-language/initialization.md) pro informace o inicializaci proměnné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)

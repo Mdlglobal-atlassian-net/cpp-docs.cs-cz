@@ -16,11 +16,11 @@ ms.locfileid: "62232811"
 ---
 # <a name="naked-functions"></a>Holé funkce
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Atribut třídy úložiště `naked` je rozšíření jazyka C specifické pro společnost Microsoft. Pro funkce deklarované s atributem třídy úložiště `naked` generuje kompilátor kód bez kódu prologu a epilogu. Tuto funkci lze použít pro psaní vlastních sekvencí kódu epilogu nebo prologu pomocí vloženého kódu assembleru. Neviditelné funkce jsou zvláště užitečné při psaní ovladačů virtuálních zařízení.
 
-Vzhledem k tomu, `naked` atribut platí pouze pro definici funkce a není modifikátorem typu, neviditelné funkce používají syntaxi rozšířeného atributu, je popsáno v [rozšířené atributy tříd úložiště](../c-language/c-extended-storage-class-attributes.md).
+Vzhledem k `naked` tomu, že atribut je relevantní pouze pro definici funkce a není modifikátorem typu, používají holé funkce syntaxi rozšířeného atributu popsané v [rozšířených atributech třídy úložiště](../c-language/c-extended-storage-class-attributes.md).
 
 Následující příklad definuje funkci s atributem `naked`:
 
@@ -56,8 +56,8 @@ __declspec( naked ) int func();   /* Error--naked attribute not */
                      /* permitted on function declarations.    */   \
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

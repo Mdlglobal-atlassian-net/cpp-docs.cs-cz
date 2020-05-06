@@ -14,31 +14,31 @@ ms.locfileid: "62188870"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Postupy: Sloučení několika profilů PGO do jediného profilu
 
-Profilově řízené optimalizace (PGO) je skvělým nástrojem k vytvoření optimalizované binárních souborů založené na scénářích, která je profilována. Ale co když máte aplikaci, která obsahuje několik důležitých, ještě odlišné scénáře? Jak vytvořit jeden profil, který můžete použít PGO z několika různých scénářů? V sadě Visual Studio, správce PGO [pgomgr.exe](pgomgr.md), dělá tuto práci za vás.
+Optimalizace na základě profilu (PGO) je skvělý nástroj pro vytváření optimalizovaných binárních souborů v závislosti na scénáři, který je profilované. Ale co dělat v případě, že máte aplikaci, která má několik důležitých, ale u různých scénářů? Jak můžete vytvořit jeden profil, který PGO může použít z několika různých scénářů? V aplikaci Visual Studio PGO Manager [pgomgr. exe](pgomgr.md)tuto úlohu provede za vás.
 
-Slučování profilů syntaxe je:
+Syntaxe pro slučování profilů je:
 
 `pgomgr /merge[:num] [.pgc_files] .pgd_files`
 
-kde `num` je volitelné nenáročných až po použít pro soubory .pgc přidal toto sloučení. Váhy se běžně používají při některých scénářích, které jsou důležitější než jiné, nebo pokud existují scénáře, které se mají spustit více než jednou.
+kde `num` je volitelná váha, která se má použít pro soubory. pgc přidané tímto sloučením Váhy se běžně používají, pokud existují některé scénáře, které jsou důležitější než jiné, nebo pokud existují scénáře, které se mají spustit několikrát.
 
 > [!NOTE]
-> Správce PGO nefunguje s daty zastaralé profilu. Soubor .pgc sloučit do souboru .pgd, musí být soubor .pgc vygenerovaný spustitelný soubor, který byl vytvořen pomocí stejného při vyvolání odkazu, který vygeneroval soubor .pgd.
+> PGO Manager nepracuje se zastaralými daty profilu. Chcete-li sloučit soubor. pgc do souboru. PGD, musí být soubor. pgc vytvořen spustitelným souborem, který byl vytvořen stejným voláním propojení, které vygenerovalo soubor. pgd.
 
 ## <a name="examples"></a>Příklady
 
-V tomto příkladu PGO správce přidá pgcFile.pgc pgdFile.pgd šestkrát:
+V tomto příkladu PGO Manager přidá pgcFile. pgc do pgdFile. pgd šest časů:
 
 `pgomgr /merge:6 pgcFile.pgc pgdFile.pgd`
 
-V tomto příkladu přidá správce PGO pgcFile1.pgc a pgcFile2.pgc do pgdFile.pgd dvakrát pro každý soubor .pgc:
+V tomto příkladu PGO Manager přidá pgcFile1. pgc a pgcFile2. pgc do pgdFile. PGD, dvakrát pro každý soubor. pgc:
 
 `pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd`
 
-Pokud správce PGO je spuštěn bez argumentů souboru .pgc, hledá místní adresář pro všechny soubory .pgc, které mají stejný základní název jako soubor .pgd, za nímž následuje vykřičník (!) a potom minimálně jeden libovolný znak. Například, pokud má místní adresář souborů test.pgd, test!1.pgc, test2.pgc a test!hello.pgc a následujícího příkazu spusťte z místního adresáře, pak **pgomgr** sloučí test!1.pgc a test!hello.pgc test.pgd.
+Pokud je PGO Manager spuštěn bez argumentů souboru. pgc, hledá místní adresář pro všechny soubory. pgc, které mají stejný základní název jako soubor. pgd následovaný vykřičníkem (!) a pak jedním nebo více libovolnými znaky. Například pokud má místní adresář soubory test. PGD, test! 1. pgc, Test2. pgc a test! Hello. pgc a následující příkaz je spuštěn z místního adresáře, pak **pgomgr** sloučí test! 1. pgc a test! Hello. pgc do souboru Test. pgd.
 
 `pgomgr /merge test.pgd`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace na základě profilu](profile-guided-optimizations.md)

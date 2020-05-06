@@ -16,66 +16,66 @@ ms.locfileid: "62232149"
 ---
 # <a name="pointer-declarations"></a>Deklarace ukazatelů
 
-A *deklaraci ukazatele* názvů proměnné ukazatele a určuje typ objektu, na kterou ukazuje proměnná. Proměnná deklarovaná jako ukazatel obsahuje adresu paměti.
+*Deklarace ukazatele* Pojmenovává proměnnou ukazatele a určuje typ objektu, na který proměnná odkazuje. Proměnná deklarovaná jako ukazatel obsahuje adresu paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
+*přímý – deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarátor* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor* **[** opt *-Expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct – deklarátor* **(** *parametr-Type-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor* **(** souhlas se *seznamem identifikátorů*<sub>opt</sub> **)**
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
+*ukazatel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*kvalifikátor typu – seznam –*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Type-kvalifikátor – ukazatel na seznam*<sub>výslovných</sub> *pointer*
 
-*seznam typů kvalifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam typů kvalifikátor* *kvalifikátor typu*
+*typ – kvalifikátor – seznam*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kvalifikátor typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;kvalifikátor typu – *kvalifikátor typu* *seznamu*
 
-*Specifikátor typu* poskytuje typ objektu, který může být jakýkoli základní, struktury nebo sjednocení. Proměnné ukazatele může poukazovat na funkce, polí a dalšími ukazateli. (Informace o deklarování a interpretace složitějších typy ukazatelů, [interpretace složitějších Deklarátorů](../c-language/interpreting-more-complex-declarators.md).)
+*Specifikátor typu* poskytuje typ objektu, který může být jakýkoli typ základní, struktura nebo sjednocení. Proměnné ukazatelů mohou také ukazovat na funkce, pole a další ukazatele. (Informace o deklarování a interpretaci složitějších typů ukazatelů naleznete v tématu [Interpretace](../c-language/interpreting-more-complex-declarators.md)složitějších deklarátory.)
 
-Tím, že *specifikátor typu* **void**, můžete odložit určení typu, na který ukazatel odkazuje. Tyto položky se označuje jako "ukazatel na **void**" a je zapsán jako `void *`. Proměnná deklarovaná jako ukazatel na *void* můžete použít tak, aby odkazoval na objekt jakéhokoli typu. Však provádějí většinu operací na ukazatel myši nebo na objekt, na kterou odkazuje, na kterou odkazuje typ musí být explicitně zadán pro každou operaci. (Proměnné typu **char** <strong>\*</strong> a typ **void** <strong>\*</strong> jsou kompatibilní s přiřazení bez typu přetypování.) Takový převod lze provést pomocí přetypování typu (viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace).
+Vytvořením *specifikátoru typu* **void**lze zpozdit určení typu, na který ukazatel odkazuje. Taková položka je označována jako "ukazatel na **void**" a je zapsána jako `void *`. Proměnná deklarovaná jako ukazatel na *typ void* se dá použít k odkazování na objekt libovolného typu. Chcete-li však provést většinu operací na ukazateli nebo objektu, na který odkazuje, typ, na který odkazuje, je nutné explicitně zadat pro každou operaci. (Proměnné typu **char** <strong>\*</strong> a Type **void** <strong>\*</strong> jsou kompatibilní s přiřazením bez přetypování typu.) Takový převod lze provést s přetypováním typu (Další informace naleznete v tématu [převody přetypování](../c-language/type-cast-conversions.md) .)
 
-*Kvalifikátor typu* může být buď **const** nebo **volatile**, nebo obojí. Tyto určit, v uvedeném pořadí, že program sám nemůže upravit ukazatel (**const**), nebo kterou ukazatele lze upravovat oprávněně některé procesem mimo kontrolu program (**volatile**). (Viz [kvalifikátory typu](../c-language/type-qualifiers.md) Další informace o **const** a **volatile**.)
+*Kvalifikátor typu* může být buď **const** , nebo **volatile**, nebo obojí. Tato možnost určuje, že ukazatel nemůže být změněn samotným programem (**const**), nebo zda může být ukazatel oprávněně upraven jiným procesem nad rámec kontroly programu (**volatile**). (Další informace o **conscích** a **volatilích**naleznete v tématu [kvalifikátory typu](../c-language/type-qualifiers.md) .)
 
-*Deklarátor* názvy proměnných a může obsahovat modifikátor typu. Například pokud *deklarátor* představuje pole, typ ukazatele je upravit tak, aby se ukazatel na pole.
+*Deklarátor* Pojmenovává proměnnou a může obsahovat modifikátor typu. Například pokud *deklarátor* představuje pole, je typ ukazatele změněn tak, aby byl ukazatelem na pole.
 
-Před definováním struktury, sjednocení nebo Výčtový typ. je možné deklarovat ukazatel na strukturu, sjednocení nebo výčtového typu. Deklarovat ukazatel pomocí značky struktury nebo sjednocení, jak je znázorněno v následujících příkladech. Takové deklarace jsou povolená, protože není potřeba znát velikost struktury nebo sjednocení k přidělení místa pro proměnnou ukazatel kompilátor.
+Před definováním struktury, sjednocení nebo výčtového typu můžete deklarovat ukazatel na typ struktury, sjednocení nebo výčtového typu. Deklarujete ukazatel pomocí značky struktury nebo sjednocení, jak je znázorněno v níže uvedených příkladech. Deklarace jsou povoleny, protože kompilátor nemusí znát velikost struktury nebo sjednocení k přidělení prostoru pro proměnnou ukazatele.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklady znázorňují deklarace ukazatelů.
+Následující příklady ilustrují deklarace ukazatelů.
 
 ```
 char *message; /* Declares a pointer variable named message */
 ```
 
-*Zpráva* ukazatel odkazuje na proměnnou s **char** typu.
+Ukazatel na *zprávu* odkazuje na proměnnou s typem **char** .
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-*Ukazatele* pole obsahuje 10 prvků; každý element je ukazatel na proměnnou s **int** typu.
+Pole s *ukazateli* má 10 prvků. Každý prvek je ukazatel na proměnnou s typem **int** .
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-*Ukazatel* proměnná ukazuje na pole s 10 prvků. Každý prvek v tomto poli má **int** typu.
+Proměnná *ukazatele* odkazuje na pole s 10 prvky. Každý prvek v tomto poli má typ **int** .
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-Ukazatel *x* lze upravit tak, aby odkazoval na jiný **int** hodnotou, ale skutečná hodnota, na který se nemůže modifikovat body.
+Ukazatel *x* lze upravit tak, aby odkazoval na jinou hodnotu typu **int** , ale hodnotu, na kterou odkazuje, nelze změnit.
 
 ```
 const int some_object = 5 ;
@@ -85,13 +85,13 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-Proměnná *y* v tyto deklarace je deklarován jako konstantní ukazatel **int** hodnotu. Odkazuje na hodnotu lze upravit, ale ukazatel sám musí vždy odkazovat do stejného umístění: adresa *fixed_object*. Podobně *z* konstantní ukazatel, ale je také deklarován tak, aby odkazovala na **int** jehož hodnota se nemůže modifikovat programem. Další specifikátor **volatile** znamená, že i když hodnota **const int** odkazované *z* nemůže být upraven programem, může oprávněně být upravit proces spuštěný současně program. Deklarace *w* Určuje, že program nelze změnit hodnotu na, že program nelze změnit, ukazatel.
+Proměnná *y* v těchto deklaracích je deklarována jako konstantní ukazatel na hodnotu typu **int** . Hodnota, na kterou se odkazuje, se dá změnit, ale ukazatel sám musí ukazovat na stejné umístění: adresa *fixed_object*. Podobně, *z* je konstantní ukazatel, ale je také deklarován jako odkaz na typ **int** , jehož hodnotu nemůže program měnit. Další specifikátor **volatile** znamená, že i když hodnota **const int** , na kterou odkazuje objekt *z* , nemůže být programem upravována, může být oprávněně upravena procesem běžícím souběžně s programem. Deklarace *w* určuje, že program nemůže změnit hodnotu, na kterou se odkazuje, a který program nemůže změnit ukazatel.
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
 ```
 
-Tento příklad deklaruje dvě proměnné ukazatele *Další* a *předchozí*, které odkazují na typ struktury *seznamu*. Tato deklarace se může objevit před definici *seznamu* typ struktury (viz následující příklad), tak dlouho, dokud *seznamu* definice typu má stejnou viditelnost jako deklarace.
+Tento příklad deklaruje dvě proměnné ukazatele, *Další* a *předchozí*, které odkazují na *seznam*typu struktury. Tato deklarace se může objevit před definicí typu struktury *seznamu* (viz další příklad), pokud má definice typu *seznamu* stejnou viditelnost jako deklarace.
 
 ```
 struct list
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-Proměnná *řádku* má typ struktury s názvem *seznamu*. *Seznamu* typ struktury má tři členy: první člen je ukazatel na **char** druhá hodnota, je **int** hodnoty a třetí je ukazatel na jiný *seznamu* struktury.
+Proměnná *line* má typ struktura s názvem *seznam*. Typ struktury *seznamu* má tři členy: první člen je ukazatel na hodnotu typu **char** , druhým je hodnota typu **int** a třetí je ukazatel na jinou strukturu *seznamu* .
 
 ```
 struct id
@@ -112,8 +112,8 @@ struct id
 } record;
 ```
 
-Proměnná *záznam* má typ struktury *id*. Všimněte si, že *pname* je deklarována jako ukazatel na jiný typ struktury s názvem *název*. Tato deklarace se může objevit před *název* je typ definován.
+*Záznam* proměnné má *ID*typu struktury. Všimněte si, že *pName* je deklarován jako ukazatel na jiný typ struktury s názvem *Name*. Tato deklarace se může vyskytovat před definováním typu *názvu* .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

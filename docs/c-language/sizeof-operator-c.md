@@ -15,7 +15,7 @@ ms.locfileid: "62158122"
 ---
 # <a name="sizeof-operator-c"></a>sizeof – operátor (C)
 
-Operátor `sizeof` poskytuje velikost úložiště (v bajtech) potřebného k uložení objektu typu operandu. Tento operátor umožňuje vyhnout zadávání velikosti dat závislé na počítače ve svých programech.
+Operátor `sizeof` poskytuje velikost úložiště (v bajtech) potřebného k uložení objektu typu operandu. Tento operátor vám umožní vyhnout se zadání velikosti dat závislých na počítači v programech.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ sizeof ( type-name )
 
 ## <a name="remarks"></a>Poznámky
 
-Operand je buď identifikátor, který je *unární výraz*, nebo výraz přetypování typu (to znamená typ specifikátoru uzavřený do závorek). *Unární výraz* nemůže reprezentovat bitové pole objektu, neúplný typ ani označení funkce. Výsledkem je celočíselná konstanta bez znaménka. Standardní hlavička STDDEF. H definuje tento typ jako **size_t**.
+Operand je identifikátor, který je *unární výraz*, nebo výraz přetypování typu (tj. specifikátor typu uzavřený v závorkách). *Unární výraz* nemůže představovat objekt bitového pole, nekompletního typu nebo označení funkce. Výsledkem je celočíselná konstanta bez znaménka. Standardní hlavičkový STDDEF. H definuje tento typ jako **size_t**.
 
 Při použití operátoru `sizeof` na identifikátor pole bude výsledkem velikost celého pole namísto velikosti ukazatele reprezentovaného tímto identifikátorem pole.
 
@@ -49,9 +49,9 @@ static char *strings[] = {
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 ```
 
-V tomto příkladu je proměnná `strings` pole ukazatelů na typ `char`. Počet ukazatelů je počet prvků v poli, ale není zadán. Chcete-li vypočítat počet prvků v tomto poli, lze počet ukazatelů snadno určit pomocí operátoru `sizeof`. **Const** celočíselnou hodnotu `string_no` je inicializován na toto číslo. Protože se jedná **const** hodnotu, `string_no` nelze upravit.
+V tomto příkladu je proměnná `strings` pole ukazatelů na typ `char`. Počet ukazatelů je počet prvků v poli, ale není zadán. Chcete-li vypočítat počet prvků v tomto poli, lze počet ukazatelů snadno určit pomocí operátoru `sizeof`. `string_no` Hodnota **const** integer je inicializována na toto číslo. Protože se jedná o **konstantní** hodnotu, `string_no` nelze ji upravit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory jazyka C](c-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

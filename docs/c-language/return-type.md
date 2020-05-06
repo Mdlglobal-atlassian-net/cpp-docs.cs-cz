@@ -24,36 +24,36 @@ Návratový typ funkce vytvoří velikost a typ hodnoty vrácené funkcí a odpo
 ## <a name="syntax"></a>Syntaxe
 
 *definice funkce*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*– atribut<sub>opt</sub> *-SEQ* *deklarátor* *deklarace-list*<sub></sub> <sub>opt –</sub> *složený* příkaz
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory*<sub>opt</sub> *atribut – seq*<sub>opt</sub> *deklarátor* *deklarace-list*<sub>opt</sub> – *složený* příkaz
 
-atribut /\* *– SEQ* je specifický pro Microsoft \*/
+/\**atribut – seq* je specifický pro společnost Microsoft\*/
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru třídy úložiště* – *specifikátory*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru typu* *– Povolit specifikátory*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ-specifikátor deklarace kvalifikátoru* *– specifikátory*<sub>opt</sub>
 
 *specifikátor typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**znak**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*/ pro konkrétní Microsoft<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*/ pro konkrétní Microsoft<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*/ pro konkrétní Microsoft<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*/ pro konkrétní Microsoft<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-Union-specifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor enum*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
+&nbsp;&nbsp;&nbsp;&nbsp;**šekem**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dostatečná**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**hmot**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dlouhou**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Plovák**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**klepat**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**podpisy**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**celé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor struct nebo Union*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Enum – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef – název*
 
-*Specifikátor typu* může specifikovat jakýkoli typ základní, struktury nebo sjednocení. Pokud nezahrnete *specifikátor typu*, předpokládá se návratový typ `int`.
+*Specifikátor typu* může specifikovat jakýkoli typ základní, struktury nebo sjednocení. Pokud nezahrnete *specifikátor typu*, předpokládá se návratový typ `int` .
 
-Návratový typ zadaný v definici funkce musí odpovídat návratový typ v deklaracích funkce jinde v programu. Funkce vrací hodnotu, když je proveden příkaz `return` obsahující výraz. Výraz je vyhodnocen, převeden na typ návratové hodnoty v případě potřeby a vrácen do bodu, ve kterém byla funkce volána. Pokud je funkce deklarována s návratovým typem `void`, příkaz return obsahující výraz vygeneruje upozornění a výraz není vyhodnocen.
+Návratový typ zadaný v definici funkce musí odpovídat návratový typ v deklaracích funkce jinde v programu. Funkce vrací hodnotu, když je proveden `return` příkaz obsahující výraz. Výraz je vyhodnocen, převeden na typ návratové hodnoty v případě potřeby a vrácen do bodu, ve kterém byla funkce volána. Pokud je funkce deklarována s návratovým `void`typem, příkaz return obsahující výraz vygeneruje upozornění a výraz není vyhodnocen.
 
 Následující příklady znázorňují návratové hodnoty funkcí.
 
@@ -73,7 +73,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }
 ```
 
-Tento příklad definuje typ `STUDENT` s deklarací `typedef` a definuje `sortstu` funkce pro `STUDENT` návratový typ. Funkce vybere a vrátí jeden z jeho dvou argumentů struktury. V následných voláních funkce kompilátor kontroluje, zda jsou typy argumentů `STUDENT`.
+`STUDENT` Tento příklad definuje typ `typedef` s deklarací a definuje funkci `sortstu` , která má `STUDENT` návratový typ. Funkce vybere a vrátí jeden z jeho dvou argumentů struktury. V následných voláních funkce kompilátor kontroluje, zda jsou `STUDENT`typy argumentů.
 
 > [!NOTE]
 > Efektivita by se vylepšila předáním ukazatelů do struktury, nikoli celé struktury.
@@ -95,8 +95,8 @@ char *smallstr( char s1[], char s2[] )
 
 Tento příklad definuje funkci, která vrací ukazatel na pole znaků. Funkce přebírá dvě znaková pole (řetězce) jako argumenty a vrací ukazatel na kratší z obou řetězců. Ukazatel na pole odkazuje na první z prvků pole a má jeho typ; Proto návratový typ funkce je ukazatel na typ `char`.
 
-Není nutné deklarovat funkce s `int` návratový typ předtím, než je zavoláte, i když jsou doporučeny prototypy, aby byla povolena správná kontrola typu pro argumenty a návratové hodnoty.
+Není nutné deklarovat funkce s `int` návratovým typem předtím, než je zavoláte, i když jsou doporučeny prototypy, aby byla povolena správná kontrola typu pro argumenty a návratové hodnoty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

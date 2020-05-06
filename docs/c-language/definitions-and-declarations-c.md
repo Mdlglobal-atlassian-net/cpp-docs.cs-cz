@@ -13,9 +13,9 @@ ms.locfileid: "62234355"
 ---
 # <a name="definitions-and-declarations-c"></a>Definice a deklarace (C)
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Rozhraní DLL odkazuje na všechny položky (funkce a data), které jsou známé být exportovány nějakým programem v systému. To znamená, že všechny položky, které jsou deklarovány jako **dllimport** nebo `dllexport`. Všechny deklarace, které jsou součástí rozhraní DLL musí určovat buď **dllimport** nebo `dllexport` atribut. Však můžete pouze zadat definici `dllexport` atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
+Rozhraní DLL odkazuje na všechny položky (funkce a data), u kterých je známo, že jsou exportovány některým z programů v systému. To znamená, že všechny položky, které jsou **dllimport** deklarovány `dllexport`jako dllimport nebo. Všechny deklarace zahrnuté v rozhraní knihovny DLL musí určovat buď **dllimport** atribut dllimport `dllexport` , nebo. Definice však může specifikovat pouze `dllexport` atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -46,7 +46,7 @@ Tato syntaxe je však správná:
 DllExport int i = 10;      /* Okay: this is an export definition. */
 ```
 
-Použití `dllexport` implicitně předpokládá definici, zatímco **dllimport** implicitně předpokládá deklaraci. Klíčové slovo `extern` je nutné použít spolu s atributem `dllexport` k vynucení deklarace. V opačném případě se předpokládá definice.
+Použití `dllexport` implikuje definici, zatímco **dllimport** implikuje deklaraci. Klíčové slovo `extern` je nutné použít spolu s atributem `dllexport` k vynucení deklarace. V opačném případě se předpokládá definice.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -56,8 +56,8 @@ extern DllImport int k;   /* These are correct and imply */
 Dllimport int j;          /* a declaration. */
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)

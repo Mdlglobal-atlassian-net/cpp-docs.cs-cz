@@ -17,51 +17,51 @@ ms.locfileid: "62157792"
 ---
 # <a name="structure-declarations"></a>Deklarace struktury
 
-"Struktury deklarace" název typu a určuje pořadí hodnot proměnných (označované jako "členy" nebo "pole" struktury), které mohou mít různé typy. Volitelný identifikátor, s názvem "značku", obsahuje název typu struktury a lze použít v následných odkazů na typ struktury. Proměnná tohoto typu struktury obsahuje celé sekvenci definovaný podle tohoto typu. Struktury v jazyce C jsou podobné typy, které jsou známé jako "záznamů" v jiných jazycích.
+"Deklarace struktury" pojmenovává typ a určuje sekvenci hodnot proměnných (nazývaných "členy" nebo "pole" struktury), které mohou mít různé typy. Volitelný identifikátor, nazývaný "tag", dává název typu struktury a lze jej použít v následných odkazech na typ struktury. Proměnná typu struktury uchovává celou sekvenci definovanou tímto typem. Struktury v jazyce C jsou podobné typům, které jsou označovány jako "záznamy" v jiných jazycích.
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
+*specifikátor struct nebo Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor ID* *struktury nebo sjednocení* –<sub>opt</sub> **{** *struct-Declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *struktury nebo sjednocení*
 
-*struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
+*Struktura nebo sjednocení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nemají**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sjednocovací**
 
-*struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace struktury*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+*Struktura-deklarace-seznamu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct – deklarace*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura-deklarace-seznamu* *Struktura-deklarace*
 
-*struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list* **;**
+*deklarace struktury*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor-kvalifikátor-list* *struct-deklarátor-list* **;**
 
-*specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
+*specifikátor – kvalifikátor – seznam*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;specifikátor *specifikátoru typu* *– kvalifikátor – seznam*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;specifikátor *kvalifikátoru typu* – *Kvalifikátor seznamu – kvalifikátor*<sub>opt</sub>
 
-*struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator* *struct-declarator-list* **,** *deklarátor – struktura*
+*Struktura – deklarátor-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura-deklarátor* *Struktura-deklarátor-list* **,** *struct-deklarátor*
 
-*struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
+*Struktura – deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ – specifikátor* *deklarátor*<sub>opt</sub> **:** *konstantní výraz*
 
-Deklaraci typu struktury nenastaví vyhrazené místo pro strukturu. Je jenom šablony pro pozdější deklaraci proměnné struktury.
+Deklarace typu struktury nenastavuje volné místo pro strukturu. Je pouze šablonou pro pozdější deklarace proměnných struktury.
 
-Dříve definovaná *identifikátor* (značky) slouží k odkazování na typ struktury definované jinde. V takovém případě *struct-declaration-list* nelze opakovat za předpokladu, definice není viditelný. Deklarace ukazatelů na struktury a definice TypeDef pro typy struktur lze použít značku struktury předtím, než je typ struktury definován. Definice struktury musí však došlo k před veškeré jeho používání skutečná velikost polí. Toto je neúplná definice pro typ a typ značky. Pro tuto definici k dokončení definice typu musí být uvedena dále ve stejném oboru.
+Dříve definovaný *identifikátor* (tag) lze použít pro odkazování na typ struktury definovaný jinde. V takovém případě nelze *seznam struktur-Declaration-list* opakovat, dokud je definice viditelná. Deklarace ukazatelů na struktury a definice TypeDef pro typy struktur mohou používat značku struktury před definováním typu struktury. Nicméně definice struktury musí být zjištěna před jakýmkoli skutečným použitím velikosti polí. Toto je neúplná definice typu a značka typu. Aby byla tato definice dokončena, definice typu musí být uvedena později ve stejném oboru.
 
-*Struct-declaration-list* Určuje typy a názvy členů struktury. A *struct-declaration-list* argument obsahuje jednu nebo více proměnné nebo deklarace bitového pole.
+*Seznam struct-Declaration-list* určuje typy a názvy členů struktury. Argument *struct-Declaration-list* obsahuje jednu nebo více deklarací proměnných nebo bitového pole.
 
-Každá proměnná deklarovaná ve *struct-declaration-list* je definován jako člen typu Struktura. Deklarace proměnných v rámci *struct-declaration-list* mají stejné formuláře jako další deklarace proměnných popsaných v této části s tím rozdílem, že deklarace nemůže obsahovat specifikátory třídy úložiště nebo inicializátory. Členy struktury mohou mít všechny tyto typy proměnných s výjimkou typu `void`, neúplný typ nebo typ funkce.
+Každá Proměnná deklarovaná v *seznamu struct-Declaration-list* je definována jako člen typu struktury. Deklarace proměnných v *seznamu struct-Declaration-list* mají stejný tvar jako ostatní deklarace proměnných popsané v této části s tím rozdílem, že deklarace nemůžou obsahovat specifikátory nebo Inicializátory třídy úložiště. Členové struktury mohou mít libovolné typy proměnných kromě typu `void`, nekompletního typu nebo typu funkce.
 
-Člen nejde použít deklaraci typu struktury, ve kterém se zobrazí. Člena ale mohou být deklarovány jako ukazatel na typ struktury, ve kterém se zobrazí, dokud typ struktury je značka. To umožňuje vytvářet propojené seznamy struktur.
+Člen nelze deklarovat, aby měl typ struktury, ve které se vyskytuje. Člena lze však deklarovat jako ukazatel na typ struktury, ve kterém se zobrazí, pokud typ struktury má značku. To umožňuje vytvářet propojené seznamy struktur.
 
-Struktury, postupujte podle stejného rozsahu jako další identifikátory. Struktura identifikátory musí být odlišný od jiných struktury, sjednocení a výčtu značky se stejnou viditelností.
+Struktury se řídí stejným rozsahem jako jiné identifikátory. Identifikátory struktury musí být odlišné od jiných značek struktury, sjednocení a výčtu se stejnou viditelností.
 
-Každý *struct-declaration* v *struct-declaration-list* musí být jedinečný v rámci seznamu. Nicméně názvy identifikátor v *struct-declaration-list* nemusí být odlišný od běžné názvy proměnných nebo identifikátory v seznamech deklaraci struktury.
+Každá *deklarace struktury* v *seznamu struct-Declaration-list* musí být v rámci seznamu jedinečná. Názvy identifikátorů v *seznamu struct-Declaration-list* ale nemusí být odlišné od běžných názvů proměnných nebo z identifikátorů v jiných seznamech deklarací struktury.
 
-Vnořené struktury lze rovněž přistupovat, jako kdyby byly deklarovány na úrovni rozsahu souboru. Mějme například tuto deklaraci:
+K vnořeným strukturám lze také přicházet, jako kdyby byly deklarovány na úrovni souboru. Například s ohledem na tuto deklaraci:
 
 ```C
 struct a
@@ -74,7 +74,7 @@ struct a
 } var1;
 ```
 
-Tyto deklarace jsou platné:
+Tato deklarace jsou obě platná:
 
 ```C
 struct a var3;
@@ -94,13 +94,13 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` Struktura obsahuje tři členy: `name`, `id`, a `class`. `name` Člen je pole 20 prvcích a `id` a `class` jsou jednoduché členy s `int` a **dlouhé** zadejte v uvedeném pořadí. Identifikátor `employee` je identifikátor struktury.
+`employee` Struktura má tři členy: `name`, `id`a `class`. `name` Členem je pole 20 prvků `id` a a `class` jsou jednoduché členy s `int` a **dlouhým** typem v uvedeném pořadí. Identifikátor `employee` je identifikátor struktury.
 
 ```C
 struct employee student, faculty, staff;
 ```
 
-Tento příklad definuje tři proměnné struktury: `student`, `faculty`, a `staff`. Každá struktura má stejný seznam tří členů. Členů jsou deklarovány mít typ struktury `employee`definovaná v předchozím příkladu.
+Tento příklad definuje tři proměnné struktury: `student`, `faculty`a `staff`. Každá struktura má stejný seznam tří členů. Členové jsou deklarováni tak, aby měly typ `employee`struktury definovaný v předchozím příkladu.
 
 ```C
 struct           /* Defines an anonymous struct and a */
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-`complex` Struktura obsahuje dva členy s **float** typ `x` a `y`. Typ struktury nemá žádnou značku a proto je nepojmenovaný nebo anonymní.
+`complex` Struktura má dva členy s typem **float** `x` a `y`. Typ struktury nemá žádnou značku a je proto nepojmenovaný nebo anonymní.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,9 +120,9 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-První dva členy struktury jsou `char` proměnné a ukazatel **float** hodnotu. Třetí členské `next`, je deklarována jako ukazatel na typ struktury definované (`sample`).
+Prvních dvou členů struktury je `char` proměnná a ukazatel na hodnotu **typu float** . Třetí člen, `next`, je deklarován jako ukazatel na definovaný typ struktury (`sample`).
 
-Anonymní struktury může být užitečné, když není potřeba značku s názvem. To je případ, kdy jedna deklarace definuje všechny instance struktury. Příklad:
+Anonymní struktury mohou být užitečné, pokud není potřeba značka s názvem. Jedná se o případ, kdy jedna deklarace definuje všechny instance struktury. Příklad:
 
 ```C
 struct
@@ -145,15 +145,15 @@ struct somestruct
 } w;
 ```
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kompilátor umožňuje jako poslední člen struktury pole bez velikosti nebo s nulovou velikostí. To může být užitečné, pokud se velikost pole s konstantní liší při použití v různých situacích. Deklarace takové struktury vypadá takto:
+Kompilátor umožňuje jako poslední člen struktury pole s nezvětšenou velikostí nebo nulovou velikostí. To může být užitečné, pokud se velikost konstantního pole liší při použití v různých situacích. Deklarace takové struktury vypadá takto:
 
-**Struktura** *identifikátor* **{** *sada deklarací* *typ* <em>název pole</em> **\[]; };**
+**struct** *identifikátor* struktury **{** *Set-of-deklarace* – *typ* <em>pole-název</em>**\[];};**
 
-Poli netříděnými podle velikosti se může zobrazit pouze jako poslední člen struktury. Struktury obsahující pole nesetříděné podle velikosti deklarace mohou být vnořené v jiných strukturách, za předpokladu, žádní další členové jsou deklarovány v libovolné nadřazené struktury. Pole těchto struktur nejsou povoleny. `sizeof` Při použití proměnné tohoto typu nebo typ, samotný operátoru předpokládá 0 pro velikost pole.
+Pole s nezměněnou velikostí se můžou vyskytovat jenom jako poslední člen struktury. Struktury obsahující deklarace pole s neurčenou velikostí mohou být vnořeny do jiných struktur, pokud nejsou deklarovány další členy v žádné ohraničující struktuře. Pole těchto struktur nejsou povolena. `sizeof` Operátor, při použití na proměnnou tohoto typu nebo na samotný typ, předpokládá 0 pro velikost pole.
 
-Deklarace struktury lze také zadat bez deklarátorem nejsou členy jiné struktury nebo sjednocení. Názvy polí jsou povýšeny do nadřazené struktury. Nepojmenované struktury bude vypadat takto:
+Deklarace struktury lze také zadat bez deklarátor, pokud jsou členy jiné struktury nebo sjednocení. Názvy polí jsou povýšeny do ohraničující struktury. Například struktura Nameless vypadá takto:
 
 ```C
 struct s
@@ -171,10 +171,10 @@ struct s
 p_s->b = 100;  /* A reference to a field in the s structure */
 ```
 
-Zobrazit [členy struktury a sjednocení](../c-language/structure-and-union-members.md) informace o odkazech na strukturu.
+Informace o odkazech na strukturu najdete v tématu [Struktura a členové sjednocení](../c-language/structure-and-union-members.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

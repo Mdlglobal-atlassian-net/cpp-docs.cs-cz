@@ -14,10 +14,10 @@ ms.locfileid: "62313490"
 ---
 # <a name="allocating-zero-memory"></a>Přidělování nulové paměti
 
-**ANSI 4.10.3** chování `calloc`, `malloc`, nebo `realloc` fungovat, pokud je požadovaná velikost nula
+**4.10.3 ANSI** Chování funkce `calloc`, `malloc`nebo `realloc` , pokud je požadovaná velikost nula
 
 Funkce `calloc`, `malloc` a `realloc` přijímají nulu jako argument. Není přidělena žádná skutečná paměť, ale je vrácen platný ukazatel a blok paměti lze modifikovat později pomocí funkce realloc.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

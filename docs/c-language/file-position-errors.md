@@ -13,10 +13,10 @@ ms.locfileid: "62233654"
 ---
 # <a name="file-position-errors"></a>Chyby pozice souboru
 
-**ANSI 4.9.9.1, 4.9.9.4** hodnota, na kterou makro `errno` se nastavil `fgetpos` nebo `ftell` při selhání
+**ANSI 4.9.9.1, 4.9.9.4** Hodnota, na kterou je makro `errno` nastaveno funkcí `fgetpos` nebo `ftell` při selhání
 
-Když `fgetpos` nebo `ftell` selže, `errno` je nastavena na hodnotu konstanty manifestu `EINVAL` li pozice neplatná nebo `EBADF` je-li číslo souboru chybné. Konstanty jsou definovány v ERRNO.H.
+Pokud `fgetpos` je `ftell` nebo dojde `errno` k chybě, je nastavena na `EINVAL` konstantu manifestu, pokud je `EBADF` pozice neplatná nebo pokud je číslo souboru chybné. Konstanty jsou definovány v ERRNO.H.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

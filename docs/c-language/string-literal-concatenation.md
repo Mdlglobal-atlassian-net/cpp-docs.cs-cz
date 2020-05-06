@@ -29,7 +29,7 @@ je stejný jako řetězec
 
 Zřetězení řetězců lze použít kdekoli tam, kde jste dříve použili zpětné lomítko následované znakem nového řádku pro zadání řetězců delších než jeden řádek.
 
-Chcete-li vynutit nový řádek v rámci řetězce literálu, zadejte řídicí sekvenci nového řádku (**\n**) na místě v řetězci, kde chcete řádek rozdělit následujícím způsobem:
+Chcete-li vynutit nový řádek v rámci řetězcového literálu, zadejte řídicí sekvence nového řádku (**\n**) v místě v řetězci, kde má být řádek přerušen, následovně:
 
 ```
 "Enter a number between 1 and 100\nOr press Return"
@@ -42,13 +42,13 @@ printf_s ( "This is the first half of the string, "
            "this is the second half ") ;
 ```
 
-Pokud je každá část řetězce uzavřená v uvozovkách, jsou tyto části zřetězeny a na výstupu jsou jako jeden řetězec. K tomuto zřetězení dochází podle pořadí událostí během kompilace určené [fází překladu](../preprocessor/phases-of-translation.md).
+Pokud je každá část řetězce uzavřená v uvozovkách, jsou tyto části zřetězeny a na výstupu jsou jako jeden řetězec. K tomuto zřetězení dochází v závislosti na sekvenci událostí během kompilace určené pomocí [fází překladu](../preprocessor/phases-of-translation.md).
 
 ```
 "This is the first half of the string, this is the second half"
 ```
 
-Ukazatel na řetězec, inicializován jako dva různé textové literály oddělené pouze prázdným znakem, je uložen jako jeden řetězec (ukazatele jsou uvedeny v [deklarace ukazatelů](../c-language/pointer-declarations.md)). Při správném odkazování je výsledek v následujícím příkladu stejný jako v předchozím příkladu:
+Ukazatel na řetězec, inicializovaný jako dva jedinečné řetězcové literály oddělené pouze prázdným znakem, je uložen jako jeden řetězec (ukazatele jsou popsány v tématu [deklarace ukazatelů](../c-language/pointer-declarations.md)). Při správném odkazování je výsledek v následujícím příkladu stejný jako v předchozím příkladu:
 
 ```
 char *string = "This is the first half of the string, "
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 Ve fázi překladu 6 jsou vícebajtové znakové sekvence určené libovolnou sekvencí sousedních textových literálů nebo sousedních literálů širokých řetězců zřetězeny do jediné vícebajtové sekvence znaků. Proto nenavrhujte programy umožňující změnu textových literálů během provádění. Standard ANSI jazyka C určuje, že výsledek změny řetězce není definován.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Textové literály jazyka C](../c-language/c-string-literals.md)

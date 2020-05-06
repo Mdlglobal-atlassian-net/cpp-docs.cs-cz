@@ -11,10 +11,10 @@ ms.locfileid: "62158424"
 ---
 # <a name="sign-of-bit-fields"></a>Znak bitových polí
 
-**ANSI 3.5.2.1** zda "prostý" `int` pole je považován za **znaménkem** nebo za bitové pole unsigned int
+**3.5.2.1 ANSI** Určuje, zda je pole `int` "jednoduché" považováno za bitové pole se **znaménkem (int** ), nebo jako bitové pole bez znaménka int.
 
 Bitová pole mohou být se znaménkem nebo bez znaménka. Prostá bitová pole jsou považována za pole se znaménkem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

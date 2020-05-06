@@ -17,19 +17,19 @@ ms.locfileid: "62195283"
 ---
 # <a name="fixing-release-build-problems"></a>Oprava problémů se sestavením pro vydání
 
-Pokud váš kód vygeneruje chyby při kompilaci po přepnutí ze sestavení pro ladění na sestavení pro vydání, existují některé oblasti, které byste měli počítač zkontrolovat.
+Pokud váš kód generuje chyby kompilace po přepnutí z sestavení ladění do sestavení pro vydání, existují některé oblasti, které byste měli kontrolovat.
 
-Při sestavování optimalizované (verze), který jste neobdrželi během sestavení pro ladění může se zobrazit upozornění kompilátoru.
+Během optimalizovaného (vydaného) sestavení, které jste neobdrželi během sestavení pro ladění, může docházet k upozorněním kompilátoru.
 
-- [Prozkoumejte Assert – příkazy](using-verify-instead-of-assert.md)
+- [Prostudovat příkazy kontrolního výrazu](using-verify-instead-of-assert.md)
 
-- [Použití kontroly ladění sestavení pro přepisy paměti](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [Pro kontrolu přepsání paměti použít sestavení ladění](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [Zapnutí generování ladicích informací pro sestavení pro vydání](how-to-debug-a-release-build.md)
+- [Zapnout generování informací o ladění pro Build vydaných verzí](how-to-debug-a-release-build.md)
 
-- [Kontrola přepisování paměti](checking-for-memory-overwrites.md)
+- [Vyhledat přepsání paměti](checking-for-memory-overwrites.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sestavení pro vydání](release-builds.md)<br/>
 [Běžné problémy při vytváření sestavení pro vydání](common-problems-when-creating-a-release-build.md)<br/>

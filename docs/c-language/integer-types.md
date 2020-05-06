@@ -16,7 +16,7 @@ ms.locfileid: "62232849"
 ---
 # <a name="integer-types"></a>Typy celého čísla
 
-Každé celočíselné konstantě je předán typ na základě její hodnoty a způsobu, jakým je vyjádřena. Můžete vynutit jakákoli celočíselná konstanta typu **dlouhé** přidáním písmeno **l** nebo **L** na konec konstanty; lze vynutit typ `unsigned` připojením **u** nebo **U** k hodnotě. Malé písmeno **l** může být zaměněno za číslici 1 a mělo by se vyhnout. Některé formy **dlouhé** konstanty typu integer, postupujte podle:
+Každé celočíselné konstantě je předán typ na základě její hodnoty a způsobu, jakým je vyjádřena. Můžete vynutit libovolnou celočíselnou konstantu pro typ **Long** připojením písmene **l** nebo **l** ke konci konstanty; můžete vynutit, aby bylo typu `unsigned` k hodnotě připojeny **u** nebo **u** . Malé písmeno **l** může být zaměněno s číslicí 1 a je třeba se jim vyhnout. Následuje několik forem **dlouhých** celočíselných konstant:
 
 ```
 /* Long decimal constants */
@@ -36,18 +36,18 @@ Každé celočíselné konstantě je předán typ na základě její hodnoty a z
 778866LU
 ```
 
-Typ přiřazený konstantě závisí na hodnotě, kterou konstanta představuje. Hodnota konstanty musí být v rozsahu reprezentovatelných hodnot jejího typu. Typ konstanty Určuje, které převody jsou prováděny, když konstanta použita ve výrazu nebo když znaménko mínus (**-**) se použije. Tento seznam shrnuje pravidla převodu celočíselných konstant.
+Typ přiřazený konstantě závisí na hodnotě, kterou konstanta představuje. Hodnota konstanty musí být v rozsahu reprezentovatelných hodnot jejího typu. Typ konstanty určuje, které převody jsou provedeny při použití konstanty ve výrazu nebo při použití znaménka mínus (**-**). Tento seznam shrnuje pravidla převodu celočíselných konstant.
 
-- Typ decimální konstanty bez přípony je buď `int`, **long int**, nebo **unsigned long int**. První z těchto tří typů, ve kterých lze hodnotu konstanty reprezentovat, je typ přiřazený konstantě.
+- Typ pro desítkovou konstantu bez přípony je buď `int`, **Long int**nebo **unsigned long int**. První z těchto tří typů, v nichž může být hodnota konstanty reprezentovaná, je typ přiřazený konstantě.
 
-- Typ přiřazený osmičkovým a šestnáctkovým konstantám bez přípony je `int`, `unsigned int`, **long int**, nebo **unsigned long int** v závislosti na velikosti konstanty.
+- Typ přiřazený osmičkové a šestnáctkové konstantě bez přípon `int`je `unsigned int`, **Long int**nebo **unsigned long int** v závislosti na velikosti konstanty.
 
-- Typ přiřazený konstantám s **u** nebo **U** přípona je **unsigned int** nebo **unsigned long int** v závislosti na jejich velikosti.
+- Typ přiřazený konstantám s příponou **u** nebo **u** je **bez znaménka int** nebo **unsigned long int** v závislosti na jejich velikosti.
 
-- Typ přiřazený konstantám s **l** nebo **L** přípona je **long int** nebo **unsigned long int** v závislosti na jejich velikosti.
+- Typ přiřazený konstantám s příponou **l** nebo **l** je **Long int** nebo **unsigned long int** v závislosti na jejich velikosti.
 
-- Typ přiřazený konstantám s **u** nebo **U** a **l** nebo **L** přípona je **unsigned long int**.
+- Typ přiřazený konstantám s příponou **u** nebo **u** a **l** nebo **l** je **bez znaménka long int**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty typu Integer jazyka C](../c-language/c-integer-constants.md)

@@ -11,104 +11,104 @@ ms.locfileid: "62157815"
 ---
 # <a name="summary-of-expressions"></a>Souhrn výrazů
 
-*primary-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
+*primární výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*změnil*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*řetězcový literál*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *výraz* **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *výraz*  **)**
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz*  **,**  *přiřazení – výraz*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*konstantní výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*podmíněný výraz*
 
-*conditional-expression*:<br/>
+*podmíněný výraz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **?**  *výraz* **:** *podmíněného výrazu*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz or*  **?**  *výraz*  **:**  *podmíněný výraz*
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+*výraz přiřazení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*podmíněný výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;přiřazení *unárního výrazu* – *výraz přiřazení* *operátoru*
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **[**  *výraz*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>optimalizované</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **.**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **->**  *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+*výraz přípony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příponový výraz*  **[**  *výraz*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***.**    *RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor výrazu přípony***->***identifier*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **--**
 
 *argument-expression-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list*  **,**  *přiřazení-výraz*
 
-*unary-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **++**  *Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **--**  *Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz CAST*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**operátor sizeof:** *unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (** *název typu* **)**
+*unární výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**++**  *Unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**--**  *Unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unární – operátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cast – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *název typu*  **)**
 
-*Unární operátor*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **&** **&#42;** **+** **-** **~** **!**
+*unární – operátor*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+**&#42;**-** **!** ! **~**
 
-*výraz CAST*:<br/>
+*výraz cast*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(**  *název typu*  **)**  *výrazem přetypování.*
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *název typu*  **)**  *přetypování – výraz*
 
-*multiplicative-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz CAST*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **&#42;** *výrazem přetypování.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **/** *výrazem přetypování.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **%** *výrazem přetypování.*
+*multiplikativní-výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cast – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní-expression* **&#42;** *cast-expression*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní –***/***výraz cast-* Expression    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní –***%***výraz cast-* Expression    
 
-*additive-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **+**  *multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **-**  *multiplicative-expression*
+*výraz doplňkového výrazu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového výrazu*  **+**  *multiplikativní-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového výrazu*  **-**  *multiplikativní-Expression*
 
-*shift-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **\<\<**  *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
+*SHIFT-Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového výrazu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression***\<***výraz doplňkového* výrazu Shift-Expression    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression***>>***výraz doplňkového* výrazu Shift-Expression    
 
-*relational-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **\<** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **\<=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*
+*relační výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***\<**–*SHIFT-Expression*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***>**–*SHIFT-Expression*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***\<**–*SHIFT-Expression*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***>=**–*SHIFT-Expression*    
 
-*equality-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **==** *relační výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **! =** *relační výraz*
+*výraz rovnosti*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz rovnosti*–*výraz* **==**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rovnost-Expression*  **! =**  *relační výraz*
 
-*A výraz*:<br/>
+*A-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Výraz AND* **&** *výrazu rovnosti*
+&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*Výraz rovnosti a výrazu*equality-expression* **&**    
 
-*exclusive-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Výraz AND*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz exkluzivní OR* **^** *výraz AND*
+*výhradní nebo výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*A – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výhradní výraz***^** or*a-Expression*    
 
-*inclusive-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz exkluzivní OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní výraz OR* **&#124;** *výraz exkluzivní OR*
+*výraz (včetně)*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výhradní nebo výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **&#124;** *Exclusive* nebo-Expression    
 
-*logical-AND-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní nebo výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz* **&&** *včetně výraz OR*
+*logický operátor and-Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz (včetně)*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického operátoru and a Expression*  **&&**  *(včetně)*
 
-*logical-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **&#124;&#124;** *logické a expression*
+*logický výraz or*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický operátor AND-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;logický operátor *OR* **&#124;&#124;** *logický operátor and-Expression*    
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Gramatika struktury fráze](../c-language/phrase-structure-grammar.md)

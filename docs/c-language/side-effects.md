@@ -14,7 +14,7 @@ ms.locfileid: "62158470"
 ---
 # <a name="side-effects"></a>Vedlejší efekty
 
-Pořadí vyhodnocování výrazů je definován konkrétní implementací s výjimkou, kdy jazyk zaručuje určité pořadí vyhodnocování (jak je uvedeno v [přednost a pořadí vyhodnocení](../c-language/precedence-and-order-of-evaluation.md)). V následujících voláních funkce mohou například nastat vedlejší účinky:
+Pořadí vyhodnocení výrazů je definováno konkrétní implementací, s výjimkou toho, že jazyk garantuje konkrétní pořadí vyhodnocení (jak je uvedeno v [prioritě a pořadí vyhodnocení](../c-language/precedence-and-order-of-evaluation.md)). V následujících voláních funkce mohou například nastat vedlejší účinky:
 
 ```
 add( i + 1, i = j + 2 );
@@ -31,6 +31,6 @@ V tomto příkladu nelze předvídat hodnotu `x`, která je upravena. Hodnota do
 
 Vzhledem k tomu, že jazyk C nedefinuje pořadí vyhodnocování vedlejších účinků, jsou obě metody vyhodnocení správné a mohou být implementovány. Abyste se ujistili, že je kód přenosný a jasný, je třeba se vyhnout příkazům, které jsou závislé na určitém pořadí vyhodnocení vedlejších účinků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vyhodnocení výrazu](../c-language/expression-evaluation-c.md)

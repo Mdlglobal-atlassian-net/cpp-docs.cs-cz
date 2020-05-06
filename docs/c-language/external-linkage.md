@@ -15,12 +15,12 @@ ms.locfileid: "62233734"
 ---
 # <a name="external-linkage"></a>Externí propojení
 
-Pokud první deklarace na úrovni rozsahu souboru identifikátoru nepoužívá **statické** specifikátor třídy úložiště, objekt má vnější propojení.
+Pokud první deklarace na úrovni oboru souborů pro identifikátor nepoužívá specifikátor třídy úložiště **static** , má objekt vnější propojení.
 
-Pokud deklarace identifikátoru funkce nemá žádné *storage-class-specifier*, jeho propojení určeno stejně, jako kdyby byly deklarovány s *storage-class-specifier* `extern`. Pokud má deklarace identifikátoru objektu rozsah souboru a ne *storage-class-specifier*, je její propojení externí.
+Pokud deklarace identifikátoru funkce nemá žádný *specifikátor třídy úložiště*, je jeho propojení určeno přesně tak, jako by bylo deklarováno pomocí `extern` *specifikátoru třídy úložiště* . Pokud má deklarace identifikátoru objektu rozsah souboru bez *specifikátoru třídy úložiště*, je jeho propojení externí.
 
 Název identifikátoru s vnějším propojením na stejnou funkci nebo objekt dat provádí ostatní deklarace pro stejný název pomocí vnějšího propojení. Ve stejné jednotce překladu nebo v různých jednotkách překladu mohou být dvě deklarace. Pokud má objekt nebo funkce také globální životnost, jsou funkce nebo objekt sdíleny napříč celým programem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

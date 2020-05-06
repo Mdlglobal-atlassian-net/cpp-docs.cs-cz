@@ -22,7 +22,7 @@ Libovolný operand je možné uzavřít do uvozovek, aniž by se změnil typ neb
 ( 10 + 5 ) / 5
 ```
 
-závorky kolem `10 + 5` znamenají, že hodnota `10 + 5` je vyhodnocen jako první a stane se z levého operandu rozdělení (**/**) – operátor. Výsledek `( 10 + 5 ) / 5` je 3. Bez závorek by byl výraz `10 + 5 / 5` vyhodnocen jako 11.
+závorky kolem `10 + 5` znamenají, že hodnota `10 + 5` je vyhodnocena jako první, a ta se pak bude levým operandem**/** operátoru dělení (). Výsledek `( 10 + 5 ) / 5` je 3. Bez závorek by byl výraz `10 + 5 / 5` vyhodnocen jako 11.
 
 Přestože závorky mají vliv na způsob, jakým jsou seskupeny operandy ve výrazu, nemohou zaručit konkrétní pořadí vyhodnocení ve všech případech. Například ani závorky, ani seskupení zleva doprava v následujícím výrazu nezaručují, jaké hodnoty nabyde proměnná `i` v podřízených výrazech:
 
@@ -37,8 +37,8 @@ Kompilátoru je umožněno vyhodnocení obou stran násobení v libovolném poř
 ( 0 + 1 + 1 ) * ( 2 + 0 )
 ```
 
-Výjimky vyplývající z vedlejších účinků jsou popsány v [vedlejší účinky](../c-language/side-effects.md).
+Výjimky vyplývající z vedlejších účinků jsou popsány v tématu [vedlejší účinky](../c-language/side-effects.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Primární výrazy jazyka C](../c-language/c-primary-expressions.md)

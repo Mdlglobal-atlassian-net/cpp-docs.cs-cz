@@ -11,10 +11,10 @@ ms.locfileid: "62158303"
 ---
 # <a name="significant-characters-with-external-linkage"></a>Důležité znaky s externím propojením
 
-**ANSI 3.1.2** počet významných znaků s vnějším propojením
+**ANSI 3.1.2** Počet významných znaků s vnějším propojením
 
 Identifikátory deklarované jako `extern` v programech zkompilovaných pomocí jazyka Microsoft C jsou významné pro 247 znaků. Toto výchozí nastavení lze změnit na menší hodnotu pomocí možnosti /H (omezení délky externích názvů).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

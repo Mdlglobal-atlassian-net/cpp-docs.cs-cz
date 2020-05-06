@@ -16,10 +16,10 @@ ms.locfileid: "62157757"
 
 Operátor odčítání (**-**) odečte druhý operand od prvního. Oba operandy mohou být typy s plovoucí desetinnou čárkou nebo celočíselné typy, případně může být jeden operand ukazatel a druhý celé číslo.
 
-Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost této celočíselné hodnoty je definována typem **ptrdiff_t** ve standardním vloženém souboru STDDEF. H. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledkem je zaručeno smysl pro dva prvky stejného pole, jak je popsáno v [aritmetické operace ukazatele](../c-language/pointer-arithmetic.md).
+Při odečtení dvou ukazatelů je rozdíl převeden na celočíselnou hodnotu se znaménkem vydělením rozdílu velikostí hodnoty typu, na který ukazatel odkazuje. Velikost integrální hodnoty je definována typem **ptrdiff_t** ve standardním vloženém souboru STDDEF. Y. Výsledek představuje počet míst paměti tohoto typu mezi dvěma adresami. Výsledek je zaručen pouze jako smysluplný pro dva prvky stejného pole, jak je popsáno v tématu [aritmetický ukazatel](../c-language/pointer-arithmetic.md).
 
-Pokud celočíselná hodnota odečtena od hodnoty ukazatele, převede operátor odčítání celočíselnou hodnotu (*můžu*) pomocí vynásobení velikost hodnoty, kterou tento ukazatel odkazuje. Po převodu představuje celočíselná hodnota *můžu* pozice v paměti, kde má každá pozice délku určený typem ukazatele. Když je převedená celočíselná hodnota odečtena od hodnoty ukazatele, výsledkem je adresa paměti *můžu* pozic před původní adresou. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.
+Pokud je celočíselná hodnota odečtena od hodnoty ukazatele, převede operátor odčítání celočíselnou hodnotu (*i*) tak, že ji vynásobí velikostí hodnoty, na kterou ukazatel odkazuje. Po převodu celočíselná *hodnota představuje pozici* v paměti, kde každá pozice má délku určenou typem ukazatele. Když je převedená celočíselná hodnota odečtena od hodnoty ukazatele, výsledkem je adresa paměti *i* pozice před původní adresou. Nový ukazatel odkazuje na hodnotu typu odkazovaného původní hodnotou ukazatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Sčítací operátory jazyka C](../c-language/c-additive-operators.md)
+[Operátory sčítání jazyka C](../c-language/c-additive-operators.md)

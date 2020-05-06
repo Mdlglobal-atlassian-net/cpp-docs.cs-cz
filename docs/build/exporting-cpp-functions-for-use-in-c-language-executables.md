@@ -16,9 +16,9 @@ ms.locfileid: "62195231"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C
 
-Pokud máte funkce v knihovně DLL, napsaný v jazyce C++, které chcete získat přístup z modulu jazyka C, by měla deklarovat tyto funkce s C-linkage místo propojení jazyka C++. Pokud není uvedeno jinak, kompilátor C++ používá C++ bezpečnost typů (označované také jako dekorování názvů) pojmenování a konvence volání C++, které může být obtížné volat z c
+Pokud máte funkce v knihovně DLL napsané v jazyce C++, ke kterým chcete přistupovat z modulu jazyka C, měli byste tyto funkce deklarovat s propojením jazyka C namísto vazby C++. Není-li uvedeno jinak, kompilátor C++ používá pojmenování v jazyce c++ (označované také jako dekorace názvů) a konvence volání jazyka C++, které mohou být obtížné volat z jazyka C.
 
-Chcete-li zadat C-linkage, zadejte `extern "C"` pro deklarace funkce. Příklad:
+Chcete-li určit propojení jazyka `extern "C"` C, zadejte pro deklarace funkce. Příklad:
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -26,26 +26,26 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí souborů .def](exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí souborů. def](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
+- [Určení metody exportu, která se má použít](determining-which-exporting-method-to-use.md)
 
 - [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializovat knihovnu DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Dekorované názvy](reference/decorated-names.md)
 
 - [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Export z knihovny DLL](exporting-from-a-dll.md)

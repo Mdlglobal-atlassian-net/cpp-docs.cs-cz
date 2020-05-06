@@ -11,11 +11,11 @@ ms.locfileid: "62234124"
 ---
 # <a name="environment-names"></a>Názvy prostředí
 
-**ANSI 4.10.4.4** sada názvů prostředí a metoda pro změnu seznamu prostředí používané funkcí [getenv](../c-runtime-library/reference/getenv-wgetenv.md) – funkce
+**4.10.4.4 ANSI** Sada názvů prostředí a metoda pro změnu seznamu prostředí používaného funkcí [getenv](../c-runtime-library/reference/getenv-wgetenv.md)
 
 Sada názvů prostředí je neomezená.
 
-Chcete-li změnit proměnné prostředí z programu v jazyce C, zavolejte [_putenv](../c-runtime-library/reference/putenv-wputenv.md) funkce. Chcete-li změnit proměnné prostředí z příkazového řádku v systému Windows, použijte příkaz SET (například SET LIB = D:\LIBS).
+Chcete-li změnit proměnné prostředí v rámci programu jazyka C, zavolejte funkci [_putenv](../c-runtime-library/reference/putenv-wputenv.md) . Chcete-li změnit proměnné prostředí z příkazového řádku v systému Windows, použijte příkaz SET (například SET LIB = D:\LIBS).
 
 Proměnné prostředí nastavené v programu jazyka C existují pouze tak dlouho, dokud je spuštěna jejich kopie příkazového prostředí operačního systému (CMD.EXE nebo COMMAND.COM). Například řádek
 
@@ -27,7 +27,7 @@ spustí kopii příkazového prostředí (CMD.EXE), nastaví proměnnou prostře
 
 Podobně změny provedené pomocí funkce `_putenv` trvají pouze do ukončení programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)<br/>
 [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>

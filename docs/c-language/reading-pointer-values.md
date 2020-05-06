@@ -11,10 +11,10 @@ ms.locfileid: "62232054"
 ---
 # <a name="reading-pointer-values"></a>Čtení hodnot ukazatele
 
-**ANSI 4.9.6.2** vstup pro **%p** převod `fscanf` – funkce
+**4.9.6.2 ANSI** Vstup pro převod **% p** ve `fscanf` funkci
 
-Když **%p** zadán znak formátu, `fscanf` funkce převede ukazatele z šestnáctkových hodnot ASCII na správnou adresu.
+Je-li zadán znak formátu **% p** , `fscanf` funkce převede ukazatele z hexadecimálních hodnot ASCII na správnou adresu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62158531"
 ---
 # <a name="signal-function-c"></a>signal – funkce (C)
 
-**ANSI 4.7.1.1** sada signálů **signál** – funkce
+**4.7.1.1 ANSI** Sada signálů pro funkci **signálu**
 
-První argument předaný metodě **signál** musí být jedna z Symbolické konstanty je popsáno v *Run-Time Library Reference* pro **signál** funkce. Informace v *Run-Time Library Reference* také uvádí podpory pracovních režimů pro každý signál. Konstanty jsou definovány také v SIGNAL.H.
+První argument předaný **signalizaci** musí být jedna z symbolické konstanty popsané v *Referenční příručce běhové knihovny* pro funkci **Signal** . Informace v *Referenční příručce ke knihovně za běhu* také uvádí podporu operačního režimu pro každý signál. Konstanty jsou definovány také v SIGNAL.H.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

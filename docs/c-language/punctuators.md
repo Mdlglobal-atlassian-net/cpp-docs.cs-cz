@@ -13,9 +13,9 @@ ms.locfileid: "62232218"
 ---
 # <a name="punctuators"></a>Interpunkční znaky
 
-*interpunkci*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\[ ] ( ) { } \* , : = ; . #**
+*punctuator*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\[] ( ) { } \* , : = ; . #**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)

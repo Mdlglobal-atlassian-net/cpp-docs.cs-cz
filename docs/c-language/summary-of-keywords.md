@@ -11,19 +11,19 @@ ms.locfileid: "62157692"
 ---
 # <a name="summary-of-keywords"></a>Souhrn klíčových slov
 
-*klíčové slovo* : jeden z
+*klíčové slovo* : jedna z
 
 |||||
 |-|-|-|-|
-|**auto**|**double**|**int**|**struct**|
-|**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**register**|**Definice TypeDef**|
-|**char**|**extern**|**return**|**sjednocení**|
-|**const**|**float**|**short**|**bez znaménka**|
-|**continue**|**for**|**podepsané**|**void**|
-|**default**|**goto**|**sizeof**|**volatile**|
+|**automaticky**|**double**|**int**|**nemají**|
+|**break**|**else**|**long**|**přepnutí**|
+|**tom**|**vytváření**|**Registrace**|** – definice typedef**|
+|**char**|**extern**|**return**|**sjednocovací**|
+|**const**|**Plovák**|**short**|**celé**|
+|**continue**|**pro**|**podpisy**|**void**|
+|**výchozí**|**goto**|**sizeof**|**volatile**|
 |**do**|**if**|**static**|**while**|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)

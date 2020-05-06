@@ -14,17 +14,17 @@ ms.locfileid: "62233668"
 ---
 # <a name="external-definitions"></a>Externí definice
 
-*translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
+*jednotka překladu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Externí deklarace* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* *jednotky překladu*
 
-*externí deklarace*: /\* povolený jenom v oboru externí (soubor) \*/<br/>
+*externí deklarace*:/\* povoleno pouze v externím (souboru) oboru\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*
+&nbsp;&nbsp;&nbsp;&nbsp;*změny*
 
-*definice funkce*: /\* zde deklarátor je deklarátor – funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*<sub>optimalizované</sub> *deklarátor* *seznam deklarací*<sub>optimalizované</sub>  *compound-statement*
+*definice funkce*:/\* deklarátor je zde funkce deklarátor\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace-specifikátory*<sub>opt</sub> *deklarátor* *Declaration-list*<sub>opt</sub> – *složený* příkaz
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika struktury fráze](../c-language/phrase-structure-grammar.md)

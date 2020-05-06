@@ -18,6 +18,6 @@ ms.locfileid: "62157900"
 
 Úložiště přidružené k typu pole je úložištěm požadovaným pro všechny jeho prvky. Prvky pole jsou uloženy v souvislých a rostoucích paměťových umístěních, od prvního prvku po poslední.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace pole](../c-language/array-declarations.md)

@@ -14,10 +14,10 @@ ms.locfileid: "62234504"
 ---
 # <a name="default-signals"></a>Výchozí signály
 
-**ANSI 4.7.1.1** Pokud ekvivalent `signal(sig, SIG_DFL)` není spuštěn před voláním popisovače signálu, blokování signál, který se provádí
+**4.7.1.1 ANSI** Pokud ekvivalent `signal(sig, SIG_DFL)` není proveden před voláním obslužné rutiny signálu, blokování signálu, který je proveden
 
 Jakmile je program spuštěn, jsou signály nastaveny na výchozí stav.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)
