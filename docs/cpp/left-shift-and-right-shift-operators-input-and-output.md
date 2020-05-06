@@ -1,5 +1,5 @@
 ---
-title: Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
+title: Operátory posunutí doleva a doprava (&gt; &gt; a &lt; &lt;)
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,32 +13,32 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222058"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825912"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátory posunutí doleva a doprava (&gt; &gt; a &lt; &lt;)
 
-Bitové operátory posunutí jsou operátor pravého posunutí (**&gt;&gt;**), který přesune bity *shift-expression* a operátor levého posunutí doprava (**&lt; &lt;**), který přesune bity *shift-expression* vlevo. <sup>1</sup>
+Bitové operátory posunutí jsou operátor pravého posunutí (**&gt;**), který přesune bity *SHIFT-Expression* doprava a operátor levého posunutí (**&lt;**), který přesune bity *SHIFT-Expression* doleva. <sup>1</sup>
 
 ## <a name="syntax"></a>Syntaxe
 
-> *shift-expression* `<<` *additive-expression*
-> *shift-expression* `>>` *additive-expression*
+> *výraz doplňkového* výrazu *SHIFT-Expression* `<<`\
+> *výraz doplňkového* výrazu *SHIFT-Expression* `>>`
 
 ## <a name="remarks"></a>Poznámky
 
 > [!IMPORTANT]
-> Následující popisy a příklady platí ve Windows pro architektury x86 a x64. Implementace operátorů levého a pravého posunutí se výrazně liší ve Windows pro zařízení ARM. Další informace najdete v části "Operátory posunutí" [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) blogový příspěvek.
+> Následující popisy a příklady jsou platné ve Windows pro architektury x86 a x64. Implementace operátorů levého a pravého posunutí se v systému Windows pro zařízení ARM podstatně liší. Další informace najdete v části "operátory pro přesun" v příspěvku na blogu [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
 
 ## <a name="left-shifts"></a>Posun doleva
 
-Operátor levého posunutí způsobí posunutí bitů v *shift-expression* vlevo o počet pozic určený *additive-expression*. Bitové pozice uvolněné operací posunutí se vyplní nulami. Posun doleva je logický posun (bity posunuté za konec se odstraní, včetně bitu znaku), Další informace o druzích bitových posunů naleznete v tématu [bitových posunů](https://en.wikipedia.org/wiki/Bitwise_shift).
+Operátor levého posunutí způsobí posunutí bitů v *SHIFT-Expression* doleva o počet pozic určených *výrazem doplňkového výrazu*. Bitové pozice uvolněné operací posunutí se vyplní nulami. Posun doleva je logický posun (bity posunuté za konec se odstraní, včetně bitu znaku), Další informace o typech bitových posunutí naleznete v tématu [bitové posunutí](https://en.wikipedia.org/wiki/Bitwise_shift).
 
-Následující příklad ukazuje operace levého posunutí pomocí čísel bez znaménka. Příklad ukazuje, co se děje s bity, znázorněním hodnoty jako bitové sady. Další informace najdete v tématu [bitset – třída](../standard-library/bitset-class.md).
+Následující příklad ukazuje operace levého posunutí pomocí čísel bez znaménka. Příklad ukazuje, co se děje s bity, znázorněním hodnoty jako bitové sady. Další informace naleznete v tématu [Třída bitset](../standard-library/bitset-class.md).
 
 ```cpp
 #include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Pokud posunete doleva číslo se znaménkem tak, aby to mělo vliv na znaménko, bude výsledek nedefinovaný. Následující příklad ukazuje, co se stane, když 1 bit posune doleva na pozici bitu znaménka.
+Pokud posunete doleva číslo se znaménkem tak, aby to mělo vliv na znaménko, bude výsledek nedefinovaný. Následující příklad ukazuje, co se stane, když se 1 bit posune doleva na pozici bitového znaménka.
 
 ```cpp
 #include <iostream>
@@ -86,10 +86,10 @@ int main() {
 
 ## <a name="right-shifts"></a>Posuny doprava
 
-Operátor pravého posunutí způsobí posunutí bitů v *shift-expression* vpravo o počet pozic určený *additive-expression*. V případě čísel bez znaménka se bitové pozice uvolněné operací posunutí vyplní nulami. U čísel se znaménkem se bit znaménka použije k vyplnění uvolněných bitových pozic. Platí tedy, že pokud je číslo kladné, použije se 0. Pokud je číslo záporné, použije se 1.
+Operátor pravého posunutí způsobí posunutí bitového vzoru v *SHIFT-Expression* doprava o počet pozic určených *výrazem doplňkového výrazu*. V případě čísel bez znaménka se bitové pozice uvolněné operací posunutí vyplní nulami. U čísel se znaménkem se bit znaménka použije k vyplnění uvolněných bitových pozic. Platí tedy, že pokud je číslo kladné, použije se 0. Pokud je číslo záporné, použije se 1.
 
 > [!IMPORTANT]
-> Výsledek posunu záporného čísla se znaménkem doprava je závislý na implementaci. I když Microsoft C++ kompilátor používá bit znaménka k vyplnění uvolněných pozic, není zaručeno, že v jiných implementacích tak budou činit i.
+> Výsledek posunu záporného čísla se znaménkem doprava je závislý na implementaci. Přestože kompilátor jazyka Microsoft C++ používá bit znaménka k naplnění uvolněnéch pozic, neexistuje žádná záruka, že to platí i pro jiné implementace.
 
 Tento příklad ukazuje operace pravého posunutí pomocí čísel bez znaménka:
 
@@ -174,9 +174,9 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Posunutí a propagace
 
-Výrazy na obou stranách operátoru posunutí musí být integrální typy. Integrální propagace se provádí dle pravidel popsaných v [standardní převody](standard-conversions.md). Typ výsledku je stejný jako typ zvýšeného parametru *shift-expression*.
+Výrazy na obou stranách operátoru posunutí musí být integrální typy. Celočíselné propagační akce se provádějí podle pravidel popsaných v tématu [standardní převody](standard-conversions.md). Typ výsledku je stejný jako typ propagovaného *SHIFT-Expression*.
 
-V následujícím příkladu se proměnná typu **char** je povýšen na **int**.
+V následujícím příkladu je proměnná typu **char** povýšena na **int**.
 
 ```cpp
 #include <iostream>
@@ -197,7 +197,7 @@ int main() {
 
 ## <a name="additional-details"></a>Další podrobnosti
 
-Výsledek operace posunutí není definován, pokud *additive-expression* je záporný nebo, pokud *additive-expression* je větší než nebo roven počtu bitů ve (zvýšeném)  *SHIFT-expression*. Operace posunutí se neprovádí, pokud *additive-expression* je 0.
+Výsledek operace posunutí není definován, pokud je *výraz doplňkového výrazu* záporný nebo pokud je *výraz doplňkového výrazu* větší nebo roven počtu bitů v (povýšen) *SHIFT-Expression*. Pokud je *výraz doplňkového výrazu* 0, neprovede se žádná operace posunutí.
 
 ```cpp
 #include <iostream>
@@ -222,13 +222,13 @@ int main() {
 
 ## <a name="footnotes"></a>Poznámky pod čarou
 
-<sup>1</sup> následuje popis operátorů posunutí ve specifikace C ++ 11 ISO (INCITS/ISO/IEC 14882-2011[2012]), oddíly 5.8.2 a 5.8.3.
+<sup>1</sup> níže je popis operátorů posunu ve specifikaci C++ 11 ISO (INCITS/ISO/IEC 14882-2011 [2012]), oddíly 5.8.2 a 5.8.3.
 
-Hodnota `E1 << E2` je `E1` posunuta doleva o `E2` bitových pozic; uvolněné bity jsou vyplněny nulami. Pokud `E1` má typ bez znaménka, hodnota výsledku je **E1 × 2**<sup>**E2**</sup>, snížené modulo o jedno více než maximální hodnota reprezentovatelná v typu výsledku. Jinak, pokud `E1` má typ se znaménkem a nezápornou hodnotu a **E1 × 2**<sup>**E2** </sup> je reprezentovatelné v odpovídajícím typ bez znaménka typu výsledku, pak Hodnota převedená na typ výsledku je výsledná hodnota; jinak není chování definováno.
+Hodnota `E1 << E2` je `E1` `E2` bitová pozice posunutá doleva; uvolněné bity jsou vyplněny nulou. Pokud `E1` má typ bez znaménka, hodnota výsledku je **E1 × 2**<sup>**E2**</sup>, zmenšení modulo o jednu více než maximální hodnota reprezentovatelné v typu výsledku. Jinak, pokud `E1` má typ se znaménkem a nezápornou hodnotu a **E1 × 2**<sup>**E2**</sup> je reprezentovatelné v odpovídajícím typu bez znaménka typu výsledku, pak tato hodnota, která je převedena na výsledný typ, je výsledná hodnota; v opačném případě chování není definováno.
 
-Hodnota `E1 >> E2` je `E1` posunuta doprava `E2` bitových pozic. Pokud `E1` má typ bez znaménka nebo pokud `E1` má typ se znaménkem a nezápornou hodnotu, hodnota výsledku je integrální část kvocientu **E1/2**<sup>**E2** </sup>. Pokud `E1` má typ se znaménkem a zápornou hodnotu, je výsledná hodnota definovaná implementací.
+Hodnota `E1 >> E2` je `E1` `E2` bitová pozice vpravo posunuta. Pokud `E1` má typ bez znaménka nebo `E1` Pokud má podepsaný typ a nezápornou hodnotu, hodnota výsledku je nedílnou součástí podílu **E1/2**<sup>**E2**</sup>. Pokud `E1` má typ signed a zápornou hodnotu, výsledná hodnota je definovaná implementací.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

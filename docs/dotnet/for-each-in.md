@@ -10,66 +10,66 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825787"
 ---
 # <a name="for-each-in"></a>for each, in
 
-Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k dispozici v projektech v jazyce C++/CLI a v nativním jazyce C++. Jeho použití se však nedoporučuje. Zvažte použití standardního [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) místo.
+Prochází skrze pole nebo kolekci. Toto nestandardní klíčové slovo je k dispozici v projektech v jazyce C++/CLI a v nativním jazyce C++. Jeho použití se však nedoporučuje. Zvažte možnost použít místo toho standardní [příkaz pro použití rozsahů (C++)](../cpp/range-based-for-statement-cpp.md) .
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
 ### <a name="syntax"></a>Syntaxe
 
-> **pro každou (** *typ* *identifikátor* **v** *výraz* **) {}**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*Příkazy*<br/>
+> **for each (** *type* *identifikátor* **typu ve** *výrazu* **) {**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*učiněn*\
 > **}**
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*textový*<br/>
 Typ `identifier`.
 
-*identifier*<br/>
-Iterační proměnná, která představuje prvek kolekce.  Když `identifier` je [Tracking Reference Operator](../extensions/tracking-reference-operator-cpp-component-extensions.md), lze tento prvek upravit.
+*RID*<br/>
+Iterační proměnná, která představuje prvek kolekce.  Je `identifier` -li [Operátor sledovacího odkazu](../extensions/tracking-reference-operator-cpp-component-extensions.md), lze prvek upravit.
 
-*Výraz*<br/>
-Výraz pole nebo kolekce. Prvek kolekce musí být tak, aby kompilátor mohl převést tak, `identifier` typu.
+*vyjádření*<br/>
+Výraz pole nebo kolekce. Prvek kolekce musí být takový, aby jej kompilátor mohl převést na `identifier` typ.
 
-*Příkazy*<br/>
+*učiněn*<br/>
 Jeden nebo více příkazů ke spuštění.
 
 ### <a name="remarks"></a>Poznámky
 
-`for each` Prohlášení se používá k iteraci v kolekci. Prvky v kolekci je možné měnit, ale nelze je přidávat ani odstraňovat.
+`for each` Příkaz se používá k iteraci v kolekci. Prvky v kolekci je možné měnit, ale nelze je přidávat ani odstraňovat.
 
-*Příkazy* jsou spouštěny pro každý prvek v poli nebo kolekci. Po dokončení iterace u všech prvků v kolekci je kontrola předána příkazu následujícímu `for each` bloku.
+*Příkazy* jsou spouštěny pro každý prvek v poli nebo kolekci. Po dokončení iterace pro všechny prvky v kolekci se ovládací prvek přenese do příkazu, který následuje po `for each` bloku.
 
-`for each` a `in` jsou [kontextově závislá klíčová slova](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
+`for each`a `in` jsou [Kontextově závislá klíčová slova](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
-Další informace:
+Další informace najdete tady:
 
 - [Iterace nad kolekcí STL C++ s použitím výrazu for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Postupy: Iterace v polích s výrazem for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Postupy: Iterace v polích s použitím výrazu for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Postupy: Iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Postupy: Iterace v uživatelem definované kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: **/ZW**
+Možnost kompilátoru: **/ZW**
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje způsob použití `for each` k iteraci v rámci řetězce.
+Tento příklad ukazuje, jak použít `for each` k iterování řetězce.
 
 ```cpp
 // for_each_string1.cpp
@@ -97,7 +97,7 @@ int main() {
 }
 ```
 
-**Output**
+**Výstup**
 
 ```Output
 abcd
@@ -109,20 +109,20 @@ Testing
 
 **Poznámky**
 
-Syntaxe CLR je stejná jako **všechny moduly runtime** syntaxe, s výjimkou následujícího.
+Syntaxe CLR je stejná jako syntaxe **všechny moduly runtime** , s výjimkou následujících.
 
-*Výraz*<br/>
-Výraz spravovaného pole nebo kolekce. Prvek kolekce musí být tak, aby kompilátor mohl převést z <xref:System.Object> k *identifikátor* typu.
+*vyjádření*<br/>
+Výraz spravovaného pole nebo kolekce. Prvek kolekce musí být takový, aby jej kompilátor mohl převést z <xref:System.Object> na typ *identifikátoru* .
 
-*výraz* vyhodnocen jako typ, který implementuje <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, nebo typ, který definuje `GetEnumerator` metody, aby buď vrátil typ, který implementuje <xref:System.Collections.IEnumerator> nebo deklaruje všechny metody, které jsou definovány v `IEnumerator`.
+*výraz* je vyhodnocen jako typ, který <xref:System.Collections.IEnumerable>implementuje <xref:System.Collections.Generic.IEnumerable%601>, nebo typ, který definuje `GetEnumerator` metodu, která buď vrátí typ, který implementuje <xref:System.Collections.IEnumerator> nebo deklaruje všechny metody, které jsou definovány v. `IEnumerator`
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru:   **/CLR**
+Možnost kompilátoru: **/CLR**
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje způsob použití `for each` k iteraci v rámci řetězce.
+Tento příklad ukazuje, jak použít `for each` k iterování řetězce.
 
 ```cpp
 // for_each_string2.cpp
@@ -149,7 +149,7 @@ int main() {
 }
 ```
 
-**Output**
+**Výstup**
 
 ```Output
 abcd
@@ -157,6 +157,6 @@ abcd
 Testing
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)
