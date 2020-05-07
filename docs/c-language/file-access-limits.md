@@ -11,10 +11,10 @@ ms.locfileid: "62233758"
 ---
 # <a name="file-access-limits"></a>Omezení přístupu k souboru
 
-**ANSI 4.9.3** Určuje, zda lze stejný soubor otevřít více než jednou
+**4.9.3 ANSI** Zda může být stejný soubor otevřen několikrát
 
 Není povoleno otevření souboru, který je již otevřen.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

@@ -1,6 +1,6 @@
 ---
 title: Vytvoření projektu aplikace konzoly C++
-description: Vytvořte konzolovou aplikaci Hello World pomocí Microsoft C++ v Sadě Visual Studio.
+description: Pomocí Microsoft C++ v aplikaci Visual Studio vytvořte Hello World konzolovou aplikaci.
 ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
@@ -14,79 +14,79 @@ ms.locfileid: "81749310"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
-Obvyklým výchozím bodem pro programátor c++ je "Hello, world!" aplikace, která běží na příkazovém řádku. To je to, co vytvoříte v sadě Visual Studio v tomto kroku.
+Obvyklým výchozím bodem pro programátory v jazyce C++ je "Hello, World!" aplikace, která běží na příkazovém řádku. To je to, co vytvoříte v aplikaci Visual Studio v tomto kroku.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Mít Visual Studio s desktopvývoj s c++ úlohy nainstalované a spuštěné v počítači. Pokud ještě není nainstalovaná, přečtěte si informace [o instalaci podpory C++ v sadě Visual Studio](vscpp-step-0-installation.md).
+- Máte aplikaci Visual Studio s nainstalovanou a spuštěnou úlohou vývoj desktopových aplikací v jazyce C++. Pokud ještě není nainstalován, přečtěte si téma [Instalace podpory C++ v aplikaci Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
-Visual Studio používá *projekty* k uspořádání kódu pro aplikaci a *řešení* pro uspořádání projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje vztah mezi všemi soubory projektu a všechny externí soubory. Chcete-li vytvořit aplikaci, nejprve vytvoříte nový projekt a řešení.
+Visual Studio používá *projekty* k uspořádání kódu pro aplikaci a *řešení* pro uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k sestavování aplikací. Spravuje vztah mezi všemi soubory projektu a všemi externími soubory. Chcete-li vytvořit aplikaci, nejprve vytvořte nový projekt a řešení.
 
 ::: moniker range=">=vs-2019"
 
-1. V Sadě Visual Studio otevřete nabídku **Soubor** a zvolte **Nový > Project,** **chcete-li** otevřít dialogové okno Vytvořit nový projekt. Vyberte šablonu **konzolové aplikace** se značkami **C++,** **Windows**a **Console** a pak zvolte **Další**.
+1. V aplikaci Visual Studio otevřete nabídku **soubor** a výběrem možnosti **Nový > projekt** otevřete dialog **vytvořit nový projekt** . Vyberte šablonu **aplikace konzoly** , která obsahuje značky **C++**, **Windows**a **Console** , a pak klikněte na tlačítko **Další**.
 
-   ![Vytvoření nového projektu](media/vs2019-choose-console-app.png "Otevření dialogového okna Vytvořit nový projekt")
+   ![Vytvoření nového projektu](media/vs2019-choose-console-app.png "Otevření dialogového okna vytvořit nový projekt")
 
-1. V dialogovém **okně Konfigurovat nový projekt** zadejte *HelloWorld* do pole pro **úpravy názvu projektu.** Chcete-li vytvořit projekt, zvolte **Vytvořit.**
+1. V dialogovém okně **Konfigurovat nový projekt** zadejte do textového pole **název projektu** *HelloWorld* . Vyberte **vytvořit** a vytvořte projekt.
 
-   ![Pojmenování a vytvoření nového projektu](media/vs2019-configure-new-project-hello-world.png "Pojmenování a vytvoření nového projektu")
+   ![Název a vytvořit nový projekt](media/vs2019-configure-new-project-hello-world.png "Název a vytvořit nový projekt")
 
-   Visual Studio vytvoří nový projekt. Je připraven pro přidání a úpravu zdrojového kódu. Ve výchozím nastavení šablona Konzolové aplikace vyplní váš zdrojový kód aplikací "Hello World":
+   Visual Studio vytvoří nový projekt. Je připravený na přidání a úpravu zdrojového kódu. Ve výchozím nastavení Šablona Konzolová aplikace vyplní ve zdrojovém kódu aplikaci Hello World:
 
-   ![Hello World projekt v IDE](media/vs2019-hello-world-code.png "Hello World projekt v IDE")
+   ![Hello World projektu v prostředí IDE](media/vs2019-hello-world-code.png "Hello World projektu v prostředí IDE")
 
-   Když kód vypadá takto v editoru, jste připraveni přejít k dalšímu kroku a vytvořit aplikaci.
+   Když kód v editoru vypadá takto, jste připraveni přejít k dalšímu kroku a sestavit aplikaci.
 
-[Narazil jsem na problém.](#create-your-app-project-issues)
+[Narazili jsme na problém.](#create-your-app-project-issues)
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-1. V Sadě Visual Studio otevřete nabídku **Soubor** a zvolte **Nový > Project,** chcete-li otevřít dialogové okno **Nový projekt.**
+1. V aplikaci Visual Studio otevřete nabídku **soubor** a výběrem možnosti **Nový > projekt** otevřete dialogové okno **Nový projekt** .
 
    ![Otevření dialogového okna Nový projekt](media/vscpp-file-new-project.gif "Otevření dialogového okna Nový projekt")
 
-1. V dialogovém okně **Nový projekt** vyberte Nainstalovat > **Visual C++,** pokud ještě není vybraný, a pak zvolte **šablonu Prázdný projekt.** Do pole **Název** zadejte *HelloWorld*. Chcete-li vytvořit projekt, zvolte **OK.**
+1. V dialogovém okně **Nový projekt** vyberte možnost **nainstalované > Visual C++** , pokud již není vybrána, a pak zvolte **prázdnou šablonu projektu** . Do pole **název** zadejte *HelloWorld*. Kliknutím na **tlačítko OK** vytvořte projekt.
 
-   ![Pojmenování a vytvoření nového projektu](media/vscpp-concierge-project-name-callouts.png "Pojmenování a vytvoření nového projektu")
+   ![Název a vytvořit nový projekt](media/vscpp-concierge-project-name-callouts.png "Název a vytvořit nový projekt")
 
-Visual Studio vytvoří nový, prázdný projekt. Je připraven pro vás specializovat na druh aplikace, kterou chcete vytvořit, a přidat soubory zdrojového kódu. Uděláte to za chvíli.
+Visual Studio vytvoří nový prázdný projekt. Je připraven, abyste se mohli specializovat na druh aplikace, kterou chcete vytvořit, a přidat soubory zdrojového kódu. Uděláte to za chvíli.
 
-[Narazil jsem na problém.](#create-your-app-project-issues)
+[Narazili jsme na problém.](#create-your-app-project-issues)
 
-## <a name="make-your-project-a-console-app"></a>Nastavení aplikace pro konzolu v projektu
+## <a name="make-your-project-a-console-app"></a>Nastavení projektu jako konzolové aplikace
 
-Visual Studio můžete vytvářet všechny druhy aplikací a komponent pro Windows a další platformy. Šablona **Prázdný projekt** není konkrétní o tom, jaký druh aplikace vytvoří. *Konzolová aplikace* je aplikace, která běží v okně konzoly nebo příkazového řádku. Chcete-li vytvořit, musíte říct Visual Studio vytvořit aplikaci používat podsystém konzoly.
+Visual Studio může vytvářet nejrůznější aplikace a komponenty pro Windows a další platformy. **Prázdná šablona projektu** není specifická pro typ aplikace, kterou vytvoří. *Konzolová aplikace* je jedna, která běží v okně konzoly nebo příkazového řádku. Chcete-li ho vytvořit, musíte aplikaci Visual Studio sdělit, aby používala podsystém konzoly.
 
-1. V Sadě Visual Studio otevřete nabídku **Projekt** a zvolte **Vlastnosti,** chcete-li otevřít dialogové okno **Stránky vlastností HelloWorld.**
+1. V aplikaci Visual Studio otevřete nabídku **projekt** a kliknutím na možnost **vlastnosti** otevřete dialogové okno **stránky vlastností HelloWorld** .
 
-1. V dialogovém okně **Stránky vlastností** vyberte **Vlastnosti konfigurace > propojovací > systéma**a pak zvolte textové pole vedle vlastnosti **Subsystem.** V rozevírací nabídce, která se zobrazí, vyberte **Console (/SUBSYSTEM:CONSOLE)**. Chcete-li uložit změny, zvolte **OK.**
+1. V dialogovém okně **stránky vlastností** vyberte **Vlastnosti konfigurace > linker > systém**a potom zvolte pole pro úpravy vedle vlastnosti **subsystému** . V rozevírací nabídce, která se zobrazí, vyberte **Konzola (/SUBSYSTEM: Console)**. Kliknutím na **tlačítko OK** uložte změny.
 
-   ![Otevření dialogového okna Stránky vlastností](media/vscpp-properties-linker-subsystem.gif "Otevření dialogového okna Stránky vlastností")
+   ![Otevřete dialogové okno stránky vlastností.](media/vscpp-properties-linker-subsystem.gif "Otevřete dialogové okno stránky vlastností.")
 
-Visual Studio teď ví, že může vytvořit projekt, který bude spuštěn v okně konzoly. Dále přidáte soubor zdrojového kódu a zadáte kód pro vaši aplikaci.
+Visual Studio nyní ví, že má sestavit projekt pro spuštění v okně konzoly. Dále přidáte soubor zdrojového kódu a zadáte kód vaší aplikace.
 
-[Narazil jsem na problém.](#make-your-project-a-console-app-issues)
+[Narazili jsme na problém.](#make-your-project-a-console-app-issues)
 
-## <a name="add-a-source-code-file"></a>Přidání souboru zdrojového kódu
+## <a name="add-a-source-code-file"></a>Přidat soubor zdrojového kódu
 
-1. V **Průzkumníku řešení**vyberte projekt HelloWorld. Na řádku nabídek zvolte **Projekt**, **Přidat novou položku** a otevřete dialogové okno **Přidat novou položku.**
+1. V **Průzkumník řešení**vyberte projekt HelloWorld. V panelu nabídek vyberte položky **projekt**, **Přidat novou položku** a otevřete tak dialogové okno **Přidat novou položku** .
 
-1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** v části **Nainstalováno,** pokud ještě není vybrané. V prostředním podokně vyberte **soubor C++ (.cpp)**. Změňte **název** na *HelloWorld.cpp*. Zvolte **Přidat,** chcete-li dialog zavřít a vytvořit soubor.
+1. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalováno** **Visual C++** , pokud už není vybraná. V prostředním podokně vyberte **soubor C++ (. cpp)**. Změňte **název** na *HelloWorld. cpp*. Kliknutím na tlačítko **Přidat** zavřete dialogové okno a vytvořte soubor.
 
-   ![Přidání zdrojového souboru pro soubor HelloWorld.cpp](media/vscpp-add-new-item.gif "Přidání zdrojového souboru pro soubor HelloWorld.cpp")
+   ![Přidat zdrojový soubor pro HelloWorld. cpp](media/vscpp-add-new-item.gif "Přidat zdrojový soubor pro HelloWorld. cpp")
 
-Visual Studio vytvoří nový prázdný soubor zdrojového kódu a otevře jej v okně editoru, připravený k zadání zdrojového kódu.
+Visual Studio vytvoří nový prázdný soubor zdrojového kódu a otevře ho v okně editoru, které jste připraveni k zadání zdrojového kódu.
 
-[Narazil jsem na problém.](#add-a-source-code-file-issues)
+[Narazili jsme na problém.](#add-a-source-code-file-issues)
 
-## <a name="add-code-to-the-source-file"></a>Přidání kódu do zdrojového souboru
+## <a name="add-code-to-the-source-file"></a>Přidat kód do zdrojového souboru
 
-1. Zkopírujte tento kód do okna editoru HelloWorld.cpp.
+1. Zkopírujte tento kód do okna editoru HelloWorld. cpp.
 
    ```cpp
    #include <iostream>
@@ -98,74 +98,74 @@ Visual Studio vytvoří nový prázdný soubor zdrojového kódu a otevře jej v
    }
    ```
 
-   Kód by měl vypadat takto v okně editoru:
+   Kód by měl vypadat jako v okně editoru:
 
-   ![Hello World kód v editoru](media/vscpp-hello-world-editor.png "Hello World kód v editoru")
+   ![Kód Hello World v editoru](media/vscpp-hello-world-editor.png "Kód Hello World v editoru")
 
-Když kód vypadá takto v editoru, jste připraveni přejít k dalšímu kroku a vytvořit aplikaci.
+Když kód v editoru vypadá takto, jste připraveni přejít k dalšímu kroku a sestavit aplikaci.
 
-[Narazil jsem na problém.](#add-a-source-code-file-issues)
+[Narazili jsme na problém.](#add-a-source-code-file-issues)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Sestavení a spuštění projektu Jazyka C++](vscpp-step-2-build.md)
+> [Sestavení a spuštění projektu C++](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Průvodce odstraňováním potíží
 
-Přijďte sem pro řešení běžných problémů při vytváření prvního projektu C++.
+Zde najdete řešení běžných problémů při vytváření prvního projektu v jazyce C++.
 
 ### <a name="create-your-app-project-issues"></a>Vytvoření projektu aplikace: problémy
 
 ::: moniker range="vs-2019"
 
-Dialogové okno **Nový projekt** by mělo zobrazovat šablonu **konzolové aplikace,** která obsahuje značky **C++,** **Windows**a **Console.** Pokud to nevidíte, existují dvě možné příčiny. Může být odfiltrován ze seznamu nebo není nainstalován. Nejprve zkontrolujte rozevírací seznamy filtrů v horní části seznamu šablon. Nastavte je na **C++**, **Windows**a **Console**. Měla by se zobrazit šablona **konzolové aplikace** jazyka C++; v opačném případě není nainstalován vývoj plochy s úlohami **C++.**
+V dialogovém okně **Nový projekt** by se měla zobrazit Šablona **konzolové aplikace** , která obsahuje tagy **C++**, **Windows**a **Console** . Pokud ho nevidíte, existují dvě možné příčiny. Může být vyfiltrováno ze seznamu nebo nemusí být nainstalováno. Nejprve v horní části seznamu šablon ověřte rozevírací seznamy filtru. Nastavte je na **C++**, **Windows**a **konzolu**. Měla by se zobrazit Šablona **konzolové aplikace** jazyka C++. v opačném případě není nainstalovaná úloha **vývoj desktopových aplikací v C++** .
 
-Chcete-li nainstalovat **vývoj plochy s c++**, můžete spustit instalační program přímo z dialogového okna **Nový projekt.** Chcete-li spustit instalační program, zvolte v dolní části seznamu šablon odkaz **Instalovat další nástroje a funkce.** Pokud dialogové okno **Řízení uživatelských účtů** požaduje oprávnění, zvolte **Ano**. V instalačním programu zkontrolujte, zda je kontrolován vývoj plochy s úlohami **Jazyka C++.** Pak zvolte **Změnit,** chcete-li aktualizovat instalaci sady Visual Studio.
+Pro instalaci **desktopového vývoje pomocí C++** můžete spustit instalační program přímo z dialogového okna **Nový projekt** . V dolní části seznamu šablon klikněte na odkaz **instalovat další nástroje a funkce a** spusťte instalační program. Pokud se v dialogu **řízení uživatelských účtů** požaduje oprávnění, vyberte **Ano**. V instalačním programu se ujistěte, že je zaškrtnuté políčko **vývoj desktopových aplikací v jazyce C++** . Pak zvolte **Upravit** a aktualizujte instalaci sady Visual Studio.
 
-Pokud jiný projekt se stejným názvem již existuje, zvolte jiný název projektu. Nebo odstraňte existující projekt a akci opakujte. Chcete-li odstranit existující projekt, odstraňte složku řešení (složku, která obsahuje soubor *helloworld.sln)* v Průzkumníkovi souborů.
+Pokud již existuje jiný projekt se stejným názvem, vyberte jiný název projektu. Případně odstraňte existující projekt a akci opakujte. Chcete-li odstranit existující projekt, odstraňte složku řešení (ve složce, která obsahuje soubor *HelloWorld. sln* ) v Průzkumníkovi souborů.
 
-[Vrať se.](#create-your-app-project)
+[Vraťte](#create-your-app-project)se.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud dialogové okno **Nový projekt** nezobrazuje položku **Visual C++** v části **Nainstalováno**, vaše kopie Sady Visual Studio pravděpodobně nemá nainstalovaný vývoj plochy s úlohami **C++.** Instalační program můžete spustit přímo z dialogového okna **Nový projekt.** Chcete-li instalační program znovu spustit, zvolte odkaz **Otevřít instalační program sady Visual Studio.** Pokud dialogové okno **Řízení uživatelských účtů** požaduje oprávnění, zvolte **Ano**. V případě potřeby aktualizujte instalační program. V instalačním programu zkontrolujte, zda je zkontrolován vývoj plochy s úlohami **jazyka C++,** a zvolte **OK,** chcete-li aktualizovat instalaci sady Visual Studio.
+Pokud se v dialogovém okně **Nový projekt** nezobrazí položka **Visual C++** v části **nainstalováno**, vaše kopie sady Visual Studio pravděpodobně nemá nainstalovanou úlohu **vývoj desktopových aplikací v jazyce C++** . Instalační program můžete spustit přímo v dialogovém okně **Nový projekt** . Kliknutím na odkaz **otevřít instalační program pro Visual Studio** spusťte instalační program znovu. Pokud se v dialogu **řízení uživatelských účtů** požaduje oprávnění, vyberte **Ano**. V případě potřeby aktualizujte instalační program. V instalačním programu se ujistěte, že je zaškrtnuté políčko **vývoj desktopových aplikací v jazyce C++** , a kliknutím na **tlačítko OK** aktualizujte instalaci sady Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Pokud jiný projekt se stejným názvem již existuje, zvolte jiný název projektu. Nebo odstraňte existující projekt a akci opakujte. Chcete-li odstranit existující projekt, odstraňte složku řešení (složku, která obsahuje soubor *helloworld.sln)* v Průzkumníkovi souborů.
+Pokud již existuje jiný projekt se stejným názvem, vyberte jiný název projektu. Případně odstraňte existující projekt a akci opakujte. Chcete-li odstranit existující projekt, odstraňte složku řešení (ve složce, která obsahuje soubor *HelloWorld. sln* ) v Průzkumníkovi souborů.
 
-[Vrať se.](#create-your-app-project)
+[Vraťte](#create-your-app-project)se.
 
-### <a name="make-your-project-a-console-app-issues"></a>Nastavení aplikace pro konzolu v projektu: problémy
+### <a name="make-your-project-a-console-app-issues"></a>Vytvoření projektu konzolové aplikace: problémy
 
-Pokud **linker** v části **Vlastnosti konfigurace**nevidíte , zvolte **Storno** a zavřete dialogové okno **Stránky vlastností.** Ujistěte se, že projekt **HelloWorld** je vybrán v **Průzkumníku řešení,** než to zkusíte znovu. Nevybírejte v **Průzkumníku řešení**řešení **helloworld** ani jinou položku.
+Pokud nevidíte **linker** uvedený v části **Vlastnosti konfigurace**, klikněte na **tlačítko Storno** , čímž zavřete dialogové okno **stránky vlastností** . Než to zkusíte znovu, ujistěte se, že je v **Průzkumník řešení** vybraný projekt **HelloWorld** . Nevybírejte řešení **HelloWorld** nebo jinou položku v **Průzkumník řešení**.
 
-Ovládací prvek rozevíracího kódu se nezobrazí v poli úprav vlastností **SubSystem,** dokud vlastnost nevyberete. Klepnutím do textového pole ho vyberte. Nebo můžete stisknutím **klávesy Tab** cykinožovat ovládací prvky dialogu, dokud nebude zvýrazněn **subsystém.** Zvolte ovládací prvek rozevírací nebo ho otevřete stisknutím **kláves Alt+Down.**
+Ovládací prvek rozevírací seznam se nezobrazí v poli pro úpravu vlastností **subsystému** , dokud nevyberete vlastnost. Kliknutím do pole pro úpravy ho vyberte. Nebo můžete stisknout klávesu **TAB** , abyste mohli cyklicky procházet ovládací prvky dialogu, dokud se nezvýrazní **podsystém** . Zvolte ovládací prvek rozevíracího seznamu nebo stiskněte klávesy **ALT + Šipka dolů** a otevřete jej.
 
 [Přejít zpátky](#make-your-project-a-console-app)
 
-### <a name="add-a-source-code-file-issues"></a>Přidání souboru zdrojového kódu: problémy
+### <a name="add-a-source-code-file-issues"></a>Přidat soubor zdrojového kódu: problémy
 
-Je to v pořádku, pokud dáte souborzdrojového kódu jiný název. Nepřidávejte však do projektu více než jeden soubor, který obsahuje stejný kód.
+Je v pořádku, pokud poskytnete souboru zdrojového kódu jiný název. Nepřidávejte ale do projektu více než jeden soubor, který obsahuje stejný kód.
 
-Pokud jste do projektu přidali nesprávný typ souboru, například soubor záhlaví, odstraňte jej a zkuste to znovu. Chcete-li soubor odstranit, vyberte jej v **Průzkumníku řešení**. Pak stiskněte klávesu **Delete.**
+Pokud jste do projektu přidali nesprávný typ souboru, jako je například hlavičkový soubor, odstraňte jej a akci opakujte. Pokud chcete soubor odstranit, vyberte ho v **Průzkumník řešení**. Pak stiskněte klávesu **Delete** .
 
-[Vrať se.](#add-a-source-code-file)
+[Vraťte](#add-a-source-code-file)se.
 
-### <a name="add-code-to-the-source-file-issues"></a>Přidání kódu do zdrojového souboru: problémy
+### <a name="add-code-to-the-source-file-issues"></a>Přidat kód do zdrojového souboru: problémy
 
-Pokud jste omylem zavřeli okno editoru souborů zdrojového kódu, můžete jej snadno znovu otevřít. Chcete-li jej otevřít, poklepejte na HelloWorld.cpp v okně **Průzkumník řešení.**
+Pokud omylem zavřete okno Editor souborů zdrojového kódu, můžete ho snadno otevřít znovu. Otevřete ho tak, že dvakrát kliknete na HelloWorld. cpp v okně **Průzkumník řešení** .
 
-Pokud se pod čímkoli v editoru zdrojového kódu zobrazí červené vlnovky, zkontrolujte, zda se váš kód shoduje s příkladem pravopisu, interpunkce a velikosti písmen. Případ je významný v kódu jazyka C++.
+Pokud se červené vlnovky zobrazují pod cokoli v editoru zdrojového kódu, zkontrolujte, že váš kód odpovídá příkladu v pravopisu, interpunkci a velikosti písmen. Případ je v kódu jazyka C++ významný.
 
-[Vrať se.](#add-code-to-the-source-file)
+[Vraťte](#add-code-to-the-source-file)se.
 
 ::: moniker-end
 

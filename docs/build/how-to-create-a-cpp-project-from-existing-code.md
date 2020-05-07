@@ -19,15 +19,15 @@ ms.locfileid: "80078542"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Postupy: Vytvoření projektu jazyka C++ z existujícího kódu
 
-V aplikaci Visual Studio můžete portovat existující soubory kódu do C++ projektu pomocí průvodce **vytvořením nového projektu z existujících souborů kódu** . Tento průvodce vytvoří řešení projektu, které používá systém MSBuild ke správě zdrojových souborů a konfigurace sestavení. Funguje nejlépe s relativně jednoduchými projekty, které nemají složité hierarchie složek. Průvodce není dostupný ve starších edicích Express sady Visual Studio.
+V aplikaci Visual Studio můžete portovat existující soubory kódu do projektu C++ pomocí průvodce **vytvořením nového projektu z existujících souborů kódu** . Tento průvodce vytvoří řešení projektu, které používá systém MSBuild ke správě zdrojových souborů a konfigurace sestavení. Funguje nejlépe s relativně jednoduchými projekty, které nemají složité hierarchie složek. Průvodce není dostupný ve starších edicích Express sady Visual Studio.
 
-Přenos stávajících souborů s C++ kódem do projektu umožňuje použití nativních funkcí správy projektů MSBuild integrovaných v INTEGROVANÉm vývojovém prostředí. Pokud dáváte přednost použití stávajícího sestavovacího systému, jako jsou soubory pravidel NMAKE, CMake nebo alternativy, můžete místo toho použít možnost otevřít složku nebo CMake. Další informace najdete v tématu [otevřené složky projekty pro C++ ](open-folder-projects-cpp.md) nebo [cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Obě možnosti umožňují používat funkce rozhraní IDE, jako jsou například [technologie IntelliSense](/visualstudio/ide/using-intellisense) a [Vlastnosti projektu](working-with-project-properties.md).
+Přenos stávajících souborů s kódem do projektu jazyka C++ umožňuje použití nativních funkcí správy projektů MSBuild integrovaných do rozhraní IDE. Pokud dáváte přednost použití stávajícího sestavovacího systému, jako jsou soubory pravidel NMAKE, CMake nebo alternativy, můžete místo toho použít možnost otevřít složku nebo CMake. Další informace najdete v tématu [otevřené složky projekty pro projekty C++](open-folder-projects-cpp.md) nebo [cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Obě možnosti umožňují používat funkce rozhraní IDE, jako jsou například [technologie IntelliSense](/visualstudio/ide/using-intellisense) a [Vlastnosti projektu](working-with-project-properties.md).
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>Vytvoření projektu jazyka C++ z existujícího kódu
 
 1. V nabídce **soubor** vyberte **Nový** > **projekt z existujícího kódu**.
 
-1. Zadejte umístění projektu, adresář pro zdrojové soubory a typy souborů, které průvodce importuje do nového projektu. Pokračujte kliknutím na tlačítko **Další** .
+1. Zadejte umístění projektu, adresář pro zdrojové soubory a typy souborů, které průvodce importuje do nového projektu. Pokračujte výběrem položky **Další**.
 
     | Nastavení | Popis |
     | --- | --- |
@@ -38,11 +38,11 @@ Přenos stávajících souborů s C++ kódem do projektu umožňuje použití na
 
     ![Umístění projektu](media/location.png)
 
-1. Zadejte nastavení projektu, které se má použít, například prostředí sestavení pro nový projekt a nastavení sestavení tak, aby odpovídalo určitému typu nového projektu, který se má vygenerovat. Pokračujte kliknutím na tlačítko **Další** .
+1. Zadejte nastavení projektu, které se má použít, například prostředí sestavení pro nový projekt a nastavení sestavení tak, aby odpovídalo určitému typu nového projektu, který se má vygenerovat. Pokračujte výběrem položky **Další**.
 
     | Nastavení | Popis |
     | --- | --- |
-    | **Použití sady Visual Studio** | Určuje použití nástrojů sestavení, které jsou součástí sady Visual Studio pro sestavení nového projektu. Tato možnost je vybrána jako výchozí nastavení.<br/><br/>Vyberte **typ projektu** a zadejte typ projektu, který průvodce vygeneruje. Vyberte **projekt aplikace systému Windows**, **projekt konzolové aplikace**, **projekt dynamické knihovny (DLL)** nebo **projekt statické knihovny (lib)** .<br/><br/>Pokud chcete přidat podporu ATL do nového projektu, podívejte se do **Přidat podporu pro ATL** .<br/><br/>Chcete-li přidat podporu knihovny MFC do nového projektu, je nutné zaškrtnout **Přidat podporu knihovny MFC** .<br/><br/>Pokud chcete přidat podporu programování CLR do projektu, podívejte se do **části přidat podporu pro modul CLR (Common Language Runtime)** . Vyberte podporu modulu CLR ( **Common Language** Runtime) pro typ dodržování předpisů, jako je například **Common Language Runtime (stará syntaxe)** pro C++ dodržování předpisů se spravovanými rozšířeními pro syntaxi, programovací syntaxí CLR před sadou Visual Studio 2005. |
+    | **Použití sady Visual Studio** | Určuje použití nástrojů sestavení, které jsou součástí sady Visual Studio pro sestavení nového projektu. Tato možnost je ve výchozím nastavení zaškrtnutá.<br/><br/>Vyberte **typ projektu** a zadejte typ projektu, který průvodce vygeneruje. Vyberte **projekt aplikace systému Windows**, **projekt konzolové aplikace**, **projekt dynamické knihovny (DLL)** nebo **projekt statické knihovny (lib)**.<br/><br/>Pokud chcete přidat podporu ATL do nového projektu, podívejte se do **Přidat podporu pro ATL** .<br/><br/>Chcete-li přidat podporu knihovny MFC do nového projektu, je nutné zaškrtnout **Přidat podporu knihovny MFC** .<br/><br/>Pokud chcete přidat podporu programování CLR do projektu, podívejte se do **části přidat podporu pro modul CLR (Common Language Runtime)** . Zvolit podporu modulu CLR ( **Common Language** Runtime) pro typ dodržování předpisů, jako je například **Common Language Runtime (stará syntaxe)** pro dodržování předpisů pomocí syntaxe spravovaná rozšíření jazyka C++, před sadou Visual Studio 2005 se syntaxí programování CLR. |
     | **Použít externí sestavovací systém** | Určuje použití nástrojů sestavení, které nejsou součástí sady Visual Studio pro sestavení nového projektu. Pokud je vybrána tato možnost, můžete zadat příkazové řádky sestavení na stránce **zadat nastavení konfigurace ladění** a **zadat konfigurační nastavení vydání** . |
 
     ![Nastavení projektu](media/settings.png)
@@ -50,7 +50,7 @@ Přenos stávajících souborů s C++ kódem do projektu umožňuje použití na
     > [!NOTE]
     > Pokud je zaškrtnuta možnost **použít externí sestavovací systém** , rozhraní IDE nevytvoří projekt, takže možnosti/D,/I,/Fi,/AI nebo/Fu nejsou pro kompilaci požadovány. Tyto možnosti je však nutné nastavit správně, aby technologie IntelliSense správně fungovala.
 
-1. Zadejte nastavení konfigurace ladění, které se má použít. Pokračujte kliknutím na tlačítko **Další** .
+1. Zadejte nastavení konfigurace ladění, které se má použít. Pokračujte výběrem položky **Další**.
 
     | Nastavení | Popis |
     | --- | --- |

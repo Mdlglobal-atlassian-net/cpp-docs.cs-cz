@@ -22,15 +22,15 @@ ms.locfileid: "69493317"
 
 Když použijete kompilátor Microsoft C++ (MSVC) k vytváření aplikací, které se mají spouštět na 64 operačním systému Windows, měli byste si uvědomit následující problémy:
 
-- `int` Aajsou32hodnotyna`long` 64 operačních systémech Windows. Pro programy, které plánujete kompilovat pro 64 platformy, byste měli být opatrní, abyste nepřiřadili ukazatelům ke 32 bitovým proměnným. Ukazatele jsou 64-bit na 64 platformách a hodnota ukazatele se zkrátí, pokud ji přiřadíte proměnné 32-bit.
+- `int` A a `long` jsou 32 hodnoty na 64 operačních systémech Windows. Pro programy, které plánujete kompilovat pro 64 platformy, byste měli být opatrní, abyste nepřiřadili ukazatelům ke 32 bitovým proměnným. Ukazatele jsou 64-bit na 64 platformách a hodnota ukazatele se zkrátí, pokud ji přiřadíte proměnné 32-bit.
 
-- `size_t`, `time_t` a`ptrdiff_t` jsou 64 hodnoty na 64 operačních systémů Windows.
+- `size_t`, `time_t`a `ptrdiff_t` jsou 64 hodnoty na 64 operačních systémů Windows.
 
 - `time_t`je 32 hodnota v 32 operačních systémech Windows v aplikaci Visual Studio 2005 a starších verzích. `time_t`ve výchozím nastavení je teď 64 celé číslo. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).
 
-   Měli byste vědět, kde kód přebírá `int` hodnotu a zpracovává ho `size_t` jako hodnotu nebo `time_t` . Je možné, že počet může být větší než 32-bit a data se při předání zpátky do `int` úložiště zkrátí.
+   Měli byste vědět, kde kód přebírá `int` hodnotu a zpracovává ho jako hodnotu `size_t` nebo. `time_t` Je možné, že počet může být větší než 32-bit a data se při předání zpátky do `int` úložiště zkrátí.
 
-Modifikátor% x (šestnáctkový `int` formát) `printf` nebude fungovat podle očekávání v operačním systému Windows 64. Bude fungovat pouze v prvních 32 bitech hodnoty, která je předána.
+Modifikátor% x (šestnáctkový `int` formát `printf` ) nebude fungovat podle očekávání v operačním systému Windows 64. Bude fungovat pouze v prvních 32 bitech hodnoty, která je předána.
 
 - Pomocí% I32x můžete zobrazit 32 integrálový typ v šestnáctkovém formátu.
 
@@ -38,13 +38,13 @@ Modifikátor% x (šestnáctkový `int` formát) `printf` nebude fungovat podle o
 
 - % P (šestnáctkový formát pro ukazatel) bude v operačním systému Windows 64 fungovat podle očekávání.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
 - [Parametry kompilátoru MSVC](reference/compiler-options.md)
 
 - [Tipy k migraci](/windows/win32/WinProg64/migration-tips)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurace projektů C++ pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

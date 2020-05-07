@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení nastavení sestavení CMake v sadě Visual Studio
+title: Přizpůsobení nastavení buildu CMake v sadě Visual Studio
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
@@ -14,82 +14,82 @@ ms.locfileid: "81328683"
 
 ::: moniker range="vs-2019"
 
-V Sadě Visual Studio 2019 a novějších můžete přidat konfigurace a přizpůsobit jejich nastavení pomocí **editoru nastavení CMake**. Editor má být jednodušší alternativou k ruční úpravě souboru *CMakeSettings.json,* ale pokud dáváte přednost úpravě souboru přímo, můžete kliknout na odkaz **Upravit JSON** v pravém horním části editoru.
+V sadě Visual Studio 2019 a novějších můžete přidat konfigurace a přizpůsobit jejich nastavení pomocí **editoru nastavení cmake**. Editor je určený jako jednodušší alternativa k ruční úpravě souboru *CMakeSettings. JSON* , ale pokud dáváte přednost úpravám souboru přímo, můžete kliknout na odkaz **Upravit JSON** v pravém horním rohu editoru.
 
-Chcete-li editor otevřít, klikněte na rozevírací panel **Konfigurace** na hlavním panelu nástrojů a zvolte **Spravovat konfigurace**.
+Chcete-li otevřít Editor, klikněte na rozevírací nabídku **Konfigurace** na hlavním panelu nástrojů a vyberte možnost **spravovat konfigurace**.
 
-![Rozevírací položky konfigurace CMake](media/vs2019-cmake-manage-configurations.png)
+![Rozevírací seznam konfigurace CMake](media/vs2019-cmake-manage-configurations.png)
 
-Nyní vidíte **Editor nastavení** s nainstalovanými konfiguracemi vlevo.
+Nyní uvidíte **Editor nastavení** s nainstalovanými konfiguracemi na levé straně.
 
 ![Editor nastavení CMake](media/cmake-settings-editor.png)
 
-Visual Studio `x64-Debug` poskytuje jednu konfiguraci ve výchozím nastavení. Další konfigurace můžete přidat kliknutím na zelené znaménko plus. Nastavení, která se zobrazí v editoru, se mohou lišit v závislosti na vybrané konfiguraci.
+Visual Studio poskytuje ve `x64-Debug` výchozím nastavení jednu konfiguraci. Kliknutím na zelený symbol plus můžete přidat další konfigurace. Nastavení, která se zobrazí v editoru, se můžou lišit v závislosti na tom, která konfigurace je vybraná.
 
-Možnosti, které zvolíte v editoru, jsou zapsány do souboru s názvem *CMakeSettings.json*. Tento soubor obsahuje argumenty příkazového řádku a proměnné prostředí, které jsou předány CMake při vytváření projektů. Visual Studio nikdy automaticky upravuje *soubor CMakeLists.txt.* pomocí *CMakeSettings.json* můžete přizpůsobit sestavení prostřednictvím sady Visual Studio a ponechat soubory projektu CMake nedotčené, aby je ostatní členové vašeho týmu mohli využívat pomocí nástrojů, které používají.
+Možnosti, které zvolíte v editoru, jsou zapsány do souboru s názvem *CMakeSettings. JSON*. Tento soubor poskytuje argumenty příkazového řádku a proměnné prostředí, které se předávají CMaki při sestavování projektů. Visual Studio nikdy nemění *CMakeLists. txt* automaticky; pomocí *CMakeSettings. JSON* si můžete sestavení přizpůsobit prostřednictvím sady Visual Studio a nechat soubory projektu cmake beze změny, aby je ostatní členové týmu mohli využívat bez jakýchkoli nástrojů, které používají.
 
-## <a name="cmake-general-settings"></a>CMake Obecné nastavení
+## <a name="cmake-general-settings"></a>Obecná nastavení CMake
 
-V nadpisu **Obecné** jsou k dispozici následující nastavení:
+V **Obecné** hlavičce jsou k dispozici následující nastavení:
 
 ### <a name="configuration-name"></a>Název konfigurace
 
-Odpovídá nastavení **názvu.** Tento název se zobrazí v rozevíracím souboru konfigurace jazyka C++. `${name}` Makro můžete použít k komponovat další hodnoty vlastností, například cesty.
+Odpovídá nastavení **názvu** . Tento název se zobrazí v rozevíracím seznamu konfigurace C++. `${name}` Makro lze použít k vytvoření dalších hodnot vlastností, jako jsou například cesty.
 
 ### <a name="configuration-type"></a>Typ konfigurace
 
-Odpovídá nastavení **configurationType.** Definuje typ konfigurace sestavení pro vybraný generátor. Aktuálně podporované hodnoty jsou "Ladění", "MinSizeRel", "Release" a "RelWithDebInfo". Mapuje se na [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html).
+Odpovídá nastavení **výběru** . Definuje typ konfigurace sestavení pro vybraný generátor. Aktuálně podporované hodnoty jsou "debug", "MinSizeRel", "Release" a "RelWithDebInfo". Mapuje se na [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html).
 
 ### <a name="toolset"></a>Sada nástrojů
 
-Odpovídá **zděděné prostředí** nastavení. Definuje prostředí kompilátoru, které se používá k sestavení vybrané konfigurace. Podporované hodnoty závisí na typu konfigurace. Chcete-li vytvořit vlastní prostředí, zvolte odkaz **Upravit JSON** v pravém horním rohu editoru Nastavení a přímo upravte soubor *CMakeSettings.json.*
+Odpovídá nastavení **inheritedEnvironments** . Definuje prostředí kompilátoru, které se používá k sestavení vybrané konfigurace. Podporované hodnoty závisí na typu konfigurace. Pokud chcete vytvořit vlastní prostředí, klikněte na odkaz **Upravit JSON** v pravém horním rohu editoru nastavení a upravte soubor *CMakeSettings. JSON* přímo.
 
-### <a name="cmake-toolchain-file"></a>Soubor řetězce nástrojů CMake
+### <a name="cmake-toolchain-file"></a>Soubor sada nástrojů CMake
 
-Cesta k [souboru řetězce nástrojů CMake](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Tato cesta je předána CMake \<jako "-DCMAKE_TOOLCHAIN_FILE = cesta k souboru>". Soubory řetězce nástrojů určují umístění kompilátorů a nástrojů řetězce nástrojů a další informace související s cílovou platformou a kompilátorem. Ve výchozím nastavení visual studio používá [soubor řetězce nástrojů vcpkg,](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) pokud toto nastavení není určeno.
+Cesta k [souboru sada nástrojů cmake](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html) Tato cesta se předává CMaki jako "-DCMAKE_TOOLCHAIN_FILE = \<FilePath>". Soubory sada nástrojů určují umístění kompilátorů a sada nástrojů nástrojů a další informace o cílové platformě a kompilátoru. Ve výchozím nastavení Visual Studio používá [soubor vcpkg sada nástrojů](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) , pokud není toto nastavení určeno.
 
-### <a name="build-root"></a>Vytvořit kořen
+### <a name="build-root"></a>Kořen sestavení
 
-Odpovídá **buildRoot**. Mapuje na [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)a určuje, kde se má vytvořit mezipaměť CMake. Zadaná složka je vytvořena, pokud neexistuje.
+Odpovídá **buildRoot**. Provede mapování na [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)a určuje, kde se má vytvořit mezipaměť cmake. Zadaná složka se vytvoří, pokud neexistuje.
 
 ## <a name="command-arguments"></a>Argumenty příkazu
 
-V záhlaví **Argumenty příkazu** jsou k dispozici následující nastavení:
+V nadpisu **argumentů příkazu** jsou k dispozici následující nastavení:
 
-### <a name="cmake-command-arguments"></a>CMake argumenty příkazu
+### <a name="cmake-command-arguments"></a>Argumenty příkazu CMake
 
-Odpovídá **cmakeCommandArgs**. Určuje všechny další [možnosti příkazového řádku](https://cmake.org/cmake/help/latest/manual/cmake.1.html) předané souboru CMake.exe.
+Odpovídá **cmakeCommandArgs**. Určuje další [Možnosti příkazového řádku](https://cmake.org/cmake/help/latest/manual/cmake.1.html) předané do cmake. exe.
 
-### <a name="build-command-arguments"></a>Argumenty příkazů sestavení
+### <a name="build-command-arguments"></a>Argumenty příkazu sestavení
 
-Odpovídá **buildCommandArgs**. Určuje další přepínače, které mají být předávány základnímu systému sestavení. Například předávání `-v` při použití generátoru Ninja nutí Ninju k výstupu příkazových řádků.
+Odpovídá **buildCommandArgs**. Určuje další přepínače, které mají být předána základnímu systému sestavení. Například předání `-v` při použití generátoru expertem vynutí expertem pro výstup příkazových řádků.
 
-### <a name="ctest-command-arguments"></a>Argumenty příkazů CTest
+### <a name="ctest-command-arguments"></a>Argumenty příkazu CTest
 
-Odpovídá **ctestCommandArgs**. Určuje další [možnosti příkazového řádku,](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) které mají být při spuštění testů předávány ctestu.
+Odpovídá **ctestCommandArgs**. Určuje další [Možnosti příkazového řádku](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) , které se mají předat CTest při spouštění testů.
 
 ## <a name="general-settings-for-remote-builds"></a>Obecná nastavení pro vzdálená sestavení
 
-Pro konfigurace, jako je Linux, které používají vzdálená sestavení, jsou k dispozici také následující nastavení:
+Pro konfigurace, jako je Linux, které používají vzdálené sestavení, jsou k dispozici také následující nastavení:
 
-### <a name="rsync-command-arguments"></a>argumenty příkazů rsync
+### <a name="rsync-command-arguments"></a>argumenty příkazu rsync
 
-Další možnosti příkazového řádku předané [rsync](https://download.samba.org/pub/rsync/rsync.html), rychlý a všestranný nástroj pro kopírování souborů.
+Další možnosti příkazového řádku předané do [rsync](https://download.samba.org/pub/rsync/rsync.html), rychlý a univerzální nástroj pro kopírování souborů.
 
-## <a name="cmake-variables-and-cache"></a>CMake proměnné a mezipaměť
+## <a name="cmake-variables-and-cache"></a>CMake – proměnné a mezipaměť
 
-Tato nastavení umožňují nastavit proměnné CMake a uložit je do *souboru CMakeSettings.json*. Jsou předány CMake v době sestavení a přepsat všechny hodnoty jsou v souboru *CMakeLists.txt.* Tento oddíl můžete použít stejným způsobem, že můžete použít CMakeGUI k zobrazení seznamu všech cmake proměnné, které jsou k dispozici pro úpravy. Kliknutím na tlačítko **Uložit a generovat mezipaměť** zobrazíte seznam všech proměnných CMake, které jsou k dispozici pro úpravy, včetně pokročilých proměnných (podle CMakeGUI). Seznam můžete filtrovat podle názvu proměnné.
+Tato nastavení umožňují nastavit proměnné CMake a uložit je do souboru *CMakeSettings. JSON*. Jsou předány do CMake v době sestavení a přepisují jakékoli hodnoty v souboru *CMakeLists. txt* . Tuto část můžete použít stejným způsobem, jakým můžete použít CMakeGUI k zobrazení seznamu všech proměnných CMak, které jsou k dispozici pro úpravy. Kliknutím na tlačítko **Uložit a generovat mezipaměť** zobrazíte seznam všech proměnných cmake, které jsou k dispozici pro úpravy, včetně pokročilých proměnných (na CMakeGUI). Seznam můžete filtrovat podle názvu proměnné.
 
-Odpovídá **proměnným**. Obsahuje dvojici název-hodnota CMake proměnné předány jako **-D** * _název_=hodnoty* CMake. Pokud vaše CMake projektu sestavení pokyny zadat přidání všechny proměnné přímo do souboru mezipaměti CMake, doporučujeme přidat je zde místo.
+Odpovídá **proměnným**. Obsahuje dvojici název-hodnota proměnných cmake předaných **jako** *hodnota _názvu_=* pro cmake. Pokud vaše pokyny pro sestavení vašeho projektu CMake určují přidání jakýchkoli proměnných přímo do souboru mezipaměti CMake, doporučujeme je místo toho přidat.
 
 ## <a name="advanced-settings"></a>Upřesnit nastavení
 
-### <a name="cmake-generator"></a>CMake generátor
+### <a name="cmake-generator"></a>Generátor CMake
 
-Odpovídá **generátoru**. Mapuje na přepínač CMake **-G** a určuje [generátor CMake,](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) který se má použít. Tuto vlastnost lze také použít `${generator}`jako makro , při vytváření jiných hodnot vlastností. Visual Studio aktuálně podporuje následující generátory CMake:
+Odpovídá **generátoru**. Provede mapování na přepínač CMake **-G** a určí [generátor cmake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) , který se má použít. Tuto vlastnost lze použít také jako makro, `${generator}`při vytváření dalších hodnot vlastností. Sada Visual Studio aktuálně podporuje následující generátory CMake:
 
-- "Ninja"
-- "Unix makefiles"
+- Expertem
+- "Soubory pravidel pro UNIX"
 - "Visual Studio 16 2019"
 - "Visual Studio 16 2019 Win64"
 - "Visual Studio 16 2019 ARM"
@@ -100,37 +100,37 @@ Odpovídá **generátoru**. Mapuje na přepínač CMake **-G** a určuje [gener�
 - "Visual Studio 14 2015 Win64"
 - "Visual Studio 14 2015 ARM"
   
-Protože Ninja je navržen pro rychlé rychlosti sestavení namísto flexibility a funkce, je nastaven jako výchozí. Některé projekty CMake však nemusí být schopen správně sestavit pomocí Ninja. Pokud k tomu dojde, můžete pokyn CMake generovat projekt sady Visual Studio místo.
+Vzhledem k tomu, že expertem je navržen pro rychlé rychlosti sestavení místo flexibility a funkce, je nastavena jako výchozí. Některé projekty CMake ale nemusí být možné správně sestavit pomocí expertem. Pokud k tomu dojde, můžete pro CMake dát pokyn pro vygenerování projektu sady Visual Studio.
 
 ### <a name="intellisense-mode"></a>Režim IntelliSense
 
-Režim IntelliSense používaný motorem IntelliSense. Pokud není vybrán žádný režim, pak Visual Studio dědí ze zadané sady nástrojů.  
+Režim IntelliSense používaný modulem IntelliSense. Pokud není vybrán žádný režim, sada Visual Studio bude dědit ze zadané sady nástrojů.  
 
-### <a name="install-directory"></a>Nainstalovat adresář
+### <a name="install-directory"></a>Instalační adresář
 
-Adresář, ve kterém CMake instaluje cíle. Mapy na [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
+Adresář, do kterého se instaluje CMake. Provede mapování na [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
 
-### <a name="cmake-executable"></a>CMake spustitelný soubor
+### <a name="cmake-executable"></a>Spustitelný soubor CMake
 
-Úplná cesta ke spustitelnému souboru programu CMake, včetně názvu souboru a přípony. Umožňuje používat vlastní verzi CMake s Visual Studio. Pro vzdálená sestavení zadejte umístění CMake ve vzdáleném počítači.
+Úplná cesta ke spustitelnému souboru programu CMake, včetně názvu souboru a přípony Umožňuje používat vlastní verzi CMake v sadě Visual Studio. U vzdálených sestavení určete umístění CMake na vzdáleném počítači.
 
-Pro konfigurace, jako je Linux, které používají vzdálená sestavení, jsou k dispozici také následující nastavení:
+Pro konfigurace, jako je Linux, které používají vzdálené sestavení, jsou k dispozici také následující nastavení:
 
-### <a name="remote-cmakeliststxt-root"></a>Vzdálený kořen CMakeLists.txt
+### <a name="remote-cmakeliststxt-root"></a>Vzdálený kořenový adresář CMakeLists. txt
 
-Adresář ve vzdáleném počítači, který obsahuje kořenový soubor *CMakeLists.txt.*
+Adresář ve vzdáleném počítači, který obsahuje kořenový soubor *CMakeLists. txt* .
 
-### <a name="remote-install-root"></a>Kořenová instalace vzdálené instalace
+### <a name="remote-install-root"></a>Kořenová složka pro vzdálenou instalaci
 
-Adresář na vzdáleném počítači, ve kterém CMake instaluje cíle. Mapy na [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
+Adresář ve vzdáleném počítači, ve kterém se instaluje CMake. Provede mapování na [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
 
-### <a name="remote-copy-sources"></a>Zdroje vzdálené kopie
+### <a name="remote-copy-sources"></a>Vzdálené kopírování zdrojů
 
-Určuje, zda se mají kopírovat zdrojové soubory do vzdáleného počítače, a umožňuje určit, zda se má použít rsync nebo sftp.
+Určuje, jestli se mají kopírovat zdrojové soubory do vzdáleného počítače, a umožní vám určit, jestli se má používat rsync nebo SFTP.
 
-## <a name="directly-edit-cmakesettingsjson"></a>Přímo upravit CMakeSettings.json
+## <a name="directly-edit-cmakesettingsjson"></a>Přímo upravit CMakeSettings. JSON
 
-Můžete také přímo upravit *CMakeSettings.json* vytvořit vlastní konfigurace. **Editor nastavení** má v pravém horním horním části tlačítko **Upravit JSON,** které otevírá soubor pro úpravy.
+Můžete také přímo upravit *CMakeSettings. JSON* a vytvořit vlastní konfigurace. **Editor nastavení** obsahuje v pravém horním rohu tlačítko **Upravit JSON** , které otevírá soubor pro úpravy.
 
 Následující příklad ukazuje ukázkovou konfiguraci, kterou můžete použít jako výchozí bod:
 
@@ -148,35 +148,35 @@ Následující příklad ukazuje ukázkovou konfiguraci, kterou můžete použí
     },
 ```
 
-Technologie JSON IntelliSense pomáhá upravovat soubor *CMakeSettings.json:*
+JSON IntelliSense vám pomůže s úpravou souboru *CMakeSettings. JSON* :
 
-   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![IntelliSense – JSON pro CMake](media/cmake-json-intellisense.png "IntelliSense – JSON pro CMake")
 
 Editor JSON vás také informuje, když zvolíte nekompatibilní nastavení.
 
-Další informace o jednotlivých vlastnostech v souboru naleznete v [tématu CMakeSettings.json odkaz na schéma](cmakesettings-reference.md).
+Další informace o jednotlivých vlastnostech v souboru naleznete v tématu [reference ke schématu CMakeSettings. JSON](cmakesettings-reference.md).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio 2017 poskytuje několik cmake konfigurace, které definují, jak CMake.exe je vyvolána k vytvoření mezipaměti CMake pro daný projekt. Chcete-li přidat novou konfiguraci, klepněte na rozevírací soubor konfigurace na panelu nástrojů a zvolte **Spravovat konfigurace**:
+Sada Visual Studio 2017 poskytuje několik konfigurací CMake definujících způsob, jakým se vyvolal CMake. exe pro vytvoření mezipaměti CMake pro daný projekt. Chcete-li přidat novou konfiguraci, klikněte na rozevírací nabídku Konfigurace na panelu nástrojů a vyberte možnost **spravovat konfigurace**:
 
-   ![CMake spravovat konfigurace](media/cmake-manage-configurations.png)
+   ![Správa konfigurací CMake](media/cmake-manage-configurations.png)
 
 Můžete si vybrat ze seznamu předdefinovaných konfigurací:
 
-   ![CMake předdefinované konfigurace](media/cmake-configurations.png)
+   ![Předdefinované konfigurace CMake](media/cmake-configurations.png)
 
-Při prvním výběru konfigurace vytvoří visual studio soubor *CMakeSettings.json* v kořenové složce projektu. Tento soubor se používá k opětovnému vytvoření souboru mezipaměti CMake, například po operaci **Clean.**
+Při prvním výběru konfigurace aplikace Visual Studio vytvoří soubor *CMakeSettings. JSON* v kořenové složce vašeho projektu. Tento soubor slouží k opětovnému vytvoření souboru mezipaměti CMake, například po operaci **Vyčištění** .
 
-Chcete-li přidat další konfiguraci, klepněte pravým tlačítkem myši na soubor *CMakeSettings.json* a zvolte **Přidat konfiguraci**.
+Pokud chcete přidat další konfiguraci, klikněte pravým tlačítkem na *CMakeSettings. JSON* a vyberte **Přidat konfiguraci**.
 
-   ![CMake Přidat konfiguraci](media/cmake-add-configuration.png "CMake Přidat konfiguraci")
+   ![Přidat konfiguraci CMake](media/cmake-add-configuration.png "Přidat konfiguraci CMake")
 
-Soubor můžete také upravit pomocí **Editoru nastavení CMake**. Klepněte pravým tlačítkem myši na *soubor CMakeSettings.json* v **Průzkumníku řešení** a zvolte **Upravit nastavení CMake**. Nebo vyberte **Spravovat konfigurace** z rozbalovacího okna konfigurace v horní části okna editoru.
+Soubor můžete také upravit pomocí **editoru nastavení cmake**. V **Průzkumník řešení** klikněte pravým tlačítkem na *CMakeSettings. JSON* a vyberte **Upravit nastavení cmake**. Případně vyberte možnost **spravovat konfigurace** v rozevíracím seznamu konfigurace v horní části okna editoru.
 
-Můžete také přímo upravit *CMakeSettings.json* vytvořit vlastní konfigurace. Následující příklad ukazuje ukázkovou konfiguraci, kterou můžete použít jako výchozí bod:
+Můžete také přímo upravit *CMakeSettings. JSON* a vytvořit vlastní konfigurace. Následující příklad ukazuje ukázkovou konfiguraci, kterou můžete použít jako výchozí bod:
 
 ```json
     {
@@ -192,19 +192,19 @@ Můžete také přímo upravit *CMakeSettings.json* vytvořit vlastní konfigura
     },
 ```
 
-Technologie JSON IntelliSense pomáhá upravovat soubor *CMakeSettings.json:*
+JSON IntelliSense vám pomůže s úpravou souboru *CMakeSettings. JSON* :
 
-   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![IntelliSense – JSON pro CMake](media/cmake-json-intellisense.png "IntelliSense – JSON pro CMake")
 
-Další informace o jednotlivých vlastnostech v souboru naleznete v [tématu CMakeSettings.json odkaz na schéma](cmakesettings-reference.md).
+Další informace o jednotlivých vlastnostech v souboru naleznete v tématu [reference ke schématu CMakeSettings. JSON](cmakesettings-reference.md).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
-[CMake projekty v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake předdefinovaný odkaz na konfiguraci](cmake-predefined-configuration-reference.md)
+[Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)

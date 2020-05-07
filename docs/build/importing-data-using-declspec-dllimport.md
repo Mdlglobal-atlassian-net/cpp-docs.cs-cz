@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Když označíte data jako **__declspec (dllimport)** , kompilátor automaticky generuje nepřímý kód pro vás. Už si nemusíte dělat starosti s výše uvedenými kroky. Jak bylo uvedeno dříve, při sestavování knihovny DLL nepoužívejte pro data deklaraci **__declspec (dllimport)** . Funkce v rámci knihovny DLL nepoužívají pro přístup k datovému objektu tabulku importních adres. Proto nebudete mít k dispozici další úroveň nepřímých odkazů.
+Když označíte data jako **__declspec (dllimport)**, kompilátor automaticky generuje nepřímý kód pro vás. Už si nemusíte dělat starosti s výše uvedenými kroky. Jak bylo uvedeno dříve, při sestavování knihovny DLL nepoužívejte pro data deklaraci **__declspec (dllimport)** . Funkce v rámci knihovny DLL nepoužívají pro přístup k datovému objektu tabulku importních adres. Proto nebudete mít k dispozici další úroveň nepřímých odkazů.
 
 Pokud chcete data exportovat automaticky z knihovny DLL, použijte tuto deklaraci:
 

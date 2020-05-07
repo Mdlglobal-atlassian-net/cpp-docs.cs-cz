@@ -1,5 +1,5 @@
 ---
-title: reference schématu launch.vs.json (C++)
+title: reference ke schématu Launch. vs. JSON (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
@@ -10,87 +10,87 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323057"
 ---
-# <a name="launchvsjson-schema-reference-c"></a>reference schématu launch.vs.json (C++)
+# <a name="launchvsjson-schema-reference-c"></a>reference ke schématu Launch. vs. JSON (C++)
 
-Ke konfiguraci parametrů ladění použijte soubor *launch.vs.json.* Chcete-li vytvořit soubor. Klikněte pravým tlačítkem myši na spustitelný soubor v **Průzkumníku řešení** a zvolte **Nastavení ladění a spuštění**. Zvolte možnost, která nejvíce odpovídá projektu a pak použijte následující vlastnosti upravit konfiguraci podle potřeby. Další informace o ladění projektů CMake naleznete v [tématu Konfigurace relací ladění CMake](/cpp/build/configure-cmake-debugging-sessions).
+K nakonfigurování parametrů ladění použijte soubor *Launch. vs. JSON* . Pro vytvoření souboru. pravým tlačítkem myši klikněte na spustitelný soubor v **Průzkumník řešení** a vyberte **nastavení ladění a spouštění**. Zvolte možnost, která nejlépe odpovídá vašemu projektu, a pak podle potřeby upravte konfiguraci pomocí následujících vlastností. Další informace o ladění projektů CMake najdete v tématu [Konfigurace relací ladění cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Výchozí vlastnosti
 
 ||||
 |-|-|-|
 |**Vlastnost**|**Typ**|**Popis**|
-|`name`|řetězec|Určuje název položky v rozevíracím seznamu Ladění cíle.|
-|`type`|řetězec|Určuje, zda je projekt dll nebo .exe (Výchozí hodnota .exe)|
+|`name`|řetězec|Určuje název položky v rozevíracím seznamu cíl ladění.|
+|`type`|řetězec|Určuje, zda se jedná o projekt, nebo soubor. exe (ve výchozím nastavení je to. exe).|
 |`project`|řetězec|Určuje relativní cestu k souboru projektu.|
-|`projectTarget`|řetězec|Určuje volitelný cíl vyvolaný při vytváření `project`. To `projectTarget` musí existovat již a odpovídat názvu v **rozevíracím** souboru Ladění cíle.|
-|`debugType`|řetězec|Určuje režim ladění podle typu kódu (nativní, spravované nebo smíšené). Tato možnost bude automaticky rozpoznána, pokud není tento parametr nastaven. Povolené hodnoty: "nativní", "spravované", "smíšené".|
-|`inheritEnvironments`|pole|Určuje sadu proměnných prostředí zděděných z více zdrojů. Můžete definovat některé proměnné v souborech, jako je *CMakeSettings.json* nebo *CppProperties.json* a zpřístupnit je k ladění kontextu.  **Visual Studio 16.4:**: Zadejte proměnné prostředí na `env.VARIABLE_NAME` základě cíle pomocí syntaxe. Chcete-li zrušit nastavení proměnné, nastavte ji na hodnotu "null".|
+|`projectTarget`|řetězec|Určuje nepovinný cíl vyvolaný `project`při sestavování. Tento `projectTarget` prvek musí existovat a odpovídat názvu v rozevíracím seznamu **cíl ladění** .|
+|`debugType`|řetězec|Určuje režim ladění podle typu kódu (nativní, spravovaná nebo smíšená). Tato akce bude automaticky zjištěna, pokud tento parametr není nastaven. Povolené hodnoty: "nativní", "spravovaná", "smíšená".|
+|`inheritEnvironments`|pole|Určuje sadu proměnných prostředí děděných z více zdrojů. Můžete definovat některé proměnné v souborech, jako je *CMakeSettings. JSON* nebo *CppProperties. JSON* , a zpřístupnit je pro ladění kontextu.  **Visual Studio 16,4:**: zadejte proměnné prostředí na základě jednotlivých cílů pomocí `env.VARIABLE_NAME` syntaxe. Chcete-li proměnnou zrušit, nastavte ji na hodnotu null.|
 |`args`|pole|Určuje argumenty příkazového řádku předané spuštěnému programu.|
-|`currentDir`|řetězec|Určuje úplnou cestu k cíli sestavení. Tato možnost bude automaticky rozpoznána, pokud není tento parametr nastaven.|
-|`noDebug`|Boolean|Určuje, zda má být spuštěný program ladit. Výchozí hodnota pro tento `false` parametr je, pokud není zadán.|
-|`stopOnEntry`|Boolean|Určuje, zda má být proces přerušit, jakmile je proces spuštěn a ladicí program se připojí. Výchozí hodnota pro tento `false`parametr je .|
+|`currentDir`|řetězec|Určuje úplnou cestu k adresáři pro cíl sestavení. Tato akce bude automaticky zjištěna, pokud tento parametr není nastaven.|
+|`noDebug`|Boolean|Určuje, zda se má ladit spuštěný program. Výchozí hodnota pro tento parametr je `false` , pokud není zadána.|
+|`stopOnEntry`|Boolean|Určuje, zda se má při spuštění procesu, a připojení ladicího programu k chvíli přerušit. Výchozí hodnota pro tento parametr je `false`.|
 |`remoteMachine`|řetězec|Určuje název vzdáleného počítače, ve kterém je program spuštěn.|
-|`env`|pole| Určuje seznam vlastních proměnných prostředí mezi klíči a hodnotami. env:{"myEnv":"myVal"}.|
+|`env`|pole| Určuje seznam klíčových hodnot vlastních proměnných prostředí. ENV: {"myEnv": "myVal"}.|
 |`portName`|řetězec|Určuje název portu při připojování ke spuštěnému procesu.|
-|`buildConfigurations`|pole| Dvojice klíč hodnota, která určuje název režimu sestavení použít konfigurace. Například `Debug` nebo `Release` a konfigurace, které mají být používány podle vybraného režimu sestavení.
+|`buildConfigurations`|pole| Pár klíč-hodnota, který určuje název režimu sestavení pro použití konfigurací. Například `Debug` nebo `Release` a konfigurace, které mají být použity v závislosti na vybraném režimu sestavení.
 
-## <a name="c-linux-properties"></a>Vlastnosti C++ Linuxu
+## <a name="c-linux-properties"></a>Vlastnosti C++ Linux
 
 ||||
 |-|-|-|
 |**Vlastnost**|**Typ**|**Popis**|
-|`program`|řetězec|Úplná cesta ke spuštění programu ve vzdáleném počítači. Při použití CMake `${debugInfo.fullTargetPath}` lze makro použít jako hodnotu tohoto pole.|
-|`processId`|celé číslo|Volitelné ID procesu pro připojení ladicího programu.|
-|`sourceFileMap`|objekt|Volitelné mapování zdrojových souborů předáno ladicímu modulu. Formát: `{ "\<Compiler source location>": "\<Editor source location>" }` `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`nebo . Příklad: `{ "/home/user/foo": "C:\\foo" }` nebo `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Viz [Možnosti mapy zdrojového souboru](#source_file_map_options).|
-|`additionalProperties`|řetězec|Jeden ze sourceFileMapOptions. (Viz níže.)|
-|`MIMode`|řetězec|Označuje typ ladicího programu konzoly s podporou MI, ke kterému se připojí modul MIDebugEngine. Povolené hodnoty jsou "gdb", "lldb".|
-|`args`|pole|Argumenty příkazového řádku předány programu.|
-|`environment`|pole|Proměnné prostředí, které chcete přidat do prostředí pro program. Příklad: [ { "name": "squid", "value": "škeble" } ].|
-|`targetArchitecture`|řetězec|Architektura ladění. Tato možnost bude automaticky rozpoznána, pokud není tento parametr nastaven. Povolené hodnoty jsou x86, arm, arm64, mips, x64, amd64, x86_64.|
-|`visualizerFile`|řetězec|.natvis soubor, který má být použit při ladění tohoto procesu. Tato možnost není kompatibilní s GDB pěkný tisk. Viz "showDisplayString" při použití tohoto nastavení.|
-|`showDisplayString`|Boolean|Když je zadán visualizerFile, showDisplayString povolí řetězec zobrazení. Zapnutí této možnosti může způsobit pomalejší výkon během ladění.|
-|`remoteMachineName`|řetězec|Vzdálený počítač s Linuxem, který hostuje gdb a program pro ladění. Pro přidání nových počítačů s Linuxem použijte Správce připojení. Při použití CMake `${debugInfo.remoteMachineName}` lze makro použít jako hodnotu tohoto pole.|
-|`cwd`|řetězec|Pracovní adresář cíle ve vzdáleném počítači. Při použití CMake `${debugInfo.defaultWorkingDirectory}` lze makro použít jako hodnotu tohoto pole. Výchozí hodnota je kořenový adresář vzdáleného pracovního prostoru, pokud není v souboru *CMakeLists.txt* přepsán.|
-|`miDebuggerPath`|řetězec|Cesta k ladicímu programu s podporou MI (například gdb). Pokud není zadán, bude hledat PATH nejprve ladicí program.|
-|`miDebuggerServerAddress`|řetězec|Síťová adresa ladicího serveru s podporou MI, ke kterému se chcete připojit. Příklad: localhost:1234.|
-|`setupCommands`|pole|Jeden nebo více příkazů GDB/LLDB, které mají být provedeny za účelem nastavení základního ladicího programu. Příklad: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Viz [Příkazy pro nastavení spuštění](#launch_setup_commands).|
-|`customLaunchSetupCommands`|pole|Pokud je k dispozici, nahradí výchozí příkazy používané ke spuštění cíle s některými dalšími příkazy. Například to může být "-target-attach" za účelem připojení k cílovému procesu. Prázdný seznam příkazů nahradí příkazy pro spuštění ničím, což může být užitečné, pokud je ladicímu programu poskytovány možnosti spuštění jako možnosti příkazového řádku. Příklad: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
-|`launchCompleteCommand`|řetězec|Příkaz, který má být proveden po úplném nastavení ladicího programu, způsobí spuštění cílového procesu. Povolené hodnoty jsou "exec-run", "exec-continue", "None". Výchozí hodnota je "exec-run".|
-|`debugServerPath`|řetězec|Volitelná úplná cesta ke spuštění ladicího serveru. Výchozí hodnota je null.|
-|`debugServerArgs`|řetězec|Volitelné ladění serveru args. Výchozí hodnota je null.|
-|`filterStderr`|Boolean|Hledat stderr stream pro server-začal vzor a protokolu stderr ladit výstup. Výchozí hodnota `false`je na .|
-|`coreDumpPath`|řetězec|Volitelná úplná cesta k souboru základního výpisu pro zadaný program. Výchozí hodnota je null.|
-externalConsole|Boolean|Pokud true, konzole je spuštěnpro ladicí program. Pokud `false`není spuštěna žádná konzola. Výchozí hodnota `false`je na . Poznámka: Tato možnost je ignorována v některých případech z technických důvodů.|
-|`pipeTransport`|řetězec|Pokud je k dispozici, to říká ladicí program pro připojení ke vzdálenému počítači pomocí jiného spustitelného souboru jako kanálu, který bude přenášet standardní vstup a výstup mezi Visual Studio a mi-dát ladicí program (například gdb). Povolené hodnoty: jedna nebo více [možností přenosu potrubí](#pipe_transport_options).|
+|`program`|řetězec|Úplná cesta ke spustitelnému souboru programu na vzdáleném počítači. Při použití CMake je možné makro `${debugInfo.fullTargetPath}` použít jako hodnotu tohoto pole.|
+|`processId`|celé číslo|Volitelné ID procesu, ke kterému se má ladicí program připojit.|
+|`sourceFileMap`|objekt|Volitelné mapování zdrojových souborů předané do ladicího stroje. Formát: `{ "\<Compiler source location>": "\<Editor source location>" }` nebo `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Příklad: `{ "/home/user/foo": "C:\\foo" }` nebo `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Viz [Možnosti mapování zdrojového souboru](#source_file_map_options).|
+|`additionalProperties`|řetězec|Jedna z sourceFileMapOptions. (Viz níže)|
+|`MIMode`|řetězec|Určuje typ ladicího programu pro konzolu s podporou MI, ke kterému se MIDebugEngine připojí. Povolené hodnoty jsou "GDB", "lldb".|
+|`args`|pole|Argumenty příkazového řádku předané programu|
+|`environment`|pole|Proměnné prostředí, které se mají přidat do prostředí pro program Příklad: [{"Name": "Squid"; "value": "zapro"}].|
+|`targetArchitecture`|řetězec|Architektura laděného procesu Tato akce bude automaticky zjištěna, pokud tento parametr není nastaven. Povolené hodnoty jsou x86, ARM, arm64, MIPS, x64, AMD64, x86_64.|
+|`visualizerFile`|řetězec|soubor. Natvis, který se použije při ladění tohoto procesu. Tato možnost není kompatibilní s tiskem GDB s poměrně. Pokud se toto nastavení používá, podívejte se na "showDisplayString".|
+|`showDisplayString`|Boolean|Když je zadán visualizerFile, showDisplayString umožní zobrazit řetězec. Zapnutí této možnosti může způsobit pomalejší výkon během ladění.|
+|`remoteMachineName`|řetězec|Vzdálený počítač se systémem Linux hostující GDB a program, který se má ladit. Pomocí Správce připojení přidejte nové počítače se systémem Linux. Při použití CMake je možné makro `${debugInfo.remoteMachineName}` použít jako hodnotu tohoto pole.|
+|`cwd`|řetězec|Pracovní adresář cíle na vzdáleném počítači. Při použití CMake je možné makro `${debugInfo.defaultWorkingDirectory}` použít jako hodnotu tohoto pole. Výchozí hodnota je kořenový adresář vzdáleného pracovního prostoru, pokud není přepsán v souboru *CMakeLists. txt* .|
+|`miDebuggerPath`|řetězec|Cesta k ladicímu programu s podporou MI (například GDB). Je-li tento parametr zadán, bude nejprve hledána cesta ladicího programu.|
+|`miDebuggerServerAddress`|řetězec|Síťová adresa serveru ladicího programu s podporou MI, ke kterému se má připojit. Příklad: localhost: 1234.|
+|`setupCommands`|pole|Jeden nebo více příkazů GDB/LLDB, které mají být provedeny, aby bylo možné nastavit základní ladicí program. Příklad: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Viz [spustit instalační příkazy](#launch_setup_commands).|
+|`customLaunchSetupCommands`|pole|Pokud je tato hodnota zadaná, nahradí výchozí příkazy, které se použijí ke spuštění cíle, s některými jinými příkazy. To může být například "-Target-Attach", aby bylo možné se připojit k cílovému procesu. Prázdný seznam příkazů nahrazuje příkazy pro spuštění bez Nothing, což může být užitečné v případě, že ladicí program poskytuje možnosti spuštění jako možnosti příkazového řádku. Příklad: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
+|`launchCompleteCommand`|řetězec|Příkaz, který má být spuštěn po úplném nastavení ladicího programu, aby způsobil spuštění cílového procesu. Povolené hodnoty jsou "EXEC-Run", "EXEC-Continue", "none". Výchozí hodnota je "EXEC-Run".|
+|`debugServerPath`|řetězec|Volitelná úplná cesta k ladicímu serveru, který se má spustit. Výchozí hodnota je null.|
+|`debugServerArgs`|řetězec|Volitelné argumenty ladicího serveru. Výchozí hodnota je null.|
+|`filterStderr`|Boolean|Vyhledejte Stream stderr pro vzor spuštěný na serveru a Zaprotokolujte stderr, abyste mohli ladit výstup. Výchozí hodnota `false`je.|
+|`coreDumpPath`|řetězec|Volitelná úplná cesta k základnímu souboru s výpisem paměti pro zadaný program Výchozí hodnota je null.|
+externalConsole|Boolean|Pokud je nastaveno na true, spustí se pro laděného procesu konzola. Pokud `false`se nespustí žádná konzola. Výchozí hodnota `false`je. Poznámka: Tato možnost se v některých případech v technických důvodech ignoruje.|
+|`pipeTransport`|řetězec|Pokud je k dispozici, říká ladicímu programu, aby se připojil ke vzdálenému počítači pomocí jiného spustitelného souboru jako kanálu, který bude přenášet standardní vstup/výstup mezi Visual Studio a ladicím programem s podporou MI (například GDB). Povolené hodnoty: jedna nebo více [možností přenosu kanálu](#pipe_transport_options).|
 
-## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Spustit příkazy nastavení
+## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Spustit instalační příkazy
 
-Používá se `setupCommands` s vlastností:
+Používá se s `setupCommands` vlastností:
 
 ||||
 |-|-|-|
-|`text`|řetězec|Příkaz ladicího programu, který má být proveden.|
-|`description`|řetězec|Volitelný popis příkazu.|
-|`ignoreFailures`|Boolean|Pokud true, chyby z příkazu by měly být ignorovány. Výchozí hodnota `false`je na .|
+|`text`|řetězec|Příkaz ladicího programu, který se má provést.|
+|`description`|řetězec|Volitelný popis příkazu|
+|`ignoreFailures`|Boolean|Je-li nastavena hodnota true, chyby z příkazu by měly být ignorovány. Výchozí hodnota `false`je.|
 
-## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Možnosti přenosu potrubí
+## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Možnosti přenosu kanálu
 
-Používá se `pipeTransport` s vlastností:
+Používá se s `pipeTransport` vlastností:
 
 ||||
 |-|-|-|
 |`pipeCwd`|řetězec|Plně kvalifikovaná cesta k pracovnímu adresáři pro program kanálu.|
-|`pipeProgram`|řetězec|Plně kvalifikovaný příkaz kanálu k provedení.|
-|`pipeArgs`|pole|Argumenty příkazového řádku předané programu kanálu pro konfiguraci připojení.|
-|`debuggerPath`|řetězec|Úplná cesta k ladicímu programu v cílovém počítači, například /usr/bin/gdb.|
-|`pipeEnv`|objekt|Proměnné prostředí předané programu kanálu.|
-|`quoteArgs`|Boolean|Pokud jednotlivé argumenty obsahují znaky (například mezery nebo tabulátory), měly by být citovány? Pokud `false`již nebude automaticky citován příkaz ladicího programu. Výchozí je `true`.|
+|`pipeProgram`|řetězec|Plně kvalifikovaný příkaz kanálu, který se má provést.|
+|`pipeArgs`|pole|Argumenty příkazového řádku předané programu kanálu ke konfiguraci připojení.|
+|`debuggerPath`|řetězec|Úplná cesta k ladicímu programu na cílovém počítači, například/usr/bin/GDB|
+|`pipeEnv`|objekt|Proměnné prostředí předané do programu kanálu.|
+|`quoteArgs`|Boolean|Pokud jednotlivé argumenty obsahují znaky (například mezery nebo tabulátory), měly by být v uvozovkách? Pokud `false`se příkaz ladicího programu už nebude automaticky uvádět v uvozovkách. Výchozí je `true`.|
 
-## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Možnosti mapy zdrojového souboru
+## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Možnosti mapování zdrojového souboru
 
-Použití s `sourceFileMap` vlastností:
+Použít s `sourceFileMap` vlastností:
 
 ||||
 |-|-|-|
-|`editorPath`|řetězec|Umístění zdrojového kódu pro editor najít.|
-|`useForBreakpoints`|Boolean|Při nastavování zarážek by mělo být použito toto mapování zdrojů. Pokud `false`se pro nastavení zarážek používá pouze název souboru a číslo řádku. Pokud `true`budou zarážky nastaveny s úplnou cestou k souboru a čísle řádku pouze při použití tohoto zdrojového mapování. V opačném případě bude při nastavování zarážek použit pouze název souboru a číslo řádku. Výchozí je `true`.|
+|`editorPath`|řetězec|Umístění zdrojového kódu pro Editor, který se má najít.|
+|`useForBreakpoints`|Boolean|Při nastavování zarážek by se mělo použít toto mapování zdroje. Pokud `false`se pro nastavení zarážek používá pouze název souboru a číslo řádku. Pokud `true`se nastaví zarážky s úplnou cestou k souboru a číslu řádku pouze v případě, že je použito toto mapování zdroje. Jinak se při nastavování zarážek použije jenom název souboru a číslo řádku. Výchozí je `true`.|

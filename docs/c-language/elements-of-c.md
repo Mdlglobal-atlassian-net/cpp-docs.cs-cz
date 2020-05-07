@@ -34,10 +34,10 @@ Jsou popsána následující témata:
 
 - [Interpunkční znaménka a speciální znaky](../c-language/punctuation-and-special-characters.md)
 
-Oddíl obsahuje také referenční tabulky pro [trigraphs](../c-language/trigraphs.md), [omezení konstant s plovoucí](../c-language/limits-on-floating-point-constants.md)desetinnou čárkou, hodnoty v jazyce [C a C++ celých čísel](../c-language/cpp-integer-limits.md)a [řídicí sekvence](../c-language/escape-sequences.md).
+Oddíl obsahuje také referenční tabulky pro [trigraphs](../c-language/trigraphs.md), [limity pro konstanty s plovoucí](../c-language/limits-on-floating-point-constants.md)desetinnou čárkou, omezení pro [celé číslo v jazyce C a C++](../c-language/cpp-integer-limits.md)a [řídicí sekvence](../c-language/escape-sequences.md).
 
 Operátory jsou symboly (jednotlivé znaky a kombinace znaků), které určují, jak mají být hodnoty manipulovány. Každý symbol je interpretován jako jediná jednotka, která se nazývá token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

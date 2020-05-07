@@ -13,68 +13,68 @@ ms.locfileid: "67400516"
 ---
 # <a name="c-integer-constants"></a>Konstanty typu Integer jazyka C
 
-*Celočíselná konstanta* desetinné číslo (se základem 10), osmičkové (základní 8) nebo šestnáctkové (základní 16) číslo, které představuje celé číslo. Konstanty typu integer použijte k vyjádření celočíselných hodnot, která se nedá změnit.
+*Celočíselná konstanta* je desetinná čárka (Base 10), osmičková (základní 8) nebo hexadecimální (základní 16) číslo představující integrální hodnotu. Použijte celočíselné konstanty k vyjádření celočíselných hodnot, které nelze změnit.
 
 ## <a name="syntax"></a>Syntaxe
 
-*integer-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
+*celočíselná konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Volitelná možnost pro *celočíselnou příponu*<sub>opt</sub> typu *Decimal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičková* , *celočíselná přípona –*<sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ předpony*<sub>opt</sub> v *šestnáctkové soustavě konstanty*
 
-*decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
+*Desítková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nenulová číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*desítková číslice s konstantou* *digit*
 
-*osmičkové konstanty*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
+*osmičková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0,8**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičková-konstantní* *osmičková číslice*
 
-*hexadecimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
+*šestnáctková konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;šestnáctkové *číslo* *předpony* v šestnáctkové soustavě<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;šestnáctková *číslice* v *šestnáctkové soustavě*
 
-*Předpona šestnáctkové*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+*šestnáctková předpona*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
-*nenulovou číslicí*: jeden z<br/>
+*nenulová číslice*: jedna hodnota z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
 
-*uveden jako osmičková číslice*: jeden z<br/>
+*osmičková číslice*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**
 
-*šestnáctkové číslice*: jeden z<br/>
+*šestnáctková číslice*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**
 
-*integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long long-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64 bit číselnou příponou*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long-suffix* *unsigned-suffix*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long long-suffix* *unsigned-suffix*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*
+*celočíselná přípona*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přípona* *dlouhé*<sub>přípony</sub> bez přípony<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;dlouhá *přípona bez přípony* – *dlouhá přípona*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přípona bez znaménka* *64-bit-integer-přípona*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přípona*<sub>opt</sub> *dlouhé přípony bez přípony*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dlouhá* *unsigned-suffix*<sub>přípona</sub> bez přípony bez přípony<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*64-bitová celočíselná Přípona*
 
-*unsigned-suffix*: jeden z<br/>
+*přípona bez znaménka*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
-*Long-suffix*: jeden z<br/>
+*Long-přípona*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
-*Long long-suffix*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**
+*Long-Long-přípona*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**vše**
 
-*64-bit číselnou příponou*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**
+*64-bitová celočíselná přípona*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**I64 I64**
 
-**I64** a **I64** přípony jsou specifické pro společnost Microsoft.
+Přípony **I64** a **I64** jsou specifické pro společnost Microsoft.
 
-Celočíselné konstanty jsou kladné, pokud jsou uvozená znakem minus ( **-** ). Znaménko minus je interpretován jako operátor unární aritmetické negace. (Viz [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) informace o tomto operátoru.)
+Celočíselné konstanty jsou kladné, pokud nejsou předcházejí znaménkem mínus**-**(). Znaménko mínus je interpretováno jako unární aritmetický operátor negace. (Další informace o tomto operátoru naleznete v tématu [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) .)
 
-Pokud celočíselná konstanta začíná **0 x** nebo **0 X**, je šestnáctková. Pokud začíná číslice **0**, je osmičkové soustavě. V opačném případě se předpokládá být desítkové.
+Pokud celočíselná konstanta začíná **0x** nebo **0x**, je hexadecimální. Pokud začíná číslicí **0**, je osmičková. V opačném případě se předpokládá jako desetinné číslo.
 
-Následující konstanty typu integer jsou ekvivalentní:
+Následující celočíselné konstanty jsou ekvivalentní:
 
 ```C
 28
@@ -82,7 +82,7 @@ Následující konstanty typu integer jsou ekvivalentní:
 034    /* = Octal representation for decimal 28 */
 ```
 
-Žádné prázdné znaky mohou oddělit číslic celočíselná konstanta. Tyto příklady ukazují některé platné desetinné, osmičkovým a šestnáctkovým konstantám.
+Žádné prázdné znaky nemohou oddělovat číslice celočíselné konstanty. Tyto příklady ukazují některé platné desítkové, osmičkové a šestnáctkové konstanty.
 
 ```C
     /* Decimal Constants */
@@ -116,6 +116,6 @@ Následující konstanty typu integer jsou ekvivalentní:
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty jazyka C](../c-language/c-constants.md)<br/>

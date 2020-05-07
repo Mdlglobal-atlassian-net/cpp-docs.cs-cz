@@ -26,41 +26,41 @@ ms.locfileid: "81328870"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Běžné problémy při vytváření sestavení pro vydání
 
-Během vývoje obvykle sestavíte a otestujete s ladicím sestavením projektu. Pokud pak vytvoříte aplikaci pro sestavení verze, může dojít k narušení přístupu.
+Během vývoje, obvykle sestavíte a otestujete pomocí ladicího buildu projektu. Pokud sestavíte aplikaci pro sestavení pro vydání, může dojít k narušení přístupu.
 
-Níže uvedený seznam ukazuje primární rozdíly mezi ladění a verze (nondebug) sestavení. Existují další rozdíly, ale následující jsou hlavní rozdíly, které by způsobily selhání aplikace v sestavení verze, když pracuje v sestavení ladění.
+V následujícím seznamu jsou uvedeny hlavní rozdíly mezi laděním a sestavením verze (neladit). Existují i další rozdíly, ale následující jsou hlavní rozdíly, které by způsobily selhání aplikace v buildu pro vydání, když funguje v sestavení pro ladění.
 
 - [Rozložení haldy](#_core_heap_layout)
 
 - [Kompilace](#_core_compilation)
 
-- [Podpora ukazatele](#_core_pointer_support)
+- [Podpora ukazatelů](#_core_pointer_support)
 
 - [Optimalizace](#_core_optimizations)
 
-Naleznete [/GZ (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) kompilace možnost informace o tom, jak zachytit chyby sestavení vydání v sestavení ladění.
+Informace o tom, jak zachytit chyby sestavení vydaných verzí v sestaveních ladění, naleznete v možnosti kompilátoru [/GZ (catch release-build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
 
 ## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Rozložení haldy
 
-Rozložení haldy bude příčinou asi devadesát procent zdánlivé problémy, když aplikace pracuje v ladění, ale ne vydání.
+Rozložení haldy bude příčinou přibližně 90 procent zjevné problémy, když aplikace funguje v ladění, ale ne verze.
 
-Při vytváření projektu pro ladění, používáte přidělení paměti ladění. To znamená, že všechna přidělení paměti mají kolem sebe umístěny bajty stráží. Tyto stráž bajty deteprovatují přepsání paměti. Vzhledem k tomu, že rozložení haldy se liší mezi verzí release a ladění, přepsání paměti nemusí způsobit žádné problémy v sestavení ladění, ale může mít katastrofální účinky v sestavení verze.
+Při sestavování projektu pro ladění používáte přidělování paměti ladění. To znamená, že všechna přidělená paměť mají na sebe chráněné bajty. Tyto bajty Guard zjišťují přepsání paměti. Vzhledem k tomu, že rozložení haldy se mezi verzemi verze a ladění liší, přepsání paměti nemusí v sestavení ladění vytvořit žádné problémy, ale může mít v sestavení pro vydání závažné účinky.
 
-Další informace naleznete [v tématu Kontrola přepsání paměti](checking-for-memory-overwrites.md) a použití sestavení ladění ke kontrole [přepsání paměti](using-the-debug-build-to-check-for-memory-overwrite.md).
+Další informace naleznete v tématu [Zkontrolujte přepsání paměti](checking-for-memory-overwrites.md) a [použijte sestavení ladění pro kontrolu přepsání paměti](using-the-debug-build-to-check-for-memory-overwrite.md).
 
 ## <a name="compilation"></a><a name="_core_compilation"></a>Kompilace
 
-Mnoho makra knihovny MFC a velká část změny implementace knihovny MFC při vytváření pro vydání. Zejména assert makro vyhodnotí na nic v sestavení verze, takže žádný z kódu nalezeného v ASSERTs budou provedeny. Další informace naleznete v [tématu Examine ASSERT Statements](using-verify-instead-of-assert.md).
+Mnohé z maker knihovny MFC a většina implementace knihovny MFC se mění při sestavení pro vydání. Konkrétně se makro ASSERT vyhodnotí jako Nothing v sestavení pro vydání, takže se neprovede žádný kód, který by byl nalezen v kontrolním výrazu. Další informace naleznete v tématu [prostudování příkazů kontrolního výrazu](using-verify-instead-of-assert.md).
 
-Některé funkce jsou vloženy pro zvýšení rychlosti v sestavení verze. Optimalizace jsou obvykle zapnuty v sestavení verze. Používá se také jiný alokátor paměti.
+Některé funkce jsou vloženy za účelem zvýšené rychlosti sestavení pro vydání. Optimalizace jsou obecně zapnuté v buildu pro vydání. Používá se i jiný Alokátor paměti.
 
-## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Podpora ukazatele
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Podpora ukazatelů
 
-Nedostatek informací o ladění odebere odsazení z aplikace. V sestavení verze mají zbloudilé ukazatele větší šanci ukázat na neinicializovanou paměť namísto toho, aby ukazovaly na informace o ladění.
+Chybějící informace o ladění odstraní odsazení z aplikace. V sestavení pro vydání vydaných verzí mají osamocený ukazatel možnost ukazovat na neinicializovaná paměť místo nasměrování na informace o ladění.
 
 ## <a name="optimizations"></a><a name="_core_optimizations"></a>Optimalizace
 
-V závislosti na povaze určitých segmentů kódu může optimalizační kompilátor generovat neočekávaný kód. Toto je nejméně pravděpodobná příčina problémů se sestavením verze, ale příležitostně vzniká. Řešení naleznete v [tématu Optimalizace kódu](optimizing-your-code.md).
+V závislosti na povaze určitých segmentů kódu může optimalizovat kompilátor generovat neočekávaný kód. Jedná se o nejmenší pravděpodobnou příčinu problémů s vydáním sestavení, ale k tomu dojde v některých případech. Řešení najdete v tématu [optimalizace kódu](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Viz také
 

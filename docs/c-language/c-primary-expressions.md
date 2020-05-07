@@ -13,20 +13,20 @@ ms.locfileid: "67400468"
 ---
 # <a name="c-primary-expressions"></a>Primární výrazy jazyka C
 
-Operandů ve výrazech se nazývají "primární výrazy."
+Operandy ve výrazech se nazývají "primární výrazy".
 
 ## <a name="syntax"></a>Syntaxe
 
-*primary-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
+*primární výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*změnil*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*řetězcový literál*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *výraz* **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *výraz* **)**
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *přiřazení – výraz*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operandy a výrazy](../c-language/operands-and-expressions.md)

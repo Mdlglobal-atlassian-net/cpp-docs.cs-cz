@@ -13,8 +13,8 @@ ms.locfileid: "62158495"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Pravidla a omezení pro používání holých funkcí
 
-Informace o pravidlech a omezeních použití neviditelných funkcí najdete v tématu odpovídajícím tématu v referenční dokumentaci jazyka C++: [Pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md).
+Informace o pravidlech a omezeních použití holé funkce naleznete v příslušném tématu v tématu Referenční dokumentace jazyka C++: [pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Holé funkce](../c-language/naked-functions.md)

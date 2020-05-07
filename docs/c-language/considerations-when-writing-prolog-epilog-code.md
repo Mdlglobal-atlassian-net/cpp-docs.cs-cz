@@ -1,5 +1,5 @@
 ---
-title: Důležité informace při psaní kódu Prolog-Epilog
+title: Pokyny k zápisu kódu prologu a epilogu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - layouts, stack frame
@@ -18,7 +18,7 @@ ms.locfileid: "81334585"
 
 **Specifické pro Microsoft**
 
-Před zápisem vlastní prolog a epilog sekvence kódu, je důležité pochopit, jak je rozložen rámec zásobníku. Je také užitečné vědět, jak používat **__LOCAL_SIZE** předdefinované konstanty.
+Před zápisem vlastních sekvencí kódu prologu a epilogu je důležité pochopit, jak je rámec zásobníku rozložen. Je také užitečné znát způsob použití **__LOCAL_SIZE** předdefinované konstanty.
 
 ## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Rozložení rámce CStack
 
@@ -42,18 +42,18 @@ ret                          ; Return from function
 
 Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních proměnných začíná na adrese `ebp-2`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.
 
-## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>Konstanta __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>__LOCAL_SIZE konstanta
 
-Kompilátor poskytuje **konstantu, __LOCAL_SIZE**, pro použití v inline assembler bloku kódu prologu funkce. Tato konstanta se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.
+Kompilátor poskytuje konstantu, **__LOCAL_SIZE**pro použití v vloženém bloku assembleru kódu prologu funkce. Tato konstanta se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.
 
-Kompilátor určuje hodnotu **__LOCAL_SIZE**. Hodnotou je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. **__LOCAL_SIZE** lze použít pouze jako okamžitý operand; nelze jej použít ve výrazu. Hodnota této konstanty nesmí být v kódu měněna nebo předefinována. Příklad:
+Kompilátor Určuje hodnotu **__LOCAL_SIZE**. Hodnotou je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. **__LOCAL_SIZE** lze použít pouze jako okamžitý operand; nedá se použít ve výrazu. Hodnota této konstanty nesmí být v kódu měněna nebo předefinována. Příklad:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov      eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Následující příklad funkce naked obsahující vlastní sekvence prologu a epilogu používá **__LOCAL_SIZE** v sekvenci prologu:
+Následující příklad holé funkce obsahující vlastní sekvence prologu a epilog používá **__LOCAL_SIZE** v sekvenci prologu:
 
 ```
 __declspec ( naked ) func()
@@ -79,7 +79,7 @@ __declspec ( naked ) func()
 }
 ```
 
-**END Microsoft Specifické**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také
 

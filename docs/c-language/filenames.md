@@ -17,6 +17,6 @@ Specifikace souboru může obsahovat volitelné písmeno jednotky (vždy násled
 
 Další informace najdete v tématu [pojmenování souboru](/windows/win32/FileIO/naming-a-file) pro další informace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

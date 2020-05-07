@@ -15,9 +15,9 @@ ms.locfileid: "69493346"
 
 Izolovaná aplikace závisí pouze na souběžných sestaveních a váže se k jejím závislostem pomocí manifestu. Není nutné, aby vaše aplikace byla plně izolovaná, aby fungovala správně v systému Windows. díky investicím do plné izolace vaší aplikace ale můžete ušetřit čas, pokud budete v budoucnu potřebovat svou aplikaci obsluhovat. Další informace o výhodách plné izolace vaší aplikace najdete v tématu [izolované aplikace](/windows/win32/SbsCs/isolated-applications).
 
-Při sestavování nativní C/C++ aplikace pomocí sady Visual Studio ve výchozím nastavení vygeneruje projektový systém sady Visual Studio soubor manifestu, který popisuje závislosti vaší aplikace v knihovnách sady Visual Studio. Pokud se jedná o jediné závislosti, které vaše aplikace má, pak se tato aplikace stal izolovanou aplikací, jakmile bude znovu sestavena se sadou Visual Studio. Pokud vaše aplikace používá jiné knihovny za běhu, pak možná budete muset tyto knihovny znovu sestavit jako souběžná sestavení podle kroků popsaných v tématu sestavení [CC++ /souběžného sestavení](building-c-cpp-side-by-side-assemblies.md).
+Při sestavování nativní aplikace C/C++ pomocí sady Visual Studio ve výchozím nastavení vygeneruje projektový systém sady Visual Studio soubor manifestu, který popisuje závislosti vaší aplikace v knihovnách sady Visual Studio. Pokud se jedná o jediné závislosti, které vaše aplikace má, pak se tato aplikace stal izolovanou aplikací, jakmile bude znovu sestavena se sadou Visual Studio. Pokud vaše aplikace používá jiné knihovny za běhu, pak možná budete muset tyto knihovny znovu sestavit jako souběžná sestavení podle kroků popsaných v tématu [sestavování souběžných sestavení C/C++](building-c-cpp-side-by-side-assemblies.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Koncept izolovaných aplikací a souběžných sestavení](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
 [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

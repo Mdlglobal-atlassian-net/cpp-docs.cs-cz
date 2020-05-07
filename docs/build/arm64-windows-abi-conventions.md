@@ -71,12 +71,12 @@ Výchozí zarovnání rozložení pro globální a statické prvky:
 
 Architektura AArch64 podporuje Registry typu Integer 32:
 
-| Registrace | Permanentní? | Role |
+| Zaregistrovat | Permanentní? | Role |
 | - | - | - |
 | x0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
-| x1-x7 | Permanentní | Parametr/Scrat registr 2-8 |
-| x8-x15 | Permanentní | Odkládací Registry |
-| x16-x17 | Permanentní | Odkládací Registry uvnitř procedury – volání |
+| x1 – 120 | Permanentní | Parametr/Scrat registr 2-8 |
+| x8 – X15 | Permanentní | Odkládací Registry |
+| x16 – x17 | Permanentní | Odkládací Registry uvnitř procedury – volání |
 | x18 | Bez volatile | Registr platformy: v režimu jádra odkazuje na KPCR pro aktuální procesor; v uživatelském režimu odkazuje na TEB |
 | x19-x28 | Bez volatile | Odkládací Registry |
 | x29/FP | Bez volatile | Ukazatel na rámec |
@@ -94,11 +94,11 @@ Pro zajištění kompatibility s rychlým procházením pomocí trasování udá
 
 Architektura AArch64 podporuje taky 32 Registry s plovoucí desetinnou čárkou nebo SIMD, které jsou shrnuté níže:
 
-| Registrace | Permanentní? | Role |
+| Zaregistrovat | Permanentní? | Role |
 | - | - | - |
 | v0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
-| v1-v7 | Permanentní | Parametry/pomocné Registry 2-8 |
-| v8-v15 | Bez volatile | Odkládací Registry (pouze nízké 64 bity jsou nestálé) |
+| V1 – v7 | Permanentní | Parametry/pomocné Registry 2-8 |
+| V8 – v15 | Bez volatile | Odkládací Registry (pouze nízké 64 bity jsou nestálé) |
 | v16-v31 | Permanentní | Odkládací Registry |
 
 Ke každému registru může být přistup jako k úplné 128ové hodnotě (přes v0-V31 nebo Q0-Q31). Je možné, že je k ní přistupovaná hodnota 64 (přes D31), jako 32 hodnota (prostřednictvím S0-S31), jako 16bitová hodnota (prostřednictvím H0-H31) nebo jako 8bitové hodnoty (prostřednictvím B0-B31). Přístup k menšímu počtu než 128 bitů přistupuje pouze k dolním bitům plného 128 bitového registru. Zbývající bity zůstanou beze změny, pokud není uvedeno jinak. (AArch64 se liší od AArch32, kde menší registry byly zabaleny nad většími Registry.)
@@ -108,18 +108,18 @@ Registr ovládacího prvku s plovoucí desetinnou čárkou (FPCR) má určité p
 | Bity | Význam | Permanentní? | Role |
 | - | - | - | - |
 | 26 | AHP | Bez volatile | Alternativní ovládací prvek s poloviční přesností |
-| 25 | ROZLIŠUJÍCÍ NÁZEV | Bez volatile | Výchozí ovládací prvek režimu NaN. |
+| 25 | JMÉNA | Bez volatile | Výchozí ovládací prvek režimu NaN. |
 | 24 | FZ | Bez volatile | Řízení režimu vyprázdnění na nulu. |
 | 23-22 | RMode | Bez volatile | Ovládací prvek režimu zaokrouhlování |
-| 15,12-8 | IDE/IXE/atd. | Bez volatile | Depeše výjimky povolit bity, musí být vždy 0. |
+| 15, 12 – 8 | IDE/IXE/atd. | Bez volatile | Depeše výjimky povolit bity, musí být vždy 0. |
 
 ## <a name="system-registers"></a>Systémové Registry
 
 Podobně jako AArch32 poskytuje specifikace AArch64 tři Registry "ID vlákna řízené systémem":
 
-| Registrace | Role |
+| Zaregistrovat | Role |
 | - | - |
-| TPIDR_EL0 | Rezervovaný. |
+| TPIDR_EL0 | Vyhrazeno. |
 | TPIDRRO_EL0 | Obsahuje číslo procesoru pro aktuální procesor. |
 | TPIDR_EL1 | Odkazuje na KPCR strukturu pro aktuální procesor. |
 
@@ -145,7 +145,7 @@ Tato fáze se provádí přesně jednou a před tím, než začne zpracování a
 
 Pro každý argument v seznamu se použije první pravidlo pro porovnání z následujícího seznamu. Pokud se neshodují žádné pravidlo, argument se použije jako nezměněný.
 
-1. Je-li typ argumentu složený typ, jehož velikost nelze staticky určit volajícím i volaným, je argument zkopírován do paměti a argument je nahrazen ukazatelem na kopii. (Žádné takové typy nejsou v jazyce C/C++ , ale existují v jiných jazycích nebo v jazykových rozšířeních).
+1. Je-li typ argumentu složený typ, jehož velikost nelze staticky určit volajícím i volaným, je argument zkopírován do paměti a argument je nahrazen ukazatelem na kopii. (V C/C++ nejsou žádné takové typy, ale existují v jiných jazycích nebo v jazykových rozšířeních).
 
 1. Je-li typ argumentu HFA nebo HVA, pak je argument použit jako nezměněný.
 
@@ -157,7 +157,7 @@ Pro každý argument v seznamu se použije první pravidlo pro porovnání z ná
 
 U každého argumentu v seznamu jsou následující pravidla aplikována postupně, dokud není argument přidělen. Při přiřazení argumentu k registru mají všechny nepoužívané bity v registru nespecifikovanou hodnotu. Pokud je argument přiřazen k slotu zásobníku, nepoužité Bajty odsazení mají nespecifikovanou hodnotu.
 
-1. Pokud je argumentem poloviční, jednoduchá, dvojitá nebo typ krátkého vektoru s plovoucí desetinnou čárkou nebo typem krátkého vektoru a NSRN je menší než 8, pak je argument přidělen nejméně významnému počtu bitů registru v\[NSRN]. NSRN se zvyšuje o jednu. Argument byl nyní přidělen.
+1. Je-li argumentem poloviční typ s plovoucí desetinnou čárkou nebo typem krátkého vektoru s jednou, dvojitou přesností nebo typu short a hodnota NSRN je menší než 8, je argument přidělen alespoň k nejzávažnějším bitům registru v\[NSRN]. NSRN se zvyšuje o jednu. Argument byl nyní přidělen.
 
 1. Pokud je argumentem HFA nebo HVA a existuje dostatečný počet nepřidělených SIMDů a registrů s plovoucí desetinnou čárkou (NSRN + počet členů ≤ 8), pak je argument přidělen SIMD a registru s plovoucí desetinnou čárkou, jeden registr na člena HFA nebo HVA. NSRN se zvyšuje podle počtu využitých registrů. Argument byl nyní přidělen.
 
@@ -169,13 +169,13 @@ U každého argumentu v seznamu jsou následující pravidla aplikována postupn
 
 1. Je-li argumentem HFA, HVA, typ s plovoucí desetinnou čárkou nebo krátkým vektorem, který je typu Double nebo quad, pak je argument zkopírován do paměti v upraveném NSAA. NSAA se zvyšuje o velikost argumentu. Argument byl nyní přidělen.
 
-1. Pokud je argumentem integrální typ nebo typ ukazatele, velikost argumentu je menší nebo rovna 8 bajtů a hodnota NGRN je menší než 8, argument je zkopírován do nejméně významných bitů v x\[NGRN]. NGRN se zvyšuje o jednu. Argument byl nyní přidělen.
+1. Pokud je argumentem integrální typ nebo typ ukazatele, velikost argumentu je menší nebo rovna 8 bajtů a NGRN je menší než 8, je argument zkopírován do nejméně významných bitů v x\[NGRN]. NGRN se zvyšuje o jednu. Argument byl nyní přidělen.
 
 1. Pokud má argument zarovnání 16, pak se NGRN zaokrouhlí nahoru na další sudé číslo.
 
-1. Pokud je argumentem integrální typ, je velikost argumentu rovna 16 a hodnota NGRN je menší než 7, je argument zkopírován do x\[NGRN] a x\[NGRN + 1]. x\[NGRN] obsahuje méně adresované dvojité slovo reprezentace argumentu. NGRN se zvyšuje o dva. Argument byl nyní přidělen.
+1. Pokud je argumentem integrální typ, je velikost argumentu rovna 16 a hodnota NGRN je menší než 7, je argument zkopírován do x\[NGRN] a x\[NGRN + 1]. x\[NGRN] musí obsahovat méně adresované dvojité slovo reprezentace argumentu. NGRN se zvyšuje o dva. Argument byl nyní přidělen.
 
-1. Je-li argumentem složený typ a velikost v dvojitých slovech argumentu není více než 8 minus NGRN, pak je argument zkopírován do po sobě jdoucích registrů pro obecné účely, počínaje hodnotou x\[NGRN]. Argument je předán, jako by byl načten do registrů z adresy zarovnané na dvě slova s odpovídající posloupností instrukcí LDR, které načítají po sobě jdoucí Registry z paměti. Obsah žádné nepoužívané části registrů není specifikován tímto standardem. NGRN se zvyšuje podle počtu využitých registrů. Argument byl nyní přidělen.
+1. Je-li argumentem složený typ a velikost v dvojitých slovech argumentu není více než 8 minus NGRN, pak je argument zkopírován do po sobě jdoucích registrů pro obecné účely počínaje hodnotou x\[NGRN]. Argument je předán, jako by byl načten do registrů z adresy zarovnané na dvě slova s odpovídající posloupností instrukcí LDR, které načítají po sobě jdoucí Registry z paměti. Obsah žádné nepoužívané části registrů není specifikován tímto standardem. NGRN se zvyšuje podle počtu využitých registrů. Argument byl nyní přidělen.
 
 1. NGRN je nastavená na 8.
 
@@ -225,7 +225,7 @@ Všechny ostatní typy používají tuto konvenci:
 
 Za běhu, které jsou uvedeny v ARM, zásobník musí zůstat zarovnaný po dobu 16 bajtů. AArch64 obsahuje funkci hardwaru, která generuje chyby zarovnání zásobníku pokaždé, když se nerovná 16 bajtů, a v případě, že je provedeno navýšení nebo uložení v poměru SP. Systém Windows běží vždy, když je tato funkce povolená.
 
-Funkce, které přidělují 4k nebo většímu množství zásobníku, musí zajistit, aby se všechny stránky před poslední stránkou dotýkaly v daném pořadí. Tato akce zajistí, že žádný kód nemůže přesměrovat na stránku Guard, kterou systém Windows používá k rozšíření zásobníku. Dodávání se obvykle provádí pomocí pomocné rutiny `__chkstk`, která má vlastní konvenci volání, která předá celkové přidělení zásobníku dělené 16 v X15.
+Funkce, které přidělují 4k nebo většímu množství zásobníku, musí zajistit, aby se všechny stránky před poslední stránkou dotýkaly v daném pořadí. Tato akce zajistí, že žádný kód nemůže přesměrovat na stránku Guard, kterou systém Windows používá k rozšíření zásobníku. Dodávání se obvykle provádí `__chkstk` pomocníkem, který má vlastní konvenci volání, která předá celkové přidělení zásobníku dělené 16 v X15.
 
 ## <a name="red-zone"></a>Červená zóna
 
@@ -245,15 +245,15 @@ Odvíjení během zpracování výjimek je prostřednictvím použití unwind k�
 
 EABI ARM také určuje model unwind pro výjimku, který používá unwind kódy. Uvedená specifikace však není dostatečná pro odvíjení v systému Windows, která musí zpracovávat případy, kdy je počítač uprostřed funkce prologu nebo epilogu.
 
-Kód, který je dynamicky generován, by měl být popsán s dynamickými tabulkami funkcí prostřednictvím `RtlAddFunctionTable` a přidružených funkcí, aby generovaný kód mohl být součástí zpracování výjimek.
+Kód, který je dynamicky generován, by měl být popsán s `RtlAddFunctionTable` dynamickými tabulkami funkcí prostřednictvím a přidružených funkcí, aby generovaný kód mohl být součástí zpracování výjimek.
 
 ## <a name="cycle-counter"></a>Čítač cyklů
 
-Všechny procesory ARMv8 jsou vyžadovány pro podporu registru čítače cyklu, což je 64 registrů, které systém Windows nakonfiguruje tak, aby byl čitelný na jakékoli úrovni výjimky, včetně uživatelského režimu. Lze k němu přistupovat prostřednictvím zvláštního PMCCNTR_EL0 registraci, pomocí operačního systému MSR v kódu sestavení nebo `_ReadStatusReg` vnitřní v C/C++ Code.
+Všechny procesory ARMv8 jsou vyžadovány pro podporu registru čítače cyklu, což je 64 registrů, které systém Windows nakonfiguruje tak, aby byl čitelný na jakékoli úrovni výjimky, včetně uživatelského režimu. Lze k němu přistupovat prostřednictvím zvláštního PMCCNTR_EL0 registraci, pomocí operačního systému MSR v kódu sestavení nebo `_ReadStatusReg` vnitřní v kódu C/C++.
 
 Čítač cyklu je tady skutečný počítadlo, ne nástěnné hodiny. Frekvence počítání se bude lišit podle frekvence procesoru. Pokud se domníváte, že je nutné znát frekvenci počítadla cyklu, neměli byste používat čítač cyklu. Místo toho je třeba změřit čas hodin, pro který byste měli použít `QueryPerformanceCounter`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Běžné problémy s migrací ARM v prostředí Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
 [Zpracování výjimek ARM64](arm64-exception-handling.md)

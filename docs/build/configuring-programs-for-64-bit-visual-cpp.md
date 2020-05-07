@@ -1,5 +1,5 @@
 ---
-title: Konfigurace C++ projektů pro 64 cíle platformy x64
+title: Konfigurace projektů C++ pro 64 cíle platformy x64
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -14,15 +14,15 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493296"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurace C++ projektů pro 64 cíle platformy x64
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurace projektů C++ pro 64 cíle platformy x64
 
-V této části najdete témata týkající se cílení 64 hardwaru x64 pomocí nástrojů C++ pro vizuální sestavení.
+V této části najdete témata týkající se cílení 64 hardwaru x64 pomocí nástrojů pro Visual C++ Build.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 - [Postupy: Konfigurace projektů Visual C++ pro 64bitové platformy x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Postupy: Povolení MSVC 64 sady nástrojů hostovaného na platformě x64 na příkazovém řádku](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Postupy: povolení MSVC 64 sady nástrojů hostovaného na platformě x64 na příkazovém řádku](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Obecné problémy migrace v 64bitovém prostředí Visual C++](common-visual-cpp-64-bit-migration-issues.md)
 
@@ -34,7 +34,7 @@ V této části najdete témata týkající se cílení 64 hardwaru x64 pomocí 
 
 [align](../cpp/align-cpp.md)
 
-[/clr (kompilace modulu Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
+[/clr (Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
 
 [/favor (optimalizace pro konkrétní architekturu)](reference/favor-optimize-for-architecture-specifics.md)
 
@@ -44,6 +44,6 @@ V této části najdete témata týkající se cílení 64 hardwaru x64 pomocí 
 
 [x64 (amd64) – seznam vnitřních objektů](../intrinsics/x64-amd64-intrinsics-list.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty a systémy sestavení](projects-and-build-systems-cpp.md)

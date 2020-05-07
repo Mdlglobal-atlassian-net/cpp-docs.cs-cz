@@ -21,20 +21,20 @@ ms.locfileid: "81328516"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Import a export vložených funkcí
 
-Importované funkce lze definovat jako vložky. Efekt je zhruba stejný jako definování standardní funkce vřádkové; volání funkce jsou rozbaleny do vřádkového kódu, podobně jako makro. To je hlavně užitečné jako způsob podpory tříd jazyka C++ v dll, které mohou vřadit některé z jejich členských funkcí pro efektivitu.
+Importované funkce lze definovat jako vložené. Efekt je zhruba stejný jako při definování standardní vložené funkce. volání funkce jsou rozšířena do vloženého kódu, podobně jako makro. To je v podstatě užitečné jako podpora tříd C++ v knihovně DLL, která by mohla začlenit některé jejich členské funkce na efektivitu.
 
-Jednou z funkcí importované vřádkové funkce je, že můžete vzít jeho adresu v jazyce C++. Kompilátor vrátí adresu kopie vřádkové funkce s bydlištěm v dll. Další funkcí importovaných vložkových funkcí je, že na rozdíl od globálních importovaných dat můžete inicializovat statická místní data importované funkce.
+Jednou z funkcí importované vložené funkce je to, že můžete získat svou adresu v jazyce C++. Kompilátor vrátí adresu kopie vložené funkce, která je umístěna v knihovně DLL. Další funkcí importovaných vložených funkcí je, že můžete inicializovat statická místní data importované funkce na rozdíl od globálních importovaných dat.
 
 > [!CAUTION]
-> Při poskytování importovaných vložkových funkcí byste měli postupovat opatrně, protože mohou vytvářet možnost konfliktů verzí. Funkce inline se rozbalí do kódu aplikace; Proto pokud později přepsat funkci, není získat aktualizovány, pokud samotná aplikace je znovu zkompilován. (Normálně lze funkce dll aktualizovat bez opětovného sestavení aplikací, které je používají.)
+> Při poskytování importovaných vložených funkcí byste měli věnovat pozornost, protože můžou vytvořit možnost konfliktu verzí. Vložená funkce se rozšíří do kódu aplikace; Proto pokud později znovu zapíšete funkci, nebude aktualizována, pokud aplikace samotná nebude znovu zkompilována. (Obvykle se funkce knihoven DLL dají aktualizovat bez nutnosti znovu sestavovat aplikace, které je používají.)
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z dll.](exporting-from-a-dll.md)
+- [Export z knihovny DLL](exporting-from-a-dll.md)
 
-- [Exportujte z dll pomocí . DEF soubory](exporting-from-a-dll-using-def-files.md)
+- [Exportujte z knihovny DLL pomocí. Soubory DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Export z dll pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 

@@ -14,14 +14,14 @@ ms.locfileid: "62233706"
 ---
 # <a name="expression-statement-c"></a>Příkaz výrazu (C)
 
-Při spuštění příkazu výrazu je výraz vyhodnocen dle pravidel popsaných v [výrazy a přiřazení](../c-language/expressions-and-assignments.md).
+Při spuštění příkazu výrazu je výraz vyhodnocen podle pravidel popsaných ve [výrazech a přiřazeních](../c-language/expressions-and-assignments.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz výrazu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz*<sub>optimalizované</sub> **;**
+*příkaz Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz*<sub>opt</sub> **;**
 
-Před spuštěním dalšího příkazu jsou dokončeny všechny vedlejší účinky vyhodnocení výrazu. Prázdný příkaz výrazu je označován za nulový výraz. Zobrazit [nulový výraz](../c-language/null-statement-c.md) Další informace.
+Před spuštěním dalšího příkazu jsou dokončeny všechny vedlejší účinky vyhodnocení výrazu. Prázdný příkaz výrazu je označován za nulový výraz. Další informace naleznete v [příkazu null](../c-language/null-statement-c.md) .
 
 Následující příklady demonstrují příkazy výrazů.
 
@@ -35,6 +35,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 V posledním výrazu (volání funkce) je hodnota výrazu zahrnujícího libovolnou hodnotu vrácenou funkcí zvýšena o hodnotu 3, a potom přiřazena do proměnných `y` a `z`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy](../c-language/statements-c.md)

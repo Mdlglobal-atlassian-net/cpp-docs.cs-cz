@@ -1,5 +1,5 @@
 ---
-title: Projekty sady Visual Studio –C++
+title: Projekty sady Visual Studio – C++
 ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
@@ -17,13 +17,13 @@ ms.locfileid: "80078697"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty sady Visual Studio – C++
 
-*Projekt sady Visual Studio* je projekt založený na systému sestavení MSBuild. Nástroj MSBuild je nativním systémem sestavení pro Visual Studio a obecně se jedná o nejlepší systém sestavení, který se používá pro programy specifické pro systém Windows. Nástroj MSBuild je těsně integrovaný se sadou Visual Studio, ale můžete ho použít také z příkazového řádku. Pro projekty pro různé platformy nebo projekty, které používají open source knihovny, doporučujeme používat [projekty cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md) v sadě visual Studio 2017 a novějších. Informace o tom, jak upgradovat projekty MSBuild ze starších verzí sady Visual Studio, najdete v [Průvodci přenosem a upgradem Microsoftu C++ ](../porting/visual-cpp-porting-and-upgrading-guide.md).
+*Projekt sady Visual Studio* je projekt založený na systému sestavení MSBuild. Nástroj MSBuild je nativním systémem sestavení pro Visual Studio a obecně se jedná o nejlepší systém sestavení, který se používá pro programy specifické pro systém Windows. Nástroj MSBuild je těsně integrovaný se sadou Visual Studio, ale můžete ho použít také z příkazového řádku. Pro projekty pro různé platformy nebo projekty, které používají open source knihovny, doporučujeme používat [projekty cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md) v sadě visual Studio 2017 a novějších. Informace o tom, jak upgradovat projekty MSBuild ze starších verzí sady Visual Studio, najdete v tématu [Průvodce přenosem a upgradem Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
 ::: moniker range="vs-2019"
 
-Můžete C++ vytvořit projekty výběrem možnosti **soubor** > **Nový** > **projekt**a potom nastavením jazyka. **Language** C++ V seznamu výsledků se zobrazí seznam šablon projektu, které můžete filtrovat nastavením typu **platforma** nebo **projektu** a zadáním klíčových slov do vyhledávacího pole.
+Projekty C++ můžete vytvořit kliknutím na **soubor** > **Nový** > **projekt**a pak nastavením **jazyka** na C++. V seznamu výsledků se zobrazí seznam šablon projektu, které můžete filtrovat nastavením typu **platforma** nebo **projektu** a zadáním klíčových slov do vyhledávacího pole.
 
    ![Šablony projektů sady Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 – dialog nového projektu")
 
@@ -31,13 +31,13 @@ Můžete C++ vytvořit projekty výběrem možnosti **soubor** > **Nový** > **p
 
 ::: moniker range="vs-2017"
 
-C++ Můžete vytvořit projekty kliknutím na **soubor** > **Nový** > **projekt**a pak v levém podokně C++ zvolíte možnost Visual. V prostředním podokně se zobrazí seznam šablon projektu:
+Projekty C++ můžete vytvořit kliknutím na **soubor** > **Nový** > **projekt**a následným výběrem Visual C++ v levém podokně. V prostředním podokně se zobrazí seznam šablon projektu:
 
    ![Šablony projektů](../overview/media/vs2017-new-project.png "Visual Studio 2017 – dialog nového projektu")
 
 ::: moniker-end
 
-Další informace o všech výchozích šablonách projektů, které jsou součástí sady Visual Studio, naleznete v tématu [ C++ šablony projektů v aplikaci Visual Studio](reference/visual-cpp-project-types.md). Můžete vytvořit vlastní šablony projektu. Další informace naleznete v tématu [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
+Další informace o všech výchozích šablonách projektů, které jsou součástí sady Visual Studio, naleznete v tématu [šablony projektů C++ v aplikaci Visual Studio](reference/visual-cpp-project-types.md). Můžete vytvořit vlastní šablony projektu. Další informace naleznete v tématu [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
 
 Po vytvoření projektu se zobrazí v okně [Průzkumník řešení](/visualstudio/ide/solutions-and-projects-in-visual-studio) :
 
@@ -55,7 +55,7 @@ K přidání knihoven třetích stran použijte Správce balíčků [vcpkg](vcpk
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Nastavení možností kompilátoru a dalších vlastností sestavení
 
-Chcete-li konfigurovat nastavení sestavení pro projekt, klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte možnost **vlastnosti**. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](working-with-project-properties.md).
+Chcete-li konfigurovat nastavení sestavení pro projekt, klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a vyberte možnost **vlastnosti**. Další informace najdete v tématu [nastavení kompilátoru C++ a vlastností sestavení v sadě Visual Studio](working-with-project-properties.md).
 
 ## <a name="compile-and-run"></a>Zkompilovat a spustit
 
@@ -87,4 +87,4 @@ Vytvoření nového projektu sady Visual Studio z volné kolekce zdrojových sou
 ## <a name="see-also"></a>Viz také
 
 [Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br>
-[Průvodce C++ přenosem a upgradem Microsoftu](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Průvodce přenosem a upgradem Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

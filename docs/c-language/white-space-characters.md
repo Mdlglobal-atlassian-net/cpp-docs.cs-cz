@@ -16,6 +16,6 @@ ms.locfileid: "68375819"
 
 Mezery, tabulátory, posun čáry (nový řádek), znak návratu na začátek řádku, posun formuláře a svislé tabulátory se nazývají "prázdné znaky", protože slouží stejný účel jako mezery mezi slovy a řádky na tištěné stránce – usnadňuje čtení. Tokeny jsou odděleny (ohraničeny) prázdnými znaky a jinými tokeny, například operátory a interpunkcí. Při analýze kódu kompilátor jazyka C ignoruje prázdné znaky, nejsou-li použity jako oddělovače nebo komponenty znakových konstant nebo textových literálů. Použitím prázdných znaků lze program zpřehlednit. Kompilátor zpracovává jako prázdné znaky i komentáře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Tokeny jazyka C](../c-language/c-tokens.md)

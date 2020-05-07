@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Kompilování programu C++/CLI na příkazovém řádku'
+title: 'Návod: Kompilace programu C++/CLI v příkazovém řádku'
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
@@ -9,31 +9,31 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64877458"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilování programu C++/CLI na příkazovém řádku
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilace programu C++/CLI v příkazovém řádku
 
-Můžete vytvořit programů aplikace Visual C++, které cílí Common Language Runtime (CLR) a pomocí rozhraní .NET Framework a sestavení na příkazovém řádku. Vizuální C++ podporuje C++/CLI programovací jazyk, který obsahuje operátory a další typy cílit na .NET programovací model. Obecné informace o C++vyhodnocovací jazyka naleznete v tématu [programování v rozhraní .NET s C++vyhodnocovací (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Můžete vytvořit Visual C++ programy, které cílí na modul CLR (Common Language Runtime), a použít .NET Framework a sestavit je na příkazovém řádku. Visual C++ podporuje programovací jazyk C++/CLI, který obsahuje další typy a operátory pro cílení programovacího modelu .NET. Obecné informace o jazyce C++/CLI naleznete v tématu [programování .NET s C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-V tomto názorném postupu použijete k vytvoření základního textového editoru C++vyhodnocovací programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C++/program rozhraní příkazového řádku místo zadání ten, který se zobrazí, nebo můžete použít C++vyhodnocovací vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
+V tomto návodu použijete textový editor k vytvoření základního programu C++/CLI a potom ho zkompilujete na příkazovém řádku. (Můžete použít vlastní program C++/CLI namísto psaní ovládacího prvku, který je zobrazen, nebo můžete použít ukázku kódu jazyka C++/CLI z jiného článku s článkem help. Tato technika je užitečná pro vytváření a testování malých modulů, které nemají žádné prvky uživatelského rozhraní.)
 
 ## <a name="prerequisites"></a>Požadavky
 
 Rozumíte základům jazyka C++.
 
-## <a name="compiling-a-ccli-program"></a>Kompilování C++vyhodnocovací programu
+## <a name="compiling-a-ccli-program"></a>Kompilování programu C++/CLI
 
-Následující kroky ukazují, jak sestavit C++vyhodnocovací konzolovou aplikaci využívající tříd rozhraní .NET Framework.
+Následující kroky ukazují, jak zkompilovat konzolovou aplikaci C++/CLI, která používá .NET Framework třídy.
 
-Povolit kompilace pro C++/rozhraní příkazového řádku, je nutné použít [/CLR](reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. Kompilátor MSVC generuje soubor .exe, který obsahuje kód jazyka MSIL – nebo smíšený jazyk MSIL i nativní kód – a odkazy na požadované knihovny rozhraní .NET Framework.
+Chcete-li povolit kompilaci pro jazyk C++/CLI, je nutné použít možnost kompilátoru [/CLR](reference/clr-common-language-runtime-compilation.md) . Kompilátor MSVC generuje soubor. exe, který obsahuje kód jazyka MSIL, nebo smíšený jazyk MSIL a nativní kód – a odkazuje na požadované knihovny .NET Framework.
 
-### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Chcete-li zkompilovat C++vyhodnocovací aplikace v příkazovém řádku
+### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Kompilace aplikace C++/CLI na příkazovém řádku
 
-1. Otevřít **Developer Command Prompt** okna. Konkrétní pokyny najdete v tématu [otevřete okno příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt).
+1. Otevřete **Developer Command Prompt** okno. Konkrétní pokyny najdete v tématu [otevření okna příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt).
 
-   Přihlašovací údaje správce, může být nutné úspěšně kompilaci kódu, v závislosti na operačním systému a konfigurace počítače. Spusťte okno příkazového řádku jako správce, kliknete pravým tlačítkem na otevřete místní nabídku pro příkazový řádek a klikněte na tlačítko **Další** > **spustit jako správce**.
+   Pověření správce může být vyžadováno pro úspěšné kompilování kódu v závislosti na operačním systému a konfiguraci počítače. Chcete-li spustit okno příkazového řádku jako správce, klikněte pravým tlačítkem myši a otevřete místní nabídku pro příkazový řádek a pak zvolte možnost **Další** > **Spustit jako správce**.
 
-1. Na příkazovém řádku zadejte `notepad basicclr.cpp`.
+1. Do příkazového řádku zadejte `notepad basicclr.cpp`.
 
-   Zvolte **Ano** Jakmile budete vyzváni k vytvoření souboru.
+   Po zobrazení výzvy k vytvoření souboru vyberte **Ano** .
 
 1. V programu Poznámkový blok zadejte tyto řádky:
 
@@ -44,22 +44,22 @@ Povolit kompilace pro C++/rozhraní příkazového řádku, je nutné použít [
    }
    ```
 
-1. V panelu nabídky zvolte **souboru** > **Uložit**.
+1. Na řádku nabídek klikněte na Uložit **soubor** > **Save**.
 
-   Vytvoření zdrojového souboru jazyka Visual C++, který používá třídu rozhraní .NET Framework (<xref:System.Console>) v <xref:System> oboru názvů.
+   Vytvořili jste zdrojový soubor Visual C++, který v<xref:System.Console> <xref:System> oboru názvů používá třídu .NET Framework ().
 
-1. Na příkazovém řádku zadejte `cl /clr basicclr.cpp`. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj, který obsahuje jazyk MSIL a pak spustí linkeru, aby generoval spustitelný program s názvem basicclr.exe.
+1. Do příkazového řádku zadejte `cl /clr basicclr.cpp`. Kompilátor cl. exe zkompiluje zdrojový kód do souboru. obj, který obsahuje jazyk MSIL a poté spustí linker pro vygenerování spustitelného programu s názvem basicclr. exe.
 
-1. Chcete-li spustit basicclr.exe program příkazového řádku, zadejte `basicclr`.
+1. Chcete-li spustit program basicclr. exe, zadejte `basicclr`do příkazového řádku.
 
-   Program zobrazí tento text a ukončení:
+   Program zobrazí tento text a ukončí:
 
    ```Output
    This is a C++/CLI program.
    ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Reference jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty a systémy sestavení](projects-and-build-systems-cpp.md)<br/>
 [Parametry kompilátoru MSVC](reference/compiler-options.md)

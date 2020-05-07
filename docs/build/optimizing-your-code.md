@@ -21,7 +21,7 @@ Optimalizací spustitelného souboru můžete dosáhnout rovnováhy mezi rychlos
 
 ## <a name="language-features"></a>Jazykové funkce
 
-Následující témata popisují některé funkce optimalizace v jazyce C/aC++ .
+Následující témata popisují některé funkce optimalizace v jazyce C/C++.
 
 [Direktivy pragma a klíčová slova optimalizace](optimization-pragmas-and-keywords.md) \
 Seznam klíčových slov a direktiv pragma, které lze použít ve svém kódu ke zvýšení výkonu.
@@ -29,7 +29,7 @@ Seznam klíčových slov a direktiv pragma, které lze použít ve svém kódu k
 [Možnosti kompilátoru uvedené podle kategorie](reference/compiler-options-listed-by-category.md) \
 Seznam možností kompilátoru **/o** , které specificky ovlivňují rychlost spuštění nebo velikost kódu.
 
-[Deklarátor odkazu rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[Deklarátor odkazu rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Odkazy rvalue podporují implementaci *sémantiky přesunutí*. Pokud se k implementaci knihoven šablon používá sémantika přesunutí, výkon aplikací, které používají tyto šablony, může významně zlepšit.
 
 ### <a name="the-optimize-pragma"></a>Direktiva optimize pragma
@@ -55,7 +55,7 @@ V následujících tématech se zabýváte dobrými postupy programování.
 [Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md) \
 Lepšími způsoby kódování může být lepší výkon. Toto téma navrhuje techniky kódování, které vám pomohou zajistit, že části kódu kritické pro čas fungují uspokojivě.
 
-[Doporučené postupy optimalizace](optimization-best-practices.md) \
+[Osvědčené postupy optimalizace](optimization-best-practices.md) \
 Poskytuje obecné pokyny, jak nejlépe optimalizovat aplikaci.
 
 ## <a name="debugging-optimized-code"></a>Ladění optimalizovaného kódu
@@ -68,7 +68,7 @@ Následující témata obsahují informace o tom, jak ladit sestavení pro vydá
 
 - [Postupy: Ladění optimalizovaného kódu](/visualstudio/debugger/how-to-debug-optimized-code)
 
-- [Proč čísla s plovoucí desetinnou čárkou můžou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)
+- [Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)
 
 Následující témata obsahují informace o tom, jak optimalizovat sestavování, načítání a spouštění kódu.
 
@@ -85,14 +85,14 @@ Následující témata obsahují informace o tom, jak optimalizovat sestavován�
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Direktivy pragma a klíčová slova optimalizace](optimization-pragmas-and-keywords.md) \
-[Vylepšení \ propustnosti kompilátoru](improving-compiler-throughput.md)
-[Proč čísla s plovoucí desetinnou čárkou mohou přijít o přesnost](why-floating-point-numbers-may-lose-precision.md) \
- \ [reprezentace plovoucí desetinné](ieee-floating-point-representation.md) čárky IEEE
+[Vylepšení propustnosti kompilátoru](improving-compiler-throughput.md) \
+[Proč čísla s plovoucí desetinnou čárkou můžou přijít o přesnost](why-floating-point-numbers-may-lose-precision.md) \
+[Reprezentace plovoucí desetinné čárky IEEE](ieee-floating-point-representation.md) \
 [Tipy pro zlepšení časově kritického kódu](tips-for-improving-time-critical-code.md) \
-[Použití názvu funkce bez () negeneruje žádný kód](using-function-name-without-parens-produces-no-code.md) \
-[Doporučené postupy optimalizace](optimization-best-practices.md) \
+[Použití názvu funkce bez () negeneruje žádný kód.](using-function-name-without-parens-produces-no-code.md) \
+[Osvědčené postupy optimalizace](optimization-best-practices.md) \
 [Optimalizace na základě profilu](profile-guided-optimizations.md) \
-[Proměnné prostředí pro optimalizace](environment-variables-for-profile-guided-optimizations.md) na základě profilu \
+[Proměnné prostředí pro optimalizace na základě profilu](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
@@ -100,4 +100,4 @@ Následující témata obsahují informace o tom, jak optimalizovat sestavován�
 
 ## <a name="see-also"></a>Viz také
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](reference/c-cpp-building-reference.md)
+[Odkaz sestavení C/C++](reference/c-cpp-building-reference.md)

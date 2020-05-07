@@ -13,10 +13,10 @@ ms.locfileid: "62234068"
 ---
 # <a name="domain-errors"></a>Chyby domény
 
-**ANSI 4.5.1** hodnoty vrácené matematickými funkcemi při doménových chybách
+**ANSI 4.5.1** Hodnoty vracené matematickou funkcí v doménových chybách
 
-Kód chyby. H soubor definuje konstantu doménových chyb `EDOM` jako 33.  Viz téma nápovědy pro konkrétní funkci, která způsobila chybu, informace o vrácené hodnotě.
+ERRNO. Soubor H definuje konstantu `EDOM` chyby domény jako 33.  Informace o vrácené hodnotě naleznete v tématu nápovědy pro konkrétní funkci, která způsobila chybu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

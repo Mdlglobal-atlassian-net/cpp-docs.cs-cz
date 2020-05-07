@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Sestavení izolovaných aplikací pro využívání komponent modelu COM'
+title: 'Postupy: Sestavení izolované aplikace pro zpracování součástí modelu COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
@@ -11,7 +11,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493238"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Postupy: Sestavení izolovaných aplikací pro využívání komponent modelu COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Postupy: Sestavení izolované aplikace pro zpracování součástí modelu COM
 
 Izolované aplikace jsou aplikace, které mají manifesty integrované do programu. Izolované aplikace můžete vytvořit pro využívání komponent modelu COM.
 
@@ -23,7 +23,7 @@ Izolované aplikace jsou aplikace, které mají manifesty integrované do progra
 
 1. Vyberte stránku vlastností **izolovaného modelu COM** a nastavte vlastnost **název souboru komponenty** na název komponenty modelu COM, kterou má izolovaná aplikace spotřebovat.
 
-1. Klikněte na **OK**.
+1. Klikněte na tlačítko **OK**.
 
 ### <a name="to-build-manifests-into-isolated-applications"></a>Sestavení manifestů do izolovaných aplikací
 
@@ -33,11 +33,11 @@ Izolované aplikace jsou aplikace, které mají manifesty integrované do progra
 
 1. Vyberte stránku vlastností **vstup a výstup** a nastavte vlastnost pro **vložení manifestu** na **hodnotu Ano**.
 
-1. Klikněte na **OK**.
+1. Klikněte na tlačítko **OK**.
 
 1. Sestavte řešení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Izolované aplikace](/windows/win32/SbsCs/isolated-applications)<br/>
 [Sestavení vedle sebe](/windows/win32/SbsCs/about-side-by-side-assemblies-)

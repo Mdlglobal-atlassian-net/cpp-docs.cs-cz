@@ -18,38 +18,38 @@ ms.locfileid: "81349603"
 
 **Specifické pro Microsoft**
 
-Příkaz `try-finally` je rozšíření společnosti Microsoft k jazyku C, který umožňuje aplikacím zaručit spuštění kódu vyčištění při přerušení provádění bloku kódu. Vyčištění se skládá z takových úkolů, jako je zrušení přidělení paměti, zavření souborů a uvolnění popisovačů souborů. Příkaz `try-finally` je zvláště užitečné pro rutiny, které mají několik míst, kde je provedena kontrola pro chybu, která by mohla způsobit předčasný návrat z rutiny.
+`try-finally` Příkaz je rozšířením společnosti Microsoft pro jazyk C, které umožňuje aplikacím zaručit spuštění kódu pro vyčištění v případě přerušení běhu bloku kódu. Vyčištění se skládá z těchto úloh jako rušení přidělení paměti, zavírání souborů a uvolňování obslužných rutin souborů. `try-finally` Příkaz je zvláště užitečný pro rutiny, které mají několik míst, kde je provedena kontrola chyby, která by mohla způsobit předčasné vrácení z rutiny.
 
-*try-finally-statement*: **__try**  *složený příkaz*
+*try-finally-příkaz*: **__try***složený* příkaz  
 
-**__finally**  *složený příkaz*
+**__finally***složený* příkaz  
 
-Složený příkaz za `__try` klauzulí je střežené části. Složený příkaz po `__finally` klauzuli je obslužná rutina ukončení. Obslužná rutina určuje sadu akcí, které se provádějí při ukončení střežené části, zda je chráněná část ukončena výjimkou (abnormální ukončení) nebo standardním propadnením (normální ukončení).
+Složený příkaz za `__try` klauzulí je chráněný oddíl. Složený příkaz za `__finally` klauzulí je obslužná rutina ukončení. Obslužná rutina určuje sadu akcí, které se spustí při ukončení chráněného oddílu, bez ohledu na to, jestli je chráněný oddíl ukončený výjimkou (abnormální ukončení) nebo podle standardu (normální ukončení).
 
-Ovládací prvek `__try` dosáhne příkazu jednoduchým sekvenčním prováděním (propadne). Když ovládací prvek `__try` zadá příkaz, jeho přidružená obslužná rutina se stane aktivní. Exekuce probíhá takto:
+Ovládací prvek dosáhne `__try` příkazu jednoduchým sekvenčním spouštěním (Přejít do). Když ovládací prvek vstoupí `__try` do příkazu, jeho přidružená obslužná rutina se stane aktivní. Provádění pokračuje následujícím způsobem:
 
 1. Chráněná část je spuštěna.
 
-1. Obslužná rutina ukončení je vyvolána.
+1. Je vyvolána obslužná rutina ukončení.
 
-1. Po dokončení obslužné rutiny ukončení, provádění pokračuje po příkazu. `__finally` Bez ohledu na to, jak chráněná část `goto` končí (například prostřednictvím `return` příkazu z hlísty z hlísty nebo prostřednictvím příkazu), je obslužná rutina ukončení provedena před tím, než se tok řízení přesune z hlídané části.
+1. Po dokončení obslužné rutiny ukončení pokračuje provádění i po `__finally` příkazu. Bez ohledu na to, jak chráněná část končí (například prostřednictvím `goto` příkazu z chráněného těla nebo prostřednictvím `return` příkazu), je obslužná rutina ukončení provedena před tím, než se tok řízení přesune mimo chráněný oddíl.
 
-Klíčové `__leave` slovo je `try-finally` platné v rámci bloku příkazu. Efekt `__leave` je skočit na konec `try-finally` bloku. Obslužná rutina ukončení je okamžitě spuštěna. Přestože `goto` příkaz lze použít k dosažení `goto` stejného výsledku, příkaz způsobí, že unwinding zásobníku. Příkaz `__leave` je efektivnější, protože nezahrnuje odvíjení zásobníku.
+`__leave` Klíčové slovo je platné v rámci `try-finally` bloku příkazu. Efekt `__leave` je přejít na konec `try-finally` bloku. Obslužná rutina ukončení se okamžitě spustí. Přestože lze `goto` použít příkaz k dosažení stejného výsledku, `goto` příkaz způsobí unwind zásobníku. `__leave` Příkaz je efektivnější, protože nezahrnuje odvíjení zásobníku.
 
-Ukončení příkazu `try-finally` pomocí `return` příkazu `longjmp` nebo funkce run-time je považováno za abnormální ukončení. Je nezákonné skočit do `__try` prohlášení, ale legální skočit z jednoho. Všechny `__finally` příkazy, které jsou aktivní mezi výchozím bodem a cílem, musí být spuštěny. Tomu se říká "místní odpočinek".
+Ukončení `try-finally` příkazu pomocí `return` příkazu nebo funkce za `longjmp` běhu se považuje za abnormální ukončení. Je neplatné přeskočit do `__try` příkazu, ale právním přechodem na jeden z nich. Všechny `__finally` příkazy, které jsou aktivní mezi bodem odeslání a cílovým umístěním, musí být spuštěny. Toto se nazývá "místní unwind".
 
-Obslužná rutina ukončení není volána, pokud je proces zabit při provádění příkazu. `try-finally`
-
-> [!NOTE]
-> Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Také mechanismus zpracování výjimek Jazyka C++ je mnohem flexibilnější v tom, že může zpracovávat výjimky libovolného typu.
+Obslužná rutina ukončení není volána, pokud je proces ukončen při spuštění `try-finally` příkazu.
 
 > [!NOTE]
-> Pro programy jazyka C++ by mělo být místo strukturovaného zpracování výjimek použito zpracování výjimek jazyka C++. For more information, see [Exception Handling](../cpp/exception-handling-in-visual-cpp.md) in the *C++ Language Reference*.
+> Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Mechanismus zpracování výjimek jazyka C++ je také mnohem flexibilní, v tom případě může zpracovávat výjimky jakéhokoli typu.
 
-Podívejte se na příklad pro [try-except prohlášení](../c-language/try-except-statement-c.md) zobrazíte, `try-finally` jak příkaz funguje.
+> [!NOTE]
+> Pro programy C++ by se namísto strukturovaného zpracování výjimek měla použít zpracování výjimek jazyka C++. Další informace naleznete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md) v *Referenční příručce jazyka C++*.
 
-**END Microsoft Specifické**
+Podívejte se na příklad [příkazu try-except](../c-language/try-except-statement-c.md) , abyste viděli, jak `try-finally` příkaz funguje.
+
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také
 
-[try-finally prohlášení](../cpp/try-finally-statement.md)
+[try-finally – příkaz](../cpp/try-finally-statement.md)

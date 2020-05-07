@@ -13,10 +13,10 @@ ms.locfileid: "62233674"
 ---
 # <a name="file-position-in-append-mode"></a>Pozice souboru v režimu připojení
 
-**ANSI 4.9.3** Určuje, zda indikátor pozice souboru proudu režimu připojení je umístěn na začátek nebo konec souboru
+**4.9.3 ANSI** Určuje, jestli je indikátor pozice souboru datového proudu režimu připojení zpočátku umístěný na začátku nebo na konci souboru.
 
 Při otevření souboru v režimu připojení odkazuje indikátor pozice souboru na konec souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

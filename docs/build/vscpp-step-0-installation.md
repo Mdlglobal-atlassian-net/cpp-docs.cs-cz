@@ -1,6 +1,6 @@
 ---
 title: Instalace podpory jazyka C++ v sadě Visual Studio
-description: Instalace podpory sady Visual Studio pro visual c++
+description: Nainstalovat podporu sady Visual Studio pro Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
@@ -15,187 +15,187 @@ ms.locfileid: "81335370"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
-Pokud jste si ještě nestáhli a nenainstalovali Visual Studio a nástroje Visual C++, tady je postup, jak začít.
+Pokud jste ještě nestáhli a nainstalovali Visual Studio a Visual C++ nástroje, začněte tady.
 
 ::: moniker range="vs-2019"
 
-## <a name="visual-studio-2019-installation"></a>Instalace Visual Studia 2019
+## <a name="visual-studio-2019-installation"></a>Instalace sady Visual Studio 2019
 
-Vítáme vás v Visual Studiu 2019! V této verzi je snadné vybrat a nainstalovat pouze funkce, které potřebujete. A díky snížené minimální půdorysu se instaluje rychle a s menším dopadem na systém.
+Vítá vás Visual Studio 2019! V této verzi si snadno zvolíte a nainstalujete jenom ty funkce, které potřebujete. A kvůli jejich menšímu minimálnímu množství je instalace rychle a s menším dopadem na systém.
 
 > [!NOTE]
-> Toto téma se týká instalace sady Visual Studio v systému Windows. [Visual Studio Code](https://code.visualstudio.com/) je lehké vývojové prostředí napříč platformami, které běží na systémech Windows, Mac a Linux. Rozšíření Kódu Microsoft [C/C++ pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) podporuje technologii IntelliSense, ladění, formátování kódu, automatické dokončování. Visual Studio pro Mac nepodporuje Microsoft C++, ale podporuje jazyky .NET a vývoj napříč platformami. Pokyny k instalaci najdete [v tématu Instalace Visual Studia pro Mac](/visualstudio/mac/installation/).
+> Toto téma se vztahuje na instalaci sady Visual Studio ve Windows. [Visual Studio Code](https://code.visualstudio.com/) je zjednodušené vývojové prostředí pro různé platformy, které běží na systémech Windows, Mac a Linux. Rozšíření Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) podporuje technologii IntelliSense, ladění, formátování kódu, automatické dokončování. Visual Studio pro Mac nepodporuje Microsoft C++, ale podporuje jazyky .NET a vývoj pro různé platformy. Pokyny k instalaci najdete v tématu [instalace Visual Studio pro Mac](/visualstudio/mac/installation/).
 
-Chcete se dozvědět více o tom, co dalšího je v této verzi nového? Podívejte se na [poznámky k verzi](/visualstudio/releases/2019/release-notes/)sady Visual Studio .
+Chcete získat další informace o tom, co je jinde v této verzi nové? Přečtěte si [poznámky k verzi](/visualstudio/releases/2019/release-notes/)sady Visual Studio.
 
-Jste připraveni k instalaci? Provedeme vás tím krok za krokem.
+Jste připraveni k instalaci? Provede vás krok za krokem.
 
-### <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>Krok 1 – Ujistěte se, že je počítač připravený pro Visual Studio.
+### <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>Krok 1 – Ujistěte se, že je váš počítač připravený pro Visual Studio
 
-Než začnete instalovat Visual Studio:
+Než začnete s instalací sady Visual Studio:
 
-1. Zkontrolujte [systémové požadavky](/visualstudio/releases/2019/system-requirements). Tyto požadavky vám pomohou zjistit, jestli váš počítač podporuje Visual Studio 2019.
+1. Podívejte se na [požadavky na systém](/visualstudio/releases/2019/system-requirements). Tyto požadavky vám pomůžou zjistit, jestli váš počítač podporuje Visual Studio 2019.
 
-1. Použijte nejnovější aktualizace systému Windows. Tyto aktualizace zajišťují, že počítač obsahuje nejnovější aktualizace zabezpečení a požadované systémové součásti sady Visual Studio.
+1. Použijte nejnovější aktualizace Windows. Tyto aktualizace zajistí, že váš počítač má nejnovější aktualizace zabezpečení i požadované součásti systému pro Visual Studio.
 
-1. Restartování. Restartování zajišťuje, že všechny čekající instalace nebo aktualizace nebrání instalaci sady Visual Studio.
+1. Restartování. Restartování zajistí, že instalace sady Visual Studio nebrání jakýmkoli nedokončeným instalacím nebo aktualizacím.
 
-1. Uvolněte místo. Odeberte nepotřebné soubory a aplikace z %SystemDrive % například spuštěním aplikace Vyčištění disku.
+1. Uvolněte místo. Odstraňte nepotřebné soubory a aplikace z% SystemDrive%, například spuštěním aplikace pro vyčištění disku.
 
-Dotazy týkající se spuštění předchozích verzí Visual Studia vedle Visual Studia 2019 najdete na stránce [Cílení a kompatibilita platformy Visual Studia 2019.](/visualstudio/releases/2019/compatibility/)
+Dotazy týkající se spouštění předchozích verzí sady Visual Studio vedle sebe se sadou Visual Studio 2019 naleznete na stránce [cílení a kompatibilita platformy Visual studio 2019](/visualstudio/releases/2019/compatibility/) .
 
 ### <a name="step-2---download-visual-studio"></a>Krok 2 – stažení sady Visual Studio
 
-Dále stáhněte soubor zaváděcího nástroje sady Visual Studio. Chcete-li tak učinit, zvolte následující tlačítko, zvolte požadovanou edici sady Visual Studio, zvolte **Uložit**a pak zvolte **Otevřít složku**.
+Dále si stáhněte soubor zaváděcího nástroje sady Visual Studio. Chcete-li to provést, zvolte následující tlačítko, zvolte požadovanou verzi sady Visual Studio, zvolte možnost **Uložit**a pak zvolte možnost **Otevřít složku**.
 
  > [!div class="button"]
  > [Stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
-### <a name="step-3---install-the-visual-studio-installer"></a>Krok 3 – Instalace instalačního programu sady Visual Studio
+### <a name="step-3---install-the-visual-studio-installer"></a>Krok 3 – instalace instalačního programu sady Visual Studio
 
-Spusťte soubor zaváděcího nástroje a nainstalujte instalační program sady Visual Studio. Tento nový odlehčený instalační program obsahuje vše, co potřebujete k instalaci a přizpůsobení sady Visual Studio.
+Spuštěním souboru zaváděcího nástroje nainstalujte Instalační program pro Visual Studio. Tento nový odlehčený instalační program zahrnuje všechno, co potřebujete k instalaci i přizpůsobení sady Visual Studio.
 
-1. Ve složce **Soubory ke stažení** poklepejte na zaváděcí nástroj, který odpovídá jednomu z následujících souborů nebo je podobný:
+1. Ve složce **stažené** soubory poklikejte na zaváděcí nástroj, který odpovídá nebo je podobný jednomu z následujících souborů:
 
-   - **vs_community.exe** pro komunitu sady Visual Studio
-   - **vs_professional.exe** pro Visual Studio Professional
-   - **vs_enterprise.exe** pro Visual Studio Enterprise
+   - **vs_community. exe** pro Visual Studio Community
+   - **vs_professional. exe** pro Visual Studio Professional
+   - **vs_enterprise. exe** pro Visual Studio Enterprise
 
-   Pokud obdržíte oznámení o řízení uživatelských účtů, zvolte **Ano**.
+   Pokud se zobrazí upozornění na řízení uživatelských účtů, vyberte **Ano**.
 
-1. Požádáme vás o potvrzení [licenčních podmínek společnosti](https://visualstudio.microsoft.com/license-terms/) Microsoft a [Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement). Zvolte **Pokračovat**.
+1. Požádáme vás o potvrzení [licenčních podmínek](https://visualstudio.microsoft.com/license-terms/) společnosti Microsoft a [prohlášení o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)společnosti Microsoft. Zvolte **Pokračovat**.
 
-### <a name="step-4---choose-workloads"></a>Krok 4 – výběr úloh
+### <a name="step-4---choose-workloads"></a>Krok 4 – Výběr úloh
 
-Po instalaci instalačního programu jej můžete použít k přizpůsobení instalace výběrem *požadovaných úloh*nebo sad funkcí. Jak na to:
+Až instalační program nainstalujete, můžete ho použít k přizpůsobení instalace tak, že vyberete *úlohy*nebo sady funkcí, které chcete. Jak na to:
 
-1. Najdete pracovní vytížení, které chcete **na obrazovce Instalace sady Visual Studio.**
+1. Požadované úlohy najdete na obrazovce instalace sady **Visual Studio** .
 
-   ![Visual Studio 2019: Instalace úlohy](../get-started/media/vs-installer-workloads.png)
+   ![Visual Studio 2019: instalace úlohy](../get-started/media/vs-installer-workloads.png)
 
-   Pro základní podporu jazyka C++ zvolte pracovní vytížení "Vývoj plochy s C++". Dodává se s výchozím editorem jádra, který zahrnuje základní podporu úprav kódu pro více než 20 jazyků, možnost otevřít a upravit kód z libovolné složky bez nutnosti projektu a integrovanou správu zdrojového kódu.
+   V případě podpory Core C++ vyberte úlohu vývoj desktopových aplikací pomocí C++. Obsahuje výchozí základní editor, který obsahuje podporu pro základní úpravy kódu pro více než 20 jazyků, možnost otevírat a upravovat kód z libovolné složky bez vyžadování projektu a integrovaného řízení zdrojového kódu.
 
-   Další úlohy podporují jiné druhy vývoje jazyka C++. Můžete například zvolit úlohu "Vývoj univerzální platformy Windows" a vytvářet aplikace, které používají prostředí Windows Runtime pro Microsoft Store. Chcete-li vytvořit hry, které používají rozhraní DirectX, Unreal a Cocos2d, zvolte "Vývoj her s C++". Zvolte "Vývoj Linuxu s C++" pro cílení linuxových platforem, včetně vývoje IoT.
+   Další úlohy podporují jiné druhy vývoje v jazyce C++. Například vyberte úlohu Univerzální platforma Windows vývoj pro vytváření aplikací, které používají prostředí Windows Runtime pro Microsoft Store. Pokud chcete vytvořit hry, které používají rozhraní DirectX, Unreal a Cocos2d, vyberte vývoj her pomocí C++. Vyberte "vývoj pro Linux pomocí C++" a Zaměřte se na platformy pro Linux, včetně vývoje IoT.
 
-   Podokno **podrobností instalace** obsahuje zahrnuté a volitelné součásti nainstalované jednotlivými úlohami. V tomto seznamu můžete vybrat nebo zrušit výběr volitelných součástí. Chcete-li například podporovat vývoj pomocí sad nástrojů kompilátoru sady Visual Studio 2017 nebo 2015, zvolte volitelné součásti MSVC v141 nebo MSVC v140. Můžete přidat podporu pro knihovnu MFC, rozšíření jazyka experimentální moduly, IncrediBuild a další.
+   V podokně **podrobností o instalaci** jsou uvedeny zahrnuté a volitelné komponenty nainstalované jednotlivými úlohami. V tomto seznamu můžete vybrat volitelné součásti nebo zrušit jejich výběr. Například pro podporu vývoje pomocí sad nástrojů kompilátoru sady Visual Studio 2017 nebo 2015 vyberte volitelné komponenty MSVC v141 nebo MSVC v140. Můžete přidat podporu pro MFC, jazykové rozšíření experimentálních modulů, IncrediBuild a další.
 
-1. Po výběru pracovního vytížení a volitelných součástí, které chcete, zvolte **Instalovat**.
+1. Jakmile vyberete úlohy a volitelné součásti, které chcete, klikněte na tlačítko **nainstalovat**.
 
-   Dále se zobrazí stavové obrazovky, které zobrazují průběh instalace sady Visual Studio.
+   V dalším kroku se zobrazí stavové obrazovky, které znázorňují průběh instalace sady Visual Studio.
 
 > [!TIP]
-> Kdykoli po instalaci můžete nainstalovat úlohy nebo součásti, které jste původně nenainstalovali. Pokud máte otevřenou Visual Studio, přejděte na **nástroje** > **získat nástroje a funkce...** která otevře Instalační program sady Visual Studio. Nebo otevřete **Instalační program sady Visual Studio** z nabídky Start. Odtud můžete zvolit úlohy nebo součásti, které chcete nainstalovat. Potom zvolte **Změnit**.
+> Po dokončení instalace můžete kdykoli nainstalovat úlohy nebo komponenty, které jste nenainstalovali jako první. Pokud máte spuštěnou aplikaci Visual Studio, přejdete do části **nástroje** > **získat nástroje a funkce...** tím otevřete instalační program pro Visual Studio. Případně otevřete **instalační program pro Visual Studio** v nabídce Start. Odtud můžete zvolit úlohy nebo komponenty, které chcete nainstalovat. Pak zvolte **Upravit**.
 
-### <a name="step-5---choose-individual-components-optional"></a>Krok 5 - Výběr jednotlivých součástí (volitelné)
+### <a name="step-5---choose-individual-components-optional"></a>Krok 5 – výběr jednotlivých komponent (volitelné)
 
-Pokud nechcete používat funkci Úlohy k přizpůsobení instalace sady Visual Studio nebo chcete přidat více součástí, než nainstaluje pracovní vytížení, můžete tak učinit instalací nebo přidáním jednotlivých součástí na kartě **Jednotlivé součásti.**
+Pokud nechcete použít funkci úlohy k přizpůsobení instalace sady Visual Studio nebo chcete přidat další součásti, než kolik je potřeba, můžete to udělat tak, že nainstalujete nebo přidáte jednotlivé komponenty z karty **jednotlivé komponenty** . Zvolte, co chcete, a pak postupujte podle pokynů.
 
-  ![Visual Studio 2019 – instalace jednotlivých součástí](../get-started/media/vs-installer-individual-components.png "Instalace jednotlivých součástí sady Visual Studio")
+  ![Visual Studio 2019 – instalace jednotlivých komponent](../get-started/media/vs-installer-individual-components.png "Instalovat jednotlivé součásti sady Visual Studio")
 
 ### <a name="step-6---install-language-packs-optional"></a>Krok 6 – Instalace jazykových sad (volitelné)
 
-Instalační program se ve výchozím nastavení pokusí při prvním spuštění přizpůsobit jazyk operačního systému. Chcete-li aplikaci Visual Studio nainstalovat v jazyce podle vašeho výběru, zvolte kartu **Jazykové balíčky** v instalační službě sady Visual Studio a postupujte podle pokynů.
+Ve výchozím nastavení se instalační program při prvním spuštění pokusí vyhledat jazyk operačního systému. Chcete-li nainstalovat sadu Visual Studio v jazyce podle vašeho výběru, zvolte kartu **jazykové sady** z instalační program pro Visual Studio a potom postupujte podle pokynů.
 
-  ![Visual Studio 2019 – instalace jazykových sad](../get-started/media/vs-installer-language-packs.png "Instalace jazykových sad Sady Visual Studio")
+  ![Visual Studio 2019 – instalace jazykových sad](../get-started/media/vs-installer-language-packs.png "Nainstalovat jazykové sady pro Visual Studio")
 
 #### <a name="change-the-installer-language-from-the-command-line"></a>Změna jazyka instalačního programu z příkazového řádku
 
-Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instalačního programu z příkazového řádku. Můžete například vynutit spuštění instalačního programu v angličtině `vs_installer.exe --locale en-US`pomocí následujícího příkazu: . Instalační program si toto nastavení zapamatuje při příštím spuštění. Instalátor podporuje následující jazykové tokeny: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru a tr-tr.
+Dalším způsobem, jak můžete změnit výchozí jazyk, je spuštění instalačního programu z příkazového řádku. Například můžete vynutit, aby se instalační program spouštěl v angličtině, a to pomocí následujícího příkazu `vs_installer.exe --locale en-US`:. Instalační program si toto nastavení zapamatuje, jakmile bude příště spuštěn. Instalační program podporuje následující jazykové tokeny: zh-CN, zh-TW, cs-cz, en-US, ES-ES, fr-FR, de-de, IT-IT, ja-JP, ko-KR, pl-pl, pt-BR, ru-ru a TR-tr.
 
 ### <a name="step-7---change-the-installation-location-optional"></a>Krok 7 – Změna umístění instalace (volitelné)
 
-Můžete snížit nároky na instalaci sady Visual Studio na systémové jednotce. Můžete přesunout mezipaměť pro stahování, sdílené součásti, sady SDK a nástroje na různé jednotky a ponechat visual studio na jednotce, která ji spouští nejrychleji.
+Nároky na instalaci sady Visual Studio můžete snížit na systémové jednotce. Můžete se rozhodnout přesunout mezipaměť pro stahování, sdílené součásti, sady SDK a nástroje na různé jednotky a nechat Visual Studio na disku, na kterém je spuštěný, nejrychlejší.
 
-  ![Visual Studio 2019 – změna umístění instalace](../get-started/media/vs-installer-installation-locations.png "Změna umístění instalace")
+  ![Visual Studio 2019 – Změna umístění instalace](../get-started/media/vs-installer-installation-locations.png "Změna umístění instalace")
 
 > [!IMPORTANT]
-> Jinou jednotku můžete vybrat pouze při první instalaci sady Visual Studio. Pokud jste ji již nainstalovali a chcete změnit jednotky, musíte odinstalovat Visual Studio a znovu ji nainstalovat.
+> Můžete vybrat jinou jednotku pouze při první instalaci sady Visual Studio. Pokud jste ho už nainstalovali a chcete změnit jednotky, musíte odinstalovat sadu Visual Studio a pak ji znovu nainstalovat.
 
-### <a name="step-8---start-developing"></a>Krok 8 – Začněte vyvíjet
+### <a name="step-8---start-developing"></a>Krok 8 – zahájení vývoje
 
-1. Po dokončení instalace sady Visual Studio zvolte tlačítko **Spustit** a s ním začít se vyvíjet.
+1. Po dokončení instalace sady Visual Studio klikněte na tlačítko **Spustit** a začněte s vývojem v aplikaci Visual Studio.
 
-1. V počátečním okně zvolte **Vytvořit nový projekt**.
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit, abyste viděli seznam dostupných šablon. Seznam šablon závisí na zatížení, které jste zvolili během instalace. Chcete-li zobrazit různé šablony, zvolte různé úlohy.
+1. Do vyhledávacího pole zadejte typ aplikace, kterou chcete vytvořit, aby se zobrazil seznam dostupných šablon. Seznam šablon závisí na úlohách, které jste si zvolili během instalace. Pokud chcete zobrazit různé šablony, vyberte jiné úlohy.
 
-   Hledání konkrétního programovacího jazyka můžete také filtrovat pomocí rozevíracího seznamu **Jazyk.** Můžete filtrovat pomocí seznamu **Platforma** a seznamu **typů projektu.**
+   Hledání konkrétního programovacího jazyka můžete filtrovat také pomocí rozevíracího seznamu **jazyk** . Filtrovat můžete také pomocí seznamu **platforem** a seznamu **typ projektu** .
 
-1. Visual Studio otevře nový projekt a jste připraveni ke kódu!
+1. Visual Studio otevře nový projekt a Vy jste připravení na kód!
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-## <a name="visual-studio-2017-installation"></a>Instalace visual studia 2017
+## <a name="visual-studio-2017-installation"></a>Instalace sady Visual Studio 2017
 
-Ve Visual Studiu 2017 si můžete snadno vybrat a nainstalovat jen ty funkce, které potřebujete. A díky snížené minimální půdorysu se instaluje rychle a s menším dopadem na systém.
+V aplikaci Visual Studio 2017 je snadné zvolit a nainstalovat pouze funkce, které potřebujete. A kvůli jejich menšímu minimálnímu množství je instalace rychle a s menším dopadem na systém.
 
 ### <a name="prerequisites"></a>Požadavky
 
-- Širokopásmové připojení k internetu. Instalační program sady Visual Studio může stáhnout několik gigabajtů dat.
+- Širokopásmové připojení k Internetu. Instalační program sady Visual Studio může stáhnout několik gigabajtů dat.
 
-- Počítač se systémem Microsoft Windows 7 nebo novějšími verzemi. Doporučujeme Windows 10 pro nejlepší vývojové prostředí. Před instalací sady Visual Studio se ujistěte, že jsou v systému použity nejnovější aktualizace.
+- Počítač se systémem Microsoft Windows 7 nebo novější verzí. Pro nejlepší vývojové prostředí doporučujeme Windows 10. Před instalací sady Visual Studio se ujistěte, že jsou v systému nainstalovány nejnovější aktualizace.
 
-- Dostatek volného místa na disku. Visual Studio vyžaduje alespoň 7 GB místa na disku a může trvat 50 GB nebo více, pokud je nainstalováno mnoho běžných možností. Doporučujeme jej nainstalovat na jednotku C: .
+- Dostatek volného místa na disku. Visual Studio vyžaduje aspoň 7 GB místa na disku a v případě, že je nainstalovaná spousta běžných možností, může trvat 50 GB nebo víc. Doporučujeme ji nainstalovat na jednotku C:.
 
-Podrobnosti o místě na disku a požadavcích na operační systém naleznete v [tématu Visual Studio Product Family System Requirements](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalační program hlásí, kolik místa na disku je potřeba pro vybrané možnosti.
+Podrobnosti o požadavcích na místo na disku a operačních systémech najdete v tématu [požadavky na systém pro produktovou řadu Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalační program oznamuje, kolik místa na disku je potřeba pro vybrané možnosti.
 
 ### <a name="download-and-install"></a>Stažení a instalace
 
-1. Stáhněte si nejnovější instalační program Visual Studia 2017 pro Windows.
+1. Stáhněte si nejnovější instalační program sady Visual Studio 2017 pro Windows.
 
    > [!div class="nextstepaction"]
-   > [Instalace komunity Visual Studia 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+   > [Nainstalovat Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Komunitní vydání je určen pro jednotlivé vývojáře, výuku ve třídě, akademický výzkum a vývoj s otevřeným zdrojovým kódem. Pro další použití nainstalujte [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) nebo Visual Studio [2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+   > Edice Community je určená pro jednotlivé vývojáře, výukové učebny, akademické výzkumy a vývoj open source. Pro jiné účely nainstalujte [Visual studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) nebo [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
-1. Najděte soubor instalačního programu, který jste stáhli, a spusťte jej. Může se zobrazit ve vašem prohlížeči nebo jej můžete najít ve složce Soubory ke stažení. Instalační program potřebuje ke spuštění oprávnění správce. Může se zobrazit dialogové okno **Řízení uživatelských účtů** s žádostí o povolení k provádění změn instalačního programu ve vašem systému. zvolte **Ano**. Pokud máte potíže, najděte stažený soubor v Průzkumníkovi souborů, klikněte pravým tlačítkem myši na ikonu instalačního programu a z kontextové nabídky zvolte **Spustit jako správce.**
+1. Najděte instalační soubor, který jste stáhli a spustili. Může se zobrazit v prohlížeči nebo ho můžete najít ve složce stažené soubory. Instalační program potřebuje ke spuštění oprávnění správce. Může se zobrazit dialogové okno **řízení uživatelských účtů** , které vás požádá o udělení oprávnění, aby instalační program mohl provést změny v systému. Vyberte **Ano**. Pokud máte problémy, najděte stažený soubor v Průzkumníkovi souborů, klikněte pravým tlačítkem na ikonu instalačního programu a v místní nabídce vyberte **Spustit jako správce** .
 
-   ![Stažení a instalace Instalačního programu sady Visual Studio](media/vscpp-concierge-run-installer.gif "Stažení a instalace Instalačního programu sady Visual Studio")
+   ![Stažení a instalace Instalační program pro Visual Studio](media/vscpp-concierge-run-installer.gif "Stažení a instalace Instalační program pro Visual Studio")
 
-1. Instalační program vám zobrazí seznam úloh, což jsou skupiny souvisejících možností pro konkrétní oblasti vývoje. Podpora pro C++ je teď součástí volitelných úloh, které nejsou nainstalovány ve výchozím nastavení.
+1. Instalační program zobrazí seznam úloh, které jsou skupiny souvisejících možností pro konkrétní oblasti vývoje. Podpora pro C++ je teď součástí volitelných úloh, které se ve výchozím nastavení neinstalují.
 
-   ![Vývoj plochy s úlohami c++](media/desktop-development-with-cpp.png "Vývoj desktopových aplikací pomocí C++")
+   ![Vývoj desktopových aplikací pomocí C++](media/desktop-development-with-cpp.png "Vývoj desktopových aplikací pomocí C++")
 
-   V jazyce C++ vyberte vývoj plochy s úlohami **c++** a pak zvolte **Instalovat**.
+   V případě jazyka C++ vyberte úlohu **vývoj pro stolní počítače pomocí C++** a pak zvolte možnost **nainstalovat**.
 
-   ![Instalace vývoje plochy s úlohami c++](media/vscpp-concierge-choose-workload.gif "Instalace vývoje plochy s úlohami c++")
+   ![Instalace úlohy vývoj desktopových aplikací pomocí C++](media/vscpp-concierge-choose-workload.gif "Instalace úlohy vývoj desktopových aplikací pomocí C++")
 
-1. Po dokončení instalace zvolte tlačítko **Spustit** a spusťte Visual Studio.
+1. Po dokončení instalace spusťte kliknutím na tlačítko **Spustit** aplikaci Visual Studio.
 
-   Při prvním spuštění sady Visual Studio budete vyzváni k přihlášení pomocí účtu Microsoft. Pokud ho nemáte, můžete si ho vytvořit zdarma. Musíte také zvolit téma. Nebojte se, můžete jej změnit později, pokud chcete.
+   Při prvním spuštění aplikace Visual Studio budete vyzváni k přihlášení pomocí účtu Microsoft. Pokud účet nemáte, můžete si ho zdarma vytvořit. Také je nutné zvolit motiv. Nedělejte si starosti, můžete ho později změnit, pokud chcete.
 
-   Může trvat Několik minut, než se Visual Studio připraví k použití při prvním spuštění. Zde je to, co to vypadá v rychlém time-lapse:
+   Může to trvat několik minut, než se Visual Studio připraví na použití při prvním spuštění. Tady je to, co vypadá jako v rychlém časovém intervalu:
 
-   ![Přihlášení do Visual Studia 2017](media/vscpp-quickstart-first-run.gif "Přihlášení do Visual Studia 2017")
+   ![Přihlášení k Visual Studiu 2017](media/vscpp-quickstart-first-run.gif "Přihlášení k Visual Studiu 2017")
 
-   Visual Studio se spustí mnohem rychleji, když jej spustíte znovu.
+   Visual Studio se spustí mnohem rychleji, když ho znovu spustíte.
 
-1. Když se Visual Studio otevře, zkontrolujte, jestli je zvýrazněná ikona příznaku v záhlaví:
+1. Po otevření sady Visual Studio zkontrolujte, zda je zvýrazněna ikona příznak v záhlaví okna:
 
-   ![Příznak oznámení Visual Studia 2017](media/vscpp-first-start-page-flag.png "Příznak oznámení Visual Studia 2017")
+   ![Příznak oznámení sady Visual Studio 2017](media/vscpp-first-start-page-flag.png "Příznak oznámení sady Visual Studio 2017")
 
-   Pokud je zvýrazněná, vyberte ji, chcete-li otevřít okno **Oznámení.** Pokud jsou pro Visual Studio k dispozici nějaké aktualizace, doporučujeme je nyní nainstalovat. Po dokončení instalace restartujte visual studio.
+   Pokud je zvýrazněná, vyberte ji a otevřete okno **oznámení** . Pokud jsou k dispozici nějaké aktualizace pro Visual Studio, doporučujeme je nainstalovat hned. Až se instalace dokončí, restartujte Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range="<vs-2017"
 
-## <a name="visual-studio-2015-installation"></a>Instalace visual studia 2015
+## <a name="visual-studio-2015-installation"></a>Instalace sady Visual Studio 2015
 
-Pokud chcete nainstalovat Visual Studio 2015, přejděte ke [stažení starších verzí sady Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **Vlastní instalace** a pak zvolte komponentu C++. Chcete-li přidat podporu jazyka C++ k existující instalaci sady Visual Studio 2015, klepněte na tlačítko Start systému Windows a zadejte **příkaz Přidat odebrat programy**. Otevřete program ze seznamu výsledků a potom vyhledejte instalaci sady Visual Studio 2015 v seznamu nainstalovaných programů. Poklepejte na něj, pak zvolte **Změnit** a vyberte součásti Visual C++, které chcete nainstalovat.
+Pokud chcete nainstalovat sadu Visual Studio 2015, Projděte si [část stažení starších verzí sady Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte možnost **vlastní instalace** a pak zvolte součást C++. Chcete-li přidat podporu C++ do existující instalace sady Visual Studio 2015, klikněte na tlačítko Start systému Windows a zadejte příkaz **Přidat odebrat programy**. Spusťte program ze seznamu výsledků a poté vyhledejte instalaci sady Visual Studio 2015 v seznamu nainstalovaných programů. Poklikejte na ni a pak zvolte **Upravit** a vyberte Visual C++ součásti, které chcete nainstalovat.
 
-Obecně doporučujeme používat Visual Studio 2017 i v případě, že potřebujete zkompilovat kód pomocí kompilátoru Visual Studio 2015. Další informace naleznete v [tématu Použití nativního vícenásobného cílení v sadě Visual Studio k vytváření starých projektů](../porting/use-native-multi-targeting.md).
+Obecně doporučujeme, abyste používali Visual Studio 2017 i v případě, že potřebujete zkompilovat kód pomocí kompilátoru sady Visual Studio 2015. Další informace naleznete v tématu [použití nativního cílení na více platforem v aplikaci Visual Studio k sestavení starých projektů](../porting/use-native-multi-targeting.md).
 
 ::: moniker-end
 
-Při spuštění sady Visual Studio jste připraveni pokračovat k dalšímu kroku.
+Po spuštění sady Visual Studio jste připraveni pokračovat k dalšímu kroku.
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Vytvoření projektu C++](vscpp-step-1-create.md)
+> [Vytvořit projekt C++](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

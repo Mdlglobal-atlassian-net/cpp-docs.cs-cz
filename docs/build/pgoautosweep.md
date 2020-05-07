@@ -14,7 +14,7 @@ ms.locfileid: "67552245"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` Uloží aktuální informace z čítače profilu do souboru a potom obnoví čítače. Použijte funkci během optimalizace na základě profilu školení pro zvýšení zapsat všechna data profilu ze spuštěného programu `.pgc` pro pozdější použití v sestavení optimalizace.
+`PgoAutoSweep`uloží informace o čítačích aktuálního profilu do souboru a pak obnoví čítače. Použijte funkci během školení na základě profilu na základě profilu k zápisu všech dat profilů z běžícího programu do `.pgc` souboru pro pozdější použití v sestavení optimalizace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,32 +25,32 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
-Identifikační řetězec pro uložené `.pgc` souboru.
+*Jméno*<br/>
+Identifikační řetězec pro uložený `.pgc` soubor.
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete volat `PgoAutoSweep` z vaší aplikace na Uložit a obnovit data profilu kdykoli během spuštění aplikace. V instrumentovaném buildu `PgoAutoSweep` zaznamená aktuální data o profilování, uloží ho do souboru a obnoví čítače profilu. Jedná se o ekvivalent volání [pgosweep](pgosweep.md) příkaz v konkrétním bodě v spustitelný soubor. V optimalizovaného sestavení `PgoAutoSweep` je no-op.
+Můžete zavolat `PgoAutoSweep` z vaší aplikace pro uložení a resetování dat profilu v jakémkoli okamžiku při provádění aplikace. V instrumentované sestavení `PgoAutoSweep` zachycuje aktuální data profilace, uloží je do souboru a obnoví čítače profilů. Je ekvivalentem volání příkazu [pgosweep](pgosweep.md) v určitém místě ve spustitelném souboru. V optimalizovaném sestavení `PgoAutoSweep` je no-op.
 
-Data čítače uloženého profilu je umístěn v souboru s názvem *base_name*-*název*! *Hodnota*.pgc, kde *base_name* je základní název spustitelného souboru, *název* je parametr předána `PgoAutoSweep`, a *hodnotu* je jedinečná hodnota, obvykle monotónně se zvyšující číslo, aby se zabránilo kolize názvů souborů.
+Data čítače uložených profilů jsou umístěna v souboru s názvem *base_name*-*název*. *Value*. pgc, kde *base_name* je základní název spustitelného souboru, *název* je parametr předaný do `PgoAutoSweep`a *hodnota* je jedinečná hodnota, obvykle rovnoměrně zvětšující rostoucí číslo, aby se zabránilo kolizi názvů souborů.
 
-`.pgc` Souborů vytvořených databázovým `PgoAutoSweep` je potřeba sloučit do `.pgd` soubor má být použit k vytvoření optimalizované spustitelný soubor. Můžete použít [pgomgr](pgomgr.md) příkaz k provedení sloučení.
+`.pgc` Soubory vytvořené pomocí `PgoAutoSweep` musí být sloučeny do `.pgd` souboru, který se použije k vytvoření optimalizovaného spustitelného souboru. K provedení sloučení můžete použít příkaz [pgomgr](pgomgr.md) .
 
-Můžete předat název sloučený `.pgd` souboru během optimalizace sestavení pomocí linkeru **PGD =** _filename_ argument [/useprofile](reference/useprofile.md) linkeru možnosti, nebo pomocí zastaralá **/PGD** – možnost linkeru. Při sloučení `.pgc` soubory do souboru s názvem *base_name*.pgd, není potřeba zadat název souboru v příkazovém řádku vzhledem k tomu, že má linker převezme název souboru ve výchozím nastavení.
+`.pgd` Název sloučeného souboru můžete předat linkeru během sestavení optimalizace pomocí argumentu **PGD =**_filename_ pro možnost linkeru [/USEPROFILE](reference/useprofile.md) nebo pomocí možnosti linkeru nepoužívaného **/PGD** . Pokud `.pgc` soubory sloučíte do souboru s názvem *base_name*. PGD, nemusíte zadávat název souboru do příkazového řádku, protože linker ve výchozím nastavení vybere tento název souboru.
 
-`PgoAutoSweep` Funkce spravuje nastavení zabezpečení vlákna zadané, když se vytvoří instrumentované sestavení. Pokud používáte výchozí nastavení nebo zadejte **NOEXACT** argument [/genprofile nebo /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) – možnost linkeru, zavolá do `PgoAutoSweep` nejsou bezpečné pro vlákna. **EXACT** argument vytvoří bezpečné pro vlákna a přesnější, ale pomalejší, instrumentovaný spustitelný soubor.
+`PgoAutoSweep` Funkce udržuje nastavení pro zabezpečení vlákna zadané při vytváření instrumentované sestavení. Pokud použijete výchozí nastavení nebo zadáte argument **NEpřesný** parametr linkeru [/GENPROFILE nebo/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , volání `PgoAutoSweep` nejsou bezpečná pro přístup z více vláken. **Přesný** argument vytvoří bezpečný a přesnější přístup z více vláken, ale pomalejší, instrumentované spustitelné soubory.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`PgoAutoSweep`|\<pgobootrun.h>|
+|`PgoAutoSweep`|\<pgobootrun. h>|
 
-Spustitelný soubor musí obsahovat soubor pgobootrun.lib v propojených knihoven. Tento soubor je součástí instalace sady Visual Studio, v adresáři VC knihovny pro každou podporovanou architekturu.
+Spustitelný soubor musí obsahovat soubor pgobootrun. lib v propojených knihovnách. Tento soubor je součástí instalace sady Visual Studio, v adresáři knihoven VC pro každou podporovanou architekturu.
 
 ## <a name="example"></a>Příklad
 
-V příkladu níže použití `PgoAutoSweep` vytvořit dvě `.pgc` soubory v různých fázích během provádění. Obsahuje data, která popisuje chování za běhu až do první `count` rovná 3, a druhá obsahuje data shromážděná za touto pozicí dokud těsně před ukončení aplikace.
+Následující příklad používá `PgoAutoSweep` k vytvoření dvou `.pgc` souborů na různých místech během provádění. První obsahuje data, která popisují chování modulu runtime, `count` dokud se nerovná 3 a druhá obsahuje data shromážděná po tomto okamžiku, dokud neproběhne před ukončením aplikace.
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-V příkazovém řádku pro vývojáře zkompiluje kód, který objektový soubor pomocí tohoto příkazu:
+Do příkazového řádku pro vývojáře zkompilujte kód do souboru objektu pomocí tohoto příkazu:
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-Potom generování instrumentované sestavení pro trénování pomocí tohoto příkazu:
+Pak vygenerujte instrumentované sestavení pro školení pomocí tohoto příkazu:
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-Spustíte instrumentovaný spustitelný soubor k zachycení trénovací data. Výstup dat voláním `PgoAutoSweep` se uloží do souborů s názvem pgoautosweep func1! 1.pgc a pgoautosweep func2! 1.pgc. Výstup programu by měl vypadat takto při jejím spuštění:
+Spusťte instrumentované spustitelné soubory, abyste mohli zachytit školicí data. Výstup dat voláním do `PgoAutoSweep` je uložen v souborech s názvem pgoautosweep-func1! 1. pgc a pgoautosweep-func2! 1. pgc. Výstup programu by měl vypadat jako při spuštění:
 
 ```Output
 hello from func1 9
@@ -120,11 +120,11 @@ hello from func2 1
 hello from func2 0
 ```
 
-Sloučit s uloženými daty profilové databáze školení spuštěním **pgomgr** příkaz:
+Uložte uložená data do databáze školení k profilům spuštěním příkazu **pgomgr** :
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
-Výstup tohoto příkazu vypadá přibližně takto:
+Výstup tohoto příkazu vypadá nějak takto:
 
 ```Output
 Microsoft (R) Profile Guided Optimization Manager 14.13.26128.0
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-Teď můžete použít tento trénovací data pro generování optimalizovaného sestavení. K vytvoření optimalizované spustitelný soubor, použijte tento příkaz:
+Nyní můžete pomocí těchto školicích dat vygenerovat optimalizované sestavení. Tento příkaz slouží k sestavení optimalizovaného spustitelného souboru:
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 
@@ -158,7 +158,7 @@ Generating code
 Finished generating code
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace na základě profilu](profile-guided-optimizations.md)<br/>
 [pgosweep](pgosweep.md)<br/>

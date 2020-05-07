@@ -11,7 +11,7 @@ ms.locfileid: "70740100"
 ---
 # <a name="character-testing"></a>Testování znaků
 
-**ANSI 4.3.1** `isalnum`Sady testovaných znaků pro funkce, `isalpha`, `iscntrl`, `islower`, `isprint`a `isupper`
+**ANSI 4.3.1** Sady testovaných znaků `isalnum`pro funkce, `isalpha`, `iscntrl`, `islower`, a `isupper` `isprint`
 
 Následující seznam popisuje implementaci těchto funkcí v kompilátoru jazyka Microsoft C.
 
@@ -24,6 +24,6 @@ Následující seznam popisuje implementaci těchto funkcí v kompilátoru jazyk
 |`isprint`|Znaky A – Z, a-z, 0-9, interpunkční znaménka, mezera ASCII 32-126|
 |`isupper`|Znaky A – Z ASCII 65-90|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

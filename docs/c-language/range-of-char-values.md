@@ -11,11 +11,11 @@ ms.locfileid: "81480909"
 ---
 # <a name="range-of-char-values"></a>Rozsah hodnot typu char
 
-**ANSI 3.2.1.1** Zda "prostý" **char** má stejný rozsah hodnot jako **podepsané char** nebo **nepodepsané char**
+**3.2.1.1 ANSI** Zda má "prostý" **znak** stejný rozsah hodnot jako **podepsaný znak** nebo **znak bez znaménka**
 
-Všechny podepsané hodnoty znaků jsou v rozsahu od -128 do 127. Všechny hodnoty znaků bez znaménka mají rozsah od 0 do 255.
+Všechny hodnoty znaků s znaménkem jsou v rozsahu-128 až 127. Všechny hodnoty znaků bez znaménka mají rozsah od 0 do 255.
 
-Možnost [`/J`](../build/reference/j-default-char-type-is-unsigned.md) kompilátoru změní výchozí typ **znaku** z **podepsaného znaku** na **nepodepsaný znak**.
+Možnost [`/J`](../build/reference/j-default-char-type-is-unsigned.md) kompilátoru změní výchozí typ pro **char** z **signed char** na **unsigned char**.
 
 ## <a name="see-also"></a>Viz také
 

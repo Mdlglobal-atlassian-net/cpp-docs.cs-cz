@@ -16,12 +16,12 @@ ms.locfileid: "62233581"
 ---
 # <a name="function-attributes"></a>Atributy funkce
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Volitelný *sekvence atributů* neterminálu umožňuje vybrat konvence volání na základě jednotlivých funkcích. Funkce je možné určit také jako `__fastcall` nebo `__inline`.
+Nepovinný neterminál *atributů – SEQ* umožňuje vybrat konvenci volání na základě jednotlivých funkcí. Funkce je možné určit také jako `__fastcall` nebo `__inline`.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

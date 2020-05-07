@@ -14,11 +14,11 @@ ms.locfileid: "62232086"
 ---
 # <a name="preprocessing-directives"></a>Direktivy předběžného zpracování
 
-- [Konstanty a podmíněné zahrnutí znaků](../c-language/character-constants-and-conditional-inclusion.md)
+- [Konstanty znaků a podmíněné zahrnutí](../c-language/character-constants-and-conditional-inclusion.md)
 
-- [Zahrnutí názvů souboru v závorkách](../c-language/including-bracketed-filenames.md)
+- [Zahrnutí názvů souborů v závorkách](../c-language/including-bracketed-filenames.md)
 
-- [Zahrnutí názvů souboru v uvozovkách](../c-language/including-quoted-filenames.md)
+- [Zahrnutí názvů souborů v uvozovkách](../c-language/including-quoted-filenames.md)
 
 - [Sekvence znaků](../c-language/character-sequences.md)
 
@@ -26,6 +26,6 @@ ms.locfileid: "62232086"
 
 - [Výchozí datum a čas](../c-language/default-date-and-time.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

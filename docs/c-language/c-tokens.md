@@ -20,20 +20,20 @@ Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelný
 
 *token*: *klíčové slovo*
 
-*Identifikátor*
+*RID*
 
-*Konstantní*
+*změnil*
 
-*řetězec-literál*
+*řetězcový literál*
 
-*operator*
+*podnikatel*
 
-*přerušovač*
+*punctuator*
 
 > [!NOTE]
-> Vysvětlení konvencí syntaxe ANSI naleznete v úvodu [k souhrnu syntaxe jazyka C.](../c-language/c-language-syntax-summary.md)
+> Vysvětlení konvencí syntaxe standardu ANSI naleznete v úvodu do [souhrnu syntaxe jazyka C](../c-language/c-language-syntax-summary.md) .
 
-Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Interpunkční znaky, jako jsou závorky (**[ ]**), závorky (**{ }**), závorky ( **( )** ) a čárky (**,**) jsou také tokeny.
+Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Také tokeny jsou interpunkční znaky, jako jsou závorky (**[]**), složené závorky (**{}**), kulaté závorky ( **()** ) a čárky (**,**).
 
 ## <a name="see-also"></a>Viz také
 

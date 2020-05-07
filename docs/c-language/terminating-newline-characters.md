@@ -11,10 +11,10 @@ ms.locfileid: "64343029"
 ---
 # <a name="terminating-newline-characters"></a>Ukončení znaků nového řádku
 
-**ANSI 4.9.2** Určuje, zda poslední řádek textového proudu vyžaduje ukončující znak nového řádku
+**4.9.2 ANSI** Zda poslední řádek textového streamu vyžaduje ukončovací znak nového řádku
 
 Funkce proudu rozpoznávají ukončovací znak nového řádku nebo ukončovací znak konce souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

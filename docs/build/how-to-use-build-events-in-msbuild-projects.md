@@ -13,7 +13,7 @@ ms.locfileid: "70060066"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 
-Událost sestavení je příkaz, který MSBuild provádí v konkrétní fázi procesu sestavení. Událost *před sestavením* probíhá před spuštěním sestavení; událost před propojením proběhne před zahájením kroku propojení; a událost *po sestavení* nastane po úspěšném dokončení sestavení. Událost sestavení nastane pouze v případě, že dojde k přidruženému kroku sestavení. Událost před propojením například nenastane, pokud se krok propojení nespustí.
+Událost sestavení je příkaz, který MSBuild provádí v konkrétní fázi procesu sestavení. Událost *před sestavením* probíhá před spuštěním sestavení; událost před *propojením* proběhne před zahájením kroku propojení; a událost *po sestavení* nastane po úspěšném dokončení sestavení. Událost sestavení nastane pouze v případě, že dojde k přidruženému kroku sestavení. Událost před propojením například nenastane, pokud se krok propojení nespustí.
 
 Jednotlivé tři události sestavení jsou reprezentovány ve skupině definice položky pomocí příkazu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který se zobrazí, když nástroj **MSBuild** provede událost sestavení. Každý prvek je nepovinný a pokud zadáte stejný prvek několikrát, má přednost poslední výskyt.
 
@@ -37,7 +37,7 @@ V následující tabulce jsou uvedeny jednotlivé prvky pro *použití v sestave
 
 ## <a name="example"></a>Příklad
 
-Následující příklad lze přidat uvnitř elementu projektu souboru MyProject. vcxproj vytvořeného v [návodu: Vytvoření C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)pomocí nástroje MSBuild. Událost *před sestavením* vytváří kopii Main. cpp; událost *před propojením* vytváří kopii hlavního objektu. obj;. a událost *po sestavení* vytvoří kopii souboru MyProject. exe. Pokud je projekt sestaven pomocí konfigurace vydané verze, spustí se události sestavení. Pokud je projekt sestaven pomocí konfigurace ladění, události sestavení nejsou provedeny.
+Následující příklad lze přidat do prvku projektu souboru MyProject. vcxproj vytvořeného v [návodu: pomocí nástroje MSBuild vytvořte projekt C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Událost *před sestavením* vytváří kopii Main. cpp; událost *před propojením* vytváří kopii hlavního objektu. obj;. a událost *po sestavení* vytvoří kopii souboru MyProject. exe. Pokud je projekt sestaven pomocí konfigurace vydané verze, spustí se události sestavení. Pokud je projekt sestaven pomocí konfigurace ladění, události sestavení nejsou provedeny.
 
 ``` xml
 <ItemDefinitionGroup>
@@ -68,7 +68,7 @@ Následující příklad lze přidat uvnitř elementu projektu souboru MyProject
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[MSBuild na příkazovém řádku –C++](msbuild-visual-cpp.md)<br/>
-[Návod: Vytvoření projektu C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild na příkazovém řádku – C++](msbuild-visual-cpp.md)<br/>
+[Návod: vytvoření projektu jazyka C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
