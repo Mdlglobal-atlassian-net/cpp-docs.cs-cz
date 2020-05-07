@@ -16,34 +16,34 @@ ms.locfileid: "62326024"
 ---
 # <a name="bitwise-shift-operators"></a>Operátory bitového posunutí
 
-Operátory posunutí posunutí prvního operandu vlevo (**&lt;&lt;**) nebo doprava (**>>**) počet pozic určuje druhého operandu.
+Operátory posunutí posunou první operand vlevo (**&lt;**) nebo Right (**>>**) podle počtu pozic, které určuje druhý operand.
 
 ## <a name="syntax"></a>Syntaxe
 
-*shift-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
+*SHIFT-Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového výrazu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového* výrazu *SHIFT-Expression* ** &lt; **<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz doplňkového* výrazu *SHIFT-Expression* **>>**
 
-Oba operandy musí být integrální hodnoty. Tyto operátory provádějí obvyklé aritmetické převody Typ výsledku je typ levého operandu po převodu.
+Oba operandy musí být integrální hodnoty. Tyto operátory provádějí obvyklé aritmetické převody; Typ výsledku je typ levého operandu po převodu.
 
-Pro leftward staffhubu uvolněných správných bitů nastavené na hodnotu 0. Pro rightward staffhubu jsou vyplněny uvolněných bitů vlevo na základě typu prvního operandu po převodu. Pokud je typ `unsigned`, jsou nastaveny na hodnotu 0. V opačném případě jsou vyplněny hodnotou kopie na bit znaménka. Pro operátory posunutí doleva bez přetečení, příkaz
+Pro Leftward Shift jsou uvolněné pravá bity nastavené na 0. Pro rightward Shift se uvolněné levé bity vyplní na základě typu prvního operandu po převodu. Pokud je `unsigned`typ, je nastaven na hodnotu 0. V opačném případě jsou vyplněny kopiemi bit znaménka. U operátorů posunutí doleva bez přetečení příkazu
 
 ```C
 expr1 << expr2
 ```
 
-je ekvivalentní k násobení hodnotou 2<sup>Výraz2</sup>. Pro operátory posunutí doprava
+je ekvivalentem násobení podle 2<sup>Výraz2</sup>. Pro operátory pravého posunutí
 
 ```C
 expr1 >> expr2
 ```
 
-je ekvivalentní k dělení 2<sup>Výraz2</sup> Pokud `expr1` je bez znaménka nebo má nezápornou hodnotu.
+je ekvivalentem dělení 2<sup>Výraz2</sup> , pokud `expr1` je nepodepsaná nebo má nezápornou hodnotu.
 
-Výsledek operace posunutí není definován, pokud je druhý operand je záporný nebo pokud pravý operand je větší než nebo rovna šířce v bitech povýšeného operandu vlevo.
+Výsledek operace posunutí není definován, pokud je druhý operand záporný, nebo pokud je pravý operand větší než nebo roven šířce v bitech s povýšenou hodnotou levého operandu.
 
-Protože převody provést podle přesun neposkytují operátory přetečení nebo podmínky podtečení, informace mohou být ztraceny, pokud výsledek operace posunutí nelze reprezentovat v typu prvního operandu po převodu.
+Vzhledem k tomu, že převody prováděné operátory Shift neposkytují podmínky přetečení nebo podtečení, mohou být informace ztraceny, pokud výsledek operace posunutí nelze reprezentovat v typu prvního operandu po převodu.
 
 ```C
 unsigned int x, y, z;
@@ -54,12 +54,12 @@ y = 0x5500;
 z = ( x << 8 ) + ( y >> 8 );
 ```
 
-V tomto příkladu `x` je posunuta doleva osm pozic a `y` je posunuté přímo osm pozic. Přidání posunuté hodnot, poskytuje 0xAA55 a přiřazená `z`.
+V tomto příkladu `x` se posune vlevo o osm pozic a `y` posune se o osm pozic doprava. Posunuté hodnoty jsou přidány, dávají 0xAA55 a přiřazeny `z`.
 
-Posunutí záporné hodnoty doprava dává polovinu původní hodnoty zaokrouhlené dolů. Například-253 (binární 11111111 00000011 posunutá) posunuta jeden bit doprava vytvoří-127 (binárně 11111111 10000001). Pozitivní 253 se posune doprava a vytvoří hodnotu + 126.
+Posunutí záporné hodnoty k pravému výsledku vrátí polovinu původní hodnoty a zaokrouhlí dolů. Například-253 (binární 11111111 00000011) posunutí vpravo o jeden bit vytvoří-127 (binární 11111111 10000001). Kladné 253 posune doprava k výrobě + 126.
 
 Posun doprava zachovává bit znaménka. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory posunu vlevo a vpravo (>> a <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

@@ -14,14 +14,14 @@ ms.locfileid: "62336189"
 ---
 # <a name="storage-of-addresses"></a>Úložiště adres
 
-Velikost úložiště potřebná pro adresu a její význam závisí na implementaci kompilátoru. Není zaručeno, že ukazatele na různé typy budou mít stejnou délku. Proto **sizeof (char \*)** , nemusí být nutně roven **sizeof (int \*)**.
+Velikost úložiště potřebná pro adresu a její význam závisí na implementaci kompilátoru. Není zaručeno, že ukazatele na různé typy budou mít stejnou délku. Proto je **sizeof (Char \*)** nutně rovno **sizeof ( \*int)**.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kompilátor Microsoft C **sizeof (char \*)** rovná **sizeof (int \*)**.
+Pro kompilátor jazyka Microsoft C je **sizeof (Char \*)** rovno **sizeof ( \*int)**.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace ukazatelů](../c-language/pointer-declarations.md)

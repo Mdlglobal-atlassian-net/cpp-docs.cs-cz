@@ -13,8 +13,8 @@ ms.locfileid: "62312503"
 ---
 # <a name="constants-in-primary-expressions"></a>Konstanty v primárních výrazech
 
-Konstantní operand má hodnotu a typ konstantní hodnoty, kterou operand představuje. Znaková konstanta je typu `int`. Celočíselná konstanta je `int`, **dlouhé**, `unsigned int`, nebo `unsigned long` typu, v závislosti na velikosti celého čísla a na způsob, jak je zadaná hodnota. Zobrazit [konstanty](../c-language/c-constants.md) Další informace.
+Konstantní operand má hodnotu a typ konstantní hodnoty, kterou operand představuje. Znaková konstanta je typu `int`. Celočíselná konstanta `int`má **long**, Long `unsigned int`, nebo `unsigned long` typ, v závislosti na velikosti celého čísla a způsobu, jakým je zadána hodnota. Další informace naleznete v tématu [konstanty](../c-language/c-constants.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Primární výrazy jazyka C](../c-language/c-primary-expressions.md)

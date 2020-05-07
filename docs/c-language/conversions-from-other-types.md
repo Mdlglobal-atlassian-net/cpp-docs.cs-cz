@@ -14,18 +14,18 @@ ms.locfileid: "62312463"
 ---
 # <a name="conversions-from-other-types"></a>Převody z ostatních typů
 
-Protože **výčtu** hodnota je **int** hodnotu podle definice převody do a z **výčtu** hodnota jsou stejné jako u **int** typu. Kompilátor Microsoft C je celé číslo stejně jako **dlouhé**.
+Vzhledem k tomu, že hodnota **výčtu** **je celočíselná** hodnota podle definice, jsou převody na a z hodnoty **výčtu** stejné jako pro typ **int** . Pro kompilátor jazyka Microsoft C je celé číslo stejné jako **Long**.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Nejsou povoleny žádné převody mezi typy struktury a sjednocení.
 
-Jakoukoli hodnotu lze převést na typ **void**, ale výsledek takového převodu lze použít pouze v kontextu, ve kterém je hodnota výrazu zahozena, například v příkazu výrazu.
+Libovolná hodnota může být převedena na typ **void**, ale výsledek takového převodu lze použít pouze v kontextu, kde je hodnota výrazu zahozena, například v příkazu výrazu.
 
-**Void** typ nemá žádnou hodnotu, podle definice. Proto jej nelze převést na libovolný typ, a dalších typů nelze převést na **void** přiřazením. Ale můžete explicitně přetypovat hodnotu na typ **void**, jak je popsáno v [převody přetypování](../c-language/type-cast-conversions.md).
+Typ **void** nemá v definici žádnou hodnotu. Proto jej nelze převést na žádný jiný typ a jiné typy nelze převést na typ **void** podle přiřazení. Můžete však explicitně přetypovat hodnotu na typ **void**, jak je popsáno v tématu [převody přetypování](../c-language/type-cast-conversions.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

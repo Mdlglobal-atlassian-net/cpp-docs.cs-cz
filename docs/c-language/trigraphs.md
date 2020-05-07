@@ -26,9 +26,9 @@ ms.locfileid: "62345313"
 
 Zdroj znakové sady zdrojových programů jazyka C je obsažen v 7bitové znakové sadě ASCII, ale je nadmnožinou invariantní znakové sady standardu ISO 646-1983. Sekvence trigrafů umožňuje, aby programy jazyka C byly zapsány pouze pomocí invariantní znakové sady standardu ISO (International Standards Organization). Trigrafy jsou sekvence tří znaků (uvedené dvěma po sobě jdoucími otazníky), které kompilátor nahradí jejich odpovídajícími znaky interpunkce. Trigrafy lze použít ve zdrojových souborech jazyka C, které používají znakovou sadu, která neobsahuje vhodné grafické reprezentace pro některá interpunkční znaménka.
 
-C ++ 17 odebere trigraphs od jazyka. Implementace může nadále podporovat trigraphs jako součást mapování definované implementací fyzický zdrojový soubor, který *základní sada zdrojových znaků*, i když standardní může vést ke vzniku implementace není k tomu. Pomocí C ++ 14 jsou podporovány trigraphs stejně jako v jazyce C.
+C++ 17 odebere trigraphs z jazyka. Implementace mohou nadále podporovat trigraphs jako součást mapování definovaná implementací z fyzického zdrojového souboru do *základní zdrojové znakové sady*, i když standard podporuje implementace, které nejsou v takovém případě. V jazyce C++ 14 jsou trigraphs podporovány jako v jazyce C.
 
-Visual C++ i nadále podporuje náhrada trigraph, ale je ve výchozím nastavení zakázána. Informace o tom, jak povolit náhrada trigraph najdete v tématu [/Zc: trigraphs (náhrada trigraph)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
+Visual C++ nadále podporuje substituci trigraph, ale ve výchozím nastavení je zakázaná. Informace o tom, jak povolit substituci trigraph, najdete v tématu [/Zc: trigraphs (trigraphs Substitution)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
 
 Následující tabulka obsahuje devět sekvencí trigrafů. Všechny výskyty znaků interpunkce v prvním sloupci ve zdrojovém souboru jsou nahrazeny odpovídajícím znakem ve druhém sloupci.
 
@@ -43,18 +43,18 @@ Následující tabulka obsahuje devět sekvencí trigrafů. Všechny výskyty zn
 | ??' | ^ |
 | ??\< | { |
 | ??! | &#124; |
-| ??> | } |
+| ?? > | } |
 | ??- | ~ |
 
-Trigraf je vždy považován za jediný zdrojový znak. Převod trigrafů probíhá v první [fáze překladu](../preprocessor/phases-of-translation.md), před rozpoznáním řídicích znaků v řetězcových literálech a znakových konstantách. V tabulce výše je rozpoznáno pouze devět trigrafů. Všechny ostatní sekvence znaků zůstanou nepřevedeny.
+Trigraf je vždy považován za jediný zdrojový znak. Překlad trigraphs probíhá v první [fázi překladu](../preprocessor/phases-of-translation.md)před rozpoznáváním řídicích znaků v literálech řetězce a znakových konstant. V tabulce výše je rozpoznáno pouze devět trigrafů. Všechny ostatní sekvence znaků zůstanou nepřevedeny.
 
-Řídicí sekvence znaku  **\\?**, zabraňuje špatnému vyhodnocení sekvencí znaků podobných. (Informace o řídicích sekvencích naleznete v tématu [řídicí sekvence](../c-language/escape-sequences.md).) Například, pokud se pokusíte vypsat řetězec `What??!` pomocí tohoto příkazu `printf`
+Znaková řídicí sekvence, ** \\?**, zabraňuje špatné interpretaci znakových sekvencí trigraph podobných. (Informace o řídicích sekvencích naleznete v tématu [řídicí sekvence](../c-language/escape-sequences.md).) Například pokud se pokusíte řetězec `What??!` vytisknout pomocí tohoto příkazu `printf`
 
 ```C
 printf( "What??!\n" );
 ```
 
-Vypíše se řetězec `What|` protože `??!` je sekvence trigrafu, která je nahrazena `|` znak. Chcete-li tento řetězec vypsat správně, napište příkaz takto:
+řetězec, který je `What|` vytištěn `??!` , je trigraph sekvence, která je nahrazena `|` znakem. Chcete-li tento řetězec vypsat správně, napište příkaz takto:
 
 ```C
 printf( "What?\?!\n" );
@@ -62,7 +62,7 @@ printf( "What?\?!\n" );
 
 V tomto příkazu `printf` řídicí znak zpětného lomítka před druhým otazníkem zabraňuje špatnému vyhodnocení `??!` jako trigrafu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [/Zc:trigraphs (náhrada spřežky tří znaků)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [Identifikátory jazyka C](../c-language/c-identifiers.md)

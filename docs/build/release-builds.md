@@ -1,5 +1,5 @@
 ---
-title: C++sestavení pro vydání – Visual Studio
+title: Sestavení pro vydání C++ – Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -29,4 +29,4 @@ Sestavení pro vydání používá optimalizace. Použijete-li optimalizace k vy
 
 ## <a name="see-also"></a>Viz také
 
-[Referenční zdroje k sestavení programu v jazyce C/C++](reference/c-cpp-building-reference.md)
+[Odkaz sestavení C/C++](reference/c-cpp-building-reference.md)

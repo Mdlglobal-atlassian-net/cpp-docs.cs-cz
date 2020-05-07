@@ -17,14 +17,14 @@ ms.locfileid: "65220998"
 ---
 # <a name="active-technology-and-dlls"></a>Technologie Active a knihovny DLL
 
-Technologie Active umožňuje objektových serverů uvnitř knihovny DLL úplnou implementaci. Tento typ serveru je volána v procesový server. MFC nepodporuje zcela vnitroprocesové servery pro úpravy s náhledem, všechny funkce hlavně, protože technologie Active neposkytuje způsob, jak integrovat do kontejneru hlavní smyčka zpráv serveru. MFC vyžaduje přístup k smyčky zpráv aplikace typu kontejner pro zpracování přístupové klávesy a doby nečinnosti zpracování.
+Technologie Active umožňuje, aby se Objektové servery kompletně implementovaly v rámci knihovny DLL. Tento typ serveru se nazývá procesový Server. Knihovna MFC zcela nepodporuje vnitroprocesové servery pro všechny funkce vizuálních úprav, hlavně protože aktivní technologie neposkytuje způsob, jak se server připojovat do hlavní smyčky zpráv kontejneru. Knihovna MFC vyžaduje přístup ke smyčce zpráv aplikace typu kontejner, aby bylo možné zpracovat klávesové zkratky a zpracování nečinného času.
 
-Pokud píšete automatizační server a server nemá žádné uživatelské rozhraní, můžete nastavit váš server v procesový server a kompletně umístit do knihovny DLL.
+Pokud vytváříte automatizační server a váš server nemá žádné uživatelské rozhraní, můžete server vytvořit v procesovém serveru a kompletně ho uložit do knihovny DLL.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Automatizační servery](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

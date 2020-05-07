@@ -23,46 +23,46 @@ ms.locfileid: "62346324"
 ---
 # <a name="type-float"></a>Float – typ
 
-Čísla s plovoucí desetinnou čárkou IEEE (Institute of Electrical and Electronics Engineers) formát. Hodnoty jednoduchou přesnost s plovoucí desetinnou čárkou typu mít 4 bajty, skládající se z bit znaménka, binární exponent překročení 127 8 bitů a mantisy 23 bitů. Mantisa představuje číslo mezi 1.0 a 2.0. Bit nejvyšším mantisa je vždy 1, není uložen v čísle. Tento zápis poskytuje řadu přibližně 3, 4e-38 3, 4e + 38 pro typ float.
+Čísla s plovoucí desetinnou čárkou používají formát IEEE (Institute of Electrical and Electronics Engineers). Hodnoty s jednoduchou přesností s typem float mají 4 bajty, které se skládají z znaku znaménka, 8bitového ne127 binárního exponentu a 23-bit mantisy. Mantisa představuje číslo mezi 1,0 a 2,0. Vzhledem k tomu, že horní bit mantisy je vždy 1, není uložen v čísle. Tato reprezentace poskytuje rozsah přibližně 3.4 E-38 až 3.4 E + 38 pro typ float.
 
-Proměnné můžete deklarovat jako float nebo double, v závislosti na potřebách vaší aplikace. Hlavní rozdíly mezi těmito dvěma typy jsou význam, které můžou představovat, úložiště, které potřebují a jejich rozsah. V následující tabulce jsou uvedeny vztah významu a požadavky na úložiště.
+Proměnné můžete deklarovat jako float nebo Double v závislosti na potřebách vaší aplikace. Hlavní rozdíly mezi těmito dvěma typy jsou význam, který mohou představovat, úložiště, které potřebují, a jejich rozsah. V následující tabulce je uveden vztah mezi požadavky na význam a úložiště.
 
 ### <a name="floating-point-types"></a>Typy s plovoucí desetinnou čárkou
 
-|Type|Významných číslic|Počet bajtů|
+|Typ|Významné číslice|Počet bajtů|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
 
-Proměnné s plovoucí desetinnou čárkou jsou reprezentovány mantisa, který obsahuje hodnotu číslo a exponent, který obsahuje řádově číslo.
+Proměnné s plovoucí desetinnou čárkou jsou reprezentovány pomocí mantisy, která obsahuje hodnotu čísla a exponent, který obsahuje pořadí čísla.
 
-V následující tabulce jsou uvedeny počet bitů, které jsou přiděleny mantisy a exponentu pro každý typ s plovoucí desetinnou čárkou. Nejvýznamnější bit jakékoli float nebo double je vždy na bit znaménka. Pokud je 1, číslo se považuje za záporné; v opačném případě bude považován za kladné číslo.
+Následující tabulka ukazuje počet bitů přiřazených k mantise a exponent pro každý typ s plovoucí desetinnou čárkou. Nejvýznamnější bit libovolného typu float nebo Double je vždy bit znaménka. Pokud je hodnota 1, je číslo považováno za záporné. v opačném případě se považuje za kladné číslo.
 
-### <a name="lengths-of-exponents-and-mantissas"></a>Délky exponenty a mantisy
+### <a name="lengths-of-exponents-and-mantissas"></a>Délky exponentů a mantisy
 
-|Type|Délka exponentu|Délka mantisa|
+|Typ|Délka exponentu|Délka mantisy|
 |----------|---------------------|---------------------|
 |float|8 bitů|23 bitů|
-|double|11 bits|52 bitů|
+|double|11 bitů|52 bitů|
 
-Protože exponenty se ukládají v podobě bez znaménka, je exponent tendenční poloviční hodnotou, je to možné. Pro typ float je posun 127; pro typ double je 1023. Můžete vypočítat skutečnou hodnotu exponentu tak, že se hodnota posunu od hodnotu exponentu.
+Vzhledem k tomu, že exponenty jsou uloženy v nepodepsané formě, exponent je posunut o polovinu možné hodnoty. Pro typ float je posun 127; pro typ Double je to 1023. Skutečnou hodnotu exponent můžete vypočítat odečtením hodnoty bias od hodnoty exponent.
 
-Mantisa se ukládá jako zlomek binární větší než nebo rovno 1 a menší než 2. Pro typy plovoucí desetinnou čárkou a double je implicitní přední 1 mantisa v pozici nejvýznamnější bit, tak mantisy jsou ve skutečnosti 24 a 53 bitů dlouhý v uvedeném pořadí, i když je nejvýznamnější bit nikdy uložené v paměti.
+Mantisa je uložena jako binární zlomek větší nebo rovna 1 a menší než 2. Pro typy float a Double je v mantise v rámci nejvýznamnější bitové pozice implicitní počáteční 1, takže mantisy jsou ve skutečnosti 24 a 53 bity, a to i v případě, že je nejvýznamnější bit nikdy neuložený v paměti.
 
-Namísto metody úložiště, jen je popsáno můžete balíček s plovoucí desetinnou čárkou ukládat binárních čísel s plovoucí desetinnou čárkou jako Nenormalizovaná čísla. "Nenormalizovaná čísla" jsou nenulovou hodnotu s plovoucí desetinnou čárkou čísla pomocí vyhrazené exponentu hodnoty, ve kterých je nejvýznamnější bit mantisa je 0. S použitím Nenormalizovaná formátu, je možné rozšířit rozsah čísla s plovoucí desetinnou čárkou za cenu přesnosti. Nelze určit, zda číslo s plovoucí desetinnou čárkou reprezentované v podobě normalizované nebo Nenormalizovaná; balíček s plovoucí desetinnou čárkou určuje reprezentaci. Balíček s plovoucí desetinnou čárkou nikdy používá nenormalizované formulář, není-li exponent bude menší než minimální, která lze znázornit v normalizovaná forma.
+Místo toho, aby se právě popsala metoda úložiště, může balíček s plovoucí desetinnou čárkou obsahovat binární čísla s plovoucí desetinnou čárkou jako Denormalizovaná čísla. "Denormalizovaná čísla" jsou nenulová čísla s plovoucí desetinnou čárkou s hodnotami rezervovaných exponentů, ve kterých je nejvýznamnější bit mantisy 0. Pomocí denormalizovaného formátu lze rozsah čísla s plovoucí desetinnou čárkou rozšířit na náklady na přesnost. Nelze určit, zda je číslo s plovoucí desetinnou čárkou vyjádřeno v normalizovaném nebo denormalizovaném formátu. balíček s plovoucí desetinnou čárkou určuje reprezentace. Balíček s plovoucí desetinnou čárkou nikdy nepoužívá denormalizovanou formu, pokud exponent nebude menší než minimum, které lze znázornit v normalizované podobě.
 
-V následující tabulce jsou uvedeny minimální a maximální hodnoty, že můžete ukládat v proměnných každého typu s plovoucí desetinnou čárkou. Hodnoty uvedené v této tabulce platí pouze pro normalizované čísel s plovoucí desetinnou čárkou. Nenormalizovaná čísla s plovoucí desetinnou čárkou mít menší hodnotu minimální. Všimněte si, že čísla v 80*x*87 registry jsou vždy reprezentovány v normalizovaná forma 80-bit; čísla může být reprezentován jenom Nenormalizovaná formuláře po uložené v proměnné s plovoucí desetinnou čárkou 32bitové nebo 64bitové (proměnné float – typ a typ long).
+V následující tabulce jsou uvedeny minimální a maximální hodnoty, které lze uložit v proměnných každého typu s plovoucí desetinnou čárkou. Hodnoty uvedené v této tabulce se vztahují jenom na normalizovaná čísla s plovoucí desetinnou čárkou. Denormalizovaná čísla s plovoucí desetinnou čárkou mají menší minimální hodnotu. Všimněte si, že čísla uchovávaná v registrech 80*x*87 jsou vždy reprezentovaná v normalizovaném formátu 80-bit. čísla lze reprezentovat pouze v denormalizovaném formátu při uložení v 32 nebo 64 proměnných s plovoucí desetinnou čárkou (proměnné typu float a typ Long).
 
 ### <a name="range-of-floating-point-types"></a>Rozsah typů s plovoucí desetinnou čárkou
 
-|Type|Minimální hodnota|Maximální hodnota|
+|Typ|Minimální hodnota|Maximální hodnota|
 |----------|-------------------|-------------------|
-|float|1.175494351 E - 38|3.402823466 E + 38|
-|double|2.2250738585072014 E - 308|1.7976931348623158 E + 308|
+|float|1,175494351 E-38|3,402823466 E + 38|
+|double|2.2250738585072014 E-308|1.7976931348623158 E + 308|
 
-Pokud přesnost je menší než úložiště žádný problém, zvažte použití typu float pro proměnné s plovoucí desetinnou čárkou. Naopak pokud přesnost je nejdůležitější kritérium, použijte typ double.
+Pokud je přesnost menší z obav než úložiště, zvažte použití typu float pro proměnné s plovoucí desetinnou čárkou. Naopak, pokud je přesnost nejdůležitějším kritériem, použijte typ Double.
 
-Proměnné s plovoucí desetinnou čárkou může být povýšen na typ větší význam (z float – typ na typ double). Povýšení často dojde při provedení aritmetické operace na proměnné s plovoucí desetinnou čárkou. Tato aritmetický se vždy provádí v jako vysoce určitý stupeň přesnost jako proměnnou na nejvyšší úrovni přesnosti. Zvažte například následující typ deklarace:
+Proměnné s plovoucí desetinnou čárkou lze zvýšit na typ větší významnosti (z typu float na typ Double). K povýšení dochází často, když provádíte aritmetické proměnné s plovoucí desetinnou čárkou. Tato aritmetická operace je vždy prováděna jako vysoká úroveň přesnosti jako proměnná s nejvyšší mírou přesnosti. Zvažte například následující deklarace typů:
 
 ```
 float f_short;
@@ -72,14 +72,14 @@ long double f_longer;
 f_short = f_short * f_long;
 ```
 
-V předchozím příkladu je proměnná `f_short` je povýšen na typ double a vynásobený `f_long`; výsledek se zaokrouhlí na typ float před přiřazením k `f_short`.
+V předchozím příkladu je proměnná `f_short` povýšena na typ Double a vynásobena hodnotou; `f_long` pak je výsledek zaokrouhlen na typ float před přiřazením `f_short`.
 
-V následujícím příkladu (která používá deklarace z předchozího příkladu), že se provádí aritmetické operace v přesnost typu float (32bitová verze) v proměnné; Výsledkem je pak povýšen na typ double:
+V následujícím příkladu (který používá deklarace z předchozího příkladu) se aritmetické operace provádí v pohyblivé (32-bit) přesnosti proměnných. výsledek je pak povýšen na typ Double:
 
 ```
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

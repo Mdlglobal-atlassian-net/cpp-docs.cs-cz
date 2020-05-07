@@ -20,12 +20,12 @@ Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétn
 
 ## <a name="syntax"></a>Syntaxe
 
-*výraz CAST*: *unární výraz*
+*cast-expression*: *unární výraz*
 
-**(**  *název typu*  **)**  *výrazem přetypování.*
+**(**  *název typu*  **)**  *přetypování – výraz*
 
-Kompilátor zpracovává *výrazem přetypování* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezena stejnými pravidly, která určují účinky implicitních převodů, popsané v [převody přiřazení](../c-language/assignment-conversions.md). Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů. Zobrazit [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o skutečných velikostech celočíselných typů. Další informace o přetypováních naleznete v tématu [převody přetypování](../c-language/type-cast-conversions.md).
+Kompilátor zpracovává *přetypování – výraz* jako typ Type *-Name* po přetypování typu. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezená stejnými pravidly, která určují účinky implicitních převodů popsaných v tématu [převody přiřazení](../c-language/assignment-conversions.md). Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů. Informace o skutečných velikostech integrálních typů naleznete v tématu [úložiště základních typů](../c-language/storage-of-basic-types.md) . Další informace o přetypování naleznete v tématu [převody typu přetypování](../c-language/type-cast-conversions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátor přetypování: ()](../cpp/cast-operator-parens.md)

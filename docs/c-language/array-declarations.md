@@ -15,54 +15,54 @@ ms.locfileid: "62313542"
 ---
 # <a name="array-declarations"></a>Deklarace pole
 
-"Pole deklarace" názvů poli a určuje typu jeho elementů. Můžete také definovat počet prvků v poli. Proměnná typu pole je považován za ukazatel na typ prvků pole.
+"Deklarace pole" pojmenuje pole a určuje typ jeho elementů. Může také definovat počet prvků v poli. Proměnná s typem pole je považována za ukazatel na typ prvků pole.
 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *init-declarator-list*<sub>optimalizované</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory* *init-deklarátor-list*<sub>opt</sub> **;**
 
-*init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
+*init-deklarátor-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor-list*  **,**  *init-deklarátor*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
+*init-deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicializátor* deklarátor
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]** 
+*Direct-deklarátor*:/\* A – funkce deklarátor\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***[** opt *-Expression*<sub>opt</sub> **]**    
 
-Protože *konstantního výrazu* je volitelný, má dvě různými formami syntaxe:
+Protože je *konstantní výraz* volitelný, syntaxe má dva formuláře:
 
-- První formulář definuje proměnnou pole. *Konstantní výraz* argument v hranatých závorkách určuje počet prvků v poli. *Konstantní výraz*, pokud jsou k dispozici, musí mít celočíselný typ a hodnotu větší než nula. Každý prvek má typ daný *specifikátor typu*, což může být libovolný typ s výjimkou `void`. K elementu pole nemůže být typ funkce.
+- První formulář definuje proměnnou pole. Argument *konstantního výrazu* v závorkách určuje počet prvků v poli. *Konstantní výraz*, pokud je přítomen, musí mít celočíselný typ a hodnotu větší než nula. Každý prvek má typ zadaný *specifikátorem typu*, který může být libovolný typ s výjimkou `void`. Prvek pole nemůže být typu funkce.
 
-- Druhý typ deklaruje proměnnou, která je definována jinde. Vynechá *konstantní výraz* argument v závorkách, ale ne závorky. Tento formulář můžete použít jenom v případě, že jste dříve inicializovat pole deklarovaný jako parametr, nebo ji deklarovali jako odkaz na pole explicitně definovány jinde v programu.
+- Druhý formulář deklaruje proměnnou, která je definována jinde. Vynechá argument *konstantního výrazu* v závorkách, ale ne závorky. Tento formulář můžete použít pouze v případě, že jste již dříve inicializoval pole, deklarováno jako parametr nebo deklarovaného jako odkaz na pole explicitně definované jinde v programu.
 
-V obou formách *direct-declarator* názvy proměnných a může změnit typ proměnné. Hranaté závorky (**[] č.**) následující *direct-declarator* upravit deklarátor na typ array.
+V obou formulářích je *Přímá deklarátor* Pojmenovává proměnnou a může změnit typ proměnné. Hranaté závorky (**[]**) následující po *Direct-deklarátor* upraví deklarátor na typ pole.
 
-Kvalifikátory typu se může objevit v deklaraci objektu typu pole, ale v kvalifikátorech použít pro prvky spíše než pole samotného.
+Kvalifikátory typu mohou být uvedeny v deklaraci objektu typu pole, ale kvalifikátory se vztahují na prvky spíše než pole samotné.
 
-Pomocí následujících deklarátor pole se seznamem konstantní výrazy v závorkách v tomto formuláři je možné deklarovat pole polí (pole "multidimenzionální"):
+Pole polí (multidimenzionální pole) můžete deklarovat pomocí pole deklarátor se seznamem konstantních výrazů v tomto formuláři v závorkách:
 
-> *Specifikátor typu* *deklarátor* **[** *konstantní výraz* **]** **[** *konstantní výraz* **]** ...
+> *Type-specifikátor* *deklarátor* **[** *constant-expression* **]** **[** *konstantní výraz* **]** ...
 
-Každý *konstantní výraz* v závorkách definuje počet prvků v dané dimenzi: dvojrozměrné pole mají dvě výrazy v závorkách, mají tři trojrozměrného pole a tak dále. Máte-li inicializovat pole deklarovaný jako parametr, nebo ji deklarovali jako odkaz na pole explicitně definovány jinde, můžete vynechat první konstantní výraz v programu.
+Každý *konstantní výraz* v závorkách definuje počet prvků v dané dimenzi: dvojrozměrné pole mají dva výrazy v závorkách, trojrozměrné pole má tři a tak dále. První konstantní výraz můžete vynechat, pokud jste pole inicializoval, deklarujete jako parametr nebo jste ho deklarovali jako odkaz na pole explicitně definované jinde v programu.
 
-Můžete definovat pole ukazatelů na různé typy objektů pomocí složitých deklarátorů, jak je popsáno v [interpretace složitých Deklarátorů](../c-language/interpreting-more-complex-declarators.md).
+Můžete definovat pole ukazatelů na různé typy objektů pomocí komplexního deklarátory, jak je popsáno v tématu [Interpretace složitějších deklarátory](../c-language/interpreting-more-complex-declarators.md).
 
-Pole jsou uložena po řádku. Například následující pole je tvořen dvěma řádky se třemi sloupci:
+Pole jsou uložena podle řádku. Například následující pole se skládá ze dvou řádků se třemi sloupci:
 
 ```C
 char A[2][3];
 ```
 
-Tři sloupce na prvním řádku se ukládají nejprve, za nímž následuje tři sloupce ve druhém řádku. To znamená, že se poslední dolní index mění nejrychleji.
+Nejprve jsou uloženy tři sloupce prvního řádku a potom tři sloupce druhého řádku. To znamená, že se poslední dolní index mění rychleji.
 
-K odkazování na jednotlivý prvek pole, použijte výraz dolního indexu, jak je popsáno v [Příponové operátory](../c-language/postfix-operators.md).
+Chcete-li odkazovat na jednotlivé prvky pole, použijte výraz dolního indexu, jak je popsáno v části [Příponové operátory](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Příklady
 
@@ -72,7 +72,7 @@ Tyto příklady ilustrují deklarace pole:
 float matrix[10][15];
 ```
 
-Dvourozměrné pole s názvem `matrix` má 150 prvky, každý s **float** typu.
+Dvojrozměrné pole s názvem `matrix` má 150 prvky, každý má typ **float** .
 
 ```C
 struct {
@@ -80,20 +80,20 @@ struct {
 } complex[100];
 ```
 
-Toto je deklaraci pole struktur. Toto pole má 100 prvků. Každý prvek je struktura obsahující dva členy.
+Toto je deklarace pole struktur. Toto pole obsahuje 100 prvků; Každý prvek je struktura obsahující dva členy.
 
 ```C
 extern char *name[];
 ```
 
-Tento příkaz deklaruje typ a název pole ukazatelů na `char`. Skutečnou definici `name` dochází jinde.
+Tento příkaz deklaruje typ a název pole ukazatelů na `char`. Skutečná definice se `name` vyskytuje jinde.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Typ celého čísla potřebných k uložení maximální velikost pole je velikost **size_t**. Definovaný v souboru hlaviček STDDEF. H, **size_t** je `unsigned int` s rozsahem 0x00000000 k 0x7CFFFFFF.
+Typ celého čísla potřebného pro uložení maximální velikosti pole je velikost **size_t**. Definováno v hlavičkovém souboru STDDEF. H je **size_t** `unsigned int` s rozsahem 0x00000000 až 0x7CFFFFFF.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

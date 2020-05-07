@@ -14,11 +14,11 @@ ms.locfileid: "62312738"
 ---
 # <a name="c-unary-operators"></a>Unární operátory jazyka C
 
-Unární operátory vyskytovat před jejich operand a přidružte zprava doleva.
+Unární operátory se zobrazí před operandem a přiřadí se zprava doleva.
 
 ## <a name="syntax"></a>Syntaxe
 
-*Unární výraz*: *postfix-expression*
+*unární výraz*: *příponový výraz*
 
 **++**  *Unární výraz*
 
@@ -26,12 +26,12 @@ Unární operátory vyskytovat před jejich operand a přidružte zprava doleva.
 
 *Unární operátor přetypování – výraz*
 
-**operátor sizeof:**  *unární výraz* 
+**sizeof**  *unární výraz*
 
 **sizeof (**  *název typu*  **)**
 
-*Unární operátor*: jeden z **& \* + -** `~` **!**
+*unární – operátor*: jedna z ** &  \* +-** `~` **!**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory jazyka C](../c-language/c-operators.md)

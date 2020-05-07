@@ -11,10 +11,10 @@ ms.locfileid: "62313464"
 ---
 # <a name="auto-storage-class-specifier"></a>Specifikátor třídy úložiště auto
 
-**Automaticky** – specifikátor třídy úložiště deklaruje automatickou proměnnou, proměnná má místní dobu platnosti. **Automaticky** proměnná je viditelná pouze v bloku ve kterém je deklarována. Deklarace **automaticky** proměnných mohou obsahovat inicializátory, jak je popsáno v [inicializace](../c-language/initialization.md). Od proměnné s **automaticky** třídu úložiště nejsou inicializovány automaticky, které byste je inicializovat explicitně při deklaraci nebo jim počáteční hodnoty v příkazech v rámci bloku přiřadit. Hodnoty neinicializovaných **automaticky** proměnné nejsou definovány. (Místní proměnná **automaticky** nebo **zaregistrovat** úložiště třída je inicializována pokaždé, když je v oboru, pokud je uveden inicializátor.)
+Specifikátor třídy úložiště **auto** deklaruje automatickou proměnnou a proměnnou s místní životností. Proměnná **auto** je viditelná pouze v bloku, ve kterém je deklarována. Deklarace **automatických** proměnných mohou obsahovat inicializátory, jak je popsáno v tématu [inicializace](../c-language/initialization.md). Vzhledem k tomu, že proměnné s třídou **automatického** úložiště nejsou inicializovány automaticky, měli byste je buď explicitně inicializovat při jejich deklaraci, nebo je přiřadit počáteční hodnoty v příkazech v rámci bloku. Hodnoty neinicializovaných **automatických** proměnných nejsou definovány. (Místní proměnná třídy úložiště **auto** nebo **Register** je inicializována pokaždé, když se v oboru nachází, pokud je zadán inicializátor.)
 
-Interní **statické** proměnné (statická proměnná s místním nebo rozsahem bloku) lze inicializovat adresou jakékoli vnější nebo **statické** položky, ale nikoli adresou jiné **automaticky**  položky, protože adresa **automaticky** položka není konstantní.
+Vnitřní **statickou** proměnnou (statickou proměnnou s místním nebo rozsahem bloku) lze inicializovat s adresou libovolné externí nebo **statické** položky, ale ne s adresou jiné položky **auto** , protože adresa **Automatické** položky není konstanta.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Auto – klíčové slovo](../cpp/auto-keyword.md)
+[auto – klíčové slovo](../cpp/auto-keyword.md)

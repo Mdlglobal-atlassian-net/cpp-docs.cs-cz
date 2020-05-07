@@ -38,13 +38,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Tento kód funguje dokonale v ladicí verzi aplikace MFC. Pokud se volání `calloc( )` nezdařila, zobrazí se diagnostická zpráva, která obsahuje soubor a číslo řádku. V maloobchodním sestavení aplikace MFC však:
+Tento kód funguje dokonale v ladicí verzi aplikace MFC. Pokud se volání `calloc( )` nezdařilo, zobrazí se diagnostická zpráva, která obsahuje soubor a číslo řádku. V maloobchodním sestavení aplikace MFC však:
 
-- volání `calloc( )` nikdy neproběhne, ponechá `buf` uninicializovaný nebo
+- volání `calloc( )` nikdy neproběhne, je ponecháno `buf` neinicializované nebo
 
-- `strcpy_s( )` kopíruje "`Hello, World`" do náhodné paměti, pravděpodobně dojde k chybě aplikace nebo způsobilo, že systém přestane reagovat.
+- `strcpy_s( )`zkopíruje "`Hello, World`" do náhodné paměti, může způsobit chybu aplikace nebo způsobit, že systém přestane reagovat.
 
-- `free()` se pokusí uvolnit paměť, která nebyla nikdy přidělena.
+- `free()`pokusí se uvolnit paměť, která nebyla nikdy přidělena.
 
 Chcete-li použít vyhodnocení správně, je třeba změnit vzorek kódu na následující:
 

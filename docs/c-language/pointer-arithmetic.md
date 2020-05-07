@@ -20,6 +20,6 @@ Tento předpoklad platí pro členy pole. Podle definice je pole řada hodnot st
 
 Podobně jsou-li odečteny dvě hodnoty ukazatele, převod předpokládá, že mezi dvěma adresami zadanými operandy leží pouze hodnoty stejného typu bez mezer.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Sčítací operátory jazyka C](../c-language/c-additive-operators.md)
+[Operátory sčítání jazyka C](../c-language/c-additive-operators.md)

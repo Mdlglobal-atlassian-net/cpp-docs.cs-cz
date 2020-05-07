@@ -11,17 +11,17 @@ ms.locfileid: "62346597"
 ---
 # <a name="summary-of-string-literals"></a>Souhrn textových literálů
 
-*string-literal*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s – znak sekvence*<sub>optimalizované</sub> **"**
+*řetězcový literál*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-Sequence –*<sub>opt</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s-znak – opt-char-Sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*:<br/>
+*s-char-Sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-Sequence* *s-char*
 
 *s-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě značkou dvojité uvozovky ("), zpětného lomítka (\\), nebo sekvence escape znaků nového řádku
+&nbsp;&nbsp;&nbsp;&nbsp;libovolný člen zdrojové znakové sady s výjimkou dvojité uvozovky ("), zpětného lomítka (\\) nebo znaku nového řádku řídicí sekvence
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)

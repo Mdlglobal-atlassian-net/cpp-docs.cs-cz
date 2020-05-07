@@ -14,47 +14,47 @@ ms.locfileid: "64341186"
 ---
 # <a name="pgosweep"></a>pgosweep
 
-Profilováním řízená optimalizace používají k zápisu všechna data profilu ze spuštěný program do souboru .pgc.
+Používá se v optimalizaci na základě profilu k zápisu všech dat profilu z běžícího programu do souboru. pgc.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **pgosweep** [*options*] *image* *pgcfile*
+> **pgosweep** [*Možnosti*] *Obrázek* *pgcfile*
 
 ### <a name="parameters"></a>Parametry
 
-*Možnosti*<br/>
-(Volitelné) Platné hodnoty pro *možnosti* jsou:
+*nastavení*<br/>
+Volitelné Platné hodnoty pro *Možnosti* jsou:
 
-- **/?** nebo **/help** zobrazí zprávu nápovědy.
+- **/?** nebo **/help** zobrazí zprávu help.
 
-- **/noreset** zachová počet v datovými strukturami modulu CLR.
+- **/NORESET** zachovává počet v datových strukturách modulu runtime.
 
-*image*<br/>
-Úplná cesta souboru .exe nebo .dll, který byl vytvořen pomocí [/genprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), nebo [/LTCG:PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) možnost.
+*obrazu*<br/>
+Úplná cesta k souboru. exe nebo. dll, který byl vytvořen pomocí možnosti [/GENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)nebo [/LTCG: PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) .
 
 *pgcfile*<br/>
-Soubor .pgc, ve kterém tento příkaz zapíše data počty.
+Soubor. pgc, kde tento příkaz zapisuje počty dat.
 
 ## <a name="remarks"></a>Poznámky
 
-**Pgosweep** příkaz funguje s programy, které byly vytvořeny pomocí [/genprofile nebo /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) možnost nebo zastaralá [/LTCG:PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) možnost. Přeruší spuštěný program a zapisuje data profilu do nového souboru .pgc. Ve výchozím nastavení tento příkaz obnoví počty po každé operaci zápisu. Pokud zadáte **/noreset** možnosti příkazu poznamenejte si hodnoty, ale nelze je obnovit v běžící aplikaci. Tato možnost poskytuje duplicitních dat. Pokud později načíst data profilu.
+Příkaz **pgosweep** funguje na programech, které byly vytvořeny pomocí možnosti [/GENPROFILE nebo/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , nebo zastaralé možnosti [/LTCG: PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) . Přerušuje běžící program a zapíše data profilu do nového souboru. pgc. Ve výchozím nastavení příkaz obnoví počty po každé operaci zápisu. Pokud zadáte možnost **/NORESET** , příkaz zaznamená hodnoty, ale neobnoví je v běžícím programu. Tato možnost poskytuje duplicitní data při pozdějším načtení dat profilu.
 
-Alternativní použití pro **pgosweep** je načíst informace o profilu pro normální provoz aplikace. Například můžete spustit **pgosweep** krátce po spuštění aplikace a zrušit tento soubor. To by odebrat profil data související s náklady na spuštění. Potom můžete spustit **pgosweep** před ukončením aplikace. Shromážděná data má teď informace z profilu pouze od doby, uživatel může pracovat s programem.
+Alternativním použitím **pgosweep** je načtení informací o profilu jenom pro normální fungování aplikace. Můžete například spustit **pgosweep** krátce po spuštění aplikace a zahodit tento soubor. Tím se odeberou data profilu spojená s náklady na spuštění. Pak můžete spustit **pgosweep** před ukončením aplikace. Shromážděná data nyní obsahují informace o profilu z času, kdy by uživatel mohl s programem pracovat.
 
-Pokud název souboru .pgc (s použitím *pgcfile* parametr) můžete použít standardní formát, který je *appname! n*.pgc. Pokud použijete tento formát, kompilátor automaticky vyhledá tato data v **/LTCG/useprofile** nebo **/LTCG:PGO** fáze. Pokud nepoužijete standardního formátu, je nutné použít [pgomgr](pgomgr.md) sloučit soubory .pgc.
+Při pojmenování souboru. pgc (pomocí parametru *pgcfile* ) můžete použít standardní formát, který je *AppName! n*. pgc. Použijete-li tento formát, kompilátor automaticky vyhledá tato data ve fázi **/LTCG/USEPROFILE** nebo **/LTCG: PGO** . Pokud nepoužíváte standardní formát, je nutné použít [pgomgr](pgomgr.md) ke sloučení souborů. pgc.
 
 > [!NOTE]
-> Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+> Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře v aplikaci Visual Studio. Nemůžete ho spustit z příkazového řádku systému nebo z Průzkumníka souborů.
 
-Informace o tom, jak zachytávat data profilu z v rámci spustitelný soubor najdete v tématu [PgoAutoSweep](pgoautosweep.md).
+Informace o tom, jak zachytit profilová data v rámci spustitelného souboru, najdete v tématu [PgoAutoSweep](pgoautosweep.md).
 
 ## <a name="example"></a>Příklad
 
-V tomto ukázkovém příkazu **pgosweep** zapíše aktuální informace profilu pro myapp.exe myapp!1.pgc.
+V tomto příkladu příkazu **pgosweep** zapisuje aktuální informace o profilu pro MyApp. exe do MyApp. 1. pgc.
 
 `pgosweep myapp.exe myapp!1.pgc`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace na základě profilu](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>

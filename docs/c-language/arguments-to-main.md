@@ -11,9 +11,9 @@ ms.locfileid: "62313555"
 ---
 # <a name="arguments-to-main"></a>Argumenty operace main
 
-**ANSI 2.1.2.2.1** sémantiku argumenty operace Main
+**2.1.2.2.1 ANSI** Sémantika argumentů Main
 
-V Microsoft C je volána funkce volá se při spuštění programu **hlavní**. Neexistuje žádný prototyp pro deklarovaný **hlavní**, a lze ji definovat s žádným, dvěma nebo třemi parametry:
+V jazyce Microsoft C je funkce volána při spuštění programu označována jako **Main**. Pro **Main**není deklarován žádný prototyp a lze jej definovat s nula, dvěma nebo třemi parametry:
 
 ```
 int main( void )
@@ -21,18 +21,18 @@ int main( int argc, char *argv[] )
 int main( int argc, char *argv[], char *envp[] )
 ```
 
-Třetí řádek výše, kde **hlavní** přijímá tři parametry, je rozšíření standardu ANSI C společnosti Microsoft. Třetí parametr **envp**, je pole ukazatelů na proměnné prostředí. **Envp** pole je ukončeno nulovým ukazatelem. Zobrazit [– funkce main a vykonávání programu](../c-language/main-function-and-program-execution.md) Další informace o **hlavní** a **envp**.
+Výše uvedený třetí řádek, kde **Main** přijímá tři parametry, je rozšířením společnosti Microsoft pro standard ANSI C. Třetí parametr, **envp**, je pole ukazatelů na proměnné prostředí. Pole **envp** je ukončeno ukazatelem s hodnotou null. Další informace o **Main** a **envp**najdete v tématu [hlavní funkce a spuštění programu](../c-language/main-function-and-program-execution.md) .
 
-Proměnná **argc** nikdy neudržuje zápornou hodnotu.
+Proměnná **argc** nikdy nedrží zápornou hodnotu.
 
-Pole řetězců končí **argv [argc]**, který obsahuje ukazatel s hodnotou null.
+Pole řetězců končí řetězcem **argv [argc]**, který obsahuje ukazatel s hodnotou null.
 
-Všechny prvky **argv** pole jsou ukazatele na řetězce.
+Všechny prvky pole **argv** jsou ukazatele na řetězce.
 
-Program spuštěný bez argumentů příkazového řádku se zobrazí hodnota objektu pro **argc**, protože název spustitelného souboru, který je umístěn ve **argv [0]**. (V operačním systému MS-DOS verze dřívější než 3.0 není název spustitelného souboru k dispozici. Písmeno "C", nachází ve **argv [0]**.) Řetězce, na **argv [1]** prostřednictvím **argv [argc - 1]** představují parametry programu.
+Program vyvolaný bez argumentů příkazového řádku obdrží hodnotu jedna pro **argc**, protože název spustitelného souboru je umístěn v **argv [0]**. (V operačním systému MS-DOS verze dřívější než 3.0 není název spustitelného souboru k dispozici. Písmeno "C" je umístěno v **argv [0]**.) Řetězce, na které ukazuje **argv [1]** až **argv [argc-1]** , reprezentují parametry programu.
 
-Parametry **argc** a **argv** lze upravit a zachovávají své naposled uložené hodnoty od spuštění do ukončení programu.
+Parametry **argc** a **argv** lze upravovat a uchovávat jejich poslední uložené hodnoty mezi spuštěním programu a ukončením programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Prostředí](../c-language/environment.md)

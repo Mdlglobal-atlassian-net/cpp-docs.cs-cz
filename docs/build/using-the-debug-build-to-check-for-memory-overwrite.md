@@ -13,21 +13,21 @@ ms.locfileid: "62314283"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Kontrola přepisování paměti použitím ladění sestavení
 
-Kontrola přepisování paměti pomocí sestavení pro ladění, je nutné nejprve znovu sestavit projekt pro ladění. Potom přejděte na začátek aplikace `InitInstance` fungovat a přidejte následující řádek:
+Chcete-li použít sestavení ladění pro kontrolu velikosti paměti, je nutné nejprve znovu sestavit projekt pro ladění. Pak pokračujte na začátek `InitInstance` funkce vaší aplikace a přidejte následující řádek:
 
 ```
 afxMemDF |= checkAlwaysMemDF;
 ```
 
-Přidělení paměti ladění vloží guard bajtů kolem všechna přidělení paměti. Ale tyto ochrany bajtů neprovádějte žádné funkční, není-li zkontrolovat, zda nebyly změněny (což by označoval přepisování paměti). V opačném případě získáte jenom vyrovnávací paměť, která ve skutečnosti může být, bylo možné okamžitě začít s přepisování paměti.
+Alokátor paměti ladění přináší Guard bajty kolem všech přidělení paměti. Tyto bajty Guard ale nefungují správně, pokud nezjistíte, jestli se změnily (což by znamenalo přepsání paměti). V opačném případě poskytuje pouze vyrovnávací paměť, která může ve skutečnosti mít za následek přepsání paměti.
 
-Zapnutím `checkAlwaysMemDF`, vynutí knihovny MFC pro volání `AfxCheckMemory` pokaždé, když se funkce volání **nové** nebo **odstranit** tvoří. Přepisování paměti byl zjištěn, vygeneruje se zpráva trasování, který bude vypadat nějak takto:
+`checkAlwaysMemDF`Zapnutím nástroje vynutíte, aby knihovna MFC `AfxCheckMemory` vyvolala funkci pokaždé, když je provedeno volání funkce **New** nebo **Delete** . Pokud se zjistilo přepsání paměti, vygeneruje se zpráva trasování, která vypadá podobně jako v následujícím příkladu:
 
 ```
 Damage Occurred! Block=0x5533
 ```
 
-Pokud se zobrazí jedna z následujících zpráv, budete muset projít kódu k určení, kde došlo k poškození. Izolace, přesněji kde přepisování paměti došlo k chybě, můžete nastavit explicitního volání `AfxCheckMemory` sami. Příklad:
+Pokud se zobrazí jedna z těchto zpráv, musíte projít kód, abyste zjistili, kde došlo k poškození. Chcete-li přesně izolovat, kde došlo k přepsání paměti, můžete provádět explicitní volání `AfxCheckMemory` sami. Příklad:
 
 ```
 ASSERT(AfxCheckMemory());
@@ -35,10 +35,10 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());
 ```
 
-Pokud první vyhodnocení úspěšné a druhý se nezdaří, znamená to, že přepisování paměti musí mít došlo k chybě ve funkci mezi dvěma voláními.
+Pokud je první kontrolní výraz úspěšný a druhý z nich selže, znamená to, že došlo k přepsání paměti ve funkci mezi dvěma voláními.
 
-V závislosti na povaze vašich aplikací, můžete zjistit, která `afxMemDF` způsobí, že váš program pro spuštění příliš pomalu i testování. `afxMemDF` Způsobí, že proměnná `AfxCheckMemory` nelze volat pro každé volání na nový a odstraňovat. V takovém případě by měl bodový vlastní volání `AfxCheckMemory`(jak je uvedeno výše) a zkuste k izolaci paměť přepsat tímto způsobem.
+V závislosti na povaze vaší aplikace může dojít k tomu, že `afxMemDF` by program běžel příliš pomalu a ještě netestoval. `afxMemDF` Proměnná způsobí `AfxCheckMemory` volání pro každé volání New a DELETE. V takovém případě byste měli v takovém případě zablokovat vlastní volání `AfxCheckMemory`(), jak je znázorněno výše, a pokusit se o izolaci paměti tímto způsobem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Oprava problémů se sestavením pro vydání](fixing-release-build-problems.md)

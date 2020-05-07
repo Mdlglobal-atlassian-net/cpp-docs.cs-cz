@@ -14,10 +14,10 @@ ms.locfileid: "62344925"
 ---
 # <a name="truncation-of-text-files"></a>Zkrácení textových souborů
 
-**ANSI 4.9.3** Určuje, zda zápis textového datového proudu způsobí přidruženého souboru za daným bodem oříznutí
+**4.9.3 ANSI** Bez ohledu na to, jestli zápis na textový Stream způsobí, že se přidružený soubor zkrátí za tento bod
 
 Zápis do textového datového proudu nezkrátí soubor za daným bodem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

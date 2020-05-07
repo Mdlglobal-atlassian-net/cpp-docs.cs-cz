@@ -11,10 +11,10 @@ ms.locfileid: "62325465"
 ---
 # <a name="multibyte-characters"></a>Vícebajtové znaky
 
-**ANSI 2.2.1.2** stavy posunutí pro vícebajtové znaky
+**2.2.1.2 ANSI** Stavy posunutí pro vícebajtové znaky
 
-Vícebajtové znaky se používají v některých implementacích včetně jazyka Microsoft C k reprezentaci znaků cizího jazyka, které nejsou reprezentovány v základní znakové sadě. Jazyk Microsoft C však nepodporuje žádná kódování závislá na stavu. Proto nejsou k dispozici žádné stavy posunu. Zobrazit [vícebajtové a široké znaky](../c-language/multibyte-and-wide-characters.md) Další informace.
+Vícebajtové znaky se používají v některých implementacích včetně jazyka Microsoft C k reprezentaci znaků cizího jazyka, které nejsou reprezentovány v základní znakové sadě. Jazyk Microsoft C však nepodporuje žádná kódování závislá na stavu. Proto nejsou k dispozici žádné stavy posunu. Další informace naleznete v tématu [vícebajtové a velké znaky](../c-language/multibyte-and-wide-characters.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)

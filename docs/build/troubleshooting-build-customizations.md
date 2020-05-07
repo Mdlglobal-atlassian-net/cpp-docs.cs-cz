@@ -19,22 +19,22 @@ ms.locfileid: "62315245"
 ---
 # <a name="troubleshooting-build-customizations"></a>Řešení potíží s přizpůsobením sestavení
 
-Pokud vaše vlastní kroky sestavení nebo události se nechová podle očekávání, existuje několik věcí, které vám pomůžou se pokouší o vysvětlení, co je špatně.
+Pokud se vlastní kroky sestavení nebo události nechovají podle očekávání, existuje několik věcí, které se snažíte pochopit, co je chybné.
 
-- Ujistěte se, že soubory, které vaše vlastní kroky sestavení generovat odpovídaly souborům, který deklarujete jako výstup.
+- Ujistěte se, že soubory, které vlastní kroky sestavení generují, odpovídají souborům, které deklarujete jako výstupy.
 
-- Pokud vaše vlastní kroky sestavení vygenerovat žádné soubory, které jsou vstupy nebo kroky (vlastní nebo jinak) závislosti jiných sestavení, ujistěte se, že tyto soubory jsou přidány do projektu. A ujistěte se, že spuštění nástroje, které využívají tyto soubory po vlastní krok sestavení.
+- Pokud vlastní kroky sestavení generují všechny soubory, které jsou vstupy nebo závislosti dalších kroků sestavení (vlastní nebo jinak), ujistěte se, že jsou tyto soubory přidány do projektu. A ujistěte se, že jsou nástroje, které tyto soubory používají, spouštěny po vlastním kroku sestavení.
 
-- K zobrazení vlastního kroku sestavení je ve skutečnosti činnosti, přidejte `@echo on` jako první příkaz. Události sestavení a kroků sestavení jsou vložit do souboru dočasné .bat a spustit při sestavení projektu. Proto můžete přidat Chyba při ověřování k události sestavení nebo sestavení krokových příkazů.
+- Chcete-li zobrazit, co vlastní krok sestavení skutečně dělá, `@echo on` přidejte jako první příkaz. Události sestavení a kroky sestavení jsou vloženy do dočasného souboru. bat a spustí se, když je projekt sestaven. Proto můžete přidat kontrolu chyb na událost sestavení nebo příkazy kroku sestavení.
 
-- Vyhledejte v protokolu sestavení v adresáři zprostředkujících souborů chcete zobrazit, co skutečně proveden. Cesta a název protokolu sestavení je reprezentována **MSBuild** – makro výraz **$(IntDir)\\$(MSBuildProjectName) .log**.
+- Zkontrolujte protokol sestavení v adresáři zprostředkující soubory, abyste viděli, co skutečně bylo provedeno. Cesta a název protokolu sestavení jsou reprezentovány výrazem makra **MSBuild** , **$ (IntDir)\\$ (MSBuildProjectName). log**.
 
-- Upravte nastavení projektu shromažďovat více než výchozí množství informací protokolu sestavení. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, klikněte na tlačítko **projekty a řešení** uzlu a pak klikněte na tlačítko **sestavíte a spustíte** uzlu. Potom v **podrobnost soubor MSBuild projekt sestavení protokolu** klikněte **podrobné**.
+- Upravte nastavení projektu tak, aby shromáždilo více než výchozí množství informací v protokolu sestavení. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti). V dialogovém okně **Možnosti** klikněte na uzel **projekty a řešení** a potom klikněte na uzel **sestavení a spuštění** . Pak v poli **podrobností souboru protokolu sestavení projektu MSBuild** klikněte na **podrobné**.
 
-- Ověřte, že hodnoty libovolného souboru makra název nebo adresář, který používáte. Makra můžete vypsat jednotlivě, nebo můžete přidat `copy %0 command.bat` pro spuštění vlastního kroku sestavení, která zkopíruje kroku vlastního sestavení příkazy do souboru command.bat se všechna makra rozšířit.
+- Ověřte hodnoty libovolného názvu souboru nebo makra adresáře, které používáte. Makra můžete zobrazovat jednotlivě nebo můžete přidat `copy %0 command.bat` na začátek vlastního kroku sestavení, který zkopíruje příkazy vlastního kroku sestavení do příkazu Command. bat se všemi rozbalenými makry.
 
-- Spuštění vlastní kroky sestavení a události jednotlivě a zkontrolovat jejich chování sestavení.
+- Spouštějte vlastní kroky sestavení a události sestavení jednotlivě a ověřte jejich chování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Seznámení s kroky vlastního sestavení a s událostmi sestavení](understanding-custom-build-steps-and-build-events.md)

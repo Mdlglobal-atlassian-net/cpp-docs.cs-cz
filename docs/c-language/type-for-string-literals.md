@@ -14,8 +14,8 @@ ms.locfileid: "62344847"
 ---
 # <a name="type-for-string-literals"></a>Typ pro textové literály
 
-Řetězcové literály obsahují pole typu `char` (to znamená **char [] č.**). (Řetězce širokého znaku mají pole typu `wchar_t` (to znamená **wchar_t [] č.**).) To znamená, že řetězec je pole s prvky typu `char`. Počet prvků v poli je roven počtu znaků v řetězci plus jeden pro ukončující znak null.
+Řetězcové literály mají pole typu `char` (to znamená **Char []**). (Řetězce s velkým počtem znaků mají pole typu `wchar_t` (to znamená, **wchar_t []**).) To znamená, že řetězec je pole s prvky typu `char`. Počet prvků v poli je roven počtu znaků v řetězci plus jeden pro ukončující znak null.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Textové literály jazyka C](../c-language/c-string-literals.md)

@@ -14,11 +14,11 @@ ms.locfileid: "79417192"
 ---
 # <a name="x64-software-conventions"></a>x64 – softwarové konvence
 
-Tato část popisuje metodologii konvence C++ volání pro x64, 64 rozšíření na architekturu x86.
+Tato část popisuje metodologii konvence volání jazyka C++ pro x64, 64 rozšíření na architekturu x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Přehled konvencí volání x64
 
-Mezi dva důležité rozdíly mezi x86 a x64 patří možnost adresování 64 a plochá sada 16 64 bitových registrů pro obecné použití. V případě rozšířené sady registru používá platforma x64 konvenci volání [__fastcall](../cpp/fastcall.md) a model zpracování výjimek založený na platformě RISC. `__fastcall` konvence používá registry pro první čtyři argumenty a rámec zásobníku k předání dalších argumentů. Podrobnosti o konvenci volání x64, včetně použití registru, parametrů zásobníku, návratových hodnot a uvolnění zásobníku, najdete v tématu [konvence volání x64](x64-calling-convention.md).
+Mezi dva důležité rozdíly mezi x86 a x64 patří možnost adresování 64 a plochá sada 16 64 bitových registrů pro obecné použití. V případě rozšířené sady registru používá platforma x64 konvenci volání [__fastcall](../cpp/fastcall.md) a model zpracování výjimek založený na platformě RISC. `__fastcall` Konvence používá registry pro první čtyři argumenty a rámec zásobníku k předání dalších argumentů. Podrobnosti o konvenci volání x64, včetně použití registru, parametrů zásobníku, návratových hodnot a uvolnění zásobníku, najdete v tématu [konvence volání x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Povolit optimalizaci pro x64
 
@@ -48,14 +48,14 @@ I když je možné získat přístup k datům s jakýmkoli zarovnáním, doporu�
 |-|-|-|-|
 |Skalární typ|Datový typ C|Velikost úložiště (v bajtech)|Doporučené zarovnání|
 |**INT8**|**char**|1|Byte|
-|**UINT8**|**znak bez znaménka**|1|Byte|
+|**UINT8**|**unsigned char**|1|Byte|
 |**INT16**|**short**|2|Word|
-|**UINT16**|**krátký unsigned**|2|Word|
+|**UINT16**|**unsigned short**|2|Word|
 |**UVEDENA**|**int**, **Long**|4|Doubleword|
 |**UINT32**|**unsigned int, unsigned long**|4|Doubleword|
 |**INT64**|**__int64**|8|Quadword|
 |**UINT64**|**Nepodepsaný __int64**|8|Quadword|
-|**FP32 (jednoduchá přesnost)**|**float**|4|Doubleword|
+|**FP32 (jednoduchá přesnost)**|**Plovák**|4|Doubleword|
 |**FP64 (dvojitá přesnost)**|**double**|8|Quadword|
 |**UKAZATELE**|__\*__|8|Quadword|
 |**__m64**|**__m64 struktury**|8|Quadword|
@@ -83,14 +83,14 @@ Následující tabulka ukazuje silné navrhované zarovnání skalárních člen
 |-|-|-|
 |Skalární typ|Datový typ C|Vyžadované zarovnání|
 |**INT8**|**char**|Byte|
-|**UINT8**|**znak bez znaménka**|Byte|
+|**UINT8**|**unsigned char**|Byte|
 |**INT16**|**short**|Word|
-|**UINT16**|**krátký unsigned**|Word|
+|**UINT16**|**unsigned short**|Word|
 |**UVEDENA**|**int**, **Long**|Doubleword|
 |**UINT32**|**unsigned int, unsigned long**|Doubleword|
 |**INT64**|**__int64**|Quadword|
 |**UINT64**|**Nepodepsaný __int64**|Quadword|
-|**FP32 (jednoduchá přesnost)**|**float**|Doubleword|
+|**FP32 (jednoduchá přesnost)**|**Plovák**|Doubleword|
 |**FP64 (dvojitá přesnost)**|**double**|Quadword|
 |**UKAZATELE**|<strong>\*</strong>|Quadword|
 |**__m64**|**__m64 struktury**|Quadword|
@@ -153,7 +153,7 @@ _declspec(align(4)) struct {
 
 ![Ukázka převodu AMD 2 rozvržení struktury](../build/media/vcamd_conv_ex_3_block.png "Ukázka převodu AMD 2 rozvržení struktury")
 
-#### <a name="example-4"></a>Příklad 4:
+#### <a name="example-4"></a>Příklad 4
 
 ```C
 // Total size = 8 bytes, alignment = 8 bytes (quadword).
@@ -181,7 +181,7 @@ Práce s zarovnanými daty má dva důsledky.
 
 - V propojených operacích nelze použít nezarovnané umístění.
 
-Pokud potřebujete přísnější zarovnání, použijte `__declspec(align(N))` v deklaracích proměnných. To způsobí, že kompilátor dynamicky zarovnává zásobník tak, aby splňoval vaše specifikace. Nicméně dynamická úprava zásobníku v době běhu může způsobit pomalejší provádění aplikace.
+Pokud požadujete přísnější zarovnání, použijte `__declspec(align(N))` na deklaracech proměnných. To způsobí, že kompilátor dynamicky zarovnává zásobník tak, aby splňoval vaše specifikace. Nicméně dynamická úprava zásobníku v době běhu může způsobit pomalejší provádění aplikace.
 
 ## <a name="register-usage"></a>Využití registrů
 
@@ -193,7 +193,7 @@ Následující tabulka popisuje, jak se každý registr používá napříč vol
 
 ||||
 |-|-|-|
-|Registrace|Stav|Použití|
+|Zaregistrovat|Status|Použití|
 |RAX|Permanentní|Registr návratových hodnot|
 |RCX|Permanentní|První celočíselný argument|
 |RDX|Permanentní|Druhý celočíselný argument|
@@ -206,12 +206,12 @@ Následující tabulka popisuje, jak se každý registr používá napříč vol
 |RBX|Stálé|Musí být zachováno volaným|
 |RBP|Stálé|Dá se použít jako ukazatel na rámec; musí být zachováno volaným|
 |RSP|Stálé|Ukazatel zásobníku|
-|XMM0, YMM0|Permanentní|První argument FP; první argument typu vector, když se používá `__vectorcall`|
-|XMM1, YMM1|Permanentní|Druhý argument FP; druhý argument typu vector, když se používá `__vectorcall`|
-|XMM2, YMM2|Permanentní|Třetí argument FP; třetí argument typu vector, když se používá `__vectorcall`|
-|XMM3, YMM3|Permanentní|Čtvrtý argument FP; čtvrtý argument typu vector, když se používá `__vectorcall`|
-|XMM4, YMM4|Permanentní|Musí být zachováno podle potřeby volajícím; pátý argument typu vector, když se používá `__vectorcall`|
-|XMM5, YMM5|Permanentní|Musí být zachováno podle potřeby volajícím; Šestý argument typu vector, když se používá `__vectorcall`|
+|XMM0, YMM0|Permanentní|První argument FP; první argument typu vektoru, `__vectorcall` když se používá|
+|XMM1, YMM1|Permanentní|Druhý argument FP; druhý argument typu vector, když `__vectorcall` se používá|
+|XMM2, YMM2|Permanentní|Třetí argument FP; třetí argument typu vector, když `__vectorcall` se používá|
+|XMM3, YMM3|Permanentní|Čtvrtý argument FP; čtvrtý argument typu vector, když `__vectorcall` se používá|
+|XMM4, YMM4|Permanentní|Musí být zachováno podle potřeby volajícím; pátý argument typu vektoru, `__vectorcall` když se používá|
+|XMM5, YMM5|Permanentní|Musí být zachováno podle potřeby volajícím; Šestý argument vektorového typu `__vectorcall` při použití|
 |XMM6:XMM15, YMM6:YMM15|Nevolatile (XMM), volatile (horní polovina YMM)|Musí být zachováno volaným. YMM Registry musí být zachovány podle potřeby volajícím.|
 
 Při ukončení funkce a při vstupu funkce na volání knihovny běhového prostředí C a volání systému Windows se očekává, že příznak směru v registru příznaků procesoru bude vymazán.
@@ -222,15 +222,15 @@ Podrobnosti o přidělování, zarovnání, typech funkcí a snímcích zásobn�
 
 ## <a name="prolog-and-epilog"></a>Prolog a epilog
 
-Každá funkce, která přiděluje místo v zásobníku, volá jiné funkce, ukládá nestálé registry nebo používá zpracování výjimek, musí mít prolog, jehož omezení adresy jsou popsána v části unwind data přidružená k příslušné položce tabulky funkcí a epilogy na adrese. každý výstup do funkce. Podrobnosti o požadovaném kódu prologu a epilogu na platformě x64 naleznete v tématu [prolog a epilog x64](prolog-and-epilog.md).
+Každá funkce, která přiděluje místo v zásobníku, volá jiné funkce, ukládá nestálé registry nebo používá zpracování výjimek, musí mít prolog, jehož omezení adresy jsou popsána v části unwind data přidružená k příslušné položce tabulky funkcí a epilogy při každém ukončení funkce. Podrobnosti o požadovaném kódu prologu a epilogu na platformě x64 naleznete v tématu [prolog a epilog x64](prolog-and-epilog.md).
 
 ## <a name="x64-exception-handling"></a>x64 – ošetření výjimek
 
-Informace o konvencích a datových strukturách, které se používají k implementaci strukturovaného zpracování výjimek a C++ chování zpracování výjimek v x64, naleznete v tématu [zpracování výjimek x64](exception-handling-x64.md).
+Informace o konvencích a datových strukturách používaných k implementaci strukturovaného zpracování výjimek a chování zpracování výjimek jazyka C++ v x64 naleznete v tématu [zpracování výjimek x64](exception-handling-x64.md).
 
 ## <a name="intrinsics-and-inline-assembly"></a>Vnitřní objekty a vložené sestavení
 
-Jedním z omezení pro kompilátor x64 je, že neexistují žádná vložená podpora assembleru. To znamená, že funkce, které nemohou být zapsány v jazyce C nebo C++ budou buď muset být zapsány jako podrutiny, nebo jako vnitřní funkce podporované kompilátorem. Některé funkce jsou citlivé na výkon, zatímco jiné nejsou. Funkce citlivé na výkon by měly být implementovány jako vnitřní funkce.
+Jedním z omezení pro kompilátor x64 je, že neexistují žádná vložená podpora assembleru. To znamená, že funkce, které nemohou být zapsány v jazyce C nebo C++, budou buď muset být zapsány jako podrutiny, nebo jako vnitřní funkce podporované kompilátorem. Některé funkce jsou citlivé na výkon, zatímco jiné nejsou. Funkce citlivé na výkon by měly být implementovány jako vnitřní funkce.
 
 Vnitřní objekty podporované kompilátorem jsou popsány v tématu [vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md).
 

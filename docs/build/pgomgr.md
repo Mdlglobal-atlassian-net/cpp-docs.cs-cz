@@ -14,55 +14,55 @@ ms.locfileid: "62295236"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Přidá data profilu z jednoho nebo více souborů .pgc do souboru .pgd.
+Přidá data profilu z jednoho nebo více souborů. pgc do souboru. pgd.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **pgomgr** [*options*] *pgcfiles* *pgdfile*
+> **pgomgr** [*Možnosti*] *pgcfiles* *pgdfile*
 
 ### <a name="parameters"></a>Parametry
 
-*Možnosti*<br/>
-Je možné zadat následující možnosti pro **pgomgr**:
+*nastavení*<br/>
+K **pgomgr**lze zadat následující možnosti:
 
-- **/ help** nebo **/?** Zobrazí dostupné **pgomgr** možnosti.
+- **/help** nebo **/?** Zobrazí dostupné možnosti **pgomgr** .
 
-- **/ clear** způsobí, že soubor .pgd vymazání všech informací o profilu. Nelze zadat .pgc souboru, když **/clear** je zadán.
+- **/clear** Způsobí vymazání souboru. pgd všechny informace o profilu. Když je zadaný **/clear** , nemůžete zadat soubor. pgc.
 
-- **/ detail** zobrazuje podrobné statistiky, včetně informací o pokrytí grafu toku.
+- **/Detail** Zobrazí podrobné statistiky, včetně informací o pokrytí grafu Flow.
 
-- **/ summary** zobrazí jednotlivých funkcích statistiky.
+- **/summary** Zobrazí statistiku pro jednotlivé funkce.
 
-- **/ Jedinečný** při použití s **/summary**, způsobí, že dekorované názvy funkce k zobrazení. Výchozí nastavení, když **/ jedinečný** nepoužívá, je pro názvy nedekorovaných funkce má být zobrazen.
+- **/Unique** Při použití s **/summary**způsobí, že se dekorují názvy funkcí, které se mají zobrazit. Výchozí hodnota, pokud se **/Unique** nepoužívá, je pro zobrazení nedekorovaných názvů funkcí.
 
-- **/ merge**\[**:**<em>n</em>] způsobí, že data v souboru .pgc nebo soubory, které mají být přidány do souboru .pgd. Volitelný parametr *n*, umožňuje určit, že má být přidána data *n* časy. Například pokud scénář obvykle bude Hotovo šestkrát tak, aby odrážely, jak často se provádí zákazníky, můžete provést jednou při spuštění testů a přidat do souboru .pgd šestkrát s **pgomgr /merge:6**.
+- **/Merge**\[**:**<em>n</em>] způsobí, že jsou data v souboru. pgc nebo soubory přidány do souboru. pgd. Volitelný parametr *n*umožňuje určit, že data by se měla přidat *n* krát. Například pokud by byl scénář obvykle proveden šestkrát, aby odrážel, jak často ho zákazníci provádějí, můžete to provést v rámci testovacího běhu a po šesti časech ho přidat do souboru. pgd pomocí **pgomgr/Merge: 6**.
 
 *pgcfiles*<br/>
-.Pgc jeden nebo více soubory, jejichž data profilu, které chcete sloučit do souboru .pgd. Můžete určit soubor .pgc jeden nebo více soubory .pgc. Pokud nezadáte žádné soubory .pgc **pgomgr** sloučí všechny soubory .pgc, jejichž názvy souborů jsou stejné jako soubor .pgd.
+Jeden nebo více souborů. pgc, jejichž data profilu chcete sloučit do souboru. pgd. Můžete zadat jeden soubor. pgc nebo více souborů. pgc. Pokud nezadáte žádné soubory. pgc, **pgomgr** sloučí všechny soubory. pgc, jejichž názvy souborů jsou stejné jako soubor. pgd.
 
 *pgdfile*<br/>
-Soubor .pgd, do které provádíte sloučení dat ze souboru .pgc nebo soubory.
+Soubor. PGD, do kterého slučujete data ze souboru. pgc nebo souborů.
 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+> Tento nástroj můžete spustit pouze z příkazového řádku pro vývojáře v aplikaci Visual Studio. Nemůžete ho spustit z příkazového řádku systému nebo z Průzkumníka souborů.
 
 ## <a name="example"></a>Příklad
 
-Příkaz v tomto příkladu vymaže myapp.pgd soubor dat profilu:
+Tento ukázkový příkaz vymaže soubor MyApp. pgd s daty profilu:
 
 `pgomgr /clear myapp.pgd`
 
-Příkaz v tomto příkladu přidá data profilu v myapp1.pgc do souboru .pgd třikrát:
+Tento ukázkový příkaz přičítá data profilu v souboru Myapp1. pgc do souboru. pgd třikrát:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-V tomto příkladu se k souboru myapp.pgd přidá data profilu ze všech vygenerovaných souborů myapp # .pgc.
+V tomto příkladu jsou data profilu ze všech souborů MyApp #. pgc přidána do souboru MyApp. pgd.
 
 `pgomgr -merge myapp1.pgd`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace na základě profilu](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>

@@ -28,15 +28,15 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce v rámci zdrojového programu provádí jeden nebo více konkrétních úkolů. Funkce **Main** může volat tyto funkce a provádět jejich příslušné úkoly. Když funkce **Main** volá jinou funkci, předá řízení spuštění funkci, takže provádění začíná prvním příkazem ve funkci. Funkce vrátí řízení na **Main** , pokud je proveden příkaz `return` nebo když je dosaženo konce funkce.
+Funkce v rámci zdrojového programu provádí jeden nebo více konkrétních úkolů. Funkce **Main** může volat tyto funkce a provádět jejich příslušné úkoly. Když funkce **Main** volá jinou funkci, předá řízení spuštění funkci, takže provádění začíná prvním příkazem ve funkci. Funkce vrátí řízení na **Main** , když je `return` proveden příkaz nebo když je dosaženo konce funkce.
 
 Všechny funkce, včetně **Main**, můžete deklarovat jako parametry. Pojem „parametr“ nebo „formální parametr“ odkazuje na identifikátor, který přijímá hodnotu předanou funkci. Informace o předávání argumentů parametrům naleznete v tématu [Parameters](../c-language/parameters.md) . Když jedna funkce volá jinou, volaná funkce přijme hodnoty svých parametrů z volající funkce. Tyto hodnoty jsou označovány jako „argumenty“. Můžete deklarovat formální parametry do **Main** , aby mohla přijímat argumenty z příkazového řádku pomocí tohoto formátu:
 
-Pokud chcete předat informace **Hlavní** funkci, jsou tyto parametry tradičně pojmenovány `argc` a `argv`, i když kompilátor jazyka C tyto názvy nevyžaduje. Typy parametrů `argc` a `argv` jsou definovány v jazyce C. Tradičně platí, že pokud je třetí parametr předán do **Main**, je tento parametr pojmenován `envp`. Příklady dále v této části ukazují, jak používat tyto tři parametry pro přístup k argumentům příkazového řádku. Následující části popisují tyto parametry.
+Pokud chcete předat informace **Hlavní** funkci, jsou tyto parametry tradičně pojmenované `argc` a `argv`, i když kompilátor jazyka C tyto názvy nevyžaduje. Typy parametrů `argc` a `argv` jsou definovány v jazyce C. Tradičně platí, že pokud je třetí parametr předán do **Main**, je tento parametr `envp`pojmenován. Příklady dále v této části ukazují, jak používat tyto tři parametry pro přístup k argumentům příkazového řádku. Následující části popisují tyto parametry.
 
 Popis verze geografického znaku **Main**najdete v tématu [použití wmain](../c-language/using-wmain.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[hlavní funkce a argumenty příkazového řádku (C++)](../cpp/main-function-command-line-args.md)\
+[Hlavní funkce a argumenty příkazového řádku (C++)](../cpp/main-function-command-line-args.md)\
 [Analýza argumentů příkazového řádku jazyka C](../c-language/parsing-c-command-line-arguments.md)

@@ -16,22 +16,22 @@ ms.locfileid: "62344730"
 ---
 # <a name="while-statement-c"></a>while – příkaz (C)
 
-`while` Příkaz umožňuje opakujte příkaz, dokud nebude NEPRAVDA zadaným výrazem.
+`while` Příkaz umožňuje opakovat příkaz, dokud se zadaný výraz nevrátí na hodnotu NEPRAVDA.
 
 ## <a name="syntax"></a>Syntaxe
 
 *příkaz iterace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zatímco (**  *výraz*  **)**  *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**while**–*příkaz* (*Expression***)**      
 
-*Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:
+*Výraz* musí být aritmetického typu nebo typu ukazatele. Provádění pokračuje následujícím způsobem:
 
-1. *Výraz* vyhodnocena.
+1. *Výraz* je vyhodnocen.
 
-1. Pokud *výraz* je počáteční hodnota false, text `while` příkazu není nikdy proveden a ovládání přejde z `while` příkaz dalšímu příkazu v programu.
+1. Pokud je *výraz* zpočátku nepravdivý, tělo `while` příkazu se nikdy nespustí a ovládací prvek se předává z `while` příkazu do dalšího příkazu v programu.
 
-   Pokud *výraz* je true (nenulový), provede se tělo příkazu a proces se opakuje, počínaje krokem 1.
+   Pokud je *výraz* true (nenulový), je proveden text příkazu a proces se opakuje od kroku 1.
 
-`while` Příkaz může také skončit při **přerušení**, `goto`, nebo `return` v rámci příkaz provede se tělo. Použití **pokračovat** příkaz k ukončení iterace bez ukončení `while` smyčky. **Pokračovat** příkaz předá řízení následující iteraci `while` příkazu.
+Příkaz může také končit při spuštění **přerušení**, `goto`nebo `return` v rámci těla příkazu. `while` Použijte příkaz **Continue** k ukončení iterace bez ukončení `while` smyčky. Příkaz **Continue** předá řízení následující iteraci `while` příkazu.
 
 Zde je příklad příkazu `while`:
 
@@ -43,8 +43,8 @@ while ( i >= 0 )
 }
 ```
 
-Tento příklad zkopíruje znaky z `string2` k `string1`. Pokud `i` je větší než nebo rovno 0, `string2[i]` přiřazen `string1[i]` a `i` se odečte. Když `i` dosáhne nebo klesne pod 0, provádění `while` příkaz ukončí.
+Tento příklad kopíruje znaky `string2` z `string1`do. Pokud `i` je větší než nebo rovno 0, `string2[i]` je přiřazeno `string1[i]` a `i` sníženo. Když `i` dosáhne nebo klesne pod 0, spuštění `while` příkazu skončí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [while – příkaz (C++)](../cpp/while-statement-cpp.md)
