@@ -11,9 +11,9 @@ ms.locfileid: "62157880"
 ---
 # <a name="storage-of-bit-fields"></a>Úložiště bitových polí
 
-**ANSI 3.5.2.1** pořadí přidělování bitových polí v rámci celé číslo
+**3.5.2.1 ANSI** Pořadí přidělení bitových polí v rámci typu int
 
-Bitová pole jsou přiděleny v rámci celé číslo z nejméně významné nejvýznamnější bit. V následujícím kódu
+Bitová pole jsou přidělována v rámci celého čísla z nejméně významných bitů. V následujícím kódu
 
 ```
 struct mybitfields
@@ -31,7 +31,7 @@ int main( void )
 }
 ```
 
-bity by být uspořádány takto:
+bity budou uspořádány takto:
 
 ```
 00000001 11110010
@@ -40,6 +40,6 @@ cccccccb bbbbaaaa
 
 Jelikož procesory 80x86 ukládají nižší bajt celočíselných hodnot před vyšší bajt, bude celé číslo 0x01F2 ve fyzické paměti uloženo jako 0xF2 následované 0x01.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

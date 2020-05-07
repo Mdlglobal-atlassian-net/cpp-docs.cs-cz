@@ -17,10 +17,10 @@ ms.locfileid: "62233215"
 
 Typ převodu provedený pro argumenty ve volání funkce závisí na přítomnosti prototypu funkce (dopředná deklarace) s deklarovanými typy argumentů volané funkce.
 
-Pokud prototyp funkce je k dispozici a zahrnuje deklarované typy argumentů, kompilátor provede kontrolu typů (viz [funkce](../c-language/functions-c.md)).
+Pokud prototyp funkce je přítomen a obsahuje deklarované typy argumentů, kompilátor provede kontrolu typu (viz [funkce](../c-language/functions-c.md)).
 
-Pokud žádný prototyp funkce přítomen není, jsou pro argumenty volání funkce provedeny pouze běžné aritmetické převody. Tyto převody jsou provedeny nezávisle na všech argumentech ve volání. To znamená, že **float** hodnota je převedena na **double**; `char` nebo **krátký** hodnota je převedena na `int`; a `unsigned char` nebo **unsigned short** se převede na `unsigned int`.
+Pokud žádný prototyp funkce přítomen není, jsou pro argumenty volání funkce provedeny pouze běžné aritmetické převody. Tyto převody jsou provedeny nezávisle na všech argumentech ve volání. To znamená, že hodnota **typu float** je převedena na **typ Double**; `char` nebo **krátká** hodnota je převedena na `int`. a `unsigned char` **krátká znaménka nebo nebo bez znaménka** jsou převedena na `unsigned int`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody typu](../c-language/type-conversions-c.md)

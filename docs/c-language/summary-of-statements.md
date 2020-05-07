@@ -13,55 +13,55 @@ ms.locfileid: "74856992"
 
 *příkaz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz s popiskem*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*složený* příkaz<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*složený příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz Expression-*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výběru – příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iterace – příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Výběr – příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz iterace*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz skoku*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* \*pro konkrétní Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* \*specifický pro společnost Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except – příkaz*  / \* specifický pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-příkaz*  / \* specifický pro společnost Microsoft\*/
 
 *příkaz skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pokračovat;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Break;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifikátor*  **;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pokraeovat**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**rozdělován**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**návratový** *výraz*<sub>opt</sub> **;**
 
 *složený příkaz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *Declaration-list*<sub>opt</sub> *Statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklarace-seznam*příkazů<sub>opt</sub> *-list*<sub>opt</sub> **}**
 
 *seznam deklarací*:<br/>
-*deklarace* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;*deklarace* &nbsp;*deklarace seznamu*
+&nbsp;&nbsp;&nbsp;&nbsp;*změny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *seznamu deklarací* *declaration*
 
 *seznam příkazů*:<br/>
-&nbsp;&nbsp;&nbsp;*příkaz* &nbsp;<br/>
-&nbsp;&nbsp; *&nbsp;příkazu &nbsp;* *-list*
+&nbsp;&nbsp;&nbsp;&nbsp;*vydá*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;příkaz *-list –* *příkaz*
 
 *příkaz Expression*:<br/>
-&nbsp;&nbsp;&nbsp;*výraz*&nbsp;<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz*<sub>opt</sub> **;**
 
 *příkaz iterace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zatímco (**  *výraz*  **)**  *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**do***příkazu*do **(** *výraz* **);**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pro (** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **)** *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**while**–*příkaz* (*Expression***)**      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**do**  *– příkaz*  **while (**  *výraz*  **);**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pro (**  *výraz*<sub>opt</sub> **;** *Expression*<sub>opt</sub> **;** *výraz*<sub>opt</sub> **)** – *příkaz*
 
 *příkaz výběru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (** *výraz* **)** *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (** *výraz* **)** *příkaz* **else** *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**if**–*příkaz* (*Expression***)**      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if**–*příkaz* *výrazu***)***statement***Else**          <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Switch**–*příkaz* (*výraz***)**      
 
 *příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* **:** *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**případ**  *konstantní výraz*  **:**  *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:**  *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*  **: –**  *příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *konstanta-výraz*  **:**  *příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Default: –**  *příkaz*
 
-*try-except – příkaz*:/\* \*specifický pro Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except (** *výraz* **)** *compound-statement*
+*try-except – příkaz*:/\* specifické pro Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz* **__try**složeného*příkazu* **__except (***Expression***)**        
 
-*try-finally-příkaz*:/\* \*specifický pro Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-příkaz*:/\* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *složený* příkaz **__finally**  *složeného příkazu*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika struktury fráze](../c-language/phrase-structure-grammar.md)

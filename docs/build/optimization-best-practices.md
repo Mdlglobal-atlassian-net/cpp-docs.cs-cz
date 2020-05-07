@@ -14,68 +14,68 @@ ms.locfileid: "81328442"
 ---
 # <a name="optimization-best-practices"></a>Doporučené postupy optimalizace
 
-Tento dokument popisuje některé osvědčené postupy pro optimalizaci aplikací jazyka C++ v sadě Visual Studio.
+Tento dokument popisuje některé osvědčené postupy pro optimalizaci programů v jazyce C++ v aplikaci Visual Studio.
 
-## <a name="compiler-and-linker-options"></a>Možnosti kompilátoru a propojovacího zařízení
+## <a name="compiler-and-linker-options"></a>Možnosti kompilátoru a linkeru
 
-### <a name="profile-guided-optimization"></a>Optimalizace s asistencí profilu
+### <a name="profile-guided-optimization"></a>Optimalizace na základě profilu
 
-Visual Studio podporuje *optimalizaci s asistencí profilu* (PGO). Tato optimalizace používá data profilu z trénovacích spuštění instrumentované verze aplikace k pozdější optimalizaci aplikace. Použití PGO může být časově náročné, takže to nemusí být něco, co používá každý vývojář, ale doporučujeme používat PGO pro konečnou verzi produktu. Další informace naleznete v [tématu Optimalizace s asistencí profilu](profile-guided-optimizations.md).
+Visual Studio podporuje *optimalizaci na základě profilu* (PGO). Tato optimalizace používá data profilu z cvičení provádění instrumentované verze aplikace až po pozdější optimalizaci aplikace. Použití PGO může být časově náročné, takže se nemusí jednat o něco, co používá každý vývojář, ale doporučujeme použít PGO pro finální sestavení vydání produktu. Další informace najdete v tématu [optimalizace na základě profilu](profile-guided-optimizations.md).
 
-Kromě toho byla vylepšena *optimalizace celého programu* (také se označuje jako generování kódu doby propojení) a optimalizace **/O1** a **/O2.** Obecně platí, že aplikace zkompilovaná s jednou z těchto možností bude rychlejší než stejná aplikace zkompilovaná s dřívějším kompilátorem.
+Kromě toho je *optimalizace celého programu* (také ví, že se jedná o generování kódu při propojování) a vylepšily se optimalizace **/O1** a **/O2** . Obecně platí, že aplikace kompilovaná s jednou z těchto možností bude rychlejší než stejná aplikace kompilována s dřívějším kompilátorem.
 
-Další informace naleznete v [tématech /GL (Optimalizace celého programu)](reference/gl-whole-program-optimization.md) a [/O1, /O2 (Minimalizovat velikost, Maximalizovat rychlost)](reference/o1-o2-minimize-size-maximize-speed.md).
+Další informace najdete v tématech [/GL (celková optimalizace programu)](reference/gl-whole-program-optimization.md) a [/O1,/O2 (minimalizujte velikost, Maximalizujte rychlost)](reference/o1-o2-minimize-size-maximize-speed.md).
 
 ### <a name="which-level-of-optimization-to-use"></a>Jakou úroveň optimalizace použít
 
-Pokud je to možné, konečná verze sestavení by měla být kompilována s optimalizací s asistencí profilu. Pokud není možné vytvářet s PGO, ať už z důvodu nedostatečné infrastruktury pro spuštění instrumentovaných sestavení nebo nemají přístup ke scénářům, pak doporučujeme sestavení s optimalizace celého programu.
+Pokud je to možné, konečné buildy vydaných verzí by se měly kompilovat s optimalizacemi na základě profilu. Pokud není možné sestavovat pomocí PGO, ať už z důvodu nedostatečné infrastruktury pro spouštění instrumentovaná sestavení nebo nemáte přístup k scénářům, doporučujeme sestavování s optimalizací celé aplikace.
 
-Přepínač **/Gy** je také velmi užitečný. Generuje samostatný COMDAT pro každou funkci, dává propojovacímu systému větší flexibilitu, pokud jde o odebrání neodkazovaných COMDATs a skládání COMDAT. Jedinou nevýhodou použití **/Gy** je, že může způsobit problémy při ladění. Proto se obecně doporučuje používat. Další informace naleznete v tématu [/Gy (Enable Function-Level Linking)](reference/gy-enable-function-level-linking.md).
+Přepínač **/Gy** je také velmi užitečný. Generuje samostatné COMDAT pro každou funkci, takže linker větší flexibility při odebrání neodkazované sekvence COMDAT a COMDAT skládání. Jediným nevýhodou pro použití **/Gy** je to, že může způsobit problémy při ladění. Proto se obvykle doporučuje použít. Další informace najdete v tématu [/Gy (povolení propojení na úrovni funkcí)](reference/gy-enable-function-level-linking.md).
 
-Pro propojení v 64bitových prostředích se doporučuje použít možnost propojovacího systému **/OPT:REF,ICF** a v 32bitových prostředích **/OPT:REF.** Další informace naleznete v tématu [/OPT (Optimalizace)](reference/opt-optimizations.md).
+Pro propojení v 64 prostředích doporučujeme použít možnost linkeru **/OPT: REF, ICF** a v 32 prostředích **/OPT: ref** . Další informace najdete v tématu [/opt (optimalizace)](reference/opt-optimizations.md).
 
-Důrazně se také doporučuje generovat ladicí symboly, a to i s optimalizovanými sestaveními verzí. Nemá vliv na generovaný kód a usnadňuje ladění aplikace, v případě potřeby.
+Doporučuje se také vytvořit symboly ladění i s optimalizovanými sestaveními vydaných verzí. Neovlivňuje generovaný kód a díky tomu je mnohem jednodušší ladit aplikaci, pokud je potřeba.
 
-### <a name="floating-point-switches"></a>Přepínače s plovoucí desetinnou desetinnou tázkami
+### <a name="floating-point-switches"></a>Přepínače s plovoucí desetinnou čárkou
 
-Možnost kompilátoru **/Op** byla odebrána a byly přidány následující čtyři možnosti kompilátoru zabývající se optimalizací s plovoucí desetinnou desetinnou hmezimnou:
+Možnost kompilátoru **/op** byla odebrána a byly přidány následující čtyři možnosti kompilátoru týkající se optimalizace plovoucí desetinné čárky:
 
 |||
 |-|-|
-|**/fp:přesné**|Toto je výchozí doporučení a ve většině případů by mělo být použito.|
-|**/fp:rychlé**|Doporučeno, pokud je výkon nanejvýš důležitý, například ve hrách. Výsledkem bude nejrychlejší výkon.|
-|**/fp:striktní**|Doporučuje se, pokud je požadováno přesné výjimky s plovoucí desetinnou desetinnou a chování IEEE. Výsledkem bude nejpomalejší výkon.|
-|**/fp:kromě[-]**|Lze použít ve spojení s **/fp:strict** nebo **/fp:precise**, ale ne **/fp:fast**.|
+|**/FP: přesný**|Toto je výchozí doporučení a mělo by se používat ve většině případů.|
+|**/FP: Fast**|Doporučuje se, pokud je výkon nejvyšší důležitosti, například ve hrách. Výsledkem bude nejrychlejší výkon.|
+|**/FP: Strict**|Doporučuje se, pokud jsou požadovány přesné výjimky s plovoucí desetinnou čárkou a chování IEEE. Výsledkem bude nejpomalejší výkon.|
+|**/FP: s výjimkou [-]**|Lze použít ve spojení s **/FP: Strict** nebo **/FP: přesný**, ale ne **/FP: Fast**.|
 
-Další informace naleznete v tématu [/fp (Zadat chování s plovoucí desetinnou tázkem).](reference/fp-specify-floating-point-behavior.md)
+Další informace najdete v tématu [/FP (určení chování s plovoucí](reference/fp-specify-floating-point-behavior.md)desetinnou čárkou).
 
-## <a name="optimization-declspecs"></a>Optimalizace declspecs
+## <a name="optimization-declspecs"></a>Declspecs optimalizace
 
-V této části se podíváme na dva declspecs, které `__declspec(restrict)` `__declspec(noalias)`mohou být použity v programech na pomoc výkonu: a .
+V této části se podíváme na dva declspecs, které se dají použít v programech pro zvýšení `__declspec(restrict)` výkonu `__declspec(noalias)`: a.
 
-Declspec `restrict` lze použít pouze pro deklarace funkce, které vracejí ukazatel, například`__declspec(restrict) void *malloc(size_t size);`
+Declspec `restrict` se dá použít jenom pro deklarace funkce, které vracejí ukazatel, jako je například.`__declspec(restrict) void *malloc(size_t size);`
 
-Declspec se `restrict` používá u funkcí, které vracejí nealiased ukazatele. Toto klíčové slovo se používá pro `malloc` implementaci knihovny C-Runtime, protože nikdy nevrátí hodnotu ukazatele, která je již používána v aktuálním programu (pokud neděláte něco nezákonného, například použití paměti po uvolnění).
+`restrict` Declspec se používá ve funkcích, které vracejí ukazatele s nealiasem. Toto klíčové slovo se používá pro implementaci běhové knihovny jazyka C `malloc` , protože nikdy nevrátí hodnotu ukazatele, která je již v aktuálním programu používána (Pokud neprovádíte něco neoprávněně, například při použití paměti po uvolnění paměti).
 
-Declspec `restrict` poskytuje kompilátoru další informace pro provádění optimalizace kompilátoru. Jednou z nejtěžších věcí pro kompilátor určit, je jaké ukazatele alias jiné ukazatele a pomocí těchto informací výrazně pomáhá kompilátoru.
+`restrict` Declspec poskytuje kompilátoru více informací pro provádění optimalizací kompilátoru. Jedním z nejzávažných věcí pro kompilátor pro určení je to, které ukazatele aliasují jiné ukazatele a využívají tyto informace významně pomáhají kompilátorům.
 
-Stojí za to zdůraznit, že se jedná o slib kompilátoru, nikoli něco, co kompilátor ověří. Pokud program používá `restrict` tento declspec nevhodně, může mít program nesprávné chování.
+Je potřeba upozornit na to, že se jedná o příslib kompilátoru, ne o něco, co kompilátor ověří. Pokud váš program používá tuto `restrict` declspec nevhodným způsobem, váš program pravděpodobně nemá správné chování.
 
-Další informace naleznete v tématu [omezení](../cpp/restrict.md).
+Další informace najdete v tématu [omezení](../cpp/restrict.md).
 
-Declspec `noalias` je také použita pouze pro funkce a označuje, že funkce je poločistá funkce. Poločistá funkce je funkce, která odkazuje nebo upravuje pouze místní, argumenty a dereference argumentů první úrovně. Tento declspec je příslib kompilátoru a pokud funkce odkazuje na globální nebo druhé úrovně indirections argumentů ukazatele pak kompilátor může generovat kód, který přeruší aplikaci.
+`noalias` Declspec se také používá jenom pro funkce a označuje, že funkce je částečně čistá. Částečně čistá funkce je ta, která odkazuje nebo upravuje pouze lokální hodnoty, argumenty a přesměrování první úrovně argumentů. Tento declspec je příslib kompilátoru, a pokud funkce odkazuje na Globals nebo na druhé úrovni argumentů ukazatelů, kompilátor může vygenerovat kód, který aplikaci přeruší.
 
-Další informace naleznete v tématu [noalias](../cpp/noalias.md).
+Další informace najdete v tématu [jiné](../cpp/noalias.md).
 
-## <a name="optimization-pragmas"></a>Optimalizace pragmas
+## <a name="optimization-pragmas"></a>Direktivy pragma optimalizace
 
-Existuje také několik užitečných pragmas pro pomoc optimalizovat kód. První, o které budeme `#pragma optimize`diskutovat, je:
+K dispozici je také několik užitečných direktiv pragma pro pomoc s optimalizací kódu. První z nich se `#pragma optimize`zabývá:
 
 ```cpp
 #pragma optimize("{opt-list}", on | off)
 ```
 
-Tento pragma umožňuje nastavit danou úroveň optimalizace na základě funkce po funkci. To je ideální pro ty vzácné případy, kdy dojde k chybě aplikace, když je daná funkce kompilována s optimalizací. Pomocí této funkce můžete vypnout optimalizace pro jednu funkci:
+Tato direktiva pragma umožňuje nastavit danou úroveň optimalizace na základě funkcí. To je ideální pro případy, kdy dojde k chybě vaší aplikace, když je daná funkce zkompilována s optimalizací. Tuto možnost můžete použít k vypnutí optimalizace pro jednu funkci:
 
 ```cpp
 #pragma optimize("", off)
@@ -83,53 +83,53 @@ int myFunc() {...}
 #pragma optimize("", on)
 ```
 
-Další informace naleznete v [tématu optimalizace](../preprocessor/optimize.md).
+Další informace najdete v tématu věnovaném [optimalizaci](../preprocessor/optimize.md).
 
-Vkládání je jedním z nejdůležitějších optimalizací, které kompilátor provádí a zde mluvíme o pár pragmas, které pomáhají změnit toto chování.
+Vkládání je jedním z nejdůležitějších optimalizací, které kompilátor provádí, a tady hovoříme o několika direktivách pragma, které vám pomůžou toto chování upravit.
 
-`#pragma inline_recursion`je užitečné pro určení, zda chcete, aby aplikace mohla vkládat rekurzivní volání. Ve výchozím nastavení je vypnutý. Pro mělké rekurze malých funkcí můžete zapnout. Další informace naleznete [v tématu inline_recursion](../preprocessor/inline-recursion.md).
+`#pragma inline_recursion`je užitečné pro určení, zda chcete, aby aplikace mohla být vložena do rekurzivního volání. Ve výchozím nastavení je vypnutý. V případě omezené rekurze malých funkcí, které můžete zapnout. Další informace najdete v tématu [inline_recursion](../preprocessor/inline-recursion.md).
 
-Dalším užitečným pragma pro omezení `#pragma inline_depth`hloubky vkládání je . To je obvykle užitečné v situacích, kdy se pokoušíte omezit velikost programu nebo funkce. Další informace naleznete [v tématu inline_depth](../preprocessor/inline-depth.md).
+Další užitečnou direktivou pragma pro omezení hloubky vkládání `#pragma inline_depth`je. To je obvykle užitečné v situacích, kdy se snažíte omezit velikost programu nebo funkce. Další informace najdete v tématu [inline_depth](../preprocessor/inline-depth.md).
 
-## <a name="__restrict-and-__assume"></a>__restrict \_a _assume
+## <a name="__restrict-and-__assume"></a>__restrict a \__assume
 
-V sadě Visual Studio existuje několik klíčových slov, která mohou pomoci s výkonem: [__restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
+V aplikaci Visual Studio existuje několik klíčových slov, které mohou přispět k výkonu: [__restrict](../cpp/extension-restrict.md) a [__assume](../intrinsics/assume.md).
 
-Za prvé, je `__restrict` třeba `__declspec(restrict)` poznamenat, že a jsou dvě různé věci. Zatímco oni jsou poněkud příbuzné, jejich sémantika jsou různé. `__restrict`je kvalifikátor typu, jako `const` nebo `volatile`, ale výhradně pro typy ukazatelů.
+Nejdřív by se měla poznamenat, `__restrict` že `__declspec(restrict)` a jsou dvě různé věci. I když se trochu vztahují, jejich sémantika se liší. `__restrict`je kvalifikátor typu, jako `const` nebo `volatile`, ale výhradně pro typy ukazatelů.
 
-Ukazatel, který je `__restrict` změněn s se označuje jako *ukazatel __restrict*. Ukazatel __restrict je ukazatel, ke kterému lze \_přistupovat pouze prostřednictvím ukazatele _restrict. Jinými slovy jiný ukazatel nelze použít pro přístup \_k datům odkazuje ukazatel _restrict.
+Ukazatel, který je upraven pomocí `__restrict` , je označován jako *ukazatel __restrict*. Ukazatel __restrict je ukazatel, ke kterému lze přistupovat pouze prostřednictvím \_ukazatele _restrict. Jinými slovy, jiný ukazatel nelze použít pro přístup k datům, na která ukazuje ukazatel \__restrict.
 
-`__restrict`může být výkonný nástroj pro optimalizátor Microsoft C++, ale používejte jej s velkou péčí. Pokud je použit nesprávně, optimalizátor může provést optimalizaci, která by přerušila vaši aplikaci.
+`__restrict`může se jednat o výkonný nástroj pro optimalizaci Microsoft C++, ale používejte ho s velkou opatrností. Při nesprávném použití může Optimalizátor provést optimalizaci, která by přerušila vaši aplikaci.
 
-Klíčové `__restrict` slovo nahradí přepínač **/Oa** z předchozích verzí.
+`__restrict` Klíčové slovo nahrazuje přepínač **/OA** z předchozích verzí.
 
-S `__assume`, může vývojář říct kompilátoru, aby předpoklady o hodnotě některé proměnné.
+Pomocí `__assume`nástroje může vývojář říct kompilátoru, aby vyvedl předpoklady o hodnotě některé proměnné.
 
-Například `__assume(a < 5);` říká optimalizátoru, že `a` na tomto řádku kódu je proměnná menší než 5. Opět je to slib kompilátoru. Pokud `a` je skutečně 6 v tomto bodě v programu pak chování programu po kompilátoru optimalizoval nemusí být to, co byste očekávali. `__assume`je nejužitečnější před switch příkazy a/nebo podmíněné výrazy.
+Například `__assume(a < 5);` instruuje Optimalizátor, který na tomto řádku kódu je proměnná `a` menší než 5. Znovu se jedná o příslib kompilátoru. Pokud `a` je v tomto okamžiku v programu skutečně 6, pak chování programu po optimalizaci kompilátoru nemusí být to, co byste očekávali. `__assume`je nejužitečnější před přepínat příkazy nebo podmíněnými výrazy.
 
-Existují určitá omezení `__assume`. Za prvé, jako `__restrict`, je to jen návrh, takže kompilátor je zdarma ignorovat. Také `__assume` v současné době pracuje pouze s proměnnými nerovnosti proti konstantám. Nešíří symbolické nerovnosti, například assume(a < b).
+Existují určitá omezení `__assume`. Jako první, `__restrict`podobně jako, je pouze návrh, takže kompilátor je zdarma ignorovat. V `__assume` současné době funguje pouze s proměnnými nerovnosti před konstantami. Nešíří tak symbolické nerovnosti, například Předpokládejme (a < b).
 
-## <a name="intrinsic-support"></a>Jiskrová podpora
+## <a name="intrinsic-support"></a>Vnitřní podpora
 
-Vnitřní jsou volání funkcí, kde kompilátor má vnitřní znalosti o volání a místo volání funkce v knihovně, vydává kód pro tuto funkci. Soubor \<záhlaví intrin.h> obsahuje všechny dostupné vnitřní objekty pro každou z podporovaných hardwarových platforem.
+Vnitřní objekty jsou volání funkcí, kde má kompilátor vnitřní znalosti o volání a spíše než volání funkce v knihovně, vygeneruje kód pro tuto funkci. Hlavičkový soubor \<intrin. h> obsahuje všechny dostupné vnitřní funkce pro každou z podporovaných hardwarových platforem.
 
-Vnitřní objekty dávají programátorovi možnost přejít hluboko do kódu bez nutnosti použití sestavení. Existuje několik výhod pro použití vnitřních?
+Vnitřní prvky poskytují programátorovi možnost přejít hluboko do kódu bez nutnosti používat sestavení. Použití vnitřních objektů přináší několik výhod:
 
-- Váš kód je přenosnější. Některé vnitřní objekty jsou k dispozici na více architektur procesoru.
+- Váš kód je lépe přenosný. Několik vnitřních objektů je dostupných na více architekturách procesoru.
 
-- Váš kód je čitelnější, protože kód je stále zapsán v jazyce C/C++.
+- Čtení kódu je snazší, protože kód je stále napsán v jazyce C/C++.
 
-- Váš kód získá výhodu optimalizace kompilátoru. Jak se kompilátor zlepšuje, generování kódu pro vnitřní objekty se zlepšuje.
+- Váš kód získá výhodu optimalizace kompilátoru. Jak je kompilátor lepší, zlepšuje se generování kódu pro vnitřní objekty.
 
-Další informace naleznete [v tématu Compiler Intrinsics](../intrinsics/compiler-intrinsics.md).
+Další informace najdete v tématu [vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-Je výkon přístupů spojené s pomocí výjimky. Některá omezení jsou zavedeny při použití try bloky, které brání kompilátoru provádět určité optimalizace. Na platformách x86 je další snížení výkonu z try bloků z důvodu další informace o stavu, které musí být generovány během provádění kódu. Na 64bitových platformách try bloky nesnižují výkon tolik, ale jakmile je vyvolána výjimka, proces hledání obslužné rutiny a odvíjení zásobníku může být nákladné.
+Došlo k dosažení výkonu spojených s používáním výjimek. Některá omezení jsou představena při použití bloků try, které brání kompilátoru v provádění určitých optimalizací. Na platformách x86 existuje další snížení výkonu z bloků try z důvodu dalších informací o stavu, které musí být generovány při provádění kódu. Na 64 64bitových platformách testovaný blok nesnižuje výkon, ale jakmile je vyvolána výjimka, proces nalezení obslužné rutiny a odvinutí zásobníku může být nákladný.
 
-Proto se doporučuje vyhnout se zavedení try/catch bloky do kódu, který není opravdu potřebuje. Pokud je nutné použít výjimky, použijte synchronní výjimky, pokud je to možné. Další informace naleznete [v tématu Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
+Proto se doporučuje vyhnout se zavlečení bloku try/catch do kódu, který ho skutečně nepotřebuje. Pokud je nutné použít výjimky, použijte synchronní výjimky, pokud je to možné. Další informace naleznete v tématu [strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
-Nakonec vyvolat výjimky pouze pro výjimečné případy. Použití výjimek pro obecný tok řízení pravděpodobně způsobí, že dojde k utrpět výkon.
+Nakonec vyvolejte výjimky pouze pro výjimečné případy. Použití výjimek pro obecný tok řízení způsobí, že dojde ke zhoršení výkonu.
 
 ## <a name="see-also"></a>Viz také
 

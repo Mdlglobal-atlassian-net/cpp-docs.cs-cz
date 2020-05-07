@@ -22,29 +22,29 @@ Deklarace funkce předchází definici funkce a určuje název, návratový typ,
 ## <a name="syntax"></a>Syntaxe
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;atribut *deklarace-specifikátor* *-SEQ*<sub>opt</sub> *-deklarátor-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – atribut specifikátors* *-SEQ*<sub>opt</sub> *init-deklarátor-list*<sub>opt</sub> **;**
 
-/\* *atribut – vlastnost SEQ*<sub>je specifická</sub> pro společnost Microsoft \*/
+/\**atribut-seq*<sub>opt</sub> je specifický pro společnost Microsoft\*/
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru třídy úložiště* – *specifikátory*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru typu* *– Povolit specifikátory*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ-specifikátor deklarace kvalifikátoru* *– specifikátory*<sub>opt</sub>
 
-*init-declarator-list*:<br/>
+*init-deklarátor-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor-list*  **,**  *init-deklarátor*
 
 *init-deklarátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicializátor* deklarátor
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatelem*<sub>opt</sub> *Direct-deklarátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*Direct-deklarátor*:/\* / funkce deklarátor \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**   / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+*Direct-deklarátor*:/\* A – funkce deklarátor\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(***parametr-Type-list***)**   / \* – nový styl deklarátor      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(opt***-list*<sub>opt</sub> **)**  / \* zastaralý styl deklarátor    \*/
 
 Prototyp má stejný tvar jako definice funkce, s tím rozdílem, že je ukončen středníkem hned za pravou závorku a proto nemá žádné tělo. V obou případech musí návratový typ souhlasit s návratovým typem zadaným v definici funkce.
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 V části **/ze**je značka stále zadána v globálním rozsahu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../c-language/functions-c.md)
+[Functions](../c-language/functions-c.md)

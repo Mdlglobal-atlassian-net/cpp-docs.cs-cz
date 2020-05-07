@@ -11,14 +11,14 @@ ms.locfileid: "62234220"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostika vytištěná podle funkce assert
 
-**ANSI 4.2** diagnostické zprávy vytištěné funkcí a její chování **vyhodnocení** – funkce
+**ANSI 4,2** Diagnostika vytiskla nástrojem a chování při ukončení funkce **Assert**
 
-**Vyhodnocení** funkce vytiskne diagnostickou zprávu a zavolá **přerušit** rutině, pokud je výraz nepravdivý (0). Diagnostická zpráva má tvar
+Funkce **Assert** vytiskne diagnostickou zprávu a zavolá rutinu **Abort** , pokud má výraz hodnotu false (0). Diagnostická zpráva má tvar
 
-> **Chyba kontrolního výrazu**: <em>výraz</em>**, soubor** <em>filename</em>**, řádek** *číslo řádku*
+> **Chyba kontrolního výrazu**: <em>výraz</em>**,** <em>název</em>souboru **, řádek** *číslo řádku*
 
-kde *filename* je název zdrojového souboru a *linenumber* je číslo řádku výrazu, který se ve zdrojovém souboru se nezdařilo. Pokud nebyla provedena žádná akce *výraz* hodnotu true (nenulovou).
+kde *filename* je název zdrojového souboru a *číslo řádku* je číslo řádku kontrolního výrazu, který selhal ve zdrojovém souboru. Pokud je *výraz* true (nenulový), není provedena žádná akce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

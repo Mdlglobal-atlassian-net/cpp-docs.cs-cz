@@ -15,61 +15,61 @@ ms.locfileid: "62234518"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 
-Zbytek tohoto oddílu popisuje formulář opravdu zavřít a význam deklarace pro tyto typy proměnných uvedené v tomto seznamu. Konkrétně se zbývající části vysvětlují, jak deklarovat následující:
+Zbytek této části popisuje formulář a význam deklarací pro typy proměnných shrnuté v tomto seznamu. Konkrétně tyto části vysvětlují, jak deklarovat následující:
 
 |Typ proměnné|Popis|
 |----------------------|-----------------|
-|[Jednoduché proměnné](../c-language/simple-variable-declarations.md)|Jednou hodnotou proměnné typu s plovoucí desetinnou čárkou nebo celočíselné|
-|[Pole](../c-language/array-declarations.md)|Proměnné se skládá z kolekce elementů se stejným typem|
-|[Ukazatele](../c-language/pointer-declarations.md)|Proměnné, které bod na jiné proměnné a proměnné umístění (ve formě adresy) místo hodnoty obsahují|
-|[Výčet proměnné](../c-language/c-enumeration-declarations.md)|Jednoduché proměnné s integral zadejte tuto hodnotu uchování jeden z sadou pojmenovaných celočíselných konstant|
-|[Struktury](../c-language/structure-declarations.md)|Proměnné se skládá z kolekce hodnot, které mohou mít různé typy|
-|[Sjednocení](../c-language/union-declarations.md)|Proměnné se skládá z několika hodnot různých typů, které zabírají stejné prostoru úložiště|
+|[Jednoduché proměnné](../c-language/simple-variable-declarations.md)|Proměnné s jednou hodnotou s typem integrálu nebo s plovoucí desetinnou čárkou|
+|[Pole](../c-language/array-declarations.md)|Proměnné složené z kolekce elementů se stejným typem|
+|[Ukazatele](../c-language/pointer-declarations.md)|Proměnné, které odkazují na jiné proměnné a obsahují umístění proměnných (ve formě adres) místo hodnot|
+|[Proměnné výčtu](../c-language/c-enumeration-declarations.md)|Jednoduché proměnné s celočíselným typem, které uchovávají jednu hodnotu ze sady pojmenovaných celočíselných konstant.|
+|[Struktury](../c-language/structure-declarations.md)|Proměnné složené z kolekce hodnot, které mohou mít různé typy|
+|[Sjednocení](../c-language/union-declarations.md)|Proměnné složené z několika hodnot různých typů, které zabírají stejný prostor úložiště|
 
-Deklarátor je součástí deklarace, která určuje název, který má být zavedena do programu. Modifikátory může obsahovat například <strong>\*</strong> (ukazatel-do) a klíčových slov Microsoft konvence volání.
+Deklarátor je část deklarace, která určuje název, který se má do programu začlenit. Může obsahovat modifikátory, jako je <strong>\*</strong> například (ukazatel na) a jakékoli klíčové slovo konvence volání společnosti Microsoft.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-V deklarátoru
+V deklarátor
 
 ```C
 __declspec(thread) char *var;
 ```
 
-`char` je specifikátor typu `__declspec(thread)` a `*` jsou modifikátory, a `var` je název identifikátoru.
+`char`je specifikátor typu `__declspec(thread)` a `*` jsou modifikátory a `var` je název identifikátoru.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Chcete-li deklarovat pole hodnot, ukazatele na hodnoty a funkce, která vrátí hodnotu zadaného typu použijete deklarátory. Deklarátory se vyskytují v deklaracích pole a ukazatel je popsáno dále v této části.
+Deklarátory použijete k deklaraci polí hodnot, ukazatelů na hodnoty a funkcí, které vracejí hodnoty zadaného typu. Deklarátory se zobrazí v deklaracích Array a pointer popsaných dále v této části.
 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(***deklarátor***)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**
+*přímý – deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *deklarátor*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***[** opt *-Expression*<sub>opt</sub> **]**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct – deklarátor*  **(**  *parametr-Type-list*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(** souhlas se*seznamem identifikátorů*<sub>opt</sub> **)**    
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
+*ukazatel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*kvalifikátor typu – seznam –*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Type-kvalifikátor – ukazatel na seznam*<sub>výslovných</sub> *pointer*
 
-*seznam typů kvalifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu seznam kvalifikátorů typu*
+*typ – kvalifikátor – seznam*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kvalifikátor typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kvalifikátor typu – kvalifikátor typu seznamu*
 
 > [!NOTE]
-> Další informace o syntaxi *deklarace* v [přehled prohlášení](../c-language/overview-of-declarations.md) nebo [souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) pro syntaxi, která odkazuje na *deklarátor*.
+> Podívejte se na syntaxi pro *deklaraci* v tématu [Přehled deklarací](../c-language/overview-of-declarations.md) nebo [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) pro syntaxi, která odkazuje na *deklarátor*.
 
-Když deklarátorem sestává z identifikátoru bez úprav, položka deklarované má základního typu. Pokud hvězdičku (<strong>\*</strong>) se zobrazí nalevo od identifikátoru, je změněn na typ na typ ukazatele. Pokud je identifikátor následovaný hranatými závorkami (**[ ]**), typ je upravit tak, aby typ pole. Pokud identifikátor je následována závorky, je změněn na typ na typ funkce. Další informace o interpretaci prioritu uvnitř deklarací najdete v tématu [interpretace složitějších Deklarátorů](../c-language/interpreting-more-complex-declarators.md).
+Když se deklarátor skládá z neupraveného identifikátoru, deklarovaná položka má základní typ. Pokud se zobrazí hvězdička (<strong>\*</strong>) nalevo od identifikátoru, je typ změněn na typ ukazatele. Je-li identifikátor následován závorkami (**[]**), je typ změněn na typ pole. Pokud je identifikátor následován závorkami, je typ změněn na typ funkce. Další informace o interpretaci přednosti v deklaracích naleznete v tématu [Interpretace složitějších deklarátory](../c-language/interpreting-more-complex-declarators.md).
 
-Každý deklarátor deklaruje aspoň jeden identifikátor. Deklarátor musí obsahovat specifikátor typu pro jít o úplnou deklaraci. Specifikátor typu poskytuje typ prvků typu pole, typ objektu odkazovaného typu ukazatele nebo návratového typu funkce.
+Každý deklarátor deklaruje alespoň jeden identifikátor. Deklarátor musí zahrnovat specifikátor typu, aby bylo možné dokončit deklaraci. Specifikátor typu poskytuje typ prvků typu pole, typ objektu adresované typem ukazatele nebo návratový typ funkce.
 
-[Pole](../c-language/array-declarations.md) a [ukazatel](../c-language/pointer-declarations.md) deklarace jsou popsány podrobněji dále v tomto oddílu. Následující příklady znázorňují pár jednoduchých formy deklarátory:
+Deklarace [polí](../c-language/array-declarations.md) a [ukazatelů](../c-language/pointer-declarations.md) jsou podrobněji popsány dále v této části. Následující příklady ilustrují několik jednoduchých forem deklarátory:
 
 ```C
 int list[20]; // Declares an array of 20 int values named list
@@ -79,12 +79,12 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers
 ```
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Kompilátor Microsoft C neomezuje počet deklarátory, které můžete upravit aritmetický, struktura nebo typu sjednocení. Počet je omezen pouze dostupnou paměť.
+Kompilátor jazyka Microsoft C neomezuje počet deklarátory, které mohou upravovat typ aritmetické, struktury nebo sjednocení. Počet je omezen pouze dostupnou pamětí.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

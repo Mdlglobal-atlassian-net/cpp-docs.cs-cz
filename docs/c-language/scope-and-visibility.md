@@ -19,16 +19,16 @@ ms.locfileid: "62158342"
 
 Všechny identifikátory s výjimkou popisků mají svůj rozsah určený úrovní, ve které dochází k deklaraci. Pro každý druh rozsahu viditelnosti identifikátorů programu platí následující pravidla:
 
-Rozsah souboru deklarátor nebo specifikátor typu identifikátoru s rozsahem souboru se zobrazí vně bloku nebo seznamu parametrů a je přístupný z jakéhokoli místa v jednotce překladu po její deklaraci. Názvy identifikátorů jsou spolu s rozsahem souboru často nazývány „globální“ nebo „externí“. Rozsah globálního identifikátoru začíná v místě jeho definice nebo deklarace a končí na konci jednotky překladu.
+Obor souboru deklarátor nebo specifikátor typu pro identifikátor s rozsahem souboru se zobrazí mimo libovolný blok nebo seznam parametrů a je přístupný z libovolného místa v jednotce překladu po jeho deklaraci. Názvy identifikátorů jsou spolu s rozsahem souboru často nazývány „globální“ nebo „externí“. Rozsah globálního identifikátoru začíná v místě jeho definice nebo deklarace a končí na konci jednotky překladu.
 
-Funkce oboru A popisek je jediný druh identifikátoru, který má rozsah funkce. Popisek je deklarován implicitně použitím v příkazu. Názvy popisků musejí být v rámci funkce jedinečné. (Další informace o popiscích a názvech popisků naleznete v tématu [příkaz goto a příkazy s popiskem](../c-language/goto-and-labeled-statements-c.md).)
+Obor funkce popisek je jediným druhem identifikátoru, který má obor funkce. Popisek je deklarován implicitně použitím v příkazu. Názvy popisků musejí být v rámci funkce jedinečné. (Další informace o popisekech a názvech popisků naleznete [v tématu příkazy Goto a labeled](../c-language/goto-and-labeled-statements-c.md).)
 
-Obor bloku deklarátor nebo specifikátor typu identifikátoru s rozsahem bloku se zobrazí uvnitř bloku nebo v seznamu deklarací formálních parametrů v definici funkce. Je viditelný pouze z místa jeho deklarace nebo definice až po konec bloku obsahujícího jeho deklaraci nebo definici. Jeho rozsah je omezen na tento blok a na jakékoli vnořené bloky v tomto bloku a končí složenou závorkou, která přidružený blok ukončí. Tyto identifikátory jsou někdy označovány jako „lokální proměnné“.
+Obor bloku typ deklarátor nebo specifikátor typu identifikátoru s rozsahem bloku se zobrazí uvnitř bloku nebo v seznamu formálních deklarací parametrů v definici funkce. Je viditelný pouze z místa jeho deklarace nebo definice až po konec bloku obsahujícího jeho deklaraci nebo definici. Jeho rozsah je omezen na tento blok a na jakékoli vnořené bloky v tomto bloku a končí složenou závorkou, která přidružený blok ukončí. Tyto identifikátory jsou někdy označovány jako „lokální proměnné“.
 
-Rozsah prototypu funkce deklarátor nebo specifikátor typu identifikátoru s rozsahem prototypu funkce se zobrazí v seznamu deklarací parametrů v prototypu funkce (není součástí deklarace funkce). Jeho rozsah končí na konci deklarátoru funkce.
+Obor prototypu funkce deklarátor nebo specifikátor typu pro identifikátor s rozsahem prototypu funkce se zobrazí v seznamu deklarací parametrů v prototypu funkce (není součástí deklarace funkce). Jeho rozsah končí na konci deklarátoru funkce.
 
-Příslušné deklarace pro zviditelnění proměnných v jiných zdrojových souborech jsou popsány v [třídy úložiště](../c-language/c-storage-classes.md). Nicméně, proměnné a funkce jsou deklarovány na vnější úrovni s **statické** – specifikátor třídy úložiště jsou viditelné pouze v rámci zdrojového souboru, ve kterém jsou definovány. Všechny ostatní funkce jsou viditelné globálně.
+Příslušné deklarace pro viditelnost proměnných v jiných zdrojových souborech jsou popsány v tématu [třídy úložiště](../c-language/c-storage-classes.md). Proměnné a funkce deklarované na externí úrovni se specifikátorem třídy úložiště **static** jsou však viditelné pouze v rámci zdrojového souboru, ve kterém jsou definovány. Všechny ostatní funkce jsou viditelné globálně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

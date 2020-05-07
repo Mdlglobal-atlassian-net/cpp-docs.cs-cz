@@ -14,10 +14,10 @@ ms.locfileid: "62234475"
 ---
 # <a name="default-date-and-time"></a>Výchozí datum a čas
 
-**ANSI 3.8.8** definice `__DATE__` a `__TIME__` Pokud, v uvedeném pořadí, datum a čas překladu nejsou k dispozici
+**3.8.8 ANSI** Definice pro a `__DATE__` `__TIME__` v uvedeném pořadí nejsou k dispozici pro datum a čas překladu.
 
-Když operační systém neposkytuje datum a čas překladu, výchozí hodnoty pro `__DATE__` a `__TIME__` jsou `May 03 1957` a `17:00:00`.
+Pokud operační systém neposkytuje datum a čas překladu, výchozí hodnoty `__DATE__` pro a `__TIME__` jsou `May 03 1957` a. `17:00:00`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

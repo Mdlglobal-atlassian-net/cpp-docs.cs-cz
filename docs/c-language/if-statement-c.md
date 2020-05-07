@@ -20,19 +20,19 @@ ms.locfileid: "62233057"
 ---
 # <a name="if-statement-c"></a>if – příkaz (C)
 
-**Pokud** příkaz ovládá podmíněné větvení. Text **Pokud** je proveden příkaz, pokud je hodnota výrazu nenulovou hodnotu. Syntaxe **Pokud** příkaz má dva formuláře.
+Příkaz **if** řídí podmíněné větvení. Tělo příkazu **if** je provedeno, pokud je hodnota výrazu nenulová. Syntaxe příkazu **if** má dva formuláře.
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz výběru*: **Pokud (**  *výraz*  **)**  *–příkaz*
+*Selection – příkaz*: **if (***Expression***)**–*příkaz*      
 
-**Pokud (**  *výraz*  **)**  *příkaz*  **else**  *– příkaz* 
+**if**–*příkaz* *výrazu***)***statement***Else**          
 
-V obou formách příkazu **Pokud** prohlášení, výrazy, které může mít libovolnou hodnotu, s výjimkou struktury, jsou vyhodnocovány, včetně všech vedlejších účinků.
+V obou formách příkazu **if** jsou vyhodnoceny výrazy, které mohou mít libovolnou hodnotu kromě struktury, včetně všech vedlejších účinků.
 
-V první forma syntaxe Pokud *výraz* hodnotu true (nenulovou), *příkaz* provádí. Pokud *výraz* má hodnotu false, *příkaz* se ignoruje. Ve druhé formě syntaxe, která používá **else**, druhý *příkaz* se spustí, pokud *výraz* má hodnotu false. S obě formy ovládací prvek pak předá z **Pokud** příkaz dalšímu příkazu v programu Pokud obsahuje některý z příkazů **přerušení**, **pokračovat**, nebo `goto`.
+V první formě syntaxe, pokud je *výraz* true (nenulový), je proveden *příkaz* . Pokud je *výraz* false, *příkaz* se ignoruje. V druhé formě syntaxe, která používá **jiný**, je spuštěn druhý *příkaz* , pokud je *výraz* nepravdivý. Pomocí obou forem ovládací prvek předává z příkazu **if** do dalšího příkazu v programu, pokud některý z příkazů neobsahuje **přerušení**, **pokračování**nebo `goto`.
 
-Následují příklady **Pokud** – příkaz:
+Níže jsou uvedeny příklady příkazu **if** :
 
 ```
 if ( i > 0 )
@@ -44,9 +44,9 @@ else
 }
 ```
 
-V tomto příkladu příkaz `y = x/i;` se spustí, pokud `i` je větší než 0. Pokud `i` je menší než nebo rovno 0, `i` přiřazen `x` a `f( x )` přiřazen `y`. Všimněte si, že příkaz tvořící **Pokud** klauzule končí středníkem.
+V tomto příkladu je příkaz `y = x/i;` proveden, pokud `i` je větší než 0. Pokud `i` `i` je menší nebo rovno 0, je přiřazena `x` `f( x )` k. `y` Všimněte si, že příkaz, který tvoří klauzuli **if** , končí středníkem.
 
-Při vnoření **Pokud** příkazy a **else** klauzule, pomocí složených závorek k seskupení příkazů a klauzule do složených příkazů, které objasňují vaším záměrem. Pokud neexistují žádné složené závorky, přeloží kompilátor nejednoznačnosti tím, že přidružíte každý **else** k nejbližšímu **Pokud** , která nemá **else**.
+Při vnořování v klauzulích klauzule a **Else** použijte závorky k **seskupení příkazů a** klauzulí do složených příkazů, které objasňují svůj záměr. Pokud nejsou k dispozici žádné složené závorky, kompilátor vyřeší nejednoznačnost přiřazením každého **dalšího** k nejbližšímu, **Pokud** nemá **jiný**.
 
 ```
 if ( i > 0 )           /* Without braces */
@@ -56,7 +56,7 @@ if ( i > 0 )           /* Without braces */
         x = i;
 ```
 
-**Else** klauzule souvisí s vnitřní **Pokud** příkaz v tomto příkladu. Pokud `i` je menší než nebo rovna 0, není přiřazena žádná hodnota pro `x`.
+Klauzule **Else** je přidružená k vnitřnímu příkazu **if** v tomto příkladu. Pokud `i` je menší nebo rovno 0, není přiřazena žádná hodnota `x`.
 
 ```
 if ( i > 0 )
@@ -68,8 +68,8 @@ else
     x = i;
 ```
 
-Složené závorky kolem vnitřního **Pokud** proveďte příkaz v tomto příkladu **else** část klauzule vnějšího **Pokud** příkaz. Pokud `i` je menší než nebo rovno 0, `i` přiřazen `x`.
+Složené závorky sousedící s vnitřním příkazem **if** v tomto příkladu vedou k části klauzule **Else** vnějšího příkazu **if** . Pokud `i` je menší nebo rovno 0, `i` je přiřazeno. `x`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [if-else – příkaz (C++)](../cpp/if-else-statement-cpp.md)

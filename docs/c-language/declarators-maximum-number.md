@@ -1,5 +1,5 @@
 ---
-title: 'Deklarátory: Maximální počet'
+title: 'Deklarátory: maximální počet'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, maximum number of
@@ -11,12 +11,12 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62234507"
 ---
-# <a name="declarators-maximum-number"></a>Deklarátory: Maximální počet
+# <a name="declarators-maximum-number"></a>Deklarátory: maximální počet
 
-**ANSI 3.5.4** maximální počet deklarátory, které můžete upravit aritmetický, struktury nebo sjednocení
+**3.5.4 ANSI** Maximální počet deklarátory, které mohou upravovat typ aritmetické, struktury nebo sjednocení
 
-Microsoft C neomezuje počet deklarátory. Počet je omezen pouze dostupnou paměť.
+Microsoft C neomezuje počet deklarátory. Počet je omezen pouze dostupnou pamětí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

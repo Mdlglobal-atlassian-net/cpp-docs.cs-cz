@@ -16,7 +16,7 @@ ms.locfileid: "62234584"
 ---
 # <a name="declarations-and-types"></a>Deklarace a typy
 
-Tento oddíl popisuje deklaraci a inicializaci proměnných, funkcí a typů. Jazyk C obsahuje standardní sadu základních datových typů. Deklarací nových datových typů založených na již definovaných typech lze také přidat vlastní typy označované za „odvozené“. Jsou popsány v následujících tématech:
+Tento oddíl popisuje deklaraci a inicializaci proměnných, funkcí a typů. Jazyk C obsahuje standardní sadu základních datových typů. Deklarací nových datových typů založených na již definovaných typech lze také přidat vlastní typy označované za „odvozené“. Jsou popsána následující témata:
 
 - [Přehled deklarací](../c-language/overview-of-declarations.md)
 
@@ -26,20 +26,20 @@ Tento oddíl popisuje deklaraci a inicializaci proměnných, funkcí a typů. Ja
 
 - [Kvalifikátory typu](../c-language/type-qualifiers.md)
 
-- [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)
+- [Deklarace deklarátory a proměnných](../c-language/declarators-and-variable-declarations.md)
 
 - [Výklad složitějších deklarátorů](../c-language/interpreting-more-complex-declarators.md)
 
-- [Inicializace](../c-language/initialization.md)
+- [Operace](../c-language/initialization.md)
 
 - [Úložiště základních typů](../c-language/storage-of-basic-types.md)
 
 - [Neúplné typy](../c-language/incomplete-types.md)
 
-- [TypeDef – deklarace](../c-language/typedef-declarations.md)
+- [Typedef – deklarace](../c-language/typedef-declarations.md)
 
-- [Rozšířené paměťové třídy atributů](../c-language/c-extended-storage-class-attributes.md)
+- [Rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

@@ -18,7 +18,7 @@ ms.locfileid: "62158277"
 ---
 # <a name="simple-assignment-c"></a>Jednoduché přiřazení (C)
 
-Operátor jednoduchého přiřazení přiřadí svůj pravý operand levému operandu. Hodnota pravého operandu je převedena na typ výrazu přiřazení a nahradí hodnotu uloženou v objektu určeném levým operandem. Použít pravidla převodu pro přiřazení (viz [převody přiřazení](../c-language/assignment-conversions.md)).
+Operátor jednoduchého přiřazení přiřadí svůj pravý operand levému operandu. Hodnota pravého operandu je převedena na typ výrazu přiřazení a nahradí hodnotu uloženou v objektu určeném levým operandem. Pravidla převodu pro přiřazení platí (viz [převody přiřazení](../c-language/assignment-conversions.md)).
 
 ```
 double x;
@@ -27,8 +27,8 @@ int y;
 x = y;
 ```
 
-V tomto příkladu hodnota `y` je převeden na typ **double** a přiřazená `x`.
+V tomto příkladu `y` je hodnota převedena na typ **Double** a je přiřazena `x`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory přiřazení v jazyce C](../c-language/c-assignment-operators.md)

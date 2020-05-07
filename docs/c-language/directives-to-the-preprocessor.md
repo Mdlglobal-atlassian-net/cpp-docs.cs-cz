@@ -24,6 +24,6 @@ Tento příkaz sděluje kompilátoru, že před kompilací je třeba všechny v�
 |`#elif`|`#error`|**#ifndef**|**#pragma**|
 |`#else`|`#if`|`#include`|`#undef`|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

@@ -35,6 +35,6 @@ Vícebajtový znak je znak složený ze sekvencí jednoho nebo více bajtů. Ka�
 
 Specifikací pro široké znaky je specifikace Unicode. Mezi rutiny knihovny runtime pro převod mezi vícebajtovými a širokými znaky patří rutiny `mbstowcs`, `mbtowc`, `wcstombs` a `wctomb`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Identifikátory jazyka C](../c-language/c-identifiers.md)

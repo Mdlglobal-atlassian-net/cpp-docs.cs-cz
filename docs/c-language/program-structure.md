@@ -23,12 +23,12 @@ Tato část poskytuje přehled programů jazyka C a vykonávání programu. Podm
 
 - [Analýza argumentů příkazového řádku](../c-language/parsing-c-command-line-arguments.md)
 
-- [Doba života, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)
+- [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)
 
 - [Obory názvů](../c-language/name-spaces.md)
 
 Vzhledem k tomu, že v této části je uveden přehled, obsahují tato témata pouze úvodní materiály. Chcete-li získat podrobnější popis, je třeba zobrazit informace s křížovými odkazy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

@@ -27,18 +27,18 @@ Jazyk C poskytuje následující specifikátory třídy úložiště:
 ## <a name="syntax"></a>Syntaxe
 
 *specifikátor třídy úložiště*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**registraci**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**automaticky**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Registrace**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**tras**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;**definice** typu &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Rozšířený--modifikátor-SEQ* **)**  /\* \*specifický pro společnost Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**definic**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Rozšířené prohlášení-modifikátor-SEQ* **)**  / \* specifické pro společnost Microsoft\*/
 
-S výjimkou `__declspec`lze v deklaraci *specifikátoru deklarace* použít pouze jeden *specifikátor úložiště-Class* . Pokud není vytvořena žádná specifikace třídy úložiště, deklarace v rámci bloku vytvoří automatické objekty.
+S výjimkou je možné v deklaraci *specifikátoru deklarace* použít pouze jeden *specifikátor úložiště-Class.* `__declspec` Pokud není vytvořena žádná specifikace třídy úložiště, deklarace v rámci bloku vytvoří automatické objekty.
 
-Položky deklarované pomocí specifikátoru **auto** nebo **Register** mají místní životnost. Položky deklarované se specifikátorem **static** nebo `extern` mají globální životnost.
+Položky deklarované pomocí specifikátoru **auto** nebo **Register** mají místní životnost. Položky deklarované pomocí **statického** specifikátoru or `extern` mají globální životnost.
 
-Vzhledem k tomu, že `typedef` a `__declspec` jsou sémanticky odlišné od dalších čtyř terminálových *specifikátorů třídy úložiště* , jsou popsány samostatně. Konkrétní informace o `typedef`naleznete v tématu [deklarace typedef](../c-language/typedef-declarations.md). Konkrétní informace o `__declspec`najdete v tématu [Rozšířené atributy tříd úložiště](../c-language/c-extended-storage-class-attributes.md).
+Vzhledem `typedef` k `__declspec` tomu, že a jsou sémanticky odlišné od dalších čtyř terminálových *specifikátorů třídy úložiště* , jsou popsány samostatně. Konkrétní informace o `typedef`naleznete v tématu [deklarace typedef](../c-language/typedef-declarations.md). Konkrétní informace o naleznete `__declspec`v tématu [Rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).
 
 Umístění proměnných a deklarací funkcí v rámci zdrojových souborů má vliv také na třídu úložiště a viditelnost. Deklarace mimo všechny definice funkcí se říká, že se zobrazí na externí úrovni. Deklarace v rámci definic funkcí se zobrazí na úrovni "interní".
 
@@ -50,6 +50,6 @@ Přesný význam každého specifikátoru třídy úložiště závisí na dvou 
 
 [Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují v každém typu deklarace terminály *specifikátoru úložiště* a vysvětlují výchozí chování při vynechání *specifikátoru třídy úložiště* z proměnné. [Specifikátory třídy úložiště s deklaracemi funkcí](../c-language/storage-class-specifiers-with-function-declarations.md) probírají specifikátory třídy úložiště používané s funkcemi.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

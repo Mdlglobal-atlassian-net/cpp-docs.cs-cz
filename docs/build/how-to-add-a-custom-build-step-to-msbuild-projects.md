@@ -17,15 +17,15 @@ Vlastní krok sestavení je uživatelem definovaný krok v sestavení. Vlastní 
 
 Zadejte vlastní krok sestavení v souboru projektu (. vcxproj). V tomto kroku můžete zadat příkazový řádek, který se má provést, všechny další vstupní nebo výstupní soubory a zprávu, která se má zobrazit. Pokud nástroj **MSBuild** zjistí, že jsou vaše výstupní soubory zastaralé z hlediska vstupních souborů, zobrazí zprávu a provede příkaz.
 
-Chcete-li určit umístění vlastního kroku sestavení v pořadí cílů sestavení, použijte jeden nebo oba elementy `CustomBuildAfterTargets` a `CustomBuildBeforeTargets` XML v souboru projektu. Můžete například určit, že se vlastní krok sestavení spustí po cíli nástroje propojení a před cílem nástroje manifestu. Skutečná sada dostupných cílů závisí na konkrétním sestavení.
+Chcete-li určit umístění vlastního kroku sestavení v pořadí cílů sestavení, použijte jeden nebo oba prvky jazyka `CustomBuildAfterTargets` a `CustomBuildBeforeTargets` v souboru projektu. Můžete například určit, že se vlastní krok sestavení spustí po cíli nástroje propojení a před cílem nástroje manifestu. Skutečná sada dostupných cílů závisí na konkrétním sestavení.
 
-Určete `CustomBuildBeforeTargets` pro provedení vlastního kroku sestavení před konkrétním cílovým spuštěním, elementu `CustomBuildAfterTargets`, který provede krok po konkrétním cílovém spuštění, nebo obou prvcích pro provedení kroku mezi dvěma sousedními cíli. Pokud není zadán žádný element, vlastní nástroj sestavení se spustí ve výchozím umístění, což je po cíli **propojení** .
+Určete `CustomBuildBeforeTargets` prvek, který má provést vlastní krok sestavení před konkrétním cílovým spuštěním, `CustomBuildAfterTargets` elementu, který provede krok po konkrétním cílovém spuštění, nebo obou prvků, aby provedli krok mezi dvěma sousedícími cíli. Pokud není zadán žádný element, vlastní nástroj sestavení se spustí ve výchozím umístění, což je po cíli **propojení** .
 
-Vlastní kroky sestavení a nástroje pro vlastní sestavení sdílejí informace zadané v prvcích XML `CustomBuildBeforeTargets` a `CustomBuildAfterTargets`. Proto v souboru projektu zadejte tyto cíle jen jednou.
+Vlastní kroky sestavení a nástroje pro vlastní sestavení sdílejí informace zadané v prvcích `CustomBuildBeforeTargets` XML `CustomBuildAfterTargets` a. Proto v souboru projektu zadejte tyto cíle jen jednou.
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Definování toho, co je provedeno vlastním krokem sestavení
 
-1. Přidejte skupinu vlastností do souboru projektu. V této skupině vlastností určete příkaz, jeho vstupy a výstupy a zprávu, jak je znázorněno v následujícím příkladu. Tento příklad vytvoří soubor. cab ze souboru main. cpp, který jste vytvořili v [návodu: použití nástroje MSBuild k vytvoření C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Přidejte skupinu vlastností do souboru projektu. V této skupině vlastností určete příkaz, jeho vstupy a výstupy a zprávu, jak je znázorněno v následujícím příkladu. Tento příklad vytvoří soubor. cab ze souboru main. cpp, který jste vytvořili v [návodu: použití nástroje MSBuild k vytvoření projektu jazyka C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -48,8 +48,8 @@ Vlastní kroky sestavení a nástroje pro vlastní sestavení sdílejí informac
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Návod: vytvoření C++ projektu pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Návod: vytvoření projektu jazyka C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Postupy: Použití událostí sestavení v projektech MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

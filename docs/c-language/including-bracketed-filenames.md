@@ -11,10 +11,10 @@ ms.locfileid: "62233096"
 ---
 # <a name="including-bracketed-filenames"></a>Zahrnutí názvů souboru v závorkách
 
-**ANSI 3.8.2** metoda nalezení zahrnutelných zdrojových souborů
+**3.8.2 ANSI** Metoda hledání zdrojových souborů zahrnutelných
 
-Pro specifikace souborů uzavřených do ostrých závorek preprocesor neprohledává adresáře nadřazených souborů. "Nadřazený" soubor je soubor, který má [#include](../preprocessor/hash-include-directive-c-cpp.md) direktivu. Místo toho se začíná vyhledáním souboru v adresářích určených příkazovým řádkem kompilátoru za možností /I. Pokud možnost /I není k dispozici nebo se nezdaří, preprocesor použije proměnnou prostředí INCLUDE k nalezení všech souborů include v lomených závorkách. Proměnná prostředí INCLUDE může obsahovat několik cest oddělených středníky (**;**). Pokud se více než jeden adresář zobrazí jako součást možnosti /I nebo v rámci proměnná prostředí INCLUDE, preprocesor je hledá v pořadí, v jakém jsou uvedeny.
+Pro specifikace souborů uzavřených do ostrých závorek preprocesor neprohledává adresáře nadřazených souborů. "Nadřazený" soubor je soubor, který obsahuje direktivu [#include](../preprocessor/hash-include-directive-c-cpp.md) . Místo toho se začíná vyhledáním souboru v adresářích určených příkazovým řádkem kompilátoru za možností /I. Pokud možnost/I není přítomna nebo se nezdařila, preprocesor používá proměnnou prostředí INCLUDE k nalezení souborů zahrnutí do lomených závorek. Proměnná prostředí INCLUDE může obsahovat několik cest oddělených středníky (**;**). Pokud se více než jeden adresář zobrazuje jako součást parametru/I nebo v rámci proměnné prostředí INCLUDE, preprocesor je vyhledá v pořadí, ve kterém se zobrazí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Direktivy předběžného zpracování](../c-language/preprocessing-directives.md)

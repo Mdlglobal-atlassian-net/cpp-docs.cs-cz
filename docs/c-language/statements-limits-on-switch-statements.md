@@ -1,5 +1,5 @@
 ---
-title: 'Příkazy: Omezení příkazů přepínače'
+title: 'Příkazy: omezení příkazů přepínače'
 ms.date: 11/04/2016
 ms.assetid: d327ef3f-2b11-4bd6-abfe-539697fd21a7
 ms.openlocfilehash: 56588bd14305738505f3c846621d2053c7f75c2d
@@ -9,12 +9,12 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62157978"
 ---
-# <a name="statements-limits-on-switch-statements"></a>Příkazy: Omezení příkazů přepínače
+# <a name="statements-limits-on-switch-statements"></a>Příkazy: omezení příkazů přepínače
 
-**ANSI 3.6.4.2** maximální počet **případ** hodnoty v `switch` – příkaz
+**3.6.4.2 ANSI** Maximální počet hodnot **case** v `switch` příkazu
 
-Microsoft C neomezuje počet **případ** hodnoty v **přepnout** příkazu. Počet je omezen pouze dostupnou paměť.
+Jazyk Microsoft C neomezuje počet hodnot **case** v příkazu **Switch** . Počet je omezen pouze dostupnou pamětí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

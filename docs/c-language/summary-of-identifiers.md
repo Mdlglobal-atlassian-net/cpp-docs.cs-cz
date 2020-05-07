@@ -12,17 +12,17 @@ ms.locfileid: "62157718"
 # <a name="summary-of-identifiers"></a>Souhrn identifikátorů
 
 *identifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *nenumerickému*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *číslice*
+&nbsp;&nbsp;&nbsp;&nbsp;*nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nečíselný* identifikátor<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*číslice* *identifikátoru*
 
-*nenumerickému*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ b c d e f g h můžu j k l mn o p q r s t u v w, x y z**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
+*nečíselný*: jedna z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l MN o p q r s t u w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T H U W X Y Z**
 
-*číslice*: jeden z<br/>
+*číslice*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Gramatika slov](../c-language/lexical-grammar.md)

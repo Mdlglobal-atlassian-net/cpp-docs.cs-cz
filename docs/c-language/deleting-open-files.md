@@ -13,10 +13,10 @@ ms.locfileid: "62234342"
 ---
 # <a name="deleting-open-files"></a>Odstranění otevřených souborů
 
-**ANSI 4.9.4.1** účinek funkce remove na otevřený soubor
+**4.9.4.1 ANSI** Vliv funkce Remove na otevřený soubor
 
 Funkce remove odstraní soubor. Pokud je soubor otevřen, tato funkce se nezdaří a vrátí hodnotu -1.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

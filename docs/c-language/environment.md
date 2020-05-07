@@ -15,6 +15,6 @@ ms.locfileid: "62234033"
 
 - [Interaktivní zařízení](../c-language/interactive-devices.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

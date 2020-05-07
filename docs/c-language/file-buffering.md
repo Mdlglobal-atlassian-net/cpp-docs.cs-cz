@@ -15,10 +15,10 @@ ms.locfileid: "62233788"
 ---
 # <a name="file-buffering"></a>Ukládání souboru do vyrovnávací paměti
 
-**ANSI 4.9.3** charakteristiky ukládání souboru do vyrovnávací paměti
+**4.9.3 ANSI** Charakteristiky ukládání souborů do vyrovnávací paměti
 
 Soubory na disku, ke kterým je přistupováno prostřednictvím standardních vstupních/výstupních funkcí, jsou plně ukládány do vyrovnávací paměti. Ve výchozím nastavení obsahuje vyrovnávací paměť 512 bajtů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

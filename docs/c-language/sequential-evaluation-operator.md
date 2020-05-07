@@ -15,37 +15,37 @@ ms.locfileid: "62158518"
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 
-Operátor sekvenčního vyhodnocení, také nazývané "operátor čárka," vyhodnotí své dva operandy postupně zleva doprava.
+Operátor sekvenčního vyhodnocení, označovaný také jako "operátor čárky", vyhodnocuje své dva operandy postupně zleva doprava.
 
 ## <a name="syntax"></a>Syntaxe
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *přiřazení – výraz*
 
-Operátor sekvenčního vyhodnocení levý operand je vyhodnocen jako `void` výrazu. Výsledek operace má stejnou hodnotu a typ jako pravý operand. Každý operand může být libovolného typu. Operátor sekvenčního vyhodnocení neprovádí převodech typů mezi jeho operandy a nevydává l hodnotou. Po prvním operandem, což znamená, že před zahájením vyhodnocení pravého operandu jsou dokončeny všechny vedlejší účinky vyhodnocení levý operand je bod sekvence. Zobrazit [body sekvence](../c-language/c-sequence-points.md) Další informace.
+Levý operand operátoru sekvenčního vyhodnocení je vyhodnocen jako `void` výraz. Výsledek operace má stejnou hodnotu a typ jako pravý operand. Každý operand může být libovolného typu. Operátor sekvenčního vyhodnocení neprovádí převody typů mezi operandy a nevrací l-value. Po prvním operandu je sekvenční bod, což znamená, že všechny vedlejší účinky z vyhodnocení levého operandu jsou dokončeny před zahájením hodnocení pravého operandu. Další informace naleznete v části [body sekvence](../c-language/c-sequence-points.md) .
 
-Operátor sekvenčního vyhodnocení se obvykle používá k vyhodnocení dvě nebo více výrazů v kontextech kde je povolen pouze jeden výraz.
+Operátor sekvenčního vyhodnocení se obvykle používá k vyhodnocení dvou nebo více výrazů v kontextech, kde je povolen pouze jeden výraz.
 
-Čárky lze použít jako oddělovače v některých kontextech. Však musí být pozor, abyste nezaměnili použití čárky jako oddělovače s jejím použitím jako operátoru; Tato dvě použití jsou zcela odlišná.
+V některých kontextech lze použít čárky jako oddělovače. Musíte ale pečlivě Zaměňujte použití čárky jako oddělovače s jeho použitím jako operátoru. Tato dvě použití jsou zcela odlišná.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje operátor sekvenčního vyhodnocení:
+Tento příklad znázorňuje operátor sekvenčního vyhodnocení:
 
 ```
 for ( i = j = 1; i + j < 20; i += i, j-- );
 ```
 
-V tomto příkladu každý operand **pro** příkazu třetí výraz je vyhodnocen nezávisle na sobě. Levý operand `i += i` je Vyhodnocená první; pravý operand `j--`, je vyhodnocen.
+V tomto příkladu je každý operand třetího výrazu příkazu **for** vyhodnocen nezávisle. Levý operand `i += i` je vyhodnocen jako první; pak je vyhodnocen pravý `j--`operand.
 
 ```
 func_one( x, y + 2, z );
 func_two( (x--, y + 2), z );
 ```
 
-Ve volání funkce do `func_one`, jsou předány tři argumenty oddělené čárkami: `x`, `y + 2`, a `z`. Ve volání funkce `func_two` donutí závorky kompilátor interpretovat první čárku jako operátor sekvenčního vyhodnocení. Toto volání funkce předává do funkce `func_two` dva argumenty. Prvním argumentem je výsledek operace sekvenčního vyhodnocení `(x--, y + 2)`, který má hodnotu a typ výrazu `y + 2`, druhým argumentem je proměnná `z`.
+Ve volání `func_one`funkce jsou předány tři argumenty oddělené čárkami: `x`, `y + 2`a. `z` Ve volání funkce `func_two` donutí závorky kompilátor interpretovat první čárku jako operátor sekvenčního vyhodnocení. Toto volání funkce předává do funkce `func_two` dva argumenty. Prvním argumentem je výsledek operace sekvenčního vyhodnocení `(x--, y + 2)`, který má hodnotu a typ výrazu `y + 2`, druhým argumentem je proměnná `z`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátor čárka: ,](../cpp/comma-operator.md)
+[Operátor čárky:,](../cpp/comma-operator.md)

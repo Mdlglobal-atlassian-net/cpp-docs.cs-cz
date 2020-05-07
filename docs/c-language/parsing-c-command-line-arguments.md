@@ -17,25 +17,25 @@ ms.locfileid: "75299088"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Spouštěcí kód Microsoft C používá při interpretaci argumentů z příkazového řádku operačního systému následující pravidla:
 
 - Argumenty jsou odděleny prázdným znakem, což je mezera nebo karta.
 
-- Řetězec, který je uzavřen do dvojitých uvozovek, je interpretován jako jeden argument bez ohledu na prázdné znaky uvnitř. V argumentu může být vložen řetězec v uvozovkách. Všimněte si, že blikající kurzor ( **^** ) není rozpoznán jako řídicí znak nebo oddělovač.
+- Řetězec, který je uzavřen do dvojitých uvozovek, je interpretován jako jeden argument bez ohledu na prázdné znaky uvnitř. V argumentu může být vložen řetězec v uvozovkách. Všimněte si, že blikající**^** kurzor () není rozpoznán jako řídicí znak nebo oddělovač.
 
-- Dvojitá uvozovka před znakem zpětného lomítka, **\\"** , je interpretována jako literální dvojité uvozovky ( **"** ).
+- Dvojitá uvozovka před znakem zpětného lomítka, ** \\"**, je interpretována jako literál dvojité uvozovky (**"**).
 
 - Zpětná lomítka jsou interpretována doslova, pokud bezprostředně nepředchází uvozovky.
 
-- Je-li sudý počet zpětných lomítek následován znakem dvojitých uvozovek, pak je jedno zpětné lomítko ( **\\** ) umístěno v `argv` poli pro každou dvojici zpětných lomítek ( **\\\\** ) a dvojité uvozovky ( **"** ) jsou interpretovány jako oddělovač řetězců.
+- Je-li sudý počet zpětných lomítek následován znakem dvojitých uvozovek, pak je jedno zpětné lomítko**\\**() umístěno v `argv` poli pro každou dvojici zpětných lomítek (**\\**) a dvojité uvozovky (**"**) jsou interpretovány jako oddělovač řetězců.
 
-- Je-li lichý počet zpětných lomítek následovaný dvojitou uvozovkou, pak je jedno zpětné lomítko ( **\\** ) umístěno v `argv` poli pro každý pár zpětných lomítek ( **\\\\** ) a Dvojitá uvozovka je interpretována jako řídicí sekvence zbývajícím zpětným lomítkem, což způsobí, že se literální dvojité uvozovky ( **"** ) umístí do `argv`.
+- Je-li lichý počet zpětných lomítek následován znakem dvojitých uvozovek, pak je jedno zpětné lomítko**\\**() umístěno v `argv` poli pro každý pár zpětných lomítek (**\\**) a Dvojitá uvozovka je interpretována jako řídicí sekvence zbývajícím zpětným lomítkem, což způsobí, že se literální dvojité uvozovky (**"**) `argv`umístí do.
 
 Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výsledku předaného do `argv` pro několik příkladů argumentů příkazového řádku. Výstup uvedený v druhém, třetím a čtvrtém sloupci je z aplikace ARGS.C, která následuje seznam.
 
-|Vstup z příkazového řádku|argv[1]|argv[2]|argv[3]|
+|Vstup z příkazového řádku|argv [1]|argv [2]|argv [3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
@@ -45,7 +45,7 @@ Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výs
 
 ## <a name="example"></a>Příklad
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```c
 // Parsing_C_Commandline_args.c
@@ -97,6 +97,6 @@ Environment variables:
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

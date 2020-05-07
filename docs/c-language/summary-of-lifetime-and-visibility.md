@@ -26,7 +26,7 @@ Následující tabulka představuje souhrn vlastností životnosti a viditelnost
 ||Prototyp funkce|**extern**|Globální|Zbytek zdrojového souboru|
 |Rozsah bloku|Deklarace proměnné|**extern**|Globální|Blok|
 ||Definice proměnné|**static**|Globální|Blok|
-||Definice proměnné|**Automatické** nebo **registrace**|Místní|Blok|
+||Definice proměnné|**Automatické** nebo **registrace**|Local|Blok|
 
 ## <a name="example"></a>Příklad
 
@@ -34,7 +34,7 @@ Následující tabulka představuje souhrn vlastností životnosti a viditelnost
 
 Následující příklad znázorňuje bloky, vnořování a viditelnost proměnných:
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```c
 // Lifetime_and_Visibility.c
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 V tomto příkladu jsou čtyři úrovně viditelnosti: externí úroveň a tři úrovně bloku. Hodnoty se vytisknou na obrazovku, jak je uvedeno v komentářích po jednotlivých příkazech.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

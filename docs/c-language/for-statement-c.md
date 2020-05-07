@@ -13,36 +13,36 @@ ms.locfileid: "62233641"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C)
 
-**Pro** příkaz umožňuje opakujte příkaz nebo složený příkaz zadaného počtu opakování. Text **pro** je proveden příkaz nulakrát nebo vícekrát, dokud nebude nepovinnou podmínku false. Volitelné výrazy můžete použít **pro** příkaz k inicializaci a změnit hodnoty během **pro** spuštění příkazu.
+Příkaz **for** umožňuje opakování příkazu nebo složeného příkazu v zadaném počtu opakování. Tělo příkazu **for** se provede nula nebo vícekrát, dokud se nepovede volitelná podmínka NEPRAVDA. Můžete použít volitelné výrazy v rámci příkazu **for** pro inicializaci a změnu hodnot během provádění příkazu **for** .
 
 ## <a name="syntax"></a>Syntaxe
 
 *příkaz iterace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pro** **(** *init-expression*<sub>optimalizované</sub> **;** *cond-expression*<sub>optimalizované</sub> **;** *výraz smyčky*<sub>optimalizované</sub> **)** *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**pro** **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *loop-expression*<sub>opt</sub> **)** – *příkaz*
 
-Spuštění **pro** příkaz probíhá následujícím způsobem:
+Provedení příkazu **for** bude pokračovat následujícím způsobem:
 
-1. *Init-expression*, pokud existuje, je vyhodnocen. Toto nastavení určuje inicializaci smyčky. Neexistuje žádné omezení na typu *init-expression*.
+1. Vyhodnotí se *init-expression*, pokud existuje. Určuje inicializaci smyčky. Typ *init-expression*není nijak omezen.
 
-1. *Cond-expression*, pokud existuje, je vyhodnocen. Tento výraz musí mít aritmetický typ nebo typ ukazatele. Vyhodnotí se před každou iteraci. Tří výsledků je možné:
+1. *Cond-expression*, pokud existuje, je vyhodnocen. Tento výraz musí mít aritmetický typ nebo typ ukazatele. Je vyhodnocen před každou iterací. Jsou možné tři výsledky:
 
-   - Pokud *cond-expression* je **true** (nenulový), *příkaz* je spuštěn; potom *výraz smyčky*, pokud existuje, je vyhodnocen. *Výraz smyčky* je vyhodnocen po každé iteraci. Neexistuje žádné omezení na jeho typu. Vedlejší efekty bude vykonán v pořadí. Proces potom začne znovu vyhodnocením *cond-expression*.
+   - Pokud je *cond-expression* **true** (nenulový), je proveden *příkaz* ; pak se vyhodnotí *výraz loop*(pokud existuje). *Výraz loop* je vyhodnocen po každé iteraci. Neexistuje žádné omezení typu. Vedlejší účinky budou provedeny v daném pořadí. Proces se pak znovu spustí s hodnocením *cond-expression*.
 
-   - Pokud *cond-expression* je vynechán, *cond-expression* je považován za hodnotu true a pokračuje v provádění přesně tak, jak je popsáno v předchozím odstavci. A **pro** příkaz bez *cond-expression* argument ukončí pouze tehdy, když **přerušení** nebo **vrátit** příkaz v rámci příkazu provede se tělo, nebo když **goto** (na označený příkaz mimo **pro** tělo s příkazy) provádí.
+   - Pokud je *cond-expression* vynechán, *cond-expression* se považuje za true a provádění pokračuje přesně tak, jak je popsáno v předchozím odstavci. Příkaz **for** bez argumentu *cond-expression* končí pouze v případě, že je proveden příkaz **Break** nebo **return** v rámci těla příkazu, nebo při spuštění příkazu **goto** (na příkaz s popiskem mimo tělo příkazu **for** ).
 
-   - Pokud *cond-expression* je **false** (0), spuštění **pro** příkaz skončí a předá řízení dalšímu příkazu v programu.
+   - Pokud *cond-expression* je **false** (0), provádění příkazu **for** se ukončí a řízení projde dalšímu příkazu v programu.
 
-A **pro** příkaz také skončí, když **přerušení**, **goto**, nebo **vrátit** je proveden příkaz v rámci těla příkazu. A **pokračovat** výroky **pro** smyčky způsobí, že *výraz smyčky* k vyhodnocení. Když **přerušení** uvnitř je proveden příkaz **pro** smyčky, *výraz smyčky* není vyhodnocování nebo provádění. Tento příkaz
+Příkaz **for** se také ukončí při provedení příkazu **Break**, **goto**nebo **return** v rámci těla příkazu. Příkaz **Continue** ve smyčce **for** způsobí vyhodnocení *výrazu loop-expression* . Pokud je příkaz **Break** proveden uvnitř smyčky **for** , *výraz smyčky* není vyhodnocen nebo proveden. Tento příkaz
 
 ```C
 for( ; ; )
 ```
 
-je obvyklé způsob, jak vytvořit nekonečnou smyčku, která může být pouze skončil s **přerušení**, **goto**, nebo **vrátit** příkazu.
+je vlastní způsob, jak vytvořit nekonečnou smyčku, která může být pouze ukončena příkazem **Break**, **goto**nebo **return** .
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, **pro** – příkaz:
+Tento příklad ilustruje příkaz **for** :
 
 ```C
 // c_for.c
@@ -78,6 +78,6 @@ Number of spaces: 4
 Number of tabs: 2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy](../c-language/statements-c.md)

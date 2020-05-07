@@ -15,25 +15,25 @@ ms.locfileid: "62234429"
 
 Terminály jsou koncové body v definici syntaxe. Žádné jiné řešení není možné. Terminály obsahují sadu vyhrazených slov a uživatelské identifikátory.
 
-Neterminály jsou zástupné symboly v syntaxi a je definována jinde v tomto souhrnu syntaxe. Definice mohou být rekurzivní.
+Neterminály jsou zástupné symboly v syntaxi a jsou definovány jinde v tomto souhrnu syntaxe. Definice mohou být rekurzivní.
 
-Volitelná součást je označena pomocí indexovaný <sub>optimalizované</sub>. Například
+Volitelná součást je označena jako volitelná. <sub>opt</sub> Například:
 
-> **{** *výraz*<sub>optimalizované</sub> **}**
+> **{** *Expression*<sub>opt</sub> **}**
 
-Určuje volitelný výraz uzavřený do složených závorek.
+označuje volitelný výraz uzavřený do složených závorek.
 
-Syntaxe úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:
+Konvence syntaxe používá jiné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:
 
 |Atribut|Popis|
 |---------------|-----------------|
 |*neterminálu*|Kurzíva označuje neterminály.|
 |**const**|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|
-|<sub>Odhlásit se</sub>|Neterminály následované <sub>optimalizované</sub> jsou vždy volitelné.|
-|výchozí písmo|Znaky v sadě jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech jazyka C.|
+|<sub>opt</sub>|Neterminály následované <sub>výslovným souhlasem</sub> jsou vždycky volitelné.|
+|výchozí písmo|Znaky v sadě popsané nebo uvedené v tomto řezu písma lze použít jako terminály v příkazech jazyka C.|
 
-Dvojtečka (**:**) která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích, s výjimkou při začíná slova "jeden z."
+Dvojtečka (**:**) po neterminálu zavádí svou definici. Alternativní definice jsou uvedeny na samostatných řádcích, s výjimkou případů, kdy jsou uvozeny slovy "One z".
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)

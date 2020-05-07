@@ -14,9 +14,9 @@ ms.locfileid: "62158316"
 ---
 # <a name="signed-bitwise-operations"></a>Podepsané bitové operace
 
-**ANSI 3.3** výsledky bitových operací s celými čísly se znaménkem
+**ANSI 3,3** Výsledky bitových operací u celých čísel se znaménkem
 
-Bitové operace s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` může být vyjádřena v binárním souboru jako
+Bitové operace s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` lze vyjádřit v binárním formátu jako
 
 ```
   11111111 11110000
@@ -27,6 +27,6 @@ Bitové operace s celými čísly se znaménkem fungují stejně jako bitové op
 
 Výsledkem bitové operace AND je 96.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Celá čísla](../c-language/integers.md)

@@ -14,21 +14,21 @@ ms.locfileid: "62232244"
 ---
 # <a name="postfix-operators"></a>Operátory přípony
 
-Příponové operátory mají nejvyšší prioritu (tightest vazby) ve vyhodnocení výrazu.
+Operátory přípon mají nejvyšší prioritu (nejužší vazbu) ve vyhodnocení výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **[**  *výraz*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>optimalizované</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **.**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **->**  *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+*výraz přípony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příponový výraz*  **[**  *výraz*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***.**    *RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor výrazu přípony***->***identifier*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **--**
 
-V této úrovni priority operátorů jsou subscripty pole, volání funkce, struktury a unie členy a zvýšení příponového operátora a operátory snížení.
+Operátory v této úrovni priority jsou dolní indexy pole, volání funkce, členy struktury a sjednocení a operátory přírůstku a snížení přípon.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory jazyka C](../c-language/c-operators.md)

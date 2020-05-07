@@ -15,21 +15,21 @@ ms.locfileid: "62233295"
 ---
 # <a name="function-call-c"></a>Volání funkcí (C)
 
-A *volání funkce* je výraz, který obsahuje název volané funkce nebo hodnota ukazatele na funkci a volitelně také argumenty předané funkci.
+*Volání funkce* je výraz, který obsahuje název funkce, která je volána nebo hodnota ukazatele na funkci, a volitelně argumenty předávané funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>optimalizované</sub> **)**
+*výraz přípony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>opt</sub> **)**
 
 *argument-expression-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *přiřazení-výraz*
 
-*Postfix-expression* se musí vyhodnotit na adresu funkce (například identifikátor funkce nebo hodnota ukazatele na funkci), a *argument-expression-list* je seznamem výrazů (oddělených čárkami) jehož hodnoty ("argumenty") jsou předány funkci. *Argument-expression-list* argument může být prázdný.
+*Výraz přípony* musí být vyhodnocen jako adresa funkce (například identifikátor funkce nebo hodnota ukazatele na funkci) a *argument-expression-list* je seznam výrazů (oddělených čárkami), jejichž hodnoty ("argumenty") jsou předány funkci. Argument *-Expression-list* může být prázdný.
 
-Výraz volání funkce má hodnotu a typ návratové hodnoty funkce. Funkce nemůže vracet objekt typu pole. Je-li návratovým typem funkce typ `void` (tedy funkce byla deklarována tak, aby nikdy nevracela hodnotu), je výraz volání funkce také typu `void`. (Viz [volání funkce](../c-language/function-calls.md) Další informace.)
+Výraz volání funkce má hodnotu a typ návratové hodnoty funkce. Funkce nemůže vracet objekt typu pole. Je-li návratovým typem funkce typ `void` (tedy funkce byla deklarována tak, aby nikdy nevracela hodnotu), je výraz volání funkce také typu `void`. (Další informace naleznete v tématu [volání funkcí](../c-language/function-calls.md) .)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátor volání funkce ( )](../cpp/function-call-operator-parens.md)
+[Operátor volání funkce: ()](../cpp/function-call-operator-parens.md)

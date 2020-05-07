@@ -18,13 +18,13 @@ ms.locfileid: "62234244"
 ---
 # <a name="dll-import-and-export-functions"></a>Import a export funkcí knihovny DLL
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Nejvíce nejúplnější a nejaktuálnější informace k tomuto tématu najdete v [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Nejucelenější a aktuální informace o tomto tématu najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-**Dllimport** a `dllexport` modifikátory třídy úložiště jsou rozšíření specifické pro společnost Microsoft pro jazyk C. Tyto modifikátory explicitně definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Deklarace funkcí s modifikátorem `dllexport` odstraňuje potřebu souboru definice modulu (.DEF). Můžete také použít **dllimport** a `dllexport` modifikátory data a objekty.
+Modifikátory třídy `dllexport` úložiště **dllimport** a třídy úložiště jsou rozšíření pro jazyk C specifická pro společnost Microsoft. Tyto modifikátory explicitně definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Deklarace funkcí s modifikátorem `dllexport` odstraňuje potřebu souboru definice modulu (.DEF). Můžete také použít **dllimport** a `dllexport` modifikátory s daty a objekty.
 
-**Dllimport** a `dllexport` modifikátory třídy úložiště je nutné použít s klíčovým slovem syntaxi rozšířeného atributu, `__declspec`, jak je znázorněno v tomto příkladu:
+Modifikátory třídy `dllexport` úložiště **dllimport** a třídy úložiště musí být použity s klíčovým slovem rozšířené syntaxe `__declspec`atributu, jak je znázorněno v následujícím příkladu:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -36,10 +36,10 @@ DllExport int j;
 DllExport int n;
 ```
 
-Konkrétní informace o syntaxi pro rozšířené paměťové třídy modifikátory najdete v tématu [rozšířené atributy tříd úložiště](../c-language/c-extended-storage-class-attributes.md).
+Konkrétní informace o syntaxi pro rozšířené modifikátory třídy úložiště najdete v tématu [Rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

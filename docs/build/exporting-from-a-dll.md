@@ -19,37 +19,37 @@ ms.locfileid: "62196739"
 ---
 # <a name="exporting-from-a-dll"></a>Export z knihovny DLL
 
-Soubor knihovny DLL má velmi podobně jako soubor .exe s jedním z důležitých rozdílů rozložení – soubor DLL obsahuje exportní tabulka. Exportní tabulka obsahuje název každé funkce, které knihovny DLL exportuje do další spustitelné soubory. Tyto funkce jsou vstupními body do knihovny DLL; Další spustitelné soubory je přístupný pouze funkcí v exportní tabulce. Další funkce v knihovně DLL jsou privátní pro knihovnu DLL. V tabulce exportů knihovny DLL lze zobrazit pomocí [DUMPBIN](reference/dumpbin-reference.md) nástroje s možností/EXPORTS.
+Soubor DLL má rozložení velmi podobné souboru. exe s důležitým rozdílem – soubor DLL obsahuje tabulku EXPORTS. Tabulka EXPORTS obsahuje název každé funkce, kterou knihovna DLL exportuje do jiných spustitelných souborů. Tyto funkce jsou vstupními body do knihovny DLL; pouze funkce v tabulce EXPORTS mohou být k dispozici v jiných spustitelných souborech. Všechny ostatní funkce v knihovně DLL jsou soukromé pro knihovnu DLL. Tabulku EXPORTS knihovny DLL lze zobrazit pomocí nástroje [DUMPBIN](reference/dumpbin-reference.md) s možností/EXPORTS.
 
-Export funkcí z knihovny DLL pomocí dvou metod:
+Můžete exportovat funkce z knihovny DLL pomocí dvou metod:
 
-- Vytvoření souboru modulu definice (.def) a použijte soubor .def při vytváření knihovny DLL. Tuto metodu použijte, pokud chcete [export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+- Vytvořte soubor definice modulu (. def) a při sestavování knihovny DLL použijte soubor. def. Tento postup použijte, pokud chcete [exportovat funkce z knihovny DLL podle pořadového čísla, nikoli podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-- Pomocí klíčového slova **__declspec(dllexport)** v definici funkce.
+- V definici funkce použijte klíčové slovo **__declspec (dllexport)** .
 
-Při exportu funkcí pomocí některé z metod, je nutné použít [__stdcall](../cpp/stdcall.md) konvence volání.
+Při exportování funkcí pomocí obou metod nezapomeňte použít konvenci volání [__stdcall](../cpp/stdcall.md) .
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí souborů .def](exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí souborů. def](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
 - [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
+- [Exportujte funkce z knihovny DLL podle pořadových čísel, nikoli podle názvu.](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
-- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
+- [Určení metody exportu, která se má použít](determining-which-exporting-method-to-use.md)
 
 - [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
-- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializovat knihovnu DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Import do aplikace](importing-into-an-application.md)
 
@@ -57,6 +57,6 @@ Při exportu funkcí pomocí některé z metod, je nutné použít [__stdcall](.
 
 - [Vzájemné importy](mutual-imports.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Import a export](importing-and-exporting.md)

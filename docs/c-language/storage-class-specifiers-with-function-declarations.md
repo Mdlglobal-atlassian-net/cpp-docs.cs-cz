@@ -18,28 +18,28 @@ ms.locfileid: "62157876"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specifikátory třídy úložiště s deklaracemi funkce
 
-Můžete použít buď **statické** nebo `extern` specifikátor třídy úložiště v deklaracích funkcí. Funkce mají vždy globální životnost.
+V deklaracích funkcí můžete **static** použít buď specifikátor `extern` třídy úložiště static, nebo. Funkce mají vždy globální životnost.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
 Deklarace funkce na vnitřní úrovni mají stejný význam jako deklarace funkce na vnější úrovni. To znamená, že funkce je viditelná z místa deklarace ve zbytku jednotky překladu i v případě, že je deklarována v místním oboru.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 Pravidla viditelnosti pro funkce se mírně liší od pravidel pro proměnné, a to takto:
 
-- Funkce deklarovaná jako **statické** je viditelná pouze v rámci zdrojového souboru, ve kterém je definována. Funkce ve stejném zdrojovém souboru mohou volat **statické** , ale funkce v jiných zdrojových souborech nelze přistupovat přímo podle názvu. Lze deklarovat jinou **statické** funkce se stejným názvem v odlišném zdrojovém souboru bez konfliktu.
+- Funkce deklarovaná jako **statická** je viditelná pouze v rámci zdrojového souboru, ve kterém je definována. Funkce ve stejném zdrojovém souboru můžou zavolat **statickou** funkci, ale funkce v jiných zdrojových souborech k nim nemůžou přistupovat přímo podle názvu. Můžete deklarovat jinou **statickou** funkci se stejným názvem v jiném zdrojovém souboru bez konfliktu.
 
-- Funkce deklarované jako `extern` jsou viditelné ve všech zdrojových souborech programu (Pokud je později nepředeklarujete jako **statické**). Jakákoli funkce může volat funkci deklarovanou jako `extern`.
+- Funkce deklarované jako `extern` jsou viditelné v rámci všech zdrojových souborů v programu (Pokud později tuto funkci znovu nedeklarujete jako **statickou**). Jakákoli funkce může volat funkci deklarovanou jako `extern`.
 
 - Deklarace funkce, které vynechávají specifikátor třídy úložiště, jsou ve výchozím nastavení deklarovány jako `extern`.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Společnost Microsoft umožňuje předefinování `extern` identifikátor jako **statické**.
+Společnost Microsoft umožňuje předefinování `extern` identifikátoru jako **statického**.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)

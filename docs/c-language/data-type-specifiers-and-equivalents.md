@@ -21,33 +21,33 @@ ms.locfileid: "62234927"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty datového typu
 
-Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů typů uvedené v následující tabulce a předpokládá, že typ `char` je ve výchozím nastavení se znaménkem. Proto je v této knize `char` je ekvivalentní **podepsané char**.
+Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů typů uvedené v následující tabulce a předpokládá, že typ `char` je ve výchozím nastavení se znaménkem. Proto `char` je v celé této příručce ekvivalentem **podepsaného znaku**.
 
 ### <a name="type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty typu
 
 |Specifikátor typu|Ekvivalenty|
 |--------------------|---------------------|
-|**podepsané char**1|**char**|
-|**podepsané int**|**podepsané**, **int**|
-|**krátká celočíselná podepsané**|**krátký**, **podepsané krátké**|
-|**podepsané long int**|**dlouhé**, **podepsané dlouho**|
+|**signed char**1|**char**|
+|**celé číslo se znaménkem**|**signed**, **int**|
+|**krátké celé číslo se znaménkem**|**short**, **signed short**|
+|**celé číslo se znaménkem long int**|**Long**, **podepsaná Long**|
 |**unsigned char**|—|
-|**unsigned int**|**bez znaménka**|
-|**unsigned short int**|**short bez znaménka**|
-|**unsigned long int**|**unsigned long**|
-|**float**|—|
-|**long double**2|—|
+|**unsigned int**|**celé**|
+|**krátké celé číslo bez znaménka**|**unsigned short**|
+|**dlouhé celé číslo bez znaménka**|**unsigned long**|
+|**Plovák**|—|
+|**dlouhé Double**2|—|
 
-1 je-li **char** typ bez znaménka ve výchozím nastavení (zadáním možnosti kompilátoru /), nelze zkrátit **podepsané char** jako **char**.
+1 když ve výchozím nastavení nastavíte typ **znaku** bez znaménka (zadáním možnosti kompilátoru/j), nemůžete **podepsat znak typu signed** jako **char**.
 
-2 v 32bitových a 64bitových operačních systémech kompilátor Microsoft C mapuje **long double** na typ **double**.
+2 v 32 a 64 bitových operačních systémů, kompilátor jazyka Microsoft C mapuje **Long Double** na typ **Double**.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Můžete zadat možnost kompilátoru /J lze změnit výchozí **char** z typu se znaménkem na typ bez znaménka. Pokud tato možnost je ve skutečnosti **char** stejný význam jako **unsigned char**, a je nutné použít **podepsané** – klíčové slovo pro deklaraci hodnoty znaku se znaménkem. Pokud **char** hodnotu explicitně deklarována se znaménkem, možnost /J ji neovlivní a hodnota je rozšířen o znaménko při rozšíření na **int** typu. **Char** rozšířené při rozšíření na nula je typ **int** typu.
+Můžete zadat možnost kompilátoru/J pro změnu výchozího typu **char** z signed na unsigned. Je-li tato možnost platná, **znak** znamená stejný jako **nepodepsaný znak**a je nutné použít klíčové slovo **signed** pro deklaraci podepsaného znaku. Pokud je hodnota **znaku** explicitně deklarována jako podepsaná, možnost/j to nijak neovlivní a hodnota je znaménko při rozšíření na typ **int** . Typ **znaku** je po rozšíření na typ **int** rozšířený na nulu.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Specifikátory typu jazyka C](../c-language/c-type-specifiers.md)

@@ -19,7 +19,7 @@ ms.locfileid: "75299101"
 ---
 # <a name="one-dimensional-arrays"></a>Jednorozměrná pole
 
-Výraz přípony následovaný výrazem v hranatých závorkách ( **[]** ) je podskriptovaná reprezentace elementu objektu Array. Výraz dolního indexu představuje hodnotu na adrese, která je pozice *výrazu* za *příponový výraz* , pokud je vyjádřena jako
+Výraz přípony následovaný výrazem v hranatých závorkách (**[]**) je podskriptovaná reprezentace elementu objektu Array. Výraz dolního indexu představuje hodnotu na adrese, která je pozice *výrazu* za *příponový výraz* , pokud je vyjádřena jako
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Výrazy dolního indexu se obecně používají pro odkazování na prvky pole, ale můžete použít i dolní index na libovolný ukazatel. Bez ohledu na pořadí hodnot musí být *výraz* uzavřen do hranatých závorek ( **[]** ).
+Výrazy dolního indexu se obecně používají pro odkazování na prvky pole, ale můžete použít i dolní index na libovolný ukazatel. Bez ohledu na pořadí hodnot musí být *výraz* uzavřen do hranatých závorek (**[]**).
 
-Výraz dolního indexu je vyhodnocován přidáním celočíselné hodnoty na hodnotu ukazatele a použití indirection – operátor (<strong>\**</strong>) na výsledek. (Viz téma [dereference a operátory adresy](../c-language/indirection-and-address-of-operators.md) pro diskuzi operátoru dereference.) V důsledku toho, že pro jednorozměrné pole jsou následující čtyři výrazy ekvivalentní, za předpokladu, že `a` je ukazatel a `b` je celé číslo:
+Výraz dolního indexu je vyhodnocen přidáním celočíselné hodnoty do hodnoty ukazatele a následným použitím operátoru dereference (<strong>\*</strong>) na výsledek. (Viz téma [dereference a operátory adresy](../c-language/indirection-and-address-of-operators.md) pro diskuzi operátoru dereference.) V důsledku toho je pro jednorozměrné pole ekvivalentní následující čtyři výrazy, za předpokladu, že `a` se jedná o ukazatel a `b` je celé číslo:
 
 ```
 a[b]
@@ -49,16 +49,16 @@ b[a]
 
 V souladu s pravidly převodu pro operátor sčítání (předané v [operátorech](../c-language/c-additive-operators.md)sčítání) je celočíselná hodnota převedena na posun adresy tím, že je vynásobí délkou typu řešeného ukazatelem.
 
-Předpokládejme například, že identifikátor `line` odkazuje na pole hodnot `int`. Následující postup slouží k vyhodnocení výrazu dolního indexu `line[ i ]`:
+Předpokládejme například, že identifikátor `line` odkazuje na pole `int` hodnot. Následující postup slouží k vyhodnocení výrazu `line[ i ]`dolního indexu:
 
-1. Celočíselná hodnota `i` vynásobena počtem bajtů definovaných jako délka `int` položky. Převedená hodnota `i` představuje `i` `int` pozice.
+1. Celočíselná hodnota `i` je vynásobena počtem bajtů definovaných jako délka `int` položky. Převedená hodnota `i` představuje `i` `int` pozice.
 
-1. Tato převedená hodnota se přidá do původní hodnoty ukazatele (`line`), aby se vyrovnala adresa, která je posunutá `i` `int` pozice od `line`.
+1. Tato převedená hodnota se přidá do původní hodnoty ukazatele`line`(), aby se vyrovnala `i` `int` adresa, `line`na které se posunou pozice.
 
 1. Operátor dereference se použije na novou adresu. Výsledkem je hodnota prvku pole na této pozici (intuitivní, `line [ i ]`).
 
-Výraz dolního indexu `line[0]` představuje hodnotu prvního prvku řádku, protože posun z adresy reprezentované `line` je 0. Podobně výraz jako `line[5]` odkazuje na posunutí pěti pozic od řádku nebo šestého prvku pole.
+Výraz `line[0]` dolního indexu představuje hodnotu prvního prvku řádku, protože posun z adresy reprezentovaný hodnotou `line` je 0. Podobně výraz, jako je například `line[5]` , odkazuje na posun prvku o pět pozic od řádku nebo šestý prvek pole.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátor dolního indexu: []](../cpp/subscript-operator.md)
+[Operátor dolního indexu:](../cpp/subscript-operator.md)

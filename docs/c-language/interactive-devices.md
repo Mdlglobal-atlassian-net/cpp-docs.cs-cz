@@ -11,10 +11,10 @@ ms.locfileid: "62232758"
 ---
 # <a name="interactive-devices"></a>Interaktivní zařízení
 
-**ANSI 2.1.2.3** co představuje interaktivní zařízení
+**2.1.2.3 ANSI** Co představuje interaktivní zařízení
 
 Microsoft C definuje jako interaktivní zařízení klávesnici a monitor.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Prostředí](../c-language/environment.md)

@@ -24,7 +24,7 @@ ms.locfileid: "76821548"
 
 Procesy, které explicitně odkazují na knihovnu DLL, volají funkci [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) , pokud již modul knihovny DLL nepotřebujete. Tato funkce snižuje počet odkazů modulu. A pokud je počet odkazů nula, je odmapována z adresního prostoru procesu.
 
-V aplikaci knihovny MFC použijte [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) namísto `FreeLibrary` k uvolnění knihovny DLL rozšíření knihovny MFC. Rozhraní (prototyp funkce) pro `AfxFreeLibrary` je stejné jako `FreeLibrary`.
+V aplikaci knihovny MFC použijte [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) namísto `FreeLibrary` uvolnění rozšiřující knihovny MFC DLL. Rozhraní (prototyp funkce) pro `AfxFreeLibrary` je stejné jako. `FreeLibrary`
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
@@ -38,8 +38,8 @@ V aplikaci knihovny MFC použijte [AfxFreeLibrary](../mfc/reference/application-
 
 - [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření C/C++ knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md)\
-\ [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)\
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

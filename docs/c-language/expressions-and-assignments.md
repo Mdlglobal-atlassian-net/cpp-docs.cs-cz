@@ -20,13 +20,13 @@ ms.locfileid: "62233719"
 ---
 # <a name="expressions-and-assignments"></a>Výrazy a přiřazení
 
-Tato část popisuje, jak k vytvoření výrazů a přiřadit hodnoty v jazyce C. Konstanty, identifikátory, řetězce a volání funkce jsou všechny operandy, které jsou ve výrazech manipulovat. Jazyk C obsahuje všechny operátory obvykle jazyka. Tato část popisuje tyto operátory, jakož i operátory, které jsou jedinečné pro C nebo Microsoft C. Mezi uvedená témata patří:
+Tato část popisuje, jak vytvořit výrazy a přiřadit hodnoty v jazyce C. Konstanty, identifikátory, řetězce a volání funkce jsou všechny operandy, které jsou ve výrazech manipulovány. Jazyk C obsahuje všechny běžné jazykové operátory. Tato část se zabývá operátory a operátory, které jsou jedinečné pro C nebo Microsoft C. Témata, která jsou popsaná, zahrnují:
 
-- [Výrazy hodnot L-value a r-value](../c-language/l-value-and-r-value-expressions.md)
+- [Výrazy L-Value a r-value](../c-language/l-value-and-r-value-expressions.md)
 
 - [Výrazy konstant](../c-language/c-constant-expressions.md)
 
-- [Vedlejší efekty](../c-language/side-effects.md)
+- [Vedlejší účinky](../c-language/side-effects.md)
 
 - [Body sekvence](../c-language/c-sequence-points.md)
 
@@ -36,8 +36,8 @@ Tato část popisuje, jak k vytvoření výrazů a přiřadit hodnoty v jazyce C
 
 - [Převody typu](../c-language/type-conversions-c.md)
 
-- [Přetypování typu](../c-language/type-cast-conversions.md)
+- [Přetypování typů](../c-language/type-cast-conversions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

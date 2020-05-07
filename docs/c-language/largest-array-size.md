@@ -11,10 +11,10 @@ ms.locfileid: "62232745"
 ---
 # <a name="largest-array-size"></a>Maximální velikost pole
 
-**ANSI 3.3.3.4, 4.1.1** typu celé číslo, které jsou požadované pro uchovávání maximální velikost pole – to znamená, že velikost **size_t**
+**ANSI 3.3.3.4, 4.1.1** Typ celého čísla potřebného pro uchování maximální velikosti pole – to znamená velikost **size_t**
 
-`size_t` Definice typedef je `unsigned int` na 32-bit x86 platformy. Na 64bitových platformách `size_t` definice typedef je `unsigned __int64`.
+`size_t` Typedef je `unsigned int` na 32 platformě x86. Na 64-bitových platformách `size_t` je definice typu `unsigned __int64`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pole a ukazatelé](../c-language/arrays-and-pointers.md)

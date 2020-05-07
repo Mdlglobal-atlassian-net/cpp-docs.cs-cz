@@ -16,9 +16,9 @@ ms.locfileid: "74857148"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozšířené atributy třídy úložiště jazyka C
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Další informace o tomto tématu najdete v části [__declspecC++ (Referenční dokumentace)](../cpp/declspec.md).
+Další informace o tomto tématu najdete v části [__declspec (Referenční dokumentace jazyka C++)](../cpp/declspec.md).
 
 Rozšířená syntaxe atributu zjednodušuje a standardizuje rozšíření specifické pro společnost Microsoft v rámci jazyka C. Mezi atributy třídy úložiště používající rozšířenou syntaxi atributů patří atributy thread, naked, dllimport a dllexport.
 
@@ -27,16 +27,16 @@ Rozšířená syntaxe atributů pro určení informací o třídě úložiště 
 ## <a name="syntax"></a>Syntaxe
 
 *specifikátor třídy úložiště*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Rozšířený--modifikátor-SEQ* **)**  /\* \*specifický pro společnost Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Rozšířené prohlášení-modifikátor-SEQ* **)**  / \* specifické pro společnost Microsoft\*/
 
-Rozšířený-&nbsp;– *Modifikátor-SEQ*: &nbsp;&nbsp;&nbsp;/\* \*specifické pro společnost Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+*Extended---modifikátor-SEQ*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Rozšířené-prohlášení – modifikátor*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended---modifikátor-SEQ* *Extended---modifikátor*
 
-*Rozšířené – modifikátor*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**holé**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+*Rozšířené – modifikátor*&nbsp; &nbsp; &nbsp; &nbsp; :/ specifické\* pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Doporučujeme**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**okem**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**atributu**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 Modifikátory deklarace jsou odděleny prázdným znakem. Všimněte si, že *příkaz Extended---modifikátor-SEQ* může být prázdný. v takovém případě nemá __declspec žádný vliv.
@@ -45,6 +45,6 @@ Atributy třídy úložiště thread, naked, dllimport a dllexport jsou vlastnos
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

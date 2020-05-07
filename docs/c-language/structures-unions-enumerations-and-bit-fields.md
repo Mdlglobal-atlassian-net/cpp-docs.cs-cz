@@ -21,6 +21,6 @@ ms.locfileid: "62157770"
 
 - [Typ výčtu](../c-language/enum-type.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

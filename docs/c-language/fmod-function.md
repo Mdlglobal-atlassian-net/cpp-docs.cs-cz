@@ -13,10 +13,10 @@ ms.locfileid: "62233568"
 ---
 # <a name="fmod-function"></a>fmod – funkce
 
-**ANSI 4.5.6.4** , zda dojde k chybě domény nebo je vrácena nula, pokud `fmod` funkce má druhý argument s nulou
+**4.5.6.4 ANSI** Bez ohledu na to, jestli dojde k chybě domény, `fmod` nebo se vrátí nula, když má funkce druhý argument nula.
 
 Má-li funkce `fmod` jako druhý argument nulu, vrátí funkce hodnotu nula.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

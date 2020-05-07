@@ -13,7 +13,7 @@ ms.locfileid: "62157835"
 ---
 # <a name="strerror-function"></a>strerror – funkce
 
-**ANSI 4.11.6.2** obsah chyby zprávy řetězců vrácených `strerror` – funkce
+**4.11.6.2 ANSI** Obsah řetězců chybové zprávy vrácený `strerror` funkcí
 
 Funkce `strerror` vygeneruje tyto zprávy:
 
@@ -57,6 +57,6 @@ Funkce `strerror` vygeneruje tyto zprávy:
 36  Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

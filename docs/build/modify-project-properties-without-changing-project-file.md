@@ -1,5 +1,5 @@
 ---
-title: 'Postup: Úprava vlastností a cílů projektu jazyka C++ bez esea'
+title: 'Postupy: Úprava vlastností a cílů projektu C++ beze změny souboru projektu'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
@@ -10,33 +10,33 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328465"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Postup: Úprava vlastností a cílů projektu jazyka C++ bez esea
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Postupy: Úprava vlastností a cílů projektu C++ beze změny souboru projektu
 
-Vlastnosti a cíle projektu můžete přepsat z příkazového řádku MSBuild beze změny souboru projektu. To je užitečné, pokud chcete použít některé vlastnosti dočasně nebo příležitostně. Předpokládá některé znalosti MSBuild. Další informace naleznete v tématu [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
+Vlastnosti projektu a cíle lze přepsat z příkazového řádku MSBuild bez změny souboru projektu. To je užitečné, pokud chcete některé vlastnosti dočasně nebo občas použít. Předpokládá několik znalostí nástroje MSBuild. Další informace najdete v tématu [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
-> Editor XML v sadě Visual Studio nebo libovolný textový editor můžete použít k vytvoření souboru .props nebo .targets. Nepoužívejte Správce **vlastností** v tomto scénáři, protože přidá vlastnosti do souboru projektu.
+> Můžete použít editor XML v aplikaci Visual Studio nebo libovolný textový editor pro vytvoření souboru. props nebo. targets. Nepoužívejte **Správce vlastností** v tomto scénáři, protože přidává vlastnosti do souboru projektu.
 
-*Chcete-li přepsat vlastnosti projektu:*
+*Přepsání vlastností projektu:*
 
-1. Vytvořte soubor .props, který určuje vlastnosti, které chcete přepsat.
+1. Vytvořte soubor. props, který určuje vlastnosti, které chcete přepsat.
 
-1. Z příkazového řádku: nastavte ForceImportBeforeCppTargets="C:\sources\my_props.props"
+1. Z příkazového řádku: set ForceImportBeforeCppTargets = "C:\sources\ my_props. props"
 
-*Chcete-li přepsat cíle projektu:*
+*Přepsání cílů projektu:*
 
-1. Vytvoření souboru .targets s jejich implementací nebo konkrétním cílem
+1. Vytvoření souboru. targets s jejich implementací nebo konkrétním cílem
 
-2. Z příkazového řádku: nastavte ForceImportAfterCppTargets ="C:\sources\my_target.targets"
+2. Z příkazového řádku: set ForceImportAfterCppTargets = "C:\sources\ my_target. targets"
 
-Můžete také nastavit obě možnosti na příkazovém řádku msbuild pomocí možnosti /p:
+Můžete také nastavit buď možnost v příkazovém řádku MSBuild pomocí možnosti/p:
 
 ```cmd
 > msbuild myproject.sln /p:ForceImportBeforeCppTargets="C:\sources\my_props.props"
 > msbuild myproject.sln /p:ForceImportAfterCppTargets="C:\sources\my_target.targets"
 ```
 
-Přepsání vlastností a cílů tímto způsobem je ekvivalentní přidání následujících importů do všech souborů .vcxproj v řešení:
+Přepsání vlastností a cílů tímto způsobem odpovídá přidání následujících importů do všech souborů. vcxproj v řešení:
 
 ```cmd
 <Import Project=="C:\sources\my_props.props" />

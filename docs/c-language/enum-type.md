@@ -11,10 +11,10 @@ ms.locfileid: "62234098"
 ---
 # <a name="enum-type"></a>enum – typ
 
-**ANSI 3.5.2.2** celočíselný typ zvolený k vyjádření hodnot typu výčtu
+**3.5.2.2 ANSI** Celočíselný typ zvolený pro reprezentaci hodnot výčtového typu
 
 Proměnná deklarovaná jako `enum` je typu `int`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)
