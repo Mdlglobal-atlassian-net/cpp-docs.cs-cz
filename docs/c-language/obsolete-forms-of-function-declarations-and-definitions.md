@@ -47,7 +47,7 @@ void funct1( int a, ... )
 
 Deklarace funkce starého typu také vygenerují upozornění, pokud následně deklarujete nebo definujete stejnou funkci se třemi tečkami nebo parametr typu, který není stejný jako jeho povýšený typ.
 
-V další [části, C Definice funkcí](../c-language/c-function-definitions.md), zobrazuje syntaxi pro definice funkcí, včetně syntaxe starého stylu. Neterminál pro seznam parametrů v syntaxi starého stylu je *seznam identifikátorů*.
+V další části [definice funkcí jazyka C](../c-language/c-function-definitions.md)se zobrazuje syntaxe definic funkcí, včetně syntaxe starého stylu. Neterminálový seznam parametrů v syntaxi starého stylu je *seznam identifikátorů*.
 
 ## <a name="see-also"></a>Viz také
 

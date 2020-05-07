@@ -51,7 +51,7 @@ if (hDLL != NULL)
 
 Způsob, jakým určíte požadovanou funkci při volání funkce **GetProcAddress** , závisí na tom, jak byla knihovna dll sestavena.
 
-Exportní ordinální číslo lze získat pouze v případě, že knihovna DLL, na kterou propojujete, je sestavena pomocí souboru definice modulu (. def) a pokud jsou pořadí uvedena s funkcemi v oddílu EXPORTS souboru. def knihovny DLL. Volání **GetProcAddress** s exportním pořadovým číslem na rozdíl od názvu funkce je mírně rychlejší, pokud má knihovna DLL mnoho exportovaných funkcí, protože export řadových číslovek slouží jako indexy do exportní tabulky knihovny DLL. Pomocí pořadového čísla exportu může funkce **GetProcAddress** najít funkci přímo na rozdíl od porovnání zadaného názvu s názvy funkcí v exportní tabulce knihovny DLL. Nicméně byste měli volat **GetProcAddress** s exportním pořadovým číslem pouze v případě, že máte kontrolu nad přiřazením řadových funkcí do exportovaných funkcí v souboru. def.
+Exportní ordinální číslo lze získat pouze v případě, že knihovna DLL, na kterou propojujete, je sestavena pomocí souboru definice modulu (. def) a pokud jsou pořadí uvedena s funkcemi v oddílu **EXPORTS** souboru. def knihovny DLL. Volání **GetProcAddress** s exportním pořadovým číslem na rozdíl od názvu funkce je mírně rychlejší, pokud má knihovna DLL mnoho exportovaných funkcí, protože export řadových číslovek slouží jako indexy do exportní tabulky knihovny DLL. Pomocí pořadového čísla exportu může funkce **GetProcAddress** najít funkci přímo na rozdíl od porovnání zadaného názvu s názvy funkcí v exportní tabulce knihovny DLL. Nicméně byste měli volat **GetProcAddress** s exportním pořadovým číslem pouze v případě, že máte kontrolu nad přiřazením řadových funkcí do exportovaných funkcí v souboru. def.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
@@ -67,6 +67,6 @@ Exportní ordinální číslo lze získat pouze v případě, že knihovna DLL, 
 
 - [Export z knihovny DLL pomocí souborů DEF](exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytváření C/C++ knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

@@ -13,10 +13,10 @@ ms.locfileid: "81480872"
 ---
 # <a name="truncation-of-floating-point-values"></a>Zkrácení hodnot s plovoucí desetinnou čárkou
 
-**ANSI 3.2.1.4** Směr zkrácení nebo zaokrouhlení při převodu čísla s plovoucí desetinnou tácek na užší číslo s plovoucí desetinnou desetinnou tmítkem
+**3.2.1.4 ANSI** Směr zkrácení nebo zaokrouhlování při převodu čísla s plovoucí desetinnou čárkou na zúžené číslo s plovoucí desetinnou čárkou
 
-Dojde-li k podtečení, hodnota proměnné s plovoucí desetinnou desetinnou cípem je zaokrouhlena na nulu. Přetečení může způsobit chybu modulu runtime nebo vytvořit nepředvídatelnou hodnotu v závislosti na určených optimalizacích.
+Pokud dojde k podtečení, hodnota proměnné s plovoucí desetinnou čárkou se zaokrouhluje na nulu. Přetečení může způsobit chybu modulu runtime nebo vytvořit nepředvídatelnou hodnotu v závislosti na určených optimalizacích.
 
 ## <a name="see-also"></a>Viz také
 
-[Matematika s plovoucí desetinnou tísní](../c-language/floating-point-math.md)
+[Matematika s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)

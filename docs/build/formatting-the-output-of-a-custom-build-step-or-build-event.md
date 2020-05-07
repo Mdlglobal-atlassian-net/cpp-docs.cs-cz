@@ -30,7 +30,7 @@ Pokud je výstup vlastního kroku sestavení nebo události sestavení správně
 
 Výstup by měl mít tento formát:
 
-> {<em>filename</em> **(** <em>řádek #</em> \[ **,** <em>sloupec #</em>] **)** &#124; *Tool*} **:** \[ <em>libovolný text</em> ] {Warning**Error** &#124; **warning**} <em>Code + Number</em> **:** <em>Lokalizovatelný řetězec</em> \[ <em>libovolný text</em> ]
+> {<em>filename</em>**(**<em>řádek #</em> \[ **,** <em>sloupec #</em>]**)** &#124; *název nástroje*} **:** \[ <em>libovolný text</em> ] {**Error** &#124; **Warning**} <em>Code + Number</em>**:**<em>lokalizovatelné řetězce</em> \[ <em>libovolný text</em> ]
 
 Kde:
 
@@ -42,7 +42,7 @@ Kde:
 
 Příklad:
 
-> C:\\*požadovaný sourcefile. cpp*(134): Chyba C2143: Chyba syntaxe: chybějící '; ' před '} '
+> C:\\*požadovaný sourcefile. cpp*(134): Chyba C2143: Chyba syntaxe: chybějící znak; před}
 >
 > ODKAZ: závažná chyba LINKERŮ LNK1104: nejde otevřít soubor*somelib. lib.*
 

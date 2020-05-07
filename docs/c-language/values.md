@@ -11,14 +11,14 @@ ms.locfileid: "81480864"
 ---
 # <a name="values"></a>Hodnoty
 
-**ANSI 3.1.2.5** Reprezentace a sady hodnot různých typů čísel s plovoucí desetinnou desetinnou desetinnou desetinnou desetinnou desetinnou
+**3.1.2.5 ANSI** Reprezentace a sady hodnot různých typů čísel s plovoucí desetinnou čárkou
 
-Typ **float** obsahuje 32 bitů: 1 pro znaménko, 8 pro exponent a 23 pro mantisu. Jeho rozsah je +/- 3.4E38 s přesností nejméně 7 číslic.
+Typ **float** obsahuje 32 bitů: 1 pro znaménko, 8 pro exponent a 23 pro mantisu. Jeho rozsah je +/-3.4 E38 s minimálně 7 číslicemi přesnosti.
 
-**Dvojitý** typ obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/- 1.7E308 s přesností nejméně 15 číslic.
+Typ **Double** obsahuje 64 bitů: 1 pro znaménko, 11 pro exponent a 52 pro mantisu. Jeho rozsah je +/-1.7 E308 s minimálně 15 číslicemi přesnosti.
 
-Dlouhý **dvojitý** typ je odlišný, ale má stejnou reprezentaci jako typ **double** v kompilátoru Microsoft C.
+Typ **Long Double** je odlišný, ale má stejnou reprezentaci jako typ **Double** v kompilátoru jazyka Microsoft C.
 
 ## <a name="see-also"></a>Viz také
 
-[Matematika s plovoucí desetinnou tísní](../c-language/floating-point-math.md)
+[Matematika s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)

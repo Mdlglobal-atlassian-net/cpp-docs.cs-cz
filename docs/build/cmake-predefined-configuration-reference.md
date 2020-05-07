@@ -1,5 +1,5 @@
 ---
-title: CMake předdefinovaný odkaz na konfiguraci
+title: Odkaz na předdefinovaný konfigurační odkaz CMake
 ms.description: Visual Studio provides several predefined build configurations for CMake projects on Linux, Windows, ARM, and IoT.
 ms.date: 06/12/2019
 helpviewer_keywords:
@@ -11,32 +11,32 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323019"
 ---
-# <a name="cmake-predefined-build-configurations"></a>CMake předdefinované konfigurace sestavení
+# <a name="cmake-predefined-build-configurations"></a>CMaké konfigurace předdefinovaných sestavení
 
 ::: moniker range="vs-2015"
 
-Projekty CMake jsou podporovány v sadě Visual Studio 2017 a novější.
+Projekty CMake jsou podporovány v sadě Visual Studio 2017 a novějších.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-V projektu CMake jsou konfigurace sestavení uloženy v souboru CMakeSettings.json. Když zvolíte **Spravovat konfigurace** z rozevíracího souboru konfigurace sestavení na hlavním panelu nástrojů, zobrazí se dialogové okno, které zobrazuje výchozí konfigurace CMake dostupné v sadě Visual Studio:
+V projektu CMake jsou konfigurace sestavení uloženy v souboru CMakeSettings. JSON. Když v hlavním panelu nástrojů zvolíte možnost **spravovat konfigurace** z rozevíracího seznamu konfigurace sestavení, zobrazí se dialogové okno s výchozími konfiguracemi cmake dostupnými v sadě Visual Studio:
 
-- x86 Ladění
-- x86 Vydání
-- x64 Ladění
-- x64 Vydání
-- Linux-ladění
-- Linux-vydání
+- Ladění x86
+- Verze x86
+- Ladění x64
+- Verze x64
+- Linux – ladění
+- Linux – verze
 - Ladění IoT
-- Vydání IoT
-- Ladění MinGW
-- Uvolnění MinGW
+- Verze IoT
+- MinGW ladění
+- Verze MinGW
 
-Když zvolíte konfiguraci, bude přidána do souboru *CMakeSettings.json* v kořenové složce projektu. Potom jej můžete použít k sestavení projektu. Informace o vlastnostech konfigurace naleznete v [tématu CMakeSettings reference](cmakesettings-reference.md).
+Když zvolíte konfiguraci, přidá se do souboru *CMakeSettings. JSON* v kořenové složce projektu. Pak ji můžete použít k sestavení projektu. Informace o vlastnostech konfigurace najdete v tématu [CMakeSettings reference](cmakesettings-reference.md).
 
-## <a name="linux-predefined-build-configurations"></a>Předdefinované konfigurace sestavení linuxu:
+## <a name="linux-predefined-build-configurations"></a>Linux – předdefinované konfigurace sestavení:
 
 ```json
 {
@@ -109,7 +109,7 @@ You can use these optional settings for more control:
 }
 ```
 
-Tyto možnosti umožňují spouštět příkazy ve vzdáleném systému před a po sestavení a před generováním CMake. Hodnoty mohou být libovolný příkaz, který je platný ve vzdáleném systému. Výstup je odváděn zpět do sady Visual Studio.
+Tyto možnosti umožňují spustit příkazy ve vzdáleném systému před a po sestavení a před generováním CMake. Hodnoty můžou být libovolný příkaz, který je platný na vzdáleném systému. Výstup je zapsán do kanálu zpět do sady Visual Studio.
 
 ## <a name="iot-predefined-build-configurations"></a>Předdefinované konfigurace sestavení IoT
 
@@ -204,7 +204,7 @@ Tyto možnosti umožňují spouštět příkazy ve vzdáleném systému před a 
     }
 ```
 
-## <a name="mingw-predefined-build-configurations"></a>Předdefinované konfigurace sestavení MinGW
+## <a name="mingw-predefined-build-configurations"></a>MinGW předdefinované konfigurace sestavení
 
 ```json
 {
@@ -280,7 +280,7 @@ Tyto možnosti umožňují spouštět příkazy ve vzdáleném systému před a 
     }
 ```
 
-## <a name="x86-64-predefined-build-configurations"></a>x86-64 předdefinované konfigurace sestavení
+## <a name="x86-64-predefined-build-configurations"></a>konfigurace předdefinovaných sestavení X86-64
 
 ```json
     {
@@ -356,31 +356,31 @@ Tyto možnosti umožňují spouštět příkazy ve vzdáleném systému před a 
 
 ::: moniker range="vs-2019"
 
-V projektu CMake jsou konfigurace sestavení uloženy v souboru CMakeSettings.json. Když zvolíte **Spravovat konfigurace** z rozevíracího souboru konfigurace sestavení na hlavním panelu nástrojů, zobrazí se dialogové okno, které zobrazuje výchozí konfigurace CMake dostupné v sadě Visual Studio:
+V projektu CMake jsou konfigurace sestavení uloženy v souboru CMakeSettings. JSON. Když v hlavním panelu nástrojů zvolíte možnost **spravovat konfigurace** z rozevíracího seznamu konfigurace sestavení, zobrazí se dialogové okno s výchozími konfiguracemi cmake dostupnými v sadě Visual Studio:
 
-- x86 Ladění
-- x86 Clang Ladění
-- x86 Vydání
-- x86 Clang vydání
-- x64 Ladění
-- x64 Clang Ladění
-- x64 Vydání
-- x64 Clang vydání
-- Linux-ladění
-- Linux-vydání
+- Ladění x86
+- Clang ladění x86
+- Verze x86
+- Verze Clang x86
+- Ladění x64
+- Clang ladění x64
+- Verze x64
+- Verze x64 Clang
+- Linux – ladění
+- Linux – verze
 - Linux-Clang-ladění
-- Linux-Clang-Vydání
-- Existující mezipaměť (vzdálená)
+- Linux-Clang-Release
+- Existující mezipaměť (vzdálené)
 - Existující mezipaměť
-- Ladění MinGW
-- Uvolnění MinGW
-- Ladění WSL
-- Uvolnění WSL
-- Ladění clangu WSL
-- Uvolnění clangu WSL
+- MinGW ladění
+- Verze MinGW
+- WSL ladění
+- Verze WSL
+- WSL Clang ladění
+- WSL Clang vydání
 - Clang
 
-Když zvolíte konfiguraci, bude přidána do souboru CMakeSettings.json v kořenové složce projektu. Potom jej můžete použít k sestavení projektu.
+Když zvolíte konfiguraci, přidá se do souboru CMakeSettings. JSON v kořenové složce projektu. Pak ji můžete použít k sestavení projektu.
 
 ```json
 {
@@ -698,9 +698,9 @@ Když zvolíte konfiguraci, bude přidána do souboru CMakeSettings.json v koře
 
 ## <a name="see-also"></a>Viz také
 
-[CMake projekty v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake předdefinovaný odkaz na konfiguraci](cmake-predefined-configuration-reference.md)<br/>
+[Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)<br/>

@@ -15,34 +15,34 @@ ms.locfileid: "67400589"
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
 
-"Textový literál" je posloupnost znaků ze zdrojové znakové sady uzavřený do dvojitých uvozovek ( **""** ). Řetězcové literály se používají k vyjádření posloupnost znaků, které, dohromady, tvoří řetězec zakončený hodnotou null. Musíte vždy přidat předponu literály širokých řetězců s písmenem **L**.
+"Řetězcový literál" je posloupnost znaků ze zdrojové znakové sady uzavřené v uvozovkách (**""**). Řetězcové literály slouží k reprezentaci posloupnosti znaků, které společně tvoří řetězec zakončený hodnotou null. Literály s velkým řetězcem je nutné vždy prefixovat s písmenem **L**.
 
 ## <a name="syntax"></a>Syntaxe
 
-*string-literal*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **"** *s – znak sekvence*<sub>optimalizované</sub> **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s – znak sekvence*<sub>optimalizované</sub> **"**
+*řetězcový literál*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-Sequence –*<sub>opt</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s-znak – opt-char-Sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*:<br/>
+*s-char-Sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
-&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-Sequence* *s-char*
 
 *s-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku
+&nbsp;&nbsp;&nbsp;&nbsp;libovolný člen zdrojové znakové sady s výjimkou dvojité uvozovky ("), zpětného lomítka\\() nebo znaku nového řádku.
 
 &nbsp;&nbsp;&nbsp;&nbsp;*řídicí sekvence*
 
 ## <a name="remarks"></a>Poznámky
 
-Následující příklad je jednoduchý řetězcový literál:
+Níže uvedený příklad je jednoduchý řetězcový literál:
 
 ```C
 char *amessage = "This is a string literal.";
 ```
 
-Všechny kódy řídicí [řídicí sekvence](../c-language/escape-sequences.md) tabulky jsou platné u řetězcových literálů. K reprezentaci dvojité uvozovky v řetězcovém literálu, použijte sekvenci escape  **\\"** . Jednoduché uvozovky ( **"** ) můžou být vyjádřeny bez řídicí sekvence. Zpětné lomítko ( **\\** ) musí být následován se druhé zpětné lomítko ( **\\\\** ) Pokud je zobrazeno v rámci řetězce. Když se objeví zpětné lomítko na konci řádku, je vždy interpretován jako znak pro pokračování řádku.
+Všechny řídicí kódy, které jsou uvedeny v tabulce [řídicích sekvencí](../c-language/escape-sequences.md) , jsou platné v řetězcových literálech. Chcete-li znázornit dvojitou uvozovku v řetězcovém literálu, použijte ** \\řídicí sekvenci**. Jednoduchá uvozovka (**'**) může být reprezentována bez řídicí sekvence. Po zpětném lomítku (**\\**) musí následovat druhé zpětné lomítko (**\\**), když se objeví v rámci řetězce. Když se na konci řádku objeví zpětné lomítko, je vždy interpretováno jako znak pro pokračování řádku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

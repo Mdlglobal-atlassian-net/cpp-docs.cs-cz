@@ -21,15 +21,15 @@ ms.locfileid: "80168770"
 ---
 # <a name="c-bitwise-operators"></a>Bitové operátory jazyka C
 
-Bitové operátory provádějí operace bitového operátoru and ( **&** ), bitového operátoru or ( **^** ) a bitových operací ( **&#124;** ).
+Bitové operátory provádějí operace bitového operátoru**&** and (), bitového operátoru**^** or () a bitového i (**&#124;**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*And-Expression*: &nbsp;&nbsp;*rovnosti-Expression* &nbsp;&nbsp;*a-* Expression **&** *rovnost-Expression*
+*And-Expression*: &nbsp; &nbsp;rovnost *-Expression* &nbsp; &nbsp; *a-* **&** Expression *rovnost-* Expression
 
-*Exclusive nebo-Expression*: &nbsp;&nbsp;*a-* Expression &nbsp;&nbsp;*exclusive-nebo-* Expression **^** *a-Expression*
+Exclusive *-or-Expression*: &nbsp; &nbsp; *a-* &nbsp; &nbsp;Expression *Exclusive-nebo-* **^** Expression *a-Expression*
 
-*výraz or*: &nbsp;&nbsp;*Exclusive-nebo-Expression* *&nbsp;&nbsp;* &#124; s *výhradním* výrazem or nebo výrazem.
+*výraz (včetně) nebo*výrazu &nbsp;: &nbsp; *exclusive-or-Expression* &nbsp; &nbsp; *, včetně nebo* Expression &#124; *Exclusive-* or-Expression
 
 Operandy bitových operátorů musí mít celočíselné typy, ale jejich typy můžou být odlišné. Tyto operátory provádějí obvyklé aritmetické převody; Typ výsledku je typ operandů po převodu.
 
@@ -53,7 +53,7 @@ short n;
 n = i & j;
 ```
 
-Výsledek přiřazený `n` v tomto prvním příkladu je stejný jako `i` (šestnáctkově 0xAB00).
+Výsledek přiřazený `n` v tomto prvním příkladu je stejný jako `i` (0xAB00 šestnáctkový).
 
 ```C
 n = i | j;
@@ -63,7 +63,7 @@ n = i ^ j;
 
 Bitový a v druhém příkladu má za následek hodnotu 0xABCD (šestnáctkový), zatímco bitový-výhradní nebo třetí příklad vytvoří 0xCD (šestnáctkový).
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Výsledky bitové operace u celých čísel se znaménkem jsou implementovány podle standardu ANSI C. V případě kompilátoru jazyka Microsoft C fungují bitové operace s podepsanými celými čísly stejně jako bitové operace u celých čísel bez znaménka. Například `-16 & 99` lze vyjádřit v binárním formátu jako
 
@@ -82,4 +82,4 @@ Výsledek bitového operátoru AND je 96 desetinných míst.
 
 [Bitový operátor AND: &](../cpp/bitwise-and-operator-amp.md)<br/>
 [Bitový exkluzivní operátor OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
-[Bitový operátor OR:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
+[Bitový operátor OR: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

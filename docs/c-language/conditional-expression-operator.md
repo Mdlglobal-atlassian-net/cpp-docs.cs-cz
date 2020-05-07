@@ -15,35 +15,35 @@ ms.locfileid: "81749191"
 ---
 # <a name="conditional-expression-operator"></a>Operátor podmíněného výrazu
 
-C má jeden ternární operátor: operátor podmíněného výrazu (**? :**).
+C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).
 
 ## <a name="syntax"></a>Syntaxe
 
 *podmíněný výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický-OR-výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický-NEBO výraz?***?**    *výraz*  **:**  *podmíněný výraz*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz or*  **?**  *výraz*  **:**  *podmíněný výraz*
 
-*Logický výraz OR* musí mít integrální, plovoucí nebo ukazatel typu. Vyhodnocuje se z hlediska rovnocennosti 0. Bod sekvence následuje *za logickým výrazem OR*. Hodnocení operandů probíhá takto:
+*Logický operátor OR* musí mít typ integrál, float nebo Pointer. Vyhodnotí se v souvislosti s jeho rovnocenným ekvivalentem 0. Bod sekvence se řídí *logickým výrazem or*. Vyhodnocení operandů pokračuje následujícím způsobem:
 
-- Pokud *logický výraz OR* není rovna 0, je vyhodnocen *výraz.* Výsledek vyhodnocení výrazu je dán neterminálním *výrazem*. (To *znamená,* že výraz je vyhodnocen pouze *v případě, že* je splněn logický výraz OR.)
+- Pokud *logický výraz or* není rovno 0, je vyhodnocen *výraz* . Výsledek vyhodnocení výrazu je dán nekonečným *výrazem*. (To znamená, že *výraz* je vyhodnocen pouze v případě, že je *logická hodnota nebo výraz* true.)
 
-- Pokud *se logický výraz OR* rovná 0, je vyhodnocen podmíněný *výraz.* Výsledkem výrazu je hodnota *podmíněného výrazu*. (To znamená, že *podmíněný výraz* je vyhodnocen pouze v *případě, že je logický výraz OR* nepravdivý.)
+- Pokud se *logický operátor OR* rovná 0, je vyhodnocen *podmíněný výraz* . Výsledek výrazu je hodnota *podmíněného výrazu*. (To znamená, že *podmíněný výraz* je vyhodnocen pouze v případě, že *logický-nebo-Expression* je false.)
 
-Všimněte si, že je vyhodnocen *výraz* nebo *podmíněný výraz,* ale ne obojí.
+Všimněte si, že je vyhodnocen buď *výraz* , nebo *podmíněný výraz* , ale ne obojí.
 
-Typ výsledku podmíněné operace závisí na typu *výrazu* nebo operandu *podmíněného výrazu* takto:
+Typ výsledku podmíněné operace závisí na typu *výrazu* nebo operandu *podmíněného výrazu* , a to následujícím způsobem:
 
-- Pokud *výraz* nebo *podmíněný výraz* má integrální nebo plovoucí typ (jejich typy se mohou lišit), operátor provádí obvyklé aritmetické převody. Typ výsledku je typ operandů po převodu.
+- Pokud má *výraz* nebo *podmíněný výraz* celočíselný nebo plovoucí typ (jejich typy mohou být rozdílné), operátor provádí běžné aritmetické převody. Typ výsledku je typ operandů po převodu.
 
-- Pokud *výraz* i *podmíněný výraz* mají stejnou strukturu, sjednocení nebo typ ukazatele, je typ výsledku stejný typ struktury, sjednocení nebo ukazatele.
+- Pokud má *výraz* i *podmíněný výraz* stejnou strukturu, sjednocení nebo typ ukazatele, typ výsledku je stejný typ struktury, sjednocení nebo ukazatele.
 
-- Pokud oba operandy `void`mají typ `void`, výsledek má typ .
+- Pokud oba operandy mají typ `void`, výsledek je typu `void`.
 
-- Pokud buď operand je ukazatel na objekt libovolného typu a druhý `void`operand je ukazatel na , ukazatel `void` na objekt je `void`převeden na ukazatel a výsledkem je ukazatel na .
+- Pokud je jeden z operandů ukazatel na objekt libovolného typu a druhý operand je ukazatel na `void`, je ukazatel na objekt převeden na ukazatel na `void` a výsledek je ukazatel na. `void`
 
-- Pokud *je výraz* nebo *podmíněný výraz* ukazatel a druhý operand je konstantní výraz s hodnotou 0, typ výsledku je typ ukazatele.
+- Pokud je *výraz* nebo *podmíněný výraz* ukazatel a druhý operand je konstantní výraz s hodnotou 0, typ výsledku je typ ukazatele.
 
-V porovnání typů pro ukazatele všechny kvalifikátory typu (**const** nebo `volatile`) v typu, na který jsou body ukazatele nevýznamné, ale typ výsledku dědí kvalifikátory z obou součástí podmíněného.
+V porovnání s typem pro ukazatele mají jakékoli kvalifikátory typu (**const** nebo `volatile`) v typu, na který ukazatele ukazatelů jsou nevýznamné, ale výsledný typ dědí kvalifikátory z obou komponent podmíněného.
 
 ## <a name="examples"></a>Příklady
 
@@ -53,7 +53,7 @@ Následující příklady ukazují použití podmíněného operátoru:
 j = ( i < 0 ) ? ( -i ) : ( i );
 ```
 
-Tento příklad přiřazuje absolutní hodnotu `i` . `j` Pokud `i` je menší `-i` než 0, je přiřazen . `j` Pokud `i` je větší než nebo `i` rovno `j`0, je přiřazen .
+Tento příklad přiřadí absolutní hodnotu `i` k. `j` Pokud `i` je menší než 0, `-i` je přiřazeno `j`. Pokud `i` je větší než nebo rovno 0, `i` je přiřazeno `j`.
 
 ```cpp
 void f1( void );
@@ -66,7 +66,7 @@ int y;
 ( x == y ) ? ( f1() ) : ( f2() );
 ```
 
-V tomto příkladu `f1` jsou `f2`deklarovány `x` dvě `y`funkce a , a dvě proměnné a , a . Později v programu, pokud dvě proměnné mají stejnou `f1` hodnotu, je volána funkce. V `f2` opačném případě se nazývá.
+V tomto příkladu jsou deklarovány dvě `f1` funkce `f2`, a a dvě proměnné `x` a `y`. Pokud mají dvě proměnné stejnou hodnotu, je funkce `f1` volána později v programu. V opačném případě `f2` se zavolá.
 
 ## <a name="see-also"></a>Viz také
 

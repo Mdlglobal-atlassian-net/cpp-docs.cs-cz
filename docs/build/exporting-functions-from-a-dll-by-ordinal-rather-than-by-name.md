@@ -16,16 +16,16 @@ ms.locfileid: "81328579"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu
 
-Nejjednodušší způsob exportu funkcí z dll je exportovat je podle názvu. To se stane, když použijete **__declspec(dllexport)**, například. Místo toho však můžete exportovat funkce podle oslnění. Pomocí této techniky je nutné použít soubor .def namísto **__declspec(dllexport).** Chcete-li určit hodnotu řadového pole, přidejte její řadové číslo k názvu funkce v souboru DEF. Informace o určení řadových čísel naleznete v [tématu Export z dll pomocí souborů .def](exporting-from-a-dll-using-def-files.md).
+Nejjednodušší způsob, jak exportovat funkce z vaší knihovny DLL, je exportovat je podle názvu. K tomu dochází při použití **__declspec (dllexport)**, například. Místo toho ale můžete exportovat funkce podle pořadového čísla. V této technice je nutné použít soubor. def namísto **__declspec (dllexport)**. Chcete-li zadat pořadové číslo funkce, přihlaste své pořadí k názvu funkce v souboru. def. Informace o tom, jak zadat pořadí, naleznete v tématu [Export z knihovny DLL pomocí souborů. def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
-> Chcete-li optimalizovat velikost souboru knihovny DLL, použijte atribut **NONAME** u každé exportované funkce. S atributem **NONAME** jsou ordináty uloženy v tabulce exportu knihovny DLL, nikoli v názvech funkcí. To může být značné úspory, pokud exportujete mnoho funkcí.
+> Pokud chcete optimalizovat velikost souboru vaší knihovny DLL, použijte pro každou exportovanou funkci atribut **NONAME** . U atributu **NONAME** jsou řadové číslovky uloženy v exportní tabulce knihovny DLL, nikoli v názvech funkcí. To může být značný úspora, pokud exportujete mnoho funkcí.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Použití souboru DEF, abych mohl exportovat podle řadového](exporting-from-a-dll-using-def-files.md)
+- [Použijte soubor. def, aby se mohl exportovat podle pořadového čísla.](exporting-from-a-dll-using-def-files.md)
 
-- [Použít __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Použít __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Viz také
 

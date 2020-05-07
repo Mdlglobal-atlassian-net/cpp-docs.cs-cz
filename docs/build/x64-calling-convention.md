@@ -1,6 +1,6 @@
 ---
 title: x64 – konvence volání
-description: Podrobnosti o výchozí konvence volání x64 ABI.
+description: Podrobnosti o výchozí konvenci volání metody ABI x64
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: caf22172ea5e9c20280bce8e508d72fd30c00c5b
@@ -12,66 +12,66 @@ ms.locfileid: "81335132"
 ---
 # <a name="x64-calling-convention"></a>x64 – konvence volání
 
-Tato část popisuje standardní procesy a konvence, které jedna funkce (volající) používá k volání do jiné funkce (volaný) v kódu x64.
+Tato část popisuje standardní procesy a konvence, které jedna funkce (volající) používá k volání jiné funkce (volaný) v kódu x64.
 
 ## <a name="calling-convention-defaults"></a>Výchozí nastavení konvence volání
 
-Binární rozhraní aplikace x64 (ABI) používá ve výchozím nastavení konvenci rychlého volání čtyř registrů. Místo je přiděleno v zásobníku volání jako úložiště stínů pro volané k uložení těchto registrů. Existuje přísná shoda 1:1 mezi argumenty volání funkce a registry používané pro tyto argumenty. Každý argument, který se nevejde do 8 bajtů nebo není 1, 2, 4 nebo 8 bajtů, musí být předán odkazem. Jeden argument je nikdy rozložena do více registrů. Zásobník registru x87 je nepoužívaný a může být používán volava, ale musí být považován za volatilní napříč voláními funkcí. Všechny operace s plovoucí desetinnou desetinnou tázkem se provádějí pomocí registrů 16 XMM. Celé číslo argumenty jsou předány v registrech RCX, RDX, R8 a R9. Argumenty s plovoucí desetinnou tázkem jsou předány v xmm0l, xmm1l, xmm2l a xmm3l. 16bajtové argumenty jsou předány odkazem. Předávání parametrů je podrobně popsáno v [parametru Předávání](#parameter-passing). Kromě těchto registrů jsou RAX, R10, R11, XMM4 a XMM5 považovány za volatilní. Všechny ostatní registry jsou nestálé. Využití registru je podrobně zdokumentováno v [registru Využití](../build/x64-software-conventions.md#register-usage) a Volající [/ Volaný uložené registry](#callercallee-saved-registers).
+Binární rozhraní aplikace x64 (ABI) používá ve výchozím nastavení konvenci volání rychlého volání. Místo se přiděluje v zásobníku volání jako stínové úložiště pro volané, aby se tyto registry uložily. Mezi argumenty volání funkce a Registry použitými pro tyto argumenty je pouze striktní korespondence 1:1. Všechny argumenty, které se nevejdou do 8 bajtů nebo nejsou 1, 2, 4 nebo 8 bajtů, musí být předány odkazem. Jeden argument se nikdy nerozprostře mezi několik registrů. Zásobník registru x87 není používán a může být použit volaným, ale musí být považován za volatili napříč voláními funkce. Všechny operace s plovoucí desetinnou čárkou se provádějí pomocí 16 XMM Registry. Celočíselné argumenty jsou předány v registrech RCX, RDX, R8 a R9. Argumenty s plovoucí desetinnou čárkou jsou předány v XMM0L, XMM1L, XMM2L a XMM3L. 16bitové argumenty jsou předány odkazem. Předávání parametrů je podrobně popsáno v tématu [předávání parametrů](#parameter-passing). Kromě těchto registrů jsou RAX, R10, R11, XMM4 a XMM5 považovány za nestálé. Všechny ostatní Registry jsou nestálé. Použití registru je podrobně popsáno v části [použití registru](../build/x64-software-conventions.md#register-usage) a v [uložených registrech volající/volaný](#callercallee-saved-registers).
 
-Pro prototypové funkce jsou všechny argumenty před předáním převedeny na očekávané volané typy. Volající je zodpovědný za přidělení místa pro parametry volaný a musí vždy přidělit dostatek místa pro uložení čtyř parametrů registru, i v případě, že volaný nepřevezme tolik parametrů. Tato konvence zjednodušuje podporu pro neprototypované funkce jazyka C a funkce vararg C/C++. Pro funkce vararg nebo unprototyped musí být všechny hodnoty s plovoucí desetinnou desetinnou tísní duplikovány v odpovídajícím registru pro obecné účely. Všechny parametry za první čtyři musí být uloženy v zásobníku po stínové úložiště před voláním. Podrobnosti o funkci Vararg lze nalézt v [Varargs](#varargs). Neprototypové informace o funkcích jsou podrobně popsány v [neprototypové funkci](#unprototyped-functions).
+Pro prototypované funkce jsou před předáním převedeny všechny argumenty na očekávané typy volaný. Volající zodpovídá za přidělování prostoru pro parametry volaného a musí vždy přidělit dostatek místa pro uložení čtyř parametrů registru, a to i v případě, že volaný nebere mnoho parametrů. Tato konvence zjednodušuje podporu neprototypových funkcí jazyka C a vararg funkcí jazyka C/C++. V případě funkcí vararg nebo Unprototyped musí být všechny hodnoty s plovoucí desetinnou čárkou duplikovány v odpovídajícím registru pro obecné účely. Všechny parametry za první čtyři musí být uloženy v zásobníku po stínovém úložišti před voláním. Podrobnosti o funkci vararg najdete v [vararg](#varargs). Informace o neprototypované funkci jsou podrobně popsané v [neprototypované](#unprototyped-functions)funkci.
 
 ## <a name="alignment"></a>Zarovnání
 
-Většina struktur je zarovnána s jejich přirozeným zarovnáním. Primární výjimky jsou ukazatel `malloc` zásobníku nebo `alloca` paměti, které jsou zarovnány do 16 bajtů za účelem podpory výkonu. Zarovnání nad 16 bajtů musí být provedeno ručně, ale vzhledem k tomu, že 16 bajtů je společná velikost trasy pro operace XMM, tato hodnota by měla fungovat pro většinu kódu. Další informace o rozložení a zarovnání struktury naleznete v tématu [Typy a úložiště](../build/x64-software-conventions.md#types-and-storage). Informace o rozložení zásobníku naleznete v tématu [x64 využití zásobníku](../build/stack-usage.md).
+Většina struktur je zarovnána na své přirozené zarovnání. Primárními výjimkami jsou ukazatele zásobníku a `malloc` `alloca` paměť, které jsou zarovnány na 16 bajtů, aby bylo možné povýšit výkon. Zarovnání nad 16 bajtů se musí provést ručně, ale vzhledem k tomu, že 16 bajtů je společná velikost zarovnání pro XMM operace, tato hodnota by měla fungovat pro většinu kódu. Další informace o rozložení a zarovnání struktury najdete v tématu [typy a úložiště](../build/x64-software-conventions.md#types-and-storage). Informace o rozložení zásobníku najdete v tématu [použití zásobníku x64](../build/stack-usage.md).
 
-## <a name="unwindability"></a>Unwindability
+## <a name="unwindability"></a>Zpětná operace
 
-Funkce listu jsou funkce, které nemění žádné nestálé registry. Nelistová funkce může změnit nevolatilní RSP, například voláním funkce nebo přidělením dalšího místa zásobníku pro místní proměnné. Chcete-li obnovit nestálé registry při zpracování výjimky, musí být funkce bez listu označeny statickými daty, která popisují, jak správně uvolnit funkci na libovolné instrukci. Tato data jsou uložena jako *pdata*, nebo procedura data, která zase odkazuje na *xdata*, zpracování dat výjimky. Xdata obsahuje unwinding informace a může přejděte na další pdata nebo funkce obslužné rutiny výjimky. Prologs a epilogs jsou velmi omezené, takže mohou být správně popsány v xdata. Ukazatel zásobníku musí být zarovnán na 16 bajtů v libovolné oblasti kódu, která není součástí epilogu nebo prologu, s výjimkou funkcí listu. Listové funkce lze odvíjet jednoduše simulací návratu, takže pdata a xdata nejsou vyžadovány. Podrobnosti o správné struktuře funkčních prologů a epilogů najdete v [tématu x64 prolog a epilog](../build/prolog-and-epilog.md). Další informace o zpracování výjimek a zpracování výjimek a odvíjení dat a xdata naleznete v [tématu zpracování výjimek x64](../build/exception-handling-x64.md).
+Funkce list jsou funkce, které nemění žádné nestálé Registry. Funkce, která není typu list, může měnit nestálý RSP, například voláním funkce nebo přidělením dalšího prostoru zásobníku pro místní proměnné. Aby bylo možné obnovit nestálé Registry při zpracování výjimky, nelistové funkce musí být opatřeny poznámkami se statickými daty, které popisují, jak tuto funkci v libovolné instrukci správně odvinout. Tato data jsou ukládána jako *PDATA*nebo data procedur, která zase odkazují na *XData*, data zpracovávající výjimky. XData obsahuje informace o unwindu a může odkazovat na další PDATA nebo funkci obslužné rutiny výjimky. Protokoly a epilogy jsou vysoce omezené, aby je bylo možné správně popsat v XData. Ukazatel zásobníku musí být zarovnán na 16 bajtů v jakékoli oblasti kódu, která není součástí epilogu nebo prologu, s výjimkou v rámci funkcí listu. Funkce list lze oddělit pouhým simulací návratu, takže pdata a XData nejsou požadovány. Podrobnosti o správné struktuře protokolů a epilogech funkce naleznete v tématu [prolog a epilog x64](../build/prolog-and-epilog.md). Další informace o zpracování výjimek a o zpracování výjimek a o odvíjení pdata a XData naleznete v tématu [zpracování výjimek x64](../build/exception-handling-x64.md).
 
 ## <a name="parameter-passing"></a>Předávání parametrů
 
-První čtyři celé číslo argumenty jsou předány v registrech. Celočíselné hodnoty jsou předávány v pořadí zleva doprava v RCX, RDX, R8 a R9. Argumenty pět a vyšší jsou předány v zásobníku. Všechny argumenty jsou v registrech odůvodněny právem, takže volaný může ignorovat horní bity registru a získat přístup pouze k části registru nezbytné.
+První čtyři celočíselné argumenty jsou předány v registrech. Celočíselné hodnoty jsou předány v pořadí zleva doprava v RCX, RDX, R8 a R9, v uvedeném pořadí. Do zásobníku jsou předány argumenty 5 a vyšší. Všechny argumenty jsou v registrech zarovnané vpravo, takže volaný může ignorovat horní bity registru a přistupovat jenom k části registru, která je nezbytná.
 
-Všechny argumenty s plovoucí desetinnou a dvojitou přesností v prvních čtyřech parametrech jsou předány v XMM0 - XMM3, v závislosti na pozici. Celé číslo registruje RCX, RDX, R8 a R9, které by se normálně používaly pro tyto pozice, jsou ignorovány, s výjimkou argumentů varargs. Podrobnosti viz [Varargs](#varargs). Podobně registry XMM0 - XMM3 jsou ignorovány, pokud je odpovídající argument celočíselný nebo ukazatel typu.
+Všechny argumenty s plovoucí desetinnou čárkou a dvojitou přesností v prvních čtyřech parametrech jsou předány v XMM0-XMM3 v závislosti na pozici. Celočíselné registry RCX, RDX, R8 a R9, které by se obvykle používaly pro tyto pozice, se ignorují, s výjimkou argumentů VarArgs Case. Podrobnosti najdete v tématu [VarArgs](#varargs). Podobně jsou registry XMM0-XMM3 ignorovány, pokud je odpovídajícím argumentem typ Integer nebo ukazatel.
 
-[__m128](../cpp/m128.md) typy, pole a řetězce nejsou nikdy předány okamžitou hodnotou. Místo toho je předán ukazatel do paměti přidělené volajícím. Struktury a sjednocení velikosti 8, 16, 32 nebo 64 bitů a __m64 typů jsou předávány, jako by se jednalo o celá čísla stejné velikosti. Struktury nebo sjednocení jiných velikostí jsou předány jako ukazatel paměti přidělené volajícím. Pro tyto agregační typy \_předané jako ukazatel, včetně _m128, volající přidělené dočasné paměti musí být zarovnaný 16 bajtů.
+[__m128](../cpp/m128.md) typy, pole a řetězce nejsou nikdy předány okamžitou hodnotou. Místo toho je ukazatel předán do paměti přidělené volajícím. Struktury a sjednocení s velikostí 8, 16, 32 nebo 64 bitů a typy __m64 jsou předány, jako kdyby byly celá čísla stejné velikosti. Struktury nebo sjednocení jiných velikostí jsou předány jako ukazatel na paměť přidělenou volajícím. Pro tyto agregované typy předané jako ukazatel, \_včetně _m128, musí být dočasná paměť přidělená volajícímu zarovnaná na 16 bajtů.
 
-Vnitřní funkce, které nepřidělují místo v zásobníku a nevolají jiné funkce, někdy používají jiné nestálé registry k předání dalších argumentů registru. Tato optimalizace je možné těsné vazby mezi kompilátoru a implementace vnitřní funkce.
+Vnitřní funkce, které nepřiřazují prostor zásobníku a nevolají jiné funkce, někdy používají jiné nestálé Registry k předání dalších argumentů registru. Tato optimalizace je umožněna těsnou vazbou mezi kompilátorem a implementací vnitřní funkce.
 
-Volaný je zodpovědný za ukládání parametrů registru do jejich stínového prostoru v případě potřeby.
+Volaný je zodpovědný za výpis parametrů registru do jejich stínového prostoru v případě potřeby.
 
-Následující tabulka shrnuje, jak jsou předávané parametry:
+Následující tabulka shrnuje, jak se předávají parametry:
 
-|Typ parametru|Jak prošel|
+|Typ parametru|Jak úspěšné|
 |--------------------|----------------|
-|Plovoucí desetinná čárka|První 4 parametry - XMM0 až XMM3. Jiní předávali zásobník.|
-|Integer|První 4 parametry - RCX, RDX, R8, R9. Jiní předávali zásobník.|
-|Agregáty (8, 16, 32 nebo 64 bitů) a __m64|První 4 parametry - RCX, RDX, R8, R9. Jiní předávali zásobník.|
-|Agregáty (ostatní)|Podle ukazatele. První 4 parametry předané jako ukazatele v RCX, RDX, R8 a R9|
-|__m128|Podle ukazatele. První 4 parametry předané jako ukazatele v RCX, RDX, R8 a R9|
+|Plovoucí desetinná čárka|Prvních 4 parametry – XMM0 až XMM3. Ostatní prošly v zásobníku.|
+|Integer|Prvních 4 parametry – RCX, RDX, R8, R9. Ostatní prošly v zásobníku.|
+|Agreguje (8, 16, 32 nebo 64 bitů) a __m64|Prvních 4 parametry – RCX, RDX, R8, R9. Ostatní prošly v zásobníku.|
+|Agregace (jiné)|Podle ukazatele. Prvních 4 parametry byly předány jako ukazatelé v RCX, RDX, R8 a R9.|
+|__m128|Podle ukazatele. Prvních 4 parametry byly předány jako ukazatelé v RCX, RDX, R8 a R9.|
 
-### <a name="example-of-argument-passing-1---all-integers"></a>Příklad argumentu předávání 1 - všechna celá čísla
+### <a name="example-of-argument-passing-1---all-integers"></a>Příklad předání argumentu 1 – všechna celá čísla
 
 ```cpp
 func1(int a, int b, int c, int d, int e);
 // a in RCX, b in RDX, c in R8, d in R9, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-2---all-floats"></a>Příklad argumentu předávání 2 - všechny plováky
+### <a name="example-of-argument-passing-2---all-floats"></a>Příklad předání argumentu 2 – všechny Floaty
 
 ```cpp
 func2(float a, double b, float c, double d, float e);
 // a in XMM0, b in XMM1, c in XMM2, d in XMM3, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Příklad argumentu předávání 3 - smíšené ints a plováky
+### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Příklad předávání argumentu 3 – smíšené čísla a Floaty
 
 ```cpp
 func3(int a, double b, int c, float d);
 // a in RCX, b in XMM1, c in R8, d in XMM3
 ```
 
-### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Příklad argumentu předání 4 \_-__m64, _m128 a agregací
+### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Příklad předávání argumentů 4 __m64, \__m128 a agregace
 
 ```cpp
 func4(__m64 a, _m128 b, struct c, float d);
@@ -80,11 +80,11 @@ func4(__m64 a, _m128 b, struct c, float d);
 
 ## <a name="varargs"></a>Vararg
 
-Pokud parametry jsou předány prostřednictvím varargs (například tři tečky argumenty), pak normální parametr registru předávání konvence platí, včetně rozlití páté a následné argumenty zásobníku. Je to callee odpovědnost za výpis argumenty, které mají jejich adresu přijata. Pouze pro hodnoty s plovoucí desetinnou desetinnou desetinnou hodnotou musí celočíselný registr i registr s plovoucí desetinnou desetinnou desetinnou desetinnou desetinnou hodnotou obsahovat hodnotu v případě, že volaný očekává hodnotu v celočíselných registrech.
+Pokud jsou parametry předány prostřednictvím vararg (například argumenty se třemi tečkami), platí, že se použije normální konvence předávání parametru registru, včetně obtékající pátého a následného argumentu do zásobníku. Je to zodpovědnost za volaný výpis argumentů, na které se zabere adresa. Pouze pro hodnoty s plovoucí desetinnou čárkou musí celočíselný registr i registr s plovoucí desetinnou čárkou obsahovat hodnotu, pro případ, že volaný očekává hodnotu v celočíselném registru.
 
-## <a name="unprototyped-functions"></a>Neprototypové funkce
+## <a name="unprototyped-functions"></a>Neprototypované funkce
 
-Pro funkce, které nejsou plně prototypovány, volající předá celočíselné hodnoty jako celá čísla a hodnoty s plovoucí desetinnou desetinnou desetinnou hodnotou jako dvojitou přesnost. Pouze pro hodnoty s plovoucí desetinnou desetinnou hodnotou obsahuje celočíselný registr a registr s plovoucí desetinnou desetinnou desetinnou hodnotou hodnotu pro případ, že volaný očekává hodnotu v celočíselných registrech.
+U funkcí, které nejsou plně prototypované, volající předává celočíselné hodnoty jako celé číslo a hodnoty s plovoucí desetinnou čárkou jako dvojitou přesnost. Pouze pro hodnoty s plovoucí desetinnou čárkou obsahuje celočíselný registr i registr s plovoucí desetinnou čárkou hodnotu float pro případ, že volaný očekává hodnotu v celočíselném registru.
 
 ```cpp
 func1();
@@ -95,13 +95,13 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Vrácené hodnoty
 
-Skalární vrácená hodnota, která se vejde do 64 bitů, je vrácena prostřednictvím RAX; to zahrnuje __m64 typy. Neskalární typy včetně plovoucích, dvojnic a vektorových typů, jako jsou [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) jsou vráceny v XMM0. Stav nepoužívaných bitů v hodnotě vrácené v RAX nebo XMM0 není definován.
+Skalární návratová hodnota, která se může vejít do 64 bitů, se vrátí prostřednictvím RAX; To zahrnuje __m64 typy. Neskalární typy včetně typů float, Double a Vector, jako je například [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md) [__m128d](../cpp/m128d.md) jsou vráceny v XMM0. Stav nepoužitých bitů v hodnotě vrácené v RAX nebo XMM0 není definován.
 
-Uživatelem definované typy lze vrátit podle hodnoty z globálních funkcí a statických členských funkcí. Chcete-li vrátit uživatelem definovaný typ podle hodnoty v RAX, musí mít délku 1, 2, 4, 8, 16, 32 nebo 64 bitů. Musí mít také žádný uživatelem definovaný konstruktor, destruktor nebo operátor přiřazení kopírování; žádné soukromé nebo chráněné nestatické datové členy; žádné nestatické datové členy referenčního typu; žádné základní třídy; žádné virtuální funkce; a žádné datové členy, které také nesplňují tyto požadavky. (Toto je v podstatě definice typu Pod C++03. Vzhledem k tomu, že definice se změnila ve standardu `std::is_pod` C++ 11, nedoporučujeme používat pro tento test.) V opačném případě volající přebírá odpovědnost za přidělení paměti a předání ukazatele pro vrácenou hodnotu jako první argument. Následné argumenty jsou pak posunuty o jeden argument doprava. Stejný ukazatel musí být vrácenvolní v RAX.
+Uživatelsky definované typy mohou být vráceny hodnotou z globálních funkcí a statických členských funkcí. Chcete-li vrátit uživatelem definovaný typ podle hodnoty v RAX, musí mít délku 1, 2, 4, 8, 16, 32 nebo 64 bitů. Musí mít také žádné uživatelsky definované konstruktory, destruktory ani operátory přiřazení Copy; žádné soukromé nebo chráněné nestatické datové členy; žádné nestatické datové členy typu odkazu; žádné základní třídy; žádné virtuální funkce; a žádné datové členy, které tyto požadavky nesplňují ani. (To je v podstatě definice typu v jazyce C++ 03 POD. Vzhledem k tomu, že se definice v standardu C++ 11 změnila, `std::is_pod` nedoporučujeme pro tento test použít.) V opačném případě volající předpokládá zodpovědnost za přidělování paměti a předání ukazatele pro návratovou hodnotu jako první argument. Další argumenty jsou pak posunuty o jeden argument vpravo. Stejný ukazatel musí být vrácen volaným v RAX.
 
-Tyto příklady ukazují, jak jsou předávány parametry a vrácené hodnoty pro funkce se zadanými deklaracemi:
+Tyto příklady ukazují, jak se předávají parametry a návratové hodnoty pro funkce se zadanými deklaracemi:
 
-### <a name="example-of-return-value-1---64-bit-result"></a>Příklad vrácené hodnoty 1 - 64bitový výsledek
+### <a name="example-of-return-value-1---64-bit-result"></a>Příklad návratové hodnoty 1-64 – bitový výsledek
 
 ```Output
 __int64 func1(int a, float b, int c, int d, int e);
@@ -109,7 +109,7 @@ __int64 func1(int a, float b, int c, int d, int e);
 // callee returns __int64 result in RAX.
 ```
 
-### <a name="example-of-return-value-2---128-bit-result"></a>Příklad vrácené hodnoty 2 - 128bitový výsledek
+### <a name="example-of-return-value-2---128-bit-result"></a>Příklad návratové hodnoty 2-128 – bitový výsledek
 
 ```Output
 __m128 func2(float a, double b, int c, __m64 d);
@@ -117,7 +117,7 @@ __m128 func2(float a, double b, int c, __m64 d);
 // callee returns __m128 result in XMM0.
 ```
 
-### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Příklad vrácené hodnoty 3 - výsledek typu uživatele ukazatelem
+### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Příklad návratové hodnoty 3 – výsledek typu uživatele podle ukazatele
 
 ```Output
 struct Struct1 {
@@ -129,7 +129,7 @@ Struct1 func3(int a, double b, int c, float d);
 // callee returns pointer to Struct1 result in RAX.
 ```
 
-### <a name="example-of-return-value-4---user-type-result-by-value"></a>Příklad vrácené hodnoty 4 - výsledek typu uživatele podle hodnoty
+### <a name="example-of-return-value-4---user-type-result-by-value"></a>Příklad návratové hodnoty 4 – výsledek typu uživatele podle hodnoty
 
 ```Output
 struct Struct2 {
@@ -140,71 +140,71 @@ Struct2 func4(int a, double b, int c, float d);
 // callee returns Struct2 result by value in RAX.
 ```
 
-## <a name="callercallee-saved-registers"></a>Volající/Volaný uložené registry
+## <a name="callercallee-saved-registers"></a>Volající/volaný – uložené registry
 
-Registry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 a horní části YMM0-15 a ZMM0-15 jsou považovány za volatilní a musí být považovány za zničené při volání funkcí (pokud není jinak bezpečnost-provitatelné analýzou, jako je optimalizace celého programu). Na AVX512VL registry ZMM, YMM a XMM 16-31 jsou volatilní.
+Registry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 a horní části YMM0-15 a ZMM0-15 se považují za nestálé a musí být považovány za zničené při volání funkce (Pokud není jinak bezpečnost-provable analýzou, jako je celá optimalizace programu). V AVX512VL jsou registry ZMM, YMM a XMM v registru 16-31 nestálé.
 
-Registry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 a XMM6-15 jsou považovány za stálé a musí být uloženy a obnoveny funkcí, která je používá.
+Registry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 a XMM6-15 jsou považovány za nestálé a musí být uloženy a obnoveny funkcí, která je používá.
 
-## <a name="function-pointers"></a>Ukazatele funkcí
+## <a name="function-pointers"></a>Ukazatele na funkce
 
-Ukazatele funkce jsou jednoduše ukazatele na popisek příslušné funkce. Neexistují žádné požadavky na obsah (TOC) pro ukazatele funkce.
+Ukazatele na funkci jsou pouhými ukazateli na popisek příslušné funkce. Neexistují žádné požadavky obsahu (TOC) pro ukazatele na funkce.
 
-## <a name="floating-point-support-for-older-code"></a>Podpora s plovoucí desetinnou čárkou pro starší kód
+## <a name="floating-point-support-for-older-code"></a>Podpora plovoucí desetinné čárky pro starší kód
 
-MMX a plovoucí desetinná žlábka zásobníku registry (MM0-MM7/ST0-ST7) jsou zachovány napříč přepnutí kontextu. Neexistuje žádná konvence explicitní volání pro tyto registry. Použití těchto registrů je přísně zakázáno v kódu režimu jádra.
+Protokoly MMX a Registry zásobníku s plovoucí desetinnou čárkou (MM0-MM7/ST0-ST7) jsou zachovány napříč přepínači kontextu. Pro tyto registry neexistuje explicitní konvence volání. Použití těchto registrů je výhradně zakázané v kódu režimu jádra.
 
 ## <a name="fpcsr"></a>FpCsr
 
-Stav registru také obsahuje řídicí slovo x87 FPU. Konvence volání diktuje tento registr, který má být stálý.
+Stav registru obsahuje také řídicí slovo x87 FPU. Konvence volání Určuje, že tento registr je nestálý.
 
-Registr řídicích slov x87 FPU je na začátku spuštění programu nastaven na následující standardní hodnoty:
+Na začátku provádění programu je na základě registru ovládacího prvku x87 FPU nastavené na následující standardní hodnoty:
 
 | Registrovat\[bity] | Nastavení |
 |-|-|
-| FPCSR\[0:6] | Výjimka maskuje všechny jedničky (všechny maškované výjimky) |
-| FPCSR\[7] | Rezervováno - 0 |
-| FPCSR\[8:9] | Přesné řízení - 10B (dvojitá přesnost) |
-| FPCSR\[10:11] | Řízení zaokrouhlení - 0 (zaoblené do nejbližší) |
-| FPCSR\[12] | Infinity control - 0 (nepoužívá se) |
+| FPCSR\[0:6] | Masky výjimek všechny 1 (všechny výjimky s maskou) |
+| FPCSR\[7] | Rezervované – 0 |
+| FPCSR\[8:9] | Kontrola přesnosti – 10B (dvojitá přesnost) |
+| FPCSR\[10:11] | Zaoblení ovládacího prvku-0 (zaokrouhleno na nejbližší) |
+| FPCSR\[12] | Nekonečno – ovládací prvek – 0 (nepoužívá se) |
 
-Volaný, který upravuje libovolné pole v rámci FPCSR musí obnovit před návratem k jeho volajícímu. Kromě toho volající, který změnil některé z těchto polí musí obnovit jejich standardní hodnoty před vyvoláním volaného, pokud po dohodě volaný očekává změněné hodnoty.
+Volaný, který upraví jakékoli pole v rámci FPCSR, musí je obnovit před návratem k jeho volajícímu. Kromě toho je nutné, aby volající, který změnil některá z těchto polí, obnovil jejich standardní hodnoty před vyvoláním volaného, ledaže by smlouva volaný očekává změněné hodnoty.
 
-Existují dvě výjimky z pravidel týkajících se nevolatility kontrolních příznaků:
+Existují dvě výjimky z pravidel o nestálosti kontrolních příznaků:
 
-1. Ve funkcích, kde je zdokumentovaným účelem dané funkce upravit stálé příznaky FpCsr.
+1. Ve funkcích, kde dokumentovaný účel dané funkce slouží k úpravě netěkavých příznaků FpCsr.
 
-1. Pokud je prokazatelně správné, že porušení těchto pravidel má za následek program, který se chová stejně jako program, kde tato pravidla nejsou porušena, například prostřednictvím analýzy celého programu.
+1. V případě, že je správně napravuje, že porušení těchto pravidel vede k programu, který se chová stejně jako program, ve kterém se tato pravidla neporušila, například prostřednictvím analýzy celého programu.
 
 ## <a name="mxcsr"></a>MxCsr
 
-Stav registru zahrnuje také MxCsr. Konvence volání rozdělí tento registr na těkavou část a stálou část. Těkavá část se skládá ze šesti\[stavových příznaků v MXCSR 0:5], zatímco zbytek registru, MXCSR\[6:15], je považován za stálé.
+Stav registru zahrnuje také MxCsr. Konvence volání rozděluje tento registr na nestálou část a nestálou část. Těkavá část se skládá z šesti příznaků stavu v MXCSR\[0:5], zatímco zbytek registru, MxCsr\[6:15], se považuje za nestálý.
 
-Nestálá část je na začátku spuštění programu nastavena na následující standardní hodnoty:
+Nestálá část je nastavená na následující standardní hodnoty na začátku provádění programu:
 
 | Registrovat\[bity] | Nastavení |
 |-|-|
-| MXCSR\[6] | Denormaly jsou nuly - 0 |
-| MXCSR\[7:12] | Výjimka maskuje všechny jedničky (všechny maškované výjimky) |
-| MXCSR\[13:14] | Řízení zaokrouhlení - 0 (zaoblené do nejbližší) |
-| MXCSR\[15] | Zarovnaná do nuly pro maskovaný podtečení - 0 (vypnuto) |
+| MXCSR\[6] | Denormalizované jsou nuly – 0. |
+| MXCSR\[7:12] | Masky výjimek všechny 1 (všechny výjimky s maskou) |
+| MXCSR\[13:14] | Zaoblení ovládacího prvku-0 (zaokrouhleno na nejbližší) |
+| MXCSR\[15] | Vyprázdnit na nulu pro maskované podtečení – 0 (vypnuto) |
 
-Volaný, který upravuje libovolné stálé pole v rámci MXCSR musí obnovit před návratem k jeho volajícímu. Kromě toho volající, který změnil některé z těchto polí musí obnovit jejich standardní hodnoty před vyvoláním volaného, pokud po dohodě volaný očekává změněné hodnoty.
+Volaný, který upravuje jakékoliv nestálé pole v rámci MXCSR, musí je obnovit před návratem k jeho volajícímu. Kromě toho je nutné, aby volající, který změnil některá z těchto polí, obnovil jejich standardní hodnoty před vyvoláním volaného, ledaže by smlouva volaný očekává změněné hodnoty.
 
-Existují dvě výjimky z pravidel týkajících se nevolatility kontrolních příznaků:
+Existují dvě výjimky z pravidel o nestálosti kontrolních příznaků:
 
-- Ve funkcích, kde je zdokumentovaným účelem dané funkce upravit stálé příznaky MxCsr.
+- Ve funkcích, kde dokumentovaný účel dané funkce slouží k úpravě netěkavých příznaků MxCsr.
 
-- Pokud je prokazatelně správné, že porušení těchto pravidel má za následek program, který se chová stejně jako program, kde tato pravidla nejsou porušena, například prostřednictvím analýzy celého programu.
+- V případě, že je správně napravuje, že porušení těchto pravidel vede k programu, který se chová stejně jako program, ve kterém se tato pravidla neporušila, například prostřednictvím analýzy celého programu.
 
-Nelze provést žádné předpoklady o stavu těkavé části MXCSR přes hranice funkce, pokud není výslovně popsáno v dokumentaci funkce.
+Nelze provést žádné předpoklady týkající se stavu těkavé části MXCSR napříč hranicí funkce, pokud není konkrétně popsána v dokumentaci funkce.
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Pokud zahrnete setjmpex.h nebo setjmp.h, všechna volání [setjmp](../c-runtime-library/reference/setjmp.md) nebo [longjmp](../c-runtime-library/reference/longjmp.md) za následek `__finally` unwind, který vyvolá destruktory a volání.  To se liší od x86, kde včetně `__finally` setjmp.h výsledky klauzule a destruktory nejsou vyvolány.
+Pokud zahrnete SETJMPEX. h nebo setjmp. h, všechna volání do [setjmp](../c-runtime-library/reference/setjmp.md) nebo [longjmp](../c-runtime-library/reference/longjmp.md) navedou v unwind, které vyvolá destruktory a `__finally` volání.  To se liší od x86, kde zahrnuje setjmp. h výsledky v `__finally` klauzulích a destruktorech, které nejsou vyvolány.
 
-Volání zachová `setjmp` aktuální ukazatel zásobníku, nestálé registry a Registry MxCsr.  Volání `longjmp` pro návrat na `setjmp` nejnovější web volání a obnoví ukazatel zásobníku, nestálé registry a registry MxCsr zpět do `setjmp` stavu, který je zachován nejnovějším voláním.
+Volání pro `setjmp` zachovává aktuální ukazatel zásobníku, jiné než nestálé registry a MxCsr Registry.  Volání, `longjmp` která se mají vrátit na `setjmp` nejnovější web volání, a resetují ukazatel zásobníku, nestálé registry a Registry MxCsr zpět do stavu, který je zachované posledním `setjmp` voláním.
 
 ## <a name="see-also"></a>Viz také
 
-[softwarové konvence x64](../build/x64-software-conventions.md)
+[x64 – softwarové konvence](../build/x64-software-conventions.md)

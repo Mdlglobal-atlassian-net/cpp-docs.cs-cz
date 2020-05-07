@@ -25,67 +25,67 @@ Definice funkce určuje název funkce, typy a počet parametrů, které očekáv
 
 ## <a name="syntax"></a>Syntaxe
 
-*translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace External* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
+*jednotka překladu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Externí deklarace* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* *jednotky překladu*
 
-*externí deklarace*:/\* povolena pouze v externím oboru (soubor) \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *– definice funkce*<br/>
-*deklarace* &nbsp;&nbsp;&nbsp;&nbsp;
+*externí deklarace*:/\* povoleno pouze v externím (souboru) oboru\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*změny*
 
 *definice funkce*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*– atribut<sub>opt</sub> *-SEQ* *deklarátor* *deklarace-list*<sub></sub> <sub>opt –</sub> *složený* příkaz
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory*<sub>opt</sub> *atribut – seq*<sub>opt</sub> *deklarátor* *deklarace-list*<sub>opt</sub> – *složený* příkaz
 
-atribut /\* *– SEQ* je specifický pro Microsoft \*/
+/\**atribut – seq* je specifický pro společnost Microsoft\*/
 
 Parametry prototypu jsou:
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru třídy úložiště* – *specifikátory*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *specifikátoru typu* *– Povolit specifikátory*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ-specifikátor deklarace kvalifikátoru* *– specifikátory*<sub>opt</sub>
 
 *seznam deklarací*:<br/>
-*deklarace* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;*deklarace* &nbsp;*deklarace seznamu*
+&nbsp;&nbsp;&nbsp;&nbsp;*změny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarace *seznamu deklarací* *declaration*
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatelem*<sub>opt</sub> *Direct-deklarátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel na odkaz*<sub>opt</sub> *Direct – deklarátor*
 
-*Direct-deklarátor*:/\* / funkce deklarátor \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+*Direct-deklarátor*:/\* A – funkce deklarátor\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(***parametr-Type-list***)**  / \* – nový styl deklarátor      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor***(opt***-list*<sub>opt</sub> **)**  / \* zastaralý styl deklarátor    \*/
 
 Seznam parametrů v definici používá tuto syntaxi:
 
-*parametr-Type-list*:/\* \*seznamu parametrů /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* **,...**
+*seznam parametrů-typu*:/\* seznam parametrů\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam parametrů* **,...**
 
 *seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,** *deklarace parametru*
+&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* **,**  *parametr-Declaration*
 
 *deklarace parametru*:<br/>
-&nbsp;&nbsp;&nbsp;*specifikátory deklarace* &nbsp;*deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *abstract-deklarátor*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace – specifikátory* *deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarace-specifikátory* *abstract-deklarátor*<sub>opt</sub>
 
 Seznam parametrů v definici funkce starého stylu používá tuto syntaxi:
 
-*seznam identifikátorů*:/\* používá se v definicích a deklaracích funkcí zastaralých stylů \*/<br/>
-*identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,** *identifikátor*
+*seznam identifikátorů*:/\* používá se v definicích a deklaracích funkcí zastaralých stylů.\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam identifikátorů* **,**  *identifikátor*
 
 Syntaxe pro tělo funkce je:
 
 *složený příkaz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *Declaration-list*<sub>opt</sub> *Statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklarace-seznam*příkazů<sub>opt</sub> *-list*<sub>opt</sub> **}**
 
 Jediný specifikátory třídy úložiště, které mohou upravit deklaraci funkce, jsou **extern** a **static**. **Extern** specifikátor znamená, že na funkci lze odkazovat z jiných souborů; To znamená, že název funkce je exportován do linkeru. **Statický** specifikátor znamená, že funkci nelze odkazovat z jiných souborů; To znamená, že název není exportován linkerem. Pokud se v definici funkce nezobrazí žádná třída úložiště, předpokládá se **extern** . V každém případě je funkce vždy viditelná z bodu definice na konec souboru.
 
 Volitelné *specifikátory deklarace* a povinné *deklarátor* společně určují návratový typ a název funkce. *Deklarátor* je kombinace identifikátoru, který název funkce a závorky následuje po názvu funkce. Nepovinný neterminálový *atribut-seq* je funkce specifická pro společnost Microsoft, která je definována v [atributech funkce](../c-language/function-attributes.md).
 
-*Přímý parametr-deklarátor* (v syntaxi *deklarátor* ) určuje název funkce, která je definována, a identifikátory jeho parametrů. Pokud *Direct-deklarátor* zahrnuje *seznam parametrů-Type-* , seznam určuje typy všech parametrů. Taková deklarátor také slouží jako prototyp funkce pro pozdější volání funkce.
+*Přímý parametr-deklarátor* (v syntaxi *deklarátor* ) určuje název funkce, která je definována, a identifikátory jeho parametrů. Pokud *Direct-deklarátor* zahrnuje *seznam parametrů-Type-*, seznam určuje typy všech parametrů. Taková deklarátor také slouží jako prototyp funkce pro pozdější volání funkce.
 
 *Deklarace* v rámci definice funkce nemůže obsahovat *specifikátor třídy úložiště* , *která je jiná* než **registr**. *Specifikátor typu* v syntaxi *specifikátoru deklarace* lze vynechat pouze v případě, že je třída úložiště **registru** zadána pro hodnotu typu **int** .
 
@@ -93,6 +93,6 @@ Volitelné *specifikátory deklarace* a povinné *deklarátor* společně určuj
 
 Oddíly [atributů funkce](../c-language/function-attributes.md), [třídy úložiště](../c-language/storage-class.md), [návratový typ](../c-language/return-type.md), [parametry](../c-language/parameters.md)a [tělo funkce](../c-language/function-body.md) popisují podrobně komponenty definice funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../c-language/functions-c.md)
+[Functions](../c-language/functions-c.md)

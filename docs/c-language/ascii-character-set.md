@@ -11,12 +11,12 @@ ms.locfileid: "81335073"
 ---
 # <a name="ascii-character-set"></a>Znaková sada ASCII
 
-**ANSI 2,2,1** Členové zdrojových a prováděcích znakových sad
+**ANSI 2.2.1** Členové zdrojových znakových sad a spouštění
 
 Zdrojová znaková sada je sada platných znaků, které se mohou objevit ve zdrojových souborech. Pro jazyk Microsoft C je zdrojovou znakovou sadou standardně znaková sada ASCII.
 
 > [!NOTE]
-> **Upozornění** Vzhledem k tomu, že ovladače klávesnice a konzoly mohou přemapovat znakovou sadu, měly by programy určené pro mezinárodní distribuci zkontrolovat kód země nebo oblasti.
+> **Upozornění** Vzhledem k tomu, že ovladače klávesnice a konzoly mohou přemapovat znakovou sadu, programy určené pro mezinárodní distribuci by měly kontrolovat kód země/oblasti.
 
 ## <a name="see-also"></a>Viz také
 

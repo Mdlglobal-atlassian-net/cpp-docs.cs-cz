@@ -14,10 +14,10 @@ ms.locfileid: "62325920"
 ---
 # <a name="internal-linkage"></a>Vnitřní propojení
 
-Pokud deklarace identifikátoru rozsahu souboru pro objekt nebo funkci obsahuje *storage-class-specifier* **statické**, má identifikátor vnitřní propojení. Jinak má identifikátor vnější propojení. Zobrazit [třídy úložiště](../c-language/c-storage-classes.md) diskuzi o *storage-class-specifier* neterminálu.
+Pokud deklarace identifikátoru oboru souboru pro objekt nebo funkci obsahuje *specifikátor specifikátoru úložiště-Class* **, má**identifikátor vnitřní propojení. Jinak má identifikátor vnější propojení. Viz [třídy úložiště](../c-language/c-storage-classes.md) pro diskuzi o neterminálu *specifikátoru úložiště-třída* .
 
 V rámci jedné jednotky překladu označuje každá instance identifikátoru s vnitřním propojením stejný identifikátor nebo funkci. Vnitřně propojené identifikátory jsou pro jednotku překladu jedinečné.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

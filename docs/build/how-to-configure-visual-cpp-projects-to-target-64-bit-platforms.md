@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace projektů sady C++ Visual Studio pro cílení na 64 platforem x64'
+title: 'Postupy: konfigurace projektů Visual Studio C++ pro cílení na 64 platforem x64'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
@@ -13,31 +13,31 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "68492244"
 ---
-# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů sady C++ Visual Studio pro cílení na 64 platforem x64
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: konfigurace projektů Visual Studio C++ pro cílení na 64 platforem x64
 
-Můžete použít konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio k C++ nastavení aplikací pro cílení na 64 platforem x64. Můžete také migrovat nastavení projektu Win32 do 64 konfigurace projektu.
+Můžete použít konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio k nastavení aplikací C++ pro cílení na 64 platforem x64. Můžete také migrovat nastavení projektu Win32 do 64 konfigurace projektu.
 
-### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Nastavení C++ aplikací pro cílení na 64 platforem
+### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Nastavení aplikací C++ pro cílení na 64 platforem
 
-1. Otevřete C++ projekt, který chcete konfigurovat.
+1. Otevřete projekt C++, který chcete konfigurovat.
 
-1. Otevřete stránky vlastností pro daný projekt. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](working-with-project-properties.md).
+1. Otevřete stránky vlastností pro daný projekt. Další informace najdete v tématu [nastavení kompilátoru C++ a vlastností sestavení v sadě Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > V případě projektů .NET se ujistěte, že je vybrán uzel **Vlastnosti konfigurace** nebo některý z jeho podřízených uzlů v  **\<dialogovém okně Vlastnosti ProjectName > stránky vlastností** . v opačném případě tlačítko **Configuration Manager** zůstane znemožnit.
+   > V případě projektů .NET se ujistěte, že je vybrán uzel **Vlastnosti konfigurace** nebo některý z jeho podřízených uzlů v dialogovém okně ** \<vlastnosti ProjectName> stránky vlastností** ; v opačném případě zůstane tlačítko **Configuration Manager** nedostupné.
 
 1. Kliknutím na tlačítko **Configuration Manager** otevřete dialogové okno **Configuration Manager** .
 
-1. V rozevíracím seznamu **Aktivní platforma řešení** vyberte  **\<nový... >** možnost otevření dialogového okna **Nová platforma řešení** .
+1. V rozevíracím seznamu **Aktivní platforma řešení** vyberte možnost ** \<nový... >** pro otevření dialogového okna **Nová platforma řešení** .
 
 1. V rozevíracím seznamu **typ nebo vyberte Nová platforma** vyberte 64 cílovou platformu.
 
    > [!NOTE]
    > V dialogovém okně **Nová platforma řešení** můžete pomocí možnosti **Kopírovat nastavení z** zkopírovat existující nastavení projektu do nové 64 konfigurace projektu.
 
-1. Zvolte **OK** tlačítko. Platforma, kterou jste vybrali v předchozím kroku, se zobrazí v části **aktivní řešení platforma** v dialogovém okně **Configuration Manager** .
+1. Klikněte na tlačítko **OK** . Platforma, kterou jste vybrali v předchozím kroku, se zobrazí v části **aktivní řešení platforma** v dialogovém okně **Configuration Manager** .
 
-1. Zvolte tlačítko **Zavřít** v dialogovém okně **Configuration Manager** a pak klikněte na tlačítko   **\<ok v dialogovém okně > stránky vlastností ProjectName** .
+1. Zvolte tlačítko **Zavřít** v dialogovém okně **Configuration Manager** a pak klikněte na tlačítko **OK** v dialogovém okně ** \<> stránky vlastností ProjectName** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Kopírování nastavení projektu Win32 do 64 konfigurace projektu
 
@@ -56,7 +56,7 @@ Můžete použít konfigurace projektu v integrovaném vývojovém prostředí s
   > [!NOTE]
   > Žádná z těchto vlastností projektu se nezmění, pokud jsou přepsány na úrovni souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
-[Ladění 64bitových aplikací](/visualstudio/debugger/debug-64-bit-applications)
+[Konfigurace projektů C++ pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Ladění 64 aplikací](/visualstudio/debugger/debug-64-bit-applications)

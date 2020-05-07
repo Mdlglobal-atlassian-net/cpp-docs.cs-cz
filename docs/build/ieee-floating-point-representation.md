@@ -20,7 +20,7 @@ ms.locfileid: "80169809"
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 
-Microsoft C++ (MSVC) je konzistentní s numerickými standardy standardu IEEE. Standard IEEE-754 popisuje formáty s plovoucí desetinnou čárkou, způsob reprezentace reálných čísel v hardwaru. Existuje alespoň pět interních formátů pro čísla s plovoucí desetinnou čárkou, která jsou reprezentována v hardwaru cíleném kompilátorem MSVC, ale kompilátor používá pouze dva z nich. Formáty s *jednou přesností* (4 bajty) a *dvojitou přesností* (8 bajtů) se používají v MSVC. Jednoduchá přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **Double**. Standard IEEE také určuje formáty s *poloviční přesností* (2 bajty) a *čtyřnásobné* (16 bajtů), jakož i formát s *dvojitou* přesností (10 bajt), který některé jazyky C a C++ kompilátory implementují jako datový typ **Long Double** . V kompilátoru MSVC je datový typ **Long Double** považován za odlišný typ, ale typ úložiště je mapován na hodnotu **Double**. Nicméně podpora vnitřních a sestavových aplikací pro výpočty používá jiné formáty, včetně formátu Double-Extended-Precision (10 bajtů), pokud to hardware podporuje.
+Microsoft C++ (MSVC) je konzistentní s numerickými standardy standardu IEEE. Standard IEEE-754 popisuje formáty s plovoucí desetinnou čárkou, způsob reprezentace reálných čísel v hardwaru. Existuje alespoň pět interních formátů pro čísla s plovoucí desetinnou čárkou, která jsou reprezentována v hardwaru cíleném kompilátorem MSVC, ale kompilátor používá pouze dva z nich. Formáty s *jednou přesností* (4 bajty) a *dvojitou přesností* (8 bajtů) se používají v MSVC. Jednoduchá přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **Double**. Standard IEEE také určuje formáty s *poloviční přesností* (2 bajty) a *čtyřnásobné* (16 bajtů), jakož i formát s *dvojitou* přesností (10 bajt), které kompilátory jazyka C a C++ implementují jako datový typ **Long Double** . V kompilátoru MSVC je datový typ **Long Double** považován za odlišný typ, ale typ úložiště je mapován na hodnotu **Double**. Nicméně podpora vnitřních a sestavových aplikací pro výpočty používá jiné formáty, včetně formátu Double-Extended-Precision (10 bajtů), pokud to hardware podporuje.
 
 Hodnoty jsou uloženy následujícím způsobem:
 
@@ -36,7 +36,7 @@ Exponenty jsou posunuty o polovinu možné hodnoty. To znamená, že odečtete t
 
 Exponenty jsou posunuty následujícím způsobem:
 
-|Zmocněn|Posunuto od|
+|Exponent|Posunuto od|
 |--------------|---------------|
 |8 bitů (s jednoduchou přesností)|127|
 |11 bitů (dvojitá přesnost)|1023|
@@ -54,7 +54,7 @@ Formát pro různé velikosti je následující:
 |Dvojitá přesnost|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 |Dvojitá rozšířená přesnost|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` představuje bit znaménka, `X`jsou posunutými exponenty a `M`je mantisa bitů. Všimněte si, že bit nejvíce vlevo se předpokládá ve formátech s jednoduchou přesností a dvojitou přesností, ale je přítomný jako "1" v bajtu 3 ve formátu dvojité rozšířené přesnosti.
+`S`představuje bit znaménka, `X`jsou posunutými exponenty a `M`jsou mantisa bity. Všimněte si, že bit nejvíce vlevo se předpokládá ve formátech s jednoduchou přesností a dvojitou přesností, ale je přítomný jako "1" v bajtu 3 ve formátu dvojité rozšířené přesnosti.
 
 Chcete-li binární bod správně posunout, nejprve odsuňte exponent a pak jeho binární bod napravo doprava nebo doleva o příslušný počet bitů.
 
@@ -122,13 +122,13 @@ Níže jsou uvedeny některé příklady ve formátu s jednou přesností:
 
    |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
-   |2,5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
+   |2.5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
 
 - 1/10 je opakující se zlomky v binárním formátu. Mantisa je pouze nesmělí abyste 1,6 a posunutý exponent říká, že 1,6 má být děleno 16 (v binárním souboru je 011 1101 1, což je 123 v desítkovém formátu). Skutečný exponent je 123-127 =-4, což znamená, že faktor, kterým se má vynásobit, je 2<sup>– 4</sup> = 1/16. Všimněte si, že uložené mantisa se zaokrouhlují nahoru v posledním bitu – pokus vyjádřit co nejblížeelné číslo co nejpřesněji. (Důvod 1/10 a 1/100 není přesně reprezentovatelné v binárním souboru je podobný důvodu, že 1/3 není přesně reprezentovatelné v desítkové soustavě.)
 
    |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
-   |0,1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |0.1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Nula je zvláštní případ, který používá vzorec pro minimální možnou reprezentovatelné kladné hodnoty, což je nula.
 
@@ -138,4 +138,4 @@ Níže jsou uvedeny některé příklady ve formátu s jednou přesností:
 
 ## <a name="see-also"></a>Viz také
 
-[Proč čísla s plovoucí desetinnou čárkou můžou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)
+[Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)

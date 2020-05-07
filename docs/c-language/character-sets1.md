@@ -19,17 +19,17 @@ Zdrojová znaková sada a spouštěcí znaková sada obsahuje znaky ASCII, kter�
 
 |Řídicí sekvence|Znak|Hodnota ASCII|
 |---------------------|---------------|-----------------|
-|&#92;určitého|Alarm/zvonek|7|
+|&#92;|Alarm/zvonek|7|
 |&#92;b|Backspace|8|
-|&#92;FJ|Informační kanál formuláře|12|
+|&#92;f|Informační kanál formuláře|12|
 |&#92;n|Nového|10|
-|&#92;í|Návrat na začátek řádku|13|
+|&#92;r|Návrat na začátek řádku|13|
 |&#92;t|Horizontální tabulátor|9|
-|&#92;ICES|Vertikální tabulátor|11|
+|&#92;v|Vertikální tabulátor|11|
 |&#92;"|Dvojité uvozovky|34|
 |&#92;'|Jednoduché uvozovky|39|
 |&#92;&#92;|Zpětné lomítko|92|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)<br/>

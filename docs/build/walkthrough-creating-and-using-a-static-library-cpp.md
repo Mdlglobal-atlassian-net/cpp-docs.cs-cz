@@ -1,6 +1,6 @@
 ---
-title: 'Návod: Vytvoření a použití statické knihovny (C++)'
-description: Pomocí jazyka C++ vytvořte statickou knihovnu (.lib) v sadě Visual Studio.
+title: 'Návod: vytvoření a použití statické knihovny (C++)'
+description: Použijte jazyk C++ k vytvoření statické knihovny (. lib) v aplikaci Visual Studio.
 ms.custom: get-started-article
 ms.date: 04/13/2020
 helpviewer_keywords:
@@ -14,93 +14,93 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81335141"
 ---
-# <a name="walkthrough-create-and-use-a-static-library"></a>Návod: Vytvoření a použití statické knihovny
+# <a name="walkthrough-create-and-use-a-static-library"></a>Návod: vytvoření a použití statické knihovny
 
-Tento podrobný návod ukazuje, jak vytvořit statickou knihovnu (soubor lib) pro použití s aplikacemi c++. Použití statické knihovny je skvělý způsob, jak znovu použít kód. Místo opětovného implementace stejné rutiny v každé aplikaci, která vyžaduje funkce, napište je jednou ve statické knihovně a potom odkazovat z aplikací. Kód propojený ze statické knihovny se stane součástí vaší aplikace – nemusíte instalovat jiný soubor, abyste mohli kód používat.
+V tomto podrobném návodu se dozvíte, jak vytvořit statickou knihovnu (soubor. lib) pro použití s aplikacemi C++. Použití statické knihovny je skvělým způsobem opakovaného použití kódu. Místo toho, aby byla stejná rutina znovu implementovaná v každé aplikaci, která vyžaduje funkci, je můžete ve statické knihovně napsat jednou a pak na ni odkazovat z aplikací. Kód propojený ze statické knihovny se stal součástí vaší aplikace – nemusíte instalovat jiný soubor pro použití kódu.
 
-Tento návod zahrnuje tyto úkoly:
+Tento názorný postup se zabývá následujícími úlohami:
 
 - [Vytvoření projektu statické knihovny](#CreateLibProject)
 
-- [Přidání třídy do statické knihovny](#AddClassToLib)
+- [Přidat třídu do statické knihovny](#AddClassToLib)
 
-- [Vytvoření konzolové aplikace Jazyka C++, která odkazuje na statickou knihovnu](#CreateAppToRefTheLib)
+- [Vytvoření konzolové aplikace C++, která odkazuje na statickou knihovnu](#CreateAppToRefTheLib)
 
-- [Použití funkcí ze statické knihovny v aplikaci](#UseLibInApp)
+- [Použití funkce ze statické knihovny v aplikaci](#UseLibInApp)
 
 - [Spuštění aplikace](#RunApp)
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pochopení základů jazyka C++.
+Porozumění základům jazyka C++.
 
 ## <a name="create-a-static-library-project"></a><a name="CreateLibProject"></a>Vytvoření projektu statické knihovny
 
-Pokyny pro vytvoření projektu se liší v závislosti na verzi sady Visual Studio. Chcete-li zobrazit dokumentaci k upřednostňované verzi sady Visual Studio, použijte ovládací prvek pro výběr **verze.** Nachází se v horní části obsahu na této stránce.
+Pokyny k vytvoření projektu se liší v závislosti na vaší verzi sady Visual Studio. Chcete-li zobrazit dokumentaci k preferované verzi sady Visual Studio, použijte ovládací prvek selektor **verzí** . Nachází se v horní části obsahu na této stránce.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>Vytvoření projektu statické knihovny v sadě Visual Studio 2019
+### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>Vytvoření projektu statické knihovny v aplikaci Visual Studio 2019
 
-1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu** a otevřete dialogové okno Vytvořit **nový projekt.**
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++**, nastavte **platformu** na **Windows**a typ **projektu** na **Knihovnu**.
+1. V horní části dialogového okna nastavte **jazyk** na **C++**, nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Library**.
 
-1. Ve filtrovaném seznamu typů projektů vyberte **Průvodce plochu systému Windows**a pak zvolte **Další**.
+1. Z filtrovaného seznamu typů projektů vyberte možnost **Průvodce desktopovou plochou systému Windows**a pak zvolte možnost **Další**.
 
-1. Na stránce **Konfigurace nového projektu** zadejte Do pole Název projektu *Knihovnu* **Matematika** a zadejte název projektu. Do pole **Název řešení** zadejte *StaticMath.* Zvolte tlačítko **Vytvořit,** chcete-li otevřít dialogové okno **Projekt plochy systému Windows.**
+1. Na stránce **Konfigurovat nový projekt** zadejte do pole **název projektu** *MathLibrary* a zadejte název projektu. Do pole **název řešení** zadejte *StaticMath* . Kliknutím na tlačítko **vytvořit** otevřete okno **projekt aplikace Windows** .
 
-1. V dialogovém okně **Projekt plochy systému Windows** vyberte v části Typ **aplikace** **položku Statická knihovna (.lib).**
+1. V dialogovém okně **Windows desktopový projekt** , v části **Typ aplikace**vyberte **Statická knihovna (. lib)**.
 
-1. V části **Další možnosti**zaškrtněte **políčko Předkompilované záhlaví,** pokud je zaškrtnuto. Zaškrtněte políčko **Prázdný projekt.**
+1. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička** , pokud je zaškrtnuto. Zaškrtněte pole **prázdný projekt** .
 
-1. Chcete-li vytvořit projekt, zvolte **OK.**
+1. Kliknutím na **tlačítko OK** vytvořte projekt.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>Vytvoření projektu statické knihovny v sadě Visual Studio 2017
+### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>Vytvoření projektu statické knihovny v aplikaci Visual Studio 2017
 
-1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
+1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-1. V dialogovém okně **Nový projekt** vyberte **Nainstalovaný** > **Visual C++** > **Windows Desktop**. V prostředním podokně vyberte **Průvodce plochu systému Windows**.
+1. V dialogovém okně **Nový projekt** vyberte možnost **nainstalováno** > **Visual C++** > **plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
 
-1. Zadejte název projektu – například *MathLibrary*– do pole **Název.** Zadejte název řešení – například *StaticMath*– do pole **Název řešení.** Zvolte tlačítko **OK.**
+1. Do pole **název** zadejte název projektu, například *MathLibrary*–. Do pole **název řešení** zadejte název řešení (například *StaticMath*). Klikněte na tlačítko **OK** .
 
-1. V dialogovém okně **Projekt plochy systému Windows** vyberte v části Typ **aplikace** **položku Statická knihovna (.lib).**
+1. V dialogovém okně **Windows desktopový projekt** , v části **Typ aplikace**vyberte **Statická knihovna (. lib)**.
 
-1. V části **Další možnosti**zaškrtněte **políčko Předkompilované záhlaví,** pokud je zaškrtnuto. Zaškrtněte políčko **Prázdný projekt.**
+1. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička** , pokud je zaškrtnuto. Zaškrtněte pole **prázdný projekt** .
 
-1. Chcete-li vytvořit projekt, zvolte **OK.**
+1. Kliknutím na **tlačítko OK** vytvořte projekt.
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>Vytvoření projektu statické knihovny v sadě Visual Studio 2015
+### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>Vytvoření projektu statické knihovny v aplikaci Visual Studio 2015
 
-1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
+1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-1. V dialogovém okně **Nový projekt** vyberte **Nainstalované** > **šablony** > **Visual C++** > **Win32**. V prostředním podokně vyberte **možnost Win32 Console Application**.
+1. V dialogovém **okně Nový projekt** vyberte možnost **nainstalované** > **šablony** > **Visual C++** > **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
 
-1. Zadejte název projektu – například *MathLibrary*– do pole **Název.** Zadejte název řešení – například *StaticMath*– do pole **Název řešení.** Zvolte tlačítko **OK.**
+1. Do pole **název** zadejte název projektu, například *MathLibrary*–. Do pole **název řešení** zadejte název řešení (například *StaticMath*). Klikněte na tlačítko **OK** .
 
-1. V **Průvodci aplikací win32**zvolte **Další**.
+1. V **Průvodci aplikací Win32**klikněte na tlačítko **Další**.
 
-1. Na stránce **Nastavení aplikace** vyberte v části **Typ aplikace** **možnost Statická knihovna**. V části **Další možnosti**zaškrtněte **políčko Předkompilované záhlaví.** Chcete-li vytvořit projekt, zvolte **Dokončit.**
+1. Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **Statická knihovna**. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička** . Kliknutím na tlačítko **Dokončit** vytvořte projekt.
 
 ::: moniker-end
 
-## <a name="add-a-class-to-the-static-library"></a><a name="AddClassToLib"></a>Přidání třídy do statické knihovny
+## <a name="add-a-class-to-the-static-library"></a><a name="AddClassToLib"></a>Přidat třídu do statické knihovny
 
 ### <a name="to-add-a-class-to-the-static-library"></a>Přidání třídy do statické knihovny
 
-1. Chcete-li vytvořit soubor záhlaví pro novou třídu, klepnutím pravým tlačítkem myši otevřete místní nabídku pro projekt **MathLibrary** v **Průzkumníku řešení**a pak zvolte **Přidat** > **novou položku**.
+1. Chcete-li vytvořit soubor hlaviček pro novou třídu, klikněte pravým tlačítkem myši a otevřete místní nabídku pro projekt **MathLibrary** v **Průzkumník řešení**a pak zvolte možnost **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **Code**. V prostředním podokně vyberte **Soubor záhlaví (.h)**. Zadejte název souboru záhlaví – například *MathLibrary.h*– a pak zvolte tlačítko **Přidat.** Zobrazí se téměř prázdný soubor záhlaví.
+1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **kód**. V prostředním podokně vyberte **hlavičkový soubor (. h)**. Zadejte název hlavičkového souboru, například *MathLibrary. h*, a pak klikněte na tlačítko **Přidat** . Zobrazí se skoro prázdný hlavičkový soubor.
 
-1. Přidejte deklaraci třídy s názvem `Arithmetic` k běžným matematickým operacím, jako je sčítání, odčítání, násobení a dělení. Kód by se měl podobat:
+1. Přidejte deklaraci pro třídu s názvem `Arithmetic` k provádění běžných matematických operací, jako je sčítání, odčítání, násobení a dělení. Kód by měl vypadat přibližně takto:
 
     ```cpp
     // MathLibrary.h
@@ -126,11 +126,11 @@ Pokyny pro vytvoření projektu se liší v závislosti na verzi sady Visual Stu
     }
     ```
 
-1. Chcete-li vytvořit zdrojový soubor pro novou třídu, otevřete místní nabídku projektu **MathLibrary** v **Průzkumníku řešení**a pak zvolte **Přidat** > **novou položku**.
+1. Chcete-li vytvořit zdrojový soubor pro novou třídu, otevřete místní nabídku pro projekt **MathLibrary** v **Průzkumník řešení**a pak zvolte možnost **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** vyberte v prostředním podokně **soubor C++ (.cpp).** Zadejte název zdrojového souboru – například *MathLibrary.cpp*– a pak zvolte tlačítko **Přidat.** Zobrazí se prázdný zdrojový soubor.
+1. V dialogovém okně **Přidat novou položku** v prostředním podokně vyberte **soubor C++ (. cpp)**. Zadejte název zdrojového souboru, například *MathLibrary. cpp*, a pak klikněte na tlačítko **Přidat** . Zobrazí se prázdný zdrojový soubor.
 
-1. Tento zdrojový soubor slouží k implementaci `Arithmetic`funkce pro třídu . Kód by se měl podobat:
+1. Tento zdrojový soubor použijte k implementaci funkcionality třídy `Arithmetic`. Kód by měl vypadat přibližně takto:
 
     ```cpp
     // MathLibrary.cpp
@@ -163,96 +163,96 @@ Pokyny pro vytvoření projektu se liší v závislosti na verzi sady Visual Stu
     }
     ```
 
-1. Chcete-li vytvořit statickou knihovnu, vyberte na řádku nabídek vyberte **Sestavit** > **řešení sestavení.** Sestavení vytvoří statickou knihovnu *MathLibrary.lib*, kterou mohou používat jiné programy.
+1. Chcete-li vytvořit statickou knihovnu, vyberte v řádku nabídek možnost **sestavit** > **sestavení řešení** . Sestavení vytvoří statickou knihovnu *MathLibrary. lib*, kterou mohou používat jiné programy.
 
    > [!NOTE]
-   > Při sestavení na příkazovém řádku sady Visual Studio je nutné vytvořit program ve dvou krocích. Nejprve `cl /c /EHsc MathLibrary.cpp` spusťte kompilaci kódu a vytvořte soubor objektu s názvem *MathLibrary.obj*. (Příkaz `cl` vyvolá kompilátor Cl.exe a `/c` možnost určuje kompilaci bez propojení. Další informace naleznete v tématu [/c (Kompilace bez propojení)](../build/reference/c-compile-without-linking.md).) Za druhé, spusťte `lib MathLibrary.obj` propojit kód a vytvořit statickou knihovnu *MathLibrary.lib*. (Příkaz `lib` vyvolá správce knihovny Lib.exe. Další informace naleznete v tématu [LIB Reference](../build/reference/lib-reference.md).)
+   > Při sestavování na příkazovém řádku sady Visual Studio je nutné sestavit program ve dvou krocích. Nejprve spusťte `cl /c /EHsc MathLibrary.cpp` příkaz pro zkompilování kódu a vytvořte soubor objektu s názvem *MathLibrary. obj*. ( `cl` Příkaz vyvolá kompilátor, CL. exe a možnost určuje, že se `/c` má kompilovat bez propojení. Další informace naleznete v tématu [/c (kompilace bez propojení)](../build/reference/c-compile-without-linking.md).) Za druhé spusťte `lib MathLibrary.obj` propojení kódu a vytvořte statickou knihovnu *MathLibrary. lib*. ( `lib` Příkaz vyvolá správce knihovny LIB. exe. Další informace naleznete v tématu [lib reference](../build/reference/lib-reference.md).)
 
-## <a name="create-a-c-console-app-that-references-the-static-library"></a><a name="CreateAppToRefTheLib"></a>Vytvoření konzolové aplikace Jazyka C++, která odkazuje na statickou knihovnu
+## <a name="create-a-c-console-app-that-references-the-static-library"></a><a name="CreateAppToRefTheLib"></a>Vytvoření konzolové aplikace C++, která odkazuje na statickou knihovnu
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>Vytvoření konzolové aplikace Pro C++, která odkazuje na statickou knihovnu ve Visual Studiu 2019
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>Vytvoření konzolové aplikace C++, která odkazuje na statickou knihovnu v aplikaci Visual Studio 2019
 
-1. V **Průzkumníku řešení**otevřete místní nabídku klepnutím pravým tlačítkem myši na horní uzel **Řešení StaticMath.** Zvolte **Přidat** > **nový projekt,** **chcete-li** otevřít dialogové okno Přidat nový projekt.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel, **řešení ' StaticMath '** a otevřete místní nabídku. Chcete-li otevřít dialogové okno **Přidat nový projekt** , vyberte možnost **Přidat** > **Nový projekt** .
 
-1. V horní části dialogového okna nastavte filtr **Typ projektu** na **Console**.
+1. V horní části dialogového okna nastavte filtr **typu projektu** na **Console**.
 
-1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte *MathClient* do pole **Název** a zadejte název projektu.
+1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte do pole **název** *MathClient* a zadejte název projektu.
 
-1. Zvolte tlačítko **Vytvořit** pro vytvoření klientského projektu.
+1. Pro vytvoření projektu klienta klikněte na tlačítko **vytvořit** .
 
-1. Po vytvoření konzolové aplikace se pro vás vytvoří prázdný program. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V příkladu je pojmenována `MathClient.cpp`.
+1. Po vytvoření aplikace konzoly se vytvoří prázdný program za vás. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V tomto příkladu je název `MathClient.cpp`.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>Vytvoření konzolové aplikace Pro C++, která odkazuje na statickou knihovnu ve Visual Studiu 2017
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>Vytvoření konzolové aplikace C++, která odkazuje na statickou knihovnu v aplikaci Visual Studio 2017
 
-1. V **Průzkumníku řešení**otevřete místní nabídku klepnutím pravým tlačítkem myši na horní uzel **Řešení StaticMath.** Zvolte **Přidat** > **nový projekt,** **chcete-li** otevřít dialogové okno Přidat nový projekt.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel, **řešení ' StaticMath '** a otevřete místní nabídku. Chcete-li otevřít dialogové okno **Přidat nový projekt** , vyberte možnost **Přidat** > **Nový projekt** .
 
-1. V dialogovém okně **Přidat nový projekt** vyberte **Nainstalovaný** > **Visual C++** > **Windows Desktop**. V prostředním podokně vyberte **Průvodce plochu systému Windows**.
+1. V dialogovém okně **Přidat nový projekt** vyberte možnost **nainstalováno** > **Visual C++** > **plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
 
-1. Zadejte název projektu – například *MathClient*– do pole **Název.** Zvolte tlačítko **OK.**
+1. Do pole **název** zadejte název projektu, například *MathClient*–. Klikněte na tlačítko **OK** .
 
-1. V dialogovém okně **Projekt plochy systému Windows** vyberte v části Typ **aplikace** **položku Konzolová aplikace (.exe).**
+1. V dialogovém okně **pracovní projekt Windows** v části **Typ aplikace**vyberte **Konzolová aplikace (. exe)**.
 
-1. V části **Další možnosti**zaškrtněte **políčko Předkompilované záhlaví,** pokud je zaškrtnuto.
+1. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička** , pokud je zaškrtnuto.
 
-1. Chcete-li vytvořit projekt, zvolte **OK.**
+1. Kliknutím na **tlačítko OK** vytvořte projekt.
 
-1. Po vytvoření konzolové aplikace se pro vás vytvoří prázdný program. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V příkladu je pojmenována `MathClient.cpp`.
+1. Po vytvoření aplikace konzoly se vytvoří prázdný program za vás. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V tomto příkladu je název `MathClient.cpp`.
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>Vytvoření konzolové aplikace Pro C++, která odkazuje na statickou knihovnu ve Visual Studiu 2015
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>Vytvoření konzolové aplikace C++, která odkazuje na statickou knihovnu v aplikaci Visual Studio 2015
 
-1. V **Průzkumníku řešení**otevřete místní nabídku klepnutím pravým tlačítkem myši na horní uzel **Řešení StaticMath.** Zvolte **Přidat** > **nový projekt,** **chcete-li** otevřít dialogové okno Přidat nový projekt.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel, **řešení ' StaticMath '** a otevřete místní nabídku. Chcete-li otevřít dialogové okno **Přidat nový projekt** , vyberte možnost **Přidat** > **Nový projekt** .
 
-1. V dialogovém okně **Přidat nový projekt** vyberte **Nainstalovaný** > **Visual C++** > **Win32**. V prostředním podokně vyberte **možnost Win32 Console Application**.
+1. V dialogovém okně **Přidat nový projekt** vyberte možnost **nainstalované** > **Visual C++** > **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.
 
-1. Zadejte název projektu – například *MathClient*– do pole **Název.** Zvolte tlačítko **OK.**
+1. Do pole **název** zadejte název projektu, například *MathClient*–. Klikněte na tlačítko **OK** .
 
-1. V dialogovém okně **Průvodce aplikací win32** zvolte **Další**.
+1. V dialogovém okně **Průvodce aplikací Win32** klikněte na tlačítko **Další**.
 
-1. Na stránce **Nastavení aplikace** v části **Typ aplikace**zkontrolujte, zda je vybraná **aplikace Konzola.** V části **Další možnosti**odškrtnete **políčko Předkompilované záhlaví**a zaškrtněte políčko **Prázdný projekt.** Chcete-li vytvořit projekt, zvolte **Dokončit.**
+1. Na stránce **nastavení aplikace** v části **Typ aplikace**se ujistěte, že je vybraná **Konzolová aplikace** . V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička**a zaškrtněte políčko **prázdného projektu** . Kliknutím na tlačítko **Dokončit** vytvořte projekt.
 
-1. Chcete-li přidat zdrojový soubor do prázdného projektu, klepnutím pravým tlačítkem myši otevřete místní nabídku projektu **MathClient** v **Průzkumníku řešení**a pak zvolte **Přidat** > **novou položku**.
+1. Chcete-li přidat zdrojový soubor do prázdného projektu, klikněte pravým tlačítkem myši a otevřete místní nabídku pro projekt **MathClient** v **Průzkumník řešení**a pak zvolte možnost **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **Code**. V prostředním podokně vyberte **soubor C++ (.cpp)**. Zadejte název zdrojového souboru – například *MathClient.cpp*– a pak zvolte tlačítko **Přidat.** Zobrazí se prázdný zdrojový soubor.
+1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **kód**. V prostředním podokně vyberte **soubor C++ (. cpp)**. Zadejte název zdrojového souboru, například *MathClient. cpp*, a pak klikněte na tlačítko **Přidat** . Zobrazí se prázdný zdrojový soubor.
 
 ::: moniker-end
 
-## <a name="use-the-functionality-from-the-static-library-in-the-app"></a><a name="UseLibInApp"></a>Použití funkcí ze statické knihovny v aplikaci
+## <a name="use-the-functionality-from-the-static-library-in-the-app"></a><a name="UseLibInApp"></a>Použití funkce ze statické knihovny v aplikaci
 
-### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Použití funkcí ze statické knihovny v aplikaci
+### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Použití funkce ze statické knihovny v aplikaci
 
-1. Před použitím matematické rutiny ve statické knihovně, musíte odkazovat. Otevřete místní nabídku projektu **MathClient** v **Průzkumníku řešení**a pak zvolte **Přidat** > **odkaz**.
+1. Než budete moci použít matematické rutiny ve statické knihovně, je nutné na ni odkazovat. Otevřete místní nabídku projektu **MathClient** v **Průzkumník řešení**a pak zvolte **Přidat** > **odkaz**.
 
-1. V dialogovém okně **Přidat odkaz** jsou uvedeny knihovny, na které můžete odkazovat. Na kartě **Projekty** jsou uvedeny projekty v aktuálním řešení a všechny knihovny, na které odkazují. Otevřete kartu **Projekty,** zaškrtněte políčko **MathLibrary** a pak zvolte tlačítko **OK.**
+1. Dialogové okno **Přidat odkaz** obsahuje seznam knihoven, které lze odkazovat. Karta **projekty** obsahuje seznam projektů v aktuálním řešení a všechny knihovny, na které odkazují. Otevřete kartu **projekty** , zaškrtněte políčko **MathLibrary** a poté klikněte na tlačítko **OK** .
 
-1. Chcete-li `MathLibrary.h` odkazovat na soubor záhlaví, musíte upravit zahrnutou cestu k adresářům. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na **položku MathClient** a otevřete místní nabídku. Zvolte **Vlastnosti,** chcete-li otevřít dialogové okno **MathClient Property Pages.**
+1. Chcete-li `MathLibrary.h` odkazovat na hlavičkový soubor, je nutné upravit cestu k zahrnutým adresářům. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **MathClient** a otevřete místní nabídku. Kliknutím na **vlastnosti** otevřete dialogové okno **stránky vlastností MathClient** .
 
-1. V dialogovém okně **Stránky vlastností MathClient** nastavte rozevírací **seznam Konfigurace** na Všechny **konfigurace**. Nastavte rozbalovací **soubor Platformy** na **Všechny platformy**.
+1. V dialogovém okně **stránky vlastností MathClient** nastavte rozevírací seznam **Konfigurace** na **všechny konfigurace**. Nastavte rozevírací seznam **platforma** na **všechny platformy**.
 
-1. Vyberte stránku **vlastností Vlastnosti** > **C/C++** > **obecné** konfigurace. Ve vlastnosti **Další zahrnutí adresářů** zadejte cestu k **adresáři MathLibrary** nebo ji vyhledejte.
+1. Vyberte **vlastnosti** > konfigurace**Obecné** stránka vlastností**C/C++** > . Do vlastnosti **Další adresáře pro zahrnutí** zadejte cestu k adresáři **MathLibrary** , nebo ji vyhledejte.
 
-   Chcete-li vyhledat cestu k adresáři:
+   Pro vyhledání cesty k adresáři:
 
-   1. Otevřete rozevírací seznam Hodnota **vlastnosti Další zahrnutí adresářů** a pak zvolte **Upravit**.
+   1. Otevřete rozevírací seznam další hodnota vlastnosti **adresáře pro zahrnutí** a zvolte možnost **Upravit**.
 
-   1. V dialogovém okně **Další zahrnutí adresářů** poklepejte v horní části textového pole. Pak zvolte tlačítko tři tečky (**...**) na konci řádku.
+   1. V dialogovém okně **Další adresáře k zahrnutí** dvakrát klikněte na horní část textového pole. Pak zvolte tlačítko se třemi tečkami (**...**) na konci řádku.
 
-   1. V dialogovém okně **Vybrat adresář** přejděte o úroveň výš a vyberte adresář **MathLibrary.** Pak zvolte tlačítko **Vybrat složku,** chcete-li výběr uložit.
+   1. V dialogovém okně **Vybrat adresář** přejděte nahoru na úroveň a pak vyberte adresář **MathLibrary** . Pak zvolte tlačítko **Vybrat složku** a uložte výběr.
 
-   1. V dialogovém okně **Další zahrnutí adresářů** zvolte tlačítko **OK.**
+   1. V dialogovém okně **Další adresáře k zahrnutí** klikněte na tlačítko **OK** .
 
-   1. V dialogovém okně **Stránky vlastností** zvolte tlačítko **OK** pro uložení změn do projektu.
+   1. V dialogovém okně **stránky vlastností** kliknutím na tlačítko **OK** uložte změny projektu.
 
-1. Nyní můžete třídu `Arithmetic` v této aplikaci použít zahrnutím `#include "MathLibrary.h"` záhlaví do kódu. Nahraďte `MathClient.cpp` obsah tohoto kódu:
+1. V této aplikaci teď můžete `Arithmetic` použít třídu zahrnutím `#include "MathLibrary.h"` hlavičky do kódu. Nahraďte obsah `MathClient.cpp` tímto kódem:
 
     ```cpp
     // MathClient.cpp
@@ -279,15 +279,15 @@ Pokyny pro vytvoření projektu se liší v závislosti na verzi sady Visual Stu
     }
     ```
 
-1. Chcete-li vytvořit spustitelný soubor, zvolte **sestavení** > **sestavení řešení** na řádku nabídek.
+1. Chcete-li sestavit spustitelný soubor, v řádku nabídek vyberte **sestavení** > **řešení** sestavení.
 
 ## <a name="run-the-app"></a><a name="RunApp"></a>Spuštění aplikace
 
 ### <a name="to-run-the-app"></a>Spuštění aplikace
 
-1. Ujistěte se, že **MathClient** je vybrán jako výchozí projekt. Chcete-li ji vybrat, klepnutím pravým tlačítkem myši otevřete místní nabídku **pro MathClient** v **Průzkumníku řešení**a pak zvolte **Nastavit jako počáteční projekt**.
+1. Ujistěte se, že je vybrána možnost **MathClient** jako výchozí projekt. Pokud ho chcete vybrat, klikněte pravým tlačítkem myši a otevřete místní nabídku pro **MathClient** v **Průzkumník řešení**a pak zvolte **nastavit jako spouštěný projekt**.
 
-1. Chcete-li projekt spustit, zvolte na řádku nabídek možnost **Ladění** > **startu bez ladění**. Výstup by se měl podobat:
+1. Chcete-li spustit projekt, na panelu nabídek vyberte možnost **ladit** > **Spustit bez ladění**. Výstup by měl vypadat přibližně takto:
 
     ```Output
     a + b = 106.4

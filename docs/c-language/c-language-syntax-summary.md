@@ -23,4 +23,4 @@ Tato část poskytuje úplný popis jazyka C a funkcí jazyka C specifických pr
 
 ## <a name="see-also"></a>Viz také
 
-[C Referenční příručka jazyka](../c-language/c-language-reference.md)
+[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

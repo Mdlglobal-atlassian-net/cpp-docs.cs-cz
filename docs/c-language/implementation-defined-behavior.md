@@ -16,7 +16,7 @@ ms.locfileid: "81334562"
 ---
 # <a name="implementation-defined-behavior"></a>Chování definované implementací
 
-ANSI X3.159-1989, Americký národní standard pro*programovací jazyk* -  *informačních systémů* - *C*, obsahuje část nazvanou "Problémy s přenositelností". Část ANSI obsahuje seznam oblastí jazyka C, které standard ANSI nechává otevřené pro konkrétní implementaci. Tato část popisuje, jak jazyk Microsoft C zpracovává tyto oblasti definované implementací jazyka C.
+ANSI x 3.159-1989, *American National standard pro* - *programovací jazyk* - *C*pro informační systémy, obsahuje oddíl s názvem "problémy s přenositelností". Část ANSI obsahuje seznam oblastí jazyka C, které standard ANSI nechává otevřené pro konkrétní implementaci. Tato část popisuje, jak jazyk Microsoft C zpracovává tyto oblasti definované implementací jazyka C.
 
 Tato část se řídí stejným pořadím jako část ANSI. Všechny uvedené položky obsahují odkazy na standard ANSI, který vysvětluje chování definovaných implementací.
 
@@ -25,4 +25,4 @@ Tato část se řídí stejným pořadím jako část ANSI. Všechny uvedené po
 
 ## <a name="see-also"></a>Viz také
 
-[C Referenční příručka jazyka](../c-language/c-language-reference.md)
+[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

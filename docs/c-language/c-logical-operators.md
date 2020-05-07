@@ -20,30 +20,30 @@ ms.locfileid: "62326583"
 ---
 # <a name="c-logical-operators"></a>Logické operátory jazyka C
 
-Logické operátory provádí logické- a ( **&&** ) a logical-OR ( **||** ) operace.
+Logické operátory provádějí operace logického a (**&&**) a logického operátoru**||** or ().
 
 ## <a name="syntax"></a>Syntaxe
 
-*logical-AND-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní nebo výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz* **&&** *včetně výraz OR*
+*logický operátor and-Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz (včetně)*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického operátoru and a Expression*  **&&**  *(včetně)*
 
-*logical-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **&#124;&#124;** *logické a expression*
+*logický výraz or*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický operátor AND-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;logický operátor *OR* **&#124;&#124;** *logický operátor and-Expression*    
 
 ## <a name="remarks"></a>Poznámky
 
-Logické operátory neprovádějte obvyklé aritmetické převody. Místo toho vyhodnotit operandem z hlediska jeho ekvivalence na hodnotu 0. Výsledkem operace na logické je 0 nebo 1. Výsledný typ je **int**.
+Logické operátory neprovádějí běžné aritmetické převody. Místo toho vyhodnotí každý operand z pohledu jeho ekvivalence na hodnotu 0. Výsledek logické operace je 0 nebo 1. Typ výsledku je **int**.
 
-Logické operátory jazyka C jsou popsané níže:
+Logické operátory jazyka C jsou popsány níže:
 
 |Operátor|Popis|
 |--------------|-----------------|
-|**&&**|Logický- a operátor vytvoří hodnotu 1, pokud mají oba operandy nenulové hodnoty. Pokud některý operand je rovna 0, výsledkem je 0. Pokud první operand logické- a operace se rovná 0, je druhý operand, nebude hodnocen.|
-|**&#124;&#124;**|Logický operátor nebo operátor provádí operaci inkluzivní operátor OR na jeho operandy. Výsledkem je 0, pokud mají oba operandy hodnoty 0. Pokud některý operand má nenulovou hodnotu, výsledek je 1. Pokud je první operand operace logického operátoru OR má nenulovou hodnotu, není vyhodnocen Druhý operand.|
+|**&&**|Logický operátor AND vytvoří hodnotu 1, pokud mají oba operandy nenulové hodnoty. Pokud je jeden operand roven 0, je výsledek 0. Pokud je první operand logického operátoru a operace rovna 0, druhý operand není vyhodnocen.|
+|**&#124;&#124;**|Logický operátor OR provádí u operandů operaci zahrnující nebo. Výsledkem je 0, pokud oba operandy mají 0 hodnot. Pokud má jeden operand nenulovou hodnotu, je výsledkem hodnota 1. Pokud první operand logického nebo operace má nenulovou hodnotu, druhý operand není vyhodnocen.|
 
-Operandy logického- a a logický operátor OR výrazy jsou vyhodnocovány zleva doprava. Pokud hodnotu prvního operandu stačí určit výsledek operace, není vyhodnocen Druhý operand. Tento postup se nazývá "zkrácené vyhodnocení". Po prvním operandem je bod sekvence. Zobrazit [body sekvence](../c-language/c-sequence-points.md) Další informace.
+Operandy logických a logických výrazů jsou vyhodnocovány zleva doprava. Pokud je hodnota prvního operandu dostačující k určení výsledku operace, druhý operand se nevyhodnotí. Tento postup se nazývá "vyhodnocování krátkých okruhů". Za prvním operandem je sekvenční bod. Další informace naleznete v části [body sekvence](../c-language/c-sequence-points.md) .
 
 ## <a name="examples"></a>Příklady
 
@@ -56,15 +56,15 @@ if ( x < y && y < z )
     printf( "x is less than z\n" );
 ```
 
-V tomto příkladu **printf** tisknout zprávu, pokud je volána funkce `x` je menší než `y` a `y` je menší než `z`. Pokud `x` je větší než `y`, druhý operand (`y < z`), nebude hodnocen a nic se nevytiskne. Všimněte si, že to může způsobit problémy v případech, kdy Druhý operand má vedlejší účinky, které jsou právě spoléhat nějakého jiného důvodu.
+V tomto příkladu je volána **funkce printf** k tisku `x` zprávy, pokud je menší než `y` a `y` je menší než. `z` Pokud `x` je větší než `y`, druhý operand (`y < z`) není vyhodnocen a nic není vytištěno. Všimněte si, že to může způsobit problémy v případech, kdy druhý operand má vedlejší účinky, na které se z nějakého důvodu spoléhaly.
 
 ```C
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-V tomto příkladu Pokud `x` rovná buď `w`, `y`, nebo `z`, aby druhý argument **printf** funkce vyhodnotí jako true a vypsání hodnoty 1. V opačném případě je vyhodnocen jako NEPRAVDA a vytisknout hodnotu 0. Poté, co byla jedna z podmínek vyhodnotí jako true, přestane hodnocení.
+V tomto příkladu, pokud `x` je rovna buď `w`, `y`nebo `z`, je druhý argument funkce **printf** vyhodnocen jako true a hodnota 1 je vytištěna. V opačném případě se vyhodnotí jako false a bude vytištěna hodnota 0. Jakmile se jedna z podmínek vyhodnotí jako true, vyhodnocování se zastaví.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Logický operátor AND: &&](../cpp/logical-and-operator-amp-amp.md)
-- [Logický operátor OR:&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)
+- [Logický operátor OR:  &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

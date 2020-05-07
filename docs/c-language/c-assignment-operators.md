@@ -45,10 +45,10 @@ Operátor přiřazení přiřazuje hodnotu operandu pravé strany na umístění
 
 *výraz přiřazení*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*podmíněný výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;přiřazení *unárního výrazu* - *operátor* *přiřazení – výraz*
+&nbsp;&nbsp;&nbsp;&nbsp;přiřazení *unárního výrazu* – *výraz přiřazení* *operátoru*
 
 *Assignment-operátor*: jedna z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 Operátory přiřazení v jazyce C mohou transformovat i přiřazovat hodnotu v jediné operaci. Jazyk C poskytuje následující operátory přiřazení:
 

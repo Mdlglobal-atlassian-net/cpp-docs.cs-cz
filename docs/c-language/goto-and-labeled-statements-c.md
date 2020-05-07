@@ -17,7 +17,7 @@ ms.locfileid: "75299114"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Příkaz goto a příkazy s popiskem (C)
 
-Příkaz `goto` přenáší řízení na popisek. Daný popisek se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci.
+`goto` Příkaz přenáší řízení na popisek. Daný popisek se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,18 +26,18 @@ Příkaz `goto` přenáší řízení na popisek. Daný popisek se musí nacház
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz skoku*
 
 *příkaz skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifikátor*  **;**
 
 *příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* **:** *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*  **: –**  *příkaz*
 
-Popisek příkazu má smysl pouze pro příkaz `goto`; v jakémkoli jiném kontextu je příkaz s popiskem proveden bez ohledu na popisek.
+Popisek příkazu má smysl jenom s `goto` příkazem. v jakémkoli jiném kontextu je příkaz s popiskem proveden bez ohledu na popisek.
 
-*Příkaz skoku* se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci. Sada názvů *identifikátorů* za `goto` má svůj vlastní obor názvů, aby názvy nebránily jiným identifikátorům. Popisky nelze deklarovat znovu. Další informace najdete v tématu o [názvových prostorech](../c-language/name-spaces.md) .
+*Příkaz skoku* se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci. Sada názvů *identifikátorů* následující po `goto` má svůj vlastní obor názvů, aby názvy nebránily jiným identifikátorům. Popisky nelze deklarovat znovu. Další informace najdete v tématu o [názvových prostorech](../c-language/name-spaces.md) .
 
-Je dobrým programovacím stylem pro použití příkazu **Break**, **Continue**a `return` v předvolbách, pokud je to možné `goto` kdykoli je to možné. Vzhledem k tomu, že příkaz **Break** se ukončuje pouze z jedné úrovně smyčky, může být `goto` nutné pro ukončení smyčky v rámci hluboce vnořené smyčky.
+Je dobrým programovacím stylem použití **přerušit**, **pokračovat**a `return` příkazu v předvolbách `goto` , kdykoli je to možné. Vzhledem k tomu, že příkaz **Break** se ukončuje jenom z jedné úrovně smyčky, `goto` může být potřeba, aby se ukončila smyčka z hluboce vnořené smyčky.
 
-Tento příklad ukazuje příkaz `goto`:
+Tento příklad ukazuje `goto` příkaz:
 
 ```c
 // goto.c
@@ -65,8 +65,8 @@ int main()
 }
 ```
 
-V tomto příkladu příkaz `goto` přenáší řízení na bod označený `stop`, pokud `i` rovná 5.
+V tomto příkladu `goto` příkaz přenáší řízení na bod označený, `stop` Pokud `i` se rovná 5.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy](../c-language/statements-c.md)

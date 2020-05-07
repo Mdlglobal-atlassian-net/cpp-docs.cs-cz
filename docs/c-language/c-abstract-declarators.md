@@ -14,7 +14,7 @@ ms.locfileid: "81335069"
 ---
 # <a name="c-abstract-declarators"></a>Deklarátory abstraktu jazyka C
 
-Abstraktní deklarátor je deklarátor bez identifikátoru, sestávající z jednoho nebo více ukazatelů, polí nebo modifikátorů funkce. Modifikátor<strong>\*</strong>ukazatele ( ) vždy předchází identifikátoru v deklarátoru; modifikátory pole (**[ ]**) a funkce ( **( )** ) postupujte podle identifikátoru. Když toto víte, můžete určit, kde by se identifikátor v abstraktním deklarátoru měl objevit a interpretovat tento deklarátor odpovídajícím způsobem. Další informace a příklady komplexních deklarátorů naleznete v [tématu Interpretace složitějších deklarátorů.](../c-language/interpreting-more-complex-declarators.md) Obecný `typedef` slouží ke zjednodušení deklarátorů. Viz [Deklarace Typedef](../c-language/typedef-declarations.md).
+Abstraktní deklarátor je deklarátor bez identifikátoru, sestávající z jednoho nebo více ukazatelů, polí nebo modifikátorů funkce. Modifikátor ukazatele (<strong>\*</strong>) vždy předchází identifikátor v deklarátor; modifikátory Array (**[]**) a Function ( **()** ) následují za identifikátorem. Když toto víte, můžete určit, kde by se identifikátor v abstraktním deklarátoru měl objevit a interpretovat tento deklarátor odpovídajícím způsobem. Další informace a příklady komplexních deklarátory najdete v tématu [Interpretace](../c-language/interpreting-more-complex-declarators.md) složitějších deklarátory. Obecný `typedef` slouží ke zjednodušení deklarátorů. Viz [deklarace typedef](../c-language/typedef-declarations.md).
 
 Abstraktní deklarátory mohou být složité. Závorky ve složitých abstraktních deklarátorech určují konkrétní interpretaci, stejně jako je tomu u komplexních deklarátorů v deklaracích.
 
@@ -43,7 +43,7 @@ int (*const []) ( unsigned int, ... )
 ```
 
 > [!NOTE]
-> Abstraktní deklarátor skládající se ze sady prázdných závorek **( )**, není povolen, protože je nejednoznačný. Není možné určit, zda implicitní identifikátor patří do závorek (v tomto případě je to nezměněný typ) nebo před závorky (v tomto případě je to typ funkce).
+> Abstraktní deklarátor sestávající ze sady prázdných závorek **()** není povolen, protože je dvojznačný. Není možné určit, zda implicitní identifikátor patří do závorek (v tomto případě je to nezměněný typ) nebo před závorky (v tomto případě je to typ funkce).
 
 ## <a name="see-also"></a>Viz také
 

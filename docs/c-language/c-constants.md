@@ -14,21 +14,21 @@ ms.locfileid: "62326089"
 ---
 # <a name="c-constants"></a>Konstanty jazyka C
 
-"Konstanta" je číslo, znak nebo řetězec znaků, který může sloužit jako hodnotu v programu. Použít konstanty pro reprezentaci s plovoucí desetinnou čárkou, celé číslo, výčet nebo hodnoty znaků, které nelze upravit.
+"Konstanta" je číslo, znak nebo řetězec znaků, které lze použít jako hodnotu v programu. Použijte konstanty k reprezentaci plovoucí desetinné čárky, celé číslo, výčtu nebo znaků, které nelze upravit.
 
 ## <a name="syntax"></a>Syntaxe
 
 `constant`:<br/>
-*floating-point-constant*
+*plovoucí desetinná čárka – konstanta*
 
-*integer-constant*
+*celočíselná konstanta*
 
-*Konstanta výčtu*
+*výčet – konstanta*
 
-*character-constant*
+*Znaková konstanta*
 
-Konstanty jsou charakteristické s hodnotou a typem. [S plovoucí desetinnou čárkou](../c-language/c-floating-point-constants.md), [celé číslo](../c-language/c-integer-constants.md), a [znakových konstantách](../c-language/c-character-constants.md) jsou popsány v následujících třech částech. Konstanty výčtu jsou popsány v [deklarace výčtů](../c-language/c-enumeration-declarations.md).
+Konstanty jsou charakterizovány hodnotou a typem. Konstanty s [plovoucí desetinnou](../c-language/c-floating-point-constants.md)čárkou, [celými čísly](../c-language/c-integer-constants.md)a [znakem](../c-language/c-character-constants.md) jsou popsány v následujících třech částech. Konstanty výčtu jsou popsány v tématu [deklarace výčtu](../c-language/c-enumeration-declarations.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

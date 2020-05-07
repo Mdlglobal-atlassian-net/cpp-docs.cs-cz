@@ -11,9 +11,9 @@ ms.locfileid: "64343111"
 ---
 # <a name="remainders"></a>Připomenutí
 
-**ANSI 3.3.5** znaménko zbývající na celočíselné dělení
+**3.3.5 ANSI** Znaménko zbytku pro dělení celého čísla
 
-Znaménko zbytek je stejný jako znaménko podíl. Například
+Znaménko zbytku je stejné jako znaménko dividendy. Například:
 
 ```
 50 / -6 == -8
@@ -22,6 +22,6 @@ Znaménko zbytek je stejný jako znaménko podíl. Například
 -50 %  6 == -2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Celá čísla](../c-language/integers.md)
