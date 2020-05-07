@@ -11,10 +11,10 @@ ms.locfileid: "64343083"
 ---
 # <a name="unrepresented-character-constants"></a>Nereprezentované konstanty znaků
 
-**ANSI 3.1.3.4** nastavena hodnota celočíselné znakové konstanty obsahující znak nebo řídicí sekvenci není zastoupena základní znakové sadě spuštění nebo rozšířené znakové pro konstantu širokého znaku
+**3.1.3.4 ANSI** Hodnota celočíselné konstanty, která obsahuje znak nebo řídicí sekvenci, která není reprezentována ve znakové sadě základního spuštění nebo v rozšířené znakové sadě pro konstantu s celou šířkou znaků
 
 Všechny znakové konstanty nebo řídicí znaky lze zobrazit v rozšířené znakové sadě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)

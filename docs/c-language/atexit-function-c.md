@@ -13,10 +13,10 @@ ms.locfileid: "62327909"
 ---
 # <a name="atexit-function-c"></a>atexit – funkce (C)
 
-**ANSI 4.10.4.3** stavem vráceným `atexit` fungovat, pokud má argument hodnotu než nula, EXIT_SUCCESS nebo EXIT_FAILURE
+**4.10.4.3 ANSI** Stav vrácený `atexit` funkcí, pokud je hodnota argumentu jiná než nula, EXIT_SUCCESS nebo EXIT_FAILURE
 
 Funkce `atexit` vrátí nulu v případě úspěchu nebo nenulovou hodnotu v případě neúspěchu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

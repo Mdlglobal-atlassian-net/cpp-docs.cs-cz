@@ -13,10 +13,10 @@ ms.locfileid: "64343065"
 ---
 # <a name="pointer-subtraction"></a>Odečtení ukazatele
 
-**ANSI 3.3.6, 4.1.1** typu celé číslo vyžadováno k uložení rozdílu mezi dvěma ukazateli na prvky stejného pole **ptrdiff_t**
+**ANSI 3.3.6, 4.1.1** Typ celého čísla vyžadovaného pro udržení rozdílu mezi dvěma ukazateli na prvky stejného pole, **ptrdiff_t**
 
-`ptrdiff_t` Definice typedef je `int` na 32-bit x86 platformy. Na 64bitových platformách `ptrdiff_t` definice typedef je `__int64`.
+`ptrdiff_t` Typedef je `int` na 32 platformě x86. Na 64-bitových platformách `ptrdiff_t` je definice typu `__int64`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pole a ukazatelé](../c-language/arrays-and-pointers.md)

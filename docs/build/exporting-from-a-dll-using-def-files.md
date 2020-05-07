@@ -34,9 +34,9 @@ EXPORTS
    Min   @4
 ```
 
-Použijete-li [Průvodce knihovnou MFC DLL](../mfc/reference/mfc-dll-wizard.md) k vytvoření knihovny MFC DLL, průvodce vytvoří soubor s kostrou pro vás a automaticky ho přidá do vašeho projektu. Přidejte názvy funkcí, které mají být exportovány do tohoto souboru. V případě knihoven DLL, které nejsou knihovny MFC, vytvořte soubor DEF sami a přidejte jej do projektu. Pak přejděte do **projektu** > **vlastnosti** > **linkeru** > **vstupní** **soubor definice modulu** > a zadejte název def souboru. Tento krok opakujte pro každou konfiguraci a platformu, nebo to všechno najednou, a to tak, že vyberete **Konfigurace = všechny konfigurace**a **platforma = všechny platformy**.
+Použijete-li [Průvodce knihovnou MFC DLL](../mfc/reference/mfc-dll-wizard.md) k vytvoření knihovny MFC DLL, průvodce vytvoří soubor s kostrou pro vás a automaticky ho přidá do vašeho projektu. Přidejte názvy funkcí, které mají být exportovány do tohoto souboru. V případě knihoven DLL, které nejsou knihovny MFC, vytvořte soubor DEF sami a přidejte jej do projektu. Pak přejděte do **Project** > **vlastností** > **projektu linker** > **input** > **Module Definition File** a zadejte název def souboru. Tento krok opakujte pro každou konfiguraci a platformu, nebo to všechno najednou, a to tak, že vyberete **Konfigurace = všechny konfigurace**a **platforma = všechny platformy**.
 
-Pokud exportujete funkce do C++ souboru, je nutné buď umístit dekorované názvy do def souboru, nebo definovat exportované funkce pomocí standardního propojení jazyka c pomocí extern "C". Pokud potřebujete umístit dekorované názvy do souboru DEF, můžete je získat pomocí nástroje [DUMPBIN](../build/reference/dumpbin-reference.md) nebo pomocí možnosti linker [/map](../build/reference/map-generate-mapfile.md) . Všimněte si, že dekorované názvy vytvářené kompilátorem jsou specifické pro kompilátor. Pokud umístíte dekorované názvy vytvářené kompilátorem C++ Microsoft (MSVC) do def souboru, musí být aplikace, které odkazují na vaši knihovnu DLL, sestaveny také pomocí stejné verze MSVC, aby dekorované názvy v volající aplikaci odpovídaly exportovaným názvům v souboru DEF knihovny DLL.
+Pokud exportujete funkce v souboru jazyka C++, je nutné buď umístit dekorované názvy do DEF souboru, nebo definovat exportované funkce pomocí standardního propojení jazyka C pomocí extern "C". Pokud potřebujete umístit dekorované názvy do souboru DEF, můžete je získat pomocí nástroje [DUMPBIN](../build/reference/dumpbin-reference.md) nebo pomocí možnosti linker [/map](../build/reference/map-generate-mapfile.md) . Všimněte si, že dekorované názvy vytvářené kompilátorem jsou specifické pro kompilátor. Pokud umístíte dekorované názvy vytvářené kompilátorem Microsoft C++ (MSVC) do DEF souboru, aplikace, které odkazují na vaši knihovnu DLL, musí být také sestaveny pomocí stejné verze MSVC, aby dekorované názvy v volající aplikaci odpovídaly exportovaným názvům v souboru DEF knihovny DLL.
 
 > [!NOTE]
 > Knihovna DLL vytvořená pomocí sady Visual Studio 2015 může být spotřebována aplikacemi sestavenými pomocí sady Visual Studio 2017 nebo sady Visual Studio 2019.
@@ -51,7 +51,7 @@ Pokud vytváříte [rozšiřující knihovnu DLL](../build/extension-dlls-overvi
 #define AFX_DATA
 ```
 
-Tyto řádky zajistí, že proměnné MFC, které jsou použity interně nebo které jsou přidány do tříd, jsou exportovány (nebo importovány) z knihovny DLL rozšíření knihovny MFC. Například při odvozování třídy pomocí `DECLARE_DYNAMIC`se makro rozbalí, aby se přidala členská proměnná `CRuntimeClass` do vaší třídy. Tyto čtyři řádky můžou způsobit, že vaše knihovna DLL nebude správně zkompilována nebo nesprávně fungovat, nebo může způsobit chybu, když klientská aplikace odkazuje na knihovnu DLL.
+Tyto řádky zajistí, že proměnné MFC, které jsou použity interně nebo které jsou přidány do tříd, jsou exportovány (nebo importovány) z knihovny DLL rozšíření knihovny MFC. Například při odvozování třídy pomocí `DECLARE_DYNAMIC`se makro rozbalí a přidá `CRuntimeClass` členskou proměnnou do vaší třídy. Tyto čtyři řádky můžou způsobit, že vaše knihovna DLL nebude správně zkompilována nebo nesprávně fungovat, nebo může způsobit chybu, když klientská aplikace odkazuje na knihovnu DLL.
 
 Při sestavování knihovny DLL používá linker soubor DEF k vytvoření souboru exportu (. exp) a souboru knihovny importu (. lib). Linker pak pomocí souboru exportu vytvoří soubor DLL. Spustitelné soubory, které jsou implicitně propojeny s knihovnou DLL, na knihovnu importů, když jsou sestaveny.
 
@@ -63,9 +63,9 @@ Všimněte si, že samotný MFC používá soubory DEF k exportu funkcí a tří
 
 - [Export a import pomocí AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportování C++ funkcí pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++jazyka](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Určení metody exportu, která se má použít](determining-which-exporting-method-to-use.md)
 

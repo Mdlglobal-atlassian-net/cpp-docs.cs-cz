@@ -19,34 +19,34 @@ ms.locfileid: "65221193"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
 
-Pro aplikace Visual Basic (nebo aplikace v jiných jazycích, jako například Pascal nebo Fortran) pro volání funkce v knihovně DLL jazyka C/C++ funkce musí být exportovány pomocí správné konvence volání bez jakékoli dekorování názvů kompilátorem
+Pro aplikace Visual Basic (nebo aplikací v jiných jazycích, jako je Pascal nebo FORTRAN) volání funkcí v knihovně DLL jazyka C/C++, je nutné tyto funkce exportovat pomocí správné konvence volání bez jakýchkoli názvů, které provádí kompilátor.
 
-`__stdcall` Vytvoří správnou konvenci volání funkce (volaná funkce vyčistí zásobník a parametry jsou předány zprava doleva), ale název funkce upraví odlišně. Ano, v případě **__declspec(dllexport)** se používá na exportované funkce v knihovně DLL, upravený název je exportován.
+`__stdcall`Vytvoří správnou konvenci volání funkce (volaná funkce vyčistí zásobník a parametry jsou předány zprava doleva), ale upraví název funkce odlišně. Takže při použití **__declspec (dllexport)** pro exportovanou funkci v knihovně DLL, je upravený název exportován.
 
-`__stdcall` Dekorování názvů předpon název symbol podtržítka ( **\_** ) a připojí symbol zavináč (**\@**) následovaný počet počet bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho je funkce deklarovaná jako:
+Dekorování `__stdcall` názvů má předponu názvu symbolu podtržítkem ( **\_** ) a připojí symbol pomocí znaku ' symbol ' (**\@**) následovaný počtem bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho je funkce deklarována jako:
 
 ```C
 int __stdcall func (int a, double b)
 ```
 
-je upravena následovně `_func@12` ve výstupu.
+je upraven jako `_func@12` ve výstupu.
 
-Konvence volání jazyka C (`__cdecl`) upraví název jako `_func`.
+Konvence volání jazyka C`__cdecl`() upraví název jako `_func`.
 
-Chcete-li získat upravený název, použijte [/MAP](reference/map-generate-mapfile.md). Použití **__declspec(dllexport)** provede následující akce:
+Chcete-li získat dekorovaný název, použijte [/map](reference/map-generate-mapfile.md). Použití **__declspec (dllexport)** provede následující:
 
-- Pokud se exportuje funkci s konvencí volání jazyka C (`__cdecl`), odstraní počáteční podtržítko ( **\_** ) při exportu názvu.
+- Pokud je funkce exportována pomocí konvence volání jazyka C`__cdecl`(), obchází úvodní podtržítko ( **\_** ), pokud je název exportován.
 
-- Pokud je funkce exportována nepoužívá konvence volání jazyka C (například `__stdcall`), exportuje upravený název.
+- Pokud funkce, která je exportována, nepoužívá konvenci volání jazyka C ( `__stdcall`například), exportuje upravený název.
 
-Protože neexistuje žádný způsob, jak přepsat, pokud dojde k vymazání zásobníku, je nutné použít `__stdcall`. Rušit úpravu názvu `__stdcall`, je nutné je zadat pomocí aliasů v oddíle EXPORTS v .def souboru. To je ukázáno následujícím způsobem pro následující deklarace funkce:
+Vzhledem k tomu, že neexistuje žádný způsob, jak přepsat, kde dojde k vyčištění `__stdcall`zásobníku, je nutné použít. Chcete-li Neupravovat názvy pomocí `__stdcall`, je nutné je zadat pomocí aliasů v části EXPORTS v souboru. def. To je znázorněno následovně pro následující deklaraci funkce:
 
 ```C
 int  __stdcall MyFunc (int a, double b);
 void __stdcall InitCode (void);
 ```
 
-V. Soubor DEF:
+V. DEF soubor:
 
 ```
 EXPORTS
@@ -54,22 +54,22 @@ EXPORTS
    INITCODE=_InitCode@0
 ```
 
-Knihovny DLL, být volány programy napsanými v jazyce Visual Basic vyžadují v souboru .def techniku "alias" v tomto tématu. Pokud se alias provede v programu Visual Basic, není nutné použití v .def souboru. To můžete udělat v aplikaci Visual Basic, tak, že přidáte klauzuli alias do [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) příkazu.
+Aby byly knihovny DLL volány programy napsanými v Visual Basic, je v souboru. def nutná metoda aliasů uvedená v tomto tématu. Pokud se alias provádí v Visual Basic programu, není nutné použít aliasing v souboru. def. Lze ji provést v programu Visual Basic přidáním klauzule alias do příkazu [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Export z knihovny DLL](exporting-from-a-dll.md)
 
-- [Export z knihovny DLL pomocí. DEF soubory](exporting-from-a-dll-using-def-files.md)
+- [Export z knihovny DLL pomocí. Soubory DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z knihovny DLL pomocí __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
+- [Určení metody exportu, která se má použít](determining-which-exporting-method-to-use.md)
 
 - [Dekorované názvy](reference/decorated-names.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

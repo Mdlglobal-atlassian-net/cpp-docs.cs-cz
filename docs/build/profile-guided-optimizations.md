@@ -14,84 +14,84 @@ ms.locfileid: "64857329"
 ---
 # <a name="profile-guided-optimizations"></a>Optimalizace na základě profilu
 
-Profilově řízené optimalizace (PGO) umožňuje optimalizovat zcela spustitelného souboru, kde Optimalizátor používá data testovacích běhů souboru .exe nebo .dll. Data představují pravděpodobně výkon programu v produkčním prostředí.
+Optimalizace na základě profilu (PGO) umožňuje optimalizovat celý spustitelný soubor, kde Optimalizátor používá data z testovacích běhů souboru. exe nebo. dll. Data představují pravděpodobný výkon programu v produkčním prostředí.
 
-Optimalizace na základě profilu jsou dostupné pouze pro nativní cíle x86 nebo x64. Optimalizace na základě profilu nejsou k dispozici pro spustitelné soubory, které běží na modulu common language runtime. I v případě, že vytvoříte sestavení s smíšená nativní a spravované kódové (s použitím **/CLR** – možnost kompilátoru), nelze použít na základě profilu – optimalizace na pouze pro nativní kód. Pokud se pokusíte sestavit projekt s těmito možnostmi nastavenými v prostředí IDE, výsledky chybu sestavení.
+Optimalizace na základě profilu jsou k dispozici pouze pro nativní cíle x86 nebo x64. Optimalizace na základě profilu nejsou k dispozici pro spustitelné soubory, které běží v modulu CLR (Common Language Runtime). I když vytváříte sestavení se smíšeným nativním a spravovaným kódem (pomocí možnosti kompilátoru **/CLR** ), nemůžete použít optimalizaci na základě profilu na pouze nativní kód. Pokud se pokusíte sestavit projekt s těmito možnostmi nastavenými v integrovaném vývojovém prostředí (IDE), dojde k chybě sestavení.
 
 > [!NOTE]
-> Informace shromážděné z testovacích běhů profilování potlačení optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete v tématu [/Ob (rozbalení vložené funkce)](reference/ob-inline-function-expansion.md) a [/OS, /Ot (upřednostnění malého kódu, upřednostnění rychlého kódu)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> Informace, které se shromažďují z testovacích běhů, potlačí optimalizace, které by jinak vstoupily v platnost, pokud zadáte **/ob**, **/OS**nebo **/ot**. Další informace naleznete v tématu [/ob (rozšíření vložené funkce)](reference/ob-inline-function-expansion.md) a [/OS,/ot (upřednostnění malého kódu, upřednostnění rychlého kódu)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
-## <a name="steps-to-optimize-your-app"></a>Kroky k optimalizaci vaší aplikace
+## <a name="steps-to-optimize-your-app"></a>Postup optimalizace aplikace
 
-Použití profilováním řízená optimalizace, použijte následující postup optimalizovat aplikaci:
+Pokud chcete použít optimalizaci na základě profilu, postupujte podle těchto kroků a optimalizujte svou aplikaci:
 
-- Kompilaci jednoho nebo více souborů zdrojového kódu s [/GL](reference/gl-whole-program-optimization.md).
+- Zkompilujte jeden nebo více souborů zdrojového kódu s [/GL](reference/gl-whole-program-optimization.md).
 
-   Všechny moduly sestavené s **/GL** během testovacích běhů optimalizace na základě profilu k zachycení chování za běhu se dají prozkoumat. Všechny moduly v sestavení optimalizace na základě profilu nemá být zkompilovány s **/GL**. Nicméně pouze ty moduly zkompilovaná **/GL** jsou instrumentovány a později dostupné pro optimalizace na základě profilu.
+   Každý modul sestavený s **/GL** lze prozkoumat během testovacích běhů s profilací na základě profilu, který zachytí chování za běhu. Každý modul v sestavení optimalizace na základě profilu není nutné kompilovat s **/GL**. Pro optimalizace na základě profilu jsou však instrumentované a později dostupné pouze ty moduly, které jsou zkompilovány s **/GL** .
 
-- Odkaz zadáním [parametru/LTCG](reference/ltcg-link-time-code-generation.md) a [/genprofile nebo /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
+- Propojení pomocí [/LTCG](reference/ltcg-link-time-code-generation.md) a [/GENPROFILE nebo/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   Použitím **parametru/LTCG** a **/genprofile** nebo **/FASTGENPROFILE** vytvoří `.pgd` souboru při spuštění instrumentované aplikace. Po testovacím běhu data je přidána do `.pgd` souboru, může sloužit jako vstup pro další krok propojování (Vytvoření optimalizované bitové kopie). Při zadávání **/genprofile**, můžete volitelně přidat **PGD =**_filename_ argument a zadejte jiný než výchozí název nebo umístění pro `.pgd` souboru. Kombinace **parametru/LTCG** a **/genprofile** nebo **/FASTGENPROFILE** možnosti linkeru nahradí zastaralá **/LTCG:PGINSTRUMENT** – možnost linkeru.
+   Když použijete **/LTCG** i **/GENPROFILE** nebo **/FASTGENPROFILE** , `.pgd` vytvoří se soubor při spuštění instrumentované aplikace. Po spuštění testu jsou do `.pgd` souboru přidána data, která lze použít jako vstup k dalšímu kroku propojení (vytvoření optimalizované bitové kopie). Při zadávání **/GENPROFILE**můžete volitelně přidat argument **PGD =**_filename_ pro určení nevýchozího názvu nebo umístění `.pgd` souboru. Kombinace možností linkeru **/LTCG** a **/GENPROFILE** nebo **/FASTGENPROFILE** nahrazuje možnost linkeru zastaralou **/LTCG: PGINSTRUMENT** .
 
 - Profilování aplikace.
 
-   Pokaždé, když skončí profilovaná relace EXE nebo profilovaná knihovna DLL je uvolněna, `appname!N.pgc` se vytvoří soubor. A `.pgc` soubor obsahuje informace o testovacím běhu konkrétní aplikace. *AppName* je název vaší aplikace a *N* je číslo od 1, které se zvyšuje podle počtu jiných `appname!N.pgc` soubory v adresáři. Můžete odstranit `.pgc` souboru, pokud testovací běh nepředstavuje scénáři chcete optimalizovat.
+   Pokaždé, když se ukončí profilovaná relace EXE, nebo je `appname!N.pgc` soubor DLL s profilací uvolněn, vytvoří se soubor. `.pgc` Soubor obsahuje informace o konkrétním testovacím běhu aplikace. *AppName* je název vaší aplikace a *N* je číslo od 1, které se zvyšuje na základě počtu dalších `appname!N.pgc` souborů v adresáři. `.pgc` Soubor můžete odstranit, pokud testovací běh nepředstavuje scénář, který chcete optimalizovat.
 
-   Během testovacího běhu lze vynutit uzavření aktuálně otevřeného `.pgc` souboru a vytvoření nového `.pgc` souboru [pgosweep](pgosweep.md) utility (například když na konec testovací scénář nemá shodovat se aplikace vypnutí).
+   Během testovacího běhu můžete vynutit uzavření aktuálně otevřeného `.pgc` souboru a vytvoření nového `.pgc` souboru pomocí nástroje [pgosweep](pgosweep.md) (například když se konec testovacího scénáře neshoduje s ukončením aplikace).
 
-   Aplikace můžete také přímo vyvolat funkci PGO [PgoAutoSweep](pgoautosweep.md), k zaznamenání dat profilu místě volání jako `.pgc` souboru. Poskytuje lepší kontrolu nad kódem předmětem zachycená data ve vašich `.pgc` soubory. Příklad toho, jak tuto funkci použít, najdete v článku [PgoAutoSweep](pgoautosweep.md) dokumentaci.
+   Vaše aplikace může také přímo vyvolat funkci PGO, [PgoAutoSweep](pgoautosweep.md)pro zachycení dat profilu v místě volání jako `.pgc` soubor. Může vám poskytnout lepší kontrolu nad kódem, který jsou pokrytá zachycenými daty `.pgc` ve vašich souborech. Příklad použití této funkce najdete v dokumentaci k [PgoAutoSweep](pgoautosweep.md) .
 
-   Při vytváření instrumentované sestavení, ve výchozím nastavení shromažďování dat se provádí v režimu není bezpečné pro vlákna, který je rychlejší, ale mohou být nepřesná. S použitím **EXACT** argument **/genprofile** nebo **/FASTGENPROFILE**, shromažďování dat můžete zadat v režimu bezpečné pro vlákna, což je přesnější, ale pomalejší. Tato možnost je také k dispozici, pokud jste nastavili zastaralá [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) proměnné prostředí nebo zastaralá **/POGOSAFEMODE** – možnost linkeru, když vytvoříte instrumentované sestavení.
+   Když vytvoříte instrumentované sestavení, je shromažďování dat ve výchozím nastavení provedeno v režimu bez bezpečného přístupu z více vláken, což je rychlejší, ale může být nepřesné. Když použijete **přesný** argument pro **/GENPROFILE** nebo **/FASTGENPROFILE**, můžete zadat shromažďování dat v režimu bezpečném pro přístup z více vláken, který je přesnější, ale pomalejší. Tato možnost je k dispozici také v případě, že jste při vytváření instrumentované sestavení nastavili zastaralou proměnnou prostředí [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) nebo možnost linkeru, která je zastaralá **/POGOSAFEMODE** .
 
-- Odkaz zadáním **parametru/LTCG** a **/useprofile**.
+- Propojit pomocí **/LTCG** a **/USEPROFILE**.
 
-   Použít **parametru/LTCG** a [/useprofile](reference/useprofile.md) možnosti propojovacího programu k vytvoření optimalizované bitové kopie. Tento krok přijímá jako vstupní `.pgd` souboru. Při zadání **/useprofile**, Volitelně můžete přidat **PGD =**_filename_ argumentu pro zadání jiné než výchozí název nebo umístění `.pgd` souboru. Tento název můžete zadat také pomocí zastaralá **/PGD** – možnost linkeru. Kombinace **parametru/LTCG** a **/useprofile** nahradí zastaralá **/LTCG:PGOPTIMIZE** a **/LTCG:PGUPDATE** možnosti linkeru.
+   K vytvoření optimalizované bitové kopie použijte možnosti linkeru **/LTCG** a [/USEPROFILE](reference/useprofile.md) . Tento krok přijímá jako vstupní `.pgd` soubor. Když zadáte **/USEPROFILE**, můžete volitelně přidat argument **PGD =**_filename_ , který určí jiný než výchozí název nebo umístění `.pgd` souboru. Tento název můžete zadat také pomocí nepoužívaného parametru linkeru **/PGD** . Kombinace parametrů **/LTCG** a **/USEPROFILE** nahrazuje zastaralé **/LTCG: PGOPTIMIZE** a **/LTCG: PGUPDATE** Možnosti linkeru.
 
-Je dokonce možné k vytvoření optimalizované spustitelný soubor a později určit, že další profilace budou užitečné k vytvoření více optimalizované bitové kopie. -Li instrumentovaná bitová kopie a její `.pgd` souboru jsou k dispozici, můžete provést dodatečné testovací běhy a optimalizovanou bitovou kopii s novější znovu sestavit `.pgd` soubor pomocí stejné **parametru/LTCG** a   **/useprofile** možnosti linkeru.
+Je dokonce možné vytvořit optimalizovaný spustitelný soubor a později určit, že další profilace by byla užitečná pro vytvoření optimalizované bitové kopie. Je-li instrumentovaná image a `.pgd` její soubor k dispozici, můžete provést další testovací běhy a znovu sestavit optimalizovanou bitovou kopii `.pgd` s novějším souborem pomocí stejných možností linkeru **/LTCG** a **/USEPROFILE** .
 
 ## <a name="optimizations-performed-by-pgo"></a>Optimalizace prováděné PGO
 
-Optimalizace na základě profilu zahrnují tyto kontroly a vylepšení:
+Optimalizace na základě profilu obsahují tyto kontroly a vylepšení:
 
-- **Vkládání** – například, pokud funkce A často volá funkci B a funkce B je poměrně málo početnému a potom na základě profilu – optimalizace vloží funkci B do funkce A.
+- Vložení **– Pokud** je například funkce, která často volá funkci b, a funkce b je poměrně malá, pak optimalizace na základě profilu vloží vloženou funkci b do funkce a.
 
-- **Spekulace o virtuálních voláních** – Pokud virtuální volání nebo jiné volání pomocí ukazatele na funkci často cílí na určitou funkci, optimalizace profilu může vložit podmíněně prováděnou přímého volání do často cílené funkce, a přímé volání může být vložená.
+- **Spekulativní virtuální volání** – Pokud virtuální volání nebo jiné volání prostřednictvím ukazatele na funkci, často cílí na určitou funkci, může optimalizace na základě profilu vložit podmíněně spouštěné přímé volání do často cílené funkce a přímé volání může být vložené.
 
-- **Přidělení registru** – optimalizace založená na profilu data následek lepší přidělování registru.
+- **Registrace přidělení** – optimalizace na základě výsledků dat profilu vám umožní lépe přidělit registraci.
 
-- **Optimalizace základních bloků** – optimalizace základních bloků umožňuje běžně spouštěných základních bloků, které dočasně spouštěny uvnitř daného rámce, do stejné sady stránek (umístění). Minimalizuje počet použitých stránek, které minimalizuje režijní náklady na paměť.
+- **Optimalizace základního blokování** – optimalizace základních bloků umožňuje běžně spouštět základní bloky, které se v daném rámci v rámci daného rámce budou umístit do stejné sady stránek (umístění). Minimalizuje počet použitých stránek, což minimalizuje nároky na paměť.
 
-- **Optimalizace velikosti/rychlosti** – kde program stráví nejvíce času spuštění funkce, lze optimalizovat rychlost.
+- **Optimalizace velikosti a rychlosti** – funkce, ve kterých se program stráví největším časem spuštění, může být optimalizován pro rychlost.
 
-- **Rozložení funkcí** – na základě grafu volání a Profilovat chování volajícího/volaného jsou funkce, které bývají na stejné cestě spouštění umístěné ve stejné části.
+- **Rozložení funkcí** – na základě grafu volání a převedených chování volajícího/volaného se funkce, které jsou v rámci stejné cesty spuštění, umístí do stejné části.
 
-- **Podmíněná optimalizace větví** – pomocí sond hodnot na základě profilu – optimalizace najdete, pokud je daná hodnota v příkazu switch používána častěji než jiné hodnoty.  Tuto hodnotu lze pak z příkazu switch odstranit.  Totéž lze provést s `if`... `else` pokyny, kde optimalizátor může příkaz `if`... `else` tak že buď `if` nebo `else` bloku je jako první umístěn, v závislosti na tom, který je častěji hodnotu true.
+- **Optimalizace podmíněné větve** – s využitím sond hodnot, optimalizace na základě profilu, můžou zjistit, jestli se daná hodnota v příkazu switch používá častěji než jiné hodnoty.  Tuto hodnotu lze pak z příkazu switch odstranit.  Totéž lze provést s `if`... `else` pokyny, kde může Optimalizátor objednat `if`... `else` takže buď blok nebo `if` `else` je umístěn jako první, v závislosti na tom, který blok je častěji true.
 
-- **Oddělení mrtvého kódu** -kód, který během profilování nebyl zavolán se přesune do zvláštního oddílu, která se připojuje ke konci sady oddílů. Efektivně udržován mimo často používané stránky v této části.
+- **Oddělený** kód – kód, který není volán během profilování, je přesunut do speciálního oddílu, který je připojen ke konci sady oddílů. Tato část je efektivně zachovaná mimo často používané stránky.
 
-- **Oddělení kódu EH** – kód EH protože je jen výjimečně, ji lze často přesunout do odděleného oddílu. Je přesunout, pokud optimalizace na základě profilu mohou určit, že k výjimkám dochází jen za výjimečných podmínek.
+- **Oddělení kódu EH** – protože kód eh je jenom výjimečně spuštěný, může se často přesunout do samostatného oddílu. Je přesunutá, když optimalizace na základě profilu můžou určit, že se výjimky vyskytují jenom při mimořádných podmínkách.
 
-- **Vnitřní objekty paměti** – ať rozbalit vnitřní objekt, nebo Ne, závisí na tom, zda jsou volány často. Vnitřní objekt lze optimalizovat také na základě velikosti bloku operací přesunutí nebo kopírování.
+- **Vnitřní funkce paměti** – určuje, jestli se má rozšířit vnitřní nebo nezávislá na tom, jestli je často se volá. Vnitřní objekt lze optimalizovat také na základě velikosti bloku operací přesunutí nebo kopírování.
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o těchto proměnných prostředí, funkce a nástroje, které můžete použít v optimalizace na základě profilu:
+Přečtěte si další informace o těchto proměnných prostředí, funkcích a nástrojích, které můžete použít v optimalizacích na základě profilu:
 
 [Proměnné prostředí pro optimalizace na základě profilu](environment-variables-for-profile-guided-optimizations.md)<br/>
-Tyto proměnné se používá k určení chování za běhu testování scénářů. Nyní jsou zastaralé a nahrazují nové možnosti linkeru. Tento dokument ukazuje, jak přesunout z proměnných prostředí, možnosti linkeru.
+Tyto proměnné byly použity k určení chování testovacích scénářů v době běhu. Už jsou zastaralé a nahrazují je novými možnostmi linkeru. V tomto dokumentu se dozvíte, jak přesunout z proměnných prostředí do možností linkeru.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Funkce můžete přidat do své aplikace a poskytují podrobné `.pgc` ovládací prvek pro zachycení dat souborů.
+Funkce, kterou můžete přidat do aplikace k poskytnutí podrobného řízení sběru dat `.pgc` souborů.
 
 [pgosweep](pgosweep.md)<br/>
-Nástroj příkazového řádku, který zapíše všechna data profilu k `.pgc` souboru, ukončí `.pgc` souborů a otevře se nový `.pgc` souboru.
+Nástroj příkazového řádku, který zapisuje všechna data profilu do `.pgc` souboru, zavře `.pgc` soubor a otevře nový `.pgc` soubor.
 
 [pgomgr](pgomgr.md)<br/>
-Nástroj příkazového řádku, který přidá data profilu z jedné nebo více `.pgc` soubory `.pgd` souboru.
+Nástroj příkazového řádku, který přidává data profilu z jednoho nebo více `.pgc` souborů do `.pgd` souboru.
 
-[Postupy: Sloučení několika profilů PGO do jediného profilu](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-Příklady **pgomgr** využití.
+[Postupy: sloučení více profilů PGO do jednoho profilu](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
+Příklady využití **pgomgr**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Další nástroje sestavení MSVC](reference/c-cpp-build-tools.md)

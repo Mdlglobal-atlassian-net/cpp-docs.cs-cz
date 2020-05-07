@@ -14,9 +14,9 @@ ms.locfileid: "62312632"
 ---
 # <a name="character-types"></a>Typy znaků
 
-Celočíselné znakové konstanty nepředchází písmeno **L** má typ `int`. Hodnota celočíselné znakové konstanty obsahující jeden znak je číselnou hodnotou znaku, který je interpretován jako celé číslo. Například číselná hodnota znaku `a` je 97 v desítkové soustavě a 61 v šestnáctkové soustavě.
+Celočíselná znaková konstanta, která nepředchází písmeno **L** , má `int`typ. Hodnota celočíselné znakové konstanty obsahující jeden znak je číselnou hodnotou znaku, který je interpretován jako celé číslo. Například číselná hodnota znaku `a` je 97 v desítkové soustavě a 61 v šestnáctkové soustavě.
 
-Syntakticky je "konstanta širokého znaku" Znaková konstanta předchází písmeno **L**. Konstanta širokého znaku je typu `wchar_t`, což je celočíselný typ definovaný v souboru hlaviček STDDEF.H. Příklad:
+Syntakticky, "konstanta" s "velkým znakem" je znaková konstanta, která je uvozena písmenem **L**. Konstanta s velkým znakem je `wchar_t`typu, celočíselný typ definovaný v STDDEF. Soubor hlaviček H Příklad:
 
 ```
 char    schar =  'x';   /* A character constant          */
@@ -24,8 +24,8 @@ wchar_t wchar = L'x';   /* A wide-character constant for
                             the same character           */
 ```
 
-Konstanty širokého znaku jsou široké 16 bitů a určují členy znakové sady rozšířeného spuštění. Umožňují vyjádřit znaky abecedy, které jsou příliš velké a nelze je reprezentovat podle typu `char`. Zobrazit [vícebajtové a široké znaky](../c-language/multibyte-and-wide-characters.md) Další informace o širokých znacích.
+Konstanty širokého znaku jsou široké 16 bitů a určují členy znakové sady rozšířeného spuštění. Umožňují vyjádřit znaky abecedy, které jsou příliš velké a nelze je reprezentovat podle typu `char`. Další informace o velkých znacích naleznete v tématu [vícebajtové a velké znaky](../c-language/multibyte-and-wide-characters.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty znaků jazyka C](../c-language/c-character-constants.md)

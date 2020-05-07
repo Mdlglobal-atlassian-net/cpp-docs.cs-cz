@@ -14,22 +14,22 @@ ms.locfileid: "65220928"
 ---
 # <a name="automation-in-a-dll"></a>Automatizace v knihovně DLL
 
-Pokud zvolíte možnost automatizace v průvodci knihovny MFC DLL, Průvodce poskytuje následující:
+Když v Průvodci knihovnou MFC DLL zvolíte možnost automatizace, průvodce vám poskytne následující:
 
-- Jazyk pro popis objektu starter (. Soubor ODL)
+- Objekt pro popis počátečního objektu (. ODL) – soubor
 
-- Direktivě include v souboru STDAFX.h Afxole.h
+- Direktiva include v souboru STDAFX. h pro AFXOLE. h
 
-- Implementace `DllGetClassObject` funkce, která volá **AfxDllGetClassObject** – funkce
+- Implementace `DllGetClassObject` funkce, která volá funkci **AfxDllGetClassObject**
 
-- Implementace `DllCanUnloadNow` funkce, která volá **AfxDllCanUnloadNow** – funkce
+- Implementace `DllCanUnloadNow` funkce, která volá funkci **AfxDllCanUnloadNow**
 
-- Implementace `DllRegisterServer` funkce, která volá [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) – funkce
+- Implementace `DllRegisterServer` funkce, která volá funkci [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Automatizační servery](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

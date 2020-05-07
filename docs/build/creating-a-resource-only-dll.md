@@ -31,9 +31,9 @@ Chcete-li vytvořit knihovnu DLL pouze pro prostředky, vytvořte nový projekt 
 
 1. Vytvořte nový skript prostředků, který obsahuje prostředky pro knihovnu DLL (například řetězec nebo nabídku). Uložte soubor `.rc`.
 
-1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté do projektu vložte nový soubor `.rc`.
+1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté vložte nový `.rc` soubor do projektu.
 
-1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` zabraňuje linkeru v propojení odkazu s `_main` do knihovny DLL; Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
+1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`zabraňuje linkeru v propojení odkazu s `_main` knihovnou DLL. Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
 
 1. Sestavení knihovny DLL.
 
@@ -46,9 +46,9 @@ Chcete-li vytvořit knihovnu DLL pouze pro prostředky, vytvořte nový projekt 
 
 1. Vytvořte nový skript prostředků, který obsahuje prostředky pro knihovnu DLL (například řetězec nebo nabídku). Uložte soubor `.rc`.
 
-1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté do projektu vložte nový soubor `.rc`.
+1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté vložte nový `.rc` soubor do projektu.
 
-1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` zabraňuje linkeru v propojení odkazu s `_main` do knihovny DLL; Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
+1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`zabraňuje linkeru v propojení odkazu s `_main` knihovnou DLL. Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
 
 1. Sestavení knihovny DLL.
 
@@ -56,7 +56,7 @@ Chcete-li vytvořit knihovnu DLL pouze pro prostředky, vytvořte nový projekt 
 
 ## <a name="use-a-resource-only-dll"></a>Použít knihovnu DLL pouze pro prostředky
 
-Aplikace, která používá knihovnu DLL pouze prostředků, by měla volat [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) nebo související funkce pro explicitní propojení s knihovnou DLL. Chcete-li získat přístup k prostředkům, zavolejte obecné funkce `FindResource` a `LoadResource`, které fungují na jakémkoli druhu prostředku. Nebo zavolejte jednu z následujících funkcí specifických pro prostředky:
+Aplikace, která používá knihovnu DLL pouze prostředků, by měla volat [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) nebo související funkce pro explicitní propojení s knihovnou DLL. Chcete-li získat přístup k prostředkům, zavolejte `FindResource` obecné `LoadResource`funkce a, které fungují na jakémkoli druhu prostředku. Nebo zavolejte jednu z následujících funkcí specifických pro prostředky:
 
 - `FormatMessage`
 
@@ -72,9 +72,9 @@ Aplikace, která používá knihovnu DLL pouze prostředků, by měla volat [Loa
 
 - `LoadString`
 
-Aplikace by měla volat `FreeLibrary` po jejím dokončení pomocí prostředků.
+Aplikace by měla zavolat `FreeLibrary` po dokončení používání prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce se soubory prostředků](../windows/working-with-resource-files.md)\
-[Vytváření C/C++ knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

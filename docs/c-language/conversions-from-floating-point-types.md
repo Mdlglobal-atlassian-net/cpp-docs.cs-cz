@@ -18,7 +18,7 @@ Hodnota s plovoucí desetinnou čárkou, která je převedena na jiný typ s plo
 
 Hodnota s plovoucí desetinnou čárkou, která je převedena na celočíselný typ, je nejprve zkrácena zahozením jakékoli desetinné hodnoty. Pokud je tato Zkrácená hodnota reprezentována v typu výsledku, musí být výsledkem tato hodnota. Pokud jej nelze reprezentovat, hodnota výsledku není definována.
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Kompilátory Microsoftu používají reprezentaci IEEE-754 binary32 pro hodnoty **float** a reprezentaci binary64 pro **Long Double** a **Double**. Vzhledem k tomu, že **Long Double** a **Double** používají stejnou reprezentaci, mají stejný rozsah a přesnost.
 
@@ -40,34 +40,34 @@ Následující tabulka shrnuje převody z plovoucích typů.
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Tabulka převodů z typů s plovoucí desetinnou čárkou
 
-|From|Chcete-li|Metoda|
+|From|Akce|Metoda|
 |----------|--------|------------|
-|**float**|**char**|Převést na **Long**; převod **dlouhé** na **char**|
-|**float**|**short**|Převést na **Long**; převést na **krátkou** **dobu**|
-|**float**|**int**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **int**, výsledek není definován.|
-|**float**|**long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **Long**, výsledek není definován.|
-|**float**|**Long Long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit po **dlouhou**dobu, není výsledek definován.|
-|**float**|**znak bez znaménka**|Převést na **Long**; převést **dlouhé** na **nepodepsaný znak**|
-|**float**|**krátký unsigned**|Převést na **Long**; převod **Long** na **unsigned short**|
-|**float**|**celé**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned**, výsledek není definován.|
-|**float**|**unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long**, výsledek není definován.|
-|**float**|**dlouhý unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long long**, výsledek není definován.|
-|**float**|**double**|Představuje **typ Double**.|
-|**float**|**Long Double**|Reprezentuje jako **typ long double**.|
+|**Plovák**|**char**|Převést na **Long**; převod **dlouhé** na **char**|
+|**Plovák**|**short**|Převést na **Long**; převést na **krátkou** **dobu**|
+|**Plovák**|**int**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **int**, výsledek není definován.|
+|**Plovák**|**long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **Long**, výsledek není definován.|
+|**Plovák**|**long long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit po **dlouhou**dobu, není výsledek definován.|
+|**Plovák**|**unsigned char**|Převést na **Long**; převést **dlouhé** na **nepodepsaný znak**|
+|**Plovák**|**unsigned short**|Převést na **Long**; převod **Long** na **unsigned short**|
+|**Plovák**|**celé**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned**, výsledek není definován.|
+|**Plovák**|**unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long**, výsledek není definován.|
+|**Plovák**|**dlouhý unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long long**, výsledek není definován.|
+|**Plovák**|**double**|Představuje **typ Double**.|
+|**Plovák**|**Long Double**|Reprezentuje jako **typ long double**.|
 |**double**|**char**|Převést na **float**; převést **float** na **char**|
 |**double**|**short**|Převést na **float**; převést **float** na **short**|
 |**double**|**int**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **int**, výsledek není definován.|
 |**double**|**long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **Long**, výsledek není definován.|
-|**double**|**znak bez znaménka**|Převést na **Long**; převést **dlouhé** na **nepodepsaný znak**|
-|**double**|**krátký unsigned**|Převést na **Long**; převod **Long** na **unsigned short**|
+|**double**|**unsigned char**|Převést na **Long**; převést **dlouhé** na **nepodepsaný znak**|
+|**double**|**unsigned short**|Převést na **Long**; převod **Long** na **unsigned short**|
 |**double**|**celé**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned**, výsledek není definován.|
 |**double**|**unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long**, výsledek není definován.|
 |**double**|**dlouhý unsigned long**|Zkrátit na desetinnou čárku Pokud je výsledek příliš velký, aby jej bylo možné znázornit jako **unsigned long long**, výsledek není definován.|
-|**double**|**float**|Představuje typ **float**. Pokud hodnota typu **Double** nemůže být reprezentována přesně jako **float**, dojde ke ztrátě přesnosti. Je-li hodnota příliš velká, aby byla reprezentována jako **float**, výsledek není definován.|
+|**double**|**Plovák**|Představuje typ **float**. Pokud hodnota typu **Double** nemůže být reprezentována přesně jako **float**, dojde ke ztrátě přesnosti. Je-li hodnota příliš velká, aby byla reprezentována jako **float**, výsledek není definován.|
 |**double**|**Long Double**|Hodnota **Long Double** je považována za **dvojitou**hodnotu.|
 
 Převody z **dlouhého typu Double** sledují stejnou metodu jako převody z **Double**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

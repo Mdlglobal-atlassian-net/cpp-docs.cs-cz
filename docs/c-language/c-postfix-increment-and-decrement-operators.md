@@ -15,23 +15,23 @@ ms.locfileid: "62325572"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operátory přírůstku a snížení přípony jazyka C
 
-Operandy Příponové přírůstek a snížení operátory jsou Skalární typy, které jsou upravitelné l hodnoty.
+Operandy operátorů přírůstku a snížení přípon jsou skalární typy, které lze upravovat jako hodnoty l.
 
 ## <a name="syntax"></a>Syntaxe
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+*výraz přípony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **--**
 
-Výsledek přípony zvýšení nebo snížení operace je hodnota operandu. Po získání výsledku, hodnota operandu je zvýšena (nebo snížen). Následující kód znázorňuje příponový operátor Inkrementace.
+Výsledkem operace zvýšení nebo snížení přípony je hodnota operandu. Po získání výsledku je hodnota operandu zvýšena (nebo snížena). Následující kód ilustruje operátor přírůstku přípony.
 
 ```
 if( var++ > 0 )
     *p++ = *q++;
 ```
 
-V tomto příkladu je proměnná `var` má v porovnání s 0, bude zvýšen. Pokud `var` byl pozitivní před se zvýší, dalšího příkazu. Nejprve hodnotu objektu, na které odkazuje `q` je přiřazena k objektu, na které odkazuje `p`. Potom `q` a `p` jsou zvětšeny.
+V tomto příkladu je proměnná `var` porovnána s 0 a pak zvýšena. Pokud `var` bylo před zvýšením kladné, je proveden další příkaz. Nejprve hodnota objektu, na kterou `q` ukazuje, je přiřazena objektu, na který odkazuje. `p` `q` Pak `p` se zvýší.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátory přírůstku a snížení přípony: ++ a --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)
+[Operátory přírůstku a snížení přípony: + + a--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

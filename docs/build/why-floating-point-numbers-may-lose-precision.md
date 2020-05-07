@@ -25,7 +25,7 @@ Toto chování je výsledkem jedné z následujících akcí:
 
 Aby bylo možné chování vyřešit, většina programátorů buď zajistěte, aby byla hodnota větší nebo menší, než je potřeba, nebo získají a používají binární kódované číslo (BCD), které bude uchovávat přesnost.
 
-Binární reprezentace hodnot s plovoucí desetinnou čárkou má vliv na přesnost a přesnost výpočtů s plovoucí desetinnou čárkou. Microsoft vizuálů C++ používá [formát s plovoucí desetinnou čárkou standardu IEEE](ieee-floating-point-representation.md).
+Binární reprezentace hodnot s plovoucí desetinnou čárkou má vliv na přesnost a přesnost výpočtů s plovoucí desetinnou čárkou. Microsoft Visual C++ používá [formát s plovoucí desetinnou čárkou standardu IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Příklad
 
@@ -62,6 +62,6 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 Pro EPSILON můžete použít konstanty FLT_EPSILON, které jsou definovány pro typ float as 1.192092896 e-07F nebo DBL_EPSILON, který je definován pro Double AS 2.2204460492503131 e-016. Pro tyto konstanty musíte zahrnout float. h. Tyto konstanty jsou definovány jako nejmenší kladné číslo x, což znamená, že x + 1,0 není rovno 1,0. Vzhledem k tomu, že se jedná o velmi malé číslo, měli byste použít uživatelsky definovanou toleranci pro výpočty zahrnující velmi velká čísla.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace kódu](optimizing-your-code.md)

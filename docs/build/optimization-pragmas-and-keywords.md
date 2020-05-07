@@ -15,7 +15,7 @@ ms.locfileid: "80169796"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Optimalizace pragmas a klíčových slov
 
-Některá klíčová slova a direktivy pragma, které používáte v C++ kódu jazyka C nebo kódu, mají vliv na optimalizaci:
+Některá klíčová slova a direktivy pragma, které používáte v kódu jazyka C nebo C++, mají vliv na optimalizaci:
 
 - [__asm](../assembler/inline/asm.md)
 

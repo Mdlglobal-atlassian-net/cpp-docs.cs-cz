@@ -11,17 +11,17 @@ ms.locfileid: "64343127"
 ---
 # <a name="range-of-integer-values"></a>Rozsah hodnot typu Integer
 
-**ANSI 3.1.2.5** reprezentace a sady hodnot z různých typů celých čísel
+**3.1.2.5 ANSI** Reprezentace a sady hodnot různých typů celých čísel
 
-Celých čísel obsahovat 32 bitů (čtyř bajtů). Celá čísla se znaménkem jsou reprezentována ve tvaru dvojkového doplňku. Nejvýznamnější bit uchovává znaménko: 1 pro záporné, 0 pro kladné a nulu. Hodnoty jsou uvedeny níže:
+Celá čísla obsahují 32 bitů (čtyři bajty). Celá čísla se znaménkem jsou reprezentována ve tvaru dvojkového doplňku. Nejvýznamnější bit uchovává znaménko: 1 pro záporné, 0 pro kladné a nulu. Hodnoty jsou uvedeny níže:
 
-|Type|Minimální a maximální|
+|Typ|Minimum a maximum|
 |----------|-------------------------|
-|**short bez znaménka**|0 až 65535.|
+|**unsigned short**|0 až 65535|
 |`signed short`|-32768 až 32767|
-|`unsigned long`|0 na 4294967295|
-|**podepsané dlouho**|-2147483648 do 2147483647.|
+|`unsigned long`|0 až 4294967295|
+|**Podepsáno Long**|-2147483648 až 2147483647|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Celá čísla](../c-language/integers.md)

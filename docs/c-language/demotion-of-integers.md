@@ -13,9 +13,9 @@ ms.locfileid: "62234402"
 ---
 # <a name="demotion-of-integers"></a>Degradace celých čísel
 
-**ANSI 3.2.1.2** výsledek převodu celého čísla na kratší celé číslo se znaménkem nebo výsledek převodu celé číslo bez znaménka na celé číslo se znaménkem stejné délky, pokud hodnota nemůže být reprezentovaná
+**3.2.1.2 ANSI** Výsledek převodu celého čísla na kratší celé číslo se znaménkem nebo výsledek převodu unsigned integer na celé číslo se znaménkem stejné délky, pokud hodnotu nelze reprezentovat
 
-Při **dlouhé** celé číslo přetypováno na **krátké**, nebo **krátký** přetypováno na `char`, jsou zachovány nejméně významné bajty.
+Když je **dlouhé** celé číslo přetypování na typ **short**nebo je **krátká** hodnota přetypování na `char`, jsou zachovány nejméně významné bajty.
 
 Například tento řádek
 
@@ -31,8 +31,8 @@ char y = (char)0x1234;
 
 přiřadí hodnotu 0x34 do proměnné `y`.
 
-Když jsou proměnné se znaménkem převedeny na proměnné bez znaménka a naopak, zůstanou bitové vzory stejné. Například přetypování -2 (0xFE) na hodnotu bez znaménka vrátí hodnotu 254 (také 0xFE).
+Když jsou proměnné se znaménkem převedeny na proměnné bez znaménka a naopak, zůstanou bitové vzory stejné. Například přetypování-2 (0xFE) na hodnotu bez znaménka vrací 254 (také 0xFE).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Celá čísla](../c-language/integers.md)

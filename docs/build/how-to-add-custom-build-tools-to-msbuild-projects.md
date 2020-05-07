@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild'
+title: 'Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
@@ -11,19 +11,19 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220715"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild
 
-Pro vlastní nástroj sestavení je definovaný uživatelem, příkazového řádku nástroj, který je přidružený k konkrétní soubor.
+Vlastní nástroj sestavení je uživatelsky definovaný nástroj příkazového řádku, který je přidružen ke konkrétnímu souboru.
 
-Pro konkrétní soubor zadejte v souboru projektu (.vcxproj) příkazový řádek pro spuštění, jakékoli další vstupní nebo výstupní soubory a zprávy pro zobrazení. Pokud **MSBuild** určí, že výstupní soubory jsou aktuální s ohledem na vstupní soubory, zobrazí zprávu a spustí nástroj příkazového řádku.
+Pro konkrétní soubor zadejte do souboru projektu (. vcxproj) příkazový řádek, který se má spustit, všechny další vstupní nebo výstupní soubory a zprávu, která se má zobrazit. Pokud nástroj **MSBuild** zjistí, že vaše výstupní soubory jsou bez ohledu na vstupní soubory, zobrazí zprávu a spustí nástroj příkazového řádku.
 
-Chcete-li určit, kdy vlastní nástroj sestavení spustí, použít jeden nebo oba `CustomBuildBeforeTargets` a `CustomBuildAfterTargets` elementů XML v souboru projektu. Například můžete určit, že vaše vlastní nástroj sestavení spouštět v kompilátoru MIDL a kompilátor C/C++. Zadejte `CustomBuildBeforeTargets` elementu, chcete-li spustit nástroj před spuštěním konkrétnímu cíli; `CustomBuildAfterTargets` elementu, chcete-li spustit nástroj po konkrétní cílový; nebo oba prvky ke spuštění nástroje mezi provádění dva cíle. Pokud není zadán žádný element, vaše vlastní nástroj sestavení spustí ve výchozím umístění, která je před **MIDL** cíl.
+Chcete-li určit, kdy se vlastní nástroj sestavení spustí, použijte jeden nebo `CustomBuildBeforeTargets` oba `CustomBuildAfterTargets` elementy XML v souboru projektu. Například můžete určit, že vlastní nástroj sestavení je spuštěn po kompilátoru MIDL a před kompilátorem jazyka C/C++. Určete `CustomBuildBeforeTargets` prvek pro spuštění nástroje před konkrétním cílovým spuštěním; `CustomBuildAfterTargets` element pro spuštění nástroje po určitém cíli; nebo oba elementy ke spuštění nástroje mezi spuštěním dvou cílů. Pokud není zadán žádný element, vlastní nástroj sestavení se spustí ve výchozím umístění, které je před cílem **MIDL** .
 
-Vlastní sestavovací nástroje a vlastní kroky sestavení sdílet informace uvedené v `CustomBuildBeforeTargets` a `CustomBuildAfterTargets` elementů XML. Zadejte tyto cíle jednou v souboru projektu.
+Vlastní kroky sestavení a nástroje pro vlastní sestavení sdílejí informace zadané v prvcích `CustomBuildBeforeTargets` XML `CustomBuildAfterTargets` a. Zadejte tyto cíle v souboru projektu v jednom okamžiku.
 
-### <a name="to-add-a-custom-build-tool"></a>Chcete-li přidat vlastní nástroj sestavení
+### <a name="to-add-a-custom-build-tool"></a>Přidání vlastního nástroje sestavení
 
-1. Přidejte skupinu položek do souboru projektu a přidání položky pro každý vstupní soubor. Zadejte příkaz, další vstupy, výstupy a zprávu jako metadata položky, jak je znázorněno zde. Tento příklad předpokládá, že soubor "li Tento soubor" existuje ve stejném adresáři jako váš projekt.
+1. Přidejte skupinu položek do souboru projektu a přidejte položku pro každý vstupní soubor. Zadejte příkaz, další vstupy, výstupy a zprávy jako metadata položky, jak je znázorněno zde. V tomto příkladu se předpokládá, že soubor "FAQ. txt" existuje ve stejném adresáři jako váš projekt.
 
     ```
     <ItemGroup>
@@ -35,9 +35,9 @@ Vlastní sestavovací nástroje a vlastní kroky sestavení sdílet informace uv
     </ItemGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Chcete-li definovat, kdy v buildu se spustí vlastní sestavovací nástroje
+### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Chcete-li definovat, kde v sestavení budou spouštěny vlastní nástroje sestavení
 
-1. Přidejte následující skupiny vlastností do souboru projektu. Je nutné zadat alespoň jeden z cílů, ale druhá můžete vynechat, pokud vás zajímá jenom tím, že vaše krok sestavení spustit před (nebo po) konkrétnímu cíli. V tomto příkladu se provádí vlastní krok po kompilaci, ale před propojením.
+1. Přidejte do souboru projektu následující skupinu vlastností. Je nutné zadat alespoň jeden z cílů, ale pokud chcete, aby se váš krok sestavení prováděl před (nebo po) konkrétním cílem, můžete ho vynechat. Tento příklad provede vlastní krok po kompilaci, ale před propojením.
 
     ```
     <PropertyGroup>
@@ -46,8 +46,8 @@ Vlastní sestavovací nástroje a vlastní kroky sestavení sdílet informace uv
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Návod: Vytvoření projektu C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Návod: vytvoření projektu jazyka C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Postupy: Použití událostí sestavení v projektech MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

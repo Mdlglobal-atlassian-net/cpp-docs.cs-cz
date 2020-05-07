@@ -22,21 +22,21 @@ ms.locfileid: "62325764"
 Kompilátor vytvoří „obory názvů“ pro rozlišení mezi identifikátory použitými pro různé druhy položek. Názvy v rámci každého oboru názvů musejí být jedinečné, aby nedošlo ke konfliktu, ale stejný název se může objevit ve více než jednom oboru názvů. To znamená, že stejný identifikátor lze použít pro dvě nebo více různých položek za předpokladu, že se položky nacházejí v různých oborech názvů. Kompilátor může rozpoznat odkazy na základě syntaktického kontextu identifikátoru v programu.
 
 > [!NOTE]
-> Nezaměňujte omezený pojem jazyka C oboru názvů s funkcí „oboru názvů“ jazyka C++. Zobrazit [obory názvů](../cpp/namespaces-cpp.md) v referenci jazyka C++ pro další informace.
+> Nezaměňujte omezený pojem jazyka C oboru názvů s funkcí „oboru názvů“ jazyka C++. Další informace najdete v tématu [obory názvů](../cpp/namespaces-cpp.md) v referenční příručce jazyka C++.
 
 Seznam popisuje obory názvů používané v jazyce C.
 
-Popisky příkazů pojmenované popisků příkazů jsou součástí příkazů. Definice popisků příkazů jsou vždy následovány dvojtečkou, ale nejsou součástí **případ** popisky. Použití popisků příkazů bezprostředně následuje po klíčovém slovu **goto**. Popisky příkazů se nemusejí lišit od jiných názvů nebo od názvů popisků v jiných funkcích.
+Popisky příkazů pojmenované příkazy jsou součástí příkazů. Definice popisků příkazů jsou vždycky následovány dvojtečkou, ale nejsou součástí popisků **case** . Použití popisků příkazů vždy následuje po klíčovém slovu **goto**. Popisky příkazů se nemusejí lišit od jiných názvů nebo od názvů popisků v jiných funkcích.
 
-Značky struktury, sjednocení a výčtu tyto značky jsou součástí struktury, sjednocení a výčtu specifikátory typu a, pokud jsou k dispozici, bezprostředně následují za vyhrazenými slovy **struktura**, **sjednocení**, nebo **výčtu**. Názvy značek musejí být odlišné od všech ostatních značek struktur, výčtu nebo sjednocení se stejnou viditelností.
+Značky struktury, sjednocení a výčtu: tyto značky jsou součástí specifikátoru typu struktury, sjednocení a výčtu, a pokud jsou k dispozici, vždy bezprostředně postupujte podle **struktury**vyhrazených slov, **sjednocení**nebo **výčtu**. Názvy značek musejí být odlišné od všech ostatních značek struktur, výčtu nebo sjednocení se stejnou viditelností.
 
-V oborech názvů přidružených každého typu struktury a sjednocení jsou přidělovány členové struktur nebo sjednocení názvy členů. To znamená, že stejný identifikátor může být názvem součásti v libovolném počtu struktur nebo sjednocení současně. Definice názvů součástí se vždy objevují v rámci typů specifikátorů struktury nebo sjednocení. Použití názvů součásti vždy bezprostředně následuje po operátorů výběru členů (**->** a **.**). Název člena musí být jedinečný v rámci struktury nebo sjednocení, ale nemusí se lišit od jiných názvů v programu, včetně názvů členů různých struktur a sjednocení, případně názvu struktury samotné.
+Členy struktur nebo názvů členů sjednocení jsou přidělovány v názvových prostorech přidružených k jednotlivým typům struktury a sjednocení. To znamená, že stejný identifikátor může být názvem součásti v libovolném počtu struktur nebo sjednocení současně. Definice názvů součástí se vždy objevují v rámci typů specifikátorů struktury nebo sjednocení. Použití názvů komponent vždy následuje po operátorech výběru členů (**->** a **.**). Název člena musí být jedinečný v rámci struktury nebo sjednocení, ale nemusí se lišit od jiných názvů v programu, včetně názvů členů různých struktur a sjednocení, případně názvu struktury samotné.
 
-Běžné identifikátory všechny další názvy patří do oboru názvů, který obsahuje proměnné, funkce (včetně formálních parametrů a lokálních proměnných) a konstanty výčtu. Názvy identifikátorů mají vnořenou viditelnost, takže je možné upravit je v rámci bloků.
+Běžné identifikátory všechny ostatní názvy spadají do oboru názvů, který obsahuje proměnné, funkce (včetně formálních parametrů a místních proměnných) a konstanty výčtu. Názvy identifikátorů mají vnořenou viditelnost, takže je možné upravit je v rámci bloků.
 
-Názvy typu TypeDef názvy typu Typedef nelze použít jako identifikátory ve stejném oboru.
+Definice typedef názvy typedef nelze použít jako identifikátory ve stejném oboru.
 
-Protože jsou například značky struktur, členové struktur a názvy proměnných ve třech různých oborech názvů, nedochází ke konfliktu tří různých položek s názvem `student`. Kontext každé položky umožňuje správnou interpretaci pro každý výskyt položky `student` v programu. (Další informace o strukturách naleznete v tématu [deklarace struktur](../c-language/structure-declarations.md).)
+Protože jsou například značky struktur, členové struktur a názvy proměnných ve třech různých oborech názvů, nedochází ke konfliktu tří různých položek s názvem `student`. Kontext každé položky umožňuje správnou interpretaci pro každý výskyt položky `student` v programu. (Informace o strukturách naleznete v tématu [deklarace struktury](../c-language/structure-declarations.md).)
 
 ```C
 struct student {
@@ -46,8 +46,8 @@ struct student {
    } student;
 ```
 
-Když `student` se zobrazí po **struktura** – klíčové slovo, ji kompilátor rozpozná jako značku struktury. Když `student` se zobrazí po operátoru výběru členů (**->** nebo **.**), odkazuje název na člena struktury. V jiných kontextech odkazuje položka `student` na proměnnou struktury. Přetížení oboru názvů značek se však nedoporučuje, protože zakrývá význam.
+Když `student` se zobrazí po klíčovém slově **struct** , kompilátor ho rozpoznává jako značku struktury. Když `student` se zobrazí po operátoru výběru členů (**->** nebo **.**), název odkazuje na člen struktury. V jiných kontextech odkazuje položka `student` na proměnnou struktury. Přetížení oboru názvů značek se však nedoporučuje, protože zakrývá význam.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktura programu](../c-language/program-structure.md)

@@ -17,25 +17,25 @@ ms.locfileid: "65220637"
 ---
 # <a name="importing-and-exporting"></a>Import a export
 
-Chcete-li import veřejných symbolů do aplikace nebo export funkcí z knihovny DLL pomocí dvou metod:
+Můžete importovat veřejné symboly do aplikace nebo exportovat funkce z knihovny DLL pomocí dvou metod:
 
-- Při sestavování knihovny DLL pomocí souboru modulu definice (.def)
+- Při sestavování knihovny DLL použít soubor definice modulu (. def)
 
-- Pomocí klíčových slov **__declspec(dllimport)** nebo **__declspec(dllexport)** v definici funkce v hlavní aplikaci
+- Použijte klíčová slova **__declspec (dllimport)** nebo **__declspec (dllexport)** v definici funkce v hlavní aplikaci.
 
-## <a name="using-a-def-file"></a>Pomocí souboru .def
+## <a name="using-a-def-file"></a>Použití souboru. def
 
-Soubor definice modulu (.def) je textový soubor obsahující jeden nebo více příkazů modulu, které popisují různé atributy knihovny DLL. Pokud nepoužijete **__declspec(dllimport)** nebo **__declspec(dllexport)** pro export funkcí knihovny DLL, pak vyžaduje knihovna DLL .def souboru.
+Soubor definice modulu (. def) je textový soubor obsahující jeden nebo více příkazů modulu, které popisují různé atributy knihovny DLL. Pokud nepoužíváte **__declspec (dllimport)** nebo **__declspec (dllexport)** k exportu funkcí knihovny DLL, knihovna DLL vyžaduje soubor. def.
 
-Pomocí souborů .def k [import do aplikace](importing-using-def-files.md) nebo [export z knihovny DLL](exporting-from-a-dll-using-def-files.md).
+Soubory. def můžete použít pro [Import do aplikace](importing-using-def-files.md) nebo pro [Export z knihovny DLL](exporting-from-a-dll-using-def-files.md).
 
-## <a name="using-declspec"></a>Pomocí __declspec
+## <a name="using-__declspec"></a>Použití __declspec
 
-Není potřeba použít **__declspec(dllimport)** váš kód mohl zkompilovat správně, ale to umožňuje kompilátoru generovat lepší kód. Kompilátor je schopen vygenerovat lepší kód, protože ho můžete určit, zda funkce existuje v knihovně DLL nebo Ne, což umožňuje kompilátoru vytvořit kód, který přeskočí určitou úroveň dereference, který bude obvykle k dispozici ve volání funkce, která překračuje hranice knihovny DLL. Nicméně je nutné použít **__declspec(dllimport)** import proměnné používané v knihovně DLL.
+Pro správné kompilování kódu není nutné použít **__declspec (dllimport)** , ale v takovém případě umožňuje kompilátoru generovat lepší kód. Kompilátor je schopen generovat lepší kód, protože může určit, zda funkce existuje v knihovně DLL, nebo ne, což umožňuje kompilátoru vytvořit kód, který přeskočí úroveň dereference, která by obvykle existovala ve volání funkce, které překračuje hranice knihovny DLL. Je však nutné použít **__declspec (dllimport)** pro import proměnných používaných v knihovně DLL.
 
-Pomocí části správné .def souboru EXPORTŮ **__declspec(dllexport)** se nevyžaduje. **__declspec(dllexport)** byl přidán do poskytují snadný způsob, jak exportovat funkce ze souboru .exe nebo .dll bez použití .def souboru.
+Se správným oddílem pro EXPORTy souborů. def není **__declspec (dllexport)** vyžadován. byl přidán **__declspec (dllexport)** , který poskytuje snadný způsob exportu funkcí ze souboru. exe nebo. dll bez použití souboru. def.
 
-Ve formátu přenosného spustitelného souboru Win32 je určená k minimalizaci počtu stránek, které musí být dotčená opravit importy. K tomu, umístí všechny adresy import pro libovolné aplikace na jednom místě názvem tabulky importu adres. To umožňuje upravovat pouze jednu nebo dvě stránky při přístupu k těmto importy zavaděči.
+Formát přenositelného spustitelného souboru Win32 je navržený tak, aby minimalizoval počet stránek, které je potřeba napravit při opravě importu. Chcete-li to provést, umístí všechny adresy pro import každého programu na jednom místě, které se nazývá tabulka importních adres. To umožňuje zavaděči při přístupu k těmto importům upravovat pouze jednu nebo dvě stránky.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
@@ -43,6 +43,6 @@ Ve formátu přenosného spustitelného souboru Win32 je určená k minimalizaci
 
 - [Export z knihovny DLL](exporting-from-a-dll.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

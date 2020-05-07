@@ -17,11 +17,11 @@ ms.locfileid: "69500269"
 ---
 # <a name="thread-local-storage"></a>Úložiště Thread Local
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Místní úložiště vláken (TLS) je mechanismus, kterým každé vlákno v daném vícevláknovém procesu přiděluje úložiště pro data specifická pro vlákno. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplnou diskuzi o vláknech naleznete v tématu [procesy a vlákna](/windows/win32/ProcThread/processes-and-threads) v Windows SDK.
 
-Jazyk Microsoft C zahrnuje rozšířený atribut třídy úložiště, který se používá s klíčovým slovem __declspec k deklaraci thread local proměnné. Například následující kód deklaruje celočíselnou thread local proměnnou a inicializuje ji hodnotou:
+Jazyk Microsoft C zahrnuje rozšířený atribut třídy úložiště, který se používá s klíčovým slovem __declspec k deklarování thread local proměnné. Například následující kód deklaruje celočíselnou thread local proměnnou a inicializuje ji hodnotou:
 
 ```
 __declspec( thread ) int tls_i = 1;
@@ -86,12 +86,12 @@ Při deklaraci staticky vázaných thread local proměnných je nutné dodržova
 
    Všimněte si, že výraz sizeof obsahující proměnnou, která je inicializována, nepředstavuje odkaz sám na sebe a je povolen.
 
-- Použití [](../build/reference/linker-support-for-delay-loaded-dlls.md)  **\_ declspec(thread)můžekolidovatsopožděnýmnačítáním\_** importů knihoven DLL.
+- ** \_Použití \_declspec (thread)** může kolidovat s [opožděným načítáním](../build/reference/linker-support-for-delay-loaded-dlls.md) importů knihoven DLL.
 
 Další informace o použití atributu thread naleznete v tématu [Multithreading – témata](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozšířené atributy třídy úložiště jazyka C](../c-language/c-extended-storage-class-attributes.md)

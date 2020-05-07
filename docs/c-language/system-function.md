@@ -13,14 +13,14 @@ ms.locfileid: "62345120"
 ---
 # <a name="system-function"></a>system – funkce
 
-**ANSI 4.10.4.5** obsah a režim spouštění řetězce funkcí **systému** – funkce
+**4.10.4.5 ANSI** Obsah a režim provádění řetězce funkcí **System**
 
-**Systému** vnitřní příkaz operačního systému, provede funkce nebo. SOUBOR EXE, COM (. CMD v systému Windows NT) nebo. Soubor BAT z programu v jazyce C, nikoli z příkazového řádku.
+**Systémová** funkce spustí interní příkaz operačního systému nebo. EXE,. COM (. CMD ve Windows NT) nebo. Soubor BAT v rámci programu jazyka C, nikoli z příkazového řádku.
 
 Funkce system nalezne překladač příkazu, kterým je obvykle soubor CMD.EXE v operačním systému Windows NT nebo COMMAND.COM v systému Windows. Funkce system poté předá řetězec argumentu překladači příkazu.
 
-Další informace najdete v tématu [systému, _wsystem –](../c-runtime-library/reference/system-wsystem.md).
+Další informace najdete v tématu [system _wsystem](../c-runtime-library/reference/system-wsystem.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

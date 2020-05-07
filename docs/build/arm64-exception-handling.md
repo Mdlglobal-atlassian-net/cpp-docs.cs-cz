@@ -55,9 +55,9 @@ Tyto předpoklady jsou provedeny v popisu zpracování výjimek:
 
 ![rozložení rámce zásobníku](media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
 
-V případě funkcí zřetězených podle rámců lze dvojici FP a LR uložit na libovolné místo v oblasti místní proměnné v závislosti na optimalizaci optimalizace. Cílem je maximalizovat počet lokálních hodnot, které mohou být dostupné jedinou instrukcí na základě ukazatele na rámec (x29) nebo ukazatel zásobníku (SP). U `alloca`ch funkcí však musí být zřetězena a x29 musí ukazovat na dolní část zásobníku. Aby bylo možné zajistit lepší pokrytí v rámci adresování, je možné nestálé oblasti uložení registru umístit v horní části zásobníku místní oblasti. Tady jsou příklady, které ilustrují několik nejúčinnějších sekvencí prologu. V zájmu přehlednosti a lepšího prostředí mezipaměti je pořadí ukládání volaných a uložených registrů ve všech kanonických protokolech v pořadí "rostoucího". `#framesz` níže představuje velikost celého zásobníku (kromě oblasti přidělení). `#localsz` a `#outsz` si poznamenejte velikost místní oblasti (včetně oblasti ukládání pro \<x29, dvojici >) a velikosti odchozího parametru v uvedeném pořadí.
+V případě funkcí zřetězených podle rámců lze dvojici FP a LR uložit na libovolné místo v oblasti místní proměnné v závislosti na optimalizaci optimalizace. Cílem je maximalizovat počet lokálních hodnot, které mohou být dostupné jedinou instrukcí na základě ukazatele na rámec (x29) nebo ukazatel zásobníku (SP). Pro `alloca` funkce ale musí být zřetězené a x29 musí ukazovat na dolní část zásobníku. Aby bylo možné zajistit lepší pokrytí v rámci adresování, je možné nestálé oblasti uložení registru umístit v horní části zásobníku místní oblasti. Tady jsou příklady, které ilustrují několik nejúčinnějších sekvencí prologu. V zájmu přehlednosti a lepšího prostředí mezipaměti je pořadí ukládání volaných a uložených registrů ve všech kanonických protokolech v pořadí "rostoucího". `#framesz`Níže představuje velikost celého zásobníku (kromě oblasti přidělení). `#localsz`a `#outsz` Poznamenejte velikost místní oblasti (včetně oblasti ukládání pro \<x29, dvojici> LR) a velikosti odchozího parametru v uvedeném pořadí.
 
-1. Zřetězené #localsz \<= 512
+1. Zřetězené, #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ V případě funkcí zřetězených podle rámců lze dvojici FP a LR uložit na
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Všechna místní prostředí jsou k dispozici na základě SP. \<x29, LR > odkazuje na předchozí snímek. Pro velikost rámečku \<= 512, "sub SP,..." může být optimalizována, pokud je regs uložená oblast přesunuta do dolní části zásobníku. Nevýhodou je, že se neshoduje s ostatními rozloženími a uložená Regs se přijímají do rozsahu pro režim párování regs a předzálohovacího adresování.
+   Všechna místní prostředí jsou k dispozici na základě SP. \<x29, LR> odkazuje na předchozí snímek. Pro velikost \<rámce = 512, "sub SP,..." může být optimalizována, pokud je regs uložená oblast přesunuta do dolní části zásobníku. Nevýhodou je, že se neshoduje s ostatními rozloženími a uložená Regs se přijímají do rozsahu pro režim párování regs a předzálohovacího adresování.
 
 1. Nezřetězené funkce, které nejsou na list (LR se ukládají do uložené oblasti int)
 
@@ -128,11 +128,11 @@ V případě funkcí zřetězených podle rámců lze dvojici FP a LR uložit na
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* přidělení oblasti pro uložení není přeloženo do STP, protože předem indexované reg-LR STP nelze reprezentovat pomocí unwind kódů.
+   \*Přidělení oblasti pro uložení v registru není přeloženo do STP, protože předem indexované reg-LR STP nelze reprezentovat pomocí unwind kódů.
 
-   Všechna místní prostředí jsou k dispozici na základě SP. \<x29 > odkazuje na předchozí snímek.
+   Všechna místní prostředí jsou k dispozici na základě SP. \<x29> odkazuje na předchozí snímek.
 
-1. Zřetězené #framesz \<= 512, #outsz = 0
+1. Zřetězené, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -286,32 +286,32 @@ Unwind kódy jsou zakódovány podle následující tabulky. Všechny unwind kó
 
 |Unwind kód|Bity a interpretace|
 |-|-|
-|`alloc_s`|000xxxxx: přidělte malým zásobníkům velikost \< 512 (2 ^ 5 × 16).|
-|`save_r19r20_x`|    001zzzzz: Save \<x19, x20 > dvojici v `[sp-#Z*8]!`, předem indexovaný posun > =-248 |
-|`save_fplr`|        01zzzzzz: Save \<x29, LR > dvojici na `[sp+#Z*8]`, posun \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Save \<x29, LR > dvojici v `[sp-(#Z+1)*8]!`, předem indexovaný posun > =-512 |
-|`alloc_m`|        11000xxx'xxxxxxxx: přidělte velké zásobníky o velikosti \< 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: Uložit dvojici x (19 + #X) na `[sp+#Z*8]`, posun \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: Uložit dvojici x (19 + #X) při `[sp-(#Z+1)*8]!`, předem indexovaný posun > =-512 |
-|`save_reg`|        110100xx'xxzzzzzz: Save x (19 + #X) při `[sp+#Z*8]`, posun \<= 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: Save x (19 + #X) při `[sp-(#Z+1)*8]!`, předem indexovaný posun > =-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz: Save pár \<x (19 + 2 * #X), LR > na `[sp+#Z*8]`, offset \<= 504 |
-|`save_fregp`|        1101100x'xxzzzzzz: Uložit pár d (8 + #X) na `[sp+#Z*8]`, posun \<= 504 |
-|`save_fregp_x`|        1101101x'xxzzzzzz: Uložit pár d (8 + #X), v `[sp-(#Z+1)*8]!`předem indexovaný posun > =-512 |
-|`save_freg`|        1101110x'xxzzzzzz: uložte reg d (8 + #X) na `[sp+#Z*8]`, posun \<= 504 |
-|`save_freg_x`|        11011110 ' xxxzzzzz: Save reg d (8 + #X) on `[sp-(#Z+1)*8]!`, předem indexovaný posun > =-256 |
-|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx: přidělit velký zásobník velikosti \< 256M (2 ^ 24 * 16) |
-|`set_fp`|        11100001: nastavte x29: with: `mov x29,sp` |
-|`add_fp`|        11100010 ' xxxxxxxx: nastavte x29 na: `add x29,sp,#x*8` |
+|`alloc_s`|000xxxxx: přidělte velikost malého zásobníku \< o velikosti 512 (2 ^ 5 × 16).|
+|`save_r19r20_x`|    001zzzzz: Save \<x19, x20> dvojice na `[sp-#Z*8]!`, předem indexovaný posun >=-248 |
+|`save_fplr`|        01zzzzzz: Save \<x29, LR> dvojice na `[sp+#Z*8]`, offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Save \<x29, LR> dvojice na `[sp-(#Z+1)*8]!`, předem indexovaný posun >=-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: přidělte velkou velikost zásobníku \< o velikosti 16 KB (2 ^ 11 × 16). |
+|`save_regp`|        110010xx'xxzzzzzz: Uložit dvojici x (19 + #X) `[sp+#Z*8]`na, \<offset = 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: Save – dvojice x (19 + #X) `[sp-(#Z+1)*8]!`v, předem indexovaný posun >=-512 |
+|`save_reg`|        110100xx'xxzzzzzz: Save x (19 + #X) on `[sp+#Z*8]`, offset \<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: Save x (19 + #X) on `[sp-(#Z+1)*8]!`, předem indexovaný posun >=-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: Save – \<dvojice x (19 + 2 * #X), LR> `[sp+#Z*8]`on, \<offset = 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: Uložit pár d (8 + #X) na `[sp+#Z*8]`, offset \<= 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: Uložit pár d (8 + #X), v `[sp-(#Z+1)*8]!`, předem indexovaný posun >=-512 |
+|`save_freg`|        1101110x'xxzzzzzz: Uložit reg d (8 + #X) na `[sp+#Z*8]`, offset \<= 504 |
+|`save_freg_x`|        11011110 ' xxxzzzzz: Save reg d (8 + #X) on `[sp-(#Z+1)*8]!`, předem indexovaný posun >=-256 |
+|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx: přidělit velký zásobník s velikostí \< 256M (2 ^ 24 × 16) |
+|`set_fp`|        11100001: nastavte x29: pomocí:`mov x29,sp` |
+|`add_fp`|        11100010 ' xxxxxxxx: nastavte x29 na:`add x29,sp,#x*8` |
 |`nop`|            11100011: není požadována žádná operace unwind. |
 |`end`|            11100100: konec unwind kódu. Implikuje ret v epilogu. |
 |`end_c`|        11100101: konec unwind kódu v aktuálním zřetězeném oboru. |
 |`save_next`|        11100110: uložte následující pár nestálých registrů int nebo FP. |
-|`arithmetic(add)`|    11100111 ' 000zxxxx: Přidat soubor cookie reg (z) do LR (0 = x28, 1 = SP); `add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111 ' 001zxxxx: sub cookie reg (z) from LR (0 = x28; 1 = SP); `sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111 ' 010zxxxx: EOR LR with cookie reg (z) (0 = x28, 1 = SP); `eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111 ' 0110xxxx: simulovaná ROL LR se souborem cookie reg (x28); xip0 = záporné x28; `ror lr, xip0` |
-|`arithmetic(ror)`|    11100111 ' 100zxxxx: ROR LR with cookie reg (z) (0 = x28, 1 = SP); `ror lr, lr, reg(z)` |
+|`arithmetic(add)`|    11100111 ' 000zxxxx: Přidat soubor cookie reg (z) do LR (0 = x28, 1 = SP);`add lr, lr, reg(z)` |
+|`arithmetic(sub)`|    11100111 ' 001zxxxx: sub cookie reg (z) from LR (0 = x28; 1 = SP);`sub lr, lr, reg(z)` |
+|`arithmetic(eor)`|    11100111 ' 010zxxxx: EOR LR with cookie reg (z) (0 = x28, 1 = SP);`eor lr, lr, reg(z)` |
+|`arithmetic(rol)`|    11100111 ' 0110xxxx: simulovaná ROL LR se souborem cookie reg (x28); xip0 = záporné x28;`ror lr, xip0` |
+|`arithmetic(ror)`|    11100111 ' 100zxxxx: ROR LR with cookie reg (z) (0 = x28, 1 = SP);`ror lr, lr, reg(z)` |
 | |            11100111: xxxz----:----vyhrazena |
 | |              11101xxx: vyhrazeno pro vlastní případy zásobníku níže, které jsou vygenerovány pouze pro rutiny ASM |
 | |              11101000: vlastní zásobník pro MSFT_OP_TRAP_FRAME |
@@ -322,13 +322,13 @@ Unwind kódy jsou zakódovány podle následující tabulky. Všechny unwind kó
 
 V pokynech týkajících se velkých hodnot, které pokrývají více bajtů, jsou nejprve uloženy nejvýznamnější bity. Tento návrh umožňuje najít celkovou velikost unwind kódu v bajtech hledáním pouze prvního bajtu kódu. Vzhledem k tomu, že každý unwind kód je přesně namapován na instrukci v prologu nebo epilogu, lze vypočítat velikost prologu nebo epilogu. Můžete procházet od začátku sekvence po konec a pomocí vyhledávací tabulky nebo podobného zařízení určit, jak dlouho je odpovídající operační kód.
 
-Adresování odsazení po indexovaném indexu není v prologu povolené. Všechny rozsahy posunu (#Z) odpovídají kódování adres STP/STR s výjimkou `save_r19r20_x`, ve kterých 248 postačuje pro všechny oblasti ukládání (10 int Registry + 8 FP Registry + 8 vstupních registrů).
+Adresování odsazení po indexovaném indexu není v prologu povolené. Všechny rozsahy posunu (#Z) odpovídají kódování adres STP/STR s `save_r19r20_x`výjimkou, ve které je 248 pro všechny oblasti ukládání dostačující (10 registrů int + 8 registrů FP + 8 vstupních registrů).
 
-`save_next` musí následovat po uložení párování registru volatile int nebo FP: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`nebo jiný `save_next`. Uloží další dvojici registru v dalších 16 bajtových slotech v "rostoucím" pořadí. `save_next` odkazuje na první pár registru FP, pokud následuje `save-next`, který označuje dvojici registru Last int.
+`save_next`musí následovat po uložení párování registru typu int nebo FP: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`nebo jiného `save_next`. Uloží další dvojici registru v dalších 16 bajtových slotech v "rostoucím" pořadí. A `save_next` odkazuje na první pár registru FP, pokud následuje za tím `save-next` , že označuje poslední pár registru int.
 
-Vzhledem k tomu, že velikost pravidelných návratových instrukcí a pokynů pro skoky jsou stejné, není nutné oddělený `end` unwind kódu pro scénáře s koncovým voláním.
+Vzhledem k tomu, že velikost běžných návratových instrukcí a pokynů pro skoky jsou stejné, není `end` nutné oddělený unwind kód pro scénáře s koncovým voláním.
 
-`end_c` je navržena pro zpracování nesouvislých fragmentů funkcí pro účely optimalizace. `end_c`, která označuje konec unwind kódů v aktuálním oboru, musí následovat jiná série unwind kódu skončila skutečným `end`. Unwind kódy mezi `end_c` a `end` reprezentují operace prologu v nadřazené oblasti ("fiktivní" Prolog).  Další podrobnosti a příklady jsou popsány v následující části.
+`end_c`je navržena pro zpracování nesouvislých fragmentů funkcí pro účely optimalizace. Ta `end_c` , která označuje konec unwind kódů v aktuálním oboru, musí následovat další série unwind kódu skončila s reálným `end`. Unwind kódy mezi `end_c` a `end` reprezentují operace prologu v nadřazené oblasti ("fiktivní" Prolog).  Další podrobnosti a příklady jsou popsány v následující části.
 
 ### <a name="packed-unwind-data"></a>Zabalená unwind data
 
@@ -349,15 +349,15 @@ Pole jsou následující:
 - **Délka funkce** je 8bitové pole, které poskytuje délku celé funkce v bajtech dělenou 4. Pokud je funkce větší než 8k, je nutné místo toho použít úplný záznam. xdata.
 - **Velikost rámečku** je 8bitové pole udávající počet bajtů zásobníku, který je přidělený této funkci, dělený 16. Funkce, které přidělují více než (8k-16) bajtů zásobníku, musí používat plný záznam. xdata. Obsahuje oblast místní proměnné, oblast odchozího parametru, volaný – uložený typ int a FP a domovskou oblast, ale vyloučí oblast dynamického přidělení.
 - **CR** je 2 bitový příznak označující, jestli funkce zahrnuje další pokyny pro nastavení řetězu snímků a návratového odkazu:
-  - 00 = nezřetězená funkce, \<x29, LR dvojice > není v zásobníku uložena.
-  - 01 = nezřetězená funkce, \<LR > je uloženo v zásobníku
+  - 00 = nezřetězená funkce \<x29, dvojice LR> není v zásobníku uložena.
+  - 01 = nezřetězená funkce, \<LR> je uloženo v zásobníku
   - 10 = rezervováno;
-  - 11 = zřetězená funkce: v prologu/epilogu se používá instrukce Store/Load \<x29, LR >
+  - 11 = zřetězená funkce: v prologu/epilogu \<x29, LR>, se použije pár úložiště/zatížení.
 - **H** je 32bitový příznak označující, zda je funkce celočíselný parametr registrován (x0-120) tak, že je uloží na začátek funkce. (0 = nejedná se o domovské Registry, 1 = domácí Registry).
 - **Blast** je 4 bitové pole označující počet nestálých registrů int (x19-x28) uložených v kanonickém umístění zásobníku.
-- **RegF** je 3 bitové pole označující počet nestálých registrů FP (D8-D15) uložených v kanonickém umístění zásobníku. (RegF = 0: není uložen žádný registr FP; RegF > 0: Registry RegF + 1 FP jsou uloženy). Zabalená unwind data nelze použít pro funkci, která ukládá pouze jeden registr FP.
+- **RegF** je 3 bitové pole označující počet nestálých registrů FP (D8-D15) uložených v kanonickém umístění zásobníku. (RegF = 0: není uložen žádný registr FP; RegF>0: Registry RegF + 1 FP jsou uloženy). Zabalená unwind data nelze použít pro funkci, která ukládá pouze jeden registr FP.
 
-Kanonické protokoly, které spadají do kategorií 1, 2 (bez odchozí oblasti parametrů), 3 a 4 v oddílu výše, mohou být reprezentovány zabaleným formátem unwind.  Epilogy pro kanonické funkce následují podobně, s výjimkou **H** nemá žádný vliv, instrukce `set_fp` je vynechána a pořadí kroků a instrukcí v jednotlivých krocích se v epilogu zruší. Algoritmus pro zabalený. xdata se řídí těmito kroky, které jsou popsané v následující tabulce:
+Kanonické protokoly, které spadají do kategorií 1, 2 (bez odchozí oblasti parametrů), 3 a 4 v oddílu výše, mohou být reprezentovány zabaleným formátem unwind.  Epilogy pro kanonické funkce následují podobně, s výjimkou **H** nemá žádný vliv, `set_fp` instrukce se vynechá a pořadí kroků a instrukcí v jednotlivých krocích se v epilogu zruší. Algoritmus pro zabalený. xdata se řídí těmito kroky, které jsou popsané v následující tabulce:
 
 Krok 0: předběžná výpočet velikosti každé oblasti.
 
@@ -369,26 +369,26 @@ Krok 3: uložení volaných a uložených registrů FP
 
 Krok 4: uložte vstupní argumenty v oblasti domovského parametru.
 
-Krok 5: přidělení zbývajícího zásobníku, včetně místní oblasti, \<x29, LR > spárování a odchozí oblasti parametrů 5a odpovídá kanonickému typu 1. 5b a 5c jsou pro kanonický typ 2. hodnoty 5D a 5e jsou pro typ 3 i typ 4.
+Krok 5: přidělení zbývajícího zásobníku, včetně místní oblasti \<, x29, LR> párování a odchozí oblasti parametrů. 5a odpovídá kanonickému typu 1. 5b a 5c jsou pro kanonický typ 2. hodnoty 5D a 5e jsou pro typ 3 i typ 4.
 
 Krok #|Hodnoty příznaků|počet instrukcí|Operačních|Unwind kód
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **blast** < = 10|Blast/2 + **Blast** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **blast** <= 10|Blast/2 + **Blast** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+3|0 < **RegF** <= 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz < = 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+vkládá|**CR** = = 11 &&  # locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5C|**CR** = = 11 &&  # locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** = = 00 \| \| **CR**= = 01)  &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** = = 00 \| \| **CR**= = 01)  &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* je-li **CR** = 01 a **Blast** liché číslo, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
+\*Pokud je **CR** = = 01 a **Blast** liché číslo, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
 
-\*\* Pokud **blast** == **CR** = = 0 a **RegF** ! = 0, první STP pro plovoucí desetinnou čárku provede předsnížení.
+\*\*Pokud **Blast** == **CR** = = 0 a **RegF** ! = 0, první STP pro plovoucí desetinnou čárku provede předsnížení.
 
-\*\*\* v epilogu není k dispozici žádná instrukce odpovídající `mov x29,sp`. Zabalená unwind data se nedají použít, pokud funkce vyžaduje obnovení SP z x29.
+\*\*\*Ve epilogu neexistuje `mov x29,sp` žádná instrukce odpovídající. Zabalená unwind data se nedají použít, pokud funkce vyžaduje obnovení SP z x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Odvíjení částečných protokolů a epilogů
 
@@ -415,7 +415,7 @@ Vedle každého operačního kódu je odpovídající unwind kód popisující t
 
 Pro prolog i epilog ale jsme opustili společnou sadu unwind kódů:
 
-`set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256``end`
+`set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256`, `end`
 
 Případ epilogu je jednoduchý, protože je v normálním pořadí. Počínaje posunem 0 v rámci epilogu (který začíná na posunu 0x100 ve funkci) očekáváme, že se spustí úplná unwind sekvence, protože se ještě neudělalo žádné vyčištění. Pokud jsme našli dodržovali jednu instrukci (na posunu 2 v epilogu), můžeme úspěšně vrátit zpět vynecháním prvního kódu unwind. Tuto situaci můžeme zobecnit a předpokládat mapování 1:1 mezi opcodemi a unwind kódy. Potom pro zahájení odvíjení z instrukcí *n* ve epilogu doporučujeme přeskočit prvních *n* unwind kódů a začít z něj.
 
@@ -480,13 +480,13 @@ Typický případ fragmentů funkcí je "oddělení kódu" s tímto kompilátore
 
 1. Pouze epilogy (oblast 2: Prolog je v oblasti hostitele)
 
-   Předpokládá se, že v čase řízení přechod do této oblasti byly provedeny všechny kódy prologu. K částečnému unwindu může dojít v epilogech stejným způsobem jako v normální funkci. Tento typ oblasti nemůže být reprezentovaný pomocí Compact. pdata. V úplném záznamu. xdata může být kódovaný pomocí "fiktivního" prologu, v závorkách, který je oddělený `end_c` a `end` nepřevíjet páry kódů.  Úvodní `end_c` značí, že velikost prologu je nula. Epilog – počáteční index jednotlivých bodů epilogu na `set_fp`.
+   Předpokládá se, že v čase řízení přechod do této oblasti byly provedeny všechny kódy prologu. K částečnému unwindu může dojít v epilogech stejným způsobem jako v normální funkci. Tento typ oblasti nemůže být reprezentovaný pomocí Compact. pdata. V úplném záznamu. xdata může být kódovaný pomocí "fiktivního" prologu, který je v závorkách oddělený páry kódu `end_c` a `end` unwind.  Přední `end_c` hodnota značí, že velikost prologu je nula. Epilog – počáteční index jednotlivých bodů `set_fp`epilogu
 
    Unwind kód pro oblast 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
 1. Žádné protokoly ani epilogy (oblast 3: proprotokoly a všechny epilogy jsou v dalších fragmentech):
 
-   Formát Compact. pdata lze použít prostřednictvím příznaku nastavení = 10. S úplným záznamem. xdata, počet epilogu = 1. Unwind kód je stejný jako kód pro oblast 2 výše, ale v počátečním indexu epilogu odkazují také na `end_c`. V této oblasti kódu nebude nikdy provedena částečná operace unwind.
+   Formát Compact. pdata lze použít prostřednictvím příznaku nastavení = 10. S úplným záznamem. xdata, počet epilogu = 1. Unwind kód je stejný jako kód pro oblast 2 výše, ale v počátečním indexu epilogu odkazuje také `end_c`na. V této oblasti kódu nebude nikdy provedena částečná operace unwind.
 
 Další složitější případy fragmentů funkcí jsou "zmenšení zalamování". Kompilátor se může rozhodnout pro zpoždění uložení některých volaných uložených registrů, dokud neleží mimo prolog vstupu funkce.
 
@@ -521,9 +521,9 @@ Další složitější případy fragmentů funkcí jsou "zmenšení zalamován�
 
 V prologu oblasti 1 je prostor zásobníku předem přidělený. Uvidíte, že oblast 2 bude mít stejný unwind kód, i když se přesune mimo svoji hostitelskou funkci.
 
-Oblast 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256``end` s počátečními body indexu epilogu na `set_fp` obvyklým způsobem.
+Oblast 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`a `end` s počátečním indexem epilog `set_fp` ukazuje na obvykle.
 
-Oblast 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Vrchol zahájení indexu ukazuje na první unwind kód `save_regp 2, 224`.
+Oblast 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Epilog počáteční index ukazuje na první unwind kód `save_regp 2, 224`.
 
 ### <a name="large-functions"></a>Velké funkce
 

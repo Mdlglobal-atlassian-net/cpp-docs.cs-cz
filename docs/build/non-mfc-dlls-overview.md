@@ -1,5 +1,5 @@
 ---
-title: 'Knihovny DLL mimo MFC: Přehled'
+title: Knihovny DLL mimo MFC – přehled
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
@@ -12,7 +12,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493177"
 ---
-# <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC: Přehled
+# <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC – přehled
 
 Non-MFC DLL je knihovna DLL, která interně nepoužívá knihovnu MFC a exportované funkce v knihovně DLL mohou být volány buď pomocí knihovny MFC, nebo spustitelnými soubory, které nejsou součástí knihovny MFC. Funkce jsou obvykle exportovány z non-MFC knihovny DLL pomocí standardního rozhraní jazyka C.
 
@@ -20,7 +20,7 @@ Další informace o knihovnách DLL mimo knihovny MFC naleznete v tématu [dynam
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Návod: Vytvoření a použití dynamické knihovny DLL](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Návod: vytvoření a použití dynamické knihovny DLL](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
 - [Export z knihovny DLL](exporting-from-a-dll.md)
 
@@ -36,6 +36,6 @@ Další informace o knihovnách DLL mimo knihovny MFC naleznete v tématu [dynam
 
 - [Rozšiřující knihovny MFC DLL: Přehled](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Typy knihoven DLL](kinds-of-dlls.md)
+[Druhy knihoven DLL](kinds-of-dlls.md)

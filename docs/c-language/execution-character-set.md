@@ -17,6 +17,6 @@ ms.locfileid: "62233857"
 
 Tento obsah se často odkazuje na „znakovou sadu spuštění“. Znaková sada spuštění není nutně shodná se zdrojovou znakovou sadou použitou pro psaní programů jazyka C. Znaková sada spuštění obsahuje všechny znaky zdrojové znakové sady spolu s nulovým znakem, znakem nového řádku, backspace, horizontálního tabulátoru, vertikálního tabulátoru, návratu na začátek řádku a řídicí sekvence. V jiných implementacích se znaková sada spuštění a zdrojová znaková sada mohou lišit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konstanty znaků jazyka C](../c-language/c-character-constants.md)

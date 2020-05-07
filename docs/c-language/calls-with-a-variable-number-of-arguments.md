@@ -20,7 +20,7 @@ ms.locfileid: "82032106"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Volání s proměnlivým počtem argumentů
 
-Částečný seznam parametrů může být ukončen zápisem ze tří, čárkou následovanou třemi tečkami (**, ...**), které označují, že může být do funkce předáno více argumentů, ale nejsou o nich uvedeny žádné další informace. Na těchto argumentech se neprovádí kontrola typu. Zápis tří teček musí předcházet alespoň jeden parametr a tento zápis tří teček musí být posledním tokenem v seznamu parametrů. Bez zápisu tří teček není chování funkce definováno, pokud obdrží jiné parametry než ty deklarované v seznamu parametrů.
+Částečný seznam parametrů lze ukončit zápisem tří teček, čárkou následovanou třemi tečkami (**,...**), abyste označili, že do funkce může být předána více argumentů, ale žádné další informace o nich nejsou k dispozici. Na těchto argumentech se neprovádí kontrola typu. Zápis tří teček musí předcházet alespoň jeden parametr a tento zápis tří teček musí být posledním tokenem v seznamu parametrů. Bez zápisu tří teček není chování funkce definováno, pokud obdrží jiné parametry než ty deklarované v seznamu parametrů.
 
 Chcete-li funkci zavolat s proměnným počtem argumentů, stačí ve volání funkce zadat libovolný počet argumentů. Příkladem je funkce `printf` z knihovny modulu runtime jazyka C. Volání funkce musí obsahovat jeden argument pro každý název typu, který je deklarován v seznamu parametrů nebo v seznamu typů argumentů.
 

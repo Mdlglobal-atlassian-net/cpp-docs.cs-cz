@@ -11,14 +11,14 @@ ms.locfileid: "64343496"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Doba platnosti, rozsah, viditelnost a propojení
 
-Abyste pochopili, jak funguje programu jazyka C, musíte pochopit pravidla, které určují, jak proměnné a funkce lze v aplikaci. Několik konceptů jsou zásadní pro pochopení, tato pravidla:
+Chcete-li pochopit, jak program jazyka C funguje, je nutné pochopit pravidla, která určují, jak lze v programu použít proměnné a funkce. Pro porozumění těchto pravidel je důležité několik konceptů:
 
-- [Doba platnosti](../c-language/lifetime.md)
+- [Platné](../c-language/lifetime.md)
 
 - [Rozsah a viditelnost](../c-language/scope-and-visibility.md)
 
 - [Propojení](../c-language/linkage.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktura programu](../c-language/program-structure.md)

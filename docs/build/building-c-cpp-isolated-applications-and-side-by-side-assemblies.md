@@ -18,11 +18,11 @@ ms.locfileid: "80169874"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Sestavení izolovaných aplikací C/C++ a souběžných sestavení
 
-Visual Studio podporuje model nasazení pro klientské aplikace systému Windows na základě nápadu [izolovaných aplikací](/windows/win32/SbsCs/isolated-applications) a [souběžných sestavení](/windows/win32/SbsCs/about-side-by-side-assemblies-). Ve výchozím nastavení Visual Studio sestavuje všechny nativníC++ C/aplikace jako izolované aplikace, které používají [manifesty](/windows/win32/sbscs/manifests) k popisu jejich C++ závislostí na vizuálních knihovnách.
+Visual Studio podporuje model nasazení pro klientské aplikace systému Windows na základě nápadu [izolovaných aplikací](/windows/win32/SbsCs/isolated-applications) a [souběžných sestavení](/windows/win32/SbsCs/about-side-by-side-assemblies-). Ve výchozím nastavení Visual Studio sestaví všechny nativní aplikace C/C++ jako izolované aplikace, které používají [manifesty](/windows/win32/sbscs/manifests) k popisu jejich závislostí na Visual C++ch knihoven.
 
-Sestavení C/C++ programy jako izolované aplikace představuje řadu výhod. Například izolovaná aplikace nebude mít vliv, pokud jiné aplikace C/C++ aplikace instalují nebo odinstalují vizuální C++ knihovny. Vizuální C++ knihovny používané izolovanými aplikacemi mohou být nadále distribuovány buď v místní složce aplikace, nebo instalací do nativní mezipaměti sestavení (WinSxS). Obsluha vizuálních C++ knihoven pro již nasazené aplikace se však může zjednodušit pomocí [konfiguračního souboru vydavatele](/windows/win32/SbsCs/publisher-configuration). Model nasazení izolované aplikace usnadňuje zajištění toho, že C/C++ aplikace, které jsou spuštěny v určitém počítači, používají nejnovější verzi vizuálních C++ knihoven, ale zároveň opouští možnost pro správce systému a autory aplikací řízení explicitních vazeb verzí aplikací na jejich závislé knihovny DLL.
+Sestavování programů C/C++ jako izolovaných aplikací představuje řadu výhod. Například izolovaná aplikace není ovlivněná, pokud jiné aplikace C/C++ instalují nebo odinstalují knihovny Visual C++. Knihovny Visual C++ používané izolovanými aplikacemi mohou být nadále distribuovány buď v místní složce aplikace, nebo instalací do nativní mezipaměti sestavení (WinSxS). Obsluha Visual C++ch knihoven pro již nasazené aplikace se však může zjednodušit pomocí [konfiguračního souboru vydavatele](/windows/win32/SbsCs/publisher-configuration). Model nasazení izolovaných aplikací usnadňuje zajištění, že aplikace C/C++, které jsou spuštěny v určitém počítači, používají nejnovější verzi Visual C++ knihoven, a zároveň opouští možnost pro správce systému a autory aplikací řízení explicitních vazeb verzí aplikací na jejich závislé knihovny DLL.
 
-Tato část popisuje, jak můžete sestavit C/C++ aplikaci jako izolovanou aplikaci a zajistit, aby se váže k vizuálním C++ knihovnám pomocí manifestu. Informace v této části se primárně vztahují na nativní nebo nespravované C++ aplikace. Informace o nasazení nativních C++ aplikací vytvořených v aplikaci Visual Studio naleznete v tématu [Redistribuce vizuálních C++ souborů](../windows/redistributing-visual-cpp-files.md).
+Tato část popisuje, jak můžete sestavit aplikaci jazyka C/C++ jako izolovanou aplikaci a zajistit, aby se váže k Visual C++ knihoven pomocí manifestu. Informace v této části se týkají především nativních nebo nespravovaných aplikací v jazyce C++. Informace o nasazení nativních aplikací v jazyce C++ vytvořených v aplikaci Visual Studio naleznete v tématu [Redistribuce Visual C++ch souborů](../windows/redistributing-visual-cpp-files.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -32,9 +32,9 @@ Tato část popisuje, jak můžete sestavit C/C++ aplikaci jako izolovanou aplik
 
 [Sestavení souběžných sestavení C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Postupy: Sestavení součástí modelu COM bez registrace](how-to-build-registration-free-com-components.md)
+[Postupy: Sestavení součásti modelu COM bez registrace](how-to-build-registration-free-com-components.md)
 
-[Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Postupy: Sestavení izolované aplikace pro zpracování součástí modelu COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
 [Základní informace o generování manifestu pro programy C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 

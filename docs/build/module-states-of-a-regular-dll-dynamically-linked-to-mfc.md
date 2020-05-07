@@ -17,30 +17,30 @@ ms.locfileid: "65220580"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC
 
-Schopnost běžné knihovny MFC DLL dynamicky propojené ke knihovně MFC DLL umožňuje některé konfigurace, které jsou velmi složité. Například běžné knihovny MFC DLL a spustitelný soubor, který ji používá dynamické propojení ke knihovně MFC DLL a pro jakékoli MFC – rozšiřující knihovny DLL.
+Možnost dynamického propojení běžné knihovny MFC DLL k knihovně MFC DLL umožňuje některé konfigurace velmi složité. Například běžná knihovna MFC DLL a spustitelný soubor, který je používá, mohou být dynamicky propojeny s knihovnou MFC DLL a všemi rozšiřujícími knihovnami DLL knihovny MFC.
 
-Tato konfigurace představuje problém s ohledem na MFC globálních dat, jako je ukazatel na aktuální `CWinApp` mapování objektů a popisovače.
+Tato konfigurace představuje problém s ohledem na globální data knihovny MFC, jako je například ukazatel na aktuální `CWinApp` objekt a mapování popisovačů.
 
-Před MFC verze 4.0 tato globální data nacházejí v knihovně MFC DLL a sdílí všechny moduly v procesu. Protože každý proces pomocí Win32 DLL získá vlastní kopii dat knihovny DLL, toto schéma poskytuje snadný způsob, jak sledovat data na úrovni jednotlivého procesu. Navíc vzhledem k tomu, že AFXDLL model předpokládá, že by existovat pouze jeden `CWinApp` objektu a pouze jednu sadu zpracování mapy v procesu, tyto položky mohou být sledovány v knihovně MFC DLL.
+Před knihovnou MFC verze 4,0 tato globální data jsou uložena v samotné knihovně MFC DLL a sdílena všemi moduly v procesu. Vzhledem k tomu, že každý proces využívající Win32 DLL získá svoji vlastní kopii dat knihovny DLL, toto schéma poskytuje snadný způsob, jak sledovat data jednotlivých procesů. Vzhledem k tomu, že model AFXDLL – předpokládá, že v procesu by byl `CWinApp` pouze jeden objekt a pouze jedna sada map popisovačů, mohou být tyto položky sledovány v samotné knihovně MFC DLL.
 
-Ale možnost běžné knihovny MFC DLL dynamicky propojené ke knihovně MFC DLL, je možné mít dvě nebo více `CWinApp` objekty v procesu a také dva nebo více sad mapování. Jak knihovna MFC udržovat přehled o ty, které by měla být použita?
+Ale s možností dynamického propojení běžné knihovny MFC DLL k knihovně MFC DLL je nyní možné mít dva nebo více `CWinApp` objektů v procesu – a také dvě nebo více sad map popisovačů. Jak aplikace MFC udržuje přehled o tom, která z nich by měla používat?
 
-Řešením je poskytnout vlastní kopii těchto informací globální stav každého modulu (aplikace nebo běžné knihovny MFC DLL). Proto volání **AfxGetApp** v běžné knihovny MFC DLL vrací ukazatel na `CWinApp` objektů v knihovně DLL není ten ve spustitelném souboru. -Module této kopie globálních dat knihovny MFC se označuje jako modul stavu a je popsána v [MFC technická Poznámka: 58](../mfc/tn058-mfc-module-state-implementation.md).
+Řešením je poskytnout každému modulu (aplikaci nebo běžné knihovně MFC DLL) svou vlastní kopii těchto globálních informací o stavu. Proto volání **AfxGetApp** v běžné knihovně MFC DLL vrátí ukazatel na `CWinApp` objekt v knihovně DLL, nikoli ve spustitelném souboru. Tato kopie globálních dat knihovny MFC pro jednotlivé moduly je označována jako stav modulu a je popsána v [knihovně MFC tech Note 58](../mfc/tn058-mfc-module-state-implementation.md).
 
-Běžné proceduru okna knihovny MFC, automaticky se přepne do stavu správný modul proto není nutné si dělat starosti v libovolné obslužné rutiny zpráv, který je implementován v běžné knihovny MFC DLL. Ale když spustitelný soubor volá do běžné knihovny MFC DLL, je nutné explicitně nastavit aktuální stav modulu na jeden z knihovny DLL. Chcete-li to provést, použijte **AFX_MANAGE_STATE** – makro v každé funkci exportovaná z knihovny DLL. To se provádí tak, že přidáte následující řádek kódu na začátek funkcí exportovaných z knihovny DLL:
+Standardní procedura okna knihovny MFC automaticky přepne do správného stavu modulu, takže se o ně nemusíte starat v jakýchkoli obslužných rutinách zpráv implementovaných v běžné knihovně MFC DLL. Ale když spustitelný soubor volá do běžné knihovny MFC DLL, je nutné explicitně nastavit aktuální stav modulu na jednu pro knihovnu DLL. Chcete-li to provést, použijte makro **AFX_MANAGE_STATE** v každé funkci exportované z knihovny DLL. To se provádí přidáním následujícího řádku kódu na začátek funkcí exportovaných z knihovny DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
-- [Správa dat stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Regulární knihovny MFC DLL staticky propojené do MFC](regular-dlls-dynamically-linked-to-mfc.md)
+- [Běžné knihovny MFC DLL dynamicky propojené s knihovnou MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC – rozšiřující knihovny DLL](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Vytváření knihoven DLL jazyka C/C++ v aplikaci Visual Studio](dlls-in-visual-cpp.md)

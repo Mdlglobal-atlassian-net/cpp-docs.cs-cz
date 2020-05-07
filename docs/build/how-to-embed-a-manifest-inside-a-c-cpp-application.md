@@ -15,13 +15,13 @@ ms.locfileid: "81322971"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
 
-Doporučujeme vložit manifest aplikace nebo knihovny do konečného binárního souboru, protože to zaručuje správné chování za běhu ve většině scénářů. Ve výchozím nastavení visual studio pokusí vložit manifest při sestavení projektu. Další informace naleznete [v tématu Manifest Generation in Visual Studio](manifest-generation-in-visual-studio.md). Však pokud vytvoříte aplikaci pomocí nmake, budete muset provést některé změny makefile. Tato část ukazuje, jak změnit makefiles tak, aby automaticky vloží manifest uvnitř konečné binární.
+Doporučujeme, abyste vložili manifest vaší aplikace nebo knihovny do finálního binárního souboru, protože to garantuje správné běhové chování ve většině scénářů. Ve výchozím nastavení se Visual Studio pokusí vložit manifest při sestavení projektu. Další informace naleznete v tématu [generování manifestu v aplikaci Visual Studio](manifest-generation-in-visual-studio.md). Pokud však sestavíte aplikaci pomocí nástroje NMAKE, je nutné provést nějaké změny souboru pravidel. V této části se dozvíte, jak změnit soubory pravidel tak, aby automaticky vložily manifest do finálního binárního souboru.
 
 ## <a name="two-approaches"></a>Dva přístupy
 
 Existují dva způsoby, jak vložit manifest do aplikace nebo knihovny.
 
-- Pokud neprovádíte přírůstkové sestavení, můžete přímo vložit manifest pomocí příkazového řádku podobného následujícímu jako krok po sestavení:
+- Pokud neprovádíte přírůstkové sestavení, můžete manifest přímo vložit pomocí příkazového řádku podobného následujícímu jako krok po sestavení:
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
@@ -33,21 +33,21 @@ Existují dva způsoby, jak vložit manifest do aplikace nebo knihovny.
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   Použijte 1 pro EXE a 2 pro DLL.
+   Použijte 1 pro EXE a 2 pro knihovnu DLL.
 
-- Pokud provádíte přírůstkové sestavení, použijte následující kroky:
+- Pokud provádíte přírůstkové sestavení, použijte následující postup:
 
-  - Propojte binární soubor a vygenerujte soubor MyApp.exe.manifest.
+  - Vytvořte propojení binárního souboru, aby se vygeneroval soubor MyApp. exe. manifest.
 
   - Převeďte manifest na soubor prostředků.
 
-  - Znovu propojit (postupně) vložit prostředek manifestu do binárního souboru.
+  - Znovu propojit (přírůstkově) pro vložení prostředku manifestu do binárního souboru.
 
-Následující příklady ukazují, jak změnit makefiles začlenit obě techniky.
+Následující příklady ukazují, jak změnit soubory pravidel pro zahrnutí obou postupů.
 
-## <a name="makefiles-before"></a>Makefiles (před)
+## <a name="makefiles-before"></a>Soubory pravidel (před)
 
-Vezměme si nmake skript pro MyApp.exe, jednoduchá aplikace sestavená z jednoho souboru:
+Zvažte skript NMAKE pro MyApp. exe, jednoduchou aplikaci vytvořenou z jednoho souboru:
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Pokud tento skript je spuštěn beze změny s Visual Studio, úspěšně vytvoří MyApp.exe. Vytvoří také externí soubor manifestu MyApp.exe.manifest, pro použití operačním systémem k načtení závislých sestavení za běhu.
+Pokud se tento skript v aplikaci Visual Studio nezměnil, úspěšně vytvoří MyApp. exe. Vytvoří také externí soubor manifestu MyApp. exe. manifest, který bude použit operačním systémem k načtení závislých sestavení za běhu.
 
-Nmake skript pro MyLibrary.dll vypadá velmi podobně:
+Skript NMAKE pro MyLibrary. dll vypadá velmi podobně:
 
 ```
 # build MyLibrary.dll
@@ -92,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>Vytvořit soubory (po)
+## <a name="makefiles-after"></a>Soubory pravidel (za)
 
-Chcete-li vytvořit s vložené manifesty, musíte provést čtyři malé změny původní makefiles. Pro makefile MyApp.exe:
+Pro sestavování pomocí vložených manifestů musíte provést čtyři malé změny původních souborů pravidel. Pro soubor MyApp. exe makefile:
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Pro makefile MyLibrary.dll:
+Pro soubor pravidel MyLibrary. dll:
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Makefiles nyní obsahují dva soubory, které dělají skutečnou práci, makefile.inc a makefile.targ.inc.
+Soubory pravidel nyní obsahují dva soubory, které mají skutečnou práci, makefile. Inc a makefile. cílo. Inc.
 
-Vytvořte makefile.inc a zkopírujte do něj následující:
+Vytvořte soubor makefile. Inc a zkopírujte do něj následující:
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Nyní vytvořte **makefile.targ.inc** a zkopírujte do něj následující:
+Nyní vytvořte **soubor pravidel. cílo. Inc** a zkopírujte do něj následující:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

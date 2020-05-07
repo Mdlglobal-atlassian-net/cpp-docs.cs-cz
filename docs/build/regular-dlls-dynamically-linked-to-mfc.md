@@ -17,84 +17,84 @@ ms.locfileid: "62314998"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Běžné knihovny MFC DLL staticky propojené do MFC
 
-Knihovnu DLL, která používá knihovnu MFC interně je běžný, které knihovny MFC DLL staticky propojené do MFC a spustitelnými soubory knihovny MFC nebo knihovny non-MFC lze volat exportované funkce v knihovně DLL. Podle popisu v názvu, je tento druh knihovny DLL vytvořené pomocí knihovny DLL verze knihovny MFC (označované také jako sdílených verzí knihovny MFC). Funkce jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardních rozhraní C.
+Běžná knihovna MFC DLL dynamicky propojená s knihovnou MFC je knihovna DLL, která interně používá knihovnu MFC a exportované funkce v knihovně DLL mohou být volány spustitelnými soubory MFC nebo non-MFC. Jak název popisuje, tento druh knihovny DLL je sestaven pomocí verze knihovny MFC dynamického propojení (označované také jako sdílená verze knihovny MFC). Funkce jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardního rozhraní jazyka C.
 
-Je nutné přidat `AFX_MANAGE_STATE` – makro na začátku exportované funkce v běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC k nastavení aktuální stav modulu pro knihovnu DLL. To se provádí tak, že přidáte následující řádek kódu na začátek funkcí exportovaných z knihovny DLL:
+Je nutné přidat `AFX_MANAGE_STATE` makro na začátek všech exportovaných funkcí v běžných knihovnách MFC DLL, které dynamicky odkazují na knihovnu MFC, a nastavit tak aktuální stav modulu na jednu pro knihovnu DLL. To se provádí přidáním následujícího řádku kódu na začátek funkcí exportovaných z knihovny DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-Běžné knihovny MFC DLL staticky propojené do MFC má následující funkce:
+Běžná knihovna MFC DLL, dynamicky propojená s knihovnou MFC, má následující funkce:
 
-- Toto je nový typ knihovny DLL zavedených v aplikaci Visual C++ 4.0.
+- Toto je nový typ knihovny DLL, kterou zavádí Visual C++ 4,0.
 
-- Klientský spustitelný soubor lze zapsat v libovolném jazyce, který podporuje použití knihoven DLL (C, C++, Pascal, Visual Basic a tak dále); nemusí být aplikace knihovny MFC.
+- Spustitelný soubor klienta lze zapsat v jakémkoli jazyce, který podporuje použití knihoven DLL (C, C++, Pascal, Visual Basic a tak dále); nemusí to být aplikace MFC.
 
-- Na rozdíl od staticky propojených běžné knihovny MFC DLL tento typ knihovny DLL dynamicky propojené ke knihovně MFC DLL (označované také jako sdílená knihovna MFC DLL).
+- Na rozdíl od staticky propojené běžné knihovny MFC DLL je tento typ knihovny DLL dynamicky propojen s knihovnou MFC DLL (označuje se také jako sdílená knihovna MFC DLL).
 
-- Import knihovny MFC propojené s DLL tento typ je stejný jako ten použitý pro rozšiřující knihovny DLL MFC nebo aplikace používající knihovnu MFC DLL: MFCxx(D).lib.
+- Knihovna importu knihovny MFC propojená s tímto typem knihovny DLL je stejná jako ta, která se používá pro knihovny DLL rozšíření MFC nebo pro aplikace pomocí knihovny MFC DLL: MFCxx (D). lib.
 
-Běžné knihovny MFC DLL dynamicky propojené ke knihovně MFC mají následující požadavky:
+Běžná knihovna MFC DLL, dynamicky propojená s knihovnou MFC, má následující požadavky:
 
-- Tyto knihovny DLL se kompilují pomocí **_AFXDLL** definované, stejně jako spustitelný soubor, který je dynamicky propojené ke knihovně MFC DLL. Ale **_USRDLL** je také definováno, stejně jako běžné knihovny MFC DLL staticky propojené do MFC.
+- Tyto knihovny DLL jsou kompilovány s definovaným **_AFXDLL** , stejně jako spustitelný soubor, který je dynamicky propojen s knihovnou MFC DLL. Ale **_USRDLL** je také definováno stejně jako běžná knihovna MFC DLL, která je staticky propojena s knihovnou MFC.
 
-- Musíte vytvořit instanci tohoto typu knihovny DLL `CWinApp`-odvozené třídy.
+- Tento typ knihovny DLL musí vytvořit instanci `CWinApp`odvozené třídy.
 
-- Tento typ používá knihovnu DLL `DllMain` poskytované knihovny MFC. Umístit všechny kód inicializace knihovnu DLL `InitInstance` členské funkce a ukončovacího kódu v `ExitInstance` stejně jako v běžné aplikace knihovny MFC.
+- Tento typ knihovny DLL používá modul `DllMain` , který poskytuje knihovna MFC. Všechny inicializační kódy specifické pro DLL umístěte do `InitInstance` členské funkce a ukončovací kód v `ExitInstance` normální aplikaci MFC.
 
-Vzhledem k tomu používá tento druh knihovny DLL verze knihovny MFC, musíte explicitně nastavit aktuální stav modulu na jeden z knihovny DLL. Chcete-li to provést, použijte [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) – makro na začátku každé funkce exportovaná z knihovny DLL.
+Vzhledem k tomu, že tento druh knihovny DLL používá dynamickou knihovnu knihovny MFC, je nutné explicitně nastavit aktuální stav modulu na jednu pro knihovnu DLL. Chcete-li to provést, použijte makro [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) na začátku každé funkce exportované z knihovny DLL.
 
-regulární knihovny DLL MFC musí mít `CWinApp`-odvozené třídy a jeden objekt třídy aplikace, stejně jako aplikace knihovny MFC. Ale `CWinApp` objekt knihovny DLL nemá hlavní zprávy odeslané, stejně jako `CWinApp` objektu aplikace.
+běžné knihovny MFC DLL musí mít `CWinApp`třídu odvozenou od třídy a jeden objekt třídy aplikace, stejně jako aplikace MFC. Nicméně `CWinApp` objekt knihovny DLL nemá hlavní čerpadlo zpráv, stejně jako `CWinApp` objekt aplikace.
 
-Všimněte si, že `CWinApp::Run` mechanismus se nevztahuje na knihovnu DLL, protože aplikace vlastní hlavní pumpu zpráv. Pokud vaše knihovna DLL přináší nemodální dialogová okna, nebo má vlastní okna hlavního rámce, pumpa zpráv vaší aplikace musí volat rutinu Export knihovny DLL, která volá `CWinApp::PreTranslateMessage`.
+Všimněte si, `CWinApp::Run` že mechanismus se nevztahuje na knihovnu DLL, protože aplikace vlastní hlavní pumpu zpráv. Pokud vaše knihovna DLL obsahuje nemodální dialogová okna nebo má hlavní okno rámce vlastní, musí hlavní pumpa zpráv vaší aplikace volat rutinu exportovanou z knihovny DLL, `CWinApp::PreTranslateMessage`která volá.
 
-Umístěte všechny inicializace knihovnu DLL v `CWinApp::InitInstance` členské funkce stejně jako v běžné aplikace knihovny MFC. `CWinApp::ExitInstance` Členskou funkci vaše `CWinApp` odvozené třídy je volána z knihovny MFC k dispozici `DllMain` funkce před uvolněním knihovny DLL.
+Všechny inicializace specifické pro knihovnu DLL umístěte do `CWinApp::InitInstance` členské funkce jako v normální aplikaci knihovny MFC. `CWinApp::ExitInstance` Členská funkce `CWinApp` odvozené třídy je volána z poskytnuté `DllMain` funkce knihovny MFC před uvolněním knihovny DLL.
 
-Musíte distribuovat sdílené knihovny DLL MFCx0.dll a Msvcr*0.dll (nebo podobné soubory) s vaší aplikací.
+Sdílené knihovny DLL MFCx0. dll a MSVCR * 0. dll (nebo podobné soubory) musíte distribuovat do své aplikace.
 
-Knihovnu DLL, která je dynamicky propojené ke knihovně MFC nemůže být staticky propojena s knihovnou MFC. Odkaz aplikace na běžných knihovnách MFC DLL staticky propojené do MFC je stejně jako ostatní knihovny DLL.
+Knihovna DLL, která je dynamicky propojena s knihovnou MFC, nemůže také staticky propojit s knihovnou MFC. Aplikace odkazují na běžné knihovny MFC DLL dynamicky propojené s knihovnou MFC stejně jako jakékoli jiné knihovny DLL.
 
-Symboly jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardních rozhraní C. Deklarace funkce exportované z běžné knihovny MFC DLL vypadá přibližně takto:
+Symboly jsou obvykle exportovány z běžné knihovny MFC DLL pomocí standardního rozhraní jazyka C. Deklarace funkce exportované z běžné knihovny MFC DLL vypadá nějak takto:
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-Všechna přidělení paměti v rámci běžné knihovny MFC DLL by mělo zůstat v rámci knihovny DLL; Knihovna DLL by neměla předat do nebo přijímat volání spustitelnému souboru kterýkoli z následujících:
+Všechna přidělení paměti v rámci běžné knihovny MFC DLL by měla zůstat v rámci knihovny DLL; Knihovna DLL by neměla předávat ani přijímat volání z následujících spustitelných souborů:
 
 - ukazatelé na objekty MFC
 
-- ukazatele na paměť přidělenou v prostředí MFC
+- ukazatelé na paměť přidělenou knihovnou MFC
 
-Pokud je potřeba provádět žádnou z výše uvedených nebo pokud je potřeba předávat voláním spustitelného souboru a knihovny DLL MFC odvozené objekty, musíte sestavit rozšiřující knihovny DLL MFC.
+Pokud potřebujete provést některou z výše uvedených nebo pokud potřebujete předat objekty odvozené od knihovny MFC mezi volajícím spustitelným souborem a knihovnou DLL, je nutné sestavit rozšiřující knihovnu DLL knihovny MFC.
 
-Je bezpečné předat ukazatele na paměti, které byly přiděleny podle běhových knihoven C mezi aplikace a knihovny DLL pouze v případě, že můžete vytvořit kopii data. Nesmí odstranění nebo změna velikosti tyto ukazatele nebo použít bez vytvoření kopie paměti.
+Je bezpečné předat ukazatelům do paměti, které byly přiděleny knihovnami run-time jazyka C mezi aplikací a knihovnou DLL pouze v případě, že vytvoříte kopii dat. Nesmíte odstranit ani změnit velikost těchto ukazatelů ani je použít bez toho, aby bylo možné vytvořit kopii paměti.
 
-Při sestavování obvyklé knihovny DLL MFC, která dynamicky propojuje ke knihovně MFC, je třeba použít makra [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) pro přepnutí stavu modulu MFC správně. To se provádí tak, že přidáte následující řádek kódu na začátek funkcí exportovaných z knihovny DLL:
+Při sestavování běžné knihovny MFC DLL, která dynamicky propojuje ke knihovně MFC, je nutné použít makro [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) pro správné přepnutí stavu modulu MFC. To se provádí přidáním následujícího řádku kódu na začátek funkcí exportovaných z knihovny DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE** – makro není vhodné používat v běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC nebo v MFC – rozšiřující knihovny DLL. Další informace najdete v tématu [Správa stavu Data modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md).
+Makro **AFX_MANAGE_STATE** by nemělo být použito v běžných knihovnách MFC DLL, které staticky odkazují na knihovnu MFC nebo knihovny DLL rozšíření MFC. Další informace naleznete v tématu [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md).
 
-Příklad toho, jak zapisovat, vytvářet a využívat běžné knihovny MFC DLL, najdete v ukázce [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Další informace o běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC naleznete v části s názvem "Převod DLLScreenCap k dynamické propojení s knihovnou MFC DLL" v abstraktní pro vzorku.
+Příklad, jak napsat, sestavit a použít regulární knihovnu MFC DLL, naleznete v ukázce [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Další informace o běžných knihovnách MFC DLL, které dynamicky odkazují na knihovnu MFC, naleznete v části s názvem "převod DLLScreenCap na dynamické propojení s knihovnou MFC DLL" v abstraktu pro ukázku.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializovat obvyklé knihovny DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicializovat běžné knihovny MFC DLL](run-time-library-behavior.md#initializing-regular-dlls)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
-- [Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Stavy modulů běžné knihovny MFC DLL dynamicky propojené s knihovnou MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
-- [Správa dat stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
 - [Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v běžných knihovnách MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+- [Použití knihovny MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Typy knihoven DLL](kinds-of-dlls.md)
+[Druhy knihoven DLL](kinds-of-dlls.md)

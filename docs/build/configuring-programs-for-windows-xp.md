@@ -1,6 +1,6 @@
 ---
-title: Konfigurace programů pro systém Windows XP
-description: Jak nainstalovat a používat sady nástrojů C++ systému Windows XP v sadě Visual Studio.
+title: Konfigurace programů pro Windows XP
+description: Jak nainstalovat a používat sady nástrojů C++ Windows XP v sadě Visual Studio.
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
@@ -10,9 +10,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "79440477"
 ---
-# <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro systém Windows XP
+# <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
-Sada Visual Studio podporuje několik sad nástrojů platformy. To znamená, že je možné cílit na operační systémy a běhové knihovny, které nejsou podporovány výchozí sadou nástrojů. Například přepnutím sady nástrojů platformy můžete použít kompilátor sady Visual Studio 2017 C++ k vytváření aplikací, které cílí na systémy Windows XP a windows Server 2003. Můžete také použít starší sady nástrojů platformy k údržbě binárního kódu kompatibilního s binárním prostředím a stále využívat nejnovější funkce integrovaného vývojového prostředí (IDE) sady Visual Studio.
+Sada Visual Studio podporuje několik sad nástrojů platformy. To znamená, že je možné cílit na operační systémy a běhové knihovny, které nejsou podporovány výchozí sadou nástrojů. Například přepnutím sady nástrojů platformy můžete použít kompilátor Visual Studio 2017 C++ k vytváření aplikací, které cílí na systémy Windows XP a Windows Server 2003. Můžete také použít starší sady nástrojů platformy k údržbě binárního kódu kompatibilního s binárním prostředím a stále využívat nejnovější funkce integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
 ::: moniker range="vs-2019"
 
@@ -24,29 +24,29 @@ Sada nástrojů V142 dodaná v sadě Visual Studio 2019 nezahrnuje podporu pro v
 
 ::: moniker range="<=vs-2017"
 
-Chcete-li získat sadu nástrojů a součásti sady Visual Studio 2017 pro cílení na systémy Windows XP a Windows Server 2003, spusťte Instalační program pro Visual Studio. Při úvodní instalaci sady Visual Studio nebo při změně existující instalace se ujistěte, že je vybraná možnost **vývoj pro C++ desktopy s** úlohou. V seznamu volitelných komponent pro tuto úlohu zvolte možnost **Podpora systému Windows XP pro C++** a pak zvolte možnost **nainstalovat** nebo **Upravit**.
+Chcete-li získat sadu nástrojů a součásti sady Visual Studio 2017 pro cílení na systémy Windows XP a Windows Server 2003, spusťte Instalační program pro Visual Studio. Při úvodní instalaci sady Visual Studio nebo při změně existující instalace se ujistěte, že je vybrána možnost **vývojář pro stolní počítače s C++** . V seznamu volitelných komponent pro tuto úlohu zvolte možnost **Podpora Windows XP pro C++** a pak zvolte možnost **nainstalovat** nebo **Upravit**.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Chcete-li získat v141_xp sadu nástrojů a součásti platformy pro cílení na systémy Windows XP a Windows Server 2003, spusťte Instalační program pro Visual Studio. Při úvodní instalaci sady Visual Studio nebo při změně existující instalace se ujistěte, že je vybraná možnost **vývoj pro desktopy s C++**  úlohou. Na kartě **jednotlivé komponenty** v části **kompilátory, nástroje sestavení a moduly runtime**zvolte možnost  **C++ podpora systému Windows XP pro vs 2017 (v141) Tools \[nepoužívané]** a pak zvolte možnost **nainstalovat** nebo **Upravit**.
+Chcete-li získat v141_xp sadu nástrojů a součásti platformy pro cílení na systémy Windows XP a Windows Server 2003, spusťte Instalační program pro Visual Studio. Při počáteční instalaci sady Visual Studio nebo při změně existující instalace se ujistěte, že je vybraná možnost **vývoj pro Desktop s C++** . Na kartě **jednotlivé komponenty** v části **kompilátory, nástroje sestavení a moduly runtime**zvolte možnost **podpora C++ Windows XP pro vs 2017 (v141) Tools \[(nepoužívané)** a pak zvolte **nainstalovat** nebo **Upravit**.
 
 ::: moniker-end
 
 ## <a name="windows-xp-targeting-experience"></a>Prostředí cílení na systém Windows XP
 
-Sada nástrojů platformy Windows XP, která je součástí sady Visual Studio, je verze sady Windows 7 SDK, ale používá kompilátor sady Visual Studio 2017 C++ . Také nakonfiguruje vlastnosti projektu na příslušné výchozí hodnoty, například specifikace kompatibilního linkeru pro cílení na nižší úrovni. V systému Windows XP a Windows Server 2003 lze spustit pouze aplikace klasické pracovní plochy systému Windows, které jsou vytvořeny pomocí sady nástrojů platformy Windows XP. Tyto aplikace můžou běžet taky v novějších operačních systémech Windows.
+Sada nástrojů platformy Windows XP, která je součástí sady Visual Studio, je verze sady Windows 7 SDK, ale používá kompilátor Visual Studio 2017 C++. Také nakonfiguruje vlastnosti projektu na příslušné výchozí hodnoty, například specifikace kompatibilního linkeru pro cílení na nižší úrovni. V systému Windows XP a Windows Server 2003 lze spustit pouze aplikace klasické pracovní plochy systému Windows, které jsou vytvořeny pomocí sady nástrojů platformy Windows XP. Tyto aplikace můžou běžet taky v novějších operačních systémech Windows.
 
 ### <a name="to-target-windows-xp"></a>Cílení na systém Windows XP
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**.
 
-1. V dialogovém okně **stránky vlastností** projektu vyberte možnost **Vlastnosti konfigurace** > **Obecné**. Nastavte vlastnost **Sada nástrojů platformy** na upřednostňovanou sadu nástrojů pro systém Windows XP. Například vyberte možnost **Visual Studio 2017-Windows XP (v141_xp)** , chcete-li vytvořit kód pro systémy Windows XP a windows Server 2003 pomocí C++ kompilátoru Microsoft v aplikaci Visual Studio 2017.
+1. V dialogovém okně **stránky vlastností** projektu vyberte možnost **vlastnosti** > konfigurace**Obecné**. Nastavte vlastnost **Sada nástrojů platformy** na upřednostňovanou sadu nástrojů pro systém Windows XP. Například vyberte možnost **Visual Studio 2017-Windows XP (v141_xp)** , chcete-li vytvořit kód pro systémy Windows XP a windows Server 2003 pomocí kompilátoru jazyka Microsoft C++ v aplikaci Visual Studio 2017.
 
-### <a name="c-runtime-support"></a>C++Podpora modulu runtime
+### <a name="c-runtime-support"></a>Podpora modulu runtime C++
 
-Společně se sadou nástrojů platformy Windows XP obsahuje několik knihoven i podporu modulu runtime pro systémy Windows XP a Windows Server 2003. Tyto knihovny jsou: knihovna runtime jazyka C (CRT), C++ standardní knihovna, knihovna ATL (Active Template Library), knihovna Concurrency Runtime (ConCRT), Knihovna PPL (Parallel Patterns Library), knihovna Microsoft Foundation Class (MFC C++ ) aC++ amp (urychlené programování). Minimální podporované verze pro tyto operační systémy: Windows XP Service Pack 3 (SP3) pro x86, Windows XP Service Pack 2 (SP2) pro x64 a Windows Server 2003 Service Pack 2 (SP2) pro x86 i x64.
+Společně se sadou nástrojů platformy Windows XP obsahuje několik knihoven i podporu modulu runtime pro systémy Windows XP a Windows Server 2003. Tyto knihovny jsou: knihovna runtime jazyka C (CRT), standardní knihovna C++, knihovna ATL (Active Template Library), knihovna Concurrency Runtime (ConCRT), knihovna paralelních vzorů (PPL), knihovna Microsoft Foundation Class (MFC) a C++ AMP (urychlené programování v jazyce C++). Minimální podporované verze pro tyto operační systémy: Windows XP Service Pack 3 (SP3) pro x86, Windows XP Service Pack 2 (SP2) pro x64 a Windows Server 2003 Service Pack 2 (SP2) pro x86 i x64.
 
 Tyto knihovny jsou podporovány sadami nástrojů platformy nainstalovanými sadou Visual Studio v závislosti na cíli:
 
@@ -60,15 +60,15 @@ Tyto knihovny jsou podporovány sadami nástrojů platformy nainstalovanými sad
 |C++ AMP|×|×||
 
 > [!NOTE]
-> Aplikace napsané v C++/CLI a cílí na .NET Framework 4 spuštěné v systémech Windows XP a windows Server 2003.
+> Aplikace napsané v jazyce C++/CLI a cílí na .NET Framework 4 spuštěné v systémech Windows XP a Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Rozdíly mezi sadami nástrojů
 
 Kvůli rozdílům v podpoře platforem a knihoven není prostředí pro vývoj aplikací, které používá sadu nástrojů platformy Windows XP, tak kompletní jako u aplikací, které používají výchozí sadu nástrojů platformy sady Visual Studio.
 
-- **C++jazykové funkce**
+- **Funkce jazyka C++**
 
-   V C++ aplikacích, které používají sadu nástrojů platformy v110\_XP, jsou podporovány pouze funkce jazyka implementované v sadě Visual Studio 2012. V C++ aplikacích, které používají sadu nástrojů platformy v120\_XP, jsou podporované jenom funkce jazyka implementované v Visual Studio 2013. V C++ aplikacích, které používají sadu nástrojů platformy v140\_XP, jsou podporovány pouze funkce jazyka implementované v sadě Visual Studio 2015. V C++ aplikacích, které používají sadu nástrojů platformy v141\_XP, jsou podporovány pouze funkce jazyka implementované v sadě Visual Studio 2017. Sada Visual Studio používá odpovídající kompilátor při sestavení pomocí starších sad nástrojů platformy. Použijte nejnovější sadu nástrojů platformy Windows XP k využití dalších C++ funkcí jazyka implementovaných v této verzi kompilátoru.
+   V aplikacích, které používají sadu nástrojů platformy v110\_XP, jsou podporovány pouze funkce jazyka C++ implementované v sadě Visual Studio 2012. V aplikacích, které používají sadu nástrojů platformy v120\_XP, jsou podporovány pouze funkce jazyka C++ implementované v Visual Studio 2013. V aplikacích, které používají sadu nástrojů platformy v140\_XP, jsou podporovány pouze funkce jazyka C++ implementované v sadě Visual Studio 2015. V aplikacích, které používají sadu nástrojů platformy v141\_XP, jsou podporovány pouze funkce jazyka C++ implementované v sadě Visual Studio 2017. Sada Visual Studio používá odpovídající kompilátor při sestavení pomocí starších sad nástrojů platformy. Použijte nejnovější sadu nástrojů platformy Windows XP pro využití dalších funkcí jazyka C++ implementovaných v této verzi kompilátoru.
 
 - **Vzdálené ladění**
 

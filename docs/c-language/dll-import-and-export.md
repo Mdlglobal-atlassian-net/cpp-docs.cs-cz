@@ -15,12 +15,12 @@ ms.locfileid: "62234150"
 ---
 # <a name="dll-import-and-export"></a>Import a export knihovny DLL
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Modifikátory třídy úložiště dllimport a dllexport jsou zvláštní rozšíření společnosti Microsoft pro jazyk C. Tyto modifikátory definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Konkrétní informace o použití těchto parametrů najdete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Modifikátory třídy úložiště dllimport a dllexport jsou zvláštní rozšíření společnosti Microsoft pro jazyk C. Tyto modifikátory definují rozhraní DLL svému klientu (spustitelnému souboru nebo jiné knihovně DLL). Konkrétní informace o použití těchto modifikátorů naleznete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozšířené atributy třídy úložiště jazyka C](../c-language/c-extended-storage-class-attributes.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Registry: Dostupnost registrů'
+title: 'Registry: dostupnost registrů'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registers
@@ -11,12 +11,12 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62232503"
 ---
-# <a name="registers-availability-of-registers"></a>Registry: Dostupnost registrů
+# <a name="registers-availability-of-registers"></a>Registry: dostupnost registrů
 
-**ANSI 3.5.1** rozsahu, do které objekty může skutečně umístit do registrů pomocí specifikátoru třídy úložiště register
+**ANSI 3.5.1** Rozsah, ve kterém lze objekty ve skutečnosti umístit do registrů pomocí specifikátoru třídy úložiště registru
 
 Kompilátor nerespektuje požadavky uživatele na proměnné registru. Místo toho provádí při optimalizaci své vlastní volby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chování definované implementací](../c-language/implementation-defined-behavior.md)

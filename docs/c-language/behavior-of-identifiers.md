@@ -17,6 +17,6 @@ ms.locfileid: "62313477"
 
 - [Velká a malá písmena](../c-language/uppercase-and-lowercase.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

@@ -17,55 +17,55 @@ ms.locfileid: "67400533"
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 
-Binární relační operátory a operátory rovnosti porovnejte jejich prvního operandu s jejich druhého operandu k testování platnosti Zadaný vztah. Výsledek výrazu relační je 1, pokud testovaný vztah je PRAVDA a 0, pokud má hodnotu false. Typ výsledku je `int`.
+Binární relační operátory a operátory rovnosti porovnávají svůj první operand s jejich druhým operandem k otestování platnosti zadaného vztahu. Výsledkem relačního výrazu je 1, pokud je testovaný vztah true a 0, pokud má hodnotu false. Typ výsledku je `int`.
 
-**Syntaxe**
+**Syntaktick**
 
-*relational-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt;** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt; =** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*
+*relační výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt;** – *SHIFT-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** – *SHIFT-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* ** &lt; ** – *SHIFT-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** – *SHIFT-Expression*
 
-*equality-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **==** *relační výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **! =** *relační výraz*
+*výraz rovnosti*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**==** *relační* výraz *rovnosti* – výraz<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rovnost-Expression* **! =** *relační výraz*
 
-Relační operátory a operátory rovnosti testování následující vztahy:
+Relační operátory a operátory rovnosti testují následující vztahy:
 
-|Operátor|Relace testování|
+|Operátor|Testovaný vztah|
 |--------------|-------------------------|
-|**&lt;**|První operand menší než druhý operand|
+|**&lt;**|První operand méně než druhý operand|
 |**>**|První operand větší než druhý operand|
-|**&lt;=**|První operand menší než nebo rovna Druhý operand|
-|**>=**|První operand větší než nebo rovna hodnotě Druhý operand|
-|**==**|První operand rovna Druhý operand|
-|**\!=**|První operand nemá hodnotu druhého operandu|
+|**&lt;=**|První operand je menší nebo roven druhému operandu.|
+|**>=**|První operand, který je větší nebo roven druhému operandu|
+|**==**|První operand rovný druhému operandu|
+|**!=**|První operand nerovná se druhému operandu|
 
-V seznamu výše první čtyři operátory mají vyšší prioritu než operátory rovnosti (`==` a `!=`). Přečtěte si informace Priorita v tabulce [Priorita a asociativita operátorů jazyka C](../c-language/precedence-and-order-of-evaluation.md).
+První čtyři operátory v seznamu výše mají vyšší prioritu než operátory rovnosti (`==` a `!=`). Podívejte se na informace o prioritách v [prioritě tabulky a asociativita operátorů jazyka C](../c-language/precedence-and-order-of-evaluation.md).
 
-Operandy může mít typ integral, plovoucí nebo ukazatel. Typy operandů může lišit. Relační operátory provádět běžné aritmetické převody na typ s plovoucí desetinnou čárkou a celočíselné operandy. Kromě toho můžete použít následující kombinace typy operandů s relační operátory a operátory rovnosti:
+Operandy mohou mít celočíselný, plovoucí nebo typ ukazatele. Typy operandů můžou být odlišné. Relační operátory provádějí obvyklé aritmetické převody na celočíselných a plovoucích operandech typu. Kromě toho můžete použít následující kombinace typů operandů s operátory relačních a rovnosti:
 
-- Odkazy na stejný typ může být operandy všechny relační nebo operátor rovnosti. Rovnost (`==`) a nerovnost (`!=`) operátory, výsledek porovnání určuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory ( **\<** , **>** , **\<** =, a **>** =), výsledek porovnání určuje relativní pozice adresy paměti dvou objektů, na. Relační operátory porovnání pouze posunů.
+- Oba operandy relačních operátorů nebo operátoru rovnosti mohou být ukazatele na stejný typ. Pro operátory rovnosti`==`() a nerovnosti`!=`() výsledek porovnání označuje, zda dva ukazatelé mají stejné umístění v paměti. U ostatních relačních operátorů**\<**( **>**, **\<**, = a **>**=) výsledek porovnání označuje relativní pozici dvou adres paměti objektů, na které ukazuje. Relační operátory porovnávají pouze posuny.
 
-   Porovnání ukazatelů je určená jenom pro části stejný objekt. V případě, že ukazatele odkazují na členy pole, je ekvivalentní k porovnání odpovídající dolní indexy porovnání. Adresa na první prvek pole je "menší než" adresa poslední prvek. V případě struktury ukazatelů na členy struktury deklarované později jsou "větší než" ukazatele na členy deklarované výše ve struktuře. Ukazatelé na členy stejné sjednocení jsou si rovny.
+   Porovnání ukazatelů je definováno pouze pro části stejného objektu. Pokud ukazatelé odkazují na členy pole, porovnání je ekvivalentní porovnání odpovídajících dolních indexů. Adresa prvního prvku pole je "menší než" adresa posledního prvku. V případě struktur jsou ukazatelé na členy struktury, které jsou deklarovány později, "větší než" ukazatele na členy deklarované dříve ve struktuře. Ukazatele na členy stejného sjednocení jsou stejné.
 
-- Hodnota ukazatele je možné porovnat s konstantní hodnotou 0 rovnosti (`==`) nebo nerovnosti (`!=`). Ukazatel s hodnotou 0 se nazývá "null" ukazatel. To znamená ho neodkazuje na platný paměti umístění.
+- Hodnota ukazatele může být porovnána s konstantní hodnotou 0 pro rovnost (`==`) nebo nerovnost (`!=`). Ukazatel s hodnotou 0 se nazývá ukazatel "null"; To znamená, že neukazuje na platné umístění v paměti.
 
-- Postupujte podle stejných pravidel jako relační operátory operátory rovnosti, ale povolit další možnosti: jde Porovnat ukazatel na celočíselný konstantní výraz s hodnotou 0 nebo na ukazatel na `void`. Pokud dva ukazatele jsou obě nulové ukazatele, jsou vyhodnoceny jako stejné. Operátory rovnosti porovnání segmentu a posun.
+- Operátory rovnosti dodržují stejná pravidla jako relační operátory, ale umožňují další možnosti: ukazatel lze porovnat s konstantním integrálním výrazem s hodnotou 0 nebo ukazatelem na hodnotu `void`. Pokud dva ukazatele jsou ukazatele s hodnotou null, porovná se stejně. Operátory rovnosti porovnávají segment i posun.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklady ilustrují relační operátory a operátory rovnosti.
+Níže uvedené příklady ilustrují relační operátory a operátory rovnosti.
 
 ```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
-Protože `x` a `y` jsou stejné, v tomto příkladu výraz vrací hodnotu 0.
+Vzhledem `x` k `y` tomu, že a jsou stejné, výraz v tomto příkladu vypočítá hodnotu 0.
 
 ```C
 char array[10];
@@ -75,7 +75,7 @@ for ( p = array; p < &array[10]; p++ )
     *p = '\0';
 ```
 
-Fragment v tomto příkladě nastaví všechny prvky objektu `array` na konstantu znaku null.
+Fragment v tomto příkladu nastaví jednotlivé prvky `array` na konstantu znaku null.
 
 ```C
 enum color { red, white, green } col;
@@ -88,9 +88,9 @@ enum color { red, white, green } col;
    .
 ```
 
-Tyto příkazy deklarujete proměnnou výčtu s názvem `col` se značkou `color`. V každém okamžiku může obsahovat proměnné celočíselnou hodnotu 0, 1 nebo 2, který představuje jeden z elementů výčet sady `color`: červená barva, prázdné nebo zelenou, v uvedeném pořadí. Pokud `col` obsahuje 0 při **Pokud** je proveden příkaz, všechny příkazy v závislosti na tom **Pokud** se spustí.
+Tyto příkazy deklaruje proměnnou výčtu s názvem `col` s tagem `color`. Proměnná může kdykoli obsahovat celočíselnou hodnotu 0, 1 nebo 2, která představuje jeden z prvků sady `color`výčtového typu: barva červenou, bílou nebo zelenou v uvedeném pořadí. Pokud `col` obsahuje hodnotu 0, pokud je proveden příkaz **if** , všechny příkazy v závislosti na tom, **zda** budou provedeny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Relační operátory: \<, >, \<= a > =](../cpp/relational-operators-equal-and-equal.md)<br/>
-[Operátory rovnosti: == a !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
+[Relační operátory: \<, >, \<= a >=](../cpp/relational-operators-equal-and-equal.md)<br/>
+[Operátory rovnosti: = = a! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

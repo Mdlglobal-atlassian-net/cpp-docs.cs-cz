@@ -11,10 +11,10 @@ ms.locfileid: "64344063"
 ---
 # <a name="underflow-of-floating-point-values"></a>Podtečení hodnot s plovoucí desetinnou čárkou
 
-**ANSI 4.5.1** Určuje, zda matematické funkce nastaví celočíselný výraz `errno` hodnotu makra `ERANGE` chybách podtečení rozsahu
+**ANSI 4.5.1** Bez ohledu na to, zda matematické funkce `errno` nastavují celočíselný výraz `ERANGE` na hodnotu makra na základě chyb v podtečení rozsahu
 
 Podtečení čísla s plovoucí desetinnou čárkou nenastaví výraz `errno` na hodnotu `ERANGE`. Pokud se hodnota blíží nule a nakonec dojde k podtečení, je hodnota nastavena na nulu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

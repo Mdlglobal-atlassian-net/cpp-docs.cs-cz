@@ -11,7 +11,7 @@ ms.locfileid: "64343434"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Zprávy generované funkcí perror
 
-**ANSI 4.9.10.4** zprávy generované `perror` – funkce
+**4.9.10.4 ANSI** Zprávy vygenerované `perror` funkcí
 
 Funkce `perror` vygeneruje tyto zprávy:
 
@@ -55,6 +55,6 @@ Funkce `perror` vygeneruje tyto zprávy:
 36 Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny](../c-language/library-functions.md)

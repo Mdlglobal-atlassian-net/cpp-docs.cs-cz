@@ -17,22 +17,22 @@ ms.locfileid: "62326897"
 ---
 # <a name="c-additive-operators"></a>Operátory sčítání jazyka C
 
-Operátory sčítání provedení sčítání (**+**) a odčítání (**-**).
+Aditivní operátory provádějí sčítání (**+**) a odčítání (**-**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*additive-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **+** *multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **-** *multiplicative-expression*
+*výraz doplňkového výrazu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní – výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;výraz *doplňkového výrazu* **+** *multiplikativní-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;výraz *doplňkového výrazu* **-** *multiplikativní-Expression*
 
 > [!NOTE]
-> I když syntaxe *additive-expression* zahrnuje *násobení výraz*, to nutně neznamená, že se vyžadují výrazů pomocí násobení. Zobrazit syntaxi v [souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md), pro *násobení výraz*, *výrazem přetypování*, a *unární výraz*.
+> I když syntaxe *doplňkového výrazu* zahrnuje *multiplikativní-Expression*, neznamená to, že se vyžadují výrazy, které používají násobení. Podívejte se na syntaxi v [souhrnu syntaxe jazyka C](../c-language/c-language-syntax-summary.md)pro *multiplikativní-Expression*, *cast-expression*a *unární-Expression*.
 
-Operandy mohou být integrální hodnoty s plovoucí desetinnou čárkou. Některé operace sčítání lze také provést na hodnoty ukazatele, jak je uvedeno v části diskuzi o každý operátor.
+Operandy mohou být celočíselné nebo plovoucí hodnoty. Některé operace s doplňkovou operací lze také provést na hodnotách ukazatele, jak je uvedeno pod diskusí každého operátoru.
 
-Operátory sčítání provádět běžné aritmetické převody s plovoucí desetinnou čárkou a celočíselné operandy. Typ výsledku je typ operandu po převodu. Vzhledem k tomu, že převody prováděné operátory sčítání se neposkytuje přetečení nebo podtečení podmínky, informace mohou být ztraceny, pokud výsledek operace sčítání nelze reprezentovat v typu operandu po převodu.
+Přídavné operátory provádějí obvyklé aritmetické převody na celočíselných a plovoucích operandech. Typ výsledku je typ operandů po převodu. Vzhledem k tomu, že převody prováděné pomocí operátorů sčítání neposkytují podmínky přetečení nebo podtečení, mohou být informace ztraceny, pokud výsledek operace sčítání nelze reprezentovat v typu operandů po převodu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Operátory sčítání: + a -](../cpp/additive-operators-plus-and.md)
+[Operátory sčítání: + a-](../cpp/additive-operators-plus-and.md)

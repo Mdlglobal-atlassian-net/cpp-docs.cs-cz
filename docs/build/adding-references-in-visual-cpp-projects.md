@@ -1,5 +1,5 @@
 ---
-title: Využívání knihoven a komponent v C++ projektech
+title: Využívání knihoven a komponent v projektech C++
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -16,11 +16,11 @@ ms.locfileid: "80169952"
 ---
 # <a name="consuming-libraries-and-components"></a>Využívání knihoven a komponent
 
-C++ Projekt často potřebuje volat funkce nebo získat přístup k datům v binárním souboru, jako je statická knihovna (soubory. lib), knihovna DLL, prostředí Windows Runtime komponenty, komponenta modelu COM nebo sestavení .NET. V těchto případech je nutné nakonfigurovat projekt tak, aby mohl najít tento binární soubor v čase sestavení. Konkrétní postup závisí na typu vašeho projektu, typu binárního souboru a na tom, zda je binární soubor sestaven ve stejném řešení jako váš projekt.
+Projekt C++ potřebuje často volat funkce nebo získat přístup k datům v binárním souboru, jako je statická knihovna (soubory. lib), knihovna DLL, prostředí Windows Runtime komponenty, komponenta modelu COM nebo sestavení .NET. V těchto případech je nutné nakonfigurovat projekt tak, aby mohl najít tento binární soubor v čase sestavení. Konkrétní postup závisí na typu vašeho projektu, typu binárního souboru a na tom, zda je binární soubor sestaven ve stejném řešení jako váš projekt.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Využívání knihoven stažených prostřednictvím vcpkg
 
-Pokud chcete využít knihovnu, kterou jste stáhli pomocí Správce balíčků **vcpkg** , můžete následující pokyny ignorovat. Další informace najdete v tématu [vcpkg: správce C++ balíčků pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
+Pokud chcete využít knihovnu, kterou jste stáhli pomocí Správce balíčků **vcpkg** , můžete následující pokyny ignorovat. Další informace najdete v tématu [vcpkg: Správce balíčků C++ pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
 
 ## <a name="consuming-static-libraries"></a>Spotřebovávání statických knihoven
 
@@ -46,11 +46,11 @@ Pokud knihovna DLL není součástí řešení aplikace, budete potřebovat soub
 
 ## <a name="com-objects"></a>COM – objekty
 
-Pokud vaše nativní C++ aplikace potřebuje spotřebovat objekt com a tento objekt je *zaregistrován*, pak vše, co musíte udělat, je zavolat funkci CoCreateInstance a předat identifikátor CLSID objektu. Systém ho najde v registru Windows a načte ho. Projekt C++/CLI může spotřebovat objekt modelu COM stejným způsobem, nebo přidáním odkazu na odkaz > v seznamu **Přidat odkazy com** a jeho využitím obálkou s možností volání [za běhu](/dotnet/framework/interop/runtime-callable-wrapper).
+Pokud vaše nativní aplikace C++ potřebuje spotřebovat objekt COM a tento objekt je *zaregistrován*, pak vše, co musíte udělat, je zavolat funkci CoCreateInstance a předat identifikátor CLSID objektu. Systém ho najde v registru Windows a načte ho. Projekt C++/CLI může spotřebovat objekt modelu COM stejným způsobem nebo přidáním odkazu na odkaz **> seznamu com** a jeho využívání prostřednictvím obálky s možností volání [za běhu](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>.NET – sestavení a součásti prostředí Windows Runtime
 
-V projektech UWP C++nebo/CLI můžete využívat sestavení .net nebo prostředí Windows Runtime komponenty přidáním *odkazu* na sestavení nebo komponentu. Pod uzlem **odkazy** v projektu UWP nebo C++/CLI vidíte odkazy na běžně používané komponenty. Kliknutím pravým tlačítkem na uzel **odkazy** v **Průzkumník řešení** otevřete **Správce odkazů** a procházejte dalšími komponentami, které systém zná. Kliknutím na tlačítko **Procházet** přejděte do složky, ve které je umístěna vlastní komponenta. Vzhledem k tomu, že komponenty sestavení a prostředí Windows Runtime .NET obsahují vestavěné informace o typu, můžete zobrazit své metody a třídy kliknutím pravým tlačítkem a výběrem možnosti **Zobrazit v prohlížeč objektů**.
+V projektech UWP nebo C++/CLI můžete využívat sestavení .NET nebo prostředí Windows Runtime komponenty přidáním *odkazu* na sestavení nebo komponentu. Pod uzlem **odkazy** v projektu UWP nebo C++/CLI vidíte odkazy na běžně používané komponenty. Kliknutím pravým tlačítkem na uzel **odkazy** v **Průzkumník řešení** otevřete **Správce odkazů** a procházejte dalšími komponentami, které systém zná. Kliknutím na tlačítko **Procházet** přejděte do složky, ve které je umístěna vlastní komponenta. Vzhledem k tomu, že komponenty sestavení a prostředí Windows Runtime .NET obsahují vestavěné informace o typu, můžete zobrazit své metody a třídy kliknutím pravým tlačítkem a výběrem možnosti **Zobrazit v prohlížeč objektů**.
 
 ## <a name="reference-properties"></a>Vlastnosti odkazu
 
@@ -80,9 +80,9 @@ Vlastnosti odkazu ActiveX jsou k dispozici pouze pro odkazy na komponenty modelu
 
    Zobrazuje nástroj, který se používá k sestavení definičního sestavení z odkazované knihovny COM nebo ovládacího prvku ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestaveníC++(/CLI)
+### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestavení (C++/CLI)
 
-Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na C++.NET Framework sestavení v projektech/CLI. Tyto vlastnosti jsou zobrazeny pouze v případě, že je vybráno sestavení .NET Framework v podokně **odkazy** . Vlastnosti nelze upravovat.
+Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na .NET Framework sestavení v projektech C++/CLI. Tyto vlastnosti jsou zobrazeny pouze v případě, že je vybráno sestavení .NET Framework v podokně **odkazy** . Vlastnosti nelze upravovat.
 
 - **Relativní cesta**
 
@@ -128,7 +128,7 @@ Následující vlastnosti jsou nalezeny v odkazech na sestavení COM a .NET a ne
 
    Zobrazí název sestavení pro odkazované sestavení.
 
-- **Jazykových**
+- **Kultura**
 
    Zobrazí jazykovou verzi vybraného odkazu.
 
@@ -158,7 +158,7 @@ Následující vlastnosti jsou nalezeny v odkazech na sestavení COM a .NET a ne
 
 - **Silný název**
 
-   `true`, zda má odkazované sestavení silný název. Silné pojmenované sestavení má jedinečnou verzi.
+   `true`, pokud má odkazované sestavení silný název. Silné pojmenované sestavení má jedinečnou verzi.
 
 - **Verze**
 
@@ -166,5 +166,5 @@ Následující vlastnosti jsou nalezeny v odkazech na sestavení COM a .NET a ne
 
 ## <a name="see-also"></a>Viz také
 
-[C++odkaz na stránku vlastností projektu](reference/property-pages-visual-cpp.md)<br>
+[Referenční dokumentace stránky vlastností projektu C++](reference/property-pages-visual-cpp.md)<br>
 [Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)

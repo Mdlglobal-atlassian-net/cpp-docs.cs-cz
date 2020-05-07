@@ -19,7 +19,7 @@ Příkaz *do-while* umožňuje opakovat příkaz nebo složený příkaz, dokud 
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz iterace*: &nbsp;&nbsp;&nbsp;&nbsp;**do***příkazu into* **(** *výraz* **);**
+*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **do***příkazu***while (***výraz***);**        
 
 *Výraz* v příkazu do *-while* je vyhodnocen po provedení tohoto textu smyčky. Proto je tělo smyčky vždy provedeno alespoň jednou.
 
@@ -41,7 +41,7 @@ do
 } while ( x > 0 );
 ```
 
-V tomto příkazu into *-while* jsou spouštěny dva příkazy `y = f( x );` a `x--;` bez ohledu na počáteční hodnotu `x`. Pak se vyhodnotí `x > 0`. Pokud je `x` větší než 0, tělo příkazu se provede znovu a `x > 0` se znovu vyhodnotí. Tělo příkazu se provede opakovaně, dokud `x` zůstane větší než 0. Provedení příkazu *do-while* končí, když `x` nabývá 0 nebo záporné. Tělo smyčky se provede aspoň jednou.
+V tomto příkazu into *-while* jsou dva příkazy `y = f( x );` a `x--;` jsou prováděny bez ohledu na počáteční hodnotu `x`. Pak `x > 0` je vyhodnocena. Pokud `x` je větší než 0, tělo příkazu se provede znovu a `x > 0` vyhodnotí se znovu. Tělo příkazu se provede opakovaně, dokud `x` zůstane větší než 0. Provedení příkazu *do-while* se ukončí, když `x` má hodnotu 0 nebo záporné. Tělo smyčky se provede aspoň jednou.
 
 ## <a name="see-also"></a>Viz také
 

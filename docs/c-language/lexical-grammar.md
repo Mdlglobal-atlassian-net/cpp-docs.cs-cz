@@ -27,6 +27,6 @@ ms.locfileid: "62325504"
 
 - [Interpunkční znaky jazyka](../c-language/punctuators.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)

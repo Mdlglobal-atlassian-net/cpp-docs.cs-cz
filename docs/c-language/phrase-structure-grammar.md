@@ -22,6 +22,6 @@ ms.locfileid: "62232373"
 
 - [Externí definice](../c-language/external-definitions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)

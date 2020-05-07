@@ -14,26 +14,26 @@ ms.locfileid: "62326492"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C
 
-Kromě deklarátory členů struktury nebo sjednocení může být deklarátorem struktury také zadaný počet bitů, nazývaný "bitové pole." Jeho délka je nastavena od deklarátor pro název pole dvojtečkou. Bitové pole je interpretován jako s integrálním typem.
+Kromě deklarátory pro členy struktury nebo sjednocení může mít deklarátor struktury také zadaný počet bitů nazývaný "bitové pole". Jeho délka je nastavená na deklarátor pro název pole dvojtečkou. Bitové pole je interpretováno jako integrální typ.
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
+*Struktura – deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typ – specifikátor* *deklarátor*<sub>opt</sub> **:** *konstantní výraz*
 
-*Konstantní výraz* Určuje šířku pole v bitech. *Specifikátor typu* pro `declarator` musí být `unsigned int`, **znaménkem**, nebo `int`a *konstantní výraz* musí být nezáporné celočíselná hodnota. Pokud je hodnota nula, deklarace nemá žádné `declarator`. Pole Bitová pole ukazatelů na bitová pole a funkce, která vrátí bitová pole nejsou povoleny. Volitelný `declarator` názvy bitové pole. Bitová pole lze deklarovat pouze v rámci struktury. Operátor address-of (**&**) nelze použít na komponenty bitového pole.
+*Konstantní výraz* určuje šířku pole v bitech. *Specifikátor typu* `declarator` pro musí být `unsigned int`, **signed int**nebo `int`a *konstantní výraz* musí být nezáporná celočíselná hodnota. Pokud je hodnota nula, deklarace nemá žádný `declarator`. Pole bitových polí, ukazatelů na bitová pole a funkce vracející bitová pole nejsou povoleny. Volitelné `declarator` názvy bitového pole. Bitová pole lze deklarovat pouze jako součást struktury. Operátor address-of (**&**) nelze použít na komponenty bitového pole.
 
-Nepojmenované bitové pole nemůže být odkazován, a jejich obsah v době běhu nepředvídatelné. Může se použít jako "fiktivní" pole, pro účely zarovnání. Nepojmenované bitové pole, jehož šířku je zadaný jako 0 zaručuje úložiště pro člena v následujících *struct-declaration-list* začíná `int` hranic.
+Nepojmenovaná bitová pole nemohou být odkazována a jejich obsah v době běhu je nepředvídatelné. Je možné je použít jako "fiktivní" pole pro účely zarovnání. Nepojmenované bitové pole, jehož šířka je zadána jako 0, zaručuje, že úložiště pro člena, který následuje, v *seznamu struct-Declaration-list* začíná na `int` hranici.
 
-Bitová pole musí být dostatečně dlouhá, aby obsahují bitový vzor. Například tyto dva příkazy nejsou platné:
+Bitová pole musí být také dostatečně dlouhá, aby obsahovala bitový vzorek. Například tyto dva příkazy nejsou platné:
 
 ```
 short a:17;        /* Illegal! */
 int long y:33;     /* Illegal! */
 ```
 
-Tento příklad definuje dvourozměrné pole struktury s názvem `screen`.
+Tento příklad definuje dvojrozměrné pole struktur s názvem `screen`.
 
 ```
 struct
@@ -45,15 +45,15 @@ struct
 } screen[25][80];
 ```
 
-Pole obsahuje 2 000 prvků. Každý prvek je struktury jednotlivých, který obsahuje čtyři členy bitových polí: `icon`, `color`, `underline`, a `blink`. Velikost struktury je o dva bajty.
+Pole obsahuje 2 000 prvků. Každý prvek je jednotlivá struktura obsahující čtyři členy bitových polí `icon`:, `color`, `underline`a. `blink` Velikost každé struktury je dva bajty.
 
-Bitová pole mají stejnou sémantiku jako typ celé číslo. To znamená, že bitové pole se používá ve výrazech stejným způsobem jako proměnnou stejné základní typ by použít, bez ohledu na to, kolik bitů v bitové pole.
+Bitová pole mají stejnou sémantiku jako typ Integer. To znamená, že bitové pole se používá ve výrazech přesně stejným způsobem jako proměnná stejného základního typu, a to bez ohledu na to, kolik bitů se v bitovém poli používá.
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Bitová pole, které jsou definované jako `int` je považován za podepsaný. Rozšíření standardu ANSI C společnosti Microsoft umožňuje `char` a **dlouhé** typy (obojí **podepsané** a `unsigned`) u bitových polí. Nepojmenované bitové pole se základním typem **dlouhé**, **krátký**, nebo `char` (**podepsané** nebo `unsigned`) vynutí zarovnání na hranici vhodné základního typu.
+Bitová pole definovaná `int` jako jsou považována za podepsaná. Rozšíření společnosti `char` Microsoft pro standard ANSI C povoluje a **dlouhé** typy ( **podepsaná** i `unsigned`) pro bitová pole. Nepojmenovaná bitová pole se základním typem **Long**, **short**nebo `char` (**podepsaná** nebo `unsigned`) vynuťte zarovnání na hranici odpovídající základnímu typu.
 
-Bitová pole jsou přiděleny v rámci celé číslo z nejméně významné nejvýznamnější bit. V následujícím kódu
+Bitová pole jsou přidělována v rámci celého čísla z nejméně významných bitů. V následujícím kódu
 
 ```
 struct mybitfields
@@ -71,17 +71,17 @@ int main( void );
 }
 ```
 
-bity by být uspořádány takto:
+bity budou uspořádány takto:
 
 ```
 00000001 11110010
 cccccccb bbbbaaaa
 ```
 
-Jelikož procesory řady 8086 ukládají nižší bajt celočíselných hodnot před vyšší bajt, na celé číslo `0x01F2` výše by být uloženy ve fyzické paměti jako `0xF2` následovaný `0x01`.
+Vzhledem k tomu, že řada procesorů 8086 ukládá nízké bajty celočíselných hodnot před horním bajtem, bude celé číslo `0x01F2` výše uloženo ve `0xF2` fyzické paměti `0x01`jako následováno.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace struktury](../c-language/structure-declarations.md)

@@ -13,8 +13,8 @@ ms.locfileid: "62157806"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Textové literály v primárních výrazech
 
-„Textový literál“ je znak, široký znak nebo posloupnost sousedících znaků, které jsou uzavřeny v dvojitých uvozovkách. Jelikož nejde o proměnné, nemohou být textové literály ani jejich prvky levým operandem operace přiřazení. Typem textového literálu je pole typu `char` (nebo pole typu `wchar_t` pro literály širokých znaků). Pole jsou ve výrazech převáděna na ukazatele. Zobrazit [řetězcové literály](../c-language/c-string-literals.md) pro další informace o řetězcích.
+„Textový literál“ je znak, široký znak nebo posloupnost sousedících znaků, které jsou uzavřeny v dvojitých uvozovkách. Jelikož nejde o proměnné, nemohou být textové literály ani jejich prvky levým operandem operace přiřazení. Typem textového literálu je pole typu `char` (nebo pole typu `wchar_t` pro literály širokých znaků). Pole jsou ve výrazech převáděna na ukazatele. Další informace o řetězcích naleznete v tématu [řetězcové literály](../c-language/c-string-literals.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Primární výrazy jazyka C](../c-language/c-primary-expressions.md)

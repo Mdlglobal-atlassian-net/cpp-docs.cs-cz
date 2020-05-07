@@ -21,12 +21,12 @@ ms.locfileid: "64343183"
 
 - [Příkazy](../c-language/statements-c.md)
 
-- [Funkce](../c-language/functions-c.md)
+- [Functions](../c-language/functions-c.md)
 
 - [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)
 
 - [Chování definované implementací](../c-language/implementation-defined-behavior.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
