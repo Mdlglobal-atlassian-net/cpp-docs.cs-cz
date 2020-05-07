@@ -29,7 +29,7 @@ class CSocketFile : public CFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSocketFile::CSocketFile](#csocketfile)|Vytvoří `CSocketFile` objekt.|
 
