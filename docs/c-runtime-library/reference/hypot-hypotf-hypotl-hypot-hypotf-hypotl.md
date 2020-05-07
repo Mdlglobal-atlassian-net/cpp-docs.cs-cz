@@ -23,7 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343948"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919832"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Vypočítá přeponu.
+Vypočítá přepony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,29 +87,29 @@ long double _hypotl(
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Hodnoty s plovoucí desetinnou desetinnou tázkem.
+Hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu **hypot** vrátí délku přepony; při přetečení **vrátí hypot** INF (nekonečno) a proměnná **errno** je nastavena na **ERANGE**. Pomocí **_matherr** můžete upravit zpracování chyb.
+V případě úspěchu vrátí **hypot –** délku přepony; při přetečení vrátí **HYPOT –** INF (Infinity) a proměnná **errno** je nastavená na **ERANGE**. Pro úpravu zpracování chyb lze použít **_matherr** .
 
-Další informace o návratových kódech naleznete [v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Hypot** funkce vypočítat délku přepony pravého trojúhelníku, vzhledem k délce obou stran *x* a *y* (jinými slovy, druhá odmocnina *x*<sup>2</sup> + *y*<sup>2</sup>).
+Funkce **hypot –** vypočítávají délku přepony pravého trojúhelníku s ohledem na délku dvou stran *x* a *y* (jinými slovy, druhá odmocnina *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Verze funkcí, které mají úvodní podtržítka jsou k dispozici pro kompatibilitu s dřívějšími standardy. Jejich chování je shodné s verzemi, které nemají úvodní podtržítka. Doporučujeme používat verze bez úvodních podtržítek pro nový kód.
+Verze funkcí, které mají počáteční podtržítka, jsou k dispozici pro kompatibilitu s předchozími standardy. Jejich chování je stejné jako verze, které nemají úvodní podtržítka. Doporučujeme používat verze bez počátečních podtržítek pro nový kód.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot –**, **hypotf –**, **hypotl**, **_hypot**, **_hypotf** **_hypotl**|\<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -135,6 +135,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

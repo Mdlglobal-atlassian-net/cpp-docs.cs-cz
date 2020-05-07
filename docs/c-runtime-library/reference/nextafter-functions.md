@@ -29,7 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 7b1416147ed000dd3dd9a13bd52e41a474a8e9d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909359"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
-Vrátí další reprezentovat hodnotu s plovoucí desetinnou desetinnou hodnotou.
+Vrátí další reprezentovatelné číslo s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,36 +95,36 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou tácem, od které chcete začít.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou, ze které se má začít.
 
-*Y*<br/>
-Hodnota s plovoucí desetinnou tágo, ke které se má přibližovat.
+*požadované*<br/>
+Hodnota s plovoucí desetinnou čárkou, která má jít směrem k.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí další reprezentovat hodnotu s plovoucí desetinnou hodnotou návratového typu po *x* ve směru *y*. Pokud *x* a *y* jsou stejné, funkce vrátí *y*, převedena na návratový typ, bez výjimky aktivována. Pokud *x* není rovno *y*a výsledkem je denormální nebo nula, jsou nastaveny **FE_UNDERFLOW** a **FE_INEXACT** stavy výjimek s plovoucí desetinnou desetinnou desetinnou desetinnou a je vrácen správný výsledek. Pokud buď *x* nebo *y* je NAN, pak vrácená hodnota je jedním ze vstupních NANs. Pokud *x* je konečný a výsledek je nekonečný nebo není reprezentovat v typu, je vrácena správně podepsané nekonečno nebo NAN, **FE_OVERFLOW** a **FE_INEXACT** stavy výjimek s plovoucí desetinnou čárkou jsou nastaveny a **errno** je nastavena na **ERANGE**.
+Vrátí další reprezentovatelné číslo s plovoucí desetinnou čárkou pro návratový typ po *x* ve směru *y*. Pokud jsou *x* a *y* stejné, funkce vrátí *y*, převedeno na návratový typ bez vyvolání výjimky. Pokud *x* není rovno *y*a výsledkem je nenormální nebo nula, jsou nastaveny **FE_UNDERFLOW** a **FE_INEXACT** stavy výjimky s plovoucí desetinnou čárkou a je vrácen správný výsledek. Pokud je hodnota *x* nebo *y* NaN, pak je návratovou hodnotou jedna ze vstupních hodnoty NaN. Pokud je hodnota *x* konečná a výsledek je nekonečný nebo není v typu k dispozici, vrátí se správně podepsané nekonečno nebo NAN, **FE_OVERFLOW** a **FE_INEXACT** stavy výjimky s plovoucí desetinnou čárkou, a **errno** je nastaven na **ERANGE**.
 
 ## <a name="remarks"></a>Poznámky
 
-Další **po a** **nexttowards** řady funkcí jsou ekvivalentní, s výjimkou typu parametru *y*. Pokud *x* a *y* jsou stejné, vrácená hodnota je *převedena* na návratový typ.
+Rodiny funkcí **nextafter –** a **nexttoward** jsou ekvivalentní, s výjimkou typu parametru *y*. Pokud jsou hodnoty *x* a *y* stejné, vrácená hodnota je *y* převedena na návratový typ.
 
-Vzhledem k tomu, že C++ umožňuje přetížení, \<pokud zahrnete cmath> můžete volat přetížení **nextafter** a **nexttowards** tento návrat **float** a **dlouhé** **dvojité** typy. V programu **C, nextafter** a **nexttowards** vždy vrátit **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, \<Pokud zahrnete cmath> můžete volat přetížení **nextafter –** a **nexttoward** , které vracejí **float** a **Long** **Double** Types. V programu v jazyce C **nextafter –** a **nexttoward** vždycky vrací hodnotu **Double**.
 
 Funkce **_nextafter** a **_nextafterf** jsou specifické pro společnost Microsoft. Funkce **_nextafterf** je k dispozici pouze při kompilaci pro x64.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Povinná hlavička (C)|Povinné záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttowards**, **nexttowardsf**, **nexttowardsl**|\<math.h>|\<math.h> \<nebo cmath>|
-|**_nextafter**|\<float.h>|\<float.h> \<nebo cfloat>|
+|**nextafter –**, **nextafterf –**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<Math. h>|\<Math. h> nebo \<cmath>|
+|**_nextafter**|\<float. h>|\<float. h> nebo \<cfloat>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

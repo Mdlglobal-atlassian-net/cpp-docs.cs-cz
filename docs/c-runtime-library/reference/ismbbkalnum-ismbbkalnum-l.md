@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343662"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909515"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
-Určuje, zda je určitý vícebajtový znak symbolem textu bez ASCII.
+Určuje, zda konkrétní vícebajtový znak není textový symbol, který není ASCII.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,30 +59,30 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo, které má být testováno.
+*r*<br/>
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkalnum** vrátí nenulovou hodnotu, pokud celé číslo *c* není symbolem textu ASCII jiným než interpunkční znaménkem, nebo 0, pokud tomu tak není. **_ismbbkalnum** používá aktuální národní prostředí pro informace o znaku závislém na národním prostředí. **_ismbbkalnum_l** je shodné s **_ismbbkalnum** s tím rozdílem, že trvá národní prostředí jako parametr. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** vrátí nenulovou hodnotu, pokud celé číslo *c* je jiný textový symbol než ASCII, než je interpunkční znaménko, nebo 0, pokud není. **_ismbbkalnum** používá aktuální národní prostředí pro informace o znacích závislé na národním prostředí. **_ismbbkalnum_l** je stejný jako **_ismbbkalnum** s tím rozdílem, že přebírá národní prostředí jako parametr. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkalnum**|\<mbctype.h>|
-|**_ismbbkalnum_l**|\<mbctype.h>|
+|**_ismbbkalnum**|\<Mbctype. h>|
+|**_ismbbkalnum_l**|\<Mbctype. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

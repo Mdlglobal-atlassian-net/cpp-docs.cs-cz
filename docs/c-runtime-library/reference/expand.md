@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 7f2a789bc5f475411808bc00a4280b7573b67cf2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347561"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920258"
 ---
 # <a name="_expand"></a>_expand
 
@@ -57,42 +57,42 @@ void *_expand(
 
 ### <a name="parameters"></a>Parametry
 
-*memblok*<br/>
+*memblock*<br/>
 Ukazatel na dříve přidělený blok paměti.
 
-*Velikost*<br/>
-Nová velikost v bajtů.
+*hodnota*<br/>
+Nová velikost v bajtech
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_expand** vrátí ukazatel void do bloku přerozdělené paměti. **_expand**, na rozdíl od **přerozdělení ,** nelze přesunout blok změnit jeho velikost. Proto pokud je k dispozici dostatek paměti pro rozšíření bloku bez jeho přesunutí, *parametr memblock* **_expand** je stejný jako vrácená hodnota.
+**_expand** vrátí void ukazatel na blok přerozdělené paměti. **_expand**na rozdíl od **realokace**nemůže přesunout blok, aby se změnila jeho velikost. Proto pokud je k dispozici dostatek paměti pro rozšíření bloku bez jeho přesunutí, parametr *memblock* je **_expand** stejný jako návratová hodnota.
 
-**_expand** vrátí **hodnotu NULL,** pokud je během operace zjištěna chyba. Například pokud **_expand** slouží ke zmenšení bloku paměti, může zjistit poškození v haldě malého bloku nebo neplatný ukazatel bloku a vrátit **hodnotu NULL**.
+**_expand** vrátí **hodnotu null** , pokud je zjištěna chyba během své operace. Například pokud se **_expand** používá ke zmenšení bloku paměti, může detekovat poškození v případě malé blokující haldy nebo neplatný ukazatel na blok a vracet **hodnotu null**.
 
-Pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost bez jeho přesunutí, vrátí funkce **hodnotu NULL**. **_expand** nikdy nevrátí blok rozbalený na menší velikost, než je požadováno. Pokud dojde k selhání, **errno** označuje povahu selhání. Další informace o **errno**naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost, aniž by došlo k jeho přesunutí, funkce vrátí **hodnotu null**. **_expand** nikdy nevrací blok zvětšený na velikost menší, než je požadováno. Pokud dojde k selhání, **errno** indikuje povahu selhání. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Vrácená hodnota odkazuje na úložný prostor, který je zaručeně vhodně zarovnán pro uložení libovolného typu objektu. Chcete-li zkontrolovat novou velikost položky, použijte **_msize**. Chcete-li získat ukazatel na jiný typ než **void**, použijte typ přetypované na vrácenou hodnotu.
+Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li zjistit novou velikost položky, použijte **_msize**. Chcete-li získat ukazatel na jiný typ než **void**, použijte přetypování typu u vrácené hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_expand** změní velikost dříve přiděleného bloku paměti tím, že se pokusí rozbalit nebo zmenšit blok bez přesunutí jeho umístění v haldě. Parametr *memblock* odkazuje na začátek bloku. Parametr *size* udává novou velikost bloku v bajtech. Obsah bloku se nemění až na kratší nové a staré velikosti. *memblock* by neměl být blok, který byl uvolněn.
+Funkce **_expand** změní velikost dříve přiděleného bloku paměti tím, že se pokusí zvětšit nebo sbalit blok bez přesunu jeho umístění do haldy. Parametr *memblock* odkazuje na začátek bloku. Parametr *Size* poskytuje novou velikost bloku v bajtech. Obsah bloku zůstane nezměněný na kratší z nových a starých velikostí. *memblock* by neměl být blok, který byl uvolněn.
 
 > [!NOTE]
-> Na 64bitových platformách **nemusí _expand** uzavřít smlouvu s blokem, pokud je nová velikost menší než aktuální velikost; zejména v případě, že blok byl menší než 16 K velikosti, a proto přiděleny v haldě nízké fragmentace, **_expand** opustí blok beze změny a vrátí *memblock*.
+> Na 64-bitových platformách **_expand** nemusí zablokovat blok, pokud je nová velikost menší než aktuální velikost; Konkrétně, pokud byl blok menší než hodnota 16 KB a je tedy přidělena v haldě s nízkou fragmentaci, **_expand** opustí blok beze změny a vrátí *memblock*.
 
-Pokud je aplikace propojena s ladicí verzí knihoven run-time C, **_expand** překládá na [_expand_dbg](expand-dbg.md). Další informace o tom, jak haldy je spravována během procesu ladění, naleznete [v tématu HALDA ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí běhových knihoven jazyka C, **_expand** překládá na [_expand_dbg](expand-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Tato funkce ověřuje její parametry. Pokud *je memblock* nulovým ukazatelem, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**. Pokud je *velikost* větší než **_HEAP_MAXREQ**, je **errno** nastaveno na **ENOMEM** a funkce vrátí **hodnotu NULL**.
+Tato funkce ověří své parametry. Pokud je *memblock* ukazatel s hodnotou null, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**. Pokud je *Velikost* větší než **_HEAP_MAXREQ**, **errno** je nastaveno na **ENOMEM** a funkce vrátí **hodnotu null**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_expand**|\<malloc.h>|
+|**_expand**|\<. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -132,7 +132,7 @@ Expanded block to 1024 bytes at 002C12BC
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Zdarma](free.md)<br/>
+[dost](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

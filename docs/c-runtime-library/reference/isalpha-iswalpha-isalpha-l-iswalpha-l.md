@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 187031adc0b22aff2c5418cd7e0f3e64075f1745
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343934"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919803"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
-Určuje, zda celé číslo představuje abecední znak.
+Určuje, zda celočíselná hodnota představuje abecední znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,44 +76,44 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo k testování.
+*r*<br/>
+Celé číslo k otestování.
 
-*Národní prostředí*<br/>
-Národní prostředí, které chcete použít namísto aktuálního národního prostředí.
+*locale*<br/>
+Národní prostředí, které se má použít místo aktuálního národního prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou *hodnotu,* pokud c je určitá reprezentace abecedního znaku. **isalpha** vrátí nenulovou hodnotu, pokud *c* je v rozsahu A - Z nebo a - z. **iswalpha** vrátí nenulovou hodnotu pouze pro široké znaky, pro které [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) nebo **iswlower** je nenulová; to znamená, že pro libovolný široký znak, který je jedním z implementací definované sady, pro které žádný z **iswcntrl**, **iswdigit**, **iswpunct**, nebo **iswspace** je nenulová. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje zkušební podmínku.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace abecedního znaku. parametr- **alfa** vrátí nenulovou hodnotu, pokud je *c* v rozsahu a – Z nebo a-z. **iswalpha** vrací nenulovou hodnotu pouze pro velké znaky, pro které [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) nebo **iswlower** je nenulové; To znamená pro libovolný širší znak, který je jednou ze sad definovaných implementací, pro kterou žádná z hodnot **iswcntrl**, **iswdigit**, **iswpunct**nebo **iswspace** není nenulová. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
 
-Verze těchto funkcí, které mají **příponu _l** použít parametr národního prostředí, který je předán namísto aktuálního národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isalpha** a **_isalpha_l** je nedefinována, pokud *c* není EOF nebo v rozsahu 0 až 0xFF, včetně. Při ladění CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolat kontrolní výraz.
+Chování funkcí **Alpha** a **_isalpha_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
+|**_istalpha**|**v-alfa**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isalpha**|\<ctype.h>|
-|**iswalpha**|\<ctype.h> \<nebo wchar.h>|
-|**_isalpha_l**|\<ctype.h>|
-|**_iswalpha_l**|\<ctype.h> \<nebo wchar.h>|
+|**v-alfa**|\<CType. h>|
+|**iswalpha**|\<CType. h> nebo \<WCHAR. h>|
+|**_isalpha_l**|\<CType. h>|
+|**_iswalpha_l**|\<CType. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[is, isw Rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
+[je, rutiny ISW](../../c-runtime-library/is-isw-routines.md)<br/>

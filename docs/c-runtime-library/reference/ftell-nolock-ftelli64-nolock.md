@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: fc6534daaeb3818e28e3c48dbc6d1d9586b6429e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f1f0018773f8fb5b00f1304011ba8128ce7d9df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345595"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909998"
 ---
 # <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock, _ftelli64_nolock
 
-Získá aktuální pozici ukazatele souboru, bez uzamčení podprocesu.
+Získá aktuální pozici ukazatele souboru bez uzamknutí vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,27 +59,27 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Zacilte na strukturu **FILE.**
+*Stream*<br/>
+Zaměřte se na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Stejné jako **ftell** a **_ftelli64**. Další informace naleznete v tématu [ftell, _ftelli64](ftell-ftelli64.md).
+Stejné jako **ftell** a **_ftelli64**. Další informace najdete v tématu [ftell, _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou neblokovací verze **ftell** a **_ftelli64**, resp. Jsou totožné s **ftell** a **_ftelli64** kromě toho, že nejsou chráněny před rušením jinými vlákny. Tyto funkce mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+Tyto funkce jsou neuzamykání verzí **ftell** a **_ftelli64**v uvedeném pořadí. Jsou stejné jako **ftell** a **_ftelli64** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Tyto funkce mohou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**ftell_nolock**|\<stdio.h>|\<errno.h>|
-|**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|
+|**ftell_nolock**|\<stdio. h>|\<errno. h>|
+|**_ftelli64_nolock**|\<stdio. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

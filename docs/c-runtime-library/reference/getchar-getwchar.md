@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920333"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,30 +53,30 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí přečtený znak. Chcete-li označit chybu čtení nebo podmínku konce souboru, **vrátí funkce getchar** **hodnotu EOF**a **funkce getwchar** vrátí **hodnotu WEOF**. Pro **getchar**, použijte **ferror** nebo **feof** zkontrolovat chybu nebo konec souboru.
+Vrátí přečtený znak. Chcete-li indikovat chybu čtení nebo stav konce souboru, funkce **GetChar** vrátí znak **EOF**a **getwchar** vrátí hodnotu **WEOF**. V případě **GetChar**použijte k vyhledání chyby nebo konce souboru použití metody **trajekt** nebo **feof** .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá rutina přečte jeden znak z **stdin** a zvýrazní ukazatel přidruženého souboru tak, aby přecšlápne na další znak. **getchar** je stejný jako [_fgetchar](fgetc-fgetwc.md), ale je implementován jako funkce a jako makro.
+Každá rutina přečte jeden znak ze **standardního vstupu** a zvýší přidružený ukazatel na soubor tak, aby odkazoval na další znak. **GetChar** je stejný jako [_fgetchar](fgetc-fgetwc.md), ale je implementován jako funkce a jako makro.
 
-Tyto funkce zamknout volající vlákno a jsou proto bezpečné pro přístup z více vláken. O verzi bez zamykání naleznete [v _getchar_nolock _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Tyto funkce zamkne volající vlákno a jsou proto bezpečná pro přístup z více vláken. Neuzamykání verze naleznete v tématu [_getchar_nolock _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+|**_gettchar**|**GetChar**|**GetChar**|**getwchar**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**getchar**|\<stdio.h>|
-|**getwchar**|\<stdio.h> \<nebo wchar.h>|
+|**GetChar**|\<stdio. h>|
+|**getwchar**|\<stdio. h> nebo \<WCHAR. h>|
 
-Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke **konzole, stdin**, **stdout**a **stderr**, musí být přesměrovány před c run-time funkce je možné použít v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341621"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911368"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
-Zaokrouhlí hodnotu s plovoucí desetinnou hodnotou na nejbližší celé číslo.
+Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,30 +94,30 @@ long long llroundl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou tácem k zaokrouhlení.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **lround** a **llround** vrátí nejbližší **dlouhé** nebo **long** **dlouhé** celé číslo na *x*. Hodnoty do poloviny jsou zaokrouhleny od nuly, bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Neexistuje žádná chyba vrátit.
+Funkce **lround** a **llround** vrací nejbližší **dlouhé** nebo **dlouhé** **celé číslo** do hodnoty *x*. Hodnoty v polovině jsou zaokrouhleny směrem od nuly bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Žádná|**_DOMAIN**|
+|**QNAN** **,** zasáhnout|žádné|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **lround** nebo **llround,** které take a return **float** a **dlouhé** **dvojité** hodnoty. V programu C **lround** a **llround** vždy trvat a vrátit **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **lround** nebo **llround** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C **lround** a **llround** vždycky přebírají a vracejí **dvojitou**hodnotu.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -157,7 +157,7 @@ lroundl(-3.500000) is -4
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

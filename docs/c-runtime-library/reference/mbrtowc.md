@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919194"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
-Převeďte vícebajtový znak v aktuálním národním prostředí na ekvivalentní široký znak se schopností restartování uprostřed vícebajtového znaku.
+Převede vícebajtový znak v aktuálním národním prostředí do ekvivalentního širšího znaku s možností restartu uprostřed vícebajtového znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,47 +50,47 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parametry
 
-*Wchar*<br/>
-Adresa širokého znaku pro příjem převedeného širokého znakového řetězce (typ **wchar_t**). Tato hodnota může být ukazatel null, pokud není vyžadován žádný znak šířka vratky.
+*WCHAR*<br/>
+Adresa dlouhého znaku pro příjem převedeného řetězce s velkým znakem (typ **wchar_t**) Tato hodnota může být ukazatel s hodnotou null, pokud není vyžadován žádný znak návratu do širšího rozsahu.
 
 *mbchar*<br/>
 Adresa posloupnosti bajtů (vícebajtový znak).
 
-*Počet*<br/>
-Počet bajtů ke kontrole.
+*výpočtu*<br/>
+Počet bajtů, které mají být zkontrolovány.
 
 *mbstate*<br/>
-Ukazatel na objekt stavu převodu. Pokud je tato hodnota ukazatelem null, funkce používá statický objekt stavu vnitřního převodu. Vzhledem k tomu, že vnitřní **mbstate_t** objekt není bezpečný pro přístup z více vláken, doporučujeme vždy předat vlastní *argument mbstate.*
+Ukazatel na objekt stavu konverze. Pokud je tato hodnota ukazatel s hodnotou null, funkce používá statický vnitřní objekt stavu konverze. Vzhledem k tomu, že vnitřní **mbstate_t** objekt není bezpečný pro přístup z více vláken, doporučujeme vždy předat vlastní argument *mbstate* .
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Jedna z následujících hodnot:
 
-0 Další *počet* nebo méně bajtů dokončit vícebajtový znak, který představuje null široký znak, který je uložen v *wchar*, pokud *wchar* není ukazatel null.
+0 další *počet* nebo méně bajtů dokončí vícebajtový znak, který představuje znak null, který je uložen v *WCHAR*, pokud *WCHAR* není ukazatel s hodnotou null.
 
-1 *počet*, včetně další *počet* nebo méně bajtů dokončit platný vícebajtový znak. Vrácená hodnota je počet bajtů, které doplňují vícebajtový znak. Široký znak ekvivalent je uložen v *wchar*, pokud *wchar* není ukazatel null.
+1 pro *počítání*, včetně dalšího *počtu* nebo méně bajtů, dokončí platný vícebajtový znak. Vrácená hodnota je počet bajtů, které dokončí vícebajtový znak. Ekvivalent pro velký znak je uložen v *WCHAR*, pokud *WCHAR* není ukazatel s hodnotou null.
 
-(size_t) (-1) Došlo k chybě kódování. Další *počet* nebo méně bajtů nepřispívají k úplné a platné vícebajtový znak. V tomto případě **je chybné číslo** nastaveno na Hodnotu EILSEQ a stav posunu převodu ve *stavu mbstate* není určen.
+(size_t) (-1) Došlo k chybě kódování. Další *počet* nebo méně bajtů nepřispívají k kompletnímu a platnému vícebajtovým znakům. V tomto případě je **errno** nastaven na EILSEQ a stav posunutí konverze v *mbstate* není specifikováno.
 
-(size_t) (-2) Další *počet* bajtů přispívají k neúplné, ale potenciálně platné vícebajtový znak a všechny *počet* bajtů byly zpracovány. V *wchar*uchováváte žádnou hodnotu , ale *mbstate* je aktualizován, aby se funkce restartovala.
+(size_t) (-2) Další *počet* bajtů přispívá k nekompletnímu, ale potenciálně platnému vícebajtovým znakem a všechny bajty *počtu* byly zpracovány. V *WCHAR*se neukládá žádná hodnota, ale *mbstate* se aktualizuje, aby se restartovala funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *mbchar* je ukazatel null, funkce je ekvivalentní volání:
+Pokud je *mbchar* ukazatel s hodnotou null, funkce je ekvivalentní volání:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-V tomto případě jsou ignorovány hodnoty argumentů *wchar* a *count.*
+V tomto případě se hodnota argumentů *WCHAR* a *Count* ignoruje.
 
-Pokud *mbchar* není ukazatel null, funkce zkontroluje *počet* bajtů z *mbchar* určit požadovaný počet bajtů, které jsou nutné k dokončení další vícebajtový znak. Pokud je platný další znak, odpovídající vícebajtový znak je uložen v *wchar,* pokud není ukazatel null. Pokud je znak odpovídající široký znak null, výsledný stav *mbstate* je počáteční stav převodu.
+Pokud *mbchar* není ukazatel s hodnotou null, funkce ověří počet bajtů z *mbchar* a určí požadovaný *počet bajtů,* které jsou nutné k dokončení dalšího vícebajtového znaku. Pokud je další znak platný, odpovídající vícebajtový znak je uložen v *WCHAR* , pokud se nejedná o ukazatel s hodnotou null. Pokud je znak odpovídajícím znakem null, je výsledný stav *mbstate* počátečním stavem převodu.
 
-Funkce **mbrtowc** se liší od [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) svou restartovatelností. Stav převodu je uložen v *mbstate* pro následná volání stejné nebo jiné restartovatelné funkce. Výsledky nejsou definovány při míchání použití restartovatelných a nerestartovatelných funkcí.  Například aplikace by měla použít **wcsrlen** místo **wcslen,** pokud je použito následné volání **wcsrtombs** místo **wcstombs**.
+Funkce **mbrtowc** se liší od [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) podle jejich restartu. Stav konverze je uložen v *mbstate* pro následné volání stejné nebo jiné možné funkce, které lze spustit. Výsledky nejsou definovány při kombinování použití opakovaných a nerestartů funkcí.  Například aplikace by měla používat **wcsrlen** namísto **wcslen** , pokud je místo **wcstombs**použito následné volání **wcsrtombs** .
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="example"></a>Příklad
 
-Převede vícebajtový znak na jeho široký znak ekvivalent.
+Převede vícebajtový znak na jeho ekvivalent pro nejrůznější znaky.
 
 ```cpp
 // crt_mbrtowc.cpp
@@ -211,10 +211,10 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**mbrtowc**|\<wchar.h>|
+|**mbrtowc**|\<WCHAR. h>|
 
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

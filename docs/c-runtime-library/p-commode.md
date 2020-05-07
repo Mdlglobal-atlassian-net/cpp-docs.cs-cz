@@ -13,7 +13,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: fa589c1972d27854e3f794d8283f49d9db5d053a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349308"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919501"
 ---
 # <a name="__p__commode"></a>__p__commode
 
-Odkazuje na `_commode` globální proměnnou, která určuje výchozí *režim potvrzení souboru* pro operace vstupně-videa souboru.
+Odkazuje na `_commode` globální proměnnou, která určuje výchozí *režim potvrzení souborů* pro vstupně-výstupní operace se soubory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,14 +47,14 @@ Ukazatel na `_commode` globální proměnnou.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `__p__commode` je pouze pro interní použití a neměla by být volána z uživatelského kódu.
+`__p__commode` Funkce je určena pouze pro interní použití a neměla by být volána z uživatelského kódu.
 
-Režim potvrzení souboru určuje, kdy jsou důležitá data zapsána na disk. Další informace naleznete v tématu [fflush](../c-runtime-library/reference/fflush.md).
+Režim potvrzení souboru určuje, kdy se na disk zapisují kritická data. Další informace najdete v tématu [fflush](../c-runtime-library/reference/fflush.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|__p\__commode|internal.h|
+|__p\__commode|interní. h|

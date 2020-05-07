@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 3a4ca8ff3f1153893282c65bc4c2becd687138ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344402"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919208"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
-Získá úplnou cestu aktuálního pracovního adresáře na zadané jednotce.
+Načte úplnou cestu k aktuálnímu pracovnímu adresáři na zadané jednotce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,40 +68,40 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*disky*<br/>
 Nezáporné celé číslo, které určuje jednotku (0 = výchozí jednotka, 1 = A, 2 = B a tak dále).
 
-Pokud zadaná jednotka není k dispozici nebo nelze určit druh jednotky (například vyměnitelné, pevné, CD-ROM, RAM disk nebo síťová jednotka), je vyvolána obslužná rutina neplatného parametru. Další informace naleznete v [tématu Ověření parametru](../../c-runtime-library/parameter-validation.md).
+Pokud není zadaná jednotka k dispozici nebo druh jednotky (například vyměnitelná, pevná, CD-ROM, disk RAM nebo síťová jednotka) nelze určit, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [ověření parametru](../../c-runtime-library/parameter-validation.md).
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro cestu nebo **NULL**.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro cestu nebo **hodnota null**.
 
-Pokud je **zadána hodnota NULL,** tato funkce přiděluje vyrovnávací paměť alespoň *maximální* velikosti pomocí **malloc**a vrácená hodnota **_getdcwd** je ukazatel přidělené vyrovnávací paměti. Vyrovnávací paměť může být uvolněna voláním **free** a předáním ukazatele.
+Je-li zadána hodnota **null** , tato funkce přidělí vyrovnávací paměť o velikosti alespoň *MAXLEN* pomocí **typu \ a**návratová hodnota **_getdcwd** je ukazatel na přidělenou vyrovnávací paměť. Vyrovnávací paměť může být uvolněna voláním **Free** a předáním ukazatele.
 
-*mništinu*<br/>
+*maxlen*<br/>
 Nenulové kladné celé číslo, které určuje maximální délku cesty, ve znacích: **char** pro **_getdcwd** a **wchar_t** pro **_wgetdcwd**.
 
-Pokud *je plen* menší nebo rovno nule, je vyvolána obslužná rutina neplatného parametru. Další informace naleznete v [tématu Ověření parametru](../../c-runtime-library/parameter-validation.md).
+Pokud je *MAXLEN* menší nebo rovno nule, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [ověření parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který představuje úplnou cestu aktuálního pracovního adresáře na zadané jednotce nebo **NULL**, což znamená chybu.
+Ukazatel na řetězec, který představuje úplnou cestu aktuálního pracovního adresáře na zadané jednotce nebo **hodnotu null**, což označuje chybu.
 
-Pokud je *vyrovnávací paměť zadána* jako **NULL** a není dostatek paměti pro přidělení *maximálních* znaků, dojde k chybě a **errno** je nastavena na **ENOMEM**. Pokud délka cesty včetně ukončujícího znaku null přesáhne *množinu*, dojde k chybě a **hodnota errno** je nastavena na **hodnotu ERANGE**. Další informace o těchto kódech chyb naleznete [v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud je *vyrovnávací paměť* zadána **jako null** a není dostatek paměti k přidělení *MAXLEN* znaků, dojde k chybě a **errno** je nastaven na **ENOMEM**. Pokud délka cesty včetně ukončujícího znaku null přesáhne *MAXLEN*, dojde k chybě a **errno** je nastaven na **ERANGE**. Další informace o těchto kódech chyb naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_getdcwd** získá úplnou cestu aktuálního pracovního adresáře na zadané jednotce a uloží jej do *vyrovnávací paměti*. Pokud je aktuální pracovní adresář nastaven na kořenový adresář,\\řetězec končí zpětným lomítkem ( ). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový adresář, řetězec končí názvem adresáře a nikoli zpětným lomítkem.
+Funkce **_getdcwd** získá úplnou cestu k aktuálnímu pracovnímu adresáři na zadané jednotce a uloží ji do *vyrovnávací paměti*. Pokud je aktuální pracovní adresář nastaven na kořen, řetězec končí zpětným lomítkem (\\). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.
 
-**_wgetdcwd** je širokoznaková verze **_getdcwd**a její parametr *vyrovnávací paměti* a vrácená hodnota jsou řetězce s širokými znaky. V opačném případě **se _wgetdcwd** a **_getdcwd** chovají stejně.
+**_wgetdcwd** je verze **_getdcwd**s velkým znakem a její parametr *vyrovnávací paměti* a návratová hodnota jsou řetězce s velkým počtem znaků. V opačném případě **_wgetdcwd** a **_getdcwd** se chovají stejně.
 
-Tato funkce je bezpečná pro přístup z více vláken, i když závisí na **getfullpathname**, který sám o sobě není bezpečný pro přístup z více vláken. Však můžete porušit bezpečnost podprocesu, pokud vaše vícevláknové aplikace volá tuto funkci i [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew).
+Tato funkce je bezpečná pro přístup z více vláken, i když je závislá na **GetFullPathName**, která sama o sobě není bezpečná pro přístup z více vláken. Nicméně je možné porušit bezpečnost vlákna, pokud aplikace s více vlákny volá tuto funkci i [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew).
 
-Verze této funkce, která má **_nolock** příponu se chová stejně k této funkci s tím rozdílem, že není bezpečná pro přístup z více vláken a není chráněna před rušením jinými vlákny. Další informace naleznete [v tématu _getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+Verze této funkce, která má příponu **_nolock** , se chová stejně jako tato funkce s tím rozdílem, že není bezpečná pro přístup z více vláken a není chráněna před rušením jinými vlákny. Další informace najdete v tématu [_getdcwd_nolock _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Pokud jsou definovány **_DEBUG** a **_CRTDBG_MAP_ALLOC,** volání **_getdcwd** a **_wgetdcwd** jsou nahrazeny volání **mi _getdcwd_dbg** a **_wgetdcwd_dbg,** takže můžete ladit přidělení paměti. Další informace naleznete[v tématu _getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Pokud jsou definovány **_DEBUG** a **_CRTDBG_MAP_ALLOC** , volání **_getdcwd** a **_wgetdcwd** jsou nahrazena voláními **_getdcwd_dbg** a **_wgetdcwd_dbg** , aby bylo možné ladit přidělování paměti. Další informace najdete v tématu[_getdcwd_dbg _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -113,18 +113,18 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdcwd**|\<direct.h>|
-|**_wgetdcwd**|\<direct.h> \<nebo wchar.h>|
+|**_getdcwd**|\<Direct. h>|
+|**_wgetdcwd**|\<Direct. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad v [_getdrive](getdrive.md).
+Podívejte se na příklad v [_getdrive](getdrive.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Řízení adresářů](../../c-runtime-library/directory-control.md)<br/>
+[Řízení adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

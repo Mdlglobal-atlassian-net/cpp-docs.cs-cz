@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 458c8ef4c69630b92f39c6ca13a538a1ba7ec72a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910662"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
-Připojí řetězec. Tyto verze [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Připojí řetězec. Tyto verze [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** a **_mbscat_s_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** a **_mbscat_s_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,32 +107,32 @@ errno_t _mbscat_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Vyrovnávací paměť cílového řetězce ukončená hodnotou null.
+Vyrovnávací paměť cílového řetězce zakončená hodnotou null
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti cílového řetězce.
 
 *strSource*<br/>
-Vyrovnávací paměť zdrojového řetězce ukončená hodnotou null.
+Vyrovnávací paměť zdrojového řetězce zakončená hodnotou null
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; kód chyby při selhání.
+Nula v případě úspěchu; chybový kód při selhání.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
 |*strDestination*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** nebo neukončené|jakékoli|jakékoli|**EINVAL**|nezměněno|
-|jakékoli|jakékoli|**Null**|**EINVAL**|*strDestination*[0] nastavena na 0|
-|jakékoli|0 nebo příliš malé|jakékoli|**ERANGE**|*strDestination*[0] nastavena na 0|
+|**Null** nebo neukončeno|jakýmikoli|jakýmikoli|**EINVAL**|Neupraveno|
+|jakýmikoli|jakýmikoli|**PLATNOST**|**EINVAL**|*strDestination*[0] nastaví na 0.|
+|jakýmikoli|0 nebo příliš malý|jakýmikoli|**ERANGE**|*strDestination*[0] nastaví na 0.|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **strcat_s** připojí *strSource* k *strDestination* a ukončí výsledný řetězec s nulovým znakem. Počáteční znak *strSource* přepíše ukončující nulový znak *strDestination*. Chování **strcat_s** není definováno, pokud se zdrojové a cílové řetězce překrývají.
+Funkce **strcat_s** připojí *strSource* k *strDestination* a ukončí výsledný řetězec znakem null. Počáteční znak *strSource* přepíše ukončující znak null hodnoty *strDestination*. Chování **strcat_s** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
 Všimněte si, že druhý parametr je celková velikost vyrovnávací paměti, nikoli zbývající velikost:
 
@@ -143,21 +143,21 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** a **_mbscat_s** jsou verze **strcat_s**s širokými znaky a vícebajtovými znaky . Argumenty a vrácená hodnota **wcscat_s** jsou řetězce širokých znaků; _mbscat_s **jsou** vícebajtové řetězce znaků. Tyto tři funkce se chovají stejně jinak.
+**wcscat_s** a **_mbscat_s** jsou verze **strcat_s**a vícebajtových znaků. Argumenty a návratová hodnota **wcscat_s** jsou řetězce s velkým počtem znaků; **_mbscat_s** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-Pokud *strDestination* je nula ukazatel nebo není null-terminated, nebo pokud *strSource* je **ukazatel NULL,** nebo pokud je cílový řetězec příliš malý, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce vrátí **EINVAL** a nastavit **errno** na **EINVAL**.
+Pokud je *strDestination* ukazatel s hodnotou null, nebo není zakončený hodnotou null, nebo pokud je *StrSource* ukazatel s **hodnotou null** , nebo pokud je cílový řetězec příliš malý, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastaví **errno** na **EINVAL**.
 
-Verze funkcí, které mají **_l** příponu mají stejné chování, ale použít parametr národního prostředí, který je předán v namísto aktuální hospo. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze funkcí, které mají příponu **_l** mají stejné chování, ale použijte předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. K zakázání tohoto chování použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
@@ -165,15 +165,15 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcat_s**|\<string.h>|
-|**wcscat_s**|\<string.h> \<nebo wchar.h>|
-|**_mbscat_s**|\<mbstring.h>|
+|**strcat_s**|\<String. h>|
+|**wcscat_s**|\<String. h> nebo \<WCHAR. h>|
+|**_mbscat_s**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad kódu v [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+Podívejte se na příklad kódu v [strcpy_s, wcscpy_s _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 ## <a name="see-also"></a>Viz také
 

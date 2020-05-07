@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +53,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: 9cbf24fafa78ac6a53a99abf0d1bb1ab3a0625c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f75bf4bb28a2dc34a233374314e6bc170793d77e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920369"
 ---
 # <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
-Porovná řetězce pomocí aktuálního národního prostředí nebo zadané kategorie LC_COLLATE stavu převodu.
+Porovná řetězce pomocí aktuálního národního prostředí nebo zadané LC_COLLATE kategorie konverze-State.
 
 > [!IMPORTANT]
-> **_mbscoll** a **_mbscoll_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscoll** a **_mbscoll_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,54 +102,54 @@ int _mbscoll_l(
 ### <a name="parameters"></a>Parametry
 
 *řetězec1*, *řetězec2*<br/>
-Řetězce ukončené hodnotou null k porovnání.
+Řetězec zakončený hodnotou null k porovnání
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí hodnotu označující vztah *string1* k *string2*, takto.
+Každá z těchto funkcí vrací hodnotu, která označuje vztah *řetězec1* k *řetězec2*, následovně.
 
-|Návratová hodnota|Vztah string1 a string2|
+|Návratová hodnota|Vztah řetězec1 k řetězec2|
 |------------------|----------------------------------------|
-|< 0|*string1* menší než *string2*|
-|0|*string1* identické s *string2*|
-|> 0|*string1* větší než *string2*|
+|< 0|*řetězec1* menší než *řetězec2*|
+|0|*řetězec1* totožný s *řetězec2*|
+|> 0|*řetězec1* větší než *řetězec2*|
 
-Každá z těchto funkcí vrátí **_NLSCMPERROR** na chybu. Chcete-li použít **_NLSCMPERROR**, uveďte buď STRING. H nebo MBSTRING. H. **wcscoll** může selhat, pokud je *buď string1* nebo *string2* **NULL** nebo obsahuje kódy širokých znaků mimo doménu pořadí řazení. Když dojde k chybě, **wcscoll** může nastavit **errno** na **EINVAL**. Chcete-li zkontrolovat chybu při volání **wcscoll**, nastavte **errno** na 0 a poté zkontrolujte **errno** po volání **wcscoll**.
+Každá z těchto funkcí vrací **_NLSCMPERROR** k chybě. Chcete-li použít **_NLSCMPERROR**, zahrňte buď řetězec. H nebo MBSTRING. Y. **wcscoll** se může podařit, pokud buď *řetězec1* nebo *řetězec2* má **hodnotu null** , nebo obsahuje kódy s velkým znakem mimo doménu pořadí řazení. Když dojde k chybě, **wcscoll** může nastavit **errno** na **EINVAL**. Chcete-li vyhledat chybu volání **wcscoll**, nastavte **errno** na hodnotu 0 a po volání **wcscoll**zaškrtněte **errno** .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí provádí porovnání rozlišování malých a velkých písmen *řetězce1* a *string2* podle aktuálně používáné znakové stránky. Tyto funkce by měly být použity pouze v případě, že je rozdíl mezi pořadí znakové sady a lexikografické pořadí znaků v aktuální znakové stránce a tento rozdíl je zajímavé pro porovnání řetězců.
+Každá z těchto funkcí provádí porovnání rozlišovat velikost písmen *řetězec1* a *řetězec2* podle znakové stránky, která se právě používá. Tyto funkce by měly být použity pouze v případě, že existuje rozdíl mezi pořadím znakových sad a pořadím znaků lexikografickým pořadím na aktuální znakové stránce a tento rozdíl je pro porovnání řetězců v zájmu.
 
-Všechny tyto funkce ověřují jejich parametry. Pokud *buď string1* nebo *string2* je ukazatel null, nebo pokud *počet* je větší než **INT_MAX**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je spuštění povoleno pokračovat, tyto funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
+Všechny tyto funkce ověřují své parametry. Pokud je buď *řetězec1* nebo *řetězec2* ukazatel s hodnotou null, nebo pokud je *počet* větší než **INT_MAX**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
-Porovnání těchto dvou řetězců je operace závislá na národním prostředí, protože každé národní prostředí má různá pravidla pro řazení znaků. Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají národní prostředí aktuálního vlákna. verze s **příponou _l** jsou shodné s odpovídající funkcí bez přípony s tím rozdílem, že používají národní prostředí předané jako parametr namísto aktuálního národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Porovnání dvou řetězců je operace závislá na národním prostředí, protože každé národní prostředí má jiné pravidla pro řazení znaků. Verze těchto funkcí bez přípony **_l** používají národní prostředí aktuálního vlákna pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné jako odpovídající funkce bez přípony s tím rozdílem, že používají národní prostředí předané jako parametr namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscoll**|**strcoll řekl:**|**_mbscoll**|**wcscoll řekl:**|
+|**_tcscoll**|**strcoll –**|**_mbscoll**|**wcscoll**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcoll řekl:**|\<string.h>|
-|**wcscoll řekl:**|\<wchar.h>, \<string.h>|
-|**_mbscoll**, **_mbscoll_l**|\<mbstring.h>|
-|**_strcoll_l**|\<string.h>|
-|**_wcscoll_l**|\<wchar.h>, \<string.h>|
+|**strcoll –**|\<String. h>|
+|**wcscoll**|\<WCHAR. h>, \<String. h>|
+|**_mbscoll** **_mbscoll_l**|\<Mbstring. h>|
+|**_strcoll_l**|\<String. h>|
+|**_wcscoll_l**|\<WCHAR. h>, \<String. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 288c23ac11104ed994719fae8576cdc3597d7478
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343643"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918935"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
-Testuje symbol katakany a je specifický pro znakovou stránku 932.
+Testuje symbol Katakana a je specifický pro znakovou stránku 932.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,30 +59,30 @@ int _ismbbkana_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo, které má být testováno.
+*r*<br/>
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkana** vrátí nenulovou hodnotu, pokud je celé číslo *c* symbolem katakany, nebo 0, pokud není. **_ismbbkana** používá aktuální národní prostředí pro informace o znaku závislém na národním prostředí. **_ismbbkana_l** je identická s tím rozdílem, že používá předané národní prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_ismbbkana** vrátí nenulovou hodnotu, pokud je celé číslo *c* symbol Katakana nebo 0, pokud není. **_ismbbkana** používá aktuální národní prostředí pro informace o znacích závislé na národním prostředí. **_ismbbkana_l** je totožný s tím rozdílem, že používá předaný objekt národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkana**|\<mbctype.h>|
-|**_ismbbkana_l**|\<mbctype.h>|
+|**_ismbbkana**|\<Mbctype. h>|
+|**_ismbbkana_l**|\<Mbctype. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

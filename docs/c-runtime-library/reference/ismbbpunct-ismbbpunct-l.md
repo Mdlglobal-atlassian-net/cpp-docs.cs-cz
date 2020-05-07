@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-ms.openlocfilehash: db0725215b6568300602c55ca253d959c27aedc1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bee75f971f6e185b4081ba123e6aef5e1865a14e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343465"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918659"
 ---
 # <a name="_ismbbpunct-_ismbbpunct_l"></a>_ismbbpunct, _ismbbpunct_l
 
-Určuje, zda je určitý znak interpunkčním znakem.
+Určuje, zda je konkrétní znak interpunkční znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,30 +59,30 @@ int _ismbbpunct_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo, které má být testováno.
+*r*<br/>
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbpunct** vrátí nenulovou hodnotu, pokud celé číslo *c* je symbol interpunkce NEŽ ASCII. **_ismbbpunct** používá aktuální národní prostředí pro libovolné nastavení znaků závislých na národním prostředí. **_ismbbpunct_l** je identické s tím rozdílem, že používá národní prostředí, které je předáno. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_ismbbpunct** vrací nenulovou hodnotu, pokud celé číslo *c* je symbol interpunkce mimo ASCII. **_ismbbpunct** používá aktuální národní prostředí pro všechna nastavení znaků závislá na národním prostředí. **_ismbbpunct_l** je totožný s tím rozdílem, že používá národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbpunct**|\<mbctype.h>|
-|**_ismbbpunct_l**|\<mbctype.h>|
+|**_ismbbpunct**|\<Mbctype. h>|
+|**_ismbbpunct_l**|\<Mbctype. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: ec4f08e499efe82b0ee35235e6e2d86dbb9bab66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346846"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919477"
 ---
 # <a name="_fileno"></a>_fileno
 
-Získá popisovač souboru přidružené k datového proudu.
+Získá popisovač souboru přidružený ke streamu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,31 +50,31 @@ int _fileno(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fileno** vrátí popisovač souboru. Neexistuje žádná chyba vrátit. Výsledek není definován, pokud *datový proud* neurčuje otevřený soubor. Pokud je datový proud **NULL**, **vyvolá _fileno** neplatnou obslužnou rutinu parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí tato funkce -1 a nastaví **errno** na **EINVAL**.
+**_fileno** vrátí popisovač souboru. Nevrátila se žádná chybová zpráva. Výsledek není definován, pokud *datový proud* neurčí otevřený soubor. Pokud má datový proud **hodnotu null**, **_fileno** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-Další informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Pokud **stdout** nebo **stderr** není spojena s výstupní datový proud (například v aplikaci systému Windows bez okna konzoly), popisovač souboru vrácena je -2. V předchozích verzích byl vrácen ý popisovač souboru -1. Tato změna umožňuje aplikacím odlišit tuto podmínku od chyby.
+> Pokud **stdout** nebo **stderr** není přidružen k výstupnímu datovému proudu (například v aplikaci systému Windows bez okna konzoly), vrácený popisovač souboru je-2. V předchozích verzích byl vrácený popisovač souboru-1. Tato změna umožňuje aplikacím odlišit tento stav od chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Rutina **_fileno** vrátí popisovač souboru, který je aktuálně spojen s *datovým proudem*. Tato rutina je implementována jako funkce i jako makro. Informace o výběru obou implementací naleznete [v tématu Volba mezi funkcemi a makra .](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)
+Rutina **_fileno** vrátí popisovač souboru, který je aktuálně přidružený ke *streamu*. Tato rutina je implementována jako funkce a jako makro. Informace o výběru kterékoli implementace najdete v tématu [Výběr mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fileno**|\<stdio.h>|
+|**_fileno**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

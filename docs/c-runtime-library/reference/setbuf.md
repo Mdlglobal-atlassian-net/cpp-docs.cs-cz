@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332080"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910334"
 ---
 # <a name="setbuf"></a>setbuf
 
-Řídí ukládání do vyrovnávací paměti datového proudu. Tato funkce je zastaralá; místo toho použijte [setvbuf.](setvbuf.md)
+Řídí ukládání datových proudů do vyrovnávací paměti. Tato funkce je zastaralá. místo toho použijte [setvbuf –](setvbuf.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,27 +49,27 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
-*Vyrovnávací paměti*<br/>
-Uživatelem přidělená vyrovnávací paměť.
+*vyrovnávací paměti*<br/>
+Vyrovnávací paměť přidělená uživatelem
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **setbuf** řídí ukládání do vyrovnávací paměti pro *datový proud*. Argument *datového proudu* musí odkazovat na otevřený soubor, který nebyl přečten nebo zapsán. Pokud je argument *vyrovnávací paměti* **NULL**, datový proud není ve vyrovnávací paměti. Pokud tomu tak není, vyrovnávací paměť musí ukazovat na pole znaků délky **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak je definována v STDIO. H. Uživatelem zadaná vyrovnávací paměť namísto výchozí vyrovnávací paměti přidělené systémem pro daný datový proud se používá pro ukládání do vyrovnávací paměti vstupně-v. **Stderr** stream je ve výchozím nastavení bez vyrovnávací paměti, ale můžete použít **setbuf** přiřadit vyrovnávací paměti **stderr**.
+Funkce **setbuf** řídí ukládání do vyrovnávací paměti pro *Stream*. Argument *Stream* musí odkazovat na otevřený soubor, který se nečetl nebo nezapsal. Pokud má argument *buffer* **hodnotu null**, datový proud je neuložený do vyrovnávací paměti. V takovém případě musí vyrovnávací paměť ukazovat na pole znaků s délkou **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak je definováno v stdio. Y. Pro vstupně-výstupní ukládání do vyrovnávací paměti se používá uživatelem zadaná vyrovnávací paměť namísto výchozí systémem přidělené vyrovnávací paměti pro daný datový proud. Datový proud **stderr** ve výchozím nastavení není uložen do vyrovnávací paměti, ale můžete použít **setbuf** k přiřazení vyrovnávacích pamětí do **stderr**.
 
-**setbuf** byl nahrazen [setvbuf](setvbuf.md), což je upřednostňovaná rutina pro nový kód. Na rozdíl od **setvbuf**, **setbuf** nemá žádný způsob, jak hlášení chyb. **setvbuf** také umožňuje řídit režim ukládání do vyrovnávací paměti i velikost vyrovnávací paměti. **setbuf** existuje pro kompatibilitu s existujícím kódem.
+**setbuf** byl nahrazen [setvbuf –](setvbuf.md), což je upřednostňovaná rutina pro nový kód. Na rozdíl od **setvbuf –** nemá **setbuf** žádný způsob, jak hlásit chyby. **setvbuf –** také umožňuje řídit režim ukládání do vyrovnávací paměti i velikost vyrovnávací paměti. **setbuf** existuje pro kompatibilitu s existujícím kódem.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**setbuf**|\<stdio.h>|
+|**setbuf**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

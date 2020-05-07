@@ -20,22 +20,22 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341723"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911416"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
-Určuje binární (base-2) logaritmus zadané hodnoty.
+Určuje dvojkový logaritmus (dekadický-2) zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,40 +63,40 @@ long double log2l(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota k určení logaritmu základní 2.
+*znak*<br/>
+Hodnota, která určuje logaritmus o základu 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěchu vrátí vrátí log2 *x*.
+Po úspěšném návratu vrátí log2 – *x*.
 
-V opačném případě může vrátit jednu z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
 |Problém|Vrátit|
 |-----------|------------|
 |*x* < 0|Není číslo|
-|*x* = ±0|-NEKONEČNO|
-|*x* = 1|+0|
-|+NEKONEČNO|+NEKONEČNO|
+|*x* = ± 0|– Nekonečno|
+|*x* = 1|+ 0|
+|+ Nekonečno|+ Nekonečno|
 |Není číslo|Není číslo|
-|chyba domény|Není číslo|
-|pole chyba|-HUGE_VAL, -HUGE_VALF nebo -HUGE_VALL|
+|Chyba domény|Není číslo|
+|Chyba pole|-HUGE_VAL,-HUGE_VALF nebo-HUGE_VALL|
 
-Chyby jsou hlášeny podle _matherr [.](matherr.md)
+Chyby jsou hlášeny tak, jak jsou uvedeny v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud x je celé číslo, tato funkce v podstatě vrátí nulový index nejvýznamnější 1 bit *x*.
+Pokud x je celé číslo, tato funkce v podstatě vrátí index s nejvýraznějším 1 bitem hodnoty *x*od nuly.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+|**log2 –**, **log2f –**, **log2l**|\<Math. h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

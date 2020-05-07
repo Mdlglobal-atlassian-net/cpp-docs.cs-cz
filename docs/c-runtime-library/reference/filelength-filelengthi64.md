@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 1a830bedc8dca65410a2df49b96c6e3bf6e11b4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346873"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910217"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -59,29 +59,29 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
-Zaměřte popisovač souboru.
+*FD*<br/>
+Zaměřte se na popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_filelength** i **_filelengthi64** vrátí délku souboru cílového souboru přidruženého k *fd*. Pokud *fd* je neplatný popisovač souboru, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, obě funkce vrátí -1L, což znamená chybu, a nastavte **errno** na **EBADF**.
+Jak **_filelength** , tak **_filelengthi64** vrací délku souboru v bajtech cílového souboru přidruženého ke *FD*. Pokud je *FD* neplatný popisovač souboru, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí obě funkce-1L, aby označovaly chybu a nastavil **errno** na **EBADF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_filelength**|\<io.h>|
-|**_filelengthi64**|\<io.h>|
+|**_filelength**|\<IO. h>|
+|**_filelengthi64**|\<IO. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad pro [_chsize](chsize.md).
+Podívejte se na příklad [_chsize](chsize.md).
 
 ## <a name="see-also"></a>Viz také
 

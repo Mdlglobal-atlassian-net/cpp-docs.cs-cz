@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316884"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910924"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
-Zkopírujte čas do vyrovnávací paměti. K dispozici jsou bezpečnější verze těchto funkcí. viz [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
+Zkopírujte čas do vyrovnávací paměti. K dispozici jsou bezpečnější verze těchto funkcí; viz [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,7 +72,7 @@ wchar_t *_wstrtime(
 ### <a name="parameters"></a>Parametry
 
 *timestr*<br/>
-Časový řetězec.
+Řetězec času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -80,17 +80,17 @@ Vrátí ukazatel na výsledný řetězec znaků *timestr*.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_strtime** zkopíruje aktuální místní čas do vyrovnávací paměti, na kterou se vztahuje *funkce timestr*. Čas je formátován jako **hh:mm:ss,** kde **hh** je dvě číslice představující hodinu v 24hodinovém zápisu, **mm** je dvě číslice představující minuty po hodině a **ss** je dvě číslice představující sekundy. Například řetězec **18:23:44** představuje 23 minut a 44 sekund po 18:00. Vyrovnávací paměť musí být nejméně 9 bajtů dlouhá.
+Funkce **_strtime** kopíruje aktuální místní čas do vyrovnávací paměti, na kterou odkazuje *timestr*. Čas je formátován jako **HH: mm: SS** , kde **HH** je dvě číslice představující hodinu ve 24hodinovém zápisu, **mm** jsou dvě číslice představující minuty po hodinách a **SS** jsou dvě číslice představující sekundy. Například řetězec **18:23:44** představuje 23 minut a 44 sekund za 6 hodin. Vyrovnávací paměť musí být alespoň 9 bajtů dlouhá.
 
-**_wstrtime** je širokoznaková verze **_strtime**; argument a vrácená hodnota **_wstrtime** jsou řetězce širokých znaků. Tyto funkce se chovají stejně jinak. Pokud *timestr* je **ukazatel NULL** nebo pokud *timestr* je formátován nesprávně, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povolena výjimka pokračovat, tyto funkce vrátí **NULL** a nastavit **errno** **eINVAL** if *timestr* byl **NULL** nebo nastavit **errno** na **ERANGE,** pokud *timestr* je formátován nesprávně.
+**_wstrtime** je verze **_strtime**s velkým znakem; argument a návratová hodnota **_wstrtime** jsou řetězce s velkým počtem znaků. Tyto funkce se chovají identicky jinak. Pokud je *timestr* ukazatel s **hodnotou null** , nebo pokud je *timestr* formátován nesprávně, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud může výjimka pokračovat, tyto funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL** , pokud *Timestr* bylo **null** nebo nastavte **errno** na **ERANGE** , pokud je *timestr* formátován nesprávně.
 
-V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
@@ -98,10 +98,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strtime**|\<time.h>|
-|**_wstrtime**|\<time.h> \<nebo wchar.h>|
+|**_strtime**|\<Time. h>|
+|**_wstrtime**|\<Time. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

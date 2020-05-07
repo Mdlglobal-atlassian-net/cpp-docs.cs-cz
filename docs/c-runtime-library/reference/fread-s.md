@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346129"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919467"
 ---
 # <a name="fread_s"></a>fread_s
 
-Čte data z datového proudu. Tato verze [fread](fread.md) má vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Načte data z datového proudu. Tato verze [fread](fread.md) má vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,42 +50,42 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro data.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro data
 
-*Buffersize*<br/>
-Velikost cílové vyrovnávací paměti v bajtech.
+*bufferSize*<br/>
+Velikost cílové vyrovnávací paměti v bajtech
 
-*elementVelikost*<br/>
-Velikost položky číst v bajtů.
+*elementSize*<br/>
+Velikost položky, která se má načíst v bajtech
 
-*Počet*<br/>
-Maximální počet položek ke čtení.
+*výpočtu*<br/>
+Maximální počet položek, které se mají přečíst
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fread_s** vrátí počet (celé) položky, které byly přečteny do vyrovnávací paměti, které mohou být menší než *počet,* pokud dojde k chybě čtení nebo konec souboru před *dosažením count.* Funkce **feof** nebo **ferror** slouží k odlišení chyby od stavu konce souboru. Pokud *velikost* nebo *počet* je 0, **vrátí fread_s** 0 a obsah vyrovnávací paměti jsou beze změny. Pokud *datový proud* nebo vyrovnávací *paměť* je nulový ukazatel, **fread_s** vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí 0.
+**fread_s** vrátí počet (celých) položek, které byly čteny do vyrovnávací paměti, což může být menší než *počet* , pokud je zjištěna chyba čtení nebo konec souboru před dosažením *počtu* . Použijte funkci **feof** nebo **Deferred** k odlišení chyby z podmínky konce souboru. Pokud je *Velikost* nebo *počet* 0, **fread_s** vrátí hodnotu 0 a obsah vyrovnávací paměti zůstane beze změny. Pokud je *datový proud* nebo *vyrovnávací paměť* ukazatel s hodnotou null, **fread_s** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
-Další informace o kódech chyb naleznete [v tématech _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o kódech chyb naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fread_s** čte až *počítat* položky *elementSize* bajtů ze vstupního *datového proudu* a ukládá je do *vyrovnávací paměti*.  Ukazatel souboru, který je spojen s *datovým proudem* (pokud existuje) se zvýší o počet bajtů skutečně číst. Pokud je daný datový proud otevřen v textovém režimu, dvojice přímotivního podpájení vozíku se nahradí znaky podávání jednoho řádku. Nahrazení nemá žádný vliv na ukazatel souboru nebo vrácenou hodnotu. Pozice ukazatele souboru je neurčitá, pokud dojde k chybě. Nelze určit hodnotu částečně přečtené položky.
+Funkce **fread_s** čte až do *počtu* položek *elementSize* bajtů ze vstupního *datového proudu* a ukládá je do *vyrovnávací paměti*.  Ukazatel na soubor, který je přidružený ke *streamu* (pokud existuje), se zvýší o počet čtených bajtů. Je-li daný datový proud otevřen v textovém režimu, jsou páry datových kanálů návratového řádku nahrazeny znaky jednoduchého znaku čáry. Náhrada nemá žádný vliv na ukazatel na soubor nebo na vrácenou hodnotu. Pozice ukazatele na soubor je neurčitá, pokud dojde k chybě. Nelze určit hodnotu částečného čtení položky.
 
-Tato funkce uzamkne ostatní vlákna. Pokud požadujete verzi bez uzamčení, použijte **_fread_nolock**.
+Tato funkce zamkne další vlákna. Pokud vyžadujete neuzamykání verze, použijte **_fread_nolock**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fread_s**|\<stdio.h>|
+|**fread_s**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332868"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917852"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
-Vypočítá zbytek podílu dvou hodnot s plovoucí desetinnou desetinnou hodnotou zaokrouhlenou na nejbližší integrální hodnotu.
+Vypočítá zbytek podílu dvou hodnot s plovoucí desetinnou čárkou zaokrouhlený na nejbližší celočíselnou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,31 +60,31 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*znak*<br/>
 Čitatel.
 
-*Y*<br/>
+*požadované*<br/>
 Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Zbytek s plovoucí desetinnou tázkem *x* / *y*. Pokud je hodnota *y* 0,0, **zbytek** vrátí tichý NaN. Informace o reprezentaci tiché honosné NaN rodinou **printf** naleznete v [tématu printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Zbytek s plovoucí desetinnou čárkou v *ose x* / *y*. Pokud hodnota *y* je 0,0, **zbytek** vrátí tichou hodnotu NaN. Informace o reprezentace tichého NaN **printf** Family naleznete v tématu [printf, _printf_l, wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Zbývající **remainder** funkce vypočítají *zbytek* s pohyblivou desetinnou třídou *x* / *y* tak, aby *x* = *n* \* *y* + *r*, kde *n*je celé číslo nejbližší v hodnotě *x* / *y* a *n,* i když &#124; *n* - *x* / *y* &#124; = 1/2. Když *r* = 0, *r* má stejné znaménko jako *x*.
+**Zbývající** funkce vypočítávají zbytek s plovoucí desetinnou čárkou *r* z *x* / *y* tak, že *x* = *n* \* *y* + *r*, kde *n*je celé číslo nejbližší hodnotě *x* / *y* a *n*je dokonce vždy, když &#124; *n* - *x* / *y* &#124; = 1/2. Když *r* = 0, *r* má stejné znaménko jako *x*.
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **zbytek,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **zbytek** vždy trvá dva **dvojité** argumenty a vrátí **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **zbytku** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **zbytek** vždy přebírá dva **dvojité** argumenty a vrací hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Povinná hlavička (C)|Povinné záhlaví (C++)|
+|Funkce|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |--------------|---------------------|-|
-|**zbytek**, **remainderf**, **remainderl**|\<math.h>|\<cmath> \<nebo math.h>|
+|**zbytek**, **remainderf –**, **zbytek**|\<Math. h>|\<cmath> nebo \<Math. h>|
 
-Informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,7 +110,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

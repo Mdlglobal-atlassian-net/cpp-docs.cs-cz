@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,19 +40,19 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341265"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919582"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
-Zkopíruje vícebajtový znak z jednoho řetězce do jiného řetězce. K dispozici jsou bezpečnější verze těchto funkcí. viz [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
+Zkopíruje vícebajtový znak z jednoho řetězce do jiného řetězce. K dispozici jsou bezpečnější verze těchto funkcí; viz [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,45 +70,45 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Dest*<br/>
-Zkopírujte cíl.
+*propojovací*<br/>
+Cíl kopírování.
 
 *src*<br/>
-Vícebajtový znak ke kopírování.
+Vícebajtový znak pro kopírování.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbccpy** zkopíruje jeden vícebajtový znak z *src* na *dest*.
+Funkce **_mbccpy** kopíruje jeden vícebajtový znak z *Src* na *cíl*.
 
-Tato funkce ověřuje její parametry. Pokud **_mbccpy** je předán ukazatel null pro *dest* nebo *src*, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL**.
+Tato funkce ověří své parametry. Pokud je **_mbccpy** předán ukazatel s hodnotou null pro *cíl* nebo *Src*, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL**.
 
-**_mbccpy** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí. **_mbccpy_l** je shodné s **_mbccpy** s tím rozdílem, že **_mbccpy_l** používá národní prostředí předané pro jakékoli chování závislé na národním prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_mbccpy** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí. **_mbccpy_l** je stejný jako **_mbccpy** s tím rozdílem, že **_mbccpy_l** používá národní prostředí předané pro jakékoli chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**Poznámka k zabezpečení** Použijte řetězec s ukončeným hodnotou null. Řetězec ukončený hodnotou null nesmí překročit velikost cílové vyrovnávací paměti. Další informace naleznete v [tématu Zabránění přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns). Problémy s přetečením vyrovnávací paměti jsou častou metodou systémového útoku, což vede k neoprávněnému zvýšení oprávnění.
+**Poznámka k zabezpečení** Použijte řetězec zakončený hodnotou null. Řetězec zakončený hodnotou null nesmí překročit velikost cílové vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns). Problémy s přetečením vyrovnávací paměti představují častější způsob útoku na systém, což vede k neoprávněnému zvýšení oprávnění.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy**|Mapuje na makro nebo vsazenou funkci.|**_mbccpy**|Mapuje na makro nebo vsazenou funkci.|
+|**_tccpy**|Mapuje se na makro nebo vloženou funkci.|**_mbccpy**|Mapuje se na makro nebo vloženou funkci.|
 |**_tccpy_l**|neuvedeno|**_mbccpy_l**|neuvedeno|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbccpy**|\<mbctype.h>|
-|**_mbccpy_l**|\<mbctype.h>|
+|**_mbccpy**|\<Mbctype. h>|
+|**_mbccpy_l**|\<Mbctype. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

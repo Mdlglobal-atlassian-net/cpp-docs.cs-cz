@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +35,19 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: 59af5360ed8d966629d5e46f77681631a521d502
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910824"
 ---
 # <a name="_getche-_getwche"></a>_getche, _getwche
 
-Získá znak z konzoly s echo.
+Získá znak z konzoly s odezvou.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,15 +58,15 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí přečtený znak. Neexistuje žádná chyba vrátit.
+Vrátí přečtený znak. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_getche** a **_getwche** číst jeden znak z konzoly s ozvěnou, což znamená, že znak je zobrazen v konzole. Žádná z těchto funkcí nelze použít ke čtení CTRL+C. Při čtení funkční klávesy nebo šipky musí být každá funkce volána dvakrát; první volání vrátí 0 nebo 0xE0 a druhé volání vrátí skutečný kód klíče.
+Funkce **_getche** a **_getwche** čtou jeden znak z konzoly s použitím příkazu echo, což znamená, že se znak zobrazí v konzole. Žádná z těchto funkcí nemůže být použita ke čtení CTRL + C. Při čtení klíče funkce nebo klávesy se šipkou musí být každá funkce volána dvakrát; první volání vrátí hodnotu 0 nebo 0xE0 a druhé volání vrátí skutečný kód klíče.
 
-Tyto funkce zamknout volající vlákno a jsou proto bezpečné pro přístup z více vláken. Pro verze bez zamykání viz [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
+Tyto funkce zamkne volající vlákno a jsou proto bezpečná pro přístup z více vláken. Neuzamykání verzí naleznete v tématu [_getche_nolock _getwche_nolock](getche-nolock-getwche-nolock.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -78,10 +78,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getche**|\<conio.h>|
-|**_getwche**|\<conio.h> \<nebo wchar.h>|
+|**_getche**|\<CONIO. h>|
+|**_getwche**|\<CONIO. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

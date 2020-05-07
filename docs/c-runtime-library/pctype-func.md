@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr100.dll
 - msvcr80.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 78562a29c89abe5b649444ae9223cf219488e009
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349197"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919237"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -46,15 +46,15 @@ Ukazatel na pole informací o klasifikaci znaků.
 
 ## <a name="remarks"></a>Poznámky
 
-Informace v tabulce klasifikace znaků jsou určeny pouze pro interní použití a používají `char`je různé funkce, které klasifikují znaky typu . Další informace naleznete `Remarks` v části [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+Informace v tabulce klasifikace znaků jsou pouze pro interní použití a jsou používány různými funkcemi, které klasifikují znaky typu `char`. Další informace najdete v `Remarks` části [_pctype, _pwctype, _wctype _mbctype _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|__pctype_func|ctype.h|
+|__pctype_func|CType. h|
 
 ## <a name="see-also"></a>Viz také
 

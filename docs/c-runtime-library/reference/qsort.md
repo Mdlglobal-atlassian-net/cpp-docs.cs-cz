@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 09de57e206eb6fd4a75a0a9444332136aeee0e9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338251"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913261"
 ---
 # <a name="qsort"></a>qsort
 
-Provádí rychlé řazení. K dispozici je bezpečnější verze této funkce. viz [qsort_s](qsort-s.md).
+Provede rychlé řazení. K dispozici je bezpečnější verze této funkce; viz [qsort_s](qsort-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,22 +56,22 @@ void qsort(
 ### <a name="parameters"></a>Parametry
 
 *base*<br/>
-Začátek cílového pole.
+Začátek cílového pole
 
-*Číslo*<br/>
-Velikost pole v prvcích.
+*Automatické*<br/>
+Velikost pole v elementech
 
-*Šířka*<br/>
-Velikost prvku v bajtů.
+*Délk*<br/>
+Velikost elementu v bajtech
 
-*Porovnat*<br/>
-Ukazatel na rutinu dodanou uživatelem, která porovnává dva prvky pole a vrací hodnotu, která určuje jejich vztah.
+*porovnán*<br/>
+Ukazatel na uživatelsky zadanou rutinu, která porovná dva prvky pole a vrátí hodnotu, která určuje jejich relaci.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **qsort** implementuje algoritmus rychlého řazení pro řazení pole *číselných* prvků, každý z *šířky* bajtů. *Základ* argumentu je ukazatel na základnu pole, které má být seřazeno. **qsort** přepíše toto pole pomocí seřazených prvků.
+Funkce **qsort** implementuje algoritmus rychlého řazení pro řazení pole *číselných* prvků, z každé *šířky* bajtů. *Základem* argumentu je ukazatel na základ pole, které má být seřazeno. **qsort** přepisuje toto pole pomocí seřazených prvků.
 
-**qsort** volá *rutinu porovnání* jednou nebo vícekrát během řazení a předá ukazatele na dva prvky pole při každém volání.
+**qsort** volá rutinu *porovnání* jednou nebo vícekrát během řazení a předá ukazatelům dva prvky pole při každém volání.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -79,25 +79,25 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Rutina porovná prvky a vrátí jednu z následujících hodnot.
 
-|Porovnat vrácenou hodnotu funkce|Popis|
+|Porovnat návratovou hodnotu funkce|Popis|
 |-----------------------------------|-----------------|
-|< 0|**elem1** méně než **elem2**|
+|< 0|**elem1** menší než **elem2**|
 |0|**elem1** ekvivalent **elem2**|
 |> 0|**elem1** větší než **elem2**|
 
-Pole je seřazeno v rostoucím pořadí, jak je definováno funkcí porovnání. Chcete-li seřadit pole v sestupném pořadí, obraťte pocit "větší než" a "menší než" ve funkci porovnání.
+Pole je seřazené ve vzestupném pořadí, jak je definováno funkcí porovnání. Chcete-li seřadit pole v klesajícím pořadí, obraťte se na výraz "větší než" a "menší než" v rámci funkce porovnání.
 
-Tato funkce ověřuje její parametry. Pokud *porovnání* nebo *číslo* je **NULL**, nebo pokud *base* je **NULL** a *číslo* je nenulová, nebo pokud *šířka* je menší než nula, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí a **errno** je nastavena na **EINVAL**.
+Tato funkce ověří své parametry. Pokud je **hodnota** *Compare* nebo *Number* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** se nastaví na **EINVAL**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h> \<a search.h>|
+|**qsort**|\<Stdlib. h> a \<Search. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -145,6 +145,6 @@ boy deserves every favor good
 
 ## <a name="see-also"></a>Viz také
 
-[Vyhledávání a řazení](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Hledání a řazení](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>
