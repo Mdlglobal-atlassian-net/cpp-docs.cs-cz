@@ -1,6 +1,6 @@
 ---
 title: _ismbblead, _ismbblead_l
-description: Popisuje _ismbblead a _ismbblead_l funkce knihovny Runtime (Microsoft C Runtime Library).
+description: Popisuje funkce knihovny CRT (Microsoft C Runtime Library) _ismbblead a _ismbblead_l.
 ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: ee3085d49a27f2f3c97c6578463cf3a0598b73c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7680793b71c4535ed75433ac98167e52a39896ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343582"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918670"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Testuje znak k určení, zda se jedná o úvodní bajt vícebajtového znaku.
+Testuje znak pro určení, zda se jedná o vedoucí bajt vícebajtového znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,47 +64,47 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*\
-Celé číslo, které má být testováno.
+*r*\
+Celé číslo, které se má testovat.
 
-*Národní prostředí*\
-Národní prostředí použít.
+*jazyka*\
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nenulovou hodnotu, pokud je celé číslo *c* prvním bajtem vícebajtového znaku.
+Vrací nenulovou hodnotu, pokud je celé číslo *c* první bajt vícebajtového znaku.
 
 ## <a name="remarks"></a>Poznámky
 
-Vícebajtové znaky se skládají z úvodního bajtu následovaného koncovým bajtem. Hlavní bajty se rozlišují podle toho, že jsou v určitém rozsahu pro danou znakovou sadu. Například pouze v znakové stránce 932 se v rozsahu bajtů zájemců pohybuje od 0x81 do 0x9F a 0xE0 - 0xFC.
+Vícebajtové znaky se skládají z vedoucího bajtu následovaného koncovým bajtem. Vedoucí bajty jsou odlišeny v určitém rozsahu pro danou znakovou sadu. Například pouze v kódové stránce 932 je v rozsahu od 0x81-0x9F a 0xE0-0xFC.
 
-**_ismbblead** používá aktuální národní prostředí pro chování závislé na národním prostředí. **_ismbblead_l** je identická s tím rozdílem, že místo toho používá národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_ismbblead** používá aktuální národní prostředí pro chování závislé na národním prostředí. **_ismbblead_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud národní prostředí je UTF-8, **_ismbblead** a **_ismbblead_l** vždy vrátí 0 (false), zda *c* je úvodní bajt nebo ne.
+Pokud je národní prostředí UTF-8, **_ismbblead** a **_ismbblead_l** vždycky vracet 0 (false) *, ať už je to vedoucí* bajt, nebo ne.
 
-**_ismbblead** a **_ismbblead_l** jsou specifické pro microsoft, nikoli součástí knihovny Standard C. Nedoporučujeme je používat tam, kde chcete přenosný kód. Pro kompatibilitu se standardem C použijte místo toho **mbrlen.**
+**_ismbblead** a **_ismbblead_l** jsou specifické pro společnost Microsoft, nikoli součástí standardní knihovny jazyka C. Nedoporučujeme je používat tam, kde chcete použít přenosný kód. V případě kompatibility Standard C použijte místo toho **mbrlen** .
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecných textů
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlead**|Vždy vrátí false|**_ismbblead**|Vždy vrátí false|
+|**_istlead**|Vždycky vrátí hodnotu false.|**_ismbblead**|Vždycky vrátí hodnotu false.|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_ismbblead**|\<mbctype.h> \<nebo mbstring.h>|\<ctype.h>,* \<limits.h \<>, stdlib.h>|
-|**_ismbblead_l**|\<mbctype.h> \<nebo mbstring.h>|\<ctype.h>,* \<limits.h \<>, stdlib.h>|
+|**_ismbblead**|\<Mbctype. h> nebo \<Mbstring. h>|\<CType. h>, * \<Limits. h> \<, Stdlib. h>|
+|**_ismbblead_l**|\<Mbctype. h> nebo \<Mbstring. h>|\<CType. h>, * \<Limits. h> \<, Stdlib. h>|
 
-\*Pro manifestové konstanty pro zkušební podmínky.
+\*Pro konstanty manifestu pro podmínky testu.
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)\
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)\
+[rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)\
 [mbrlen](mbrlen.md)

@@ -1,6 +1,6 @@
 ---
 title: calloc
-description: Funkce knihovny runtime C calloc přiděluje paměť s nulovou inicializací.
+description: Funkce běhové knihovny jazyka C calloc přiděluje paměť s nulovou inicializací.
 ms.date: 4/2/2020
 api_name:
 - calloc
@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: fb4f7d6dc059023d34cb0b811edf5dfb48cb7a34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333653"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918726"
 ---
 # <a name="calloc"></a>calloc
 
-Přidělí pole v paměti s prvky inicializovanými na 0.
+Přidělí pole v paměti prvky inicializovanými na hodnotu 0.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,45 +50,45 @@ void *calloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
-*Velikost*<br/>
-Délka v bajtů každého prvku.
+*hodnota*<br/>
+Délka v bajtech každého elementu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**calloc** vrátí ukazatel na přidělené místo. Úložný prostor, na který se vztahuje vrácená hodnota, je zaručeně vhodně zarovnán pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte typ přetypované na vrácenou hodnotu.
+**calloc** vrací ukazatel na přidělený prostor. Prostor úložiště, na který je odkazováno návratovou hodnotou, je zaručeně vhodně zarovnán pro úložiště libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte přetypování typu u vrácené hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **calloc** přiděluje úložný prostor pro pole *číselných* prvků, každý z bajtů *velikosti* délky. Každý prvek je inicializován na 0.
+Funkce **calloc** přiděluje prostor úložiště pro pole *číselných* prvků, přičemž každý z nich má délku *velikosti* bajtů. Každý prvek je inicializován na hodnotu 0.
 
-**calloc** nastaví **errno** na **ENOMEM,** pokud se nezdaří přidělení paměti nebo pokud požadované množství paměti překročí **_HEAP_MAXREQ**. Informace o tomto a dalších kódech chyb naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovede nebo pokud je velikost požadované paměti větší než **_HEAP_MAXREQ**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-V implementaci společnosti Microsoft, pokud *je číslo* nebo *velikost* nula, **calloc** vrátí ukazatel přiděleného bloku nenulové velikosti. Pokus o čtení nebo zápis prostřednictvím vráceného ukazatele vede k nedefinovanému chování.
+V případě implementace od společnosti Microsoft, pokud je hodnota *Number* nebo *Size* nula, vrátí **calloc** ukazatel na přidělený blok nenulové velikosti. Pokus o čtení nebo zápis prostřednictvím vráceného ukazatele vede k nedefinovanému chování.
 
-**calloc** používá funkci [c++ _set_new_mode](set-new-mode.md) k nastavení *nového režimu obslužné rutiny*. Nový režim obslužné rutiny označuje, zda je při selhání **calloc** volání nové rutiny obslužné rutiny nastavené [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **calloc** nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby při **calloc** nezdaří přidělit paměť, volá rutinu nové obslužné rutiny stejným způsobem, jako **nový** operátor, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí,
+**calloc** používá funkci C++ [_set_new_mode](set-new-mode.md) k nastavení *nového režimu obslužné rutiny*. Nový režim obslužné rutiny označuje, zda je při selhání **calloc** volat novou rutinu obslužné rutiny, jak je nastaveno [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **calloc** nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, že když **calloc** nepomůže přidělit paměť, volá novou rutinu obslužné rutiny stejným způsobem jako operátor **New** při neúspěchu ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
 
 ```C
 _set_new_mode(1);
 ```
 
-brzy ve vašem programu, nebo odkaz s *NEWMODE. OBJ* (viz [Možnosti odkazu](../../c-runtime-library/link-options.md)).
+v rané fázi programu nebo se připojte pomocí *NEWMODE. OBJ* (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
 
-Pokud je aplikace propojena s ladicí verzí knihoven c run-time, **calloc** se překládá na [_calloc_dbg](calloc-dbg.md). Další informace o tom, jak haldy je spravována během procesu ladění, naleznete [v tématu HALDA ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí knihoven C Runtime, **calloc** překládá na [_calloc_dbg](calloc-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** je `__declspec(noalias)` `__declspec(restrict)`označen a , což znamená, že funkce je zaručeno, že nezmění globální proměnné a že vrácený ukazatel není aliased. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
+**calloc** je `__declspec(noalias)` označena `__declspec(restrict)`jako, což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, není aliasem. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**calloc**|\<stdlib.h> \<a malloc.h>|
+|**calloc**|\<Stdlib. h> a \<. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -120,6 +120,6 @@ Allocated 40 long integers
 ## <a name="see-also"></a>Viz také
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
-[Zdarma](free.md)<br/>
+[dost](free.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

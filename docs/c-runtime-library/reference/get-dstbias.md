@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345233"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919370"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
-Načte posun letního času v sekundách.
+Načte časový posun letního času v sekundách.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,30 +52,30 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
+*Second*<br/>
 Posun v sekundách letního času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud je úspěšná, nebo hodnota **errno,** pokud dojde k chybě.
+Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_get_dstbias** načte počet sekund v letním čase jako celé číslo. Pokud letní čas je v platnosti, výchozí posun je 3600 sekund, což je počet sekund v jedné hodině (i když několik oblastí sledovat dvouhodinový posun).
+Funkce **_get_dstbias** načítá počet sekund v letním čase jako celé číslo. Pokud je aktivní letní čas, je výchozí posun 3600 sekund, což je počet sekund v jedné hodině (i když pár oblastí sleduje posun o dvě hodiny).
 
-Pokud je *hodnota 000 000* **000**000 , je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
+Pokud *seconds* má sekundy **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-Doporučujeme použít tuto funkci namísto **_dstbias** maker nebo zastaralé funkce **__dstbias**.
+Tuto funkci doporučujeme použít místo **_dstbias** makra nebo zastaralé funkce **__dstbias**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_dstbias**|\<time.h>|
+|**_get_dstbias**|\<Time. h>|
 
-Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

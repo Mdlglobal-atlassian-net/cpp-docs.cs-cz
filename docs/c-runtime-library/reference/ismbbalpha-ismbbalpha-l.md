@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: e7ff45c9d43a01d89d7ad2e9bac004ca1dcffd9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343709"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917501"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
-Určuje, zda je zadaný vícebajtova znak alfa.
+Určuje, zda je zadaný vícebajtový znak alfa.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,38 +58,38 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo, které má být testováno.
+*r*<br/>
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbalpha** vrátí nenulovou hodnotu, pokud výraz:
+**_ismbbalpha** vrací nenulovou hodnotu, pokud výraz:
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-je nenulová pro *c*nebo 0, pokud tomu tak není. **_ismbbalpha** používá aktuální národní prostředí pro libovolné nastavení znaků závislých na národním prostředí. **_ismbbalpha_l** je totožný s tím rozdílem, že používá národní prostředí předané palců
+je nenulové pro *c*nebo 0, pokud není. **_ismbbalpha** používá aktuální národní prostředí pro všechna nastavení znaků závislá na národním prostředí. **_ismbbalpha_l** je totožný s tím rozdílem, že používá předané národní prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbalpha**|\<mbctype.h>|
-|**_ismbbalpha_l**|\<mbctype.h>|
+|**_ismbbalpha**|\<Mbctype. h>|
+|**_ismbbalpha_l**|\<Mbctype. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
+[Rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338537"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919325"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
-Vytisknout chybovou zprávu.
+Vytiskne chybovou zprávu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,41 +59,41 @@ void _wperror(
 
 ### <a name="parameters"></a>Parametry
 
-*Zprávu*<br/>
-Zpráva řetězce k tisku.
+*Zpráva*<br/>
+Zpráva řetězce k vytištění
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **perror** vytiskne chybovou zprávu **společnosti stderr**. **_wperror** je širokoznaková verze **_perror**; argument *zprávy* **_wperror** je řetězec s širokým znakem. **_wperror** a **_perror** se chovají stejně jinak.
+Funkce **pError** vytiskne chybovou zprávu do **stderr**. **_wperror** je verze **_perror**s velkým znakem; Argument *zprávy* , který je **_wperror** , je řetězec s velkým znakem. **_wperror** a **_perror** se chovají identicky jinak.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror**|**pchyba**|**pchyba**|**_wperror**|
+|**_tperror**|**pError**|**pError**|**_wperror**|
 
-*zpráva* je vytištěna jako první, následovaná dvojtečkou, potom chybovou zprávou systému pro poslední volání knihovny, které chybu vytvořilo, a nakonec znakem nového řádku. Pokud *je zpráva* ukazatel null nebo ukazatel na nulový řetězec, **perror** vytiskne pouze systémovou chybovou zprávu.
+*zpráva* je vytištěna jako první, za kterou následuje dvojtečka, potom chybovou zprávou systému pro poslední volání knihovny, které vytvořilo chybu, a nakonec pomocí znaku nového řádku. Pokud je *zpráva* ukazatel s hodnotou null nebo ukazatelem na řetězec s hodnotou null, **pError** vytiskne pouze systémovou chybovou zprávu.
 
-Číslo chyby je uloženo v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definované v ERRNO. H). Systémové chybové zprávy jsou přístupné prostřednictvím proměnné [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv seřazených podle čísla chyby. **perror** vytiskne příslušnou chybovou zprávu pomocí hodnoty **errno** jako indexu, který **má _sys_errlist**. Hodnota proměnné [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definována jako maximální počet prvků v **poli _sys_errlist.**
+Číslo chyby je uloženo v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definováno v errno. H). K systémovým chybovým zprávám se dostanete prostřednictvím proměnné [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), což je pole zpráv seřazené podle čísla chyby. **pError** vytiskne příslušnou chybovou zprávu pomocí hodnoty **errno** jako indexu pro **_sys_errlist**. Hodnota proměnné [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je definována jako maximální počet prvků v poli **_sys_errlist** .
 
-Pro přesné výsledky volání **perror** ihned po knihovny rutina vrátí s chybou. V opačném případě mohou následná volání přepsat hodnotu **errno.**
+Pro přesné výsledky volejte **pError** ihned poté, co rutina knihovny vrátí chybu. V opačném případě mohou další volání přepsat hodnotu **errno** .
 
-V operačním systému Windows některé hodnoty **errno** uvedené v ERRNO. H jsou nevyužité. Tyto hodnoty jsou vyhrazeny pro použití operačním systémem UNIX. Seznam hodnot **errno** používaných operačním systémem Windows naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) **perror** vytiskne prázdný řetězec pro všechny **hodnoty errno,** které tyto platformy nepoužívají.
+V operačním systému Windows některé hodnoty **errno** jsou uvedené v errno. H se nepoužívá. Tyto hodnoty jsou vyhrazené pro použití v operačním systému UNIX. Seznam hodnot **errno** používaných operačním systémem Windows najdete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **pError** vytiskne prázdný řetězec pro všechny **errno** hodnoty, které tyto platformy nepoužívají.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**pchyba**|\<stdio.h> \<nebo stdlib.h>|
-|**_wperror**|\<stdio.h> \<nebo wchar.h>|
+|**pError**|\<stdio. h> nebo \<Stdlib. h>|
+|**_wperror**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -148,4 +148,4 @@ _strerror says open failed: No such file or directory
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror, _strerror, \__wcserror, _wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror –, _strerror _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

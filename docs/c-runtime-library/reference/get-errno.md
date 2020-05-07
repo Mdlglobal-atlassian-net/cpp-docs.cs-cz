@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f693655ecd1eb0122577446e39d4188703674419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345182"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919344"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -49,18 +49,18 @@ errno_t _get_errno(
 
 ### <a name="parameters"></a>Parametry
 
-*pHodnota*<br/>
-Ukazatel na celé číslo, které má být vyplněno aktuální hodnotou proměnné **errno.**
+*pValue*<br/>
+Ukazatel na celé číslo, který má být vyplněn aktuální hodnotou proměnné **errno** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu, pokud je úspěšná; kód chyby při selhání. Pokud je *hodnota pValue* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
+Vrátí nulu v případě úspěchu; chybový kód při selhání. Pokud *pValue* má PValue **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Možné hodnoty **errno** jsou definovány v Errno.h. Viz také [errno Konstanty](../../c-runtime-library/errno-constants.md).
+Možné hodnoty **errno** jsou definované v errno. h. Podívejte se také na [errno konstanty](../../c-runtime-library/errno-constants.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="example"></a>Příklad
 
@@ -90,11 +90,11 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_get_errno**|\<stdlib.h>|\<errno.h>|
+|**_get_errno**|\<Stdlib. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

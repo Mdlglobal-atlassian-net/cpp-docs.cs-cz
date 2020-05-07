@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: c8a97e99711a2053a26ae850c09c82a4342cda3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919712"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
 Vytvoří a spustí nový proces.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,56 +69,56 @@ intptr_t _wspawnvpe(
 
 ### <a name="parameters"></a>Parametry
 
-*Režimu*<br/>
-Režim spuštění pro volání procesu
+*Mode*<br/>
+Režim spuštění pro volající proces
 
 *cmdname*<br/>
-Cesta k provedení souboru
+Cesta k souboru, který se má provést
 
 *argv*<br/>
-Pole ukazatelů na argumenty. Argument *argv*[0] je obvykle ukazatel na cestu v reálném režimu nebo na název programu v chráněném režimu a *argv*[1] přes *argv*[**n**] jsou ukazatele na řetězce znaků tvořící nový seznam argumentů. Argument *argv*[**n** +1] musí být ukazatelem **NULL,** který označuje konec seznamu argumentů.
+Pole ukazatelů na argumenty. Argument *argv*[0] je obvykle ukazatel na cestu v reálném režimu nebo v názvu programu v chráněném režimu. *argv*[1] až *argv*[**n**] jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Argument *argv*[**n** + 1] musí být ukazatel s **hodnotou null** k označení konce seznamu argumentů.
 
 *envp*<br/>
 Pole ukazatelů na nastavení prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota ze synchronní **_spawnvpe** nebo **_wspawnvpe** (**_P_WAIT** určené pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronní **_spawnvpe** nebo **_wspawnvpe** **(_P_NOWAIT** nebo **_P_NOWAITO** určené pro *režim)* je popisovač procesu. Stav ukončení je 0, pokud proces normálně ukončen. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud proces tření konkrétně volá **rutinu ukončení** s nenulovým argumentem. Pokud nový proces explicitně nenastavil kladný stav ukončení, kladný stav ukončení označuje abnormální ukončení s přerušením nebo přerušením. Vrácená hodnota -1 označuje chybu (nový proces není spuštěn). V tomto případě je **chybné** číslo nastaveno na jednu z následujících hodnot:
+Návratová hodnota z synchronního **_spawnvpe** nebo **_wspawnvpe** (**_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnvpe** nebo **_wspawnvpe** (**_P_NOWAIT** nebo **_P_NOWAITO** zadaná pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V takovém případě je **errno** nastaveno na jednu z následujících hodnot:
 
 |||
 |-|-|
-| **E2BIG** | Seznam argumentů přesahuje 1024 bajtů. |
-| **EINVAL** | argument *mode* je neplatný. |
+| **E2BIG** | Seznam argumentů překračuje 1024 bajtů. |
+| **EINVAL** | Argument *režimu* je neplatný. |
 | **ENOENT** | Soubor nebo cesta nebyla nalezena. |
 | **ENOEXEC** | Zadaný soubor není spustitelný nebo má neplatný formát spustitelného souboru. |
 | **ENOMEM** | K provedení nového procesu není k dispozici dostatek paměti. |
 
-Další informace o těchto a dalších návratových kódech naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vytvoří a spustí nový proces, předávání pole ukazatelů na argumenty příkazového řádku a pole ukazatelů na nastavení prostředí. Tyto funkce používají proměnnou prostředí **PATH** k vyhledání souboru ke spuštění.
+Každá z těchto funkcí vytvoří a spustí nový proces, předá pole ukazatelů na argumenty příkazového řádku a pole ukazatelů do nastavení prostředí. Tyto funkce používají proměnnou prostředí **path** k vyhledání souboru, který má být spuštěn.
 
-Tyto funkce ověřují jejich parametry. Pokud *buď cmdname* nebo *argv* je ukazatel null, nebo pokud *argv* odkazuje na ukazatel null nebo *argv*[0] je prázdný řetězec, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, tyto funkce nastavit **errno** **eINVAL**a vrátit -1. Žádný nový proces je plodil.
+Tyto funkce ověřují své parametry. Pokud je buď *cmdname* nebo *argv* ukazatel s hodnotou null, nebo pokud *argv* odkazuje na ukazatel s hodnotou null, nebo *argv*[0] je prázdný řetězec, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL**a vrátí-1. Nevytvoří se žádný nový proces.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_spawnvpe**|\<stdio.h> \<nebo process.h>|
-|**_wspawnvpe**|\<stdio.h> \<nebo wchar.h>|
+|**_spawnvpe**|\<stdio. h> nebo \<Process. h>|
+|**_wspawnvpe**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad v [_spawn, _wspawn funkce](../../c-runtime-library/spawn-wspawn-functions.md).
+Podívejte se na příklad v [_spawn _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Přerušení](abort.md)<br/>
+[přerušit](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, _wexec funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

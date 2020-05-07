@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,16 +45,16 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-ms.openlocfilehash: 139453b5f03af2b5ec02db715630adf1f6715716
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 70a370068ca05c430845a8eba83a73498384b067
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343869"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917590"
 ---
 # <a name="isdigit-iswdigit-_isdigit_l-_iswdigit_l"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
-Určuje, zda celé číslo představuje desetinný znak.
+Určuje, zda celočíselná hodnota představuje znak desítkové číslice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,44 +77,44 @@ int _iswdigit_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo k testování.
+*r*<br/>
+Celé číslo k otestování.
 
-*Národní prostředí*<br/>
+*locale*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou *hodnotu,* pokud c je konkrétní reprezentace desetinného znaku. **isdigit** vrátí nenulovou hodnotu, pokud *c* je desetinná číslice (0 - 9). **iswdigit** vrátí nenulovou *hodnotu,* pokud c je široký znak, který odpovídá desetinnému znaku. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje zkušební podmínku.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace znaku desítkové číslice. hodnota- **číslice** vrátí nenulovou hodnotu, pokud je *c* desítková číslice (0-9). **iswdigit** vrací nenulovou hodnotu, pokud je *c* je celosvětový znak, který odpovídá znaku desítkové číslice. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
 
-Verze těchto funkcí, které mají **_l** příponu použít národní prostředí, které je předáno namísto aktuálního národního prostředí pro jejich chování závislé na národním prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , používají národní prostředí, které je předáno namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isdigit** a **_isdigit_l** je nedefinována, pokud *c* není EOF nebo v rozsahu 0 až 0xFF, včetně. Při ladění CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolat kontrolní výraz.
+Chování funkce- **číslice** a **_isdigit_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istdigit**|**isdigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit**|
+|**_istdigit**|**IsDigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit**|
 |**_istdigit_l**|**_isdigit_l**|[_ismbcdigit_l](ismbcalnum-functions.md)|**_iswdigit_l**|
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isdigit**|\<ctype.h>|
-|**iswdigit**|\<ctype.h> \<nebo wchar.h>|
-|**_isdigit_l**|\<ctype.h>|
-|**_iswdigit_l**|\<ctype.h> \<nebo wchar.h>|
+|**IsDigit**|\<CType. h>|
+|**iswdigit**|\<CType. h> nebo \<WCHAR. h>|
+|**_isdigit_l**|\<CType. h>|
+|**_iswdigit_l**|\<CType. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[is, isw Rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
+[je, rutiny ISW](../../c-runtime-library/is-isw-routines.md)<br/>

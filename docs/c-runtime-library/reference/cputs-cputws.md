@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348374"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917604"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Vloží řetězec do konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,20 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
+*str*<br/>
 Výstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, **vrátí _cputs** 0. Pokud funkce selže, vrátí nenulovou hodnotu.
+V případě úspěchu **_cputs** vrátí hodnotu 0. Pokud funkce dojde k chybě, vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cputs** zapíše řetězec s ukončeným hodnotou null, na který str ukazuje *přímo* do konzoly. Kombinace zpětného kanálu řádku vozíku (CR-LF) není automaticky připojena k řetězci.
+Funkce **_cputs** zapisuje řetězec zakončený hodnotou null, na který ukazuje *str* přímo do konzoly. Kombinace návratového kanálu návratového řádku (CR-LF) není automaticky připojena k řetězci.
 
-Tato funkce ověřuje jeho parametr. Pokud *str* je **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, **errno** je nastavena na **EINVAL** a -1 je vrácena.
+Tato funkce ověří svůj parametr. Pokud je parametr *str* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí-1.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -86,16 +86,16 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_cputs**|\<conio.h>|\<errno.h>|
-|**_cputws**|\<conio.h>|\<errno.h>|
+|**_cputs**|\<CONIO. h>|\<errno. h>|
+|**_cputws**|\<CONIO. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

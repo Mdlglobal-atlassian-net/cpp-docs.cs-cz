@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 5a352338f84c9f5dd7dc52099aed1de9aa26c09e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344805"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919648"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
@@ -65,18 +65,18 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
+*Stream*<br/>
 Vstupní datový proud.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Viz [getc, getwc](getc-getwc.md).
+Viz [getc –, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou identické s **getc** a **getwc** s tím rozdílem, že neuzamknou volající vlákno. Mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+Tyto funkce jsou stejné jako **getc –** a **getwc** s tím rozdílem, že neblokují volající vlákno. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -88,10 +88,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**getc_nolock**|\<stdio.h>|
-|**getwc_nolock**|\<stdio.h> \<nebo wchar.h>|
+|**getc_nolock**|\<stdio. h>|
+|**getwc_nolock**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-### <a name="input-crt_getc_nolocktxt"></a>Vstup: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Vstup: crt_getc_nolock. txt
 
 ```Input
 Line the first.

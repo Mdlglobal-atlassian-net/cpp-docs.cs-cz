@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 0ee61ffe6b9aabb4a8bffb803c492905d45a5374
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63d456288e978c79b4e0f4e67f9a4b2318bf0417
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347231"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920124"
 ---
 # <a name="_fflush_nolock"></a>_fflush_nolock
 
-Vyprázdní datový proud bez uzamčení vlákna.
+Vyprázdní datový proud bez blokování vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,8 +51,8 @@ int _fflush_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -60,17 +60,17 @@ Viz [fflush](fflush.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je neblokovací verze **fflush**. Je totožný s **fflush** s tím rozdílem, že není chráněn před rušením jinými vlákny. Může být rychlejší, protože nevzniká režie uzamčení jiných vláken. Tuto funkci používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde rozsah volání již zpracovává izolaci vlákna.
+Tato funkce je neuzamknutá verze **fflush**. Je totožný s **fflush** s tím rozdílem, že není chráněna před rušením jinými vlákny. Může být rychlejší, protože nevzniká režie na uzamykání jiných vláken. Tuto funkci použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fflush_nolock**|\<stdio.h>|
+|**_fflush_nolock**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

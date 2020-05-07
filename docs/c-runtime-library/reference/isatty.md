@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343907"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919773"
 ---
 # <a name="_isatty"></a>_isatty
 
-Určuje, zda je popisovač souboru přidružen k znakovému zařízení.
+Určuje, zda je popisovač souboru přidružen ke znakovým zařízením.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,32 +48,32 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
-Popisovač souboru, který odkazuje na zařízení, které má být testováno.
+*FD*<br/>
+Popisovač souboru, který odkazuje na zařízení, které se má testovat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_isatty** vrátí nenulovou hodnotu, pokud je popisovač přidružen k znakovému zařízení. V opačném případě **vrátí _isatty** 0.
+**_isatty** vrátí nenulovou hodnotu, pokud je popisovač přidružen ke znakovým zařízením. V opačném případě **_isatty** vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_isatty** určuje, zda je *fd* přidruženkznakovému zařízení (terminál, konzola, tiskárna nebo sériový port).
+Funkce **_isatty** určuje, zda je *FD* přidružen ke znakovým zařízením (terminál, konzola, tiskárna nebo sériový port).
 
-Tato funkce ověřuje parametr *fd.* Pokud *fd* je chybný ukazatel souboru, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí 0 a nastaví **errno** na **EBADF**.
+Tato funkce ověří parametr *FD* . Pokud je *FD* špatný ukazatel na soubor, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu 0 a nastaví **errno** na **EBADF**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_isatty**|\<io.h>|
+|**_isatty**|\<IO. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

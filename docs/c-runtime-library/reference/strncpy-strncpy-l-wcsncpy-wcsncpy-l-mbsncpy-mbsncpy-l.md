@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -68,19 +68,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5e5ab815e95c1b8ee03cac86d5c3355874f8860b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919283"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
-Zkopírujte znaky jednoho řetězce do druhého. K dispozici jsou bezpečnější verze těchto funkcí. viz [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
+Zkopírujte znaky jednoho řetězce do jiného. K dispozici jsou bezpečnější verze těchto funkcí; viz [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** a **_mbsncpy_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** a **_mbsncpy_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -162,61 +162,61 @@ unsigned char *_mbsncpy_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Cílový řetězec.
+Cílový řetězec
 
 *strSource*<br/>
-Zdrojový řetězec.
+Zdrojový řetězec
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků, které mají být zkopírovány.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *strDest*. Žádná vrácená hodnota je vyhrazena k označení chyby.
+Vrátí *strDest*. Žádná návratová hodnota není vyhrazena pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **strncpy** zkopíruje počáteční *počet* znaků *strSource* do *strDest* a vrátí *strDest*. Pokud *počet* je menší než nebo rovna délka *strSource*, nulový znak není připojen automaticky zkopírovaný řetězec. Pokud je *počet* větší než délka *strSource*, cílový řetězec je doplněn nulovými znaky až do *délky .* Chování **strncpy** není definováno, pokud se zdrojové a cílové řetězce překrývají.
+Funkce **strncpy** zkopíruje počáteční *počet* znaků *StrSource* na *strDest* a vrátí *strDest*. Pokud je *počet* menší nebo roven délce *strSource*, znak null se automaticky nepřipojí k zkopírovanému řetězci. Pokud je *počet* větší než délka *strSource*, cílový řetězec je doplněn o hodnoty null až do *počtu*délek. Chování **strncpy** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
 > [!IMPORTANT]
-> **strncpy** nekontroluje dostatek místa v *strDest*; to umožňuje potenciální příčinou přetečení vyrovnávací paměti. Argument *počet* omezuje počet zkopírovaných znaků; nejedná se o omezení velikosti *strDest*. Prohlédněte si následující příklad. Další informace naleznete v [tématu Zabránění přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncpy** nekontroluje dostatek místa v *strDest*; Díky tomu je možné způsobit přetečení vyrovnávací paměti. Argument *Count* omezuje počet zkopírovaných znaků. Nejedná se o omezení velikosti *strDest*. Prohlédněte si následující příklad. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Pokud *strDest* nebo *strSource* je **ukazatel NULL,** nebo pokud *počet* je menší nebo rovno nule, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce vrátí -1 a nastaví **errno** na **EINVAL**.
+Pokud je *strDest* nebo *StrSource* ukazatel s **hodnotou null** , nebo pokud je *počet* menší nebo roven nule, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-**wcsncpy** a **_mbsncpy** jsou širokoúhlé a vícebajtové verze **strncpy**. Argumenty a vrácená hodnota **wcsncpy** a **_mbsncpy** se odpovídajícím způsobem liší. Těchto šest funkcí se chovají stejně jinak.
+**wcsncpy** a **_mbsncpy** jsou verze **strncpy**pro velké znaky a vícebajtové znaky. Argumenty a návratové hodnoty **wcsncpy** a **_mbsncpy** se odpovídajícím způsobem liší. Tyto šest funkcí se chová stejně jinak.
 
-Verze těchto funkcí s **příponou _l** jsou identické s tím rozdílem, že používají národní prostředí předané namísto aktuálního národního prostředí pro jejich chování závislé na národním prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** a **_wcsncpy_l** nemají závislost na národním prostředí; jsou poskytovány pouze pro **_tcsncpy_l** a nejsou určeny k přímému volání.
+> **_strncpy_l** a **_wcsncpy_l** nemají žádnou závislost národního prostředí; jsou k dispozici pouze pro **_tcsncpy_l** a nejsou určeny pro přímé volání.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncpy**|\<string.h>|
-|**wcsncpy**|\<string.h> \<nebo wchar.h>|
-|**_mbsncpy** **, _mbsncpy_l**|\<mbstring.h>|
+|**strncpy**|\<String. h>|
+|**wcsncpy**|\<String. h> nebo \<WCHAR. h>|
+|**_mbsncpy** **_mbsncpy_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě platformy naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě platforem najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití **strncpy** a jak může být zneužita způsobit chyby programu a problémy se zabezpečením. Kompilátor generuje upozornění pro každé volání **strncpy** podobné **crt_strncpy_x86.c(15): upozornění C4996: 'strncpy': Tato funkce nebo proměnná může být nebezpečné. Zvažte použití strncpy_s místo. Chcete-li zakázat vyřazení, použijte _CRT_SECURE_NO_WARNINGS. Podrobnosti najdete v nápovědě online.**
+Následující příklad demonstruje použití **strncpy** a způsob, jakým může být nezpůsobení chyby při selhání programu a problémy se zabezpečením. Kompilátor vygeneruje upozornění pro každé volání **strncpy** podobně jako **crt_strncpy_x86. c (15): Warning C4996: ' strncpy ': Tato funkce nebo proměnná může být nebezpečná. Místo toho zvažte použití strncpy_s. Pokud chcete zakázat zastaralost, použijte _CRT_SECURE_NO_WARNINGS. Podrobnosti najdete v online nápovědě.**
 
 ```C
 // crt_strncpy_x86.c
@@ -281,12 +281,12 @@ dogs like to chase cars.
 Buffer overrun: s = 'ars.' (should be 'test')
 ```
 
-Rozložení automatických proměnných a úroveň detekce chyb a ochrany kódu se mohou lišit podle změněného nastavení kompilátoru. Tento příklad může mít různé výsledky při zabudování v jiných prostředích kompilace nebo s jinými možnostmi kompilátoru.
+Rozložení automatických proměnných a úroveň detekce chyb a ochrany kódu se může lišit se změněným nastavením kompilátoru. Tento příklad může mít různé výsledky při sestavení v jiných prostředích kompilace nebo s dalšími možnostmi kompilátoru.
 
 ## <a name="see-also"></a>Viz také
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

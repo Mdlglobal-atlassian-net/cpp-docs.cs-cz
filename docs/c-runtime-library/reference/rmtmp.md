@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917636"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -51,29 +51,29 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_rmtmp** vrátí počet dočasných souborů uzavřených a odstraněných.
+**_rmtmp** vrátí počet uzavřených a odstraněných dočasných souborů.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_rmtmp** vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odstraní pouze ty soubory vytvořené **tmpfile**; používat pouze ve stejném adresáři, ve kterém byly vytvořeny dočasné soubory.
+Funkce **_rmtmp** vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odebere pouze soubory vytvořené pomocí **tmpfile**; Používejte ho jenom ve stejném adresáři, ve kterém se vytvořily dočasné soubory.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_rmtmp**|\<stdio.h>|
+|**_rmtmp**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad pro [tmpfile](tmpfile.md).
+Podívejte se na příklad pro [tmpfile](tmpfile.md).
 
 ## <a name="see-also"></a>Viz také
 

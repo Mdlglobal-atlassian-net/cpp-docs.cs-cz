@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917842"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
-Odstraňte soubor.
+Odstraní soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,24 +60,24 @@ int _wremove(
 
 ### <a name="parameters"></a>Parametry
 
-*Cestu*<br/>
-Cesta k odebrání souboru.
+*dílčí*<br/>
+Cesta k souboru, který se má odebrat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí hodnotu 0, pokud je soubor úspěšně odstraněn. V opačném případě vrátí -1 a nastaví **errno** buď **eACCES** označují, že cesta určuje soubor jen pro čtení, určuje adresář nebo je soubor otevřen, nebo **ENOENT** označuje, že název souboru nebo cesta nebyla nalezena.
+Každá z těchto funkcí vrátí hodnotu 0, pokud je soubor úspěšně odstraněn. V opačném případě vrátí hodnotu-1 a nastaví **errno** buď na **EACCES** , aby označoval, že cesta Určuje soubor, který je jen pro čtení, určí adresář, nebo je soubor otevřen nebo **ENOENT** , aby označoval, že název souboru nebo cesta nebyla nalezena.
 
-Další informace o těchto a dalších návratových kódech naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **remove** odstraní soubor určený *cestou.* **_wremove** je širokoznaková verze **_remove**; argument *cesty* k **_wremove** je řetězec s širokým znakem. **_wremove** a **_remove** se chovají stejně jinak. Všechny popisovače souboru musí být před odstraněním uzavřeny.
+Funkce **Remove** odstraní soubor určený *cestou.* **_wremove** je verze **_remove**s velkým znakem; Argument *cesty* pro **_wremove** je řetězec s velkým znakem. **_wremove** a **_remove** se chovají identicky jinak. Aby bylo možné odstranit všechny popisovače souboru, je třeba jej zavřít.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tremove**|**remove**|**remove**|**_wremove**|
 
@@ -85,14 +85,14 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**remove**|\<stdio.h> \<nebo io.h>|
-|**_wremove**|\<stdio.h> \<nebo wchar.h>|
+|**remove**|\<stdio. h> nebo \<IO. h>|
+|**_wremove**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -111,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_removetxt"></a>Vstup: crt_remove.txt
+### <a name="input-crt_removetxt"></a>Vstup: crt_remove. txt
 
 ```Input
 This file will be deleted.

@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332589"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918193"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Vynásobí číslo s plovoucí desetinnou desetinnou hodnotou integrální mocninou FLT_RADIX.
+Vynásobí číslo s plovoucí desetinnou čárkou integrálním výkonem FLT_RADIX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -104,33 +104,33 @@ long double scalblnl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou táceckou.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou.
 
-*Exp*<br/>
-Integer exponent.
+*oček*<br/>
+Celočíselný exponent.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Funkce scalbn** vrátí hodnotu *x* \* **FLT_RADIX**<sup>exp</sup> při úspěchu. Při přetečení (v závislosti na znaménku *x*) **vrátí scalbn** +/- **HUGE_VAL**; hodnota **errno** je nastavena na **ERANGE**.
+Funkce **scalbn –** vrací hodnotu *x* \* **FLT_RADIX**<sup>exp</sup> v případě úspěchu. Při přetečení (v závislosti na znaménku *x*) **scalbn –** vrátí +/- **HUGE_VAL**; hodnota **errno** je nastavená na **ERANGE**.
 
-Další informace o **chybách** a možných hodnotách vrácení chyb naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o **errno** a možných návratových hodnotách chyb naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**FLT_RADIX** je \<definován v float.h> jako nativní radix s plovoucí desetinnou desetinnou desetinnou desetinnou desetinnou desetinnou. v binárních systémech má hodnotu 2 a **scalbn** je ekvivalentní [ldexp](ldexp.md).
+**FLT_RADIX** je definována v \<float. h> jako nativní Číselná soustava s plovoucí desetinnou čárkou. v binárních systémech má hodnotu 2 a **scalbn –** je ekvivalentem [ldexp –](ldexp.md).
 
-Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **scalbn** a **scalbln,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** typy. V programu C **scalbn** vždy trvá **double** a **int** a vrátí **double**a **scalbln** vždy trvá **dvojité** a **dlouhé** a vrátí **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **scalbn –** a **scalbln** , které přebírají a vracejí typ **float** nebo **Long** **Double** . V programu v jazyce C **scalbn –** vždycky přebírá **Double** a **int** a vrací **Double**a **scalbln** vždycky přebírá **Double** a **Long** a vrací hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn –**, **scalbnf –**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<Math. h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

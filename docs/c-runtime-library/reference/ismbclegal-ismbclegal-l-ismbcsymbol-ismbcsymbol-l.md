@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,19 +50,19 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 5f7dacbb131094164c5256171dd54ab3ea94cda4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342969"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919719"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
-Zkontroluje, zda je vícebajtový znak právnickým znakem nebo znakem symbolu.
+Kontroluje, zda je vícebajtový znak právní nebo znaková značka.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,48 +85,48 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být testován.
+*r*<br/>
+Testovaný znak.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud znak splňuje testovací podmínku, nebo 0, pokud tomu tak není. Pokud *c*<= 255 a existuje odpovídající **rutina _ismbb** (například **_ismbcalnum** odpovídá **_ismbbalnum**), výsledkem je vrácená hodnota odpovídající **_ismbb** rutiny.
+Každá z těchto rutin vrací nenulovou hodnotu, pokud znak splňuje testovací podmínku, nebo 0, pokud tomu tak není. Pokud *c*<= 255 a existuje odpovídající rutina **_ismbb** (například **_ismbcalnum** odpovídá **_ismbbalnum**), výsledkem je návratová hodnota odpovídající **_ismbb** rutiny.
 
 ## <a name="remarks"></a>Poznámky
 
 Každá z těchto funkcí testuje daný vícebajtový znak pro danou podmínku.
 
-Verze těchto funkcí s **příponou _l** jsou identické s tím rozdílem, že používají národní prostředí předané namísto aktuálního národního prostředí pro jejich chování závislé na národním prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-|Rutina|Zkušební podmínka|Příklad znakové stránky 932|
+|Rutina|Testovací podmínka|Příklad znakové stránky 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Platný vícebajtový|Vrátí nenulovou hodnotu pouze v případě, že první bajt *c* je v rozsahu 0x81 - 0x9F nebo 0xE0 - 0xFC, zatímco druhý bajt je v rozsahu 0x40 - 0x7E nebo 0x80 - FC.|
-|**_ismbcsymbol**|Symbol vícebajtů|Vrátí nenulovou hodnotu pouze v případě, že 0x8141<=*c*<=0x81AC.|
+|**_ismbclegal**|Platný vícebajtový|Vrátí nenulovou hodnotu, pokud je první bajt *jazyka c* v rozsahu 0X81-0X9f nebo 0XE0-0xFC, zatímco druhý bajt je v rozsahu 0X40-0x7E nebo 0X80-FC.|
+|**_ismbcsymbol**|Vícebajtový symbol|Vrátí nenulovou hodnotu pouze v případě, že 0x8141<=*c*<= 0x81AC.|
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlegal**|Vždy vrátí false|**_ismbclegal**|Vždy vrátí false.|
-|**_istlegal_l**|Vždy vrátí false|**_ismbclegal_l**|Vždy vrátí false.|
+|**_istlegal**|Vždycky vrátí hodnotu false.|**_ismbclegal**|Vždy vrátí hodnotu false.|
+|**_istlegal_l**|Vždycky vrátí hodnotu false.|**_ismbclegal_l**|Vždy vrátí hodnotu false.|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbclegal** **_ismbclegal_l**|\<mbstring.h>|
-|**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring.h>|
+|**_ismbclegal** **_ismbclegal_l**|\<Mbstring. h>|
+|**_ismbcsymbol** **_ismbcsymbol_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc – rutiny](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw Rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
+[je, rutiny ISW](../../c-runtime-library/is-isw-routines.md)<br/>
+[Rutiny _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

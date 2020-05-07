@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 81932aa3ca6af01ecc5f6ff353db76185d027838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364500"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919294"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
-Kopíruje znaky jednoho řetězce do druhého.  Tyto verze [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopíruje znaky jednoho řetězce do jiného.  Tyto verze [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** a **_mbsncpy_s_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** a **_mbsncpy_s_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -154,38 +154,38 @@ errno_t _mbsncpy_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Cílový řetězec.
+Cílový řetězec
 
 *numberOfElements*<br/>
-Velikost cílového řetězce ve znacích.
+Velikost cílového řetězce, ve znacích.
 
 *strSource*<br/>
-Zdrojový řetězec.
+Zdrojový řetězec
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků, které mají být zkopírovány, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Národní prostředí*<br/>
+*locale*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud je úspěšná, **STRUNCATE,** pokud došlo ke zkrácení, jinak kód chyby.
+Nula v případě úspěchu, **STRUNCATE** , pokud došlo ke zkrácení, v opačném případě kód chyby.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
 |*strDest*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**Null**|jakékoli|jakékoli|**EINVAL**|nezměněno|
-|jakékoli|jakékoli|**Null**|**EINVAL**|*strDest*[0] nastavena na 0|
-|jakékoli|0|jakékoli|**EINVAL**|nezměněno|
-|není **null**|příliš malé|jakékoli|**ERANGE**|*strDest*[0] nastavena na 0|
+|**PLATNOST**|jakýmikoli|jakýmikoli|**EINVAL**|Neupraveno|
+|jakýmikoli|jakýmikoli|**PLATNOST**|**EINVAL**|*strDest*[0] nastaví na 0.|
+|jakýmikoli|0|jakýmikoli|**EINVAL**|Neupraveno|
+|není **null**|příliš malý|jakýmikoli|**ERANGE**|*strDest*[0] nastaví na 0.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce se pokusí zkopírovat první *D* znaky *strSource* do *strDest*, kde *D* je menší *počet* a délka *strSource*. Pokud tyto *znaky D* se vejdou do *strDest* (jehož velikost je uvedena jako *numberOfElements*) a stále ponechávají prostor pro zakončení null, pak jsou tyto znaky zkopírovány a je připojena ukončující null; v opačném případě je *strDest*[0] nastaven na znak null a je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md).
+Tyto funkce se pokusí zkopírovat prvních *D* znaků *strSource* do *strDest*, kde *D* je menší *počet a délka* *strSource*. Pokud se tyto znaky *D* vejdou do *strDest* (jejíž velikost je zadána jako *numberOfElements*) a stále ponechává místo pro ukončovací znak null, tyto znaky se zkopírují a přidají se ukončující hodnoty null. v opačném případě je *strDest*[0] nastaven na znak null a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Existuje výjimka z výše uvedeného odstavce. Pokud *count* je **_TRUNCATE**, pak tolik *strSource,* jak se vejde do *strDest* je zkopírován při stále ponechává prostor pro ukončení null, který je vždy připojen.
+Výše uvedený odstavec obsahuje výjimku. Pokud *count* je počet **_TRUNCATE**, pak se do strDest kopíruje stejně jako *strSource* , který se vejde do *strDest* , a přitom stále ponechává místo pro ukončující hodnotu null, která je vždy připojena.
 
 Například:
 
@@ -194,50 +194,50 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-znamená, že žádáme **strncpy_s,** aby zkopírovali pět znaků do vyrovnávací paměti dlouhé pět bajtů; to by neponechalo žádné místo pro zakončení null, proto **strncpy_s** vynuluje řetězec a volá obslužnou rutinu neplatného parametru.
+To znamená, že žádáme **strncpy_s** o zkopírování pěti znaků do vyrovnávací paměti o velikosti pět bajtů. To by nezůstalo žádný prostor pro ukončovací znak null, proto **strncpy_s** vynulování řetězce a volá neplatnou obslužnou rutinu parametru.
 
-Pokud je potřeba chování zkrácení, použijte **_TRUNCATE** nebo (*velikost* - 1):
+Pokud je potřeba chování zkrácení, použijte **_TRUNCATE** nebo (*Size* -1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Všimněte si, že na rozdíl od **strncpy**, pokud *počet* je větší než délka *strSource*, cílový řetězec není doplněn a null znaky až do *délky počítat*.
+Všimněte si, že na rozdíl od **strncpy**, pokud je *počet* větší než délka *strSource*, cílový řetězec není doplněn o hodnoty null až do *počtu*délek.
 
-Chování **strncpy_s** není definováno, pokud se zdrojové a cílové řetězce překrývají.
+Chování **strncpy_s** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
-Pokud *strDest* nebo *strSource* je **NULL**nebo *numberOfElements* je 0, je vyvolána neplatná obslužná rutina parametru. Pokud je spuštění povoleno pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
+Pokud *strDest* nebo *StrSource* má **hodnotu null**nebo je *numberOfElements* 0, je vyvolána obslužná rutina neplatného parametru. Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
 
-**wcsncpy_s** a **_mbsncpy_s** jsou verze **strncpy_s**s širokými znaky a vícebajtovými znaky . Argumenty a vrácená hodnota **wcsncpy_s** a **mbsncpy_s** se odpovídajícím způsobem liší. Těchto šest funkcí se chovají stejně jinak.
+**wcsncpy_s** a **_mbsncpy_s** jsou verze **strncpy_s**a vícebajtových znaků. Argumenty a návratová hodnota **wcsncpy_s** a **mbsncpy_s** se odpovídajícím způsobem mění. Tyto šest funkcí se chová stejně jinak.
 
-Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí. verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** kategorie národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. K zakázání tohoto chování použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncpy_s**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l,** **_wcsncpy_s_l** a **_mbsncpy_s_l** nemají závislost na národním prostředí a jsou poskytovány pouze pro **_tcsncpy_s_l** a nejsou určeny k přímému volání.
+> **_strncpy_s_l**, **_wcsncpy_s_l** a **_mbsncpy_s_l** nemají žádnou závislost národního prostředí a jsou k dispozici pouze pro **_tcsncpy_s_l** a nejsou určeny pro přímé volání.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
-|**wcsncpy_s** **, _wcsncpy_s_l**|\<string.h> \<nebo wchar.h>|
-|**_mbsncpy_s** **_mbsncpy_s_l**|\<mbstring.h>|
+|**strncpy_s** **_strncpy_s_l**|\<String. h>|
+|**wcsncpy_s** **_wcsncpy_s_l**|\<String. h> nebo \<WCHAR. h>|
+|**_mbsncpy_s** **_mbsncpy_s_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -413,7 +413,7 @@ After strncpy_s (with null-termination):
 ## <a name="see-also"></a>Viz také
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

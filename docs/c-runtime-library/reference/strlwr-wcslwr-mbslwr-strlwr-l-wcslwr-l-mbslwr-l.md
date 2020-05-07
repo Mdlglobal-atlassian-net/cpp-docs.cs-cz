@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -67,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 40bf64af8284d84c6e58bcb3e8591a1ef6fc9f48
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363815"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919946"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
-Převede řetězec na malá písmena. K dispozici jsou bezpečnější verze těchto funkcí. viz [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
+Převede řetězec na malá písmena. K dispozici jsou bezpečnější verze těchto funkcí; viz [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr** a **_mbslwr_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr** a **_mbslwr_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -136,31 +136,31 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Řetězec ukončený hodnotou null pro převod na malá písmena.
+*str*<br/>
+Řetězec zakončený hodnotou null, který má být převeden na malá písmena.
 
-*Národní prostředí*<br/>
+*locale*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí ukazatel na převedený řetězec. Vzhledem k tomu, že změna se provádí na místě, je vrácený ukazatel stejný jako ukazatel předaná jako vstupní argument. Žádná vrácená hodnota je vyhrazena k označení chyby.
+Každá z těchto funkcí vrací ukazatel na převedený řetězec. Vzhledem k tomu, že se úprava provádí, je ukazatel vrácený jako ukazatel, který byl předán jako vstupní argument. Žádná návratová hodnota není vyhrazena pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_strlwr** převede velká písmena v *str* na malá písmena určená nastavením **kategorie LC_CTYPE** národního prostředí. Ostatní znaky nejsou ovlivněny. Další informace o **LC_CTYPE**naleznete v [tématu setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **_l** přípony použít aktuální národní prostředí pro jejich chování závislé na národním prostředí; verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Funkce **_strlwr** převádí všechna velká písmena v *str* na malá písmena určená nastavením kategorie **LC_CTYPE** národního prostředí. Jiné znaky nejsou ovlivněny. Další informace o **LC_CTYPE**najdete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro své chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Funkce **_wcslwr** a **_mbslwr** jsou verze **_strlwr**s širokými znaky a vícebajtovými znaky . Argument a vrácená hodnota **_wcslwr** jsou řetězce širokých znaků; _mbslwr **jsou** řetězce vícebajtových znaků. Tyto tři funkce se chovají stejně jinak.
+Funkce **_wcslwr** a **_mbslwr** jsou velké znakové a vícebajtové znakové verze **_strlwr**. Argument a návratová hodnota **_wcslwr** jsou řetězce s velkým počtem znaků; **_mbslwr** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-Pokud *str* je **ukazatel NULL,** je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md) . Pokud je spuštění povoleno pokračovat, tyto funkce vrátí původní řetězec a nastavit **errno** **eINVAL**.
+Pokud je *str* ukazatel s **hodnotou null** , je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce původní řetězec a nastaví **errno** na **EINVAL**.
 
-V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
 |**_tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
@@ -169,11 +169,11 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strlwr**, **_strlwr_l**|\<string.h>|
-|**_wcslwr**, **_wcslwr_l**|\<string.h> \<nebo wchar.h>|
-|**_mbslwr** **_mbslwr_l**|\<mbstring.h>|
+|**_strlwr** **_strlwr_l**|\<String. h>|
+|**_wcslwr** **_wcslwr_l**|\<String. h> nebo \<WCHAR. h>|
+|**_mbslwr** **_mbslwr_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -214,5 +214,5 @@ Upper: THE STRING TO END ALL STRINGS!
 ## <a name="see-also"></a>Viz také
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

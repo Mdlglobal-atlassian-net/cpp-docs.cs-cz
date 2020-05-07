@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 2d5d4e224b39e9fa597e12975d27fa5720fbfbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b889bccc0b1f1fd99a9a0526bbfb42a2e520970
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345259"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919389"
 ---
 # <a name="_get_doserrno"></a>_get_doserrno
 
-Získá chybovou hodnotu vrácenou operačním systémem před tím, než je přeložen do hodnoty **errno.**
+Získá hodnotu chyby vrácenou operačním systémem před tím, než se převede na hodnotu **errno** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,30 +49,30 @@ errno_t _get_doserrno(
 
 ### <a name="parameters"></a>Parametry
 
-*pHodnota*<br/>
-Ukazatel na celé číslo, které má být vyplněno aktuální hodnotou **_doserrno** globální makro.
+*pValue*<br/>
+Ukazatel na celé číslo, který má být vyplněn aktuální hodnotou **_doserrno** globální makro.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **_get_doserrno** úspěšné, vrátí nulu; Pokud se nezdaří, vrátí kód chyby. Pokud je *hodnota pValue* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
+Pokud **_get_doserrno** úspěšné, vrátí se nula; Pokud dojde k chybě, vrátí kód chyby. Pokud *pValue* má PValue **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Globální **makro _doserrno** je nastavena na nulu během inicializace CRT před zahájením provádění procesu. Je nastavena na hodnotu chyby operačního systému vrácené volání mandatáře na úrovni systému, které vrací chybu operačního systému a během spuštění se nikdy neresetuje na nulu. Při psaní kódu pro kontrolu chybové hodnoty vrácené funkcí vždy zrušte **_doserrno** pomocí [_set_doserrno](set-doserrno.md) před voláním funkce. Vzhledem k tomu, že jiné volání funkce může přepsat **_doserrno**, zkontrolujte hodnotu pomocí **_get_doserrno** ihned po volání funkce.
+Při inicializaci CRT je globální makro **_doserrno** nastaveno na hodnotu nula, než začne provádění procesu. Je nastavená na hodnotu chyby operačního systému vrácenou jakýmkoli voláním funkce na úrovni systému, které vrací chybu operačního systému a nikdy neresetuje na nulu během provádění. Při psaní kódu pro kontrolu hodnoty chyby vrácené funkcí je vždy jasné **_doserrno** pomocí [_set_doserrno](set-doserrno.md) před voláním funkce. Protože jiné volání funkce může přepsat **_doserrno**, ověřte hodnotu pomocí **_get_doserrno** hned po volání funkce.
 
-Doporučujeme [_get_errno](get-errno.md) místo **_get_doserrno** pro přenosné chybové kódy.
+Pro přenosné chybové kódy doporučujeme místo **_get_doserrno** [_get_errno](get-errno.md) .
 
-Možné hodnoty **_doserrno** jsou \<definovány v> errno.h.
+Možné hodnoty **_doserrno** jsou definovány v \<> errno. h.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
+|**_get_doserrno**|\<Stdlib. h>, \<cstdlib> (C++)|\<errno. h>, \<cerrno> (C++)|
 
-**_get_doserrno** je rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+**_get_doserrno** je rozšířením společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

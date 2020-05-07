@@ -13,7 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 585608b4d3dce723c0ea3a82e1c52325a0f6b7e6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745933"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918110"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-Vypočítá arctangent *x* / *y,* kde *x* a *y* jsou hodnoty v horní části zásobníku.
+Vypočítá arkustangens *x* / *y* , kde *x* a *y* jsou hodnoty v horní části zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,11 +44,11 @@ void __cdecl _CIatan2();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze `atan2` funkce má specializované konvence volání, které kompilátor rozumí. Urychluje provádění, protože zabraňuje generování kopií a pomáhá s přidělením registru.
+Tato verze `atan2` funkce má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je posunuta do horní části zásobníku.
+Výsledná hodnota je vložena do horní části zásobníku.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 

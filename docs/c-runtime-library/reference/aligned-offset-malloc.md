@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 1f13afbab75d2926d1c642c1430a3ffe5ecbac8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a0dca94ec03286c92b3cbf1a51df59a1ca7af0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350581"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919491"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
-Přidělí paměť na zadanou hranici trasy.
+Přidělí paměť na zadané hranici zarovnání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,40 +51,40 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-Velikost požadované přidělení paměti.
+*hodnota*<br/>
+Velikost požadované alokace paměti
 
-*Zarovnání*<br/>
-Hodnota zarovnání, která musí být celá mocnina 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
-*Posun*<br/>
-Posun do přidělení paměti vynutit zarovnání.
+*polohy*<br/>
+Posun k přidělení paměti pro vynucení zarovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na blok paměti, který byl přidělen nebo **null,** pokud se operace nezdařila.
+Ukazatel na blok paměti, který byl přidělen nebo **null** v případě, že operace se nezdařila.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_malloc** je užitečné v situacích, kdy je potřeba zarovnání na vnořený prvek; například pokud zarovnání bylo potřeba na vnořené třídy.
+**_aligned_offset_malloc** je užitečné v situacích, kdy je nutné zarovnat na vnořeném prvku. Například pokud bylo zarovnání nutné pro vnořenou třídu.
 
-**_aligned_offset_malloc** je založen na **malloc**; další informace naleznete v [tématu malloc](malloc.md).
+**_aligned_offset_malloc** je založena na **systému pro**zakládání; Další informace najdete [v tématu.](malloc.md)
 
-**_aligned_offset_malloc** je `__declspec(noalias)` `__declspec(restrict)`označena a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** je `__declspec(noalias)` označena `__declspec(restrict)`jako, což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
-Tato funkce nastaví **errno** na **ENOMEM,** pokud se přidělení paměti nezdařilo nebo pokud byla požadovaná velikost větší než **_HEAP_MAXREQ**. Další informace o **errno**naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Také **_aligned_offset_malloc** ověřuje jeho parametry. Pokud *trasování* není mocninu 2 nebo pokud *je posun* větší nebo roven *velikosti* a nenulová, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí tato funkce **hodnotu NULL** a nastaví **errno** na **EINVAL**.
+Tato funkce nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovedlo nebo pokud je požadovaná velikost větší než **_HEAP_MAXREQ**. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_offset_malloc** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo pokud je *posun* větší nebo roven *velikosti* a nenulové hodnotě, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_offset_malloc**|\<malloc.h>|
+|**_aligned_offset_malloc**|\<. h>|
 
 ## <a name="example"></a>Příklad
 
-Další informace naleznete [v tématu _aligned_malloc](aligned-malloc.md).
+Další informace najdete v tématu [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Viz také
 
