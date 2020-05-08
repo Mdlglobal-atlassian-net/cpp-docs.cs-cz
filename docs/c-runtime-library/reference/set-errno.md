@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337717"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913047"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-Nastavte hodnotu globální proměnné **errno.**
+Nastavte hodnotu globální proměnné **errno** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,17 +49,17 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>Parametry
 
 *error_value*<br/>
-Nová hodnota **errno**.
+Nová hodnota **errno**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu, pokud je úspěšná.
+V případě úspěchu vrátí hodnotu nula.
 
 ## <a name="remarks"></a>Poznámky
 
-Možné hodnoty jsou definovány v Errno.h. Viz také [errno Konstanty](../../c-runtime-library/errno-constants.md).
+Možné hodnoty jsou definovány v errno. h. Podívejte se také na [errno konstanty](../../c-runtime-library/errno-constants.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="example"></a>Příklad
 
@@ -81,11 +81,11 @@ Oops: Illegal byte sequence
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_set_errno**|\<stdlib.h>|\<errno.h>|
+|**_set_errno**|\<Stdlib. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
