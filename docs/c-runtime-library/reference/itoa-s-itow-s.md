@@ -35,7 +35,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -90,16 +90,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: f392bb1dbcafd1666d082163190c4e988c7f1ab1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916562"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s _itow_s, _ui64toa_s _itow_s, _ltow_s _itow_s, _ultow_s, _i64tow_s _ultow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-Převede celé číslo na řetězec. Jedná se o verze [_itoa, _itow funkce](itoa-itow.md) s vylepšeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede celé číslo na řetězec. Jedná se o verze [_itoa, _itow funkce](itoa-itow.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -146,46 +146,46 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*osa*<br/>
 Číslo, které má být převedeno.
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Výstupní vyrovnávací paměť, která obsahuje výsledek převodu.
 
-*Velikost*<br/>
-Velikost *vyrovnávací paměti* ve znacích nebo širokých znacích.
+*hodnota*<br/>
+Velikost *vyrovnávací paměti* ve znacích nebo ve velkých znacích.
 
-*Radix*<br/>
-Radix nebo číselná základna pro převod *hodnoty*, která musí být v rozsahu 2-36.
+*Číselná*<br/>
+Číselná základ číselné soustavy, která se má použít k převodu *hodnoty*, která musí být v rozsahu 2-36.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; kód chyby při selhání. Pokud platí některá z následujících podmínek, funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md).
+Nula v případě úspěchu; chybový kód při selhání. Pokud platí kterákoli z následujících podmínek, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|value|Vyrovnávací paměti|velikost|Radix|Vrátit|
+|value|vyrovnávací paměti|velikost|Číselná|Vrátit|
 |-----------|------------|----------------------|-----------|------------|
-|jakékoli|**Null**|jakékoli|jakékoli|**EINVAL**|
-|jakékoli|jakékoli|<=0|jakékoli|**EINVAL**|
-|jakékoli|jakékoli|<= délka požadovaného výsledného řetězce|jakékoli|**EINVAL**|
-|jakékoli|jakékoli|jakékoli|*radix* < 2 nebo *radix* > 36|**EINVAL**|
+|jakýmikoli|**PLATNOST**|jakýmikoli|jakýmikoli|**EINVAL**|
+|jakýmikoli|jakýmikoli|<= 0|jakýmikoli|**EINVAL**|
+|jakýmikoli|jakýmikoli|<= délka požadovaného řetězce výsledku|jakýmikoli|**EINVAL**|
+|jakýmikoli|jakýmikoli|jakýmikoli|*základ* < 2 nebo *Číselná* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problémy se zabezpečením
 
-Tyto funkce mohou generovat narušení přístupu, pokud *vyrovnávací paměť* neukazuje na platnou paměť a není **null**, nebo pokud délka vyrovnávací paměti není dostatečně dlouhá pro uložení výsledného řetězce.
+Tyto funkce mohou vygenerovat porušení přístupu, pokud *vyrovnávací paměť* neukazuje na platnou paměť a není **null**, nebo pokud délka vyrovnávací paměti není dostačující pro uložení výsledného řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
-S výjimkou parametrů a vrácené hodnoty mají rodiny **funkcí _itoa_s** a **_itow_s** stejné chování jako odpovídající méně zabezpečené **_itoa** a **_itow** verze.
+S výjimkou parametrů a návratové hodnoty mají rodiny funkcí **_itoa_s** a **_itow_s** stejné chování jako odpovídající méně bezpečné **_itoa** a verze **_itow** .
 
-V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. K zakázání tohoto chování použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-CRT obsahuje pohodlné makra definovat velikost vyrovnávací paměti potřebné k převodu nejdelší možnou hodnotu každého typu celé číslo, včetně null zakončení a znak znaku, pro několik společných základů. Informace naleznete [v tématu Maximální počet konverzí makra](itoa-itow.md#maximum-conversion-count-macros).
+CRT obsahuje vhodná makra pro definování velikosti vyrovnávací paměti, která je nutná k převodu nejdelší možné hodnoty každého typu celého čísla, včetně ukončovacího znaku null a znaku znaménka pro několik běžných základů. Další informace naleznete v tématu [maximální počet převodů makra](itoa-itow.md#maximum-conversion-count-macros).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -201,14 +201,14 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s** **_ultoa_s** **_i64toa_s** **_ui64toa_s**|\<stdlib.h>|
-|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s** **_ui64tow_s**|\<stdlib.h> \<nebo wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s** **_ui64toa_s**|\<Stdlib. h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s** **_ui64tow_s**|\<Stdlib. h> nebo \<WCHAR. h>|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka ukazuje použití několika funkcí převodu celé celé číslo. Všimněte si, že [_countof](countof-macro.md) makro funguje pouze k určení velikosti vyrovnávací paměti, pokud deklarace pole je viditelná pro kompilátor a nikoli pro parametry, které se rozpadly na ukazatele.
+Tato ukázka demonstruje použití několika funkcí konverze celého čísla. Všimněte si, že makro [_countof](countof-macro.md) funguje pouze k určení velikosti vyrovnávací paměti, když je deklarace pole viditelná pro kompilátor, a ne pro parametry, které mají decayed na ukazatele.
 
 ```C
 // crt_itoa_s.c

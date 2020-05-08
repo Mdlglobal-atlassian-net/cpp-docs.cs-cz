@@ -1,5 +1,5 @@
 ---
-title: Interní globální funkce a funkce CRT
+title: Interní globální úlohy a funkce pro CRT
 ms.date: 4/2/2020
 api_name:
 - __acrt_iob_func
@@ -394,14 +394,14 @@ api_location:
 - api-ms-win-crt-time-l1-1-0.dll
 - api-ms-win-crt-process-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -930,22 +930,22 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 22c38c1ad2cd5dad0a0e58437b441faf4cdb6662
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe9b466ca839cb09011dc7cc38650b8b85037e86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351252"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914175"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Interní globální funkce a funkce CRT
+# <a name="internal-crt-globals-and-functions"></a>Interní globální úlohy a funkce pro CRT
 
-Knihovna c runtime (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní veřejné knihovny. Některé z nich jsou vystaveny ve veřejných záhlavíjako podrobnosti implementace. Přestože tyto funkce a globální proměnné jsou přístupné prostřednictvím veřejných exportů, nejsou určeny pro použití vaším kódem. Doporučujeme změnit libovolný kód, který používá tyto funkce a proměnné použít ekvivalenty veřejné knihovny místo. Tyto funkce se mohou změnit z verze na verzi. Jsou zde uvedeny, aby vám pomohly je identifikovat. Odkazy jsou k dispozici, pokud existuje další dokumentace, ale obecně tyto podrobnosti implementace nejsou dokumentovány.
+Knihovna modulu runtime jazyka C (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní veřejné knihovny. Některé z nich jsou zveřejněné ve veřejných hlavičkách jako podrobnosti implementace. I když jsou tyto funkce a globální proměnné přístupné prostřednictvím veřejných exportů, nejsou určeny pro použití ve vašem kódu. Doporučujeme, abyste změnili veškerý kód, který používá tyto funkce a proměnné pro použití ekvivalentů veřejné knihovny. Tyto funkce se mohou změnit z verze na verzi. Jsou tady uvedené, abyste je mohli snadněji identifikovat. Odkazy jsou k dispozici, pokud existuje další dokumentace, ale obecně tyto podrobnosti implementace nejsou dokumentovány.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Interní globální a hodnotová makra CRT
+## <a name="internal-crt-globals-and-value-macros"></a>Interní prvky globálních knihoven CRT a makra hodnot
 
-Tyto globální proměnné a definice maker se používají k implementaci CRT.
+Tyto globální proměnné a definice maker slouží k implementaci rozhraní CRT.
 
-|Name (Název)|
+|Name|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -962,9 +962,9 @@ Tyto globální proměnné a definice maker se používají k implementaci CRT.
 
 ## <a name="internal-crt-functions-and-function-macros"></a>Interní funkce CRT a makra funkcí
 
-Tyto funkce a makra funkcí se používají k implementaci CRT a standardní knihovny Jazyka C++.
+Tyto funkce a makra funkcí slouží k implementaci knihovny CRT a standardní knihovny jazyka C++.
 
-|Name (Název)|
+|Name|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -1175,7 +1175,7 @@ Tyto funkce a makra funkcí se používají k implementaci CRT a standardní kni
 |__p\__crtBreakAlloc|
 |__p\__crtDbgFlag|
 |__p\__daylight|
-|_dstbias\___p|
+|__p\__dstbias|
 |__p\__environ|
 |[__p\__fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob|

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338688"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914642"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
-Rozdělí hodnotu s plovoucí desetinnou desetinnou hodnotou na zlomkové a celé části.
+Rozdělí hodnotu s plovoucí desetinnou čárkou na zlomky a celočíselné části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,33 +62,33 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou táceckou.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou.
 
-*Intptr*<br/>
+*IntPtr*<br/>
 Ukazatel na uloženou část celého čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tato funkce vrátí podepsanou zlomkovou část *x*. Neexistuje žádná chyba vrátit.
+Tato funkce vrací zlomkovou část čísla *x*se znaménkem. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-**Modf** funkce rozdělit hodnotu s plovoucí desetinnou hodnotou *x* na frakční a celočíselné části, z nichž každá má stejné znaménko jako *x*. Podepsaná zlomková část *x* je vrácena. Celá část je uložena jako hodnota s plovoucí desetinnou hodnotou *v intptr*.
+Funkce **modf –** rozdělují hodnotu s plovoucí desetinnou čárkou *x* na zlomky a celočíselné části, z nichž každá má stejné znaménko jako *x*. Vrátí se podepsaná Zlomková část čísla *x* . Celočíselná část je uložena jako hodnota s plovoucí desetinnou čárkou na *IntPtr*.
 
-**modf** má implementaci, která používá streaming SIMD extensions 2 (SSE2). Informace a omezení týkající se používání implementace SSE2 naleznete v [_set_SSE2_enable.](set-sse2-enable.md)
+**modf –** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení použití implementace SSE2 najdete v tématu [_set_SSE2_enable](set-sse2-enable.md) .
 
-C++ umožňuje přetížení, takže můžete volat přetížení **modf,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** parametry. V programu C **modf** vždy trvá dvě dvojité hodnoty a vrátí dvojitou hodnotu.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **modf –** , která přebírají a vracejí parametry **float** nebo **Long** **Double** . V programu v jazyce C **modf –** vždy přebírá dvě hodnoty Double a vrátí hodnotu Double.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: \<, cmath \<> nebo math.h>|
+|**modf –**, **modff –**, **modfl**|C: \<Math. h><br /><br /> C++:, \<cmath> nebo \<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

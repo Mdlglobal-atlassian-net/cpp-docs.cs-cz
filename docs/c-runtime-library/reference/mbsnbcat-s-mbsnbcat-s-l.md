@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,19 +38,19 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: b4a9540025ad039458203eec1cc950187b6316a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d731c94c879d0e4334dc3b57a19b94cc0378abaf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915636"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Připojí se k vícebajtovému znakovému řetězci, maximálně k **prvnímu n** bajtům jiného vícebajtového znakového řetězce. Jedná se o verze [_mbsnbcat, _mbsnbcat_l,](mbsnbcat-mbsnbcat-l.md) které mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Připojí se k vícebajtovým řetězcům znaků, maximálně prvních **n** bajtů jiného vícebajtového znaku. Jedná se o verze [_mbsnbcat _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) , které mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,20 +85,20 @@ errno_t _mbsnbcat_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Dest*<br/>
-Cílový řetězec s vícebajtovými znaky ukončený nulou.
+*propojovací*<br/>
+Cílový řetězec vícebajtových znaků zakončený hodnotou null.
 
 *sizeInBytes*<br/>
-Velikost vyrovnávací paměti *dest* v bajtů.
+Velikost *cílový* buffer v bajtech
 
 *src*<br/>
-Zdrojový řetězec s vícebajtovými znaky ukončený nulou.
+Zdrojový řetězec vícebajtových znaků zakončený hodnotou null.
 
-*Počet*<br/>
-Počet bajtů od *src* do připojit *k dest*.
+*výpočtu*<br/>
+Počet bajtů ze *Src* pro připojení k *cíl*.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -106,41 +106,41 @@ Nula v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|**Dest**|*sizeInBytes*|*src*|Návratová hodnota|
+|**Propojovací**|*sizeInBytes*|*src*|Návratová hodnota|
 |------------|-------------------|-----------|------------------|
-|**Null**|jakékoli|jakékoli|**EINVAL**|
-|Všechny|<= 0|jakékoli|**EINVAL**|
-|Všechny|jakékoli|**Null**|**EINVAL**|
+|**PLATNOST**|jakýmikoli|jakýmikoli|**EINVAL**|
+|Všechny|<= 0|jakýmikoli|**EINVAL**|
+|Všechny|jakýmikoli|**PLATNOST**|**EINVAL**|
 
-Pokud dojde k některéz chybových podmínek, funkce generuje neplatnou chybu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
+Pokud dojde k nějaké chybě, funkce vygeneruje chybu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsnbcat_s** připojí k *dest*, maximálně první *počet* bajtů *src*. Pokud bajt, který bezprostředně předchází znaknull v *dest* je úvodní bajt, je přepsán počáteční bajt *src*. V opačném případě počáteční bajt *src* přepíše ukončující znak null *dest*. Pokud se v *src* před připojením bajtů *počtu* zobrazí nulový bajt, **_mbsnbcat_s** připojí všechny bajty z *src*až do nulového znaku. *Je-li počet* větší než délka *src*, použije se místo *počítání*délka *src* . Výsledný řetězec je ukončen prázdným znakem. Pokud kopírování probíhá mezi řetězci, které se překrývají, chování není definováno.
+Funkce **_mbsnbcat_s** připojí k parametru *cíl*, nejvíce první *počet* bajtů *Src*. Pokud je bajt, který bezprostředně předchází znaku null v *cíl* je vedoucí bajt, je přepsán počátečním bajtem *Src*. V opačném případě počáteční bajt *Src* přepíše ukončující znak null hodnoty *cíl*. Pokud se v *Src* objeví nulový bajt před připojením k *počtu* bajtů, **_mbsnbcat_s** připojí všechny bajty ze *Src*, až po znak null. Pokud je *počet* větší než délka *Src*, je délka *Src* použita místo *počtu*. Výsledný řetězec je ukončen znakem null. Pokud se provádí kopírování mezi řetězci, které se překrývají, chování není definováno.
 
-Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v _wsetlocale setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají **_l** příponu použít aktuální národní prostředí a ty, které mají **příponu _l** místo toho použít parametr národního prostředí, který je předán. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** kategorie národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají příponu **_l** používají aktuální národní prostředí a ty, které mají příponu **_l** místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky a tím eliminovat potřebu zadat argument velikost a mohou automaticky použít své novější, bezpečnější funkce nahradit starší, méně zabezpečené funkce. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size a můžou automaticky používat své novější a bezpečnější funkce k nahrazení starších a méně zabezpečených funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. K zakázání tohoto chování použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncat**|[strncat (Strncat)](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat (wcsncat)](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
+|**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcat_s**|\<mbstring.h>|
-|**_mbsnbcat_s_l**|\<mbstring.h>|
+|**_mbsnbcat_s**|\<Mbstring. h>|
+|**_mbsnbcat_s_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

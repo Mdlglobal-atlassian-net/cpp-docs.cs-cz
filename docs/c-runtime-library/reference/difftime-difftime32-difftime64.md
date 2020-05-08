@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348124"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914782"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
-Najde rozdíl mezi dvěma časy.
+Vyhledá rozdíl mezi dvěma časy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,37 +59,37 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>Parametry
 
-*časKonec*<br/>
+*timeEnd*<br/>
 Čas ukončení.
 
 *timeStart*<br/>
-Začátek.
+Čas zahájení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**difftime** vrátí uplynulý čas v sekundách, od *timeStart* do *timeEnd*. Vrácená hodnota je dvojité přesné číslo s plovoucí desetinnou desetinnou hlavou. Vrácená hodnota může být 0, označující chybu.
+**difftime** vrátí uplynulý čas v sekundách, od *timeStart* do *timeEnd*. Vrácená hodnota je číslo s plovoucí desetinnou čárkou a dvojitou přesností. Vrácená hodnota může být 0, což značí chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **difftime** vypočítá rozdíl mezi dvěma dodanými časovými hodnotami *timeStart* a *timeEnd*.
+Funkce **difftime** vypočítá rozdíl mezi dvěma zadanými časovými hodnotami *timeStart* a *timeEnd*.
 
-Dodaná časová hodnota se musí vejít do rozsahu **time_t**. **time_t** je 64bitová hodnota. To znamená, že konec rozsahu byl prodloužen z 23:59:59 Leden 18, 2038, UTC na 23:59:59, Prosinec 31, 3000. Nižší rozsah **time_t** je stále půlnoc, 1.ledna 1970.
+Zadaná časová hodnota se musí vejít do rozsahu **time_t**. **time_t** je 64 hodnota. Proto se konec rozsahu rozšířil z 23:59:59. ledna 2038, UTC na 23:59:59, 31. prosince, 3000. Dolní rozsah **time_t** je stále půlnoc, 1. ledna 1970.
 
-**difftime** je vsazená funkce, která je vyhodnocena jako **_difftime32** nebo **_difftime64** v závislosti na tom, zda je **definován_USE_32BIT_TIME_T** _difftime32 a _difftime64 lze použít přímo k vynucení použití určité velikosti typu času.
+**difftime** je vložená funkce, která se vyhodnocuje buď **_difftime32** , nebo **_difftime64** v závislosti na tom, zda je definována **_USE_32BIT_TIME_T** . _difftime32 a _difftime64 lze použít přímo k vynucení použití konkrétní velikosti typu času.
 
-Tyto funkce ověřují jejich parametry. Pokud je některý z parametrů nulový nebo záporný, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí 0 a nastavit **errno** **eINVAL**.
+Tyto funkce ověřují své parametry. Pokud je některý z parametrů nula nebo negativní, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce 0 a nastaví **errno** na **EINVAL**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**difftime**|\<time.h>|
-|**_difftime32**|\<time.h>|
-|**_difftime64**|\<time.h>|
+|**difftime**|\<Time. h>|
+|**_difftime32**|\<Time. h>|
+|**_difftime64**|\<Time. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,6 +149,6 @@ Program takes      3 seconds.
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [Časová správa](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>
