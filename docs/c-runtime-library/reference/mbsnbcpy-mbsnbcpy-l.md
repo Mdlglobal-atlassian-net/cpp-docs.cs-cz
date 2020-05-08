@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,19 +38,19 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911899"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Zkopíruje **n** bajtů řetězce do cílového řetězce. K dispozici jsou bezpečnější verze těchto funkcí – viz [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Zkopíruje **n** bajtů řetězce do cílového řetězce. Bezpečnější verze těchto funkcí jsou k dispozici – viz [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,35 +84,35 @@ unsigned char * _mbsnbcpy_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Cíl pro řetězec znaků, který má být zkopírován.
+Cíl pro textový řetězec, který se má zkopírovat
 
 *strSource*<br/>
-Řetězec znaků, který má být zkopírován.
+Řetězec znaků, který se má zkopírovat
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet bajtů, které mají být zkopírovány.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbcpy** vrátí ukazatel na řetězec cílového znaku. Žádná vrácená hodnota je vyhrazena k označení chyby.
+**_mbsnbcpy** vrací ukazatel na cílový textový řetězec. Žádná návratová hodnota není vyhrazena pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsnbcpy** zkopíruje *počet* bajtů z *strSource* do *strDest*. Pokud *počet* překročí velikost *strDest* nebo zdrojové a cílové řetězce překrývají, chování **_mbsnbcpy** není definována.
+Funkce **_mbsnbcpy** kopíruje *počet* bajtů z *strSource* do *strDest*. Pokud *počet* překročí velikost *strDest* nebo se překrývá zdrojový a cílový řetězec, chování **_mbsnbcpy** není definováno.
 
-Pokud *strSource* nebo *strDest* je nulový ukazatel, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **hodnotu NULL** a nastaví **errno** na **EINVAL**.
+Pokud je *strSource* nebo *strDest* ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v _wsetlocale setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají **příponu _l** použít aktuální národní prostředí a verze, které mají **_l** příponu místo toho použít parametr národního prostředí, který je předán. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** kategorie národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají příponu **_l** používají aktuální národní prostředí a verze, které mají **_l** příponu, místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Tyto funkce mohou být náchylné k hrozbám přetečení vyrovnávací paměti. Přetečení vyrovnávací paměti lze použít ke spuštění libovolného kódu útočníka, což může způsobit neoprávněné zvýšení oprávnění a ohrozit systém. Další informace naleznete v [tématu Zabránění přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Tyto funkce můžou být zranitelné vůči hrozbám přetečení vyrovnávací paměti. K provedení libovolného kódu útočníka lze použít přetečení vyrovnávací paměti, což může způsobit neoprávněné zvýšení oprávnění a ohrozit systém. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější, bezpečnější protějšky těchto funkcí. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější a bezpečnější protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -125,10 +125,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcpy**|\<mbstring.h>|
-|**_mbsnbcpy_l**|\<mbstring.h>|
+|**_mbsnbcpy**|\<Mbstring. h>|
+|**_mbsnbcpy_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316941"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910929"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
-Zkopírujte aktuální čas do vyrovnávací paměti. Jedná se o verze [_strtime, _wstrtime](strtime-wstrtime.md) s vylepšeními zabezpečení popsanými v [části Funkce zabezpečení v crt](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopírujte aktuální čas do vyrovnávací paměti. Jedná se o verze [_strtime, _wstrtime](strtime-wstrtime.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,8 +70,8 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Vyrovnávací paměť, nejméně 10 bajtů dlouhé, kde bude zapsán čas.
+*vyrovnávací paměti*<br/>
+Vyrovnávací paměť, nejméně 10 bajtů, kde bude zapsán čas.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti.
@@ -80,38 +80,38 @@ Velikost vyrovnávací paměti.
 
 Nula v případě úspěchu.
 
-Pokud dojde k chybovému stavu, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Vrácená hodnota je kód chyby, pokud došlo k chybě. Kódy chyb jsou definovány v ERRNO. H; Přesné chyby generované touto funkcí naleznete v následující tabulce. Další informace o kódech chyb naleznete [v tématu errno Constants](../../c-runtime-library/errno-constants.md).
+Pokud dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Návratová hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v ERRNO. Y v následující tabulce najdete přesné chyby generované touto funkcí. Další informace o kódech chyb naleznete v tématu [konstanty errno](../../c-runtime-library/errno-constants.md).
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*Vyrovnávací paměti*|*numberOfElements*|Vrátit|Obsah *vyrovnávací paměti*|
+|*vyrovnávací paměti*|*numberOfElements*|Vrátit|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**Null**|(libovolná)|**EINVAL**|Nezměněno|
-|Ne **null** (ukazuje na platnou vyrovnávací paměť)|0|**EINVAL**|Nezměněno|
-|Ne **null** (ukazuje na platnou vyrovnávací paměť)|0 < velikost <i 9|**EINVAL**|Prázdný řetězec|
-|Ne **null** (ukazuje na platnou vyrovnávací paměť)|Velikost > 9|0|Aktuální čas formátovaný podle poznámek|
+|**PLATNOST**|jakýmikoli|**EINVAL**|Neupraveno|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|0|**EINVAL**|Neupraveno|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|0 < velikosti < 9|**EINVAL**|Prázdný řetězec|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|Velikost > 9|0|Aktuální čas formátovaný podle zadání v komentářích|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
-Předání neplatné hodnoty**null** pro vyrovnávací paměť bude mít za následek narušení přístupu, pokud je parametr *numberOfElements* větší než 9.
+Předání neplatné hodnoty, která není**null** pro vyrovnávací paměť, bude mít za následek porušení přístupu, pokud je parametr *numberOfElements* větší než 9.
 
-Předání hodnoty pro *numberOfElements,* která je větší než skutečná velikost vyrovnávací paměti bude mít za následek přetečení vyrovnávací paměti.
+Předání hodnoty pro *numberOfElements* , která je větší než skutečná velikost vyrovnávací paměti, způsobí přetečení vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce poskytují bezpečnější verze [_strtime](strtime-wstrtime.md) a [_wstrtime](strtime-wstrtime.md). Funkce **_strtime_s** zkopíruje aktuální místní čas do vyrovnávací paměti, na kterou se vztahuje *funkce timestr*. Čas je formátován jako **hh:mm:ss,** kde **hh** je dvě číslice představující hodinu v 24hodinovém zápisu, **mm** je dvě číslice představující minuty po hodině a **ss** je dvě číslice představující sekundy. Například řetězec **18:23:44** představuje 23 minut a 44 sekund po 18:00. Vyrovnávací paměť musí být nejméně 9 bajtů dlouhá; skutečná velikost je určena druhým parametrem.
+Tyto funkce poskytují bezpečnější verze [_strtime](strtime-wstrtime.md) a [_wstrtime](strtime-wstrtime.md). Funkce **_strtime_s** kopíruje aktuální místní čas do vyrovnávací paměti, na kterou odkazuje *timestr*. Čas je formátován jako **HH: mm: SS** , kde **HH** je dvě číslice představující hodinu ve 24hodinovém zápisu, **mm** jsou dvě číslice představující minuty po hodinách a **SS** jsou dvě číslice představující sekundy. Například řetězec **18:23:44** představuje 23 minut a 44 sekund za 6 hodin. Vyrovnávací paměť musí být aspoň 9 bajtů dlouhá. Skutečná velikost je určena druhým parametrem.
 
-**_wstrtime** je širokoznaková verze **_strtime**; argument a vrácená hodnota **_wstrtime** jsou řetězce širokých znaků. Tyto funkce se chovají stejně jinak.
+**_wstrtime** je verze **_strtime**s velkým znakem; argument a návratová hodnota **_wstrtime** jsou řetězce s velkým počtem znaků. Tyto funkce se chovají identicky jinak.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. K zakázání tohoto chování použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu:
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
@@ -119,10 +119,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strtime_s**|\<time.h>|
-|**_wstrtime_s**|\<time.h> \<nebo wchar.h>|
+|**_strtime_s**|\<Time. h>|
+|**_wstrtime_s**|\<Time. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

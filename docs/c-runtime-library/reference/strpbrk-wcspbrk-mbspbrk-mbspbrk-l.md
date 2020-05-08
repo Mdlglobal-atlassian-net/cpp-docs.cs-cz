@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,19 +50,19 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: ecdf896587096f0370351aac07cbd6be57257305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322171"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911184"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
-Prohledá řetězce pro znaky v určených znakových sadách.
+Hledá v řetězcích znaky v určených znakových sadách.
 
 > [!IMPORTANT]
-> `_mbspbrk`a `_mbspbrk_l` nelze jej použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk`a `_mbspbrk_l` nelze je použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -122,51 +122,51 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Nulový, hledaný řetězec.
+*str*<br/>
+Hledaný řetězec zakončený hodnotou null.
 
 *strCharSet*<br/>
-Znaková sada ukončená hodnotou Null.
+Znaková sada zakončená hodnotou null
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na první výskyt libovolného znaku z *strCharSet* v *str*nebo ukazatel NULL, pokud dva argumenty řetězce nemají žádné společné znaky.
+Vrátí ukazatel na první výskyt libovolného znaku z *strCharSet* v *str*nebo na ukazatel s hodnotou null, pokud dva řetězcové argumenty nemají společné znaky.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `strpbrk` vrátí ukazatel na první výskyt znaku v *str,* který patří do sady znaků v *strCharSet*. Hledání nezahrnuje ukončující znak null.
+`strpbrk` Funkce vrací ukazatel na první výskyt znaku v *str* , který patří do sady znaků v *strCharSet*. Hledání nezahrnuje ukončující znak null.
 
-`wcspbrk`a `_mbspbrk` jsou širokoúhlé a vícebajtové `strpbrk`verze znaků . Argumenty a vrácená `wcspbrk` hodnota jsou řetězce širokých znaků; tyto `_mbspbrk` jsou vícebajtové řetězce znaků.
+`wcspbrk`a `_mbspbrk` jsou verze s velkým znakem a vícebajtovým znakem `strpbrk`. Argumenty a návratová hodnota `wcspbrk` jsou řetězce s velkým počtem znaků; Ty `_mbspbrk` jsou vícebajtové znakové řetězce.
 
-`_mbspbrk`ověří jeho parametry. Pokud *str* nebo *strCharSet* je NULL, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno `_mbspbrk` pokračovat, `errno` vrátí hodnotu NULL a nastaví na EINVAL. `strpbrk`a `wcspbrk` neověřujte jejich parametry. Tyto tři funkce se chovají stejně jinak.
+`_mbspbrk`ověří jeho parametry. Pokud parametr *str* nebo *strCharSet* má hodnotu null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, `_mbspbrk` vrátí hodnotu null a nastaví `errno` na EINVAL. `strpbrk`a `wcspbrk` neověřuje jejich parametry. Tyto tři funkce se chovají identicky jinak.
 
-`_mbspbrk`je podobný `_mbscspn` except, který `_mbspbrk` vrátí ukazatel spíše než hodnotu typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk`je podobné jako `_mbscspn` s tím `_mbspbrk` rozdílem, že vrací ukazatel, nikoli hodnotu typu [size_t](../../c-runtime-library/standard-types.md).
 
-V C tyto funkce trvat **const** ukazatel pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení s ukazatelem **const** vrátí ukazatel **const**; verze, která má ukazatel na**non-const** vrátí ukazatel na**non-const**. Makro _CRT_CONST_CORRECT_OVERLOADS je definována, pokud jsou k dispozici verze těchto funkcí **const** i non-const.**const** Pokud požadujete chování bez**const** pro obě přetížení jazyka C++, definujte symbol _CONST_RETURN.
+V jazyce C tyto funkce přebírají ukazatel **const** pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přebírající ukazatel na **konstantu** vrací ukazatel na **const**; verze, která přebírá ukazatel na jiný typ než**const** , vrací ukazatel na**nekonstantní**hodnotu. _CRT_CONST_CORRECT_OVERLOADS makra je definováno, pokud jsou k dispozici obě verze **const** i non-**const** . Pokud vyžadujete**nekonstantní** chování pro obě přetížení jazyka C++, definujte symbol _CONST_RETURN.
 
-Výstupní hodnota je ovlivněna nastavením nastavení kategorie LC_CTYPE národního prostředí; Další informace naleznete [v tématu setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí. verze s **příponou _l** je identická s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením LC_CTYPE kategorie národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**N/a**|**N/a**|`_mbspbrk_l`|**N/a**|
+|**není k dispozici**|**není k dispozici**|`_mbspbrk_l`|**není k dispozici**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strpbrk`|\<string.h>|
-|`wcspbrk`|\<string.h> \<nebo wchar.h>|
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
+|`strpbrk`|\<String. h>|
+|`wcspbrk`|\<String. h> nebo \<WCHAR. h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -205,7 +205,7 @@ int main( void )
 ## <a name="see-also"></a>Viz také
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

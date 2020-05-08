@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913357"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,26 +50,26 @@ double _cabs(
 
 ### <a name="parameters"></a>Parametry
 
-*Z*<br/>
+*od*<br/>
 Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_cabs** vrátí absolutní hodnotu argumentu, pokud je úspěšná. Při přetečení **vrátí _cabs** **HUGE_VAL** a nastaví **errno** na **ERANGE**. Pomocí [_matherr](matherr.md)můžete změnit zpracování chyb .
+**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** na **ERANGE**. Můžete změnit zpracování chyb pomocí [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cabs** vypočítá absolutní hodnotu komplexního čísla, které musí být strukturou typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá ze skutečné složky *x* a imaginární složky *y*. Volání **_cabs** vytvoří hodnotu ekvivalentní hodnotě `sqrt( z.x * z.x + z.y * z.y )`výrazu .
+Funkce **_cabs** vypočítá absolutní hodnotu komplexního čísla, které musí být strukturou typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z reálné komponenty *x* a imaginární komponenty *y*. Volání **_cabs** vytvoří hodnotu ekvivalentní výrazu `sqrt( z.x * z.x + z.y * z.y )`.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cabs**|\<math.h>|
+|**_cabs**|\<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -98,6 +98,6 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +51,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361324"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909295"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
-Odešle zpět poslední znak, který je přečten z konzole.
+Posune zpátky poslední znak, který se načte z konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,24 +84,24 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být tlačen.
+*r*<br/>
+Znak, který má být vložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě, **vrátí _ungetch** hodnotu **EOF** a **_ungetwch** vrátí **hodnotu WEOF**.
+Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě, **_ungetch** vrátí hodnotu **EOF** a **_ungetwch** vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce posunou znak *c* zpět do konzoly, což způsobí, že *c* bude dalším znakem přečteným **_getch** nebo **_getche** (nebo **_getwch** nebo **_getwche**). **_ungetch** a **_ungetwch** selhat, pokud jsou volány více než jednou před dalším čtením. C *c* argument nesmí být **EOF** (nebo **WEOF**).
+Tyto funkce načtou znak *c* zpátky do konzoly, což způsobí, že *c* bude dalším přečteným znakem **_getch** nebo **_getche** (nebo **_getwch** nebo **_getwche**). **_ungetch** a **_ungetwch** selžou, pokud jsou volány více než jednou před dalším čtením. Argument *jazyka c* nemůže být znak **EOF** (nebo **WEOF**).
 
-Verze s **příponou _nolock** jsou identické s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -110,10 +110,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetch** **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> \<nebo wchar.h>|
+|**_ungetch** **_ungetch_nolock**|\<CONIO. h>|
+|**_ungetwch** **_ungetwch_nolock**|\<CONIO. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

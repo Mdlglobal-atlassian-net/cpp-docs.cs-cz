@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 289e1114a936bdaa41fc59a0526db006536461f7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346273"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910207"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -60,49 +60,49 @@ wint_t fputwc(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být napsán.
+*r*<br/>
+Znak, který se má zapsat
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí napsaný znak. Pro **fputc**, vrácená hodnota **EOF** označuje chybu. Pro **fputwc**, vrácená hodnota **WEOF** označuje chybu. Pokud je *datový proud* **NULL**, tyto funkce vyvolávají neplatnou obslužnou rutinu parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí **EOF** a nastaví **errno** na **EINVAL**.
+Každá z těchto funkcí vrátí napsaný znak. V případě **fputc**označuje návratová hodnota **EOF** chybu. V případě **fputwc**označuje návratová hodnota **WEOF** chybu. Pokud má *datový proud* **hodnotu null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** a nastaví **errno** na **EINVAL**.
 
-Další informace o těchto a dalších kódech chyb naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí zapíše jeden znak *c* do souboru na pozici označené přidruženým indikátorem polohy souboru (pokud je definována) a podle potřeby posune indikátor. V případě **fputc** a **fputwc**je soubor spojen s *streamem*. Pokud soubor nemůže podporovat požadavky na umístění nebo byl otevřen v režimu připojení, znak je připojen na konec datového proudu.
+Každá z těchto funkcí zapisuje jeden znak *c* do souboru na pozici, která je označena ukazatelem pozice přidruženého souboru (je-li definován), a podle potřeby posune ukazatel. V případě **fputc** a **fputwc**je soubor přidružený ke *streamu*. Pokud soubor nemůže podporovat požadavky na umístění nebo byl otevřen v režimu připojení, znak je připojen na konec datového proudu.
 
-Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **fputc** v současné době nepodporuje výstup do datového proudu UNICODE.
+Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **fputc** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze s **příponou _nolock** jsou identické s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Další informace naleznete[v tématu _fputc_nolock, _fputwc_nolock](fputc-nolock-fputwc-nolock.md).
+Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Další informace najdete v tématu[_fputc_nolock _fputwc_nolock](fputc-nolock-fputwc-nolock.md).
 
-Následují poznámky specifické pro rutinu.
+Následují poznámky specifické pro rutiny.
 
 |Rutina|Poznámky|
 |-------------|-------------|
-|**fputc**|Ekvivalentní **putc**, ale implementována pouze jako funkce, nikoli jako funkce a makro.|
-|**fputwc řekl:**|Širokoúhlá verze **fputc**. Zapíše *c* jako vícebajtový znak nebo široký znak podle toho, zda je *datový proud* otevřen v textovém nebo binárním režimu.|
+|**fputc**|Ekvivalent **putc**, ale implementována pouze jako funkce, nikoli jako funkce a makro.|
+|**fputwc**|Verze **fputc**pro nejrůznější znaky. Zapisuje *c* jako vícebajtový znak nebo jako velký znak v závislosti na tom, zda je *datový proud* otevřen v textovém režimu nebo v binárním režimu.|
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputtc**|**fputc**|**fputc**|**fputwc řekl:**|
+|**_fputtc**|**fputc**|**fputc**|**fputwc**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fputc**|\<stdio.h>|
-|**fputwc řekl:**|\<stdio.h> \<nebo wchar.h>|
+|**fputc**|\<stdio. h>|
+|**fputwc**|\<stdio. h> nebo \<WCHAR. h>|
 
-Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke konzole –**stdin**, **stdout**a **stderr**– musí být přesměrovány, aby je mohly funkce c run-time používat v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou –**stdin**, **stdout**a **stderr**– musí být přesměrované před tím, než je funkce běhového běhu v aplikacích pro UWP můžou použít. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

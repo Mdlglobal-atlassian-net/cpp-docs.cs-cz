@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342110"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911531"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Uzamkne objekt **FILE,** aby byla zajištěna konzistence pro vlákna, která přistupují k objektu **FILE** současně.
+Zamkne objekt **File** , aby zajistil konzistenci pro vlákna přistupující k objektu **souboru** současně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,22 +48,22 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor*<br/>
+*souborů*<br/>
 Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_lock_file** uzamkne objekt **FILE** určený *souborem*. Základní soubor není uzamčen **_lock_file**. Pomocí [_unlock_file](unlock-file.md) uvolněte zámek souboru. Volání **_lock_file** a **_unlock_file** musí být spárována ve vlákně.
+Funkce **_lock_file** zamkne objekt **File** určený *souborem*. Příslušný soubor není uzamčen **_lock_file**. K uvolnění zámku souboru použijte [_unlock_file](unlock-file.md) . Volání **_lock_file** a **_unlock_file** musí být ve vlákně shodná.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lock_file**|\<stdio.h>|
+|**_lock_file**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

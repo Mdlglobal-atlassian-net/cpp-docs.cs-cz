@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: d35b3db157d4f33e3a8490c6620a08000ff090f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911310"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
-Přesune ukazatel souboru do určeného umístění.
+Přesune ukazatel na soubor do zadaného umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,47 +63,47 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
+*FD*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
-*Posun*<br/>
-Počet bajtů od *počátku*.
+*polohy*<br/>
+Počet bajtů od *počátku*
 
-*Původu*<br/>
+*zdroji*<br/>
 Počáteční pozice.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_lseek** vrátí posun nové pozice v bajtech od začátku souboru. **_lseeki64** vrátí posun v 64bitovém celočíselném. Funkce vrátí -1L k označení chyby. Pokud je předán neplatný parametr, například chybný popisovač souboru, nebo je hodnota pro *počátek* neplatná nebo pozice určená *posunem* je před začátkem souboru, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce nastavit **errno** **na EBADF** a vrátit -1L. Na zařízeních, která nejsou schopna hledat (například terminály a tiskárny), není vrácená hodnota definována.
+**_lseek** vrátí posunutí nové pozice od začátku souboru v bajtech. **_lseeki64** vrátí posun v 64 celé číslo. Funkce vrátí-1L k indikaci chyby. Pokud byl předán neplatný parametr, jako je například Chybný popisovač souboru, nebo hodnota pro *počátek* je neplatná nebo je pozice určená *posunem* před začátkem souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EBADF** a vrátí-1l. U zařízení, která neumožňují hledání (například terminálů a tiskáren), není návratová hodnota definována.
 
-Další informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_lseek** přesune ukazatel souboru přidružený k *fd* do nového umístění, které je *posunuty* bajtů od *počátku*. Další operace v souboru probíhá v novém umístění. Argument *původu* musí být jedna z následujících konstant, které jsou definovány ve stdio.h.
+Funkce **_lseek** přesune ukazatel na soubor přidružený k *FD* do nového umístění, které má *posunutí* bajtů od *počátku*. Následující operace se souborem probíhá v novém umístění. Argument *Origin* musí být jedna z následujících konstant, které jsou definovány v stdio. h.
 
-|hodnota *původu*||
+|hodnota *počátku*||
 |-|-|
 | **SEEK_SET** | Začátek souboru. |
-| **SEEK_CUR** | Aktuální pozice ukazatele souboru. |
-| **SEEK_END** | Konec souboru. |
+| **SEEK_CUR** | Aktuální pozice ukazatele na soubor. |
+| **SEEK_END** | Konec souboru |
 
-**Pomocí _lseek** můžete změnit umístění ukazatele kdekoli v souboru nebo za konec souboru.
+Můžete použít **_lseek** k přemístění ukazatele kdekoli v souboru nebo za konec souboru.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lseek**|\<io.h>|
-|**_lseeki64**|\<io.h>|
+|**_lseek**|\<IO. h>|
+|**_lseeki64**|\<IO. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -157,7 +157,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_lseekc_input"></a>Vstup: crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>Vstup: crt_lseek. c_input
 
 ```Input
 Line one.
@@ -177,6 +177,6 @@ Position for end of file seek = 57
 
 ## <a name="see-also"></a>Viz také
 
-[Vstupně-nosné(v" nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>
 [_tell, _telli64](tell-telli64.md)<br/>
