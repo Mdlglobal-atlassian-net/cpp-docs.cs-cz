@@ -12,7 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351115"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912975"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
-Interní funkce CRT. Načte aktuální název národního prostředí vlákna.
+Vnitřní funkce CRT. Načte aktuální název národního prostředí vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,11 +45,11 @@ Ukazatel na řetězec, který obsahuje aktuální název národního prostředí
 
 ## <a name="remarks"></a>Poznámky
 
-`___lc_locale_name_func`je interní funkce CRT, která je používána jinými funkcemi CRT k získání aktuálního názvu národního prostředí z místního úložiště vlákna pro data CRT. Tyto informace jsou také k dispozici pomocí [funkce _get_current_locale](../c-runtime-library/reference/get-current-locale.md) nebo [funkce setlocale _wsetlocale.](../c-runtime-library/reference/setlocale-wsetlocale.md)
+`___lc_locale_name_func`je interní funkce CRT, kterou používají jiné funkce CRT k získání aktuálního názvu národního prostředí z thread localho úložiště pro data CRT. Tyto informace jsou také k dispozici pomocí funkce [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) nebo [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Functions.
 
-Interní funkce CRT jsou specifické pro implementaci a mohou se měnit s každou verzí. Nedoporučujeme jejich použití ve vašem kódu.
+Interní funkce CRT jsou specifické pro konkrétní implementaci a můžou se měnit s každou vydanou verzí. Nedoporučujeme jejich použití ve vašem kódu.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 

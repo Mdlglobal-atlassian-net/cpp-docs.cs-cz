@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +46,19 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341095"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914382"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
-Převede mezi znaky hiragana a katakana.
+Převádí mezi znaky hiragana a Katakana.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,11 +81,11 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Vícebajtový znak, který chcete převést.
+*r*<br/>
+Vícebajtový znak pro převod.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -93,29 +93,29 @@ Každá z těchto funkcí vrátí převedený znak *c*, pokud je to možné. V o
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbctohira** a **_mbctokata** testují znak *c* a pokud je to možné, použijí jeden z následujících převodů.
+Funkce **_mbctohira** a **_mbctokata** testuje znak *c* a, pokud je to možné, používají jeden z následujících převodů.
 
-|Rutiny|Převede|
+|Rutiny|Převedeny|
 |--------------|--------------|
-|**_mbctohira** **, _mbctohira_l**|Multibyte katakana na vícebajtové hiragana.|
-|**_mbctokata**, **_mbctokata_l**|Multibyte hiragana na vícebajtové katakana.|
+|**_mbctohira** **_mbctohira_l**|Vícebajtové znaky Katakana na vícebajtové znaky Hiragana.|
+|**_mbctokata** **_mbctokata_l**|Vícebajtové znaky Hiragana na vícebajtové Katakana.|
 
-Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají **_l** příponu použít aktuální národní prostředí pro toto chování závislé na národním prostředí a ty, které mají **příponu _l** místo toho použít parametr národního prostředí, který je předán. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** kategorie národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají příponu **_l** , používají aktuální národní prostředí pro toto chování závislé na národním prostředí a ty, které mají příponu **_l** místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V dřívějších verzích byl **_mbctohira** pojmenován **jtohira** a **_mbctokata** **jtokata**. Pro nový kód použijte nové názvy.
+V dřívějších verzích byla **_mbctohira** s názvem **jtohira** a **_mbctokata** byla pojmenována **jtokata**. Pro nový kód použijte nové názvy.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbctohira**|\<mbstring.h>|
-|**_mbctohira_l**|\<mbstring.h>|
-|**_mbctokata**|\<mbstring.h>|
-|**_mbctokata_l**|\<mbstring.h>|
+|**_mbctohira**|\<Mbstring. h>|
+|**_mbctohira_l**|\<Mbstring. h>|
+|**_mbctokata**|\<Mbstring. h>|
+|**_mbctokata_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
