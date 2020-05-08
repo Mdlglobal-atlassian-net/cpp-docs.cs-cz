@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913042"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
-Nastaví výchozí režim překladu souborů pro operace vstupně-videa a videa souborů.
+Nastaví výchozí režim překladu souborů pro vstupně-výstupní operace souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,28 +51,28 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>Parametry
 
-*Režimu*<br/>
+*Mode*<br/>
 Požadovaný režim překladu souborů: **_O_TEXT** nebo **_O_BINARY**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu, pokud je úspěšná, kód chyby při selhání. Pokud *režim* není **_O_TEXT** nebo **_O_BINARY** nebo **_O_WTEXT**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
+Vrátí nulu v případě úspěchu, chybový kód při selhání. Pokud *režim* není **_O_TEXT** nebo **_O_BINARY** nebo **_O_WTEXT**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce nastaví globální proměnnou [_fmode.](../../c-runtime-library/fmode.md) Tato proměnná určuje výchozí režim překladu souborů pro operace vstupně-va souboru **_open** a **_pipe**.
+Funkce nastaví globální proměnnou [_fmode](../../c-runtime-library/fmode.md) . Tato proměnná Určuje výchozí režim překladu souborů pro vstupně-výstupní operace se soubory **_open** a **_pipe**.
 
-**_O_TEXT** a **_O_BINARY** jsou definovány v Fcntl.h. **EINVAL** je definován v Errno.h.
+**_O_TEXT** a **_O_BINARY** jsou definovány v fcntl. h. **EINVAL** je definována v errno. h.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
+|**_set_fmode**|\<Stdlib. h>|\<fcntl. h>, \<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[Vstupně-to-v. soubor u textu a binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[I/O soubor textového a binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

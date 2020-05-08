@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 239f857bb40c9609cb6f7ff373295a7a1f8523a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348117"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915213"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
-Vytvoří druhý popisovač souboru pro otevřený soubor (**_dup**) nebo znovu přiřadí popisovač souboru (**_dup2**).
+Vytvoří druhý popisovač souboru pro otevřený soubor (**_dup**), nebo znovu přiřadí popisovač souboru (**_dup2**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,38 +54,38 @@ int _dup2( int fd1, int fd2 );
 
 ### <a name="parameters"></a>Parametry
 
-*fd*, *fd1*<br/>
+*FD*, *FD1*<br/>
 Popisovače souborů odkazující na otevřený soubor.
 
 *fd2*<br/>
-Libovolný popisovač souboru.
+Jakýkoli popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_dup** vrátí nový popisovač souboru. **_dup2** vrátí hodnotu 0, což označuje úspěch. Pokud dojde k chybě, každá funkce vrátí -1 a nastaví **errno** na **EBADF,** pokud je popisovač souboru neplatný, nebo **na EMFILE,** pokud nejsou k dispozici žádné další popisovače souborů. V případě neplatného popisovače souboru funkce také vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md).
+**_dup** vrátí nový popisovač souboru. **_dup2** vrátí hodnotu 0, aby označovala úspěch. Pokud dojde k chybě, každá funkce vrátí hodnotu-1 a nastaví **errno** na **EBADF** , pokud je popisovač souboru neplatný nebo **EMFILE** , pokud nejsou k dispozici žádné další popisovače souboru. V případě neplatného popisovače souboru funkce také vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Další informace o těchto a dalších návratových kódech naleznete [v tématech _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_dup** a **_dup2** přidruží popisovač druhého souboru k aktuálně otevřenému souboru. Tyto funkce lze použít k přidružení předdefinovaného popisovače souboru, například popisovače **stdout**, k jinému souboru. Operace se souborem lze provádět pomocí obou popisovačů souborů. Typ přístupu povolený pro soubor není ovlivněn vytvořením nového popisovače. **_dup** vrátí další dostupný popisovač souboru pro daný soubor. **_dup2** *vynutí, aby fd2* odkazoval na stejný soubor jako *fd1*. Pokud *fd2* je přidružen a otevřený soubor v době volání, tento soubor je uzavřen.
+Funkce **_dup** a **_dup2** přiřadí druhý popisovač souboru s aktuálně otevřeným souborem. Tyto funkce lze použít k přidružení předdefinovaného popisovače souboru, například pro **stdout**, s jiným souborem. Operace se souborem lze provádět pomocí popisovače souboru. Typ přístupu povolený pro soubor není ovlivněn vytvořením nového deskriptoru. **_dup** vrátí další dostupný popisovač souboru pro daný soubor. **_dup2** vynutí, aby *fd2* odkazoval na stejný soubor jako *FD1*. Pokud je *fd2* přidružen k otevřenému souboru v době volání, je tento soubor uzavřen.
 
-**_dup** i **_dup2** přijímají popisovače souborů jako parametry. Chcete-li datový`FILE *`proud ( ) předat jedné z těchto funkcí, použijte [_fileno](fileno.md). Rutina **fileno** vrátí popisovač souboru, který je aktuálně přidružen k danému datovému proudu. Následující příklad ukazuje, jak přidružit `FILE *` **stderr** (definované jako v Stdio.h) s popisovačsouboru:
+**_Dup** i **_dup2** přijímají popisovače souborů jako parametry. Chcete-li předat datový`FILE *`proud () některé z těchto funkcí, použijte [_fileno](fileno.md). Rutina **fileno** vrátí popisovač souboru, který je aktuálně přidružený k danému datovému proudu. Následující příklad ukazuje, jak přidružit **stderr** (definované jako `FILE *` v stdio. h) s popisovačem souboru:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_dup**|\<io.h>|
-|**_dup2**|\<io.h>|
+|**_dup**|\<IO. h>|
+|**_dup2**|\<IO. h>|
 
-Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke **konzole, stdin**, **stdout**a **stderr**, musí být přesměrovány před c run-time funkce je možné použít v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -150,7 +150,7 @@ This goes to file 'data'
 
 ## <a name="see-also"></a>Viz také
 
-[Vstupně-nosné(v" nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

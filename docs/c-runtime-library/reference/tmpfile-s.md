@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362465"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919933"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
-Vytvoří dočasný soubor. Jedná se o verzi [souboru tmpfile](tmpfile.md) s vylepšeními zabezpečení, jak je popsáno v [části Funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vytvoří dočasný soubor. Jedná se o verzi [tmpfile](tmpfile.md) s vylepšením zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,7 @@ errno_t tmpfile_s(
 ### <a name="parameters"></a>Parametry
 
 *pFilePtr*<br/>
-Adresa ukazatele pro uložení adresy generovaného ukazatele do datového proudu.
+Adresa ukazatele pro uložení adresy vygenerovaného ukazatele do datového proudu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -60,27 +60,27 @@ Vrátí hodnotu 0, pokud je úspěšná, kód chyby při selhání.
 
 |*pFilePtr*|**Návratová hodnota**|**Obsah**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**Null**|**EINVAL**|se nezměnilo|
+|**PLATNOST**|**EINVAL**|nezměněno|
 
-Pokud dojde k chybě ověření výše uvedeného parametru, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a vrácená hodnota je **EINVAL**.
+Pokud dojde k chybě ověření výše uvedeného parametru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a návratová hodnota je **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **tmpfile_s** vytvoří dočasný soubor a umístí ukazatel na tento datový proud v argumentu *pFilePtr.* Dočasný soubor je vytvořen v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiném adresáři než v kořenovém adresáři, použijte [tmpnam_s](tmpnam-s-wtmpnam-s.md) nebo [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
+Funkce **tmpfile_s** vytvoří dočasný soubor a vloží ukazatel na tento datový proud v argumentu *pFilePtr* . Dočasný soubor se vytvoří v kořenovém adresáři. Pokud chcete vytvořit dočasný soubor v jiném než kořenovém adresáři, použijte [tmpnam_s](tmpnam-s-wtmpnam-s.md) nebo [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
 
-Pokud soubor nelze otevřít, **tmpfile_s** zapíše **hodnotu NULL** do parametru *pFilePtr.* Tento dočasný soubor je automaticky odstraněn při zavření souboru, při ukončení programu normálně, nebo **při _rmtmp** je volána, za předpokladu, že aktuální pracovní adresář nezmění. Dočasný soubor je otevřen v **režimu w+b** (binární čtení a zápis).
+Pokud soubor nelze otevřít, **tmpfile_s** do parametru *PFilePtr* zapíše **hodnotu null** . Tento dočasný soubor se automaticky odstraní při zavření souboru, když se program normálně ukončí, nebo když se zavolá **_rmtmp** . za předpokladu, že se aktuální pracovní adresář nemění. Dočasný soubor je otevřen v režimu **w + b** (binární režim pro čtení a zápis).
 
-Selhání může dojít, pokud se pokusíte více než **TMP_MAX_S** (viz STDIO. H) volá s **tmpfile_s**.
+K selhání může dojít, pokud se pokusíte o více než **TMP_MAX_S** (viz stdio. H) volání s **tmpfile_s**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**tmpfile_s**|\<stdio.h>|
+|**tmpfile_s**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

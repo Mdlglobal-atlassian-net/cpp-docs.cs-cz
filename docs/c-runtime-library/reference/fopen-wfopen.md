@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 4b9fa6542996b2c16128a841e2611b85e995be2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346412"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914879"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
-Otevře soubor. K dispozici jsou bezpečnější verze těchto funkcí, které provádějí další ověřovací a návratové chybové kódy. viz [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
+Otevře soubor. Bezpečnější verze těchto funkcí, které provádějí dodatečné ověřování parametrů a návratové kódy chyb, jsou k dispozici. viz [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,146 +64,146 @@ FILE *_wfopen(
 
 ### <a name="parameters"></a>Parametry
 
-*Název_souboru*<br/>
+*Bitmap*<br/>
 Název souboru.
 
-*Režimu*<br/>
-Druh přístupu, který je povolen.
+*Mode*<br/>
+Druh přístupu, který je povolený.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí ukazatel na otevřený soubor. Hodnota ukazatele null označuje chybu. Pokud je *název souboru* nebo *režim* **null** nebo prázdný řetězec, tyto funkce aktivují neplatnou obslužnou rutinu parametru, která je popsána v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce vrátí **null** a nastavit **errno** **eINVAL**.
+Každá z těchto funkcí vrací ukazatel na otevřený soubor. Hodnota nulového ukazatele označuje chybu. Pokud má parametr *filename* nebo *Mode* **hodnotu null** nebo je prázdný řetězec, tyto funkce aktivují obslužnou rutinu neplatného parametru, která je popsána v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Další informace naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fopen** otevře soubor určený *názvem souboru*. Ve výchozím nastavení je řetězec úzkého *názvu souboru* interpretován pomocí znakové stránky ANSI (CP_ACP). V aplikacích pro Windows Desktop to lze změnit na znakovou stránku OEM (CP_OEMCP) pomocí funkce [SetFileApisToOEM.](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) Pomocí funkce [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) můžete určit, zda je *název souboru* interpretován pomocí znakové stránky ANSI nebo výchozího systémového oem. **_wfopen** je širokoznaková verze **fopen**; argumenty, které mají **_wfopen,** jsou řetězce s širokými znaky. V opačném případě **se _wfopen** a **fopen** chovají stejně. Použití **_wfopen** nemá vliv na kódovnou znakovou sadu, která se používá v datovém proudu souborů.
+Funkce **fopen** otevře soubor určený parametrem *filename*. Ve výchozím nastavení je řetězec zužujícího *názvu souboru* interpretován pomocí znakové stránky ANSI (CP_ACP). V aplikacích pro stolní počítače s Windows se dá změnit na znakovou stránku OEM (CP_OEMCP) pomocí funkce [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Pomocí funkce [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) můžete zjistit, jestli je *název souboru* INTERPRETOVÁN pomocí standardu ANSI nebo výchozí znakové stránky OEM systému. **_wfopen** je **fopen**verze s nejrůznějšími znaky; argumenty **_wfopen** jsou řetězce s libovolným znakem. V opačném případě **_wfopen** a **fopen** se chovají stejně. Pouze použití **_wfopen** nemá vliv na kódované znakové sady, která se používá v datovém proudu souboru.
 
-**fopen** přijímá cesty, které jsou platné v systému souborů v místě spuštění; **fopen** přijímá cesty UNC a cesty, které zahrnují namapované síťové jednotky, pokud systém, který spustí kód, má přístup ke sdílené nebo mapované jednotce v době spuštění. Při vytváření cest pro **fopen**, ujistěte se, že jednotky, cesty nebo sdílené síťové sdílené složky budou k dispozici v prostředí provádění. Jako oddělovače adresářů v cestě můžete\\použít lomítka (/) nebo zpětná lomítka ( ).
+**fopen** akceptuje cesty, které jsou platné v systému souborů v okamžiku provedení; **fopen** přijímá cesty a cesty UNC, které zahrnují mapované síťové jednotky, pokud systém, který spouští kód, má přístup ke sdílené složce nebo mapované jednotce v době spuštění. Když vytváříte cesty pro **fopen**, ujistěte se, že jednotky, cesty nebo sdílené síťové složky budou k dispozici v prostředí pro spuštění. Jako oddělovače adresářů v cestě můžete použít buď lomítka (/),\\nebo zpětná lomítka ().
 
-Před provedením dalších operací se souborem vždy zkontrolujte vrácenou hodnotu, zda je ukazatel null. Pokud dojde k chybě, globální proměnná **errno** je nastavena a může být použita k získání konkrétních informací o chybě. Další informace naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Před provedením dalších operací se souborem vždy zkontrolujte vrácenou hodnotu, abyste viděli, zda má ukazatel hodnotu NULL. Pokud dojde k chybě, globální proměnná **errno** je nastavena a lze ji použít k získání konkrétních informací o chybě. Další informace najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="unicode-support"></a>Podpora kódování Unicode
 
-**fopen** podporuje datové proudy souborů Unicode. Chcete-li otevřít soubor Unicode, předejte příznak **ccs,** který určuje požadované kódování pro **fopen**, následujícím způsobem.
+**fopen** podporuje datové proudy souborů Unicode. Chcete-li otevřít soubor Unicode, předejte příznak **CCS** , který určuje požadované kódování pro **fopen**, následovně.
 
-> **SOUBOR \*fp = fopen("newfile.txt", "rt+, ccs=**_kódování_**");**
+> **SOUBOR \*fp = fopen ("NewFile. txt"; "RT +; CCS =**_Encoding_**");**
 
-Povolené hodnoty *kódování* jsou **UNICODE**, **UTF-8**a **UTF-16LE**.
+Povolené hodnoty *kódování* jsou **Unicode**, **UTF-8**a **UTF-16LE**.
 
-Při otevření souboru v režimu Unicode překládají vstupní funkce data, která jsou ze souboru přečtena, do dat UTF-16 uložených jako typ **wchar_t**. Funkce, které zapisují do souboru otevřeného v režimu Unicode, očekávají vyrovnávací paměti, které obsahují data UTF-16 uložená jako typ **wchar_t**. Pokud je soubor kódován jako UTF-8, pak UTF-16 data je přeložen do UTF-8, když je zapsán, a soubor uTF-8 kódovaný obsah je přeložen do UTF-16 při čtení. Pokus o čtení nebo zápis lichého počtu bajtů v režimu Unicode způsobí chybu [ověření parametru.](../../c-runtime-library/parameter-validation.md) Chcete-li číst nebo zapisovat data uložená v programu jako UTF-8, použijte místo režimu Unicode textový nebo binární režim souborů. Nesete odpovědnost za veškerý požadovaný překlad kódování.
+Když se soubor otevře v režimu Unicode, vstupní funkce převede data načtená ze souboru do dat UTF-16 uložených jako typ **wchar_t**. Funkce, které zapisují do souboru otevřeného v režimu Unicode, očekávají vyrovnávací paměti, které obsahují data UTF-16 uložená jako typ **wchar_t**. Pokud je soubor kódovaný jako UTF-8, data UTF-16 se při zápisu přeloží na UTF-8 a obsah zakódovaný v kódování UTF-8 se převede na UTF-16 při čtení. Při pokusu o čtení nebo zápis lichého počtu bajtů v režimu Unicode dojde k chybě [ověření parametru](../../c-runtime-library/parameter-validation.md) . Chcete-li číst nebo zapisovat data uložená v programu jako UTF-8, místo režimu Unicode použijte textový nebo binární souborový režim. Zodpovídáte za všechny požadované překlady kódování.
 
-Pokud soubor již existuje a je otevřen pro čtení nebo připojení, určuje kódování značka bajtového pořadí (BOM), pokud je v souboru přítomen. Kódování kusovníku má přednost před kódováním, které je určeno příznakem **ccs.** Kódování **ccs** se používá pouze v případě, že není k dispozici žádný kusovník nebo je soubor nový soubor.
+Pokud soubor již existuje a je otevřen pro čtení nebo připojení, znak pořadí bajtů (BOM), pokud je v souboru přítomen, určuje kódování. Kódování kusovníku má přednost před kódováním, které je určeno příznakem **CCS** . Kódování **CCS** se používá pouze v případě, že není k dispozici žádný kusovník nebo je soubor novým souborem.
 
 > [!NOTE]
-> Detekce kusovníku se vztahuje pouze na soubory, které jsou otevřeny v režimu Unicode (to znamená předáním příznaku **ccs).**
+> Zjišťování kusovníku platí pouze pro soubory, které jsou otevřeny v režimu Unicode (tj. předáním příznaku **CCS** ).
 
-Následující tabulka shrnuje režimy, které se používají pro různé **ccs** příznaky dané **fopen** a Byte objednávky v souboru.
+Následující tabulka shrnuje režimy, které se používají pro různé příznaky **CCS** předané **fopen** a označení pořadí bajtů v souboru.
 
-### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Použitá kódování na základě příznaku ccs a kusovníku
+### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Kódování použitá na základě příznaku CCS a kusovníku
 
-|ccs vlajka|Žádný kusovník (nebo nový soubor)|KUS: UTF-8|KUS: UTF-16|
+|příznak CCS|Žádný kusovník (nebo nový soubor)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**Unicode**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**SADY**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
 |**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
-Soubory otevřené pro zápis v režimu Unicode mají zápisník napsaný automaticky.
+Soubory otevřené pro zápis do režimu Unicode mají automaticky zapsaného kusovníku.
 
-Pokud je *režim* **"a, ccs=**_encoding_**"**, **fopen** nejprve se pokusí otevřít soubor pomocí přístupu pro čtení i zápis. Pokud se to podaří, funkce přečte kusovník k určení kódování pro soubor; Pokud se to nezdaří, funkce použije výchozí kódování pro soubor. V obou případech **fopen** znovu otevře soubor pomocí přístupu pouze pro zápis. (To platí pouze pro režim **"a",** nikoli pro režim **"a+".)**
+Pokud *mode* je režim **"a, CCS =**_Encoding_**"**, **fopen** se nejprve pokusí otevřít soubor pomocí přístupu pro čtení i zápis. Pokud je to úspěšné, funkce přečte BOM a určí kódování souboru; Pokud se to nepovede, funkce použije výchozí kódování souboru. V obou případech bude **fopen** znovu otevřít soubor pomocí přístupu jen pro zápis. (Tato možnost se vztahuje pouze na režim **"a** +", nikoli na režim **"a +"** .)
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfopen**|**Fopen**|**Fopen**|**_wfopen**|
+|**_tfopen**|**fopen**|**fopen**|**_wfopen**|
 
-*Režim* řetězce znaků určuje druh přístupu, který je požadován pro soubor, a to následujícím způsobem.
+*Režim* řetězce znaků Určuje typ přístupu, který je požadován pro soubor, následovně.
 
-|*Režimu*|Access|
+|*Mode*|Access|
 |-|-|
-| **"r"** | Otevírá se pro čtení. Pokud soubor neexistuje nebo jej nelze najít, volání **fopen** se nezdaří. |
-| **"w"** | Otevře prázdný soubor pro psaní. Pokud daný soubor existuje, jeho obsah je zničen. |
-| **"a"** | Otevře se pro zápis na konci souboru (připojení) bez odebrání značky konce souboru (EOF) před zápisem nových dat do souboru. Vytvoří soubor, pokud neexistuje. |
-| **"r+"** | Otevírá se pro čtení i psaní. Soubor musí existovat. |
-| **"w+"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah je zničen. |
-| **"a+"** | Otevírá se pro čtení a připojení. Operace připojení zahrnuje odebrání značky EOF před zápisem nových dat do souboru. Značka EOF není obnovena po dokončení zápisu. Vytvoří soubor, pokud neexistuje. |
+| **í** | Otevře se pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, volání **fopen** se nezdařilo. |
+| **w** | Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah je zničen. |
+| **určitého** | Otevře se pro zápis na konci souboru (přidávání) bez odebrání označení konec souboru (EOF) před zápisem nových dat do souboru. Vytvoří soubor, pokud neexistuje. |
+| **"r +"** | Otevře se pro čtení i zápis. Soubor musí existovat. |
+| **"w +"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah se zničí. |
+| **"a +"** | Otevře se pro čtení a připojení. Operace připojení zahrnuje odstranění značky EOF před zápisem nových dat do souboru. Po dokončení zápisu se značka EOF neobnoví. Vytvoří soubor, pokud neexistuje. |
 
-Při otevření souboru pomocí typu **přístupu "a"** nebo **typu přístupu "a+",** všechny operace zápisu dojít na konci souboru. Ukazatel souboru lze přemístit pomocí [fseek](fseek-fseeki64.md) nebo [převíjení zpět](rewind.md), ale je vždy přesunuta zpět na konec souboru před provedením jakékoli operace zápisu. Proto existující data nelze přepsat.
+Když se soubor otevře pomocí přístupového typu **"a"** nebo typu **"a +"** , na konci souboru se objeví všechny operace zápisu. Ukazatel na soubor lze změnit pomocí [fseek](fseek-fseeki64.md) nebo [Rewind](rewind.md), ale je vždy přesunut zpět na konec souboru před provedením jakékoli operace zápisu. Stávající data proto nelze přepsat.
 
-Režim **"a"** neodebere značku EOF před připojením k souboru. Po připojení došlo k ms-dos typ příkazu zobrazí pouze data až do původní značky EOF a žádná data připojená k souboru. Před připojením k souboru režim **"a+"** odstraní značku EOF. Po připojení se v příkazu MS-DOS TYPE zobrazí všechna data v souboru. Režim **"a+"** je vyžadován pro připojení k souboru datového proudu, který je ukončen značkou CTRL+Z EOF.
+Režim **"a"** neodstraní značku EOF před připojením k souboru. Po navázání připojení příkaz Typ MS-DOS zobrazuje pouze data do původní značky EOF a ne data připojena k souboru. Před připojením k souboru odebere režim **"a +"** značku EOF. Po připojení se v příkazu typ MS-DOS zobrazí všechna data v souboru. Režim **"a +"** se vyžaduje pro připojení k souboru datového proudu, který je ukončený pomocí značky EOF CTRL + Z.
 
-Pokud je zadán typ přístupu **"r+"**, **"w+"** nebo **"a+",** je povoleno čtení i zápis (soubor je údajně otevřený pro "aktualizovat"). Však při přepnutí ze čtení na zápis, vstupní operace musí dojít značky EOF. Pokud neexistuje žádný EOF, musíte použít zasahující volání funkce umístění souboru. Funkce umístění souborů jsou **fsetpos**, [fseek](fseek-fseeki64.md)a [rewind](rewind.md). Při přechodu z zápisu na čtení, musíte použít zasahující volání buď **fflush** nebo funkce umístění souboru.
+Je-li zadán typ přístupu **"r +"**, **"w +"** nebo **"a +"** , jsou povoleny čtení i zápis (soubor je označován jako otevřený pro "aktualizaci"). Pokud však přepnete ze čtení na zápis, musí vstupní operace narazit na značku EOF. Pokud není k dispozici žádný znak EOF, je nutné použít volání do funkce umístění souboru. Funkce umístění souborů jsou **fsetpos**, [fseek](fseek-fseeki64.md)a [Rewind](rewind.md). Když přepnete ze zápisu na čtení, je nutné použít volání do **fflush** nebo do funkce umístění souboru.
 
-Kromě dřívějších hodnot lze do *režimu* připojit následující znaky, které určují režim překladu znaků nového řádku.
+Kromě předchozích hodnot lze do *režimu* připojit následující znaky a určit tak režim překladu pro znaky nového řádku.
 
-|*modifikátor režimu*|Režim překladu|
+|Modifikátor *režimu*|Režim překladu|
 |-|-|
-| **t** | Otevřít v textovém (přeloženém) režimu. |
-| **B** | Otevřít v binárním (nepřeloženém) režimu; překlady zahrnující znaky carriage-return a line feed jsou potlačeny. |
+| **š** | Otevřít v textovém (přeloženém) režimu. |
+| **b** | Otevřít v binárním (nepřeloženém) režimu; překlady týkající se znaků návratového znaku a znaku čárového kanálu jsou potlačeny. |
 
-V textovém režimu je ctrl+z interpretován jako znak EOF na vstupu. V souborech, které jsou otevřeny pro čtení/ zápis pomocí **"a+"**, **fopen** zkontroluje CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Důvodem je, že pomocí [fseek](fseek-fseeki64.md) a **ftell** přesunout v rámci souboru, který končí CTRL + Z může způsobit [fseek](fseek-fseeki64.md) chovat nesprávně blízko konce souboru.
+V textovém režimu CTRL + Z je interpretována jako znak EOF při vstupu. V souborech, které jsou otevřeny pro čtení a zápis pomocí **"a +"**, **fopen** zkontroluje kombinaci kláves CTRL + Z na konci souboru a odebere jej, pokud je to možné. K tomu je potřeba, protože použití [fseek](fseek-fseeki64.md) a **ftell** k přesunu v souboru, který končí kombinací kláves CTRL + Z, může způsobit, že se [fseek](fseek-fseeki64.md) chová nesprávně na konci souboru.
 
-V textovém režimu jsou kombinace podávání řádků přeloženy do jednoho řádkového podávání na vstupu a znaky posuvu řádků jsou přeloženy do kombinací posuvu řádku na výstupu. Pokud funkce vstupně-videa/videa Unicode pracuje v textovém režimu (výchozí), zdrojový nebo cílový datový proud se považuje za posloupnost vícebajtových znaků. Proto funkce vstupu datového proudu Unicode převádějí vícebajtové znaky na široké znaky (jako by voláním funkce **mbtowc).** Ze stejného důvodu unicode stream-output funkce převést široké znaky vícebajtové znaky (jako by volání **wctomb** funkce).
+V textovém režimu jsou kombinace kanálů návratového řádku překládány na vstupní kanály na vstupu a znaky kanálu čáry jsou přeloženy na kombinace kanálů návratového řádku na výstupu. Pokud funkce vstupně-výstupních streamů v kódování Unicode funguje v textovém režimu (ve výchozím nastavení), předpokládá se, že zdrojový nebo cílový datový proud je sekvence vícebajtových znaků. Proto funkce vstupního streamu Unicode převádí vícebajtové znaky na velké znaky (jako by bylo volání funkce **mbtowc** ). Ze stejného důvodu funkce výstupní datové proudy Unicode převádějí velké znaky na vícebajtové znaky (jako při volání funkce **wctomb** ).
 
-Pokud **t** nebo **b** není uveden v *režimu*, výchozí režim překladu je definován globální proměnnou [_fmode](../../c-runtime-library/fmode.md). Pokud **t** nebo **b** je předponou argument, funkce se nezdaří a vrátí **NULL**.
+Pokud **t** nebo **b** není uveden v *režimu*, výchozí režim překladu je definován globální proměnnou [_fmode](../../c-runtime-library/fmode.md). Pokud je **t** nebo **b** předpona argumentu, funkce se nezdařila a vrátí **hodnotu null**.
 
-Další informace o použití textového a binárního režimu v režimech Unicode a vícebajtových datových proudech vi/v naleznete v [tématu Text a binární režim V/O souboru](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [Unicode Stream I/O v režimu Text a binární režimy](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Další informace o tom, jak používat textové a binární režimy v kódování Unicode a vícebajtových vstupně-výstupních operacích, najdete v textu [a v binárním režimu vstupně-výstupních](../../c-runtime-library/text-and-binary-mode-file-i-o.md) operací a [datových proudech Unicode v textových a binárních](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)režimech.
 
-Následující možnosti lze připojit do *režimu* určit další chování.
+Následující možnosti lze připojit k *režimu* pro určení dalšího chování.
 
-|*modifikátor režimu*|Chování|
+|Modifikátor *režimu*|Chování|
 |-|-|
-| **C** | Povolte příznak potvrzení pro přidružený *název souboru,* aby byl obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud je volána **fflush** nebo **_flushall.** |
-| **N** | Obnovte příznak potvrzení pro přidružený *název souboru* na "no-commit". Toto nastavení je výchozí. Také přepíše příznak globálního potvrzení, pokud propojíte program s COMMODE.OBJ. Výchozí hodnota příznaku globálního potvrzení je "no-commit", pokud explicitně nepropojíte program s COMMODE. OBJ (viz [Možnosti odkazu](../../c-runtime-library/link-options.md)). |
-| **N** | Určuje, že soubor není zděděn podřízenými procesy. |
-| **S** | Určuje, že ukládání do mezipaměti je optimalizováno pro sekvenční přístup z disku, ale není omezen na něj. |
-| **R** | Určuje, že ukládání do mezipaměti je optimalizováno pro náhodný přístup z disku, ale není omezeno na něj. |
-| **T** | Určuje soubor jako dočasný. Pokud je to možné, není vyprázdněna na disk. |
-| **D** | Určuje soubor jako dočasný. Odstraní se při zavření ukazatele posledního souboru. |
-| **ccs =**_kódování_ | Určuje kódovku znakovou sadu, která má být pro tento soubor používána (jedna z **UTF-8**, **UTF-16LE**nebo **UNICODE).** Pokud chcete kódování ANSI, ponechejte nespecifikované. |
+| **r** | Povolte příznak potvrzení pro přidružený *název souboru* , aby se obsah vyrovnávací paměti souboru zapsal přímo na disk, pokud je zavolána buď **fflush** nebo **_flushall** . |
+| **n** | Obnovte příznak potvrzení pro přidružený *název souboru* na "bez potvrzení". Toto nastavení je výchozí. Také přepisuje příznak globálního potvrzení, Pokud propojíte program s COMMODE. OBJ. Pokud explicitně nepřipojíte program k COMMODE, je výchozí hodnota příznak pro globální potvrzování nepotvrzená. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)). |
+| **N** | Určuje, že soubor není děděn podřízenými procesy. |
+| **S** | Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, sekvenční přístup z disku. |
+| **R** | Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, náhodný přístup z disku. |
+| **T** | Určuje soubor jako dočasný. Pokud je to možné, nezaprázdní na disk. |
+| **Trojrozměrné** | Určuje soubor jako dočasný. Odstraní se po zavření posledního ukazatele na soubor. |
+| **CCS =**_kódování_ | Určuje znakovou sadu kódovanou jako použitou pro tento soubor (jednu z **UTF-8**, **UTF-16LE**nebo **Unicode**). Pokud chcete kódování ANSI, ponechte nespecifikovanou. |
 
-Platné znaky pro řetězec *režimu,* který se používá v **fopen** a **_fdopen** odpovídají *argumentům oflag,* které se používají v [_open](open-wopen.md) a [_sopen](sopen-wsopen.md), následujícím způsobem.
+Platné znaky pro řetězec *režimu* , který je použit v **fopen** a **_fdopen** odpovídají argumentům *oflag* , které se používají v [_open](open-wopen.md) a [_sopen](sopen-wsopen.md), jak je znázorněno níže.
 
-|Znaky v *řetězci režimu*|Ekvivalentní hodnota *oflag* \_\_pro otevření/ otevření|
+|Znaky v řetězci *režimu*|Ekvivalentní hodnota *oflag* pro \_Open/\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**A**|**\_O\_WRONLY** &#124; ** \_O\_APPEND** (obvykle ** \_O\_WRONLY** &#124; ** \_O\_CREAT** &#124; ** \_O\_APPEND)**|
-|**a+**|**\_O\_RDWR** &#124; ** \_O\_APPEND** (obvykle ** \_O\_RDWR** &#124; ** \_O\_APPEND** &#124; ** \_O\_CREAT)**|
-|**R**|**\_O\_RDONLY**|
-|**r+**|**\_O\_RDWR**|
-|**W**|**\_O\_WRONLY** (obvykle ** \_\_O WRONLY** &#124; ** \_\_O CREAT** &#124; ** \_O\_TRUNC)**|
-|**w+**|**\_O\_RDWR** (obvykle ** \_\_O RDWR** &#124; ** \_\_O CREAT** &#124; ** \_O\_TRUNC)**|
-|**B**|**\_O\_BINÁRNÍ**|
-|**t**|**\_O\_TEXT**|
-|**C**|Žádný|
-|**N**|Žádný|
-|**S**|**\_O\_SEKVENČNÍ**|
-|**R**|**\_O\_NÁHODNÉ**|
-|**T**|**\_O\_SHORTŽIL**|
-|**D**|**\_O\_DOČASNÉ**|
-|**ccs=UNICODE**|**\_O\_WTEXT**|
-|**ccs=UTF-8**|**\_O\_UTF8**|
-|**ccs=UTF-16LE**|**\_O\_UTF16**|
+|**určitého**|**\_O\_WRONLY** &#124; ** \_o\_připojení** (obvykle ** \_o\_WRONLY** &#124; ** \_o\_** vytvoření &#124; ** \_o\_připojení**)|
+|**a +**|**\_O\_RDWR** &#124; ** \_o\_připojení** (obvykle ** \_o\_RDWR** &#124; ** \_o\_připojení** &#124; ** \_o\_** vytvořit)|
+|**í**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (obvykle ** \_o\_WRONLY** &#124; ** \_o\_** vytvoření &#124; ** \_o\_TRUNC –**)|
+|**w +**|**\_O\_RDWR** (obvykle ** \_o\_RDWR** &#124; ** \_o\_** vytvoření &#124; ** \_o\_TRUNC –**)|
+|**b**|**\_O\_binárním souboru**|
+|**š**|**\_O\_-text**|
+|**r**|Žádné|
+|**n**|Žádné|
+|**S**|**\_O\_sekvenčním**|
+|**R**|**\_O\_náhodných**|
+|**T**|**\_O\_SHORTLIVED**|
+|**Trojrozměrné**|**\_O\_dočasnou**|
+|**CCS = UNICODE**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_O\_UTF8**|
+|**CCS = UTF-16LE**|**\_O\_UTF16**|
 
-Pokud používáte **režim rb,** není třeba přepojit kód a pokud očekáváte, že budete číst většinu velkého souboru nebo se neobáváte výkonu sítě, můžete také zvážit, zda použít paměťové soubory Win32 jako možnost.
+Pokud používáte režim **RB** , nemusíte port používat, a pokud očekáváte, že budete číst většinu velkých souborů nebo nemáte obavy o výkon sítě, můžete také zvážit, zda použít soubory Win32 mapované paměti jako možnosti.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**Fopen**|\<stdio.h>|
-|**_wfopen**|\<stdio.h> \<nebo wchar.h>|
+|**fopen**|\<stdio. h>|
+|**_wfopen**|\<stdio. h> nebo \<WCHAR. h>|
 
-**_wfopen** je rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+**_wfopen** je rozšířením společnosti Microsoft. Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-Možnosti *režimu* **c,** **n**, **t**, **S**, **R**, **T**a **D** jsou rozšířeními společnosti Microsoft pro **fopen** a **_fdopen** a neměly by být používány tam, kde je požadována přenositelnost ANSI.
+Možnosti v *režimu* **c**, **n**, **t**, **S**, **R**, **t**a **D** jsou rozšířeními Microsoftu pro **fopen** a **_fdopen** a neměla by se používat tam, kde je žádoucí přenositelnost ANSI.
 
 ## <a name="example-1"></a>Příklad 1
 
-Následující program otevře dva soubory.  Používá **fclose** zavřít první soubor a **_fcloseall** zavřít všechny zbývající soubory.
+Následující program otevírá dva soubory.  K zavření prvního souboru používá **fclose** a **_fcloseall** k zavření všech zbývajících souborů.
 
 ```C
 // crt_fopen.c
@@ -256,7 +256,7 @@ Number of files closed by _fcloseall: 1
 
 ## <a name="example-2"></a>Příklad 2
 
-Následující program vytvoří soubor (nebo přepíše jeden, pokud existuje), v textovém režimu, který má kódování Unicode.  Potom zapíše dva řetězce do souboru a zavře soubor. Výstupem je soubor s názvem _wfopen_test.xml, který obsahuje data z výstupního oddílu.
+Následující program vytvoří soubor (nebo přepíše jeden, pokud existuje) v textovém režimu, který má kódování Unicode.  Pak zapíše dva řetězce do souboru a soubor zavře. Výstupem je soubor s názvem _wfopen_test. XML, který obsahuje data z výstupní části.
 
 ```C
 // crt__wfopen.c

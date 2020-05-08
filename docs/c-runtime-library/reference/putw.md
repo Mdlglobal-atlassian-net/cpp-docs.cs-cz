@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338333"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916086"
 ---
 # <a name="_putw"></a>_putw
 
@@ -52,34 +52,34 @@ int _putw(
 ### <a name="parameters"></a>Parametry
 
 *binint*<br/>
-Binární celé číslo pro výstup.
+Binární celé číslo, které má být výstup.
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí zapsanou hodnotu. Vrácená hodnota **EOF** může znamenat chybu. Vzhledem k tomu, že **EOF** je také legitimní celá hodnota, použijte **ferror** k ověření chyby. Pokud *je datový proud* ukazatelem null, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části Ověření [parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EOF**.
+Vrátí napsanou hodnotu. Návratová hodnota **EOF** může indikovat chybu. Vzhledem k tomu, že **EOF** je také legitimní celočíselná hodnota, použijte k ověření chyby příkaz **trajekt** . Pokud je *datový proud* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EOF**.
 
-Informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_putw** zapíše binární hodnotu typu **int** na aktuální pozici *datového proudu.* **_putw** nemá vliv na zarovnání položek v datovém proudu, ani nepředpokládá žádné zvláštní zarovnání. **_putw** je primárně pro kompatibilitu s předchozími knihovnami. Přenositelnost problémy mohou nastat s **_putw** protože velikost **int** a řazení bajtů v rámci **int** se liší v rámci systémů.
+Funkce **_putw** zapisuje binární hodnotu typu **int** do aktuální pozice *datového proudu.* **_putw** nemá vliv na zarovnání položek v datovém proudu ani nepředpokládá žádné speciální zarovnání. **_putw** je primárně pro kompatibilitu s předchozími knihovnami. Při **_putw** mohou nastat problémy s přenositelností, protože velikost **int** a pořadí bajtů v rámci objektu **int** se v různých systémech liší.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_putw**|\<stdio.h>|
+|**_putw**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

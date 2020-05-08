@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914956"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Vynásobí dvě hodnoty dohromady, přidá třetí hodnotu a pak zaokrouhlí výsledek, aniž by došlo ke ztrátě přesnosti z důvodu zaokrouhlení zprostředkovatele.
+Vynásobí dvě hodnoty dohromady, přidá třetí hodnotu a pak výsledek zaokrouhlí, aniž by došlo ke ztrátě přesnosti kvůli zaokrouhlení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,47 +84,47 @@ long double fmal(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-První hodnota násobit.
+*znak*<br/>
+První hodnota, která se má vynásobit.
 
-*Y*<br/>
-Druhá hodnota násobit.
+*požadované*<br/>
+Druhá hodnota, která se má vynásobit.
 
-*Z*<br/>
-Hodnota přidat.
+*od*<br/>
+Hodnota, která má být přidána.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací objekt `(x * y) + z`. Vrácená hodnota se pak zaokrouhlí pomocí aktuálního formátu zaokrouhlení.
+Vrací objekt `(x * y) + z`. Návratová hodnota se pak zaokrouhluje pomocí aktuálního formátu zaokrouhlení.
 
-V opačném případě může vrátit jednu z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
 |Problém|Vrátit|
 |-----------|------------|
-|*x* = INFINITY, *y* = 0 nebo<br /><br /> *x* = 0, *y* = NEKONEČNO|Není číslo|
-|*x* nebo *y* = přesné ± INFINITY, *z* = INFINITY s opačným znaménkem|Není číslo|
+|*x* = nekonečno, *y* = 0 nebo<br /><br /> *x* = 0, *y* = nekonečno|Není číslo|
+|*x* nebo *y* = přesné ± nekonečno, *z* = nekonečno s opačným znaménkem|Není číslo|
 |*x* nebo *y* = NaN|Není číslo|
-|ne (*x* = 0, *y*= neurčitý) a *z* = NaN<br /><br /> ne (*x*= neurčitý, *y*= 0) a *z* = NaN|Není číslo|
-|Chyba rozsahu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
-|Chyba rozsahu podtečení|správnou hodnotu po zaokrouhlení.|
+|NOT (*x* = 0, *y*= nekonečno) a *z* = NaN<br /><br /> Ne (*x*= nekonečno, *y*= 0) a *z* = NaN|Není číslo|
+|Chyba rozsahu přetečení|± HUGE_VAL, ± HUGE_VALF nebo ± HUGE_VALL|
+|Chyba podtečení rozsahu|správná hodnota, po zaokrouhlení.|
 
-Chyby jsou hlášeny podle _matherr [.](matherr.md)
+Chyby jsou hlášeny tak, jak jsou uvedeny v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **fma,** které take a return **float** a **dlouhé** **dvojité** typy. V programu C **fma** vždy trvá a vrací **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **FMA** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **FMA** vždycky přebírá a vrací **Double**.
 
-Tato funkce vypočítá hodnotu, jako by byla přijata na nekonečnou přesnost a pak zaokrouhlí konečný výsledek.
+Tato funkce vypočítá hodnotu, jako by byla převedena na nekonečnou přesnost, a pak zaokrouhlí konečný výsledek.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf –**, **fmal**|\<Math. h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

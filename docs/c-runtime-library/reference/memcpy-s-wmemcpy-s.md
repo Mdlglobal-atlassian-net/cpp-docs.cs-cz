@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333341"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915408"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
-Zkopíruje bajty mezi vyrovnávacími paměťmi. Jedná se o verze [memcpy, wmemcpy](memcpy-wmemcpy.md) s vylepšeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopíruje bajty mezi vyrovnávacími paměťmi. Jedná se o verze [memcpy, wmemcpy](memcpy-wmemcpy.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,47 +61,47 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Dest*<br/>
+*propojovací*<br/>
 Nová vyrovnávací paměť.
 
 *destSize*<br/>
-Velikost cílové vyrovnávací paměti v bajtech pro memcpy_s a široké znaky (wchar_t) pro wmemcpy_s.
+Velikost cílové vyrovnávací paměti v bajtech pro memcpy_s a velké znaky (wchar_t) pro wmemcpy_s.
 
 *src*<br/>
 Vyrovnávací paměť, ze které se má kopírovat.
 
-*Počet*<br/>
-Počet znaků ke kopírování.
+*výpočtu*<br/>
+Počet znaků, které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; kód chyby při selhání.
+Nula v případě úspěchu; chybový kód při selhání.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*Dest*|*destSize*|*src*|*Počet*|Návratová hodnota|Obsah *dest*|
+|*propojovací*|*destSize*|*src*|*výpočtu*|Návratová hodnota|Obsah cíle *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|jakékoli|jakékoli|jakékoli|0|0|Nezměněno|
-|**Null**|jakékoli|jakékoli|nenulová|**EINVAL**|Nezměněno|
-|jakékoli|jakékoli|**Null**|nenulová|**EINVAL**|*dest* je vynulován|
-|jakékoli|< *Počet*|jakékoli|nenulová|**ERANGE**|*dest* je vynulován|
+|jakýmikoli|jakýmikoli|jakýmikoli|0|0|Neupraveno|
+|**PLATNOST**|jakýmikoli|jakýmikoli|bez nuly|**EINVAL**|Neupraveno|
+|jakýmikoli|jakýmikoli|**PLATNOST**|bez nuly|**EINVAL**|*cíl* je nula|
+|jakýmikoli|< *výpočtu*|jakýmikoli|bez nuly|**ERANGE**|*cíl* je nula|
 
 ## <a name="remarks"></a>Poznámky
 
-**memcpy_s** kopie *počítají* bajty od *src* do *dest*; **wmemcpy_s** kopie *počítají* široké znaky (dva bajty). Pokud se zdroj a cíl překrývají, chování **memcpy_s** není definováno. Pomocí **memmove_s** můžete zpracovávat překrývající se oblasti.
+**memcpy_s** kopíruje *počet* bajtů ze *Src* na *cíl*; **wmemcpy_s** kopíruje *počet* znaků, které jsou v rozsahu (dva bajty). Pokud se zdrojový a cílový překrývají, chování **memcpy_s** není definováno. Použijte **memmove_s** k obsluze překrývajících se oblastí.
 
-Tyto funkce ověřují jejich parametry. Pokud *count* je nenulová a *dest* nebo *src* je nulový ukazatel nebo *destSize* je menší než *count*, tyto funkce vyvolat neplatný parametr obslužné rutiny, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí **EINVAL** nebo **ERANGE** a nastavit **errno** na vrácenou hodnotu.
+Tyto funkce ověřují své parametry. Pokud je *počet* nenulový a *cíl* nebo *Src* je ukazatel s hodnotou null, nebo *destSize* je menší než *Count*, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** nebo **ERANGE** a nastaví **errno** na vrácenou hodnotu.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memcpy_s**|\<memory.h> \<nebo string.h>|
-|**wmemcpy_s**|\<wchar.h>|
+|**memcpy_s**|\<Memory. h> nebo \<String. h>|
+|**wmemcpy_s**|\<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

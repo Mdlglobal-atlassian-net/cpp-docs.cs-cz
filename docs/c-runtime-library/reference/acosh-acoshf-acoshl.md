@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350849"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913032"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -63,31 +63,31 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou táceckou.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Acosh** funkce vrátit inverzní hyberbolický kosinus (oblouk hyperbolický kosinus) *x*. Tyto funkce jsou platné přes doménu *x* ≥ 1. Pokud *x* je menší `errno` než `EDOM` 1, je nastavena na a výsledkem je tichý NaN. Pokud *x* je tichý NaN, neurčitý nebo nekonečno, je vrácena stejná hodnota.
+Funkce **acosh –** vrací inverzní arkustangens kosinus (oblouk hyperbolický kosinus) *x*. Tyto funkce jsou platné v doméně *x* ≥ 1. Pokud je *x* menší než 1, `errno` je nastaveno na `EDOM` a výsledek je tiché NaN. Pokud *x* je tiché NaN, nekonečný nebo nekonečno, je vrácena stejná hodnota.
 
-|Vstup|Výjimka SEH|`_matherr`Výjimka|
+|Vstup|Výjimka SEH|`_matherr`Jímka|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Žádná|Žádná|
-|*x* < 1|Žádná|Žádná|
+|QNAN, ZASÁHNOUT, INF|žádné|žádné|
+|*x* < 1|žádné|žádné|
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití Jazyka C++, můžete volat přetížení **acosh,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **acosh** vždy bere a vrací **double**.
+Při použití jazyka C++ můžete volat přetížení **acosh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **acosh –** vždycky přebírá a vrací **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh –**, **acoshf –**, **acoshl**|\<Math. h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -119,7 +119,7 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

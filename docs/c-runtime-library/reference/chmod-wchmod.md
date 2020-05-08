@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350087"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916998"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
-Změní nastavení oprávnění k souboru.
+Změní nastavení oprávnění souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,33 +55,33 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parametry
 
-*Název_souboru*<br/>
+*Bitmap*<br/>
 Název existujícího souboru.
 
 *pmode*<br/>
-Nastavení oprávnění pro soubor.
+Nastavení oprávnění souboru
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátí 0, pokud je nastavení oprávnění úspěšně změněno. Vrácená hodnota -1 označuje selhání. Pokud zadaný soubor nebyl nalezen, **je chybné číslo** nastaveno na **ENOENT**; Pokud je parametr neplatný, je **errno** nastaveno na **EINVAL**.
+Tyto funkce vrátí hodnotu 0, pokud je nastavení oprávnění úspěšně změněno. Návratová hodnota-1 označuje chybu. Pokud zadaný soubor nebyl nalezen, **errno** je nastaven na **ENOENT**; Pokud je parametr neplatný, **errno** je nastaven na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_chmod** změní nastavení oprávnění souboru určeného *názvem souboru*. Nastavení oprávnění řídí přístup pro čtení a zápis do souboru. Režim celého *čísla* obsahuje jednu nebo obě následující konstanty manifestu definované v souboru SYS\Stat.h.
+Funkce **_chmod** změní nastavení oprávnění k souboru určenému parametrem *filename*. Nastavení oprávnění řídí přístup pro čtení a zápis k souboru. Celočíselný výraz *pmode* obsahuje jednu nebo obě následující konstanty manifestu definované v SYS\Stat.h..
 
 | *pmode* | Význam |
 |-|-|
-| **\_S\_IREAD** | Čtení je povoleno pouze. |
-| **\_S\_IWRITE** | Psaní povoleno. (Ve skutečnosti umožňuje čtení a zápis.) |
-| **\_S\_IREAD** &#124; ** \_\_S IWRITE** | Čtení a psaní povoleno. |
+| **\_S\_IREAD** | Povoluje se pouze čtení. |
+| **\_S\_IWRITE** | Zápis povolen. (V důsledku toho povoluje čtení a zápis.) |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | Čtení a zápis jsou povoleny. |
 
-Pokud jsou obě konstanty uvedeny, jsou spojeny**\|** s bitovým nebo operátorem ( ). Pokud není uděleno oprávnění k zápisu, soubor je jen pro čtení. Všimněte si, že všechny soubory jsou vždy čitelné; není možné udělit oprávnění pouze pro zápis. Režimy **_S_IWRITE** a **_S_IREAD** \| **_S_IWRITE** jsou tedy rovnocenné.
+Jsou-li obě konstanty zadány, jsou spojeny s bitovým**\|** operátorem OR (). Pokud není uděleno oprávnění k zápisu, je soubor určen jen pro čtení. Všimněte si, že všechny soubory jsou vždy čitelné; není možné poskytovat oprávnění pouze pro zápis. Proto jsou režimy **_S_IWRITE** a **_S_IREAD** \| **_S_IWRITE** ekvivalentní.
 
-**_wchmod** je širokoznaková verze **_chmod**; argument *název souboru,* který **má _wchmod,** je řetězec s širokým znakem. **_wchmod** a **_chmod** se chovají stejně jinak.
+**_wchmod** je verze **_chmod**s velkým znakem; Argument *filename* pro **_wchmod** je řetězec s velkým znakem. **_wchmod** a **_chmod** se chovají identicky jinak.
 
-Tato funkce ověřuje její parametry. Pokud *pmode* není kombinací jedné z konstant manifestu nebo obsahuje alternativní sadu konstant, funkce je jednoduše ignoruje. Pokud je *název souboru* **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí -1.
+Tato funkce ověří své parametry. Pokud *pmode* není kombinací jedné z konstant manifestu nebo zahrnuje alternativní sadu konstant, funkce je jednoduše ignoruje. Pokud *název souboru* má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí-1.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -91,12 +91,12 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h \<>, errno.h>|
-|**_wchmod**|\<io.h> \<nebo wchar.h>|\<sys/types.h>, \<sys/stat.h \<>, errno.h>|
+|**_chmod**|\<IO. h>|\<sys/Types. h> \<, sys/stat. h> \<, errno. h>|
+|**_wchmod**|\<IO. h> nebo \<WCHAR. h>|\<sys/Types. h> \<, sys/stat. h> \<, errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346674"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911639"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Vypočítá podlahu hodnoty.
+Vypočítá podlahovou hodnotu hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,32 +67,32 @@ long double floorl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou táceckou.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **podlahy** vrátí hodnotu s plovoucí desetinnou hodnotou, která představuje největší celé číslo, které je menší nebo rovno *x*. Neexistuje žádná chyba vrátit.
+Funkce **Floor** vrací hodnotu s plovoucí desetinnou čárkou, která představuje největší celé číslo, které je menší nebo rovno *x*. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádné|_DOMAIN|
 
-**floor** má implementaci, která používá streaming SIMD extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete [v tématu _set_SSE2_enable](set-sse2-enable.md).
+**podlahová plocha** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete v tématu [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Poznámky
 
-C++ umožňuje přetížení, takže můžete volat přetížení **podlahy,** které trvat a vrátit **float** a **dlouhé** **dvojité** hodnoty. V programu C **floor** vždy trvá a vrací **double**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **patra** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C má **podlaha** vždycky a vrací hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**podlaha**, **podlaha,** **podlaha**|\<math.h>|
+|**podlahová**, **floorf –á**, **podlahová**|\<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -131,7 +131,7 @@ The ceil of -2.8 is -2.000000
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

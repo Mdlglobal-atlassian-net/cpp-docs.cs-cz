@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316265"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915757"
 ---
 # <a name="setvbuf"></a>setvbuf
 
-Řídí ukládání do vyrovnávací paměti datového proudu a velikost vyrovnávací paměti.
+Ovládá ukládání do vyrovnávací paměti streamování a velikost vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,51 +52,51 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
-*Vyrovnávací paměti*<br/>
-Uživatelem přidělená vyrovnávací paměť.
+*vyrovnávací paměti*<br/>
+Vyrovnávací paměť přidělená uživatelem
 
-*Režimu*<br/>
+*Mode*<br/>
 Režim ukládání do vyrovnávací paměti.
 
-*Velikost*<br/>
-Velikost vyrovnávací paměti v bajtů. Povolený rozsah: 2 <= *velikost* <= INT_MAX (2147483647). Interně je hodnota dodaná pro *velikost* zaokrouhlena dolů na nejbližší násobek 2.
+*hodnota*<br/>
+Velikost vyrovnávací paměti v bajtech Povolený rozsah: 2 <= *velikost* <= INT_MAX (2147483647). Interně se hodnota zadaná pro *Velikost* zaokrouhluje dolů na nejbližší násobek 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0, pokud je úspěšná.
+V případě úspěchu vrátí hodnotu 0.
 
-Pokud *je datový proud* **NULL**nebo pokud *režim* nebo *velikost* není v rámci platné změny, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí tato funkce -1 a nastaví **errno** na **EINVAL**.
+Pokud má *datový proud* **hodnotu null**nebo pokud *režim* nebo *Velikost* nejsou v rámci platné změny, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-Informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **setvbuf** umožňuje programu řídit jak ukládání do vyrovnávací paměti, tak velikost vyrovnávací paměti pro *datový proud*. *datový proud* musí odkazovat na otevřený soubor, který od otevření neprošel vstupně-vstupně-va. Pole, na které se ve *vyrovnávací paměti ukazuje,* se používá jako vyrovnávací paměť, pokud není **null**, v takovém případě **setvbuf** používá automaticky přidělenou vyrovnávací paměť *o velikosti*délky /2 \* 2 bajty.
+Funkce **setvbuf –** umožňuje programu řídit ukládání do vyrovnávací paměti a velikost vyrovnávací paměti pro *datový proud*. *datový proud* musí odkazovat na otevřený soubor, který po otevření neprošl operací I/O. Pole, na které se odkazuje pomocí *vyrovnávací paměti* , se používá jako vyrovnávací paměť, pokud není **null**. v takovém případě **setvbuf –** používá automaticky přidělenou vyrovnávací paměť s \* délkou *velikosti*/2 2 bajty.
 
-Režim musí být **_IOFBF**, **_IOLBF**nebo **_IONBF**. Pokud je *režim* **_IOFBF** nebo **_IOLBF**, pak *velikost* se používá jako velikost vyrovnávací paměti. Pokud je *režim* **_IONBF**, datový proud je bez vyrovnávací paměti a *velikost* a *vyrovnávací paměť* jsou ignorovány. Hodnoty *pro režim* a jejich význam jsou:
+Režim musí být **_IOFBF**, **_IOLBF**nebo **_IONBF**. Pokud *mode* je režim **_IOFBF** nebo **_IOLBF**, použije *se jako* velikost vyrovnávací paměti. Pokud *mode* je režim **_IONBF**, datový proud je neuložený do vyrovnávací paměti a *Velikost* a *vyrovnávací paměť* se ignorují. Hodnoty pro *režim* a jejich význam jsou:
 
 |hodnota *režimu*|Význam|
 |-|-|
-| **_IOFBF** | Úplné ukládání do vyrovnávací paměti; to znamená, *že vyrovnávací paměť* se používá jako vyrovnávací paměť a *velikost* se používá jako velikost vyrovnávací paměti. Pokud je *vyrovnávací paměť* **null**, automaticky přidělené *velikosti* vyrovnávací paměti bajtů dlouho se používá. |
-| **_IOLBF** | U některých systémů to poskytuje vyrovnávací paměť linky. Však pro Win32 chování je stejný jako **_IOFBF** - úplné ukládání do vyrovnávací paměti. |
-| **_IONBF** | Bez ohledu na vyrovnávací *paměť* nebo *velikost*se nepoužívá žádná vyrovnávací paměť . |
+| **_IOFBF** | Úplné ukládání do vyrovnávací paměti; To znamená, že *vyrovnávací paměť* se používá jako vyrovnávací paměť a *Velikost* se používá jako velikost vyrovnávací paměti. Pokud má *vyrovnávací paměť* **hodnotu null**, použije se automaticky přidělená *Velikost* vyrovnávací paměti. |
+| **_IOLBF** | U některých systémů to poskytuje ukládání řádků do vyrovnávací paměti. Pro Win32 ale chování je stejné jako **_IOFBF** -Full Buffered. |
+| **_IONBF** | Nepoužívá se žádná vyrovnávací paměť bez ohledu na velikost *vyrovnávací paměti* nebo *velikosti*. |
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**setvbuf**|\<stdio.h>|
+|**setvbuf**|\<stdio. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

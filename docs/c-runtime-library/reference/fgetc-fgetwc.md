@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: c1589c64127b47f4dd2a1147f2b4d549601db4fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347014"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912871"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
-Čtení znaku z datového proudu.
+Načtení znaku z datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,30 +60,30 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fgetc** vrátí znak přečtený jako **int** nebo vrátí **EOF** označující chybu nebo konec souboru. **fgetwc** vrátí jako [wint_t](../../c-runtime-library/standard-types.md)široký znak, který odpovídá znaku číst nebo vrátí **WEOF** k označení chyby nebo konce souboru. Pro obě funkce použijte **feof** nebo **ferror** k rozlišení mezi chybou a podmínkou konce souboru. Pokud dojde k chybě čtení, je nastaven indikátor chyby pro datový proud. Pokud je *datový proud* **NULL**, **fgetc** a **fgetwc** vyvolávají neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce nastavit **errno** **eINVAL** a vrátit **EOF**.
+**fgetc** vrátí znak načtený jako **int** nebo vrátí **EOF** , aby označoval chybu nebo konec souboru. **fgetwc** vrátí jako [wint_t](../../c-runtime-library/standard-types.md)celočíselný znak, který odpovídá znaku Read nebo vrátí **WEOF** k označení chyby nebo konce souboru. U obou funkcí použijte **feof** nebo **trajekt** k rozlišení mezi chybou a stavem konce souboru. Pokud dojde k chybě čtení, je nastaven indikátor chyby pro datový proud. Pokud má *datový proud* **hodnotu null**, **fgetc** a **fgetwc** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **EOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí přečte jeden znak z aktuální pozice souboru přidruženého k *datovému proudu*. Funkce pak navýhne přidružený ukazatel souboru (pokud je definován) tak, aby ukazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
+Každá z těchto funkcí čte jeden znak z aktuální pozice souboru přidruženého ke *streamu*. Funkce poté zvýší přidružený ukazatel na soubor (je-li definován), aby ukazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
 
-**fgetc** je ekvivalentní **getc**, ale je implementován pouze jako funkce, nikoli jako funkce a makro.
+**fgetc** je ekvivalentem **getc –**, ale je implementována pouze jako funkce, nikoli jako funkce a makro.
 
-**fgetwc** je širokoznaková verze **fgetc**; přečte **c** jako vícebajtový znak nebo široký znak podle toho, zda je *datový proud* otevřen v textovém nebo binárním režimu.
+**fgetwc** je **fgetc**verze s velkým znakem; čte **c** jako vícebajtový znak nebo jako velký znak v závislosti na tom, zda je *datový proud* otevřen v textovém režimu nebo v binárním režimu.
 
-Verze s **příponou _nolock** jsou identické s tím rozdílem, že nejsou chráněny před rušením jinými vlákny.
+Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny.
 
-Další informace o zpracování širokých znaků a vícebajtových znaků v textovém a binárním režimu naleznete [v tématu Unicode Stream I/O v režimech Text a Binární režimy](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Další informace o zpracování velkých a vícebajtových znaků v textovém a binárním režimu najdete v tématu [vstupně-výstupní operace streamu Unicode v textovém a binárním režimu](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
 
@@ -91,10 +91,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fgetc**|\<stdio.h>|
-|**fgetwc**|\<stdio.h> \<nebo wchar.h>|
+|**fgetc**|\<stdio. h>|
+|**fgetwc**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -133,7 +133,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_fgetctxt"></a>Vstup: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Vstup: crt_fgetc. txt
 
 ```Input
 Line one.

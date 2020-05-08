@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 34b7d0fdedb55241452f9a7f9937b64c58f7772c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348718"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913512"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Převede řetězec na **dlouhé** **celé** číslo.
+Převede řetězec na **dlouhé** **dlouhé** celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,43 +73,43 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
+*str*<br/>
 Řetězec, který má být převeden.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí **dlouhou** **dlouhou** hodnotu, která je vytvořena interpretací vstupních znaků jako čísla. Vrácená hodnota pro **atol** je 0, pokud vstup nelze převést na hodnotu tohoto typu.
+Každá funkce vrátí **dlouhou** **dlouhou** hodnotu, která je vytvořena interpretací vstupních znaků jako čísla. Návratová hodnota pro **atol** je 0, pokud vstup nelze převést na hodnotu daného typu.
 
-Pro přetečení s velkými kladnými integrálními hodnotami **vrátí atol** **LLONG_MAX**a pro přetečení s velkými zápornými integrálními hodnotami vrátí **LLONG_MIN**.
+Pro přetečení s velkými celočíselnými hodnotami, **Palmyra** vrátí **LLONG_MAX**a pro přetečení s velkými zápornými hodnotami vrátí **LLONG_MIN**.
 
-Ve všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud je předaný parametr **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce nastavit **errno** **eINVAL** a vrátit 0.
+V všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud předaný parametr má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převést řetězec znaku na **dlouhou** **hodnotu celé** číslo.
+Tyto funkce převádějí řetězec znaků na **dlouhé** **dlouhé** celočíselné hodnoty.
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce na první znak, který nelze rozpoznat jako součást čísla. Tento znak může být znak null (\0' nebo L'\0'), který řetězec ukončí.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nemůže rozpoznat jako součást čísla. Tento znak může být znak null (' \ 0 ' nebo L ' \ 0 '), který ukončí řetězec.
 
-*Argument str* na **atolu** má následující podobu:
+Argument *str* pro **atol** má následující formu:
 
-> [*mezery*] [*znamení*] [*číslice*]
+> [*prázdné znaky*] [*Sign*] [*číslice*]
 
-*Prázdné znaky* se skládají z mezer nebo tabulátoru znaků, které jsou ignorovány; *znak* je buď plus (+) nebo mínus (-); a *číslice* jsou jedna nebo více číslic.
+*Mezera* se skládá z mezer nebo znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); a *číslice* jsou jednou nebo více číslicemi.
 
-**_wtoll** je totožný s **atolu** s tím rozdílem, že trvá široký řetězec znaků jako parametr.
+**_wtoll** je identický s **atol** s tím rozdílem, že jako parametr přijímá řetězec s velkým počtem znaků.
 
-Verze těchto funkcí, které mají **_l** příponu jsou shodné s verzemi, které ji nemají, s tím rozdílem, že používají parametr národního prostředí, který je předán namísto aktuálního národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , jsou shodné s verzemi, které ji nemají, s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tstoll**|**Atoll**|**Atoll**|**_wtoll**|
+|**_tstoll**|**Palmyra**|**Palmyra**|**_wtoll**|
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
@@ -117,12 +117,12 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**atol**, **_atoll_l**|\<stdlib.h>|
-|**_wtoll**, **_wtoll_l**|\<stdlib.h> \<nebo wchar.h>|
+|**atol**, **_atoll_l**|\<Stdlib. h>|
+|**_wtoll** **_wtoll_l**|\<Stdlib. h> nebo \<WCHAR. h>|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje, jak pomocí **atolu převést** čísla uložená jako řetězce na číselné hodnoty.
+Tento program ukazuje, jak používat funkce **Palmyra** pro převod čísel uložených jako řetězce na číselné hodnoty.
 
 ```C
 // crt_atoll.c
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

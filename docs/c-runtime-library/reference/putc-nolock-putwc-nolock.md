@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 21ab002dee736a099bae5ce12f5c78248e682d58
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913312"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
-Zapíše znak do datového proudu bez uzamčení vlákna.
+Zapíše znak do datového proudu bez blokování vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,11 +66,11 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být napsán.
+*r*<br/>
+Znak, který se má zapsat
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -78,11 +78,11 @@ Viz **putc, putwc**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_putc_nolock** a **_putwc_nolock** jsou shodné s verzemi bez **přípony _nolock** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+**_putc_nolock** a **_putwc_nolock** jsou shodné s verzemi bez přípony **_nolock** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-**_putwc_nolock** je širokoznaková verze **_putc_nolock**; tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **_putc_nolock** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**_putwc_nolock** je verze **_putc_nolock**s velkým znakem; Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **_putc_nolock** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -94,14 +94,14 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_putc_nolock**|\<stdio.h>|
-|**_putwc_nolock**|\<stdio.h> \<nebo wchar.h>|
+|**_putc_nolock**|\<stdio. h>|
+|**_putwc_nolock**|\<stdio. h> nebo \<WCHAR. h>|
 
-Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke **konzole, stdin**, **stdout**a **stderr**, musí být přesměrovány před c run-time funkce je možné použít v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

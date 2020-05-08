@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348027"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915097"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Převede **dvojité** číslo na řetězec. K dispozici je bezpečnější verze této funkce. viz [_ecvt_s](ecvt-s.md).
+Převede **dvojité** číslo na řetězec. K dispozici je bezpečnější verze této funkce; viz [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,45 +53,45 @@ char *_ecvt(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*osa*<br/>
 Číslo, které má být převedeno.
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet uložených číslic.
 
 *dec*<br/>
-Uložená pozice desetinných bodů.
+Pozice uloženého desetinného místa.
 
-*Znamení*<br/>
+*osobě*<br/>
 Znaménko převedeného čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ecvt** vrátí ukazatel na řetězec číslic; **Null,** pokud došlo k chybě.
+**_ecvt** vrací ukazatel na řetězec číslic; **Hodnota null** , pokud došlo k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_ecvt** převede číslo s plovoucí desetinnou tácem na řetězec znaků. Parametr *value* je číslo s plovoucí desetinnou tázkem, které má být převedeno. Tato funkce ukládá až *do počtu* číslic *hodnoty* jako řetězec a připojí prázdný znak (\0'). Pokud počet číslic v *hodnotě* překročí *počet*, je číslice nižšího řádu zaokrouhlena. Pokud je méně než *počet* číslic, řetězec je doplněn nulami.
+Funkce **_ecvt** převede číslo s plovoucí desetinnou čárkou na řetězec znaků. Parametr *Value* je číslo s plovoucí desetinnou čárkou, které má být převedeno. Tato funkce ukládá až do *počtu* číslic *hodnoty* jako řetězec a připojí znak null (' \ 0 '). Je-li počet číslic v *hodnotě* větší než *počet*, zaokrouhlí se číslice s nižším pořadím. Pokud jsou k dispozici méně než číslice *Count* , je řetězec doplněn nulami.
 
-Celkový počet číslic vrácených **_ecvt** nepřesáhne **_CVTBUFSIZE**.
+Celkový počet číslic vrácených **_ecvt** nebude přesáhnout **_CVTBUFSIZE**.
 
-V řetězci jsou uloženy pouze číslice. Pozice desetinné čárky a znaménko *hodnoty* lze získat z *dec* a *podepsat* po volání. Parametr *dec* odkazuje na celou hodnotu, která udává pozici desetinné čárky vzhledem k začátku řetězce. Hodnota 0 nebo záporné celé číslo označuje, že desetinná čárka leží nalevo od první číslice. Parametr *znaménko* odkazuje na celé číslo, které označuje znaménko převedeného čísla. Pokud je celá hodnota 0, číslo je kladné. V opačném případě je číslo záporné.
+V řetězci jsou uloženy pouze číslice. Pozice desetinné čárky a znaménko *hodnoty* lze získat z *dec* a *podepsat* po volání. Parametr *dec* odkazuje na celočíselnou hodnotu, která dává pozici desetinné čárky s ohledem na začátek řetězce. Hodnota 0 nebo záporné celé číslo označuje, že desetinná čárka leží vlevo od první číslice. Parametr *Sign* odkazuje na celé číslo, které označuje znaménko převedené číslo. Pokud je celočíselná hodnota 0, je číslo kladné. V opačném případě je číslo záporné.
 
-Rozdíl mezi **_ecvt** a **_fcvt** je v interpretaci parametru *count.* **_ecvt** interpretuje *počet* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt** interpretuje *počet* číslic za desetinnou čárkou.
+Rozdíl mezi **_ecvt** a **_fcvt** je ve výkladu parametru *Count* . **_ecvt** interpretuje *počítání* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt** interpretuje *počet číslic* za desetinnou čárkou.
 
-**_ecvt** a **_fcvt** pro převod použít jednu staticky přidělenou vyrovnávací paměť. Každé volání jedné z těchto rutin zničí výsledek předchozího volání.
+**_ecvt** a **_fcvt** použít jednu staticky přidělenou vyrovnávací paměť pro převod. Každé volání jedné z těchto rutin zničí výsledek předchozího volání.
 
-Tato funkce ověřuje její parametry. Pokud *dec* nebo *sign* je **NULL**nebo *počet* je 0, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, **errno** je nastavena na **EINVAL** a **null** je vrácena.
+Tato funkce ověří své parametry. Pokud má parametr *dec* nebo *Sign* **hodnotu null**nebo je *počet* 0, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí **hodnotu null** .
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_ecvt**|\<stdlib.h>|
+|**_ecvt**|\<Stdlib. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,7 +125,7 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
