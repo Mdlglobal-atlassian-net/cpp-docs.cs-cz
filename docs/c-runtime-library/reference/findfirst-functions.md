@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -112,16 +112,16 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: d83cc0913584618897cbc4aec45cb137388674b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 879a84b14f612992ae7ed3a96211637aaf5c4783
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346814"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911743"
 ---
 # <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
-Zadejte informace o první instanci názvu souboru, který odpovídá souboru zadanému v argumentu *filespec.*
+Zadejte informace o první instanci názvu souboru, který se shoduje se souborem zadaným v argumentu *filespec* .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -178,55 +178,55 @@ intptr_t _wfindfirst64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*Filespec*<br/>
+*filespec*<br/>
 Specifikace cílového souboru (může obsahovat zástupné znaky).
 
-*Fileinfo*<br/>
-Vyrovnávací paměť informací o souboru.
+*FileInfo*<br/>
+Vyrovnávací paměť informací o souborech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **_findfirst** úspěšný, vrátí jedinečný popisovač hledání identifikující soubor nebo skupinu souborů, které odpovídají specifikaci *filespec,* které lze použít při následném volání [_findnext](findnext-functions.md) nebo [_findclose](findclose.md). V opačném případě **vrátí _findfirst** hodnotu -1 a nastaví **chybně** na jednu z následujících hodnot.
+V případě úspěchu **_findfirst** vrátí jedinečný vyhledávací popisovač identifikující soubor nebo skupinu souborů, které odpovídají specifikaci *filespec* , kterou lze použít v následném volání [_findnext](findnext-functions.md) nebo na [_findclose](findclose.md). V opačném případě **_findfirst** vrátí hodnotu-1 a nastaví **errno** na jednu z následujících hodnot.
 
 | hodnota errno | Podmínka |
 |-|-|
-| **EINVAL** | Neplatný parametr: *filespec* nebo *fileinfo* byl **NULL**. Nebo operační systém vrátil neočekávanou chybu. |
-| **ENOENT** | Specifikace souboru, která nemohla být spárována. |
-| **ENOMEM** | Nedostatek paměti. |
-| **EINVAL** | Neplatná specifikace názvu souboru nebo zadaný název souboru byl větší než **MAX_PATH**. |
+| **EINVAL** | Neplatný parametr: parametr *filespec* nebo *FileInfo* měl **hodnotu null**. Nebo operační systém vrátil neočekávanou chybu. |
+| **ENOENT** | Specifikace souboru, kterou nelze spárovat. |
+| **ENOMEM** | Nedostatek paměti |
+| **EINVAL** | Neplatná specifikace názvu souboru nebo je zadaný název souboru větší než **MAX_PATH**. |
 
-Další informace o těchto a dalších návratových kódech naleznete [v tématech _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Pokud je předán neplatný parametr, tyto funkce vyvolat neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Pokud je předán neplatný parametr, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Po dokončení **funkce _findfirst** nebo [_findnext](findnext-functions.md) (nebo varianty) musíte zavolat [_findclose.](findclose.md) To uvolní prostředky používané těmito funkcemi v aplikaci.
+[_Findclose](findclose.md) je třeba volat po dokončení pomocí funkce **_findfirst** nebo [_findnext](findnext-functions.md) (nebo libovolné varianty). Tím se uvolní prostředky využívané těmito funkcemi ve vaší aplikaci.
 
-Varianty těchto funkcí, které mají předponu **w,** jsou verze s širokými znaky; v opačném případě jsou shodné s odpovídající jednobajtové funkce.
+Variace těchto funkcí, které mají předponu **w** , jsou verze s velkým znakem; v opačném případě jsou stejné jako odpovídající funkce s jedním bytem.
 
-Varianty těchto funkcí podporují 32bitové nebo 64bitové časové typy a 32bitové nebo 64bitové velikosti souborů. První číselná přípona (**32** nebo **64**) označuje velikost typu času; Druhá přípona je **buď i32** nebo **i64**a označuje, zda je velikost souboru reprezentována jako 32bitové nebo 64bitové celé číslo. Informace o tom, které verze podporují 32bitové a 64bitové časové typy a velikosti souborů, naleznete v následující tabulce. Přípona **i32** nebo **i64** je vynechána, pokud je stejná jako velikost typu času, takže **_findfirst64** také podporuje 64bitové délky souborů a **_findfirst32** podporuje pouze 32bitové délky souborů.
+Variace těchto funkcí podporují 32 nebo 64 typů času a 32 64 bitů a velikost souborů. První číselná přípona (**32** nebo **64**) označuje velikost typu času; Druhá přípona je buď **i32** nebo **I64**, a označuje, zda je velikost souboru reprezentována jako 32 nebo 64 celé číslo. Informace o tom, které verze podporují 32 a 64 typy času a velikosti souborů, najdete v následující tabulce. Přípona **i32** nebo **I64** je vynechána, pokud je stejná jako velikost typu času, takže **_findfirst64** také podporuje 64 bitů souborů a **_findfirst32** podporuje pouze 32 bitů souborů.
 
-Tyto funkce používají různé formy **_finddata_t** struktury pro parametr *fileinfo.* Další informace o struktuře naleznete v tématu [Funkce hledání názvu souboru](../../c-runtime-library/filename-search-functions.md).
+Tyto funkce používají různé formy **_finddata_t** struktury pro parametr *FileInfo* . Další informace o struktuře najdete v tématu [funkce vyhledávání názvů souborů](../../c-runtime-library/filename-search-functions.md).
 
-Varianty, které používají typ 64bitového času, umožňují vyjádřit data vytvoření souboru až do 23:59:59, 31. Ty, které používají 32bitové časové typy představují data pouze do 23:59:59 Leden 18, 2038, UTC. Půlnoc 1. ledna 1970 je dolní mez časového období pro všechny tyto funkce.
+Variace, které používají 64 typ času, umožňují, aby data vytváření souborů byla vyjádřena až 23:59:59, 31. prosince, 3000, UTC. Ty, které používají 32 typy času, reprezentují data pouze do 23:59:59 15. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 
-Pokud nemáte konkrétní důvod používat verze, které explicitně určují velikost času, použijte **_findfirst** nebo **_wfindfirst** nebo, pokud potřebujete podporovat velikosti souborů větší než 3 GB, použijte **_findfirsti64** nebo **_wfindfirsti64**. Všechny tyto funkce používají 64bitový typ času. V dřívějších verzích tyto funkce používaly typ 32bitového času. Pokud se jedná o narušující změnu pro aplikaci, můžete definovat **_USE_32BIT_TIME_T** vrátit ke starému chování. Pokud je **definován_USE_32BIT_TIME_T** **_findfirst**, **_finfirsti64**a jejich odpovídající verze Unicode používají 32bitový čas.
+Pokud nemáte konkrétní důvod pro použití verzí, které určují velikost času explicitně, použijte **_findfirst** nebo **_wfindfirst** nebo, pokud potřebujete podporovat velikosti souborů větší než 3 GB, použijte **_findfirsti64** nebo **_wfindfirsti64**. Všechny tyto funkce používají typ času 64. V dřívějších verzích tyto funkce používaly typ času 32. Pokud se jedná o zásadní změnu aplikace, můžete definovat **_USE_32BIT_TIME_T** pro návrat k původnímu chování. Je-li definována **_USE_32BIT_TIME_T** , **_findfirst**, **_Finfirsti64**a jejich odpovídající verze Unicode používají 32-bit času.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
-### <a name="time-type-and-file-length-type-variations-of-_findfirst"></a>Změny typu a délky souboru _findfirst
+### <a name="time-type-and-file-length-type-variations-of-_findfirst"></a>Typ času a délka souboru – variace _findfirst
 
 |Functions|**_USE_32BIT_TIME_T** definováno?|Typ času|Typ délky souboru|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findfirst**, **_wfindfirst**|Nedefinováno|64bitová|32bitová|
-|**_findfirst**, **_wfindfirst**|Definovány|32bitová|32bitová|
-|**_findfirst32**, **_wfindfirst32**|Definice makra nemá vliv na|32bitová|32bitová|
-|**_findfirst64**, **_wfindfirst64**|Definice makra nemá vliv na|64bitová|64bitová|
-|**_findfirsti64**, **_wfindfirsti64**|Nedefinováno|64bitová|64bitová|
-|**_findfirsti64**, **_wfindfirsti64**|Definovány|32bitová|64bitová|
-|**_findfirst32i64**, **_wfindfirst32i64**|Definice makra nemá vliv na|32bitová|64bitová|
-|**_findfirst64i32**, **_wfindfirst64i32**|Definice makra nemá vliv na|64bitová|32bitová|
+|**_findfirst** **_wfindfirst**|Nedefinováno|64bitová|32bitová|
+|**_findfirst** **_wfindfirst**|Definované|32bitová|32bitová|
+|**_findfirst32** **_wfindfirst32**|Není ovlivněno definicí makra.|32bitová|32bitová|
+|**_findfirst64** **_wfindfirst64**|Není ovlivněno definicí makra.|64bitová|64bitová|
+|**_findfirsti64** **_wfindfirsti64**|Nedefinováno|64bitová|64bitová|
+|**_findfirsti64** **_wfindfirsti64**|Definované|32bitová|64bitová|
+|**_findfirst32i64** **_wfindfirst32i64**|Není ovlivněno definicí makra.|32bitová|64bitová|
+|**_findfirst64i32** **_wfindfirst64i32**|Není ovlivněno definicí makra.|64bitová|32bitová|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -243,22 +243,22 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_findfirst**|\<io.h>|
-|**_findfirst32**|\<io.h>|
-|**_findfirst64**|\<io.h>|
-|**_findfirsti64**|\<io.h>|
-|**_findfirst32i64**|\<io.h>|
-|**_findfirst64i32**|\<io.h>|
-|**_wfindfirst**|\<io.h> \<nebo wchar.h>|
-|**_wfindfirst32**|\<io.h> \<nebo wchar.h>|
-|**_wfindfirst64**|\<io.h> \<nebo wchar.h>|
-|**_wfindfirsti64**|\<io.h> \<nebo wchar.h>|
-|**_wfindfirst32i64**|\<io.h> \<nebo wchar.h>|
-|**_wfindfirst64i32**|\<io.h> \<nebo wchar.h>|
+|**_findfirst**|\<IO. h>|
+|**_findfirst32**|\<IO. h>|
+|**_findfirst64**|\<IO. h>|
+|**_findfirsti64**|\<IO. h>|
+|**_findfirst32i64**|\<IO. h>|
+|**_findfirst64i32**|\<IO. h>|
+|**_wfindfirst**|\<IO. h> nebo \<WCHAR. h>|
+|**_wfindfirst32**|\<IO. h> nebo \<WCHAR. h>|
+|**_wfindfirst64**|\<IO. h> nebo \<WCHAR. h>|
+|**_wfindfirsti64**|\<IO. h> nebo \<WCHAR. h>|
+|**_wfindfirst32i64**|\<IO. h> nebo \<WCHAR. h>|
+|**_wfindfirst64i32**|\<IO. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Systémová volání](../../c-runtime-library/system-calls.md)<br/>
-[Funkce hledání názvu souboru](../../c-runtime-library/filename-search-functions.md)<br/>
+[Funkce vyhledávání názvů souborů](../../c-runtime-library/filename-search-functions.md)<br/>

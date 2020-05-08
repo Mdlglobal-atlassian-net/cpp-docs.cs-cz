@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346158"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912016"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
-Zapíše znak **stdout**.
+Zapíše znak do **stdout**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,20 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být napsán.
+*r*<br/>
+Znak, který se má zapsat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí napsaný znak. U **_fputchar**znamená vrácená hodnota **EOF** chybu. Pro **_fputwchar**, návratová hodnota **WEOF** označuje chybu. Pokud c je **NULL**, tyto funkce generovat neplatný parametr výjimku, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Je-li provádění dovoleno pokračovat, vrátí **EOF** (nebo **WEOF)** a nastavit **errno** na **EINVAL**.
+Každá z těchto funkcí vrátí napsaný znak. Pro **_fputchar**návratová hodnota **EOF** označuje chybu. U **_fputwchar**vrácená hodnota **WEOF** označuje chybu. Pokud je c **null**, tyto funkce generují výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** (nebo **WEOF**) a nastaví **errno** na **EINVAL**.
 
-Další informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Obě tyto funkce zapíše jeden znak *c* **stdout** a posune indikátor podle potřeby. **_fputchar** je `fputc( stdout )`ekvivalentní . Je také ekvivalentní **putchar**, ale implementována pouze jako funkce, nikoli jako funkce a makro. Na rozdíl od **fputc** a **putchar**, tyto funkce nejsou kompatibilní se standardem ANSI.
+Obě tyto funkce zapisují jeden znak *c* do **stdout** a podle potřeby posunou ukazatel. **_fputchar** je ekvivalentem `fputc( stdout )`. Je také ekvivalentní **putchar**, ale je implementována pouze jako funkce, nikoli jako funkce a makro. Na rozdíl od **fputc** a **putchar**nejsou tyto funkce kompatibilní se standardem ANSI.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -87,10 +87,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fputchar**|\<stdio.h>|
-|**_fputwchar**|\<stdio.h> \<nebo wchar.h>|
+|**_fputchar**|\<stdio. h>|
+|**_fputwchar**|\<stdio. h> nebo \<WCHAR. h>|
 
-Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke konzole –**stdin**, **stdout**a **stderr**– musí být přesměrovány, aby je mohly funkce c run-time používat v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou –**stdin**, **stdout**a **stderr**– musí být přesměrované před tím, než je funkce běhového běhu v aplikacích pro UWP můžou použít. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
