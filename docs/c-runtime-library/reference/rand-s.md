@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338193"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919542"
 ---
 # <a name="rand_s"></a>rand_s
 
-Generuje pseudonáhodné číslo. Jedná se o bezpečnější verzi funkce [rand](rand.md)s vylepšeními zabezpečení popsanými v části [Funkce zabezpečení v crt](../../c-runtime-library/security-features-in-the-crt.md).
+Vygeneruje pseudonáhodných číslo. Jedná se o bezpečnější verzi funkce [Rand](rand.md)s vylepšením zabezpečení, jak je popsáno v tématu [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,17 +52,17 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parametry
 
 *randomValue*<br/>
-Ukazatel na celé číslo pro uložení generované hodnoty.
+Ukazatel na celé číslo pro uložení vygenerované hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, jinak kód chyby. Pokud je vstupní ukazatel _randomValue_ ukazatelem null, funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**. Pokud funkce selže z jiného důvodu, *_randomValue_ je nastavena na 0.
+Nula v případě úspěchu, jinak, kód chyby. Pokud je vstupní ukazatel _randomValue_ ukazatel s hodnotou null, funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**. Pokud se funkce z jakéhokoli jiného důvodu nezdařila, *_randomValue_ se nastaví na 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **rand_s** zapíše pseudonáhodné celé číslo v rozsahu 0, aby **UINT_MAX** vstupníukazatel. Funkce **rand_s** používá operační systém ke generování kryptograficky zabezpečených náhodných čísel. Nepoužívá osivo generované [srand](srand.md) funkcí, ani nemá vliv na náhodné číselné pořadí používané [rand](rand.md).
+Funkce **rand_s** zapisuje celé číslo pseudonáhodných v rozsahu 0 až **UINT_MAX** na vstupní ukazatel. Funkce **rand_s** používá operační systém ke generování kryptograficky zabezpečených náhodných čísel. Nepoužívá počáteční hodnotu vygenerovanou funkcí [srand](srand.md) , ani nemá vliv na sekvenci náhodného číslování, kterou používá [Rand](rand.md).
 
-Funkce **rand_s** vyžaduje, aby byla před příkazem inclusion definována konstantní **_CRT_RAND_S** pro funkci, která má být deklarována, jako v následujícím příkladu:
+Funkce **rand_s** vyžaduje, aby před příkazem include byla definovaná konstanta **_CRT_RAND_S** , která má být deklarovaná pro funkci, jako v následujícím příkladu:
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,15 +71,15 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s** závisí na [rozhraní RTLGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, které je k dispozici pouze v systému Windows XP a novějším.
+**rand_s** závisí na rozhraní [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, které je k dispozici pouze v systému Windows XP a novějším.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**rand_s**|\<stdlib.h>|
+|**rand_s**|\<Stdlib. h>|
 
-Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -159,6 +159,6 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
-[Rand](rand.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[funkcí](rand.md)<br/>
 [srand](srand.md)<br/>

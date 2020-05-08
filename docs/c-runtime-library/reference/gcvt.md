@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345322"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919410"
 ---
 # <a name="_gcvt"></a>_gcvt
 
-Převede hodnotu s plovoucí desetinnou hodnotou na řetězec, který ukládá do vyrovnávací paměti. K dispozici je bezpečnější verze této funkce. viz [_gcvt_s](gcvt-s.md).
+Převede hodnotu s plovoucí desetinnou čárkou na řetězec, který je uložen ve vyrovnávací paměti. K dispozici je bezpečnější verze této funkce; viz [_gcvt_s](gcvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,13 +56,13 @@ char *_gcvt(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnotu*<br/>
+*osa*<br/>
 Hodnota, která má být převedena.
 
 *číslice*<br/>
 Počet uložených platných číslic.
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výsledek.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -71,21 +71,21 @@ Umístění úložiště pro výsledek.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_gcvt** převede *hodnotu* s plovoucí desetinnou čárkou na řetězec znaků (který obsahuje desetinnou čárku a možný bajt znaménku) a uloží řetězec do *vyrovnávací paměti*. *Vyrovnávací paměť* by měla být dostatečně velká, aby se přizpůsobila převedené hodnotě plus ukončujícímu nulovému znaku, který je připojen automaticky. Pokud je použita velikost vyrovnávací paměti *číslic* + 1, funkce přepíše konec vyrovnávací paměti. Důvodem je, že převedený řetězec obsahuje desetinnou čárku a může obsahovat informace o znaménku a exponenci. Neexistuje žádné ustanovení pro přetečení. **_gcvt** pokusí vytvořit *číslice* v desítkovém formátu. Pokud nemůže, vytvoří *číslice* číslic v exponenciálním formátu. Koncové nuly mohou být v převodu potlačeny.
+Funkce **_gcvt** převede *hodnotu* s plovoucí desetinnou čárkou na řetězec znaků (který obsahuje desetinnou čárku a možné znak pro podepsání) a uloží řetězec do *vyrovnávací paměti*. *Vyrovnávací paměť* by měla být dostatečně velká, aby odpovídala převedené hodnotě, a ukončujícímu znaku null, který je automaticky připojen. Pokud je použita velikost vyrovnávací *paměti + 1* , funkce přepíše konec vyrovnávací paměti. Důvodem je, že převedený řetězec obsahuje desetinnou čárku a může obsahovat informace o znaménku a exponentu. Neexistuje žádné zajištění pro přetečení. **_gcvt** se pokusí *vydávat číslice číslic v* desítkovém formátu. Pokud to nemůže *, vytvoří číslice číslice v* exponenciálním formátu. Koncové nuly lze v převodu potlačit.
 
-*Vyrovnávací paměť* délky **_CVTBUFSIZE** je dostatečná pro jakoukoli hodnotu s plovoucí desetinnou tácem.
+*Vyrovnávací paměť* **_CVTBUFSIZE** délky je dostačující pro libovolnou hodnotu s plovoucí desetinnou čárkou.
 
-Tato funkce ověřuje její parametry. Pokud je *vyrovnávací paměť* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu NULL**.
+Tato funkce ověří své parametry. Pokud má *vyrovnávací paměť* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_gcvt**|\<stdlib.h>|
+|**_gcvt**|\<Stdlib. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -146,7 +146,7 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

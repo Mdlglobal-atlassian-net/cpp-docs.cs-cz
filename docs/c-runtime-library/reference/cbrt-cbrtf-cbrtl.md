@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333564"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912109"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
-Vypočítá kořen krychle.
+Vypočítá kořen datové krychle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,30 +66,30 @@ long double cbrtl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou tálicí hodnotou
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **cbrt** vrátí kořen krychle *x*.
+Funkce **cbrt –** vrací kořenovou datovou krychli *x*.
 
-|Vstup|Výjimka SEH|**_matherr** Výjimka|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Žádná|Žádná|
+|∞, QNAN, ZASÁHNOUT|žádné|žádné|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **cbrt,** které trvat **float** nebo **dlouhé** **dvojité** typy. V programu C **cbrt** vždy bere a vrací **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **cbrt –** , která přebírají typ **float** nebo **Long** **Double** . V programu v jazyce C **cbrt –** vždycky přebírá a vrací **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt –**, **cbrtf –**, **cbrtl**|\<Math. h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350607"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912928"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
-Přidělí paměť na zadanou hranici trasy.
+Přidělí paměť na zadané hranici zarovnání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,33 +50,33 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-Velikost požadované přidělení paměti.
+*hodnota*<br/>
+Velikost požadované alokace paměti
 
-*Zarovnání*<br/>
-Hodnota zarovnání, která musí být celá mocnina 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na blok paměti, který byl přidělen nebo null, pokud se operace nezdařila. Ukazatel je násobkem *zarovnání*.
+Ukazatel na blok paměti, který byl přidělen nebo NULL v případě, že operace se nezdařila. Ukazatel je násobek *Zarovnání*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_malloc** je založen na [malloc](malloc.md).
+**_aligned_malloc** je založena na [systému.](malloc.md)
 
-**_aligned_malloc** je `__declspec(noalias)` `__declspec(restrict)`označena a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
+**_aligned_malloc** je `__declspec(noalias)` označena `__declspec(restrict)`jako, což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
-Tato funkce `errno` `ENOMEM` nastaví, pokud se nezdařilo přidělení `_HEAP_MAXREQ`paměti nebo pokud požadovaná velikost byla větší než . Další informace `errno`o tématech [naleznete v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Také **_aligned_malloc** ověřuje jeho parametry. Pokud *trasování* není mocninu 2 nebo *velikost* je nula, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí `errno` tato `EINVAL`funkce hodnotu NULL a nastaví na .
+Tato funkce nastaví `errno` na `ENOMEM` hodnotu, pokud selhalo přidělení paměti nebo byla požadovaná velikost větší než `_HEAP_MAXREQ`. Další informace o `errno`naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu NULL a nastaví `errno` na. `EINVAL`
 
-Pomocí [_aligned_free](aligned-free.md) můžete navrátit paměť `_aligned_offset_malloc`získanou **_aligned_malloc** i . Nepoužívejte `free`, který nerekultivuje zarovnané paměti správně a může vést k těžko diagnostikovat chyby.
+Pomocí [_aligned_free](aligned-free.md) navrátit paměť získanou pomocí **_aligned_malloc** a `_aligned_offset_malloc`. Nepoužívejte `free`, což nevrací správně zarovnaná paměť a může vést k chybám při diagnostikování.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_malloc**|\<malloc.h>|
+|**_aligned_malloc**|\<. h>|
 
 ## <a name="example"></a>Příklad
 

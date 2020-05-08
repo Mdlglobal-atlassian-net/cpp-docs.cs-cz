@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a95d61c50af5f49e69df8ae20efccfd3fb8ff5f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367405"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910431"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
-Převeďte široký znak na odpovídající vícebajtový znak. K dispozici jsou bezpečnější verze těchto funkcí. viz [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
+Převést velký znak na odpovídající vícebajtový znak. K dispozici jsou bezpečnější verze těchto funkcí; viz [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,28 +65,28 @@ int _wctomb_l(
 *mbchar*<br/>
 Adresa vícebajtového znaku.
 
-*Wchar*<br/>
-Široký charakter.
+*WCHAR*<br/>
+Velký znak.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wctomb** převede široký znak na vícebajtový znak, vrátí počet bajtů (což není nikdy větší než **MB_CUR_MAX**) v širokém znaku. Pokud *wchar* je znak null znak široký znak (L'\0'), **wctomb** vrátí 1. Pokud je cíl ukazatel *mbchar* **null**, **wctomb** vrátí 0. Pokud převod není možné v aktuálním národním prostředí, **wctomb** vrátí -1 a **errno** je nastavena na **EILSEQ**.
+Pokud **wctomb** převede velký znak na vícebajtový znak, vrátí počet bajtů (který není nikdy větší než **MB_CUR_MAX**) v rámci znaku. Pokud je *WCHAR* znak nulového znaku (L ' \ 0 '), vrátí **wctomb** hodnotu 1. Pokud cílový ukazatel *mbchar* má **hodnotu null**, **wctomb** vrátí hodnotu 0. Pokud v aktuálním národním prostředí není převod možný, **wctomb** vrátí hodnotu-1 a **errno** je nastaven na **EILSEQ**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **wctomb** převede svůj argument *wchar* na odpovídající vícebajtový znak a uloží výsledek na *mbchar*. Funkci můžete volat z libovolného místa v libovolném programu. **wctomb** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; **_wctomb_l** je totožný **s wctomb** s tím rozdílem, že používá národní prostředí předané v místo. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Funkce **wctomb** převede svůj argument *WCHAR* na odpovídající vícebajtový znak a výsledek uloží na *mbchar*. Funkci lze volat z libovolného bodu v jakémkoli programu. **wctomb** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; **_wctomb_l** se shodují s **wctomb** s tím rozdílem, že místo toho používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**wctomb** ověřuje své parametry. Pokud je *nástroj MBChar* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí -1.
+**wctomb** ověří své parametry. Pokud *mbchar* má Mbchar **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí-1.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**wctomb**|\<stdlib.h>|
+|**wctomb**|\<Stdlib. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +121,7 @@ Convert a wide character:
 ## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

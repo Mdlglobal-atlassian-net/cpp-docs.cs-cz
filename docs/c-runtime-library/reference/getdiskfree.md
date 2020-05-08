@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +31,19 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 095a272e1dd85c1b61e1970a1b881737acbb739d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344309"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913820"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-Používá informace o diskové jednotce k naplnění **_diskfree_t** struktury.
+Používá k naplnění **_diskfree_t** struktury informace o diskové jednotce.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,19 +56,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*disky*<br/>
 Disková jednotka, pro kterou chcete získat informace.
 
 *driveinfo*<br/>
-Struktura **_diskfree_t,** která bude naplněna informacemi o jednotce.
+Struktura **_diskfree_t** , která bude naplněna informacemi o jednotce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, vrácená hodnota je nula. Pokud funkce selže, vrácená hodnota je kód chyby. Hodnota **errno** je nastavena pro všechny chyby, které jsou vráceny operačním systémem. Další informace o chybových stavech označených **chybou**naleznete v [tématu errno Constants](../../c-runtime-library/errno-constants.md).
+Pokud je funkce úspěšná, vrácená hodnota je nula. Pokud se funkce nezdařila, vrácená hodnota je kód chyby. Hodnota **errno** je nastavena pro všechny chyby, které jsou vráceny operačním systémem. Další informace o chybových podmínkách, které jsou označeny **errno**, naleznete v tématu [konstanty errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura **_diskfree_t** je definována v direct.h.
+Struktura **_diskfree_t** je definována v Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -79,17 +79,17 @@ struct _diskfree_t {
 };
 ```
 
-Tato funkce ověřuje její parametry. Pokud je ukazatel *driveinfo* **null** nebo *jednotka* určuje neplatnou jednotku, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**. Platné jednotky jsou v rozsahu od 0 do 26. Hodnota *jednotky* 0 určuje aktuální jednotku. poté se čísla mapují na písmena anglické abecedy tak, aby 1 označuje jednotku A, 3 označuje jednotku C a tak dále.
+Tato funkce ověří své parametry. Pokud má ukazatel *DriveInfo* **hodnotu null** nebo *jednotka* určuje neplatnou jednotku, vyvolá tato funkce obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**. Platný rozsah jednotek je od 0 do 26. Hodnota *jednotky* 0 určuje aktuální jednotku. potom se čísla mapují na písmena anglické abecedy, například 1 označuje jednotku A, 3 označuje jednotku C atd.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdiskfree**|\<direct.h>|
+|**_getdiskfree**|\<Direct. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -195,4 +195,4 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 
 ## <a name="see-also"></a>Viz také
 
-[Řízení adresářů](../../c-runtime-library/directory-control.md)<br/>
+[Řízení adresáře](../../c-runtime-library/directory-control.md)<br/>

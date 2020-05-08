@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,19 +34,19 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919608"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
-Převede vícebajtový znak o jednomu bajtu na odpovídající dvoubajtový vícebajtový znak.
+Převede vícebajtový znak s jedním bajtem na odpovídající dvoubajtové vícebajtový znak.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,11 +62,11 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Jednobajtový znak pro převod.
+*r*<br/>
+Jednobajtové znak, který se má převést
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -74,22 +74,22 @@ Pokud **_mbbtombc** úspěšně převede *c*, vrátí vícebajtový znak; v opa�
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbbtombc** převede daný vícebajtový znak o více bajtů na odpovídající dvoubajtový vícebajtový znak. Znaky musí být v rozsahu 0x20 - 0x7E nebo 0xA1 - 0xDF, které mají být převedeny.
+Funkce **_mbbtombc** Převede daný bajt vícebajtového znaku na odpovídající dvoubajtové vícebajtové znaky. Znaky musí být v rozsahu 0x20-0x7E nebo 0xA1-0xDF, aby je bylo možné převést.
 
-Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v _wsetlocale setlocale.](setlocale-wsetlocale.md) Verze této funkce jsou identické, s tím rozdílem, že **_mbbtombc** používá aktuální národní prostředí pro toto chování závislé na národním prostředí a **_mbbtombc_l** místo toho používá parametr národního prostředí, který je předán. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** kategorie národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze této funkce jsou identické, s tím rozdílem, že **_mbbtombc** používá aktuální národní prostředí pro toto chování závislé na národním prostředí a **_mbbtombc_l** místo toho používá parametr národního prostředí, který je předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V dřívějších verzích byl **_mbbtombc** pojmenován **hantozen**. Pro nový kód použijte **_mbbtombc**.
+V dřívějších verzích bylo **_mbbtombc** s názvem **hantozen**. Pro nový kód použijte **_mbbtombc**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbbtombc**|\<mbstring.h>|
-|**_mbbtombc_l**|\<mbstring.h>|
+|**_mbbtombc**|\<Mbstring. h>|
+|**_mbbtombc_l**|\<Mbstring. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
