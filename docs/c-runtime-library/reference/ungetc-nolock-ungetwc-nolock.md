@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: fde5142d4c405fcf2dd61f642abe917d70b59b21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361307"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915990"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
-Odešle znak zpět do datového proudu.
+Posune znak zpět do datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,27 +64,27 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak, který má být tlačen.
+*r*<br/>
+Znak, který má být vložen.
 
-*Proudu*<br/>
-Ukazatel na **strukturu FILE.**
+*Stream*<br/>
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, každá z těchto funkcí vrátí argument znaku *c*. Pokud *c* nelze posunout zpět nebo pokud nebyl přečten žádný znak, vstupní datový proud se nezmění a **_ungetc_nolock** vrátí **EOF**; **_ungetwc_nolock** vrátí **hodnotu WEOF**. Pokud *je datový proud* **NULL**, **je vrácena EOF** nebo **WEOF** a **errno** je nastavena na **EINVAL**.
+V případě úspěchu každá z těchto funkcí vrátí argument znaků *c*. Pokud se *c* nedá vložit zpátky nebo pokud se nepřečetl žádný znak, vstupní datový proud se nezměnil a **_ungetc_nolock** vrátí **EOF**. **_ungetwc_nolock** vrátí **WEOF**. Pokud je *datový proud* **null**, vrátí se znak **EOF** nebo **WEOF** a **errno** je nastaven na **EINVAL**.
 
-Informace o těchto a dalších kódech chyb naleznete [v tématu _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou non-zamykání verze **ungetc** a **ungetwc**. Verze s **příponou _nolock** jsou identické s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože jim nevznikají režie uzamčení jiných vláken. Tyto funkce používejte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou aplikace s jedním vláknem nebo kde již volající obor zpracovává izolaci vlákna.
+Tyto funkce jsou neuzamykání verzí **ungetc –** a **ungetwc**. Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
 
@@ -92,10 +92,10 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetc_nolock**|\<stdio.h>|
-|**_ungetwc_nolock**|\<stdio.h> \<nebo wchar.h>|
+|**_ungetc_nolock**|\<stdio. h>|
+|**_ungetwc_nolock**|\<stdio. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 

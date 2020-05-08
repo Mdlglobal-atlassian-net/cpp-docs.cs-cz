@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - aligned_offset_recalloc function
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
-ms.openlocfilehash: 4c710712138d07191468cdc7ef02fc75e2f46dad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4c71bc701beaabe179676656b331fcce966d1db1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350542"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917167"
 ---
 # <a name="_aligned_offset_recalloc"></a>_aligned_offset_recalloc
 
-Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md) a inicializuje paměť na 0.
+Změní velikost bloku paměti, který byl přidělen pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,42 +53,42 @@ void * _aligned_offset_recalloc(
 
 ### <a name="parameters"></a>Parametry
 
-*memblok*<br/>
+*memblock*<br/>
 Aktuální ukazatel bloku paměti.
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
-*Velikost*<br/>
-Délka v bajtů každého prvku.
+*hodnota*<br/>
+Délka v bajtech každého elementu.
 
-*Zarovnání*<br/>
-Hodnota zarovnání, která musí být celá mocnina 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
-*Posun*<br/>
-Posun do přidělení paměti vynutit zarovnání.
+*polohy*<br/>
+Posun k přidělení paměti pro vynucení zarovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_aligned_offset_recalloc** vrátí ukazatel void na přerozdělenou (a případně přesunutou) paměťový blok. Vrácená hodnota je **NULL,** pokud je velikost nulová a argument vyrovnávací paměti není **NULL**, nebo pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost. V prvním případě je uvolněn původní blok. V druhém případě je původní blok beze změny. Vrácená hodnota odkazuje na úložný prostor, který je zaručeně vhodně zarovnán pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než void, použijte typ přetypované na vrácenou hodnotu.
+**_aligned_offset_recalloc** vrátí ukazatel void na blok paměti realokováno (a případně přesunuto). Návratová hodnota má **hodnotu null** , pokud je velikost nulová a argument buffer nemá **hodnotu null**, nebo pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost. V prvním případě je původní blok uvolněn. V druhém případě se původní blok nezměnil. Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než void, použijte přetypování typu u vrácené hodnoty.
 
-**_aligned_offset_recalloc** je `__declspec(noalias)` `__declspec(restrict)`označena a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
+**_aligned_offset_recalloc** je `__declspec(noalias)` označena `__declspec(restrict)`jako, což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako [_aligned_offset_malloc](aligned-offset-malloc.md) **umožňuje _aligned_offset_recalloc** zarovnání struktury v odsazení uvnitř struktury.
+Podobně [_aligned_offset_malloc](aligned-offset-malloc.md)jako _aligned_offset_malloc **_aligned_offset_recalloc** umožňuje, aby byla struktura zarovnána na posunu v rámci struktury.
 
-**_aligned_offset_recalloc** je založen na **malloc**. Další informace o používání **_aligned_offset_malloc**naleznete v [tématu malloc](malloc.md). Pokud *memblock* je **NULL**, funkce volá **_aligned_offset_malloc** interně.
+**_aligned_offset_recalloc** je založena na **systému.** Další informace o použití **_aligned_offset_malloc**naleznete v tématu [.](malloc.md) Pokud *memblock* má Memblock **hodnotu null**, funkce volá interně **_aligned_offset_malloc** .
 
-Tato funkce nastaví **errno** na **ENOMEM,** pokud se přidělení paměti nezdařilo nebo pokud požadovaná velikost *(velikost**čísla* * ) byla větší než **_HEAP_MAXREQ**. Další informace o **errno**naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Také **_aligned_offset_recalloc** ověří jeho parametry. Pokud *trasování* není mocninu 2 nebo pokud *je posun* větší nebo roven požadované velikosti a nenulové, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí tato funkce **hodnotu NULL** a nastaví **errno** na **EINVAL**.
+Tato funkce nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovedlo nebo pokud je požadovaná velikost (*Číselná* * *Velikost*) větší než **_HEAP_MAXREQ**. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_offset_recalloc** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo pokud je *posun* větší nebo roven požadované velikosti a nenulové hodnotě, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_offset_recalloc**|\<malloc.h>|
+|**_aligned_offset_recalloc**|\<. h>|
 
 ## <a name="see-also"></a>Viz také
 

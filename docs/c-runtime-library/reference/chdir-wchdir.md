@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333390"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917042"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -63,25 +63,25 @@ int _wchdir(
 ### <a name="parameters"></a>Parametry
 
 *dirname*<br/>
-Cesta nového pracovního adresáře.
+Cesta k novému pracovnímu adresáři
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátí hodnotu 0 v případě úspěchu. Vrácená hodnota -1 označuje selhání. Pokud zadanou cestu nelze najít, je **chybná cesta** nastavena na **eNOENT**. Pokud *dirname* je **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí -1.
+Tyto funkce vrací hodnotu 0, pokud bylo úspěšné. Návratová hodnota-1 označuje chybu. Pokud zadanou cestu nebylo možné najít, **errno** je nastaven na **ENOENT**. Pokud *dirname* má dirname **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_chdir** změní aktuální pracovní adresář na adresář určený *dirnamem*. Parametr *dirname* musí odkazovat na existující adresář. Tato funkce může změnit aktuální pracovní adresář na libovolné jednotce. Pokud je v *dirname*zadáno nové písmeno jednotky , změní se také výchozí písmeno jednotky. Pokud je například A výchozím písmenem jednotky a \BIN je aktuální pracovní adresář, následující volání změní aktuální pracovní adresář pro jednotku C a vytvoří c jako novou výchozí jednotku:
+Funkce **_chdir** změní aktuální pracovní adresář na adresář určený parametrem *dirname*. Parametr *dirname* musí odkazovat na existující adresář. Tato funkce může změnit aktuální pracovní adresář na jakékoli jednotce. Pokud je v *dirname*zadáno nové písmeno jednotky, změní se také písmeno výchozí jednotky. Pokud je například výchozím písmenem jednotky a adresářem \BIN aktuální pracovní adresář, následující volání změní aktuální pracovní adresář pro jednotku C a vytvoří jako novou výchozí jednotku C:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Při použití volitelného znaku zpětného lomítka (**&#92;**) v cestách, musíte umístit dvě zpětná lomítka** (&#92;&#92;**) v literálu řetězce C, aby reprezentovala jedno zpětné lomítko (**&#92;**).
+Použijete-li v cestách volitelný znak zpětného lomítka (**&#92;**), je nutné umístit dvě zpětná lomítka (**&#92;&#92;**) do řetězcového literálu jazyka C, který představuje jedno zpětné lomítko (**&#92;**).
 
-**_wchdir** je širokoznaková verze **_chdir**; *dirname* argument **_wchdir** je řetězec široký znak. **_wchdir** a **_chdir** se chovají stejně jinak.
+**_wchdir** je verze **_chdir**s velkým znakem; Argument *dirname* pro **_wchdir** je řetězec s velkým znakem. **_wchdir** a **_chdir** se chovají identicky jinak.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu:
 
@@ -91,12 +91,12 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chdir**|\<direct.h>|\<errno.h>|
-|**_wchdir**|\<direct.h> \<nebo wchar.h>|\<errno.h>|
+|**_chdir**|\<Direct. h>|\<errno. h>|
+|**_wchdir**|\<Direct. h> nebo \<WCHAR. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -159,7 +159,7 @@ Directory of c:\windows
 
 ## <a name="see-also"></a>Viz také
 
-[Řízení adresářů](../../c-runtime-library/directory-control.md)<br/>
+[Řízení adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
 [_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: e73d2d3cca852b657631361d8271bec7f9c86ac5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344083"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916220"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
-Převede hodnotu času na strukturu **tm.** Jedná se o verze [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) s vylepšeními zabezpečení popsanými v [části Funkce zabezpečení v crt](../../c-runtime-library/security-features-in-the-crt.md).
+Převede hodnotu času na strukturu **TM** . Jedná se o verze [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,59 +72,59 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>Parametry
 
 *tmDest*<br/>
-Ukazatel na [strukturu tm.](../../c-runtime-library/standard-types.md) Pole vrácené struktury drží vyhodnocenou hodnotu argumentu *časovače* v čase UTC, nikoli v místním čase.
+Ukazatel na strukturu [TM](../../c-runtime-library/standard-types.md) . Pole vrácené struktury uchovávají vyhodnocenou hodnotu argumentu *časovače* v čase UTC, nikoli v místním čase.
 
 *sourceTime*<br/>
-Ukazatel na uložený čas. Čas je reprezentován jako sekundy, které uplynuly od půlnoci (00:00:00), 1.
+Ukazatel na uložený čas. Čas je vyjádřený jako sekund uplynulý od půlnoci (00:00:00), od 1. ledna 1970 a koordinovaného univerzálního času (UTC).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud došlo k chybě. Kódy chyb jsou definovány v souboru Errno.h; Seznam těchto chyb naleznete v [tématu errno](../../c-runtime-library/errno-constants.md).
+Nula v případě úspěchu. Návratová hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v errno. h; Seznam těchto chyb naleznete v tématu [errno](../../c-runtime-library/errno-constants.md).
 
 ### <a name="error-conditions"></a>Chybové stavy
 
 |*tmDest*|*sourceTime*|Vrátit|Hodnota v *tmDest*|
 |-----------|------------|------------|--------------------|
-|**Null**|jakékoli|**EINVAL**|Není změněno.|
-|Není **null** (odkazuje na platnou paměť)|**Null**|**EINVAL**|Všechna pole nastavena na -1.|
-|Není **null**|< 0|**EINVAL**|Všechna pole nastavena na -1.|
+|**PLATNOST**|jakýmikoli|**EINVAL**|Nezměněno.|
+|Není **null** (ukazuje na platnou paměť)|**PLATNOST**|**EINVAL**|Všechna pole jsou nastavena na hodnotu-1.|
+|Není **null**|< 0|**EINVAL**|Všechna pole jsou nastavena na hodnotu-1.|
 
-V případě prvních dvou chybových stavů je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce nastavit **errno** na **EINVAL** a vrátit **EINVAL**.
+V případě první dvě chybové podmínky je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_gmtime32_s** rozdělí hodnotu *sourceTime* a uloží ji do struktury typu **tm**definované v souboru Time.h. Adresa struktury je předána v *tmDest*. Hodnota *sourceTime* je obvykle získána z volání [časové](time-time32-time64.md) funkce.
+Funkce **_gmtime32_s** rozdělí hodnotu *sourceTime* a uloží ji ve struktuře typu **TM**, definovaná v time. h. Adresa struktury se předává v *tmDest*. Hodnota *sourceTime* je obvykle získána voláním funkce [Time](time-time32-time64.md) .
 
 > [!NOTE]
-> Cílové prostředí by se měl pokusit zjistit, zda letní čas je v platnosti. Knihovna run-time C předpokládá pravidla Spojených států pro implementaci výpočtu letního času .
+> Cílové prostředí by mělo zkusit zjistit, jestli je v platnosti letní čas. Knihovna run-time jazyka C předpokládá pravidla USA pro implementaci výpočtu letního času.
 
 Každé pole struktury je typu **int**, jak je znázorněno v následující tabulce.
 
 |Pole|Popis|
 |-|-|
-|**tm_sec**|Sekundpo minutě (0 - 59).|
-|**tm_min**|Minuty po hodině (0 - 59).|
-|**tm_hour**|Hodiny od půlnoci (0 - 23).|
-|**tm_mday**|Den v měsíci (1 - 31).|
-|**tm_mon**|Měsíc (0 - 11; leden = 0).|
-|**tm_year**|Rok (aktuální rok minus 1900).|
-|**tm_wday**|Den v týdnu (0 - 6; Neděle = 0).|
-|**tm_yday**|Den v roce (0 - 365; 1. ledna = 0).|
+|**tm_sec**|Sekundy po minutě (0-59).|
+|**tm_min**|Minut po hodině (0-59).|
+|**tm_hour**|Hodiny od půlnoci (0-23).|
+|**tm_mday**|Den v měsíci (1-31).|
+|**tm_mon**|Měsíc (0-11; Leden = 0).|
+|**tm_year**|Year (aktuální rok minus 1900).|
+|**tm_wday**|Den v týdnu (0-6; Neděle = 0).|
+|**tm_yday**|Den v roce (0-365; 1. ledna = 0).|
 |**tm_isdst**|Vždy 0 pro **gmtime_s**.|
 
-**_gmtime64_s**, který používá **__time64_t** strukturu, umožňuje data, která mají být vyjádřena až do 23:59:59, Prosinec 31, 3000, UTC; vzhledem k tomu, **že gmtime32_s** představují pouze data do 23:59:59 Leden 18, 2038, UTC. Půlnoc 1.
+**_gmtime64_s**, která používá strukturu **__time64_t** , umožňuje, aby se data vyjádřila až 23:59:59, 31. prosince 3000, UTC; zatímco **gmtime32_s** reprezentují jenom data 23:59:59 do 18. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat obou těchto funkcí.
 
-**gmtime_s** je vsazená funkce, která je vyhodnocena jako **_gmtime64_s** a **time_t** je ekvivalentní **__time64_t**. Pokud potřebujete vynutit, aby kompilátor interpretoval **time_t** jako starý 32bitový **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To **způsobí, že gmtime_s** bude in-lined **_gmtime32_s**. To se nedoporučuje, protože vaše aplikace může selhat po 18 leden 2038 a není povoleno na 64bitové platformy.
+**gmtime_s** je vložená funkce, která se vyhodnocuje jako **_gmtime64_s** a **time_t** je ekvivalentem **__time64_t**. Pokud potřebujete vynutit, aby kompilátor interpretoval **time_t** jako starou **time_t**32, můžete definovat **_USE_32BIT_TIME_T**. Tím dojde k tomu, že **gmtime_s** být vloženy do **_gmtime32_s**. To se nedoporučuje, protože vaše aplikace může selhat i po 18. lednu 2038 a není povolená na 64 platformách.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Povinná hlavička C|Povinná hlavička jazyka C++|
+|Rutina|Povinné záhlaví jazyka C|Požadovaná hlavička C++|
 |-------------|---------------------|-|
-|**gmtime_s** **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<ctime> \<nebo time.h>|
+|**gmtime_s**, **_gmtime32_s** **_gmtime64_s**|\<Time. h>|\<CTime –> nebo \<Time. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

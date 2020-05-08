@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +35,19 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338424"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916179"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
 Zapíše znak do konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
+*r*<br/>
 Znak, který má být výstup.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *hodnotu c,* pokud je úspěšná. Pokud **_putch** selže, vrátí **EOF**; pokud **_putwch** selže, vrátí **funkce WEOF**.
+Pokud je úspěšná, vrátí *c* . Pokud **_putch** selžou, vrátí **EOF**. Pokud **_putwch** selžou, vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce zapisují znak *c* přímo, bez ukládání do vyrovnávací paměti, do konzoly. V systému Windows NT **_putwch** zapisuje znaky Unicode pomocí aktuálního nastavení národního prostředí konzoly.
+Tyto funkce zapisují znak *c* přímo bez ukládání do vyrovnávací paměti do konzoly. V systému Windows NT **_putwch** zapisuje znaky Unicode pomocí aktuálního nastavení národního prostředí konzoly.
 
-Verze s **příponou _nolock** jsou identické s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Další informace naleznete **v tématu _putch_nolock**, **_putwch_nolock**.
+Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Další informace najdete v tématu **_putch_nolock** **_putwch_nolock**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -88,18 +88,18 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_putch**|\<conio.h>|
-|**_putwch**|\<conio.h>|
+|**_putch**|\<CONIO. h>|
+|**_putwch**|\<CONIO. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Viz příklad pro [_getch](getch-getwch.md).
+Podívejte se na příklad [_getch](getch-getwch.md).
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,5 @@
 ---
-title: Ldexp, ldexpf, ldexpl
+title: ldexp –, ldexpf –, ldexpl
 ms.date: 4/2/2020
 api_name:
 - ldexp
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342233"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916530"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>Ldexp, ldexpf, ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp –, ldexpf –, ldexpl
 
-Vynásobí číslo s plovoucí desetinnou desetinnou hodnotou integrální mocnou hodnotou dvou.
+Vynásobí číslo s plovoucí desetinnou čárkou integrálním výkonem dvou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,31 +77,31 @@ long double ldexpl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou táceckou.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou.
 
-*Exp*<br/>
-Integer exponent.
+*oček*<br/>
+Celočíselný exponent.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **ldexp** vrátí hodnotu *x* \* 2<sup>*exp v*</sup> případě úspěchu. Při přetečení a v závislosti na znaménku *x* **vrátí ldexp** +/- **HUGE_VAL**; hodnota **errno** je nastavena na **ERANGE**.
+Funkce **ldexp –** vrací hodnotu *x* \* 2<sup>*exp*</sup> , pokud je úspěšná. Při přetečení a v závislosti na znaménku *x* **ldexp –** vrátí +/- **HUGE_VAL**; hodnota **errno** je nastavená na **ERANGE**.
 
-Další informace o **chybách** a možných hodnotách vrácení chyb naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o **errno** a možných návratových hodnotách chyb naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **ldexp,** které trvat **float** nebo **dlouhé** **dvojité** typy. V programu C **ldexp** vždy trvá **double** a **int** a vrátí **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **ldexp –** , která přebírají typ **float** nebo **Long** **Double** . V programu v jazyce C **ldexp –** vždy přebírá **Double** a **int** a vrací hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Hlavička jazyka C|Hlavička C++|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp –**, **ldexpf –**, **ldexpl**|\<Math. h>|\<cmath>|
 
-Informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,6 +129,6 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

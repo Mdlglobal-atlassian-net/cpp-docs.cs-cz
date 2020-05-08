@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538606"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914915"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
@@ -156,7 +156,7 @@ Kromě výše uvedených hodnot mohou být do *režimu* zahrnuty následující 
 
 |Modifikátor *režimu*|Režim překladu|
 |-|-|
-| **t** | Otevřít v textovém (přeloženém) režimu. |
+| **š** | Otevřít v textovém (přeloženém) režimu. |
 | **b** | Otevřít v binárním (nepřeloženém) režimu; překlady týkající se znaků návratového znaku a znaku čárového kanálu jsou potlačeny. |
 
 V textovém (přeloženém) režimu je CTRL + Z interpretována jako znak konce souboru na vstupu. V souborech otevřených pro čtení/zápis pomocí **"a +"** **fopen_s** kontroluje kombinaci kláves CTRL + Z na konci souboru a pokud je to možné, odstraní ho. K tomu dochází, protože použití [fseek](fseek-fseeki64.md) a **ftell** k přesunu v souboru, který končí kombinací kláves CTRL + Z, může způsobit, že se [fseek](fseek-fseeki64.md) nesprávně chová na konci souboru.
@@ -189,9 +189,9 @@ Platné znaky pro řetězec *režimu* používané v **fopen_s** a [_fdopen](fdo
 |**w**|**_O_WRONLY** (obvykle **_O_WRONLY** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**w +**|**_O_RDWR** (obvykle **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
-|**r**|Žádná|
-|**n**|Žádná|
+|**š**|**_O_TEXT**|
+|**r**|Žádné|
+|**n**|Žádné|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|

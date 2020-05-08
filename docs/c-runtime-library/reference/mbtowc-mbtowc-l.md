@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 99659def42cba4e832c26b1535706ea576931969
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338800"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915414"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
-Převeďte vícebajtový znak na odpovídající široký znak.
+Převede vícebajtový znak na odpovídající velký znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,40 +61,40 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Wchar*<br/>
-Adresa širokého znaku (typ **wchar_t**).
+*WCHAR*<br/>
+Adresa pro velký znak (typ **wchar_t**).
 
 *mbchar*<br/>
 Adresa posloupnosti bajtů (vícebajtový znak).
 
-*Počet*<br/>
-Počet bajtů ke kontrole.
+*výpočtu*<br/>
+Počet bajtů, které mají být zkontrolovány.
 
-*Národní prostředí*<br/>
+*locale*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **mbchar** není **null** a objekt, který *mbchar* odkazuje na tvoří platný vícebajtový znak, **mbtowc** vrátí délku v bajtů vícebajtového znaku. Pokud *mbchar* je **NULL** nebo objekt, který odkazuje na je široký znak null znak (L'\0'), funkce vrátí 0. Pokud objekt, na který *mbchar* odkazuje, netvoří platný vícebajtový znak v rámci znaků *prvního počtu,* vrátí -1.
+Pokud **mbchar** není **null** a pokud objekt, který *mbchar* odkazuje na formu platného vícebajtového znaku, **mbtowc** vrátí délku v bajtech vícebajtového znaku. Pokud *mbchar* má Mbchar **hodnotu null** nebo objekt, na který odkazuje, je znak null s velkým znakem (L ' \ 0 '), vrátí funkce hodnotu 0. Pokud objekt, na který *mbchar* odkazuje, netvoří platný vícebajtový znak v rámci prvních znaků *Count* , vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **mbtowc** převede *počet* nebo méně bajtů, na které je odkazováno *nástrojem mbchar*, pokud *mbchar* není **NULL**, na odpovídající široký znak. **mbtowc** ukládá výsledný široký znak na *wchar,* pokud *wchar* není **NULL**. **mbtowc** nezkoumá více než **MB_CUR_MAX** bajtů. **mbtowc** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_mbtowc_l** je identická s tím rozdílem, že místo toho používá národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Funkce **mbtowc** převede *počet* nebo méně bajtů, na které odkazuje *Mbchar*, pokud *mbchar* není **null**, na odpovídající velký znak. **mbtowc** ukládá výsledný ý velký znak na *WCHAR,* Pokud *WCHAR* není **null**. **mbtowc** neověřuje více než **MB_CUR_MAX** bajtů. **mbtowc** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_mbtowc_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**mbtowc**|\<stdlib.h>|
-|**_mbtowc_l**|\<stdlib.h>|
+|**mbtowc**|\<Stdlib. h>|
+|**_mbtowc_l**|\<Stdlib. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

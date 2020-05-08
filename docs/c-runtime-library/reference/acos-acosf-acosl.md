@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348974"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916889"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
-Vypočítá arckosinin.
+Vypočítá Arkus kosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,36 +62,36 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota mezi -1 a 1, pro které pro výpočet arckosinu (inverzní kosinus).
+*znak*<br/>
+Hodnota mezi-1 a 1, pro kterou se má vypočítat arkuskosinus (inverzní kosinus)
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **acos** vrátí arckosin *x* v rozsahu 0 až π radiány.
+Funkce **ACOS** vrátí Arkus kosinus Čísla *x* v rozsahu 0 až π radiánů.
 
-Ve výchozím nastavení, pokud *x* je menší než -1 nebo větší než 1, **acos** vrátí neurčitý.
+Ve výchozím nastavení, pokud *x* je menší než-1 nebo větší než 1, **ACOS** vrátí nekonečnou hodnotu.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|Neplatný|_DOMAIN|
-|± QNAN,IND|Žádná|_DOMAIN|
-|&#124;x&#124;>1|Neplatný|_DOMAIN|
+|± ∞|NENÍ|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádné|_DOMAIN|
+|&#124;x&#124;>1|NENÍ|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **acos,** které take a return **float** a **dlouhé** **dvojité** typy. V programu C **acos** vždy trvá a vrací **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **ACOS** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **ACOS** vždycky přebírá a vrací **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ACOS**, **acosf –**, **acosl**|\<Math. h>|\<errno. h>|
 
 ## <a name="example"></a>Příklad
 
-Tento program vyzve k zadání hodnoty v rozsahu -1 až 1. Vstupní hodnoty mimo `_DOMAIN` tento rozsah vytvářejí chybové zprávy. Pokud je zadána platná hodnota, program vytiskne arcsin a arccosine této hodnoty.
+Tento program zobrazí výzvu k zadání hodnoty v rozsahu od 1 do 1. Vstupní hodnoty mimo tento rozsah vytváří `_DOMAIN` chybové zprávy. Pokud je zadána platná hodnota, program vytiskne Arkus sinus a Arkus kosinus této hodnoty.
 
 ```C
 // crt_asincos.c
@@ -141,7 +141,7 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

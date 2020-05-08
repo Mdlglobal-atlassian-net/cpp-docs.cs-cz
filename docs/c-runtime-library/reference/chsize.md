@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: bb2d72e40796a1dd2253361626042486490c77d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350061"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917204"
 ---
 # <a name="_chsize"></a>_chsize
 
-Změní velikost souboru. K dispozici je bezpečnější verze. viz [_chsize_s](chsize-s.md).
+Změní velikost souboru. Je k dispozici bezpečnější verze; viz [_chsize_s](chsize-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,33 +52,33 @@ int _chsize(
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
+*FD*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
-*Velikost*<br/>
-Nová délka souboru v bajtech.
+*hodnota*<br/>
+Nová délka souboru v bajtech
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_chsize** vrátí hodnotu 0, pokud je velikost souboru úspěšně změněna. Vrácená hodnota -1 označuje chybu: **errno** je nastavena na **EACCES,** pokud je zadaný soubor jen pro čtení nebo zadaný soubor je uzamčen proti přístupu, **do EBADF,** pokud je deskriptor neplatný, **ENOSPC,** pokud v zařízení nezbývá žádné místo, nebo **EINVAL,** pokud je *velikost* menší než nula.
+**_chsize** vrátí hodnotu 0, pokud je velikost souboru úspěšně změněna. Návratová hodnota-1 označuje chybu: **errno** je nastavená na **EACCES** , pokud je zadaný soubor jen pro čtení, nebo je zadaný soubor uzamčený proti přístupu, aby **EBADF** v případě, že je popisovač neplatný, **ENOSPC** , pokud není na zařízení žádné místo, **nebo pokud** je *Velikost* menší než nula.
 
-Další informace o těchto a dalších návratových kódech naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_chsize** rozšiřuje nebo zkrátí soubor přidružený k *fd* na délku určenou *velikostí*. Soubor musí být otevřen v režimu, který umožňuje zápis. Pokud je soubor rozšířen, jsou připojeny nulové znaky (\0). Pokud je soubor zkrácen, budou ztracena všechna data od konce zkráceného souboru do původní délky souboru.
+Funkce **_chsize** rozšiřuje nebo zkrátí soubor přidružený k *FD* na délku určenou *velikostí*. Soubor musí být otevřen v režimu, který povoluje zápis. Pokud je soubor rozšířený, připojí se znaky null (' \ 0 '). Pokud je soubor zkrácený, ztratí se všechna data z konce zkráceného souboru do původní délky souboru.
 
-Tato funkce ověřuje její parametry. Pokud je *velikost* menší než nula nebo *fd* je chybný popisovač souboru, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md).
+Tato funkce ověří své parametry. Pokud je *Velikost* menší než nula nebo *FD* je chybný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chsize**|\<io.h>|\<errno.h>|
+|**_chsize**|\<IO. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

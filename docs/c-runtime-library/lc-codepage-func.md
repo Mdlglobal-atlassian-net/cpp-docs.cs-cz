@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351238"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914127"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
-Interní funkce CRT. Načte aktuální znakovou stránku vlákna.
+Vnitřní funkce CRT. Načte aktuální znakovou stránku vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,13 +46,13 @@ Aktuální znaková stránka vlákna.
 
 ## <a name="remarks"></a>Poznámky
 
-`___lc_codepage_func`je interní funkce CRT, která je používána jinými funkcemi CRT k získání aktuální znakové stránky z místního úložiště vlákna pro data CRT. Tyto informace jsou také k dispozici pomocí [funkce _get_current_locale.](../c-runtime-library/reference/get-current-locale.md)
+`___lc_codepage_func`je interní funkce CRT, kterou používají jiné funkce CRT k získání aktuální znakové stránky z thread localho úložiště pro data CRT. Tyto informace jsou také k dispozici pomocí funkce [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
-*Znaková stránka* je mapování jednobajtových nebo dvoubajtových kódů na jednotlivé znaky. Různé znakové stránky obsahují různé speciální znaky, které jsou obvykle přizpůsobeny pro jazyk nebo skupinu jazyků. Další informace o znakových stránkách naleznete v [tématu Code Pages](../c-runtime-library/code-pages.md).
+*Znaková stránka* je mapování jednobajtových nebo dvoubajtových kódů na jednotlivé znaky. Různé znakové stránky obsahují různé speciální znaky, obvykle přizpůsobené pro jazyk nebo skupinu jazyků. Další informace o znakových stránkách naleznete v tématu [Code Pages](../c-runtime-library/code-pages.md).
 
-Interní funkce CRT jsou specifické pro implementaci a mohou se měnit s každou verzí. Nedoporučujeme jejich použití ve vašem kódu.
+Interní funkce CRT jsou specifické pro konkrétní implementaci a můžou se měnit s každou vydanou verzí. Nedoporučujeme jejich použití ve vašem kódu.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 

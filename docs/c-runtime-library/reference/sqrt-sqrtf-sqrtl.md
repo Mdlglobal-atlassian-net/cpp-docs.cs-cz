@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913905"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,32 +69,32 @@ long double sqrtl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*znak*<br/>
 Nezáporná hodnota s plovoucí desetinnou čárkou
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **sqrt,** které trvat **float** nebo **dlouhé** **dvojité** typy. V programu C **sqrt** vždy bere a vrací **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **odmocniny** , které přebírají typ **float** nebo **Long** **Double** . V programu v jazyce C **odmocnina** vždy přebírá a vrací hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **sqrt** vrátí druhou odmocninu *x*. Ve výchozím nastavení, pokud *x* je negativní, **sqrt** vrátí neurčitý NaN.
+Funkce **Sqrt** Vrátí druhou odmocninu *x*. Ve výchozím nastavení, pokud je *x* záporné, **odmocnina** vrátí nekonečnou hodnotu NaN.
 
-|Vstup|Výjimka SEH|**_matherr** Výjimka|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|Žádná|_DOMAIN|
-|- ∞|Žádná|_DOMAIN|
-|x<0|Žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádné|_DOMAIN|
+|- ∞|žádné|_DOMAIN|
+|x<0|žádné|_DOMAIN|
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Hlavička jazyka C|Hlavička C++|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**Sqrt**, **sqrtf –**, **Sqrt**|\<Math. h>|\<cmath>|
 
-Informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +123,7 @@ The square root of 45.35 is 6.73
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

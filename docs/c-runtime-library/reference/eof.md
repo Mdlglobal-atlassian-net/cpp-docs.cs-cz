@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347938"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915059"
 ---
 # <a name="_eof"></a>_eof
 
-Testy pro konec souboru (EOF).
+Testuje konec souboru (EOF).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,26 +52,26 @@ int _eof(
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
+*FD*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_eof** vrátí hodnotu 1, pokud je aktuální pozice konec souboru, nebo 0, pokud není. Vrácená hodnota -1 označuje chybu; v tomto případě je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je errno** nastaveno na **EBADF**, což znamená neplatný popisovač souboru.
+**_eof** vrátí hodnotu 1, pokud je aktuální pozice konec souboru, nebo 0, pokud není. Návratová hodnota-1 označuje chybu. v tomto případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EBADF**, což indikuje neplatný popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_eof** určuje, zda bylo dosaženo konce souboru přidruženého k *fd.*
+Funkce **_eof** určuje, zda byl dosažen konec souboru přidruženého ke *FD* .
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_eof**|\<io.h>|\<errno.h>|
+|**_eof**|\<IO. h>|\<errno. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -113,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_eoftxt"></a>Vstup: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Vstup: crt_eof. txt
 
 ```Input
 This file contains some text.
@@ -128,7 +128,7 @@ Number of bytes read = 29
 ## <a name="see-also"></a>Viz také
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
-[Vstupně-nosné(v" nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

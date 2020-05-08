@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349129"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916900"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
-Určuje oprávnění ke čtení a zápisu souborů. Toto je verze [_access, _waccess](access-waccess.md) s vylepšeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Určuje oprávnění ke čtení a zápisu souborů. Jedná se o verzi [_access, _waccess](access-waccess.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,42 +62,42 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Cestu*<br/>
+*dílčí*<br/>
 Cesta k souboru nebo adresáři.
 
-*Režimu*<br/>
+*Mode*<br/>
 Nastavení oprávnění.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí hodnotu 0, pokud má soubor daný režim. Funkce vrátí kód chyby, pokud pojmenovaný soubor neexistuje nebo není přístupný v daném režimu. V tomto případě funkce vrátí kód chyby ze sady `errno` takto a také nastaví na stejnou hodnotu.
+Každá funkce vrátí hodnotu 0, pokud soubor má daný režim. Funkce vrátí kód chyby, pokud pojmenovaný soubor neexistuje nebo není přístupný v daném režimu. V tomto případě funkce vrátí kód chyby ze sady následovně a také nastaví `errno` stejnou hodnotu.
 
 |hodnota errno|Podmínka|
 |-|-|
-`EACCES`|Přístup se odepřel. Nastavení oprávnění souboru neumožňuje určený přístup.
+`EACCES`|Přístup se odepřel. Nastavení oprávnění souboru nepovoluje zadaný přístup.
 `ENOENT`|Název souboru nebo cesta nebyla nalezena.
-`EINVAL`|Neplatný parametr.
+`EINVAL`|Neplatný parametr
 
-Další informace naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití se soubory **_access_s** funkce určuje, zda zadaný soubor existuje a lze k němu získat přístup podle hodnoty *režimu*. Při použití s adresáři **_access_s** určuje pouze, zda zadaný adresář existuje. V operačních systémech Windows 2000 a novějších mají všechny adresáře přístup pro čtení a zápis.
+Při použití se soubory funkce **_access_s** určuje, zda zadaný soubor existuje a je k němu možné přistupovat, jak je určeno hodnotou *Mode*. Při použití s adresáři **_access_s** určuje pouze to, zda existuje zadaný adresář. Ve Windows 2000 a novějších operačních systémech mají všechny adresáře přístup pro čtení a zápis.
 
-|hodnota režimu|Zkontroluje, zda soubor obsahuje|
+|hodnota režimu|Kontroluje soubor pro|
 |----------------|---------------------|
 |00|Pouze existence.|
-|02|Napište oprávnění.|
-|04|Přečtěte si oprávnění.|
-|06|Přečtěte si a zapište oprávnění.|
+|02|Oprávnění k zápisu.|
+|04|Oprávnění číst.|
+|06|Oprávnění ke čtení a zápisu.|
 
-Oprávnění ke čtení nebo zápisu souboru nestačí k zajištění možnosti otevřít soubor. Například pokud je soubor uzamčen jiným procesem, nemusí být přístupný i v případě, **že _access_s** vrátí 0.
+Oprávnění ke čtení nebo zápisu souboru není dostatečné, aby bylo možné zajistit možnost otevřít soubor. Například pokud je soubor uzamčen jiným procesem, nemusí být přístupný, i když **_access_s** vrátí hodnotu 0.
 
-**_waccess_s** je verze **_access_s**s širokými znaky , kde argument *cesty* k **_waccess_s** je řetězec s širokým znakem. V opačném případě **se _waccess_s** a **_access_s** chovat stejně.
+**_waccess_s** je verze **_access_s**s velkým znakem, kde argument *cesty* pro **_waccess_s** je řetězec s velkým znakem. V opačném případě **_waccess_s** a **_access_s** se chovají stejně.
 
-Tyto funkce ověřují jejich parametry. Pokud je *cesta* NULL nebo *režim* neurčuje platný režim, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, `errno` `EINVAL` tyto `EINVAL`funkce nastaveny a vrátit .
+Tyto funkce ověřují své parametry. Pokud je *cesta* null nebo *režim* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví `errno` na `EINVAL` a vrátí. `EINVAL`
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -107,14 +107,14 @@ Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Ch
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_access_s**|\<io.h>|\<errno.h>|
-|**_waccess_s**|\<wchar.h> \<nebo io.h>|\<errno.h>|
+|**_access_s**|\<IO. h>|\<errno. h>|
+|**_waccess_s**|\<WCHAR. h> nebo \<IO. h>|\<errno. h>|
 
 ## <a name="example"></a>Příklad
 
-Tento příklad používá **_access_s** ke kontrole souboru s názvem crt_access_s.c, aby zjistil, zda existuje a zda je povoleno psaní.
+Tento příklad používá **_access_s** ke kontrole souboru s názvem crt_access_s. c, aby bylo možné zjistit, zda existuje a zda je zápis povolen.
 
 ```C
 // crt_access_s.c

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333226"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915386"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
-Porovná znaky ve dvou vyrovnávacích pamětnicích (bez malých a velkých písmen).
+Porovná znaky ve dvou bufferech (bez rozlišení velkých a malých písmen).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,47 +62,47 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměť1*<br/>
+*buffer1*<br/>
 První vyrovnávací paměť.
 
-*vyrovnávací paměť2*<br/>
+*buffer2*<br/>
 Druhá vyrovnávací paměť.
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků.
 
-*Národní prostředí*<br/>
-Národní prostředí použít.
+*locale*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Návratová hodnota označuje vztah mezi vyrovnávacími pamětmi.
 
-|Návratová hodnota|Vztah prvního počtu bajtů buf1 a buf2|
+|Návratová hodnota|Relace prvních počtů bajtů buf1 a buf2|
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* menší než *buffer2*.|
-|0|*vyrovnávací paměť1* shodná s *vyrovnávací pamětí2*.|
+|0|*buffer1* se shodují s *buffer2*.|
 |> 0|*buffer1* větší než *buffer2*.|
 |**_NLSCMPERROR**|Došlo k chybě.|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_memicmp** porovná znaky prvního *počtu* dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajt byte. Porovnání není malá a velká písmena.
+Funkce **_memicmp** porovná první *počet* znaků dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajt po bajtu. Porovnávání nerozlišuje velká a malá písmena.
 
-Pokud *je buď buffer1* nebo *buffer2* ukazatel null, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
+Pokud je *buffer1* nebo *buffer2* ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
-**_memicmp** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_memicmp_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+**_memicmp** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_memicmp_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_memicmp**|\<memory.h> \<nebo string.h>|
-|**_memicmp_l**|\<memory.h> \<nebo string.h>|
+|**_memicmp**|\<Memory. h> nebo \<String. h>|
+|**_memicmp_l**|\<Memory. h> nebo \<String. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

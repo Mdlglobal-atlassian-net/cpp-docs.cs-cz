@@ -13,7 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 0203c40395c99fc145e1c8125f5d40c0d43571fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745386"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918058"
 ---
 # <a name="_cilog"></a>_CIlog
 
-Vypočítá přirozený logaritmus nejvyšší hodnoty v zásobníku.
+Vypočítá přirozený logaritmus hodnoty nejvyšší úrovně v zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,11 +44,11 @@ void __cdecl _CIlog();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze `log` funkce má specializované konvence volání, které kompilátor rozumí. Urychluje provádění, protože zabraňuje generování kopií a pomáhá s přidělením registru.
+Tato verze `log` funkce má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je posunuta do horní části zásobníku.
+Výsledná hodnota je vložena do horní části zásobníku.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 

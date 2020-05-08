@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337994"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916722"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
-Zaokrouhlí hodnotu s plovoucí desetinnou hodnotou na nejbližší celé číslo.
+Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,30 +67,30 @@ long double roundl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Hodnota s plovoucí desetinnou tácem k zaokrouhlení.
+*znak*<br/>
+Hodnota s plovoucí desetinnou čárkou, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Zaoblené** funkce vrátí hodnotu s plovoucí desetinnou hodnotou, která představuje nejbližší celé číslo na *x*. Hodnoty do poloviny jsou zaokrouhleny od nuly, bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Neexistuje žádná chyba vrátit.
+**Kulaté** funkce vrací hodnotu s plovoucí desetinnou čárkou, která představuje nejbližší celé číslo na *ose x*. Hodnoty v polovině jsou zaokrouhleny směrem od nuly bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Žádná|**_DOMAIN**|
+|**QNAN** **,** zasáhnout|žádné|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **round,** které take a return **float** a **dlouhé** **dvojité** hodnoty. V programu C **kolo** vždy trvá a vrací **double**.
+Vzhledem k tomu, že jazyk C++ umožňuje přetížení, můžete volat přetížení **zaoblení** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C, **zaokrouhlí** vždy zabere a vrátí hodnotu **Double**.
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**kolo**, **roundf**, **zaoblení**|\<math.h>|
+|**zaokrouhlit**, **roundf –**, **Zaoblený**|\<Math. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -130,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

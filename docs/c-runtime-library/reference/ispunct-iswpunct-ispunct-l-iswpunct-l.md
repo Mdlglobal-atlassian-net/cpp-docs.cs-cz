@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 3072f147d2adff2c50304d2d2052947ca32cb060
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0585e9a80919c63dd9aa650dc1544e95569bc8b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342814"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916682"
 ---
 # <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
-Určuje, zda celé číslo představuje interpunkční znak.
+Určuje, zda celočíselná hodnota představuje znak interpunkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,43 +71,43 @@ int _iswpunct_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Celé číslo k testování.
+*r*<br/>
+Celé číslo k otestování.
 
-*Národní prostředí*<br/>
+*locale*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou, pokud *c* je konkrétní reprezentace interpunkčního znaku. **ispunct** vrátí nenulovou hodnotu pro libovolný tisknutelný znak, který není znakem mezery nebo znakem, pro který je **isalnum** nenulová. **iswpunct** vrátí nenulovou hodnotu pro všechny tisknutelné široký znak, který není ani mezera široký znak ani široký znak, pro který **iswalnum** je nenulová. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje zkušební podmínku.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace znaku interpunkce. **ispunct** vrací nenulovou hodnotu pro libovolný tisknutelný znak, který není znak mezery nebo znak, pro který **isalnum** je nenulový. **iswpunct** vrací nenulovou hodnotu pro libovolný tisknutelný libovolný znak, který není mezerou ani velkým znakem, pro který **iswalnum** je nenulový. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
 
-Výsledek zkušební podmínky pro **ispunct** funkce závisí na **nastavení LC_CTYPE** kategorie národního prostředí; další informace naleznete [v _wsetlocale setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí, které nemají **příponu _l,** používají aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; verze, které mají **_l** příponu jsou identické s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+Výsledek testovací podmínky pro funkci **ispunct** závisí na nastavení kategorie **LC_CTYPE** národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze těchto funkcí, které nemají příponu **_l** , používají aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; verze, které mají příponu **_l** , jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo toho. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **ispunct** a **_ispunct_l** je nedefinována, pokud *c* není EOF nebo v rozsahu 0 až 0xFF, včetně. Při ladění CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolat kontrolní výraz.
+Chování **ispunct** a **_ispunct_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**-** **istpunct**|**ispunct**|[_ismbcpunct](ismbcgraph-functions.md)|**iswpunct**|
+|**_** **istpunct**|**ispunct**|[_ismbcpunct](ismbcgraph-functions.md)|**iswpunct**|
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Pokud ho chcete změnit, přečtěte si téma [globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ispunct**|\<ctype.h>|
-|**iswpunct**|\<ctype.h> \<nebo wchar.h>|
-|**_ispunct_l**|\<ctype.h>|
-|**_iswpunct_l**|\<ctype.h> \<nebo wchar.h>|
+|**ispunct**|\<CType. h>|
+|**iswpunct**|\<CType. h> nebo \<WCHAR. h>|
+|**_ispunct_l**|\<CType. h>|
+|**_iswpunct_l**|\<CType. h> nebo \<WCHAR. h>|
 
-Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[is, isw Rutiny](../../c-runtime-library/is-isw-routines.md)<br/>
+[Jazyka](../../c-runtime-library/locale.md)<br/>
+[je, rutiny ISW](../../c-runtime-library/is-isw-routines.md)<br/>
