@@ -1,7 +1,7 @@
 ---
 title: switchpříkaz (C++)
-description: Odkaz na standardní příkaz switch C++ v aplikaci Microsoft Visual Studio C++.
-ms.date: 04/15/2020
+description: Odkaz na standardní příkaz jazyka C++ switch v jazyce Microsoft Visual Studio c++.
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480825"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204165"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchpříkaz (C++)
+# <a name="switch-statement-c"></a>`switch`příkaz (C++)
 
-Umožňuje výběr mezi více oddíly kódu, v závislosti na hodnotě integrálního výrazu.
+Umožňuje výběr mezi více oddíly kódu v závislosti na hodnotě integrálního výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **`switch (`**\[ *inicializace* **`;`**] *výraz***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***příkaz* *s konstantním výrazem* **`:`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***prohlášení*] \
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub> <sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Poznámky
 
-*Výraz* musí mít integrální typ nebo být typ třídy, který má jednoznačný převod na integrální typ. Integrální propagace probíhá tak, jak je popsáno ve [standardních konverzích](standard-conversions.md).
+__`switch`__ Příkaz způsobí, že se ovládací prvek převede na jeden *`labeled-statement`* v těle jeho příkazu v závislosti na hodnotě *`condition`* .
 
-Tělo **switch** příkazu se skládá **case** z řady **default** popisků a volitelného popisku. Souhrnně příkazy, které následují popisky se nazývají *označené příkazy.* Označené příkazy nejsou syntaktické požadavky, **switch** ale prohlášení je bez nich bezvýznamné. Žádné dva konstantní **case** výrazy v příkazech může vyhodnotit na stejnou hodnotu. Popisek **default** se může zobrazit pouze jednou. Příkaz **default** je často umístěn na konci, ale může se **switch** objevit kdekoli v textu příkazu. **case** Popisek **default** nebo se může **switch** zobrazit pouze uvnitř příkazu.
+*`condition`* Musí mít celočíselný typ nebo být typu třídy, který má dvojznačný převod na celočíselný typ. K integrální povýšení dochází, jak je popsáno v tématu [standardní převody](standard-conversions.md).
 
-*Konstantní výraz* v **case** každém popisku je převeden na typ *výrazu*. Pak je porovnán s *výrazem* pro rovnost. Ovládací prvek předá **case** příkazu, jehož *konstantní výraz* odpovídá hodnotě *výrazu*. Výsledné chování je uvedeno v následující tabulce.
+__`switch`__ Tělo příkazu se skládá z řady __`case`__ popisků a volitelného __`default`__ popisku. A *`labeled-statement`* je jedním z těchto popisků a příkazů, které následují. Příkazy s popiskem nejsou syntaktické požadavky, ale __`switch`__ příkaz nemá žádný význam. Žádné dvě *`constant-expression`* hodnoty v __`case`__ příkazech nelze vyhodnotit na stejnou hodnotu. __`default`__ Popisek se může objevit jenom jednou. __`default`__ Příkaz je často umístěn na konci, ale může se objevit kdekoli v __`switch`__ těle příkazu. __`case`__ Popisek nebo __`default`__ se může vyskytovat jenom uvnitř __`switch`__ příkazu.
 
-### <a name="switch-statement-behavior"></a>Přepnout chování příkazu
+*`constant-expression`* V každém __`case`__ popisku je převedena na konstantní hodnotu, která je stejného typu jako *`condition`* . Pak je porovnán s *`condition`* pro rovnost. Řízení se předá prvnímu příkazu za __`case`__ *`constant-expression`* hodnotou, která odpovídá hodnotě *`condition`* . Výsledné chování je uvedeno v následující tabulce.
+
+### <a name="switch-statement-behavior"></a>`switch`chování příkazu
 
 | Podmínka | Akce |
 |--|--|
-| Převedená hodnota odpovídá hodnotě propagovaného řídícího výrazu. | Ovládací prvek je převeden do příkazu následujícího za tímto popiskem. |
-| Žádná z konstant neodpovídá konstantám **case** v popiscích; štítek **default** je přítomen. | Ovládací prvek je **default** převeden na popisek. |
-| Žádná z konstant neodpovídá konstantám **case** v popiscích; není **default** k dispozici žádný štítek. | Ovládací prvek je převedena **switch** do příkazu po příkazu. |
+| Převedená hodnota odpovídá povýšení řídicího výrazu zvýšené úrovně. | Ovládací prvek bude převeden na příkaz následující po tomto popisku. |
+| Žádná Konstanta neodpovídá konstantám v popisku __`case`__ ; __`default`__ popisek je k dispozici. | Ovládací prvek se přenese na __`default`__ popisek. |
+| Žádná Konstanta neodpovídá konstantám v __`case`__ popisku; __`default`__ není k dispozici žádný popisek. | Ovládací prvek se přenese do příkazu za __`switch`__ příkazem. |
 
-Pokud je nalezen odpovídající výraz, spuštění **case** **default** může pokračovat později nebo popisky. Příkaz [`break`](../cpp/break-statement-cpp.md) se používá k zastavení provádění a předání **switch** řízení do příkazu po příkazu. Bez **break** příkazu je proveden každý **case** příkaz z odpovídajícího popisku na konec **switch**, včetně **default**, . Příklad:
+Pokud se najde shodný výraz, může provádění pokračovat prostřednictvím pozdějších __`case`__ nebo __`default`__ popisků. [`break`](../cpp/break-statement-cpp.md)Příkaz slouží k zastavení provádění a přenosu řízení příkazu po __`switch`__ příkazu. Bez __`break`__ příkazu se spustí všechny příkazy z odpovídajícího __`case`__ popisku na konec __`switch`__ , včetně __`default`__ . Příklad:
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-Ve výše uvedeném příkladu se zintáží, `uppercase_A` pokud `c` je velká písmena `'A'`. Příkaz **break** po `uppercase_A++` ukončení provádění **switch** těla příkazu a **while** ovládací prvek předá smyčky. Bez **break** příkazu by exekuce "propadla" do `lowercase_a` dalšího `other` označeného prohlášení, takže by se také zintáčela. Podobnému účelu slouží **break** prohlášení `case 'a'`pro společnost . Pokud `c` je malá `'a'` `lowercase_a` písmena , je **break** přírůstek **switch** a příkaz ukončí tělo příkazu. Pokud `c` není `'a'` nebo `'A'`, **default** příkaz je proveden.
+Ve výše uvedeném příkladu `uppercase_A` se zvýší, pokud `c` je to velké písmeno `'A'` . __`break`__ Příkaz po `uppercase_A++` ukončení vykonání __`switch`__ těla příkazu a řízení předá do __`while`__ smyčky. Bez __`break`__ příkazu by spuštění vedlo k dalšímu popisku příkazu, takže by `lowercase_a` `other` se také mělo zvýšit. Podobný účel je obsluhován __`break`__ příkazem pro `case 'a'` . Pokud `c` je malá písmena `'a'` , `lowercase_a` je zvýšena a __`break`__ příkaz ukončí __`switch`__ tělo příkazu. Pokud `c` není `'a'` nebo `'A'` , je __`default`__ proveden příkaz.
 
-**Visual Studio 2017 a novější:** (k dispozici s [/std:c++17)](../build/reference/std-specify-language-standard-version.md)Atribut `[[fallthrough]]` je určen ve standardu C++17. Můžete jej použít **switch** v příkazu. Je to nápověda k kompilátoru, nebo kdokoli, kdo čte kód, že fall-through chování je úmyslné. Kompilátor Microsoft C++ aktuálně nevaruje na fallthrough chování, takže tento atribut nemá žádný vliv na chování kompilátoru. V příkladu atribut získá použít na prázdný příkaz v rámci neukončený labeled prohlášení. Jinými slovy, středník je nezbytné.
+**Visual Studio 2017 a novější:** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut je zadán v standardu c++ 17. Můžete ho použít v __`switch`__ příkazu. Je to pomocný parametr kompilátoru, nebo kdokoli, kdo čte kód, který je v průběhu tohoto chování záměrné. Kompilátor jazyka Microsoft C++ aktuálně neupozorňuje na chování fallthrough, takže tento atribut nemá žádný vliv na chování kompilátoru. V příkladu je atribut použit pro prázdný příkaz v rámci neukončeného příkazu Label. Jinými slovy je středník nutný.
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 verze 15.3 a novější** (k dispozici s [/std:c++17](../build/reference/std-specify-language-standard-version.md)). Příkaz switch může mít *klauzuli inicializace.* Zavádí a inicializuje proměnnou, jejíž rozsah je switch omezen na blok příkazu:
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)). __`switch`__ Příkaz může obsahovat *`init-statement`* klauzuli, která končí středníkem. Zavádí a inicializuje proměnnou, jejíž rozsah je omezen na blok __`switch`__ příkazu:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-Vnitřní blok příkazu **switch** může obsahovat definice s inicializacetak dlouho, dokud jsou *dosažitelné*, to znamená, že není obejít všechny možné cesty spuštění. Názvy zavedené pomocí těchto deklarací mají místní obor. Příklad:
+Vnitřní blok __`switch`__ příkazu může obsahovat definice s inicializátory, pokud jsou *dostupné*, to znamená, že neskočí všechny možné cesty provádění. Názvy zavedené pomocí těchto deklarací mají místní rozsah. Příklad:
 
 ```cpp
 // switch_statement2.cpp
@@ -161,13 +173,11 @@ int main(int argc, char *argv[])
 }
 ```
 
-Příkaz **switch** může být vnořený. Při vnoření **case** **default** se popisky **switch** nebo přidruží k nejbližšímu příkazu, který je obklopuje.
+__`switch`__ Příkaz může být vnořený. Při vnoření jsou __`case`__ __`default`__ popisky nebo přidruženy k nejbližšímu __`switch`__ příkazu, který je obklopuje.
 
 ### <a name="microsoft-specific-behavior"></a>Chování specifické pro společnost Microsoft
 
-Microsoft C neomezuje počet **case** hodnot v **switch** příkazu. Počet je omezen pouze dostupnou pamětí. ANSI C vyžaduje, aby **case** v příkazu **switch** bylo povoleno alespoň 257 štítků.
-
-Pro default Microsoft C je, že rozšíření společnosti Microsoft jsou povoleny. Pomocí možnosti kompilátoru [/Za](../build/reference/za-ze-disable-language-extensions.md) zakažte tato rozšíření.
+Jazyk Microsoft C++ neomezuje počet __`case`__ hodnot v __`switch`__ příkazu. Počet je omezen pouze dostupnou pamětí.
 
 ## <a name="see-also"></a>Viz také
 
