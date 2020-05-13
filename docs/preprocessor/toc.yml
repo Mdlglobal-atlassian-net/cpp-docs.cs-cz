@@ -1,0 +1,204 @@
+- name: C/C++ – referenční dokumentace preprocesoru
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: Preprocesor
+  expanded: false
+  items:
+    - name: Preprocesor
+      href: ../preprocessor/preprocessor.md
+    - name: Přehled experimentálního preprocesoru
+      href: ../preprocessor/preprocessor-experimental-overview.md
+    - name: Fáze převodu
+      href: ../preprocessor/phases-of-translation.md
+    - name: Direktivy preprocesoru
+      expanded: false
+      items:
+        - name: Direktivy preprocesoru
+          href: ../preprocessor/preprocessor-directives.md
+        - name: '#define – direktiva (C/C++)'
+          href: ../preprocessor/hash-define-directive-c-cpp.md
+        - name: '#error – direktiva (C/C++)'
+          href: ../preprocessor/hash-error-directive-c-cpp.md
+        - name: '#if, #elif, #else a #endif – direktivy (C/C++)'
+          href: ../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md
+        - name: '#ifdef a #ifndef – direktivy (C/C++)'
+          href: ../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
+        - name: '#import – direktiva (C++)'
+          href: ../preprocessor/hash-import-directive-cpp.md
+        - name: '#import – atributy (C++)'
+          expanded: false
+          items:
+            - name: '#import – atributy (C++)'
+              href: ../preprocessor/hash-import-attributes-cpp.md
+            - name: auto_rename
+              href: ../preprocessor/auto-rename.md
+            - name: auto_search
+              href: ../preprocessor/auto-search.md
+            - name: embedded_idl
+              href: ../preprocessor/embedded-idl.md
+            - name: 'exclude (#import)'
+              href: ../preprocessor/exclude-hash-import.md
+            - name: high_method_prefix
+              href: ../preprocessor/high-method-prefix.md
+            - name: high_property_prefixes
+              href: ../preprocessor/high-property-prefixes.md
+            - name: implementation_only
+              href: ../preprocessor/implementation-only.md
+            - name: include()
+              href: ../preprocessor/include-parens.md
+            - name: inject_statement
+              href: ../preprocessor/inject-statement.md
+            - name: named_guids
+              href: ../preprocessor/named-guids.md
+            - name: no_auto_exclude
+              href: ../preprocessor/no-auto-exclude.md
+            - name: no_dual_interfaces
+              href: ../preprocessor/no-dual-interfaces.md
+            - name: no_implementation
+              href: ../preprocessor/no-implementation.md
+            - name: no_namespace
+              href: ../preprocessor/no-namespace.md
+            - name: no_registry
+              href: ../preprocessor/no-registry.md
+            - name: no_search_namespace
+              href: ../preprocessor/no-search-namespace.md
+            - name: no_smart_pointers
+              href: ../preprocessor/no-smart-pointers.md
+            - name: raw_dispinterfaces
+              href: ../preprocessor/raw-dispinterfaces.md
+            - name: raw_interfaces_only
+              href: ../preprocessor/raw-interfaces-only.md
+            - name: raw_method_prefix
+              href: ../preprocessor/raw-method-prefix.md
+            - name: raw_native_types
+              href: ../preprocessor/raw-native-types.md
+            - name: raw_property_prefixes
+              href: ../preprocessor/raw-property-prefixes.md
+            - name: 'rename (#import)'
+              href: ../preprocessor/rename-hash-import.md
+            - name: rename_namespace
+              href: ../preprocessor/rename-namespace.md
+            - name: rename_search_namespace
+              href: ../preprocessor/rename-search-namespace.md
+            - name: tlbid
+              href: ../preprocessor/tlbid.md
+        - name: '#include – direktiva (C/C++)'
+          href: ../preprocessor/hash-include-directive-c-cpp.md
+        - name: '#line – direktiva (C/C++)'
+          href: ../preprocessor/hash-line-directive-c-cpp.md
+        - name: Direktiva s hodnotou Null
+          href: ../preprocessor/null-directive.md
+        - name: '#undef – direktiva (C/C++)'
+          href: ../preprocessor/hash-undef-directive-c-cpp.md
+        - name: '#using – direktiva (C++/CLI)'
+          href: ../preprocessor/hash-using-directive-cpp.md
+    - name: Operátory preprocesoru
+      expanded: false
+      items:
+        - name: Operátory preprocesoru
+          href: ../preprocessor/preprocessor-operators.md
+        - name: 'Operátor nastavení velikosti řetězce (#)'
+          href: ../preprocessor/stringizing-operator-hash.md
+        - name: 'Operátor převádějící na znak (#@)'
+          href: ../preprocessor/charizing-operator-hash-at.md
+        - name: 'Operátor vložení tokenu (##)'
+          href: ../preprocessor/token-pasting-operator-hash-hash.md
+    - name: Makra preprocesoru (C /C++)
+      expanded: false
+      items:
+        - name: Makra preprocesoru (C /C++)
+          href: ../preprocessor/macros-c-cpp.md
+        - name: Makra preprocesoru a C++
+          href: ../preprocessor/macros-and-cpp.md
+        - name: Variadická makra preprocesoru
+          href: ../preprocessor/variadic-macros.md
+        - name: Předdefinovaná makra preprocesoru
+          href: ../preprocessor/predefined-macros.md
+- name: Souhrn gramatiky preprocesoru (C/C++)
+  href: ../preprocessor/grammar-summary-c-cpp.md
+- name: Direktivy pragma a klíčové slovo __pragma
+  expanded: false
+  items:
+    - name: Direktivy pragma a klíčové slovo __pragma
+      href: ../preprocessor/pragma-directives-and-the-pragma-keyword.md
+    - name: alloc_text – direktiva pragma
+      href: ../preprocessor/alloc-text.md
+    - name: auto_inline – direktiva pragma
+      href: ../preprocessor/auto-inline.md
+    - name: bss_seg – direktiva pragma
+      href: ../preprocessor/bss-seg.md
+    - name: check_stack – direktiva pragma
+      href: ../preprocessor/check-stack.md
+    - name: code_seg – direktiva pragma
+      href: ../preprocessor/code-seg.md
+    - name: comment – direktiva pragma (C/C++)
+      href: ../preprocessor/comment-c-cpp.md
+    - name: component – direktiva pragma
+      href: ../preprocessor/component.md
+    - name: conform – direktiva pragma
+      href: ../preprocessor/conform.md
+    - name: const_seg – direktiva pragma
+      href: ../preprocessor/const-seg.md
+    - name: data_seg – direktiva pragma
+      href: ../preprocessor/data-seg.md
+    - name: deprecated – direktiva pragma (C/C++)
+      href: ../preprocessor/deprecated-c-cpp.md
+    - name: detect_mismatch – direktiva pragma
+      href: ../preprocessor/detect-mismatch.md
+    - name: execution_character_set – direktiva pragma
+      href: ../preprocessor/execution-character-set.md
+    - name: fenv_access – direktiva pragma
+      href: ../preprocessor/fenv-access.md
+    - name: float_control – direktiva pragma
+      href: ../preprocessor/float-control.md
+    - name: fp_contract – direktiva pragma
+      href: ../preprocessor/fp-contract.md
+    - name: function – direktiva pragma (C/C++)
+      href: ../preprocessor/function-c-cpp.md
+    - name: hdrstop – direktiva pragma
+      href: ../preprocessor/hdrstop.md
+    - name: include_alias – direktiva pragma
+      href: ../preprocessor/include-alias.md
+    - name: init_seg – direktiva pragma
+      href: ../preprocessor/init-seg.md
+    - name: inline_depth – direktiva pragma
+      href: ../preprocessor/inline-depth.md
+    - name: inline_recursion – direktiva pragma
+      href: ../preprocessor/inline-recursion.md
+    - name: intrinsic – direktiva pragma
+      href: ../preprocessor/intrinsic.md
+    - name: loop – direktiva pragma
+      href: ../preprocessor/loop.md
+    - name: make_public – direktiva pragma
+      href: ../preprocessor/make-public.md
+    - name: 'managed, unmanaged – direktivy pragma'
+      href: ../preprocessor/managed-unmanaged.md
+    - name: message – direktiva pragma
+      href: ../preprocessor/message.md
+    - name: omp – direktiva pragma
+      href: ../preprocessor/omp.md
+    - name: once – direktiva pragma
+      href: ../preprocessor/once.md
+    - name: optimize – direktiva pragma
+      href: ../preprocessor/optimize.md
+    - name: pack – direktiva pragma
+      href: ../preprocessor/pack.md
+    - name: pointers_to_members – direktiva pragma
+      href: ../preprocessor/pointers-to-members.md
+    - name: pop_macro – direktiva pragma
+      href: ../preprocessor/pop-macro.md
+    - name: push_macro – direktiva pragma
+      href: ../preprocessor/push-macro.md
+    - name: 'region, endregion – direktivy pragma'
+      href: ../preprocessor/region-endregion.md
+    - name: runtime_checks – direktiva pragma
+      href: ../preprocessor/runtime-checks.md
+    - name: section – direktiva pragma
+      href: ../preprocessor/section.md
+    - name: setlocale – direktiva pragma
+      href: ../preprocessor/setlocale.md
+    - name: strict_gs_check – direktiva pragma
+      href: ../preprocessor/strict-gs-check.md
+    - name: vtordisp – direktiva pragma
+      href: ../preprocessor/vtordisp.md
+    - name: direktiva pragma upozornění
+      href: ../preprocessor/warning.md

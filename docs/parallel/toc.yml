@@ -1,0 +1,658 @@
+- name: Paralelní programování v MSVC
+  href: ../parallel/parallel-programming-in-visual-cpp.md
+- name: Automatická paralelizace a automatická vektorizace
+  href: ../parallel/auto-parallelization-and-auto-vectorization.md
+- name: C++ Accelerated Massive Parallelism (AMP)
+  expanded: false
+  items:
+    - name: C++ AMP (C++ Accelerated Massive Parallelism)
+      href: ../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md
+    - name: Přehled produktu C++ AMP
+      href: ../parallel/amp/cpp-amp-overview.md
+    - name: Používání dlaždic
+      href: ../parallel/amp/using-tiles.md
+    - name: Používání produktu C++ AMP v aplikacích pro UPW
+      href: ../parallel/amp/using-cpp-amp-in-windows-store-apps.md
+    - name: 'Návod: Násobení matic'
+      href: ../parallel/amp/walkthrough-matrix-multiplication.md
+    - name: 'Návod: Ladění aplikace C++ AMP'
+      href: ../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md
+    - name: 'Používání parametrů Lambda, objektů funkcí a omezených funkcí'
+      href: ../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md
+    - name: Grafické prvky (C++ AMP)
+      href: ../parallel/amp/graphics-cpp-amp.md
+    - name: Používání objektů accelerator a accelerator_view
+      href: ../parallel/amp/using-accelerator-and-accelerator-view-objects.md
+    - name: Referenční dokumentace (C++ AMP)
+      expanded: false
+      items:
+        - name: Referenční dokumentace (C++ AMP)
+          href: ../parallel/amp/reference/reference-cpp-amp.md
+        - name: Obor názvů Concurrency (C++ AMP)
+          expanded: false
+          items:
+            - name: Obor názvů Concurrency (C++ AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-cpp-amp.md
+            - name: Funkce oboru názvů Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-functions-amp.md
+            - name: Výčty oboru názvů Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-enums-amp.md
+            - name: Operátory oboru názvů Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-operators-amp.md
+            - name: Konstanty oboru názvů Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-constants-amp.md
+            - name: accelerator – třída
+              href: ../parallel/amp/reference/accelerator-class.md
+            - name: accelerator_view – třída
+              href: ../parallel/amp/reference/accelerator-view-class.md
+            - name: accelerator_view_removed – třída
+              href: ../parallel/amp/reference/accelerator-view-removed-class.md
+            - name: array – třída
+              href: ../parallel/amp/reference/array-class.md
+            - name: array_view – třída
+              href: ../parallel/amp/reference/array-view-class.md
+            - name: completion_future – třída
+              href: ../parallel/amp/reference/completion-future-class.md
+            - name: extent – třída (C++ AMP)
+              href: ../parallel/amp/reference/extent-class.md
+            - name: index – třída
+              href: ../parallel/amp/reference/index-class.md
+            - name: invalid_compute_domain – třída
+              href: ../parallel/amp/reference/invalid-compute-domain-class.md
+            - name: out_of_memory – třída
+              href: ../parallel/amp/reference/out-of-memory-class.md
+            - name: runtime_exception – třída
+              href: ../parallel/amp/reference/runtime-exception-class.md
+            - name: tile_barrier – třída
+              href: ../parallel/amp/reference/tile-barrier-class.md
+            - name: tiled_extent – třída
+              href: ../parallel/amp/reference/tiled-extent-class.md
+            - name: tiled_index – třída
+              href: ../parallel/amp/reference/tiled-index-class.md
+            - name: uninitialized_object – třída
+              href: ../parallel/amp/reference/uninitialized-object-class.md
+            - name: unsupported_feature – třída
+              href: ../parallel/amp/reference/unsupported-feature-class.md
+        - name: 'Concurrency::direct3d – obor názvů'
+          expanded: false
+          items:
+            - name: 'Concurrency::direct3d – obor názvů'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace.md
+            - name: 'Funkce oboru názvů Concurrency::direct3d (AMP)'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace-functions-amp.md
+            - name: adopt_d3d_access_lock_t – struktura
+              href: ../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md
+            - name: scoped_d3d_access_lock – třída
+              href: ../parallel/amp/reference/scoped-d3d-access-lock-class.md
+        - name: 'Concurrency::fast_math – obor názvů'
+          expanded: false
+          items:
+            - name: 'Concurrency::fast_math – obor názvů'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace.md
+            - name: 'Funkce oboru názvů Concurrency::fast_math'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace-functions.md
+        - name: 'Concurrency::graphics – obor názvů'
+          expanded: false
+          items:
+            - name: 'Concurrency::graphics – obor názvů'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace.md
+            - name: 'Obor názvů Concurrency::graphics::direct3d'
+              expanded: false
+              items:
+                - name: 'Obor názvů Concurrency::graphics::direct3d'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md
+                - name: 'Funkce oboru názvů Concurrency::graphics::direct3d'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace-functions.md
+            - name: 'Funkce oboru názvů Concurrency::graphics'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-functions.md
+            - name: 'Výčty oboru názvů Concurrency::graphics'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-enums.md
+            - name: double_2 – třída
+              href: ../parallel/amp/reference/double-2-class.md
+            - name: double_3 – třída
+              href: ../parallel/amp/reference/double-3-class.md
+            - name: double_4 – třída
+              href: ../parallel/amp/reference/double-4-class.md
+            - name: float_2 – třída
+              href: ../parallel/amp/reference/float-2-class.md
+            - name: float_3 – třída
+              href: ../parallel/amp/reference/float-3-class.md
+            - name: float_4 – třída
+              href: ../parallel/amp/reference/float-4-class.md
+            - name: int_2 – třída
+              href: ../parallel/amp/reference/int-2-class.md
+            - name: int_3 – třída
+              href: ../parallel/amp/reference/int-3-class.md
+            - name: int_4 – třída
+              href: ../parallel/amp/reference/int-4-class.md
+            - name: norm – třída
+              href: ../parallel/amp/reference/norm-class.md
+            - name: norm_2 – třída
+              href: ../parallel/amp/reference/norm-2-class.md
+            - name: norm_3 – třída
+              href: ../parallel/amp/reference/norm-3-class.md
+            - name: norm_4 – třída
+              href: ../parallel/amp/reference/norm-4-class.md
+            - name: sampler – třída
+              href: ../parallel/amp/reference/sampler-class.md
+            - name: short_vector – struktura
+              href: ../parallel/amp/reference/short-vector-structure.md
+            - name: short_vector_traits – struktura
+              href: ../parallel/amp/reference/short-vector-traits-structure.md
+            - name: texture – třída
+              href: ../parallel/amp/reference/texture-class.md
+            - name: texture – třída
+              href: ../parallel/amp/reference/texture-view-class.md
+            - name: writeonly_texture_view – třída
+              href: ../parallel/amp/reference/writeonly-texture-view-class.md
+            - name: uint_2 – třída
+              href: ../parallel/amp/reference/uint-2-class.md
+            - name: uint_3 – třída
+              href: ../parallel/amp/reference/uint-3-class.md
+            - name: uint_4 – třída
+              href: ../parallel/amp/reference/uint-4-class.md
+            - name: unorm – třída
+              href: ../parallel/amp/reference/unorm-class.md
+            - name: unorm_2 – třída
+              href: ../parallel/amp/reference/unorm-2-class.md
+            - name: unorm_3 – třída
+              href: ../parallel/amp/reference/unorm-3-class.md
+            - name: unorm_4 – třída
+              href: ../parallel/amp/reference/unorm-4-class.md
+        - name: 'Obor názvů Concurrency::precise_math'
+          expanded: false
+          items:
+            - name: 'Obor názvů Concurrency::precise_math'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace.md
+            - name: 'Funkce oboru názvů Concurrency::precise_math'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace-functions.md
+- name: Concurrency Runtime (ConCRT)
+  expanded: false
+  items:
+    - name: Concurrency Runtime
+      href: ../parallel/concrt/concurrency-runtime.md
+    - name: Přehled Concurrency Runtime
+      href: ../parallel/concrt/overview-of-the-concurrency-runtime.md
+    - name: "Ošetření výjimek v\_Concurrency Runtime"
+      href: ../parallel/concrt/exception-handling-in-the-concurrency-runtime.md
+    - name: Paralelní diagnostické nástroje (Concurrency Runtime)
+      href: ../parallel/concrt/parallel-diagnostic-tools-concurrency-runtime.md
+    - name: "Vytváření asynchronních operací v\_jazyce C++ pro aplikace pro UPW"
+      href: ../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md
+    - name: "Porovnání modelu Concurrency Runtime s\_jinými modely souběžnosti"
+      expanded: false
+      items:
+        - name: "Porovnání modelu Concurrency Runtime s\_jinými modely souběžnosti"
+          href: ../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md
+        - name: Migrace z OpenMP do Concurrency Runtime
+          expanded: false
+          items:
+            - name: Migrace z OpenMP do Concurrency Runtime
+              href: ../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
+            - name: "Postupy: Převedení paralelní smyčky for v\_OpenMP na využití modulu Concurrency Runtime"
+              href: ../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
+            - name: 'Postupy: Převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
+            - name: 'Postupy: Převedení smyčky OpenMP využívající ošetření výjimek na využití modulu Concurrency Runtime'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
+            - name: 'Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime'
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
+    - name: Knihovna PPL (Parallel Patterns Library)
+      expanded: false
+      items:
+        - name: Knihovna PPL (Parallel Patterns Library)
+          href: ../parallel/concrt/parallel-patterns-library-ppl.md
+        - name: Funkční paralelismus (Concurrency Runtime)
+          expanded: false
+          items:
+            - name: Funkční paralelismus (Concurrency Runtime)
+              href: ../parallel/concrt/task-parallelism-concurrency-runtime.md
+            - name: "Postupy: Použití algoritmu parallel_invoke k\_zápisu rutiny paralelního řazení"
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
+            - name: 'Postupy: Použití algoritmu parallel_invoke k provádění paralelních operací'
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: 'Postupy: Vytvoření úlohy, která se dokončí po prodlevě'
+              href: ../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
+        - name: Paralelní algoritmy
+          expanded: false
+          items:
+            - name: Paralelní algoritmy
+              href: ../parallel/concrt/parallel-algorithms.md
+            - name: 'Postupy: Programování smyčky parallel_for'
+              href: ../parallel/concrt/how-to-write-a-parallel-for-loop.md
+            - name: 'Postupy: Programování smyčky parallel_for_each'
+              href: ../parallel/concrt/how-to-write-a-parallel-for-each-loop.md
+            - name: 'Postupy: Paralelní provádění operací mapování a redukčních operací'
+              href: ../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
+        - name: Paralelní kontejnery a objekty
+          expanded: false
+          items:
+            - name: Paralelní kontejnery a objekty
+              href: ../parallel/concrt/parallel-containers-and-objects.md
+            - name: 'Postupy: Použití paralelních kontejnerů ke zvýšení účinnosti'
+              href: ../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
+            - name: 'Postupy: Použití objektu combinable ke zlepšení výkonu'
+              href: ../parallel/concrt/how-to-use-combinable-to-improve-performance.md
+            - name: 'Postupy: Použití objektu combinable ke slučování množin'
+              href: ../parallel/concrt/how-to-use-combinable-to-combine-sets.md
+        - name: "Zrušení v\_knihovně PPL"
+          expanded: false
+          items:
+            - name: "Zrušení v\_knihovně PPL"
+              href: ../parallel/concrt/cancellation-in-the-ppl.md
+            - name: 'Postupy: Přerušení paralelní smyčky pomocí zrušení'
+              href: ../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
+            - name: 'Postupy: Přerušení paralelní smyčky pomocí ošetření výjimek'
+              href: ../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
+    - name: Knihovna asynchronních agentů
+      expanded: false
+      items:
+        - name: Knihovna asynchronních agentů
+          href: ../parallel/concrt/asynchronous-agents-library.md
+        - name: Asynchronní agenti
+          href: ../parallel/concrt/asynchronous-agents.md
+        - name: Asynchronní bloky zpráv
+          href: ../parallel/concrt/asynchronous-message-blocks.md
+        - name: Funkce pro předávání zpráv
+          href: ../parallel/concrt/message-passing-functions.md
+        - name: 'Postupy: Implementace různých vzorů producent-příjemce'
+          href: ../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
+        - name: 'Postupy: Poskytování pracovních funkcí třídám call a transformer'
+          href: ../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
+        - name: "Postupy: Použití transformace v\_datovém kanálu"
+          href: ../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
+        - name: "Postupy: Výběr z\_dokončených úloh"
+          href: ../parallel/concrt/how-to-select-among-completed-tasks.md
+        - name: "Postupy: Odesílání zpráv v\_pravidelných intervalech"
+          href: ../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
+        - name: 'Postupy: Použití filtru bloku zpráv'
+          href: ../parallel/concrt/how-to-use-a-message-block-filter.md
+    - name: Synchronizační datové struktury
+      expanded: false
+      items:
+        - name: Synchronizační datové struktury
+          href: ../parallel/concrt/synchronization-data-structures.md
+        - name: "Porovnávání synchronizačních datových struktur s\_rozhraním API systému Windows"
+          href: ../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md
+    - name: Plánovač úloh (Concurrency Runtime)
+      expanded: false
+      items:
+        - name: Plánovač úloh (Concurrency Runtime)
+          href: ../parallel/concrt/task-scheduler-concurrency-runtime.md
+        - name: Instance plánovače
+          expanded: false
+          items:
+            - name: Instance plánovače
+              href: ../parallel/concrt/scheduler-instances.md
+            - name: 'Postupy: Správa instance plánovače'
+              href: ../parallel/concrt/how-to-manage-a-scheduler-instance.md
+        - name: Zásady plánovače
+          expanded: false
+          items:
+            - name: Zásady plánovače
+              href: ../parallel/concrt/scheduler-policies.md
+            - name: 'Postupy: Určení specifických zásad plánovače'
+              href: ../parallel/concrt/how-to-specify-specific-scheduler-policies.md
+            - name: 'Postupy: Vytváření agentů využívajících specifické zásady plánovače'
+              href: ../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
+        - name: Skupiny plánů
+          expanded: false
+          items:
+            - name: Skupiny plánů
+              href: ../parallel/concrt/schedule-groups.md
+            - name: "Postupy: Použití skupin plánů k\_ovlivnění pořadí provádění"
+              href: ../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
+        - name: Prosté úlohy
+          href: ../parallel/concrt/lightweight-tasks.md
+        - name: Kontexty
+          expanded: false
+          items:
+            - name: Kontexty
+              href: ../parallel/concrt/contexts.md
+            - name: 'Postupy: Použití třídy kontextu pro implementaci semaforu pro spolupráci'
+              href: ../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
+            - name: 'Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken'
+              href: ../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
+        - name: Funkce správy paměti
+          expanded: false
+          items:
+            - name: Funkce správy paměti
+              href: ../parallel/concrt/memory-management-functions.md
+            - name: 'Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti'
+              href: ../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
+    - name: Návody pro Concurrency Runtime
+      expanded: false
+      items:
+        - name: Návody pro Concurrency Runtime
+          href: ../parallel/concrt/concurrency-runtime-walkthroughs.md
+        - name: "Návod: Připojení pomocí úloh a\_žádostí xml http"
+          href: ../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
+        - name: 'Návod: Vytvoření aplikace založené na agentovi'
+          href: ../parallel/concrt/walkthrough-creating-an-agent-based-application.md
+        - name: 'Návod: Vytvoření agenta toku dat'
+          href: ../parallel/concrt/walkthrough-creating-a-dataflow-agent.md
+        - name: 'Návod: Vytvoření sítě pro zpracování obrázků'
+          href: ../parallel/concrt/walkthrough-creating-an-image-processing-network.md
+        - name: 'Návod: Implementace tříd future'
+          href: ../parallel/concrt/walkthrough-implementing-futures.md
+        - name: "Návod: Použití metody join k\_zabránění vzájemnému zablokování"
+          href: ../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
+        - name: "Návod: Odebrání práce z\_vlákna uživatelského rozhraní"
+          href: ../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
+        - name: "Návod: Použití Concurrency Runtime v\_aplikaci s\_podporou modelu COM"
+          href: ../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
+        - name: 'Návod: Přizpůsobení stávajícího kódu pro použití prostých úloh'
+          href: ../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
+        - name: 'Návod: Vytvoření vlastního bloku zpráv'
+          href: ../parallel/concrt/walkthrough-creating-a-custom-message-block.md
+    - name: Osvědčené postupy v Concurrency Runtime
+      expanded: false
+      items:
+        - name: Osvědčené postupy v Concurrency Runtime
+          href: ../parallel/concrt/concurrency-runtime-best-practices.md
+        - name: "Osvědčené postupy v\_knihovně PPL (Parallel Patterns Library)"
+          href: ../parallel/concrt/best-practices-in-the-parallel-patterns-library.md
+        - name: "Osvědčené postupy v\_knihovně asynchronních agentů"
+          href: ../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
+        - name: "Obecné osvědčené postupy v\_Concurrency Runtime"
+          href: ../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
+    - name: Odkaz
+      expanded: false
+      items:
+        - name: Referenční dokumentace (Concurrency Runtime)
+          href: ../parallel/concrt/reference/reference-concurrency-runtime.md
+        - name: concurrency – obor názvů
+          expanded: false
+          items:
+            - name: concurrency – obor názvů
+              href: ../parallel/concrt/reference/concurrency-namespace.md
+            - name: concurrency – funkce oboru názvů
+              href: ../parallel/concrt/reference/concurrency-namespace-functions.md
+            - name: concurrency – operátory oboru názvů
+              href: ../parallel/concrt/reference/concurrency-namespace-operators.md
+            - name: concurrency – konstanty1 oboru názvů
+              href: ../parallel/concrt/reference/concurrency-namespace-constants1.md
+            - name: concurrency – výčty oboru názvů
+              href: ../parallel/concrt/reference/concurrency-namespace-enums.md
+            - name: affinity_partitioner – třída
+              href: ../parallel/concrt/reference/affinity-partitioner-class.md
+            - name: agent – třída
+              href: ../parallel/concrt/reference/agent-class.md
+            - name: auto_partitioner – třída
+              href: ../parallel/concrt/reference/auto-partitioner-class.md
+            - name: bad_target – třída
+              href: ../parallel/concrt/reference/bad-target-class.md
+            - name: call – třída
+              href: ../parallel/concrt/reference/call-class.md
+            - name: cancellation_token – třída
+              href: ../parallel/concrt/reference/cancellation-token-class.md
+            - name: cancellation_token_registration – třída
+              href: ../parallel/concrt/reference/cancellation-token-registration-class.md
+            - name: cancellation_token_source – třída
+              href: ../parallel/concrt/reference/cancellation-token-source-class.md
+            - name: choice – třída
+              href: ../parallel/concrt/reference/choice-class.md
+            - name: combinable – třída
+              href: ../parallel/concrt/reference/combinable-class.md
+            - name: concurrent_priority_queue – třída
+              href: ../parallel/concrt/reference/concurrent-priority-queue-class.md
+            - name: concurrent_queue – třída
+              href: ../parallel/concrt/reference/concurrent-queue-class.md
+            - name: concurrent_unordered_map – třída
+              href: ../parallel/concrt/reference/concurrent-unordered-map-class.md
+            - name: concurrent_unordered_multimap – třída
+              href: ../parallel/concrt/reference/concurrent-unordered-multimap-class.md
+            - name: concurrent_unordered_multiset – třída
+              href: ../parallel/concrt/reference/concurrent-unordered-multiset-class.md
+            - name: concurrent_unordered_set – třída
+              href: ../parallel/concrt/reference/concurrent-unordered-set-class.md
+            - name: concurrent_vector – třída
+              href: ../parallel/concrt/reference/concurrent-vector-class.md
+            - name: context – třída
+              href: ../parallel/concrt/reference/context-class.md
+            - name: context_self_unblock – třída
+              href: ../parallel/concrt/reference/context-self-unblock-class.md
+            - name: context_unblock_unbalanced – třída
+              href: ../parallel/concrt/reference/context-unblock-unbalanced-class.md
+            - name: critical_section – třída
+              href: ../parallel/concrt/reference/critical-section-class.md
+            - name: CurrentScheduler – třída
+              href: ../parallel/concrt/reference/currentscheduler-class.md
+            - name: default_scheduler_exists – třída
+              href: ../parallel/concrt/reference/default-scheduler-exists-class.md
+            - name: DispatchState – struktura
+              href: ../parallel/concrt/reference/dispatchstate-structure.md
+            - name: event – třída
+              href: ../parallel/concrt/reference/event-class.md
+            - name: IExecutionContext – struktura
+              href: ../parallel/concrt/reference/iexecutioncontext-structure.md
+            - name: IExecutionResource – struktura
+              href: ../parallel/concrt/reference/iexecutionresource-structure.md
+            - name: improper_lock – třída
+              href: ../parallel/concrt/reference/improper-lock-class.md
+            - name: improper_scheduler_attach – třída
+              href: ../parallel/concrt/reference/improper-scheduler-attach-class.md
+            - name: improper_scheduler_detach – třída
+              href: ../parallel/concrt/reference/improper-scheduler-detach-class.md
+            - name: improper_scheduler_reference – třída
+              href: ../parallel/concrt/reference/improper-scheduler-reference-class.md
+            - name: invalid_link_target – třída
+              href: ../parallel/concrt/reference/invalid-link-target-class.md
+            - name: invalid_multiple_scheduling – třída
+              href: ../parallel/concrt/reference/invalid-multiple-scheduling-class.md
+            - name: invalid_operation – třída
+              href: ../parallel/concrt/reference/invalid-operation-class.md
+            - name: invalid_oversubscribe_operation – třída
+              href: ../parallel/concrt/reference/invalid-oversubscribe-operation-class.md
+            - name: invalid_scheduler_policy_key – třída
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-key-class.md
+            - name: invalid_scheduler_policy_thread_specification – třída
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-thread-specification-class.md
+            - name: invalid_scheduler_policy_value – třída
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-value-class.md
+            - name: IResourceManager – struktura
+              href: ../parallel/concrt/reference/iresourcemanager-structure.md
+            - name: Struktura rozhraní IScheduler
+              href: ../parallel/concrt/reference/ischeduler-structure.md
+            - name: ISchedulerProxy – struktura
+              href: ../parallel/concrt/reference/ischedulerproxy-structure.md
+            - name: ISource – třída
+              href: ../parallel/concrt/reference/isource-class.md
+            - name: ITarget – třída
+              href: ../parallel/concrt/reference/itarget-class.md
+            - name: IThreadProxy – struktura
+              href: ../parallel/concrt/reference/ithreadproxy-structure.md
+            - name: ITopologyExecutionResource – struktura
+              href: ../parallel/concrt/reference/itopologyexecutionresource-structure.md
+            - name: ITopologyNode – struktura
+              href: ../parallel/concrt/reference/itopologynode-structure.md
+            - name: IUMSCompletionList – struktura
+              href: ../parallel/concrt/reference/iumscompletionlist-structure.md
+            - name: Struktura rozhraní IUMSScheduler
+              href: ../parallel/concrt/reference/iumsscheduler-structure.md
+            - name: IUMSThreadProxy – struktura
+              href: ../parallel/concrt/reference/iumsthreadproxy-structure.md
+            - name: IUMSUnblockNotification – struktura
+              href: ../parallel/concrt/reference/iumsunblocknotification-structure.md
+            - name: IVirtualProcessorRoot – struktura
+              href: ../parallel/concrt/reference/ivirtualprocessorroot-structure.md
+            - name: join – třída
+              href: ../parallel/concrt/reference/join-class.md
+            - name: location – třída
+              href: ../parallel/concrt/reference/location-class.md
+            - name: message – třída
+              href: ../parallel/concrt/reference/message-class.md
+            - name: message_not_found – třída
+              href: ../parallel/concrt/reference/message-not-found-class.md
+            - name: message_processor – třída
+              href: ../parallel/concrt/reference/message-processor-class.md
+            - name: missing_wait – třída
+              href: ../parallel/concrt/reference/missing-wait-class.md
+            - name: multi_link_registry – třída
+              href: ../parallel/concrt/reference/multi-link-registry-class.md
+            - name: multitype_join – třída
+              href: ../parallel/concrt/reference/multitype-join-class.md
+            - name: nested_scheduler_missing_detach – třída
+              href: ../parallel/concrt/reference/nested-scheduler-missing-detach-class.md
+            - name: network_link_registry – třída
+              href: ../parallel/concrt/reference/network-link-registry-class.md
+            - name: operation_timed_out – třída
+              href: ../parallel/concrt/reference/operation-timed-out-class.md
+            - name: ordered_message_processor – třída
+              href: ../parallel/concrt/reference/ordered-message-processor-class.md
+            - name: overwrite_buffer – třída
+              href: ../parallel/concrt/reference/overwrite-buffer-class.md
+            - name: progress_reporter – třída
+              href: ../parallel/concrt/reference/progress-reporter-class.md
+            - name: propagator_block – třída
+              href: ../parallel/concrt/reference/propagator-block-class.md
+            - name: reader_writer_lock – třída
+              href: ../parallel/concrt/reference/reader-writer-lock-class.md
+            - name: ScheduleGroup – třída
+              href: ../parallel/concrt/reference/schedulegroup-class.md
+            - name: Scheduler – třída
+              href: ../parallel/concrt/reference/scheduler-class.md
+            - name: scheduler_interface – struktura
+              href: ../parallel/concrt/reference/scheduler-interface-structure.md
+            - name: scheduler_not_attached – třída
+              href: ../parallel/concrt/reference/scheduler-not-attached-class.md
+            - name: scheduler_ptr – struktura (Concurrency Runtime)
+              href: ../parallel/concrt/reference/scheduler-ptr-structure-concurrency-runtime.md
+            - name: scheduler_resource_allocation_error – třída
+              href: ../parallel/concrt/reference/scheduler-resource-allocation-error-class.md
+            - name: scheduler_worker_creation_error – třída
+              href: ../parallel/concrt/reference/scheduler-worker-creation-error-class.md
+            - name: SchedulerPolicy – třída
+              href: ../parallel/concrt/reference/schedulerpolicy-class.md
+            - name: simple_partitioner – třída
+              href: ../parallel/concrt/reference/simple-partitioner-class.md
+            - name: single_assignment – třída
+              href: ../parallel/concrt/reference/single-assignment-class.md
+            - name: single_link_registry – třída
+              href: ../parallel/concrt/reference/single-link-registry-class.md
+            - name: source_block – třída
+              href: ../parallel/concrt/reference/source-block-class.md
+            - name: source_link_manager – třída
+              href: ../parallel/concrt/reference/source-link-manager-class.md
+            - name: static_partitioner – třída
+              href: ../parallel/concrt/reference/static-partitioner-class.md
+            - name: structured_task_group – třída
+              href: ../parallel/concrt/reference/structured-task-group-class.md
+            - name: target_block – třída
+              href: ../parallel/concrt/reference/target-block-class.md
+            - name: task – třída (Concurrency Runtime)
+              href: ../parallel/concrt/reference/task-class.md
+            - name: task_canceled – třída
+              href: ../parallel/concrt/reference/task-canceled-class.md
+            - name: task_completion_event – třída
+              href: ../parallel/concrt/reference/task-completion-event-class.md
+            - name: task_continuation_context – třída
+              href: ../parallel/concrt/reference/task-continuation-context-class.md
+            - name: task_group – třída
+              href: ../parallel/concrt/reference/task-group-class.md
+            - name: task_handle – třída
+              href: ../parallel/concrt/reference/task-handle-class.md
+            - name: task_options – třída (Concurrency Runtime)
+              href: ../parallel/concrt/reference/task-options-class-concurrency-runtime.md
+            - name: timer – třída
+              href: ../parallel/concrt/reference/timer-class.md
+            - name: transformer – třída
+              href: ../parallel/concrt/reference/transformer-class.md
+            - name: unbounded_buffer – třída
+              href: ../parallel/concrt/reference/unbounded-buffer-class.md
+            - name: unsupported_os – třída
+              href: ../parallel/concrt/reference/unsupported-os-class.md
+        - name: std – obor názvů
+          expanded: false
+          items:
+            - name: std – obor názvů
+              href: ../parallel/concrt/reference/std-namespace.md
+            - name: make_exception_ptr – funkce
+              href: ../parallel/concrt/reference/make-exception-ptr-function.md
+        - name: stdx – obor názvů
+          expanded: false
+          items:
+            - name: stdx – obor názvů
+              href: ../parallel/concrt/reference/stdx-namespace.md
+            - name: declval – funkce
+              href: ../parallel/concrt/reference/declval-function.md
+- name: OpenMP
+  expanded: false
+  items:
+    - name: OpenMP v MSVC
+      href: ../parallel/openmp/openmp-in-visual-cpp.md
+    - name: Rozšíření SIMD
+      href: ../parallel/openmp/openmp-simd.md
+    - name: OpenMP – rozhraní API pro jazyky C a C++
+      expanded: false
+      items:
+        - name: OpenMP – rozhraní API pro jazyky C a C++
+          href: ../parallel/openmp/openmp-c-and-cpp-application-program-interface.md
+        - name: Úvod
+          href: ../parallel/openmp/1-introduction.md
+        - name: Direktivy
+          href: ../parallel/openmp/2-directives.md
+        - name: Funkce knihovny prostředí Runtime
+          href: ../parallel/openmp/3-run-time-library-functions.md
+        - name: Proměnné prostředí
+          href: ../parallel/openmp/4-environment-variables.md
+        - name: Dodatky
+          items:
+            - name: Příklady
+              href: ../parallel/openmp/a-examples.md
+            - name: Zástupné procedury funkcí knihovny prostředí Runtime
+              href: ../parallel/openmp/b-stubs-for-run-time-library-functions.md
+            - name: "Gramatika jazyků C a C++ v\_prostředí OpenMP"
+              href: ../parallel/openmp/c-openmp-c-and-cpp-grammar.md
+            - name: Klauzule schedule
+              href: ../parallel/openmp/d-using-the-schedule-clause.md
+            - name: "Chování definované implementací v\_jazyce C/C++ v\_prostředí OpenMP"
+              href: ../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md
+            - name: Nové funkce a vyjasnění ve verzi 2.0
+              href: ../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md
+    - name: OpenMP – referenční dokumentace knihoven
+      expanded: false
+      items:
+        - name: OpenMP – referenční dokumentace knihoven
+          href: ../parallel/openmp/reference/openmp-library-reference.md
+        - name: Direktivy
+          href: ../parallel/openmp/reference/openmp-directives.md
+        - name: Klauzule
+          href: ../parallel/openmp/reference/openmp-clauses.md
+        - name: Funkce
+          href: ../parallel/openmp/reference/openmp-functions.md
+        - name: Proměnné prostředí
+          href: ../parallel/openmp/reference/openmp-environment-variables.md
+- name: Podpora multithreadingu ve starším kódu (Visual C++)
+  expanded: false
+  items:
+    - name: Podpora multithreadingu ve starším kódu (Visual C++)
+      href: ../parallel/multithreading-support-for-older-code-visual-cpp.md
+    - name: "Multithreading s\_použitím jazyka C a prostředí Win32"
+      expanded: false
+      items:
+        - name: "Multithreading s\_použitím jazyka C a prostředí Win32"
+          href: ../parallel/multithreading-with-c-and-win32.md
+        - name: "Ukázkový vícevláknový program v\_jazyce C"
+          href: ../parallel/sample-multithread-c-program.md
+        - name: Úložiště Thread Local (TLS)
+          href: ../parallel/thread-local-storage-tls.md
+    - name: "Multithreading s\_použitím jazyka C++ a prostředí MFC"
+      expanded: false
+      items:
+        - name: "Multithreading s\_použitím jazyka C++ a prostředí MFC"
+          href: ../parallel/multithreading-with-cpp-and-mfc.md
+        - name: 'Multithreading: Vytváření vláken uživatelského rozhraní'
+          href: ../parallel/multithreading-creating-user-interface-threads.md
+        - name: 'Multithreading: Vytváření pracovních vláken'
+          href: ../parallel/multithreading-creating-worker-threads.md
+        - name: 'Multithreading: Kdy použít synchronizační třídy'
+          href: ../parallel/multithreading-when-to-use-the-synchronization-classes.md
+        - name: 'Multithreading: Jak používat synchronizační třídy'
+          href: ../parallel/multithreading-how-to-use-the-synchronization-classes.md
+        - name: 'Multithreading: Ukončování vláken'
+          href: ../parallel/multithreading-terminating-threads.md
+        - name: "Multithreading: Tipy k\_programování"
+          href: ../parallel/multithreading-programming-tips.md
+    - name: Multithreading a národní prostředí
+      href: ../parallel/multithreading-and-locales.md

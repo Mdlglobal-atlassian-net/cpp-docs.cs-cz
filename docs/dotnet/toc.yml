@@ -1,0 +1,366 @@
+- name: Programování pro .NET v jazyce C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 'Návod: Kompilace programu C++/CLI pro CLR'
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: Úlohy C++/CLI
+  expanded: false
+  items:
+    - name: Úlohy C++/CLI
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: 'Postupy: Vytváření prázdných projektů CLR'
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: 'Postupy: Vytváření konzolových aplikací CLR'
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: "Postupy: Používání sledovacích odkazů v\_C++/CLI"
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: "Postupy: Používání polí v\_C++/CLI"
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: "Postupy: Definice a\_používání tříd a\_struktur"
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: C++ – sémantika zásobníku pro odkazové typy
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: Uživatelem definované operátory
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: Uživatelem definované převody
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: "Postupy: Definice a\_používání delegátů"
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: "Postupy: Definice a\_používání výčtů v\_C++/CLI"
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: "Postupy: Používání událostí v\_C++/CLI"
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: 'Postupy: Definice statického konstruktoru rozhraní'
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: "Postupy: Deklarace specifikátorů override v\_nativních kompilacích"
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: "Postupy: Používání vlastností v\_C++/CLI"
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: "Postupy: Používání operátoru safe_cast v\_C++/CLI"
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: Regulární výrazy
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: Práce se soubory a vstupně-výstupní operace
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: Grafické operace
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Operace systému Windows
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: "Přístup k\_datům s\_použitím technologie ADO.NET"
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: Nativní funkce a vzájemná funkční spolupráce rozhraní .NET
+  expanded: false
+  items:
+    - name: Nativní funkce a vzájemná funkční spolupráce rozhraní .NET
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: "Vzájemná funkční spolupráce s\_jinými jazyky rozhraní .NET"
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: Smíšená (nativní a spravovaná) sestavení
+      expanded: false
+      items:
+        - name: Smíšená (nativní a spravovaná) sestavení
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: 'Postupy: Migrace do prostředí -clr'
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: "Postupy: Kompilování kódu MFC a ATL s\_použitím přepínače -clr"
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: Inicializace smíšených sestavení
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: Podpora knihovny pro smíšená sestavení
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: Domény aplikace a jazyk Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: Dvojitý převod adres na jinou bitovou šířku (C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: "Obcházení výjimek vypnutí CLR při spotřebě objektů COM sestavených s\_volbou -clr"
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: 'Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na knihovně DLL CRT'
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: "Použití uživatelského ovládacího prvku Windows Form v\_prostředí MFC"
+      expanded: false
+      items:
+        - name: "Použití uživatelského ovládacího prvku Windows Form v\_prostředí MFC"
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: "Rozdíly v\_programování mezi prostředími Windows Forms a\_MFC"
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: "Hostitelské poskytování uživatelského rozhraní Windows Form v\_dialogovém okně knihovny MFC"
+          expanded: false
+          items:
+            - name: "Hostitelské poskytování uživatelského rozhraní Windows Form v\_dialogovém okně knihovny MFC"
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: 'Postupy: Vytvoření uživatelského ovládacího prvku a jeho hostování v dialogovém okně'
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: "Postupy: Vytvoření datové vazby DDX/DDV s\_modelem Windows Forms"
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: "Postupy: Zpracování událostí modelu Windows Forms z\_nativních tříd jazyka C++"
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
+          expanded: false
+          items:
+            - name: Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: 'Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI'
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: 'Postupy: Přidání směrování příkazů do ovládacího prvku modelu Windows Forms'
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: 'Postupy: Vlastnosti a metody volání ovládacího prvku modelu Windows Forms'
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: Volání nativních funkcí ze spravovaného kódu
+      expanded: false
+      items:
+        - name: Volání nativních funkcí ze spravovaného kódu
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: "Použití explicitního volání PInvoke v\_jazyce C++ (atribut DllImport)"
+          expanded: false
+          items:
+            - name: "Použití explicitního volání PInvoke v\_jazyce C++ (atribut DllImport)"
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: 'Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke'
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: 'Postupy: Zařazování řetězců pomocí PInvoke'
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: 'Postupy: Zařazování struktur pomocí PInvoke'
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: 'Postupy: Zařazování polí pomocí PInvoke'
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: 'Postupy: Zařazování ukazatelů na funkce pomocí PInvoke'
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: 'Postupy: Zařazování vložených ukazatelů pomocí PInvoke'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: Použití zprostředkovatele komunikace C++ (implicitní volání PInvoke)
+          expanded: false
+          items:
+            - name: Použití zprostředkovatele komunikace C++ (implicitní volání PInvoke)
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: "Postupy: Zařazování řetězců v\_kódu ANSI pomocí zprostředkovatele komunikace C++"
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: "Postupy: Zařazování řetězců v\_kódu Unicode pomocí zprostředkovatele komunikace C++"
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: 'Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++'
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: 'Postupy: Zařazování struktur pomocí zprostředkovatele komunikace C++'
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: 'Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++'
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: 'Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++'
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: 'Postupy: Zařazování vložených ukazatelů pomocí zprostředkovatele komunikace C++'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: 'Postupy: Rozšíření knihovny zařazování'
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: 'Postupy: Přístup ke znakům v System::String'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: 'Postupy: Převod řetězce typu char * na pole System::Byte'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: 'Postupy: Převod typu System::String na wchar_t* nebo char*'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: 'Postupy: Převod typu System::String na standardní řetězec'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: 'Postupy: Převod standardního řetězce na typ System::String'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: 'Postupy: Získání ukazatele na bajtové pole'
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: 'Postupy: Načtení nespravovaných prostředků do bajtového pole'
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: "Postupy: Změna referenční třídy v\_nativní funkci"
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: 'Postupy: Určení, jestli je image nativní nebo CLR'
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: 'Postupy: Přidání nativní knihovny DLL do globální mezipaměti sestavení'
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: "Postupy: Uchování odkazu na typ hodnoty v\_nativním typu"
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: "Postupy: Uchování odkazu na objekt v\_nespravované paměti"
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: "Postupy: Rozpoznání kompilace s\_volbou -clr"
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: 'Postupy: Převody mezi hodnotami System::Guid a _GUID'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: 'Postupy: Určení výstupního parametru'
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: 'Postupy: Použití nativního typu v kompilaci s volbou -clr'
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: "Postupy: Deklarace obslužných rutin v\_nativních typech"
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: "Postupy: Zabalení nativních tříd pro použití v\_jazyce C#"
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: Čistý a ověřitelný kód
+  expanded: false
+  items:
+    - name: Čistý a ověřitelný kód
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: 'Postupy: Vytvoření ověřitelných projektů jazyka C++'
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: Použití ověřitelných sestavení s SQL Serverem
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: Převod projektů ze smíšeného režimu do čistého IL (Intermediate Language)
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: Serializace
+  href: ../dotnet/serialization-cpp-cli.md
+- name: Přátelská sestavení (C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: Spravované typy
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: Reflexe
+  href: ../dotnet/reflection-cpp-cli.md
+- name: Sestavení se silným názvem (podepisování sestavení)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: Debug – třída
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: STL/CLR – referenční dokumentace knihoven
+  expanded: false
+  items:
+    - name: STL/CLR – referenční dokumentace knihoven
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: cliext – obor názvů
+      href: ../dotnet/cliext-namespace.md
+    - name: STL/CLR – kontejnery
+      href: ../dotnet/stl-clr-containers.md
+    - name: Požadavky na elementy kontejnerů STL/CLR
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: 'Postupy: Převod kolekce .NET na kontejner STL/CLR'
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: 'Postupy: Převod kontejneru STL/CLR na kolekci .NET'
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: 'Postupy: Zveřejnění kontejneru STL/CLR ze sestavení'
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: numeric (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: Knihovna podpory C++
+  expanded: false
+  items:
+    - name: Knihovna podpory C++
+      href: ../dotnet/cpp-support-library.md
+    - name: "Přehled zařazování v\_C++"
+      expanded: false
+      items:
+        - name: "Přehled zařazování v\_C++"
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: marshal_context – třída
+          href: ../dotnet/marshal-context-class.md
+    - name: msclr – obor názvů
+      href: ../dotnet/msclr-namespace.md
+    - name: Třídy správy prostředků
+      expanded: false
+      items:
+        - name: Třídy správy prostředků
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          expanded: false
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: auto_gcroot – třída
+              href: ../dotnet/auto-gcroot-class.md
+            - name: swap – funkce (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          href: ../dotnet/auto-handle.md
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: auto_handle – třída
+              href: ../dotnet/auto-handle-class.md
+            - name: swap – funkce (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: Synchronizace (třída lock)
+      expanded: false
+      items:
+        - name: Synchronizace (třída lock)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: lock
+          expanded: false
+          items:
+            - name: lock
+              href: ../dotnet/lock.md
+            - name: lock – třída
+              href: ../dotnet/lock-class.md
+            - name: lock_when – výčet
+              href: ../dotnet/lock-when-enum.md
+    - name: Volání funkcí ve specifické doméně aplikace
+      expanded: false
+      items:
+        - name: Volání funkcí ve specifické doméně aplikace
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: call_in_appdomain – funkce
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      expanded: false
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'com::ptr – třída'
+          href: ../dotnet/com-ptr-class.md
+- name: "Výjimky v\_prostředích C++/CLI"
+  expanded: false
+  items:
+    - name: "Výjimky v\_prostředích C++/CLI"
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: Základní koncepty při práci se spravovanými výjimkami
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: "Rozdíly v\_chování ošetření výjimek v\_režimu kompilace -clr"
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: "Postupy: Zachycení výjimek v\_nativním kódu vyvolaných z\_prostředí MSIL"
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: 'Postupy: Definování a instalace globální obslužné rutiny výjimek'
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: Zabalení
+  expanded: false
+  items:
+    - name: Zabalení
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: "Postupy: Explicitní žádost o\_zabalení"
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: "Postupy: Vytváření typů hodnot pomocí výrazu gcnew s\_použitím implicitního zabalení"
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: 'Postupy: Rozbalení'
+      href: ../dotnet/how-to-unbox.md
+    - name: Standardní převody a implicitní zabalení
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

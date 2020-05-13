@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+    - name: Microsoft C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -19,7 +19,7 @@
             - name: Preprocesor C/C++
               tocHref: /cpp/preprocessor/
               topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
-            - name: Vnitřní prvky kompilátoru a jazyk sestavení
+            - name: Vnitřní funkce kompilátoru a jazyk sestavení
               tocHref: /cpp/intrinsics/
               topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
               items:
@@ -32,7 +32,7 @@
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: Knihovna prostředí Runtime C
+            - name: Knihovna C Runtime
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
@@ -45,27 +45,27 @@
             - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items: null
+            - name: ATL
+              tocHref: /cpp/atl/
+              topicHref: /cpp/atl/atl-com-desktop-components
+            - name: MFC
+              tocHref: /cpp/mfc/
+              topicHref: /cpp/mfc/mfc-desktop-applications
               items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: Odkaz
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: Sdílené třídy ATL/MFC
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: Odkaz
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+                - name: Odkaz
+                  tocHref: /cpp/mfc/reference/
+                  topicHref: /cpp/mfc/reference/mfc-classes
+            - name: Sdílené třídy ATL/MFC
+              tocHref: /cpp/atl-mfc-shared/
+              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+              items:
+                - name: Odkaz
+                  tocHref: /cpp/atl-mfc-shared/reference/
+                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+            - name: C++/CX
+              tocHref: /cpp/cppcx/
+              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
             - name: Linux
               tocHref: /cpp/linux/
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
@@ -92,18 +92,20 @@
                 - name: IDE – integrované vývojové prostředí
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-            - name: "Sestavování projektů v\_jazyce C/C++"
+            - name: Sestavování projektů v jazyce C/C++
               tocHref: /cpp/build/
               topicHref: /cpp/build/building-c-cpp-programs
               items:
                 - name: Referenční informace o buildu
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
-                  items:
-                    - name: Chyby a upozornění kompilátoru a nástrojů
-                      tocHref: /cpp/error-messages/
-                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
-            - name: Portování a upgradování
+            - name: Build Insights
+              tocHref: /cpp/build-insights/
+              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+            - name: Chyby a upozornění
+              tocHref: /cpp/error-messages/
+              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+            - name: Přenos a upgrade
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
             - name: Text a řetězce

@@ -1,0 +1,128 @@
+- name: C++ v sadě Visual Studio
+  expanded: false
+  items:
+    - name: C++ v sadě Visual Studio
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: Přehled vývoje v jazyce C++ v sadě Visual Studio
+      href: ../overview/overview-of-cpp-development.md
+    - name: "Novinky v jazyce C++ v\_sadě Visual Studio"
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Vylepšení shody C++ se sadou Visual Studio
+      href: ../overview/cpp-conformance-improvements.md
+    - name: Shoda jazyka Microsoft C++
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: Podporované cílové platformy
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: "Nástroje a funkce C++ v\_různých edicích sady Visual Studio"
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: Ukázky
+      href: ../overview/visual-cpp-samples.md
+    - name: Nápověda a komunita
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: Postup nahlášení problému se sadou nástrojů Visual C++
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Kurzy k Visual Studio C++
+  expanded: false
+  items:
+    - name: Instalace podpory jazyka C++ v sadě Visual Studio
+      href: ../build/vscpp-step-0-installation.md
+    - name: Vytvoření a úprava projektu aplikace konzoly C++
+      href: ../build/vscpp-step-1-create.md
+    - name: Sestavení a spuštění projektu aplikace konzoly C++
+      href: ../build/vscpp-step-2-build.md
+    - name: Vytvoření druhé aplikace jazyka C++
+      href: ../get-started/tutorial-console-cpp.md
+    - name: Vytvoření aplikace pro UPW
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Vytvoření desktopové aplikace pro Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Vytvoření hry v DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: Projekty a systémy sestavení
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Čtení a psaní kódu C++ v sadě Visual Studio
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Vývoj desktopových aplikací pro Windows
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: Vývoj pro Univerzální platformu Windows (UPW)
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Vývoj her
+  href: ../overview/game-development-cpp.md
+- name: Vývoj pro Linux
+  href: ../linux/
+- name: Vývoj mobilních řešení napříč platformami
+  href: ../cross-platform/
+- name: Vývoj pro .NET v C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: Cloudové a webové programování
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: Přenos a upgrade kódu C++
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: Doporučené postupy zabezpečení pro jazyk C++
+  expanded: false
+  items:
+    - name: Doporučené postupy zabezpečení pro jazyk C++
+      href: ../security/security-best-practices-for-cpp.md
+    - name: Spuštění jako člen skupiny Users
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: Jak nástroj Řízení uživatelských účtů (UAC) ovlivňuje vaši aplikaci
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: Pokyny pro vývojáře C++ k útokům souvisejícím se spekulativním spouštěním postranních kanálů
+      href: ../security/developer-guidance-speculative-execution.md
+- name: Odkaz
+  expanded: false
+  items:
+    - name: Jazyk C/C++ a standardní knihovny
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: Jazyky – referenční informace
+      expanded: false
+      items:
+        - name: Jazyky
+          href: ../overview/languages-cpp.md
+        - name: Referenční dokumentace jazyka C
+          href: ../c-language/c-language-reference.md
+        - name: Referenční dokumentace jazyka C++
+          href: ../cpp/cpp-language-reference.md
+        - name: C/C++ – referenční dokumentace preprocesoru
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: Vnitřní funkce kompilátoru a jazyk sestavení
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: Vnitřní funkce kompilátoru
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: Referenční dokumentace assembleru ARM
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: Vnořené sestavení v MSVC
+          href: ../assembler/inline/inline-assembler.md
+        - name: Microsoft Macro Assembler (MASM) – referenční dokumentace
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: Přípony komponent pro .NET a UPW
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: Atributy C++ pro COM a .NET
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: Referenční dokumentace knihoven
+      expanded: false
+      items:
+        - name: Knihovny
+          href: ../overview/libraries-cpp.md
+        - name: Referenční dokumentace běhové knihovny jazyka C (CRT)
+          href: ../c-runtime-library/
+        - name: Standardní knihovna C++ – referenční dokumentace
+          href: ../standard-library/
+        - name: SafeInt – knihovna
+          expanded: false
+          items:
+            - name: SafeInt – knihovna
+              href: ../safeint/safeint-library.md
+            - name: SafeInt – třída
+              href: ../safeint/safeint-class.md
+            - name: Funkce jazyka SafeInt
+              href: ../safeint/safeint-functions.md
+            - name: SafeIntException – třída
+              href: ../safeint/safeintexception-class.md
+        - name: MFC/ATL
+          href: ../mfc/mfc-and-atl.md
+        - name: Paralelní knihovny
+          href: ../parallel/
+          items: null
+        - name: Knihovny pro přístup k datům
+          href: ../data/

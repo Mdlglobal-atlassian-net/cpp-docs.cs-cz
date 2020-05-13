@@ -1,0 +1,591 @@
+- name: "Přístup k\_datům v\_jazyce Visual C++"
+  href: ../data/data-access-in-cpp.md
+- name: "Programování přístupu k\_datům (MFC-ATL)"
+  expanded: false
+  items:
+    - name: "Programování přístupu k\_datům (MFC-ATL)"
+      href: ../data/data-access-programming-mfc-atl.md
+    - name: Instalace podpory databáze (MFC-ATL)
+      href: ../data/installing-database-support-mfc-atl.md
+    - name: Databázové třídy ATL (šablony OLE DB)
+      href: ../data/atl-database-classes-ole-db-templates.md
+    - name: MFC – databázové třídy
+      expanded: false
+      items:
+        - name: MFC – databázové třídy
+          href: ../data/mfc-database-classes-odbc-and-dao.md
+        - name: 'MFC: Použití databázových tříd s dokumenty a zobrazeními'
+          href: ../data/mfc-using-database-classes-with-documents-and-views.md
+        - name: 'MFC: Použití databázových tříd bez dokumentů a zobrazení'
+          href: ../data/mfc-using-database-classes-without-documents-and-views.md
+    - name: "Záznam (přístup k\_datům MFC)"
+      href: ../data/record-mfc-data-access.md
+    - name: "Schéma (přístup k\_datům MFC)"
+      href: ../data/schema-mfc-data-access.md
+    - name: "Informace katalogu (přístup k\_datům MFC)"
+      href: ../data/catalog-information-mfc-data-access.md
+    - name: "Transakce (přístup k\_datům MFC)"
+      href: ../data/transactions-mfc-data-access.md
+    - name: "Zobrazení záznamů (přístup k\_datům MFC)"
+      expanded: false
+      items:
+        - name: "Zobrazení záznamů (přístup k\_datům MFC)"
+          href: ../data/record-views-mfc-data-access.md
+        - name: "Funkce tříd zobrazení záznamu (přístup k\_datům MFC)"
+          href: ../data/features-of-record-view-classes-mfc-data-access.md
+        - name: "Výměna dat pro zobrazení záznamu (přístup k\_datům MFC)"
+          href: ../data/data-exchange-for-record-views-mfc-data-access.md
+        - name: "Vaše role při práci se zobrazením záznamu (přístup k\_datům MFC)"
+          href: ../data/your-role-in-working-with-a-record-view-mfc-data-access.md
+        - name: "Návrh a vytváření zobrazení záznamů (přístup k\_datům MFC)"
+          href: ../data/designing-and-creating-a-record-view-mfc-data-access.md
+        - name: "Podpora navigace v zobrazení záznamu (přístup k\_datům MFC)"
+          expanded: false
+          items:
+            - name: "Podpora navigace v zobrazení záznamu (přístup k\_datům MFC)"
+              href: ../data/supporting-navigation-in-a-record-view-mfc-data-access.md
+            - name: "Obslužné rutiny příkazů pro posouvání záznamů (přístup k\_datům MFC)"
+              href: ../data/command-handlers-for-record-scrolling-mfc-data-access.md
+            - name: "Aktualizace uživatelského rozhraní pro zobrazení záznamů (přístup k\_datům MFC)"
+              href: ../data/user-interface-updating-for-record-views-mfc-data-access.md
+        - name: "Použití zobrazení záznamů (přístup k\_datům MFC)"
+          expanded: false
+          items:
+            - name: "Použití zobrazení záznamů (přístup k\_datům MFC)"
+              href: ../data/using-a-record-view-mfc-data-access.md
+            - name: "Kód zobrazení záznamu vytvořený pomocí průvodce aplikací (přístup k\_datům MFC)"
+              href: ../data/record-view-code-created-by-application-wizard-mfc-data-access.md
+            - name: "Proveditelné změny výchozího kódu (přístup k\_datům MFC)"
+              href: ../data/changes-you-might-make-to-the-default-code-mfc-data-access.md
+        - name: "Naplnění seznamu druhou sadou záznamů (přístup k\_datům MFC)"
+          href: ../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md
+- name: Programování v architektuře OLE DB
+  expanded: false
+  items:
+    - name: programování technologie OLE DB
+      href: ../data/oledb/ole-db-programming.md
+    - name: "Přehled programování v\_architektuře OLE DB"
+      expanded: false
+      items:
+        - name: "Přehled programování v\_architektuře OLE DB"
+          href: ../data/oledb/ole-db-programming-overview.md
+        - name: Příjemci a zprostředkovatelé technologie OLE DB
+          href: ../data/oledb/ole-db-consumers-and-providers.md
+        - name: Objektový model OLE DB
+          href: ../data/oledb/ole-db-object-model.md
+        - name: 'Šablony, atributy a jiné implementace technologie OLE DB'
+          href: ../data/oledb/ole-db-templates-attributes-and-other-implementations.md
+        - name: Problémy s návrhem technologie OLE DB
+          href: ../data/oledb/ole-db-architectural-design-issues.md
+    - name: Šablony příjemce OLE DB (C++)
+      expanded: false
+      items:
+        - name: Šablony příjemce OLE DB (C++)
+          href: ../data/oledb/ole-db-consumer-templates-cpp.md
+        - name: Zdroje dat a relace
+          href: ../data/oledb/data-sources-and-sessions.md
+        - name: Přístupové objekty a sady řádků
+          href: ../data/oledb/accessors-and-rowsets.md
+        - name: Příkazy a tabulky
+          href: ../data/oledb/commands-and-tables.md
+        - name: Uživatelské záznamy
+          href: ../data/oledb/user-records.md
+        - name: Sady řádků schématu
+          href: ../data/oledb/schema-rowsets.md
+        - name: Vytvoření příjemce OLE DB
+          expanded: false
+          items:
+            - name: Vytvoření příjemce OLE DB
+              href: ../data/oledb/creating-an-ole-db-consumer.md
+            - name: Vytvoření příjemce OLE DB pomocí průvodce
+              expanded: false
+              items:
+                - name: Vytvoření příjemce OLE DB pomocí průvodce
+                  href: ../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md
+                - name: Vytvoření jednoduchého příjemce
+                  href: ../data/oledb/creating-a-simple-consumer.md
+                - name: Implementace jednoduchého příjemce
+                  href: ../data/oledb/implementing-a-simple-consumer.md
+                - name: "Třídy generované v\_průvodci příjemcem"
+                  href: ../data/oledb/consumer-wizard-generated-classes.md
+                - name: "Metody generované v\_průvodci příjemcem"
+                  href: ../data/oledb/consumer-wizard-generated-methods.md
+            - name: Vytvoření příjemce bez použití průvodce
+              href: ../data/oledb/creating-a-consumer-without-using-a-wizard.md
+        - name: Práce se šablonami příjemců OLE DB
+          expanded: false
+          items:
+            - name: Práce se šablonami příjemců OLE DB
+              href: ../data/oledb/working-with-ole-db-consumer-templates.md
+            - name: "Zjednodušení přístupu k\_datům s\_použitím atributů databáze"
+              href: ../data/oledb/simplifying-data-access-with-database-attributes.md
+            - name: "Datové členy stavu pole v\_přístupových objektech generovaných průvodcem"
+              href: ../data/oledb/field-status-data-members-in-wizard-generated-accessors.md
+            - name: Procházení jednoduché sady řádků
+              href: ../data/oledb/traversing-a-simple-rowset.md
+            - name: Zadání parametrizovaného dotazu
+              href: ../data/oledb/issuing-a-parameterized-query.md
+            - name: Načítání dat
+              href: ../data/oledb/fetching-data.md
+            - name: Aktualizace sad řádků
+              href: ../data/oledb/updating-rowsets.md
+            - name: Použití uložených procedur
+              expanded: false
+              items:
+                - name: Použití uložených procedur
+                  href: ../data/oledb/using-stored-procedures.md
+                - name: Definování uložených procedur
+                  href: ../data/oledb/defining-stored-procedures.md
+                - name: Výstupní parametry
+                  href: ../data/oledb/output-parameters.md
+                - name: "Použití více sad výsledků dotazu z\_jedné uložené procedury"
+                  href: ../data/oledb/using-multiple-result-sets-from-one-stored-procedure.md
+            - name: Použití přístupových objektů
+              expanded: false
+              items:
+                - name: Použití přístupových objektů
+                  href: ../data/oledb/using-accessors.md
+                - name: Určení použitého typu přístupového objektu
+                  href: ../data/oledb/determining-which-type-of-accessor-to-use.md
+                - name: Použití více přístupových objektů pro sadu řádků
+                  href: ../data/oledb/using-multiple-accessors-on-a-rowset.md
+                - name: Použití dynamických přístupových objektů
+                  href: ../data/oledb/using-dynamic-accessors.md
+                - name: Přepsání dynamického přístupového objektu
+                  href: ../data/oledb/overriding-a-dynamic-accessor.md
+                - name: Použití ručních přístupových objektů
+                  href: ../data/oledb/using-manual-accessors.md
+                - name: "Přístup k\_datům XML"
+                  href: ../data/oledb/accessing-xml-data.md
+            - name: Získávání metadat pomocí sad řádků schématu
+              href: ../data/oledb/obtaining-metadata-with-schema-rowsets.md
+            - name: "Podpora transakcí v\_prostředí OLE DB"
+              href: ../data/oledb/supporting-transactions-in-ole-db.md
+            - name: Použití zobrazení záznamů OLE DB
+              href: ../data/oledb/using-ole-db-record-views.md
+            - name: Použití existující sady záznamů ADO
+              href: ../data/oledb/using-an-existing-ado-recordset.md
+            - name: 'Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek'
+              href: ../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md
+            - name: Použití záložek
+              href: ../data/oledb/using-bookmarks.md
+            - name: Načtení objektu BLOB
+              href: ../data/oledb/retrieving-a-blob.md
+            - name: Příjem oznámení
+              href: ../data/oledb/receiving-notifications.md
+    - name: Šablony zprostředkovatele OLE DB (C++)
+      expanded: false
+      items:
+        - name: Šablony zprostředkovatele OLE DB (C++)
+          href: ../data/oledb/ole-db-provider-templates-cpp.md
+        - name: Architektura šablon zprostředkovatele OLE DB
+          expanded: false
+          items:
+            - name: Architektura šablon zprostředkovatele OLE DB
+              href: ../data/oledb/ole-db-provider-template-architecture.md
+            - name: Rozhraní objektu zdroje dat
+              href: ../data/oledb/data-source-object-interfaces.md
+            - name: Rozhraní objektu relace
+              href: ../data/oledb/session-object-interfaces.md
+            - name: Rozhraní objektu sady řádků
+              href: ../data/oledb/rowset-object-interfaces.md
+            - name: Rozhraní příkazového objektu
+              href: ../data/oledb/command-object-interfaces.md
+            - name: Rozhraní objektu transakce
+              href: ../data/oledb/transaction-object-interfaces.md
+            - name: Mapy vlastností
+              href: ../data/oledb/property-maps.md
+            - name: Uživatelský záznam
+              href: ../data/oledb/user-record.md
+        - name: Vytvoření zprostředkovatele OLE DB
+          expanded: false
+          items:
+            - name: Vytvoření zprostředkovatele OLE DB
+              href: ../data/oledb/creating-an-ole-db-provider.md
+            - name: Vytvoření projektu pro zprostředkovatele
+              href: ../data/oledb/creating-a-project-for-the-provider.md
+            - name: Vytvoření zprostředkovatele
+              href: ../data/oledb/creating-the-provider.md
+            - name: soubory generované průvodcem zprostředkovatele
+              expanded: false
+              items:
+                - name: soubory generované průvodcem zprostředkovatele
+                  href: ../data/oledb/provider-wizard-generated-files.md
+                - name: CCustomSource (CustomDS.H)
+                  href: ../data/oledb/cmyprovidersource-myproviderds-h.md
+                - name: CCustomSession (CustomSess.H)
+                  href: ../data/oledb/cmyprovidersession-myprovidersess-h.md
+                - name: CCustomCommand (CustomRS.H)
+                  href: ../data/oledb/cmyprovidercommand-myproviderrs-h.md
+                - name: CCustomRowset (CustomRS.H)
+                  href: ../data/oledb/cmyproviderrowset-myproviderrs-h.md
+                - name: CCustomWindowsFile
+                  href: ../data/oledb/cmyproviderwindowsfile.md
+            - name: Vytvoření jednoduchého zprostředkovatele jen pro čtení
+              expanded: false
+              items:
+                - name: Vytvoření jednoduchého zprostředkovatele jen pro čtení
+                  href: ../data/oledb/creating-a-simple-read-only-provider.md
+                - name: Implementace jednoduchého zprostředkovatele jen pro čtení
+                  href: ../data/oledb/implementing-the-simple-read-only-provider.md
+                - name: Ukládání řetězců ve zprostředkovateli OLE DB
+                  href: ../data/oledb/storing-strings-in-the-ole-db-provider.md
+                - name: Načtení řetězců do zprostředkovatele OLE DB
+                  href: ../data/oledb/reading-strings-into-the-ole-db-provider.md
+                - name: Rozšíření jednoduchého zprostředkovatele jen pro čtení
+                  href: ../data/oledb/enhancing-the-simple-read-only-provider.md
+                - name: Úprava dědičnosti třídy RCustomRowset
+                  href: ../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md
+                - name: Dynamické určování sloupců vrácených příjemci
+                  href: ../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md
+                - name: Testování zprostředkovatele jen pro čtení
+                  href: ../data/oledb/testing-the-read-only-provider.md
+            - name: Vytvoření aktualizovatelného zprostředkovatele
+              href: ../data/oledb/creating-an-updatable-provider.md
+        - name: "Práce s\_šablonami zprostředkovatele OLE DB"
+          expanded: false
+          items:
+            - name: "Práce s\_šablonami zprostředkovatele OLE DB"
+              href: ../data/oledb/working-with-ole-db-provider-templates.md
+            - name: Přidání rozhraní ke zprostředkovateli
+              href: ../data/oledb/adding-an-interface-to-your-provider.md
+            - name: Odkazování na vlastnost ve zprostředkovateli
+              href: ../data/oledb/referencing-a-property-in-your-provider.md
+            - name: Nastavení vlastností ve zprostředkovateli
+              href: ../data/oledb/setting-properties-in-your-provider.md
+            - name: Dynamické vazby sloupců ve zprostředkovateli
+              href: ../data/oledb/dynamically-binding-columns-in-your-provider.md
+            - name: Podpora volných vláken ve zprostředkovateli
+              href: ../data/oledb/supporting-free-threading-in-your-provider.md
+            - name: Testování zprostředkovatele
+              href: ../data/oledb/testing-your-provider.md
+            - name: Ladění zprostředkovatele
+              href: ../data/oledb/debugging-your-provider.md
+            - name: Převod dat nepodporovaných zprostředkovatelem
+              href: ../data/oledb/converting-data-not-supported-by-the-provider.md
+        - name: Pokročilé techniky zprostředkování
+          expanded: false
+          items:
+            - name: Pokročilé techniky zprostředkování
+              href: ../data/oledb/advanced-provider-techniques.md
+            - name: Podpora oznámení
+              href: ../data/oledb/supporting-notifications.md
+            - name: Podpora sad řádků schématu
+              href: ../data/oledb/supporting-schema-rowsets.md
+            - name: Podpora zprostředkovatele pro záložky
+              href: ../data/oledb/provider-support-for-bookmarks.md
+            - name: Předávání testů shodnosti technologie OLE DB
+              href: ../data/oledb/passing-ole-db-conformance-tests.md
+            - name: Sdružování prostředků OLE DB a služby
+              expanded: false
+              items:
+                - name: Sdružování prostředků OLE DB a služby
+                  href: ../data/oledb/ole-db-resource-pooling-and-services.md
+                - name: "Sdružování prostředků v\_aplikaci OLE DB"
+                  href: ../data/oledb/resource-pooling-in-your-ole-db-application.md
+                - name: Povolení a zakázání služeb OLE DB
+                  expanded: false
+                  items:
+                    - name: Povolení a zakázání služeb OLE DB
+                      href: ../data/oledb/enabling-and-disabling-ole-db-services.md
+                    - name: Povolení a zakázání služeb pro zprostředkovatele
+                      href: ../data/oledb/enabling-and-disabling-services-for-a-provider.md
+                    - name: Přepsání výchozích hodnot služby zprostředkovatele
+                      href: ../data/oledb/overriding-provider-service-defaults.md
+- name: Šablony OLE DB
+  expanded: false
+  items:
+    - name: Šablony OLE DB – přehled
+      href: ../data/oledb/ole-db-templates.md
+    - name: "Referenční dokumentace k\_šablonám příjemců OLE DB – přehled"
+      href: ../data/oledb/ole-db-consumer-templates-reference.md
+    - name: "Referenční dokumentace k\_šablonám příjemců OLE DB"
+      expanded: false
+      items:
+        - name: CAccessor – třída
+          href: ../data/oledb/caccessor-class.md
+        - name: CAccessorBase – třída
+          href: ../data/oledb/caccessorbase-class.md
+        - name: CAccessorRowset – třída
+          href: ../data/oledb/caccessorrowset-class.md
+        - name: CArrayRowset – třída
+          href: ../data/oledb/carrayrowset-class.md
+        - name: CBookmark – třída
+          href: ../data/oledb/cbookmark-class.md
+        - name: CBulkRowset – třída
+          href: ../data/oledb/cbulkrowset-class.md
+        - name: CColumnAccessor – třída
+          href: ../data/oledb/ccolumnaccessor-class.md
+        - name: CCommand – třída
+          href: ../data/oledb/ccommand-class.md
+        - name: CDataConnection – třída
+          href: ../data/oledb/cdataconnection-class.md
+        - name: CDataSource – třída
+          href: ../data/oledb/cdatasource-class.md
+        - name: CDBErrorInfo – třída
+          href: ../data/oledb/cdberrorinfo-class.md
+        - name: CDBPropIDSet – třída
+          href: ../data/oledb/cdbpropidset-class.md
+        - name: CDBPropSet – třída
+          href: ../data/oledb/cdbpropset-class.md
+        - name: CDynamicAccessor – třída
+          href: ../data/oledb/cdynamicaccessor-class.md
+        - name: CDynamicParameterAccessor – třída
+          href: ../data/oledb/cdynamicparameteraccessor-class.md
+        - name: CDynamicStringAccessor – třída
+          href: ../data/oledb/cdynamicstringaccessor-class.md
+        - name: CDynamicStringAccessorA – třída
+          href: ../data/oledb/cdynamicstringaccessora-class.md
+        - name: CDynamicStringAccessorW – třída
+          href: ../data/oledb/cdynamicstringaccessorw-class.md
+        - name: CEnumerator – třída
+          href: ../data/oledb/cenumerator-class.md
+        - name: CEnumeratorAccessor – třída
+          href: ../data/oledb/cenumeratoraccessor-class.md
+        - name: CManualAccessor – třída
+          href: ../data/oledb/cmanualaccessor-class.md
+        - name: CMultipleResults – třída
+          href: ../data/oledb/cmultipleresults-class.md
+        - name: CNoAccessor – třída
+          href: ../data/oledb/cnoaccessor-class.md
+        - name: CNoMultipleResults – třída
+          href: ../data/oledb/cnomultipleresults-class.md
+        - name: CNoRowset – třída
+          href: ../data/oledb/cnorowset-class.md
+        - name: CRestrictions – třída
+          href: ../data/oledb/crestrictions-class.md
+        - name: CRowset – třída
+          href: ../data/oledb/crowset-class.md
+        - name: CSession – třída
+          href: ../data/oledb/csession-class.md
+        - name: CStreamRowset – třída
+          href: ../data/oledb/cstreamrowset-class.md
+        - name: CTable – třída
+          href: ../data/oledb/ctable-class.md
+        - name: CXMLAccessor – třída
+          href: ../data/oledb/cxmlaccessor-class.md
+        - name: IRowsetNotifyImpl – třída
+          href: ../data/oledb/irowsetnotifyimpl-class.md
+        - name: Třídy sady řádků schématu a třídy definice typedef
+          href: ../data/oledb/schema-rowset-classes-and-typedef-classes.md
+        - name: Makra a globální funkce pro šablony příjemců OLE DB
+          href: ../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md
+    - name: "Referenční dokumentace k\_šablonám zprostředkovatelů OLE DB – přehled"
+      href: ../data/oledb/ole-db-provider-templates-reference.md
+    - name: "Referenční dokumentace k\_šablonám zprostředkovatelů OLE DB"
+      expanded: false
+      items:
+        - name: CRowsetImpl – třída
+          href: ../data/oledb/crowsetimpl-class.md
+        - name: CSimpleRow – třída
+          href: ../data/oledb/csimplerow-class.md
+        - name: CUtlProps – třída
+          href: ../data/oledb/cutlprops-class.md
+        - name: IAccessorImpl – třída
+          href: ../data/oledb/iaccessorimpl-class.md
+        - name: IColumnsInfoImpl – třída
+          href: ../data/oledb/icolumnsinfoimpl-class.md
+        - name: ICommandImpl – třída
+          href: ../data/oledb/icommandimpl-class.md
+        - name: ICommandPropertiesImpl – třída
+          href: ../data/oledb/icommandpropertiesimpl-class.md
+        - name: ICommandTextImpl – třída
+          href: ../data/oledb/icommandtextimpl-class.md
+        - name: IConvertTypeImpl – třída
+          href: ../data/oledb/iconverttypeimpl-class.md
+        - name: IDBCreateCommandImpl – třída
+          href: ../data/oledb/idbcreatecommandimpl-class.md
+        - name: IDBCreateSessionImpl – třída
+          href: ../data/oledb/idbcreatesessionimpl-class.md
+        - name: IDBInitializeImpl – třída
+          href: ../data/oledb/idbinitializeimpl-class.md
+        - name: IDBPropertiesImpl – třída
+          href: ../data/oledb/idbpropertiesimpl-class.md
+        - name: IDBSchemaRowsetImpl – třída
+          href: ../data/oledb/idbschemarowsetimpl-class.md
+        - name: IErrorRecordsImpl – třída
+          href: ../data/oledb/ierrorrecordsimpl-class.md
+        - name: IGetDataSourceImpl – třída
+          href: ../data/oledb/igetdatasourceimpl-class.md
+        - name: IOpenRowsetImpl – třída
+          href: ../data/oledb/iopenrowsetimpl-class.md
+        - name: IRowsetChangeImpl – třída
+          href: ../data/oledb/irowsetchangeimpl-class.md
+        - name: IRowsetCreatorImpl – třída
+          href: ../data/oledb/irowsetcreatorimpl-class.md
+        - name: IRowsetIdentityImpl – třída
+          href: ../data/oledb/irowsetidentityimpl-class.md
+        - name: IRowsetImpl – třída
+          href: ../data/oledb/irowsetimpl-class.md
+        - name: IRowsetInfoImpl – třída
+          href: ../data/oledb/irowsetinfoimpl-class.md
+        - name: IRowsetLocateImpl – třída
+          href: ../data/oledb/irowsetlocateimpl-class.md
+        - name: IRowsetNotifyCP – třída
+          href: ../data/oledb/irowsetnotifycp-class.md
+        - name: IRowsetUpdateImpl – třída
+          href: ../data/oledb/irowsetupdateimpl-class.md
+        - name: ISessionPropertiesImpl – třída
+          href: ../data/oledb/isessionpropertiesimpl-class.md
+        - name: Makra pro šablony zprostředkovatele OLE DB
+          href: ../data/oledb/macros-for-ole-db-provider-templates.md
+- name: ODBC (Open Database Connectivity)
+  expanded: false
+  items:
+    - name: ODBC (Open Database Connectivity)
+      href: ../data/odbc/open-database-connectivity-odbc.md
+    - name: Instalace a úvod do rozhraní ODBC
+      href: ../data/odbc/installing-and-getting-started-with-odbc.md
+    - name: Návrh a vytvoření databázové aplikace ODBC
+      href: ../data/odbc/design-and-create-an-odbc-database-application.md
+    - name: "Použití databázových formulářů (zobrazení záznamů) s\_rozhraním ODBC"
+      href: ../data/odbc/use-database-forms-record-views-with-odbc.md
+    - name: "Použití rozhraní ODBC pro práci s\_jinými uživateli"
+      href: ../data/odbc/use-odbc-to-work-with-other-users.md
+    - name: "Práce s\_databázovými připojeními ODBC"
+      href: ../data/odbc/work-with-odbc-database-connections.md
+    - name: Práce s rozhraním ODBC a ovladači
+      href: ../data/odbc/work-with-odbc-and-drivers.md
+    - name: Použití knihovny kurzorů ODBC
+      href: ../data/odbc/use-the-odbc-cursor-library.md
+    - name: Použití sad záznamů rozhraní MFC ODBC
+      href: ../data/odbc/use-mfc-odbc-recordsets.md
+    - name: ODBC – základy
+      expanded: false
+      items:
+        - name: ODBC – základy
+          href: ../data/odbc/odbc-basics.md
+        - name: ODBC a databázové třídy
+          href: ../data/odbc/odbc-and-the-database-classes.md
+        - name: Požadavky ovladače ODBC pro dynamické sady
+          href: ../data/odbc/odbc-driver-requirements-for-dynasets.md
+        - name: Redistribuce součástí rozhraní ODBC vašim zákazníkům
+          href: ../data/odbc/redistributing-odbc-components-to-your-customers.md
+        - name: 'ODBC: Knihovna kurzorů ODBC'
+          href: ../data/odbc/odbc-the-odbc-cursor-library.md
+        - name: 'ODBC: Konfigurace zdroje dat ODBC'
+          href: ../data/odbc/odbc-configuring-an-odbc-data-source.md
+        - name: 'ODBC: Přímé volání funkcí rozhraní API ODBC'
+          href: ../data/odbc/odbc-calling-odbc-api-functions-directly.md
+    - name: Rozhraní ODBC a knihovna MFC
+      expanded: false
+      items:
+        - name: Rozhraní ODBC a knihovna MFC
+          href: ../data/odbc/odbc-and-mfc.md
+        - name: Připojení ke zdroji dat
+          href: ../data/odbc/connecting-to-a-data-source.md
+        - name: "Výběr záznamů a manipulace s\_nimi"
+          href: ../data/odbc/selecting-and-manipulating-records.md
+        - name: "Zobrazení dat ve formuláři a manipulace s\_nimi"
+          href: ../data/odbc/displaying-and-manipulating-data-in-a-form.md
+        - name: "Práce s\_dokumenty a zobrazeními"
+          href: ../data/odbc/working-with-documents-and-views.md
+        - name: "Přístup k\_rozhraní ODBC a jazyku SQL"
+          href: ../data/odbc/access-to-odbc-and-sql.md
+        - name: Další informace o třídách knihovny MFC rozhraní ODBC
+          href: ../data/odbc/further-reading-about-the-mfc-odbc-classes.md
+    - name: "Třídy a\_vlákna rozhraní ODBC"
+      href: ../data/odbc/odbc-classes-and-threads.md
+    - name: Správce rozhraní ODBC
+      href: ../data/odbc/odbc-administrator.md
+    - name: Seznam ovladačů ODBC
+      href: ../data/odbc/odbc-driver-list.md
+    - name: Zdroj dat (ODBC)
+      expanded: false
+      items:
+        - name: Zdroj dat (ODBC)
+          href: ../data/odbc/data-source-odbc.md
+        - name: 'Zdroj dat: správa připojení (ODBC)'
+          href: ../data/odbc/data-source-managing-connections-odbc.md
+        - name: 'Zdroj dat: stanovení schématu zdroje dat (ODBC)'
+          href: ../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md
+        - name: 'Zdroj dat: programové nakonfigurování zdroje dat ODBC'
+          href: ../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md
+        - name: 'Zdroj dat: programové vytvoření tabulky ve zdroji dat ODBC'
+          href: ../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
+    - name: Dynamická sada
+      href: ../data/odbc/dynaset.md
+    - name: Snímek
+      href: ../data/odbc/snapshot.md
+    - name: Výměna polí záznamu (RFX – Record Field Exchange)
+      expanded: false
+      items:
+        - name: Výměna polí záznamu (RFX – Record Field Exchange)
+          href: ../data/odbc/record-field-exchange-rfx.md
+        - name: 'Výměna polí záznamu: použití RFX'
+          href: ../data/odbc/record-field-exchange-using-rfx.md
+        - name: "Výměna polí záznamu: Práce s\_kódem průvodce"
+          href: ../data/odbc/record-field-exchange-working-with-the-wizard-code.md
+        - name: 'Výměna polí záznamu: použití funkcí RFX'
+          href: ../data/odbc/record-field-exchange-using-the-rfx-functions.md
+        - name: 'Výměna polí záznamu: jak RFX funguje'
+          href: ../data/odbc/record-field-exchange-how-rfx-works.md
+    - name: Sada záznamů (ODBC)
+      expanded: false
+      items:
+        - name: Sada záznamů (ODBC)
+          href: ../data/odbc/recordset-odbc.md
+        - name: 'Sada záznamů: architektura (ODBC)'
+          href: ../data/odbc/recordset-architecture-odbc.md
+        - name: 'Sada záznamů: Deklarování třídy pro tabulku (ODBC)'
+          href: ../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md
+        - name: 'Sada záznamů: Vytváření a uzavírání sad záznamů (rozhraní ODBC)'
+          href: ../data/odbc/recordset-creating-and-closing-recordsets-odbc.md
+        - name: 'Sada záznamů: Posouvání (ODBC)'
+          href: ../data/odbc/recordset-scrolling-odbc.md
+        - name: 'Sada záznamů: Záložky a absolutní umístění (ODBC)'
+          href: ../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md
+        - name: 'Sada záznamů: Filtrování záznamů (ODBC)'
+          href: ../data/odbc/recordset-filtering-records-odbc.md
+        - name: 'Sada záznamů: Řazení záznamů (ODBC)'
+          href: ../data/odbc/recordset-sorting-records-odbc.md
+        - name: 'Sada záznamů: Parametrizace sady záznamů (ODBC)'
+          href: ../data/odbc/recordset-parameterizing-a-recordset-odbc.md
+        - name: 'Sada záznamů: Přidávání, aktualizace a odstraňování záznamů (ODBC)'
+          href: ../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md
+        - name: 'Sada záznamů: Hromadné přidávání záznamů (ODBC)'
+          href: ../data/odbc/recordset-adding-records-in-bulk-odbc.md
+        - name: 'Sada záznamů: Zamykání záznamů (ODBC)'
+          href: ../data/odbc/recordset-locking-records-odbc.md
+        - name: 'Sada záznamů: Provedení spojení (ODBC)'
+          href: ../data/odbc/recordset-performing-a-join-odbc.md
+        - name: 'Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)'
+          href: ../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md
+        - name: 'Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)'
+          href: ../data/odbc/recordset-requerying-a-recordset-odbc.md
+        - name: 'Sada záznamů: Dynamické vazby datových sloupců (ODBC)'
+          href: ../data/odbc/recordset-dynamically-binding-data-columns-odbc.md
+        - name: 'Sada záznamů: Hromadné načítání záznamů (ODBC)'
+          href: ../data/odbc/recordset-fetching-records-in-bulk-odbc.md
+        - name: 'Sada záznamů: Práce s velkými datovými položkami (ODBC)'
+          href: ../data/odbc/recordset-working-with-large-data-items-odbc.md
+        - name: 'Sada záznamů: Získávání součtů a jiných agregačních výsledků (ODBC)'
+          href: ../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md
+        - name: 'Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)'
+          href: ../data/odbc/recordset-how-recordsets-select-records-odbc.md
+        - name: 'Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)'
+          href: ../data/odbc/recordset-how-recordsets-update-records-odbc.md
+        - name: 'Sada záznamů: Jak fungují operace AddNew, Edit a Delete (ODBC)'
+          href: ../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md
+        - name: "Sada záznamů: Další informace o\_aktualizacích (ODBC)"
+          href: ../data/odbc/recordset-more-about-updates-odbc.md
+    - name: SQL v ODBC
+      expanded: false
+      items:
+        - name: SQL v ODBC
+          href: ../data/odbc/sql.md
+        - name: 'SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)'
+          href: ../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md
+        - name: "SQL: SQL a\_datové typy C++ (ODBC)"
+          href: ../data/odbc/sql-sql-and-cpp-data-types-odbc.md
+        - name: 'SQL: Přímá volání SQL (ODBC)'
+          href: ../data/odbc/sql-making-direct-sql-calls-odbc.md
+    - name: Transakce (ODBC)
+      expanded: false
+      items:
+        - name: Transakce (ODBC)
+          href: ../data/odbc/transaction-odbc.md
+        - name: "Transakce: Provádění transakcí v\_sadě záznamů (ODBC)"
+          href: ../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md
+        - name: 'Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)'
+          href: ../data/odbc/transaction-how-transactions-affect-updates-odbc.md

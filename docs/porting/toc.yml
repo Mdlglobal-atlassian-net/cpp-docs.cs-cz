@@ -1,0 +1,54 @@
+- name: Průvodce portováním a upgradováním kódu C++ od Microsoftu
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: "Upgradování projektů z\_dřívějších verzí"
+  items:
+    - name: "Upgradování projektů z\_dřívějších verzí"
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: Přehled potenciálních problémů s upgradem
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: Upgrade kódu na Universal CRT
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: Aktualizace maker WINVER a _WIN32_WINNT
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: Oprava závislostí u interních informací o knihovně
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: Problémy migrace s plovoucí desetinnou čárkou
+      href: ../porting/floating-point-migration-issues.md
+    - name: Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí
+      href: ../porting/use-native-multi-targeting.md
+    - name: Zastaralé funkce C++ v sadě Visual Studio 2019
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: VCBuild vs. MSBuild
+      href: ../porting/build-system-changes.md
+    - name: Portování knihoven třetích stran
+      href: ../porting/porting-third-party-libraries.md
+    - name: Portování datových aplikací
+      href: ../data/data-access-programming-mfc-atl.md
+- name: Nástroje integrovaného vývojového prostředí (IDE) pro upgradování kódu C++
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: Historie změn Visual C++ 2003–2015
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: Novinky ve Visual C++ 2003–2015
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: Binární kompatibilita C++ 2015–2019
+  href: ../porting/binary-compat-2015-2017.md
+- name: 'Portování a upgrade: příklady a případové studie'
+  items:
+    - name: Příklady a případové studie
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: 'Průvodce portováním: MFC Scribble'
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: 'Průvodce portováním: COM Spy'
+      href: ../porting/porting-guide-com-spy.md
+    - name: 'Průvodce portováním: Spy++'
+      href: ../porting/porting-guide-spy-increment.md
+- name: Úvod do Microsoft C++ pro uživatele systému UNIX
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: Spouštění programů pro Linux ve Windows
+  href: ../porting/porting-from-unix-to-win32.md
+- name: Portování do Univerzální platformy Windows (C++)
+  items:
+    - name: Portování do Univerzální platformy Windows (C++)
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: 'Postupy: Použití existujícího kódu C++ v aplikaci pro Univerzální platformu Windows'
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md

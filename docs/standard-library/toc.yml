@@ -1,0 +1,1548 @@
+- name: Standardní knihovna C++ – referenční dokumentace
+  href: ../standard-library/cpp-standard-library-reference.md
+- name: Standardní knihovna C++ – soubory hlaviček
+  expanded: false
+  items:
+    - name: Standardní knihovna C++ – soubory hlaviček
+      href: ../standard-library/cpp-standard-library-header-files.md
+    - name: <algorithm>
+      expanded: false
+      items:
+        - name: <algorithm>
+          href: ../standard-library/algorithm.md
+        - name: <algorithm> – funkce
+          href: ../standard-library/algorithm-functions.md
+    - name: <allocators>
+      expanded: false
+      items:
+        - name: <allocators>
+          href: ../standard-library/allocators-header.md
+        - name: <allocators> – funkce
+          href: ../standard-library/allocators-functions.md
+        - name: <allocators> – operátory
+          href: ../standard-library/allocators-operators.md
+        - name: allocator_base – třída
+          href: ../standard-library/allocator-base-class.md
+        - name: allocator_chunklist – třída
+          href: ../standard-library/allocator-chunklist-class.md
+        - name: allocator_fixed_size – třída
+          href: ../standard-library/allocator-fixed-size-class.md
+        - name: allocator_newdel – třída
+          href: ../standard-library/allocator-newdel-class.md
+        - name: allocator_suballoc – třída
+          href: ../standard-library/allocator-suballoc-class.md
+        - name: allocator_unbounded – třída
+          href: ../standard-library/allocator-unbounded-class.md
+        - name: allocator_variable_size – třída
+          href: ../standard-library/allocator-variable-size-class.md
+        - name: cache_chunklist – třída
+          href: ../standard-library/cache-chunklist-class.md
+        - name: cache_freelist – třída
+          href: ../standard-library/cache-freelist-class.md
+        - name: cache_suballoc – třída
+          href: ../standard-library/cache-suballoc-class.md
+        - name: freelist – třída
+          href: ../standard-library/freelist-class.md
+        - name: max_fixed_size – třída
+          href: ../standard-library/max-fixed-size-class.md
+        - name: max_none – třída
+          href: ../standard-library/max-none-class.md
+        - name: max_unbounded – třída
+          href: ../standard-library/max-unbounded-class.md
+        - name: max_variable_size – třída
+          href: ../standard-library/max-variable-size-class.md
+        - name: rts_alloc – třída
+          href: ../standard-library/rts-alloc-class.md
+        - name: sync_none – třída
+          href: ../standard-library/sync-none-class.md
+        - name: sync_per_container – třída
+          href: ../standard-library/sync-per-container-class.md
+        - name: sync_per_thread – třída
+          href: ../standard-library/sync-per-thread-class.md
+        - name: sync_shared – třída
+          href: ../standard-library/sync-shared-class.md
+    - name: <any>
+      expanded: false
+      items:
+        - name: <any>
+          href: ../standard-library/any.md
+        - name: <any> – funkce
+          href: ../standard-library/any-functions.md
+        - name: any – třída (standardní knihovna C++)
+          href: ../standard-library/any-class.md
+    - name: <array>
+      expanded: false
+      items:
+        - name: <array>
+          href: ../standard-library/array.md
+        - name: <array> – funkce
+          href: ../standard-library/array-functions.md
+        - name: <array> – operátory
+          href: ../standard-library/array-operators.md
+        - name: array – třída (standardní knihovna C++)
+          href: ../standard-library/array-class-stl.md
+    - name: <atomic>
+      expanded: false
+      items:
+        - name: <atomic>
+          href: ../standard-library/atomic.md
+        - name: atomic – struktura
+          href: ../standard-library/atomic-structure.md
+        - name: atomic_flag – struktura
+          href: ../standard-library/atomic-flag-structure.md
+        - name: <atomic> – funkce
+          href: ../standard-library/atomic-functions.md
+        - name: <atomic> – výčty
+          href: ../standard-library/atomic-enums.md
+    - name: <bitset>
+      expanded: false
+      items:
+        - name: <bitset>
+          href: ../standard-library/bitset.md
+        - name: <bitset> – operátory
+          href: ../standard-library/bitset-operators.md
+        - name: bitset – třída
+          href: ../standard-library/bitset-class.md
+    - name: <cassert>
+      href: ../standard-library/cassert.md
+    - name: <ccomplex>
+      href: ../standard-library/ccomplex.md
+    - name: <cctype>
+      href: ../standard-library/cctype.md
+    - name: <cerrno>
+      href: ../standard-library/cerrno.md
+    - name: <cfenv>
+      href: ../standard-library/cfenv.md
+    - name: <cfloat>
+      href: ../standard-library/cfloat.md
+    - name: <chrono>
+      expanded: false
+      items:
+        - name: <chrono>
+          href: ../standard-library/chrono.md
+        - name: <chrono> – funkce
+          href: ../standard-library/chrono-functions.md
+        - name: <chrono> – operátory
+          href: ../standard-library/chrono-operators.md
+        - name: literály typu chrono
+          href: ../standard-library/chrono-literals.md
+        - name: common_type – struktura
+          href: ../standard-library/common-type-structure.md
+        - name: duration – třída
+          href: ../standard-library/duration-class.md
+        - name: duration_values – struktura
+          href: ../standard-library/duration-values-structure.md
+        - name: steady_clock – struktura
+          href: ../standard-library/steady-clock-struct.md
+        - name: system_clock – struktura
+          href: ../standard-library/system-clock-structure.md
+        - name: time_point – třída
+          href: ../standard-library/time-point-class.md
+        - name: treat_as_floating_point – struktura
+          href: ../standard-library/treat-as-floating-point-structure.md
+    - name: <cinttypes>
+      href: ../standard-library/cinttypes.md
+    - name: <ciso646>
+      href: ../standard-library/ciso646.md
+    - name: <climits>
+      href: ../standard-library/climits.md
+    - name: <clocale>
+      href: ../standard-library/clocale.md
+    - name: <cmath>
+      href: ../standard-library/cmath.md
+    - name: <codecvt>
+      expanded: false
+      items:
+        - name: <codecvt>
+          href: ../standard-library/codecvt.md
+        - name: <codecvt> – výčty
+          href: ../standard-library/codecvt-enums.md
+        - name: codecvt_utf8
+          href: ../standard-library/codecvt-utf8-class.md
+        - name: codecvt_utf8_utf16
+          href: ../standard-library/codecvt-utf8-utf16-class.md
+        - name: codecvt_utf16
+          href: ../standard-library/codecvt-utf16-class.md
+    - name: <complex>
+      expanded: false
+      items:
+        - name: <complex>
+          href: ../standard-library/complex.md
+        - name: <complex> – funkce
+          href: ../standard-library/complex-functions.md
+        - name: <complex> – operátory
+          href: ../standard-library/complex-operators.md
+        - name: complex – třída
+          href: ../standard-library/complex-class.md
+        - name: complex<double>
+          href: ../standard-library/complex-double.md
+        - name: complex<float>
+          href: ../standard-library/complex-float.md
+        - name: complex<long double>
+          href: ../standard-library/complex-long-double.md
+    - name: <condition_variable>
+      expanded: false
+      items:
+        - name: <condition_variable>
+          href: ../standard-library/condition-variable.md
+        - name: <condition_variable> – výčty
+          href: ../standard-library/condition-variable-enums.md
+        - name: condition_variable – třída
+          href: ../standard-library/condition-variable-class.md
+        - name: condition_variable_any – třída
+          href: ../standard-library/condition-variable-any-class.md
+    - name: <csetjmp>
+      href: ../standard-library/csetjmp.md
+    - name: <csignal>
+      href: ../standard-library/csignal.md
+    - name: <cstdalign>
+      href: ../standard-library/cstdalign.md
+    - name: <cstdarg>
+      href: ../standard-library/cstdarg.md
+    - name: <cstdbool>
+      href: ../standard-library/cstdbool.md
+    - name: <cstddef>
+      href: ../standard-library/cstddef.md
+    - name: <cstdint>
+      href: ../standard-library/cstdint.md
+    - name: <cstdio>
+      href: ../standard-library/cstdio.md
+    - name: <cstdlib>
+      href: ../standard-library/cstdlib.md
+    - name: <cstring>
+      href: ../standard-library/cstring.md
+    - name: <ctgmath>
+      href: ../standard-library/ctgmath.md
+    - name: <ctime>
+      href: ../standard-library/ctime.md
+    - name: <cuchar>
+      href: ../standard-library/cuchar.md
+    - name: <cvt-wbuffer>
+      href: ../standard-library/cvt-wbuffer.md
+    - name: <cvt-wstring>
+      href: ../standard-library/cvt-wstring.md
+    - name: <cwchar>
+      href: ../standard-library/cwchar.md
+    - name: <cwctype>
+      href: ../standard-library/cwctype.md
+    - name: <deque>
+      expanded: false
+      items:
+        - name: <deque>
+          href: ../standard-library/deque.md
+        - name: <deque> – funkce
+          href: ../standard-library/deque-functions.md
+        - name: <deque> – operátory
+          href: ../standard-library/deque-operators.md
+        - name: deque – třída
+          href: ../standard-library/deque-class.md
+    - name: <exception>
+      expanded: false
+      items:
+        - name: <exception>
+          href: ../standard-library/exception.md
+        - name: <exception> – funkce
+          href: ../standard-library/exception-functions.md
+        - name: <exception> – definice Typedef
+          href: ../standard-library/exception-typedefs.md
+        - name: bad_exception – třída
+          href: ../standard-library/bad-exception-class.md
+        - name: exception – třída
+          href: ../standard-library/exception-class.md
+    - name: <execution>
+      href: ../standard-library/execution.md
+    - name: <filesystem>
+      expanded: false
+      items:
+        - name: <filesystem>
+          href: ../standard-library/filesystem.md
+        - name: <filesystem> – operátory
+          href: ../standard-library/filesystem-operators.md
+        - name: <filesystem> – funkce
+          href: ../standard-library/filesystem-functions.md
+        - name: <filesystem> – výčty
+          href: ../standard-library/filesystem-enumerations.md
+        - name: directory_entry – třída
+          href: ../standard-library/directory-entry-class.md
+        - name: directory_iterator – třída
+          href: ../standard-library/directory-iterator-class.md
+        - name: file_status – třída
+          href: ../standard-library/file-status-class.md
+        - name: filesystem_error – třída
+          href: ../standard-library/filesystem-error-class.md
+        - name: path – třída
+          href: ../standard-library/path-class.md
+        - name: recursive_directory_iterator – třída
+          href: ../standard-library/recursive-directory-iterator-class.md
+        - name: space_info – struktura
+          href: ../standard-library/space-info-structure.md
+    - name: <forward_list>
+      expanded: false
+      items:
+        - name: <forward_list>
+          href: ../standard-library/forward-list.md
+        - name: <forward_list> – funkce
+          href: ../standard-library/forward-list-functions.md
+        - name: <forward_list> – operátory
+          href: ../standard-library/forward-list-operators.md
+        - name: forward_list – třída
+          href: ../standard-library/forward-list-class.md
+    - name: <fstream>
+      expanded: false
+      items:
+        - name: <fstream>
+          href: ../standard-library/fstream.md
+        - name: <fstream> – definice Typedef
+          href: ../standard-library/fstream-typedefs.md
+        - name: basic_filebuf – třída
+          href: ../standard-library/basic-filebuf-class.md
+        - name: basic_fstream – třída
+          href: ../standard-library/basic-fstream-class.md
+        - name: basic_ifstream – třída
+          href: ../standard-library/basic-ifstream-class.md
+        - name: basic_ofstream – třída
+          href: ../standard-library/basic-ofstream-class.md
+    - name: <functional>
+      expanded: false
+      items:
+        - name: <functional>
+          href: ../standard-library/functional.md
+        - name: <functional> – funkce
+          href: ../standard-library/functional-functions.md
+        - name: <functional> – operátory
+          href: ../standard-library/functional-operators.md
+        - name: _1 – objekt
+          href: ../standard-library/1-object.md
+        - name: bad_function_call – třída
+          href: ../standard-library/bad-function-call-class.md
+        - name: binary_function – struktura
+          href: ../standard-library/binary-function-struct.md
+        - name: binary_negate – třída
+          href: ../standard-library/binary-negate-class.md
+        - name: binder1st – třída
+          href: ../standard-library/binder1st-class.md
+        - name: binder2nd – třída
+          href: ../standard-library/binder2nd-class.md
+        - name: const_mem_fun_ref_t – třída
+          href: ../standard-library/const-mem-fun-ref-t-class.md
+        - name: const_mem_fun_t – třída
+          href: ../standard-library/const-mem-fun-t-class.md
+        - name: const_mem_fun1_ref_t – třída
+          href: ../standard-library/const-mem-fun1-ref-t-class.md
+        - name: const_mem_fun1_t – třída
+          href: ../standard-library/const-mem-fun1-t-class.md
+        - name: divides – struktura
+          href: ../standard-library/divides-struct.md
+        - name: equal_to – struktura
+          href: ../standard-library/equal-to-struct.md
+        - name: function – třída
+          href: ../standard-library/function-class.md
+        - name: greater – struktura
+          href: ../standard-library/greater-struct.md
+        - name: greater_equal – struktura
+          href: ../standard-library/greater-equal-struct.md
+        - name: hash – třída
+          href: ../standard-library/hash-class.md
+        - name: is_bind_expression – třída
+          href: ../standard-library/is-bind-expression-class.md
+        - name: is_placeholder – třída
+          href: ../standard-library/is-placeholder-class.md
+        - name: less – struktura
+          href: ../standard-library/less-struct.md
+        - name: less_equal – struktura
+          href: ../standard-library/less-equal-struct.md
+        - name: logical_and – struktura
+          href: ../standard-library/logical-and-struct.md
+        - name: logical_not – struktura
+          href: ../standard-library/logical-not-struct.md
+        - name: logical_or – struktura
+          href: ../standard-library/logical-or-struct.md
+        - name: mem_fun_ref_t – třída
+          href: ../standard-library/mem-fun-ref-t-class.md
+        - name: mem_fun_t – třída
+          href: ../standard-library/mem-fun-t-class.md
+        - name: mem_fun1_ref_t – třída
+          href: ../standard-library/mem-fun1-ref-t-class.md
+        - name: mem_fun1_t – třída
+          href: ../standard-library/mem-fun1-t-class.md
+        - name: minus – struktura
+          href: ../standard-library/minus-struct.md
+        - name: modulus – struktura
+          href: ../standard-library/modulus-struct.md
+        - name: multiplies – struktura
+          href: ../standard-library/multiplies-struct.md
+        - name: negate – struktura
+          href: ../standard-library/negate-struct.md
+        - name: not_equal_to – struktura
+          href: ../standard-library/not-equal-to-struct.md
+        - name: plus – struktura
+          href: ../standard-library/plus-struct.md
+        - name: pointer_to_binary_function – třída
+          href: ../standard-library/pointer-to-binary-function-class.md
+        - name: pointer_to_unary_function – třída
+          href: ../standard-library/pointer-to-unary-function-class.md
+        - name: reference_wrapper – třída
+          href: ../standard-library/reference-wrapper-class.md
+        - name: unary_function – struktura
+          href: ../standard-library/unary-function-struct.md
+        - name: unary_negate – třída
+          href: ../standard-library/unary-negate-class.md
+    - name: <future>
+      expanded: false
+      items:
+        - name: <future>
+          href: ../standard-library/future.md
+        - name: <future> – funkce
+          href: ../standard-library/future-functions.md
+        - name: <future> – výčty
+          href: ../standard-library/future-enums.md
+        - name: future – třída
+          href: ../standard-library/future-class.md
+        - name: future_error – třída
+          href: ../standard-library/future-error-class.md
+        - name: is_error_code_enum – struktura
+          href: ../standard-library/is-error-code-enum-structure.md
+        - name: packaged_task – třída
+          href: ../standard-library/packaged-task-class.md
+        - name: promise – třída
+          href: ../standard-library/promise-class.md
+        - name: shared_future – třída
+          href: ../standard-library/shared-future-class.md
+        - name: uses_allocator – struktura
+          href: ../standard-library/uses-allocator-structure.md
+    - name: <hash_map>
+      expanded: false
+      items:
+        - name: <hash_map>
+          href: ../standard-library/hash-map.md
+        - name: <hash_map> – funkce
+          href: ../standard-library/hash-map-functions.md
+        - name: <hash_map> – operátory
+          href: ../standard-library/hash-map-operators.md
+        - name: hash_compare – třída
+          href: ../standard-library/hash-compare-class.md
+        - name: hash_map – třída
+          href: ../standard-library/hash-map-class.md
+        - name: hash_multimap – třída
+          href: ../standard-library/hash-multimap-class.md
+        - name: value_compare – třída
+          href: ../standard-library/value-compare-class.md
+    - name: <hash_set>
+      expanded: false
+      items:
+        - name: <hash_set>
+          href: ../standard-library/hash-set.md
+        - name: hash_set – třída
+          href: ../standard-library/hash-set-class.md
+        - name: hash_multiset – třída
+          href: ../standard-library/hash-multiset-class.md
+        - name: <hash_set> – funkce
+          href: ../standard-library/hash-set-functions.md
+        - name: <hash_set> – operátory
+          href: ../standard-library/hash-set-operators.md
+    - name: <initializer_list>
+      expanded: false
+      items:
+        - name: <initializer_list>
+          href: ../standard-library/initializer-list.md
+        - name: initializer_list – třída
+          href: ../standard-library/initializer-list-class.md
+    - name: <iomanip>
+      expanded: false
+      items:
+        - name: <iomanip>
+          href: ../standard-library/iomanip.md
+        - name: <iomanip> – funkce
+          href: ../standard-library/iomanip-functions.md
+    - name: <ios>
+      expanded: false
+      items:
+        - name: <ios>
+          href: ../standard-library/ios.md
+        - name: <ios> – funkce
+          href: ../standard-library/ios-functions.md
+        - name: <ios> – definice Typedef
+          href: ../standard-library/ios-typedefs.md
+        - name: basic_ios – třída
+          href: ../standard-library/basic-ios-class.md
+        - name: fpos – třída
+          href: ../standard-library/fpos-class.md
+        - name: ios_base – třída
+          href: ../standard-library/ios-base-class.md
+    - name: <iosfwd>
+      href: ../standard-library/iosfwd.md
+    - name: <iostream>
+      href: ../standard-library/iostream.md
+    - name: <istream>
+      expanded: false
+      items:
+        - name: <istream>
+          href: ../standard-library/istream.md
+        - name: <istream> – funkce
+          href: ../standard-library/istream-functions.md
+        - name: <istream> – operátory
+          href: ../standard-library/istream-operators.md
+        - name: <istream> – definice Typedef
+          href: ../standard-library/istream-typedefs.md
+        - name: basic_iostream – třída
+          href: ../standard-library/basic-iostream-class.md
+        - name: basic_istream – třída
+          href: ../standard-library/basic-istream-class.md
+    - name: <iterator>
+      expanded: false
+      items:
+        - name: <iterator>
+          href: ../standard-library/iterator.md
+        - name: <iterator> – funkce
+          href: ../standard-library/iterator-functions.md
+        - name: <iterator> – operátory
+          href: ../standard-library/iterator-operators.md
+        - name: back_insert_iterator – třída
+          href: ../standard-library/back-insert-iterator-class.md
+        - name: bidirectional_iterator_tag – struktura
+          href: ../standard-library/bidirectional-iterator-tag-struct.md
+        - name: checked_array_iterator – třída
+          href: ../standard-library/checked-array-iterator-class.md
+        - name: forward_iterator_tag – struktura
+          href: ../standard-library/forward-iterator-tag-struct.md
+        - name: front_insert_iterator – třída
+          href: ../standard-library/front-insert-iterator-class.md
+        - name: input_iterator_tag – struktura
+          href: ../standard-library/input-iterator-tag-struct.md
+        - name: insert_iterator – třída
+          href: ../standard-library/insert-iterator-class.md
+        - name: istream_iterator – třída
+          href: ../standard-library/istream-iterator-class.md
+        - name: istreambuf_iterator – třída
+          href: ../standard-library/istreambuf-iterator-class.md
+        - name: iterator – struktura
+          href: ../standard-library/iterator-struct.md
+        - name: iterator_traits – struktura
+          href: ../standard-library/iterator-traits-struct.md
+        - name: move_iterator – třída
+          href: ../standard-library/move-iterator-class.md
+        - name: ostream_iterator – třída
+          href: ../standard-library/ostream-iterator-class.md
+        - name: ostreambuf_iterator – třída
+          href: ../standard-library/ostreambuf-iterator-class.md
+        - name: output_iterator_tag – struktura
+          href: ../standard-library/output-iterator-tag-struct.md
+        - name: random_access_iterator_tag – struktura
+          href: ../standard-library/random-access-iterator-tag-struct.md
+        - name: reverse_iterator – třída
+          href: ../standard-library/reverse-iterator-class.md
+        - name: unchecked_array_iterator – třída
+          href: ../standard-library/unchecked-array-iterator-class.md
+    - name: <limits>
+      expanded: false
+      items:
+        - name: <limits>
+          href: ../standard-library/limits.md
+        - name: <limits> – výčty
+          href: ../standard-library/limits-enums.md
+        - name: numeric_limits – třída
+          href: ../standard-library/numeric-limits-class.md
+    - name: <list>
+      expanded: false
+      items:
+        - name: <list>
+          href: ../standard-library/list.md
+        - name: <list> operátory
+          href: ../standard-library/list-operators.md
+        - name: list – třída
+          href: ../standard-library/list-class.md
+    - name: <locale>
+      expanded: false
+      items:
+        - name: <locale>
+          href: ../standard-library/locale.md
+        - name: <locale> – funkce
+          href: ../standard-library/locale-functions.md
+        - name: codecvt – třída
+          href: ../standard-library/codecvt-class.md
+        - name: codecvt_base – třída
+          href: ../standard-library/codecvt-base-class.md
+        - name: codecvt_byname – třída
+          href: ../standard-library/codecvt-byname-class.md
+        - name: collate – třída
+          href: ../standard-library/collate-class.md
+        - name: collate_byname – třída
+          href: ../standard-library/collate-byname-class.md
+        - name: ctype – třída
+          href: ../standard-library/ctype-class.md
+        - name: ctype<char> – třída
+          href: ../standard-library/ctype-char-class.md
+        - name: ctype_base – třída
+          href: ../standard-library/ctype-base-class.md
+        - name: ctype_byname – třída
+          href: ../standard-library/ctype-byname-class.md
+        - name: locale – třída
+          href: ../standard-library/locale-class.md
+        - name: messages – třída
+          href: ../standard-library/messages-class.md
+        - name: messages_base – třída
+          href: ../standard-library/messages-base-class.md
+        - name: messages_byname – třída
+          href: ../standard-library/messages-byname-class.md
+        - name: money_base – třída
+          href: ../standard-library/money-base-class.md
+        - name: money_get – třída
+          href: ../standard-library/money-get-class.md
+        - name: money_put – třída
+          href: ../standard-library/money-put-class.md
+        - name: moneypunct – třída
+          href: ../standard-library/moneypunct-class.md
+        - name: moneypunct_byname – třída
+          href: ../standard-library/moneypunct-byname-class.md
+        - name: num_get – třída
+          href: ../standard-library/num-get-class.md
+        - name: num_put – třída
+          href: ../standard-library/num-put-class.md
+        - name: numpunct – třída
+          href: ../standard-library/numpunct-class.md
+        - name: numpunct_byname – třída
+          href: ../standard-library/numpunct-byname-class.md
+        - name: time_base – třída
+          href: ../standard-library/time-base-class.md
+        - name: time_get – třída
+          href: ../standard-library/time-get-class.md
+        - name: time_get_byname – třída
+          href: ../standard-library/time-get-byname-class.md
+        - name: time_put – třída
+          href: ../standard-library/time-put-class.md
+        - name: time_put_byname – třída
+          href: ../standard-library/time-put-byname-class.md
+        - name: wbuffer_convert – třída
+          href: ../standard-library/wbuffer-convert-class.md
+        - name: wstring_convert – třída
+          href: ../standard-library/wstring-convert-class.md
+    - name: <map>
+      expanded: false
+      items:
+        - name: <map>
+          href: ../standard-library/map.md
+        - name: <map> – funkce
+          href: ../standard-library/map-functions.md
+        - name: <map> – operátory
+          href: ../standard-library/map-operators.md
+        - name: map – třída
+          href: ../standard-library/map-class.md
+        - name: multimap – třída
+          href: ../standard-library/multimap-class.md
+        - name: value_compare – třída (<map>)
+          href: ../standard-library/value-compare-class-map.md
+    - name: <memory>
+      expanded: false
+      items:
+        - name: <memory>
+          href: ../standard-library/memory.md
+        - name: <memory> – funkce
+          href: ../standard-library/memory-functions.md
+        - name: <memory> – operátory
+          href: ../standard-library/memory-operators.md
+        - name: <memory> – výčty
+          href: ../standard-library/memory-enums.md
+        - name: allocator – třída
+          href: ../standard-library/allocator-class.md
+        - name: allocator<void> – třída
+          href: ../standard-library/allocator-void-class.md
+        - name: allocator_traits – třída
+          href: ../standard-library/allocator-traits-class.md
+        - name: auto_ptr – třída
+          href: ../standard-library/auto-ptr-class.md
+        - name: bad_weak_ptr – třída
+          href: ../standard-library/bad-weak-ptr-class.md
+        - name: enable_shared_from_this – třída
+          href: ../standard-library/enable-shared-from-this-class.md
+        - name: pointer_traits – struktura
+          href: ../standard-library/pointer-traits-struct.md
+        - name: raw_storage_iterator – třída
+          href: ../standard-library/raw-storage-iterator-class.md
+        - name: shared_ptr – třída
+          href: ../standard-library/shared-ptr-class.md
+        - name: unique_ptr – třída
+          href: ../standard-library/unique-ptr-class.md
+        - name: weak_ptr – třída
+          href: ../standard-library/weak-ptr-class.md
+    - name: <memory_resource>
+      expanded: false
+      items:
+        - name: <memory_resource>
+          href: ../standard-library/memory-resource.md
+        - name: <memory_resource> – funkce
+          href: ../standard-library/memory-resource-functions.md
+        - name: <memory_resource> – operátory
+          href: ../standard-library/memory-resource-operators.md
+        - name: memory_resource – třída
+          href: ../standard-library/memory-resource-class.md
+    - name: <mutex>
+      expanded: false
+      items:
+        - name: <mutex>
+          href: ../standard-library/mutex.md
+        - name: <mutex> – funkce
+          href: ../standard-library/mutex-functions.md
+        - name: adopt_lock_t – struktura
+          href: ../standard-library/adopt-lock-t-structure.md
+        - name: defer_lock_t – struktura
+          href: ../standard-library/defer-lock-t-structure.md
+        - name: lock_guard – třída
+          href: ../standard-library/lock-guard-class.md
+        - name: mutex – třída (standardní knihovna C++)
+          href: ../standard-library/mutex-class-stl.md
+        - name: once_flag – struktura
+          href: ../standard-library/once-flag-structure.md
+        - name: recursive_mutex – třída
+          href: ../standard-library/recursive-mutex-class.md
+        - name: recursive_timed_mutex – třída
+          href: ../standard-library/recursive-timed-mutex-class.md
+        - name: timed_mutex – třída
+          href: ../standard-library/timed-mutex-class.md
+        - name: try_to_lock_t – struktura
+          href: ../standard-library/try-to-lock-t-structure.md
+        - name: unique_lock – třída
+          href: ../standard-library/unique-lock-class.md
+    - name: <new>
+      expanded: false
+      items:
+        - name: <new>
+          href: ../standard-library/new.md
+        - name: <new> – funkce
+          href: ../standard-library/new-functions.md
+        - name: <new> – definice Typedef
+          href: ../standard-library/new-typedefs.md
+        - name: <new> – operátory
+          href: ../standard-library/new-operators.md
+        - name: bad_alloc – třída
+          href: ../standard-library/bad-alloc-class.md
+        - name: nothrow_t – struktura
+          href: ../standard-library/nothrow-t-structure.md
+    - name: <numeric>
+      expanded: false
+      items:
+        - name: <numeric>
+          href: ../standard-library/numeric.md
+        - name: <numeric> – funkce
+          href: ../standard-library/numeric-functions.md
+    - name: <optional>
+      expanded: false
+      items:
+        - name: <optional>
+          href: ../standard-library/optional.md
+        - name: <optional> – funkce
+          href: ../standard-library/optional-functions.md
+        - name: <optional> – operátory
+          href: ../standard-library/optional-operators.md
+        - name: optional – třída
+          href: ../standard-library/optional-class.md
+    - name: <ostream>
+      expanded: false
+      items:
+        - name: <ostream>
+          href: ../standard-library/ostream.md
+        - name: basic_ostream – třída
+          href: ../standard-library/basic-ostream-class.md
+        - name: <ostream> – funkce
+          href: ../standard-library/ostream-functions.md
+        - name: <ostream> – operátory
+          href: ../standard-library/ostream-operators.md
+        - name: <ostream> – definice Typedef
+          href: ../standard-library/ostream-typedefs.md
+    - name: <queue>
+      expanded: false
+      items:
+        - name: <queue>
+          href: ../standard-library/queue.md
+        - name: <queue> – operátory
+          href: ../standard-library/queue-operators.md
+        - name: priority_queue – třída
+          href: ../standard-library/priority-queue-class.md
+        - name: queue – třída
+          href: ../standard-library/queue-class.md
+    - name: <random>
+      expanded: false
+      items:
+        - name: <random>
+          href: ../standard-library/random.md
+        - name: <random> – funkce
+          href: ../standard-library/random-functions.md
+        - name: bernoulli_distribution – třída
+          href: ../standard-library/bernoulli-distribution-class.md
+        - name: binomial_distribution – třída
+          href: ../standard-library/binomial-distribution-class.md
+        - name: cauchy_distribution – třída
+          href: ../standard-library/cauchy-distribution-class.md
+        - name: chi_squared_distribution – třída
+          href: ../standard-library/chi-squared-distribution-class.md
+        - name: discard_block_engine – třída
+          href: ../standard-library/discard-block-engine-class.md
+        - name: discrete_distribution – třída
+          href: ../standard-library/discrete-distribution-class.md
+        - name: exponential_distribution – třída
+          href: ../standard-library/exponential-distribution-class.md
+        - name: extreme_value_distribution – třída
+          href: ../standard-library/extreme-value-distribution-class.md
+        - name: fisher_f_distribution – třída
+          href: ../standard-library/fisher-f-distribution-class.md
+        - name: gamma_distribution – třída
+          href: ../standard-library/gamma-distribution-class.md
+        - name: geometric_distribution – třída
+          href: ../standard-library/geometric-distribution-class.md
+        - name: independent_bits_engine – třída
+          href: ../standard-library/independent-bits-engine-class.md
+        - name: linear_congruential_engine – třída
+          href: ../standard-library/linear-congruential-engine-class.md
+        - name: lognormal_distribution – třída
+          href: ../standard-library/lognormal-distribution-class.md
+        - name: mersenne_twister_engine – třída
+          href: ../standard-library/mersenne-twister-engine-class.md
+        - name: negative_binomial_distribution – třída
+          href: ../standard-library/negative-binomial-distribution-class.md
+        - name: normal_distribution – třída
+          href: ../standard-library/normal-distribution-class.md
+        - name: piecewise_constant_distribution – třída
+          href: ../standard-library/piecewise-constant-distribution-class.md
+        - name: piecewise_linear_distribution – třída
+          href: ../standard-library/piecewise-linear-distribution-class.md
+        - name: poisson_distribution – třída
+          href: ../standard-library/poisson-distribution-class.md
+        - name: random_device – třída
+          href: ../standard-library/random-device-class.md
+        - name: seed_seq – třída
+          href: ../standard-library/seed-seq-class.md
+        - name: shuffle_order_engine – třída
+          href: ../standard-library/shuffle-order-engine-class.md
+        - name: student_t_distribution – třída
+          href: ../standard-library/student-t-distribution-class.md
+        - name: subtract_with_carry_engine – třída
+          href: ../standard-library/subtract-with-carry-engine-class.md
+        - name: uniform_int_distribution – třída
+          href: ../standard-library/uniform-int-distribution-class.md
+        - name: uniform_real_distribution – třída
+          href: ../standard-library/uniform-real-distribution-class.md
+        - name: weibull_distribution – třída
+          href: ../standard-library/weibull-distribution-class.md
+    - name: <ratio>
+      href: ../standard-library/ratio.md
+    - name: <regex>
+      expanded: false
+      items:
+        - name: <regex>
+          href: ../standard-library/regex.md
+        - name: <regex> – funkce
+          href: ../standard-library/regex-functions.md
+        - name: <regex> – operátory
+          href: ../standard-library/regex-operators.md
+        - name: <regex> – definice Typedef
+          href: ../standard-library/regex-typedefs.md
+        - name: basic_regex – třída
+          href: ../standard-library/basic-regex-class.md
+        - name: match_results – třída
+          href: ../standard-library/match-results-class.md
+        - name: regex_constants – obor názvů
+          href: ../standard-library/regex-constants-class.md
+        - name: regex_error – třída
+          href: ../standard-library/regex-error-class.md
+        - name: regex_iterator – třída
+          href: ../standard-library/regex-iterator-class.md
+        - name: regex_token_iterator – třída
+          href: ../standard-library/regex-token-iterator-class.md
+        - name: regex_traits – třída
+          href: ../standard-library/regex-traits-class.md
+        - name: regex_traits<char> – třída
+          href: ../standard-library/regex-traits-char-class.md
+        - name: regex_traits<wchar_t> – třída
+          href: ../standard-library/regex-traits-wchar-t-class.md
+        - name: sub_match – třída
+          href: ../standard-library/sub-match-class.md
+    - name: <scoped_allocator>
+      expanded: false
+      items:
+        - name: <scoped_allocator>
+          href: ../standard-library/scoped-allocator.md
+        - name: <scoped_allocator> – operátory
+          href: ../standard-library/scoped-allocator-operators.md
+        - name: scoped_allocator_adaptor – třída
+          href: ../standard-library/scoped-allocator-adaptor-class.md
+    - name: <set>
+      expanded: false
+      items:
+        - name: <set>
+          href: ../standard-library/set.md
+        - name: <set> – funkce
+          href: ../standard-library/set-functions.md
+        - name: <set> – operátory
+          href: ../standard-library/set-operators.md
+        - name: set – třída
+          href: ../standard-library/set-class.md
+        - name: multiset – třída
+          href: ../standard-library/multiset-class.md
+    - name: <shared_mutex>
+      href: ../standard-library/shared-mutex.md
+    - name: <sstream>
+      expanded: false
+      items:
+        - name: <sstream>
+          href: ../standard-library/sstream.md
+        - name: <sstream> – funkce
+          href: ../standard-library/sstream-functions.md
+        - name: <sstream> – definice Typedef
+          href: ../standard-library/sstream-typedefs.md
+        - name: basic_stringbuf – třída
+          href: ../standard-library/basic-stringbuf-class.md
+        - name: basic_istringstream – třída
+          href: ../standard-library/basic-istringstream-class.md
+        - name: basic_ostringstream – třída
+          href: ../standard-library/basic-ostringstream-class.md
+        - name: basic_stringstream – třída
+          href: ../standard-library/basic-stringstream-class.md
+    - name: <stack>
+      expanded: false
+      items:
+        - name: <stack>
+          href: ../standard-library/stack.md
+        - name: <stack> – operátory
+          href: ../standard-library/stack-operators.md
+        - name: stack – třída
+          href: ../standard-library/stack-class.md
+    - name: <stdexcept>
+      expanded: false
+      items:
+        - name: <stdexcept>
+          href: ../standard-library/stdexcept.md
+        - name: domain_error – třída
+          href: ../standard-library/domain-error-class.md
+        - name: invalid_argument – třída
+          href: ../standard-library/invalid-argument-class.md
+        - name: length_error – třída
+          href: ../standard-library/length-error-class.md
+        - name: logic_error – třída
+          href: ../standard-library/logic-error-class.md
+        - name: out_of_range – třída
+          href: ../standard-library/out-of-range-class.md
+        - name: overflow_error – třída
+          href: ../standard-library/overflow-error-class.md
+        - name: range_error – třída
+          href: ../standard-library/range-error-class.md
+        - name: runtime_error – třída
+          href: ../standard-library/runtime-error-class.md
+        - name: underflow_error – třída
+          href: ../standard-library/underflow-error-class.md
+    - name: <streambuf>
+      expanded: false
+      items:
+        - name: <streambuf>
+          href: ../standard-library/streambuf.md
+        - name: <streambuf> – definice Typedef
+          href: ../standard-library/streambuf-typedefs.md
+        - name: basic_streambuf – třída
+          href: ../standard-library/basic-streambuf-class.md
+    - name: <string>
+      expanded: false
+      items:
+        - name: <string>
+          href: ../standard-library/string.md
+        - name: <string> – funkce
+          href: ../standard-library/string-functions.md
+        - name: <string> – operátory
+          href: ../standard-library/string-operators.md
+        - name: <string> – definice Typedef
+          href: ../standard-library/string-typedefs.md
+        - name: basic_string – třída
+          href: ../standard-library/basic-string-class.md
+        - name: char_traits – struktura
+          href: ../standard-library/char-traits-struct.md
+        - name: char_traits<char> – struktura
+          href: ../standard-library/char-traits-char-struct.md
+        - name: char_traits<char16_t> – struktura
+          href: ../standard-library/char-traits-char16-t-struct.md
+        - name: char_traits<char32_t> – struktura
+          href: ../standard-library/char-traits-char32-t-struct.md
+        - name: char_traits<wchar_t> – struktura
+          href: ../standard-library/char-traits-wchar-t-struct.md
+    - name: <string_view>
+      expanded: false
+      items:
+        - name: <string_view>
+          href: ../standard-library/string-view.md
+        - name: <string_view> – operátory
+          href: ../standard-library/string-view-operators.md
+        - name: <string_view> – definice Typedef
+          href: ../standard-library/string-view-typedefs.md
+        - name: basic_string_view – třída
+          href: ../standard-library/basic-string-view-class.md
+        - name: hash<string_view> – specializace
+          href: ../standard-library/string-view-hash.md
+    - name: <strstream>
+      expanded: false
+      items:
+        - name: <strstream>
+          href: ../standard-library/strstream.md
+        - name: strstreambuf – třída
+          href: ../standard-library/strstreambuf-class.md
+        - name: istrstream – třída
+          href: ../standard-library/istrstream-class.md
+        - name: ostrstream – třída
+          href: ../standard-library/ostrstream-class.md
+        - name: strstream – třída
+          href: ../standard-library/strstream-class.md
+    - name: <system_error>
+      expanded: false
+      items:
+        - name: <system_error>
+          href: ../standard-library/system-error.md
+        - name: <system_error> – funkce
+          href: ../standard-library/system-error-functions.md
+        - name: <system_error> – operátory
+          href: ../standard-library/system-error-operators.md
+        - name: <system_error> – výčty
+          href: ../standard-library/system-error-enums.md
+        - name: error_category – třída
+          href: ../standard-library/error-category-class.md
+        - name: error_code – třída
+          href: ../standard-library/error-code-class.md
+        - name: error_condition – třída
+          href: ../standard-library/error-condition-class.md
+        - name: is_error_code_enum – třída
+          href: ../standard-library/is-error-code-enum-class.md
+        - name: is_error_condition_enum – třída
+          href: ../standard-library/is-error-condition-enum-class.md
+        - name: system_error – třída
+          href: ../standard-library/system-error-class.md
+    - name: <thread>
+      expanded: false
+      items:
+        - name: <thread>
+          href: ../standard-library/thread.md
+        - name: <thread> – funkce
+          href: ../standard-library/thread-functions.md
+        - name: <thread> – operátory
+          href: ../standard-library/thread-operators.md
+        - name: hash – struktura (standardní knihovna C++)
+          href: ../standard-library/hash-structure-stl.md
+        - name: thread – třída
+          href: ../standard-library/thread-class.md
+    - name: <tuple>
+      expanded: false
+      items:
+        - name: <tuple>
+          href: ../standard-library/tuple.md
+        - name: <tuple> – funkce
+          href: ../standard-library/tuple-functions.md
+        - name: <tuple> – operátory
+          href: ../standard-library/tuple-operators.md
+        - name: tuple – třída
+          href: ../standard-library/tuple-class.md
+        - name: tuple_element – třída <tuple>
+          href: ../standard-library/tuple-element-class-tuple.md
+        - name: tuple_size – třída <tuple>
+          href: ../standard-library/tuple-size-class-tuple.md
+    - name: <type_traits>
+      expanded: false
+      items:
+        - name: <type_traits>
+          href: ../standard-library/type-traits.md
+        - name: add_const – třída
+          href: ../standard-library/add-const-class.md
+        - name: add_cv – třída
+          href: ../standard-library/add-cv-class.md
+        - name: add_lvalue_reference – třída
+          href: ../standard-library/add-lvalue-reference-class.md
+        - name: add_rvalue_reference – třída
+          href: ../standard-library/add-rvalue-reference-class.md
+        - name: add_pointer – třída
+          href: ../standard-library/add-pointer-class.md
+        - name: add_volatile – třída
+          href: ../standard-library/add-volatile-class.md
+        - name: aligned_storage – třída
+          href: ../standard-library/aligned-storage-class.md
+        - name: aligned_union – třída
+          href: ../standard-library/aligned-union-class.md
+        - name: alignment_of – třída
+          href: ../standard-library/alignment-of-class.md
+        - name: common_type – třída
+          href: ../standard-library/common-type-class.md
+        - name: conditional – třída
+          href: ../standard-library/conditional-class.md
+        - name: decay – třída
+          href: ../standard-library/decay-class.md
+        - name: enable_if – třída
+          href: ../standard-library/enable-if-class.md
+        - name: extent – třída
+          href: ../standard-library/extent-class.md
+        - name: integer_sequence – třída
+          href: ../standard-library/integer-sequence-class.md
+        - name: 'integral_constant – třída, bool_constant – třída'
+          href: ../standard-library/integral-constant-class-bool-constant-class.md
+        - name: invoke_result – třída
+          href: ../standard-library/invoke-result-class.md
+        - name: is_abstract – třída
+          href: ../standard-library/is-abstract-class.md
+        - name: is_arithmetic – třída
+          href: ../standard-library/is-arithmetic-class.md
+        - name: is_array – třída
+          href: ../standard-library/is-array-class.md
+        - name: is_assignable – třída
+          href: ../standard-library/is-assignable-class.md
+        - name: is_base_of – třída
+          href: ../standard-library/is-base-of-class.md
+        - name: is_class – třída
+          href: ../standard-library/is-class-class.md
+        - name: is_compound – třída
+          href: ../standard-library/is-compound-class.md
+        - name: is_const – třída
+          href: ../standard-library/is-const-class.md
+        - name: is_constructible – třída
+          href: ../standard-library/is-constructible-class.md
+        - name: is_convertible – třída
+          href: ../standard-library/is-convertible-class.md
+        - name: is_copy_assignable – třída
+          href: ../standard-library/is-copy-assignable-class.md
+        - name: is_copy_constructible – třída
+          href: ../standard-library/is-copy-constructible-class.md
+        - name: is_default_constructible – třída
+          href: ../standard-library/is-default-constructible-class.md
+        - name: is_destructible – třída
+          href: ../standard-library/is-destructible-class.md
+        - name: is_empty – třída
+          href: ../standard-library/is-empty-class.md
+        - name: is_enum – třída
+          href: ../standard-library/is-enum-class.md
+        - name: is_final – třída
+          href: ../standard-library/is-final-class.md
+        - name: is_floating_point – třída
+          href: ../standard-library/is-floating-point-class.md
+        - name: is_function – třída
+          href: ../standard-library/is-function-class.md
+        - name: is_fundamental – třída
+          href: ../standard-library/is-fundamental-class.md
+        - name: is_integral – třída
+          href: ../standard-library/is-integral-class.md
+        - name: is_invocable – třídy
+          href: ../standard-library/is-invocable-classes.md
+        - name: is_literal_type – třída
+          href: ../standard-library/is-literal-type-class.md
+        - name: is_lvalue_reference – třída
+          href: ../standard-library/is-lvalue-reference-class.md
+        - name: is_member_function_pointer – třída
+          href: ../standard-library/is-member-function-pointer-class.md
+        - name: is_member_object_pointer – třída
+          href: ../standard-library/is-member-object-pointer-class.md
+        - name: is_member_pointer – třída
+          href: ../standard-library/is-member-pointer-class.md
+        - name: is_move_assignable – třída
+          href: ../standard-library/is-move-assignable-class.md
+        - name: is_move_constructible – třída
+          href: ../standard-library/is-move-constructible-class.md
+        - name: is_nothrow_assignable – třída
+          href: ../standard-library/is-nothrow-assignable-class.md
+        - name: is_nothrow_constructible – třída
+          href: ../standard-library/is-nothrow-constructible-class.md
+        - name: is_nothrow_copy_assignable – třída
+          href: ../standard-library/is-nothrow-copy-assignable-class.md
+        - name: is_nothrow_copy_constructible – třída
+          href: ../standard-library/is-nothrow-copy-constructible-class.md
+        - name: is_nothrow_default_constructible – třída
+          href: ../standard-library/is-nothrow-default-constructible-class.md
+        - name: is_nothrow_destructible – třída
+          href: ../standard-library/is-nothrow-destructible-class.md
+        - name: is_nothrow_move_assignable – třída
+          href: ../standard-library/is-nothrow-move-assignable-class.md
+        - name: is_nothrow_move_constructible – třída
+          href: ../standard-library/is-nothrow-move-constructible-class.md
+        - name: is_null_pointer – třída
+          href: ../standard-library/is-null-pointer-class.md
+        - name: is_object – třída
+          href: ../standard-library/is-object-class.md
+        - name: is_pod – třída
+          href: ../standard-library/is-pod-class.md
+        - name: is_pointer – třída
+          href: ../standard-library/is-pointer-class.md
+        - name: is_polymorphic – třída
+          href: ../standard-library/is-polymorphic-class.md
+        - name: is_reference – třída
+          href: ../standard-library/is-reference-class.md
+        - name: is_rvalue_reference – třída
+          href: ../standard-library/is-rvalue-reference-class.md
+        - name: is_same – třída
+          href: ../standard-library/is-same-class.md
+        - name: is_scalar – třída
+          href: ../standard-library/is-scalar-class.md
+        - name: is_signed – třída
+          href: ../standard-library/is-signed-class.md
+        - name: is_standard_layout – třída
+          href: ../standard-library/is-standard-layout-class.md
+        - name: is_trivial – třída
+          href: ../standard-library/is-trivial-class.md
+        - name: is_trivially_assignable – třída
+          href: ../standard-library/is-trivially-assignable-class.md
+        - name: is_trivially_constructible – třída
+          href: ../standard-library/is-trivially-constructible-class.md
+        - name: is_trivially_copy_assignable – třída
+          href: ../standard-library/is-trivially-copy-assignable-class.md
+        - name: is_trivially_copy_constructible – třída
+          href: ../standard-library/is-trivially-copy-constructible-class.md
+        - name: is_trivially_copyable – třída
+          href: ../standard-library/is-trivially-copyable-class.md
+        - name: is_trivially_default_constructible – třída
+          href: ../standard-library/is-trivially-default-constructible-class.md
+        - name: is_trivially_destructible – třída
+          href: ../standard-library/is-trivially-destructible-class.md
+        - name: is_trivially_move_assignable – třída
+          href: ../standard-library/is-trivially-move-assignable-class.md
+        - name: is_trivially_move_constructible – třída
+          href: ../standard-library/is-trivially-move-constructible-class.md
+        - name: is_union – třída
+          href: ../standard-library/is-union-class.md
+        - name: is_unsigned – třída
+          href: ../standard-library/is-unsigned-class.md
+        - name: is_void – třída
+          href: ../standard-library/is-void-class.md
+        - name: is_volatile – třída
+          href: ../standard-library/is-volatile-class.md
+        - name: make_signed – třída
+          href: ../standard-library/make-signed-class.md
+        - name: make_unsigned – třída
+          href: ../standard-library/make-unsigned-class.md
+        - name: rank – třída
+          href: ../standard-library/rank-class.md
+        - name: remove_all_extents – třída
+          href: ../standard-library/remove-all-extents-class.md
+        - name: remove_const – třída
+          href: ../standard-library/remove-const-class.md
+        - name: remove_cv – třída
+          href: ../standard-library/remove-cv-class.md
+        - name: remove_extent – třída
+          href: ../standard-library/remove-extent-class.md
+        - name: remove_pointer – třída
+          href: ../standard-library/remove-pointer-class.md
+        - name: remove_reference – třída
+          href: ../standard-library/remove-reference-class.md
+        - name: remove_volatile – třída
+          href: ../standard-library/remove-volatile-class.md
+        - name: result_of – třída
+          href: ../standard-library/result-of-class.md
+        - name: underlying_type – třída
+          href: ../standard-library/underlying-type-class.md
+        - name: <type_traits> – funkce
+          href: ../standard-library/type-traits-functions.md
+        - name: <type_traits> – definice Typedef
+          href: ../standard-library/type-traits-typedefs.md
+    - name: <typeindex>
+      expanded: false
+      items:
+        - name: <typeindex>
+          href: ../standard-library/typeindex.md
+        - name: hash – struktura
+          href: ../standard-library/hash-structure.md
+        - name: type_index – třída
+          href: ../standard-library/type-index-class.md
+    - name: <typeinfo>
+      href: ../standard-library/typeinfo.md
+    - name: <unordered_map>
+      expanded: false
+      items:
+        - name: <unordered_map>
+          href: ../standard-library/unordered-map.md
+        - name: <unordered_map> – funkce
+          href: ../standard-library/unordered-map-functions.md
+        - name: <unordered_map> – operátory
+          href: ../standard-library/unordered-map-operators.md
+        - name: unordered_map – třída
+          href: ../standard-library/unordered-map-class.md
+        - name: unordered_multimap – třída
+          href: ../standard-library/unordered-multimap-class.md
+    - name: <unordered_set>
+      expanded: false
+      items:
+        - name: <unordered_set>
+          href: ../standard-library/unordered-set.md
+        - name: <unordered_set> – funkce
+          href: ../standard-library/unordered-set-functions.md
+        - name: <unordered_set> – operátory
+          href: ../standard-library/unordered-set-operators.md
+        - name: unordered_set – třída
+          href: ../standard-library/unordered-set-class.md
+        - name: unordered_multiset – třída
+          href: ../standard-library/unordered-multiset-class.md
+    - name: <utility>
+      expanded: false
+      items:
+        - name: <utility>
+          href: ../standard-library/utility.md
+        - name: <utility> – funkce
+          href: ../standard-library/utility-functions.md
+        - name: <utility> – operátory
+          href: ../standard-library/utility-operators.md
+        - name: identity – struktura
+          href: ../standard-library/identity-structure.md
+        - name: pair – struktura
+          href: ../standard-library/pair-structure.md
+    - name: <valarray>
+      expanded: false
+      items:
+        - name: <valarray>
+          href: ../standard-library/valarray.md
+        - name: <valarray> – funkce
+          href: ../standard-library/valarray-functions.md
+        - name: <valarray> – operátory
+          href: ../standard-library/valarray-operators.md
+        - name: gslice – třída
+          href: ../standard-library/gslice-class.md
+        - name: gslice_array – třída
+          href: ../standard-library/gslice-array-class.md
+        - name: indirect_array – třída
+          href: ../standard-library/indirect-array-class.md
+        - name: mask_array – třída
+          href: ../standard-library/mask-array-class.md
+        - name: slice – třída
+          href: ../standard-library/slice-class.md
+        - name: slice_array – třída
+          href: ../standard-library/slice-array-class.md
+        - name: valarray – třída
+          href: ../standard-library/valarray-class.md
+        - name: valarray<bool> – třída
+          href: ../standard-library/valarray-bool-class.md
+    - name: <variant>
+      expanded: false
+      items:
+        - name: <variant>
+          href: ../standard-library/variant.md
+        - name: <variant> – funkce
+          href: ../standard-library/variant-functions.md
+        - name: <variant> – operátory
+          href: ../standard-library/variant-operators.md
+        - name: variant – třída
+          href: ../standard-library/variant-class.md
+    - name: <vector>
+      expanded: false
+      items:
+        - name: <vector>
+          href: ../standard-library/vector.md
+        - name: vector – třída
+          href: ../standard-library/vector-class.md
+        - name: vector<bool> – třída
+          expanded: false
+          items:
+            - name: vector<bool> – třída
+              href: ../standard-library/vector-bool-class.md
+            - name: 'vektor<bool>:: reference – třída'
+              href: ../standard-library/vector-bool-reference-class.md
+              expanded: false
+              items:
+                - name: 'vector<bool>::reference::flip'
+                  href: ../standard-library/vector-bool-reference-flip.md
+                - name: 'vector<bool>::reference::operator bool'
+                  href: ../standard-library/vector-bool-reference-operator-bool.md
+                - name: 'vector<bool>::reference::operator='
+                  href: ../standard-library/vector-bool-reference-operator-assign.md
+        - name: <vector> – funkce
+          href: ../standard-library/vector-functions.md
+        - name: <vector> – operátory
+          href: ../standard-library/vector-operators.md
+- name: Standardní knihovna C++ – přehled
+  expanded: false
+  items:
+    - name: Standardní knihovna C++ – přehled
+      href: ../standard-library/cpp-standard-library-overview.md
+    - name: Používání hlaviček knihoven C++
+      href: ../standard-library/using-cpp-library-headers.md
+    - name: Konvence knihovny C++
+      href: ../standard-library/cpp-library-conventions.md
+    - name: Spuštění a ukončení programu C++
+      href: ../standard-library/cpp-program-startup-and-termination.md
+    - name: 'Bezpečné knihovny: Standardní knihovna C++'
+      href: ../standard-library/safe-libraries-cpp-standard-library.md
+      expanded: false
+      items:
+        - name: _ITERATOR_DEBUG_LEVEL
+          href: ../standard-library/iterator-debug-level.md
+        - name: _SCL_SECURE_NO_WARNINGS
+          href: ../standard-library/scl-secure-no-warnings.md
+        - name: Kontrolované iterátory
+          expanded: false
+          items:
+            - name: Kontrolované iterátory
+              href: ../standard-library/checked-iterators.md
+            - name: _SECURE_SCL
+              href: ../standard-library/secure-scl.md
+        - name: Podpora ladění iterátorů
+          expanded: false
+          items:
+            - name: Podpora ladění iterátorů
+              href: ../standard-library/debug-iterator-support.md
+            - name: _HAS_ITERATOR_DEBUGGING
+              href: ../standard-library/has-iterator-debugging.md
+    - name: Bezpečný přístup z více vláken ve standardní knihovně C++
+      href: ../standard-library/thread-safety-in-the-cpp-standard-library.md
+    - name: stdext – obor názvů
+      href: ../standard-library/stdext-namespace.md
+- name: Kontejnery standardní knihovny C++
+  expanded: false
+  items:
+    - name: Kontejnery standardní knihovny C++
+      href: ../standard-library/stl-containers.md
+    - name: <sample container>
+      expanded: false
+      items:
+        - name: <sample container>
+          href: ../standard-library/sample-container.md
+        - name: <sample container> – operátory
+          expanded: false
+          items:
+            - name: <sample container> – operátory
+              href: ../standard-library/sample-container-operators.md
+            - name: operator!=
+              href: ../standard-library/operator-inequality.md
+            - name: operator== (<sample container>)
+              href: ../standard-library/operator-equality-sample-container.md
+            - name: operator< (<sample container>)
+              href: ../standard-library/operator-less-than-sample-container.md
+            - name: operator<= (<sample container>)
+              href: ../standard-library/operator-less-or-equal-sample-container.md
+            - name: operator> (<sample container>)
+              href: ../standard-library/operator-greater-than-sample-container.md
+            - name: operator>=
+              href: ../standard-library/operator-greater-or-equal.md
+        - name: <sample container> – specializované funkce šablon
+          expanded: false
+          items:
+            - name: <sample container> – specializované funkce šablon
+              href: ../standard-library/sample-container-specialized-template-functions.md
+            - name: swap (<sample container>)
+              href: ../standard-library/swap-sample-container.md
+        - name: <sample container> – třídy
+          expanded: false
+          items:
+            - name: <sample container> – třídy
+              href: ../standard-library/sample-container-classes.md
+            - name: Ukázkový kontejner – třída
+              expanded: false
+              items:
+                - name: Ukázkový kontejner – třída
+                  href: ../standard-library/sample-container-class.md
+                - name: Ukázkový kontejner – členy
+                  href: ../standard-library/sample-container-members.md
+                - name: Ukázkový kontejner – definice typedef
+                  expanded: false
+                  items:
+                    - name: Ukázkový kontejner – definice typedef
+                      href: ../standard-library/sample-container-typedefs.md
+                    - name: 'Třída kontejneru::const_iterator'
+                      href: ../standard-library/container-class-const-iterator.md
+                    - name: 'Třída kontejneru::const_reference'
+                      href: ../standard-library/container-class-const-reference.md
+                    - name: 'Třída kontejneru::const_reverse_iterator'
+                      href: ../standard-library/container-class-const-reverse-iterator.md
+                    - name: 'Třída kontejneru::difference_type'
+                      href: ../standard-library/container-class-difference-type.md
+                    - name: 'Třída kontejneru::iterator'
+                      href: ../standard-library/container-class-iterator.md
+                    - name: 'Třída kontejneru::reference'
+                      href: ../standard-library/container-class-reference.md
+                    - name: 'Třída kontejneru::reverse_iterator'
+                      href: ../standard-library/container-class-reverse-iterator.md
+                    - name: 'Třída kontejneru::size_type'
+                      href: ../standard-library/container-class-size-type.md
+                    - name: 'Třída kontejneru::value_type'
+                      href: ../standard-library/container-class-value-type.md
+                - name: Ukázkový kontejner – členské funkce
+                  expanded: false
+                  items:
+                    - name: Ukázkový kontejner – členské funkce
+                      href: ../standard-library/sample-container-member-functions.md
+                    - name: 'Třída kontejneru::begin'
+                      href: ../standard-library/container-class-begin.md
+                    - name: 'Třída kontejneru::clear'
+                      href: ../standard-library/container-class-clear.md
+                    - name: 'Třída kontejneru::empty'
+                      href: ../standard-library/container-class-empty.md
+                    - name: 'Třída kontejneru::end'
+                      href: ../standard-library/container-class-end.md
+                    - name: 'Třída kontejneru::erase'
+                      href: ../standard-library/container-class-erase.md
+                    - name: 'Třída kontejneru::max_size'
+                      href: ../standard-library/container-class-max-size.md
+                    - name: 'Třída kontejneru::rbegin'
+                      href: ../standard-library/container-class-rbegin.md
+                    - name: 'Třída kontejneru::rend'
+                      href: ../standard-library/container-class-rend.md
+                    - name: 'Třída kontejneru::size'
+                      href: ../standard-library/container-class-size.md
+                    - name: 'Třída kontejneru::swap'
+                      href: ../standard-library/container-class-swap.md
+- name: Iterátory
+  href: ../standard-library/iterators.md
+- name: Algoritmy
+  href: ../standard-library/algorithms.md
+- name: Alokátory
+  href: ../standard-library/allocators.md
+- name: Objekty funkcí ve standardní knihovně C++
+  href: ../standard-library/function-objects-in-the-stl.md
+- name: iostream – programování
+  expanded: false
+  items:
+    - name: iostream – programování
+      href: ../standard-library/iostream-programming.md
+    - name: Formátování řetězců a I/O
+      href: ../text/string-and-i-o-formatting-modern-cpp.md
+    - name: Co je stream
+      expanded: false
+      items:
+        - name: Co je stream
+          href: ../standard-library/what-a-stream-is.md
+        - name: Vstupně-výstupní alternativy
+          href: ../standard-library/input-output-alternatives.md
+    - name: Výstupní streamy
+      expanded: false
+      items:
+        - name: Výstupní streamy
+          href: ../standard-library/output-streams.md
+        - name: Vytváření objektů výstupního streamu
+          href: ../standard-library/constructing-output-stream-objects.md
+        - name: Používání operátorů insertion a řízení formátu
+          href: ../standard-library/using-insertion-operators-and-controlling-format.md
+        - name: Členské funkce streamu výstupního souboru
+          href: ../standard-library/output-file-stream-member-functions.md
+        - name: Účinky ukládání do vyrovnávací paměti
+          href: ../standard-library/effects-of-buffering.md
+        - name: Binární výstupní soubory
+          href: ../standard-library/binary-output-files.md
+        - name: Přetěžování operátoru << pro vaše vlastní třídy
+          href: ../standard-library/overloading-the-output-operator-for-your-own-classes.md
+        - name: Psaní vlastních manipulátorů bez argumentů
+          href: ../standard-library/writing-your-own-manipulators-without-arguments.md
+    - name: Vstupní streamy
+      expanded: false
+      items:
+        - name: Vstupní streamy
+          href: ../standard-library/input-streams.md
+        - name: Vytváření objektů vstupního streamu
+          href: ../standard-library/constructing-input-stream-objects.md
+        - name: Používání operátorů extrakce
+          href: ../standard-library/using-extraction-operators.md
+        - name: Testování pro nalezení chyb extrakce
+          href: ../standard-library/testing-for-extraction-errors.md
+        - name: Manipulátory vstupního streamu
+          href: ../standard-library/input-stream-manipulators.md
+        - name: Členské funkce vstupního streamu
+          href: ../standard-library/input-stream-member-functions.md
+        - name: Přetěžování operátoru >> pro vaše vlastní třídy
+          href: ../standard-library/overloading-the-input-operator-for-your-own-classes.md
+    - name: Vstupně-výstupní streamy
+      href: ../standard-library/input-output-streams.md
+    - name: iostreams – konvence
+      href: ../standard-library/iostreams-conventions.md
+    - name: Vlastní manipulátory s argumenty
+      expanded: false
+      items:
+        - name: Vlastní manipulátory s argumenty
+          href: ../standard-library/custom-manipulators-with-arguments.md
+        - name: Manipulátory výstupního streamu s jedním argumentem (int nebo long)
+          href: ../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md
+        - name: Jiné manipulátory výstupního streamu s jedním argumentem
+          href: ../standard-library/other-one-argument-output-stream-manipulators.md
+- name: Regulární výrazy (C++)
+  href: ../standard-library/regular-expressions-cpp.md
+- name: Navigace v systému souborů
+  href: ../standard-library/file-system-navigation.md

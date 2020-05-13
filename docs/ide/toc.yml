@@ -1,0 +1,73 @@
+- name: Čtení a psaní kódu C++ v sadě Visual Studio
+  expanded: true
+  items:
+    - name: Čtení a pochopení kódu C++
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: Úpravy a refaktorování kódu C++
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: Navigace v kódu C++
+      href: ../ide/navigate-code-cpp.md
+    - name: Nastavení předvoleb kódování C++
+      href: ../ide/how-to-set-preferences.md
+    - name: Spolupráce přes Live Share pro C++
+      href: ../ide/live-share-cpp.md
+    - name: Změna signatury
+      href: ../ide/refactoring/change-signature.md
+    - name: Převod na nezpracovaný řetězcový literál
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: Vytvoření deklarace/definice
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: Extrahování funkce
+      href: ../ide/refactoring/extract-function.md
+    - name: Implementace čistě virtuálních funkcí
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: Definice funkce Move
+      href: ../ide/refactoring/move-definition-location.md
+    - name: přejmenování
+      href: ../ide/refactoring/rename.md
+- name: "Použití prostředí IDE sady Visual Studio pro vývoj desktopových aplikací v\_jazyce C++"
+  expanded: true
+  items:
+    - name: "Použití prostředí IDE sady Visual Studio pro vývoj desktopových aplikací v\_jazyce C++"
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: "Návod: Práce s\_projekty a řešeními (C++)"
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 'Návod: Sestavení projektu (C++)'
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 'Návod: Testování projektu (C++)'
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 'Návod: Ladění projektu (C++)'
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 'Návod: Nasazení programu (C++)'
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: Přidání funkce pomocí Průvodců kódem
+  expanded: true
+  items:
+    - name: Přidání funkce pomocí Průvodců kódem
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: Přidání třídy
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: "Přidání třídy z\_ovládacího prvku ActiveX"
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: Přidání obecné třídy C++
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: Přidání členské funkce
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: Přidání členské proměnné
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: Přidání metody
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: Přidání vlastnosti
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: Přidání události
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: Přidání obslužné rutiny události
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: Vytvoření rozhraní modelu COM
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: Implementace bodu připojení
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: Implementace rozhraní
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: Přepsání virtuální funkce
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

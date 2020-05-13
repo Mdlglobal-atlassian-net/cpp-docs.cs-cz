@@ -1,0 +1,742 @@
+- name: Referenční dokumentace jazyka C
+  href: ../c-language/c-language-reference.md
+- name: Organizace referenční dokumentace jazyka C
+  expanded: false
+  items:
+    - name: Organizace referenční dokumentace jazyka C
+      href: ../c-language/organization-of-the-c-language-reference.md
+    - name: Rozsah této příručky
+      href: ../c-language/scope-of-this-manual.md
+    - name: ANSI – shoda
+      href: ../c-language/ansi-conformance.md
+- name: Elementy jazyka C
+  expanded: false
+  items:
+    - name: Elementy jazyka C
+      href: ../c-language/elements-of-c.md
+    - name: Tokeny jazyka C
+      expanded: false
+      items:
+        - name: Tokeny jazyka C
+          href: ../c-language/c-tokens.md
+        - name: Znaky mezery
+          href: ../c-language/white-space-characters.md
+        - name: Komentáře v jazyce C
+          href: ../c-language/c-comments.md
+        - name: Vyhodnocení tokenů
+          href: ../c-language/evaluation-of-tokens.md
+    - name: Klíčová slova jazyka C
+      href: ../c-language/c-keywords.md
+    - name: identifikátory jazyka C
+      expanded: false
+      items:
+        - name: Identifikátory jazyka C
+          href: ../c-language/c-identifiers.md
+        - name: Vícebajtové a široké znaky
+          href: ../c-language/multibyte-and-wide-characters.md
+        - name: Trigraphs
+          href: ../c-language/trigraphs.md
+    - name: Konstanty jazyka C
+      expanded: false
+      items:
+        - name: Konstanty jazyka C
+          href: ../c-language/c-constants.md
+        - name: Konstanty jazyka C s plovoucí desetinnou čárkou
+          expanded: false
+          items:
+            - name: Konstanty jazyka C s plovoucí desetinnou čárkou
+              href: ../c-language/c-floating-point-constants.md
+            - name: Omezení konstant s plovoucí desetinnou čárkou
+              href: ../c-language/limits-on-floating-point-constants.md
+        - name: Konstanty celočíselných typů jazyka C
+          expanded: false
+          items:
+            - name: Konstanty celočíselných typů jazyka C
+              href: ../c-language/c-integer-constants.md
+            - name: Celočíselné typy
+              href: ../c-language/integer-types.md
+            - name: Omezení celočíselných typů v jazycích C a C++
+              href: ../c-language/cpp-integer-limits.md
+        - name: Konstanty znaků jazyka C
+          expanded: false
+          items:
+            - name: Konstanty znaků jazyka C
+              href: ../c-language/c-character-constants.md
+            - name: Typy znaků
+              href: ../c-language/character-types.md
+            - name: Znaková sada spuštění
+              href: ../c-language/execution-character-set.md
+            - name: Řídicí sekvence
+              href: ../c-language/escape-sequences.md
+            - name: Specifikace osmičkových a šestnáctkových znaků
+              href: ../c-language/octal-and-hexadecimal-character-specifications.md
+    - name: Řetězcové literály jazyka C
+      expanded: false
+      items:
+        - name: Řetězcové literály jazyka C
+          href: ../c-language/c-string-literals.md
+        - name: Typ pro řetězcové literály
+          href: ../c-language/type-for-string-literals.md
+        - name: Úložiště řetězcových literálů
+          href: ../c-language/storage-of-string-literals.md
+        - name: Zřetězení řetězcových literálů
+          href: ../c-language/string-literal-concatenation.md
+        - name: Maximální délka řetězce
+          href: ../c-language/maximum-string-length.md
+    - name: Interpunkce a speciální znaky
+      href: ../c-language/punctuation-and-special-characters.md
+- name: Struktura programu
+  expanded: false
+  items:
+    - name: Struktura programu
+      href: ../c-language/program-structure.md
+    - name: Zdrojové soubory a zdrojové programy
+      expanded: false
+      items:
+        - name: Zdrojové soubory a zdrojové programy
+          href: ../c-language/source-files-and-source-programs.md
+        - name: Direktivy pro preprocesor
+          href: ../c-language/directives-to-the-preprocessor.md
+        - name: Pragmas jazyka C
+          href: ../c-language/c-pragmas.md
+        - name: Deklarace a definice jazyka C
+          href: ../c-language/c-declarations-and-definitions.md
+        - name: Deklarace a definice funkcí
+          href: ../c-language/function-declarations-and-definitions.md
+        - name: Bloky
+          href: ../c-language/blocks.md
+        - name: Ukázkový program
+          href: ../c-language/example-program.md
+    - name: main – spuštění funkce a programu
+      expanded: false
+      items:
+        - name: main – spuštění funkce a programu
+          href: ../c-language/main-function-and-program-execution.md
+        - name: Používání výrazu wmain
+          href: ../c-language/using-wmain.md
+        - name: Popis argumentu
+          href: ../c-language/argument-description.md
+        - name: Rozbalení argumentů zástupných znaků
+          href: ../c-language/expanding-wildcard-arguments.md
+        - name: Analýza argumentů příkazového řádku jazyka C
+          href: ../c-language/parsing-c-command-line-arguments.md
+        - name: Přizpůsobení zpracování příkazového řádku jazyka C
+          href: ../c-language/customizing-c-command-line-processing.md
+    - name: 'Životnost, rozsah, viditelnost a propojení'
+      expanded: false
+      items:
+        - name: 'Doba platnosti, rozsah, viditelnost a propojení'
+          href: ../c-language/lifetime-scope-visibility-and-linkage.md
+        - name: Doba platnosti
+          href: ../c-language/lifetime.md
+        - name: Rozsah a viditelnost
+          href: ../c-language/scope-and-visibility.md
+        - name: Shrnutí doby platnosti a viditelnosti
+          href: ../c-language/summary-of-lifetime-and-visibility.md
+        - name: Propojení
+          expanded: false
+          items:
+            - name: Propojení
+              href: ../c-language/linkage.md
+            - name: Interní propojení
+              href: ../c-language/internal-linkage.md
+            - name: Externí propojení
+              href: ../c-language/external-linkage.md
+            - name: Bez propojení
+              href: ../c-language/no-linkage.md
+    - name: Obory názvů
+      href: ../c-language/name-spaces.md
+- name: Deklarace a typy
+  expanded: false
+  items:
+    - name: Deklarace a typy
+      href: ../c-language/declarations-and-types.md
+    - name: Přehled deklarací
+      href: ../c-language/overview-of-declarations.md
+    - name: Třídy úložiště jazyka C
+      expanded: false
+      items:
+        - name: třídy úložiště jazyka C
+          href: ../c-language/c-storage-classes.md
+        - name: Specifikátory třídy úložiště pro deklarace na externí úrovni
+          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+        - name: Specifikátory třídy úložiště pro deklarace na interní úrovni
+          expanded: false
+          items:
+            - name: Specifikátory třídy úložiště pro deklarace na interní úrovni
+              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+            - name: auto – specifikátor třídy úložiště
+              href: ../c-language/auto-storage-class-specifier.md
+            - name: register – specifikátor třídy úložiště
+              href: ../c-language/register-storage-class-specifier.md
+            - name: static – specifikátor třídy úložiště
+              href: ../c-language/static-storage-class-specifier.md
+            - name: extern – specifikátor třídy úložiště
+              href: ../c-language/extern-storage-class-specifier.md
+        - name: Specifikátory třídy úložiště s deklaracemi funkce
+          href: ../c-language/storage-class-specifiers-with-function-declarations.md
+    - name: Specifikátory typu jazyka C
+      expanded: false
+      items:
+        - name: Specifikátory typu jazyka C
+          href: ../c-language/c-type-specifiers.md
+        - name: Specifikátory datových typů a jejich ekvivalenty
+          href: ../c-language/data-type-specifiers-and-equivalents.md
+    - name: Kvalifikátory typu
+      href: ../c-language/type-qualifiers.md
+    - name: Deklarátory a deklarace proměnných
+      expanded: false
+      items:
+        - name: Deklarátory a deklarace proměnných
+          href: ../c-language/declarators-and-variable-declarations.md
+        - name: Deklarace jednoduchých proměnných
+          href: ../c-language/simple-variable-declarations.md
+        - name: Deklarace výčtů v jazyce C
+          href: ../c-language/c-enumeration-declarations.md
+        - name: Deklarace struktury
+          expanded: false
+          items:
+            - name: Deklarace struktury
+              href: ../c-language/structure-declarations.md
+            - name: Bitová pole jazyka C
+              href: ../c-language/c-bit-fields.md
+            - name: Uchovávání a zarovnání struktur
+              href: ../c-language/storage-and-alignment-of-structures.md
+        - name: Deklarace sjednocení
+          expanded: false
+          items:
+            - name: Deklarace sjednocení
+              href: ../c-language/union-declarations.md
+            - name: Ukládání sjednocení
+              href: ../c-language/storage-of-unions.md
+        - name: Deklarace pole
+          expanded: false
+          items:
+            - name: Deklarace pole
+              href: ../c-language/array-declarations.md
+            - name: Úložiště polí
+              href: ../c-language/storage-of-arrays.md
+        - name: Deklarace ukazatelů
+          expanded: false
+          items:
+            - name: Deklarace ukazatelů
+              href: ../c-language/pointer-declarations.md
+            - name: Úložiště adres
+              href: ../c-language/storage-of-addresses.md
+        - name: Základní ukazatelé (C)
+          href: ../c-language/based-pointers-c.md
+        - name: Deklarátory abstraktu jazyka C
+          href: ../c-language/c-abstract-declarators.md
+    - name: Výklad složitějších deklarátorů
+      href: ../c-language/interpreting-more-complex-declarators.md
+    - name: Inicializace
+      expanded: false
+      items:
+        - name: Inicializace
+          href: ../c-language/initialization.md
+        - name: Inicializace skalárních typů
+          href: ../c-language/initializing-scalar-types.md
+        - name: Inicializace agregovaných typů
+          href: ../c-language/initializing-aggregate-types.md
+        - name: Inicializace řetězců
+          href: ../c-language/initializing-strings.md
+    - name: Úložiště základních typů
+      expanded: false
+      items:
+        - name: Úložiště základních typů
+          href: ../c-language/storage-of-basic-types.md
+        - name: Znakový typ
+          href: ../c-language/type-char.md
+        - name: Typ int
+          href: ../c-language/type-int.md
+        - name: Celočíselné typy jazyka C s nastavenou velikostí
+          href: ../c-language/c-sized-integer-types.md
+        - name: Float – typ
+          href: ../c-language/type-float.md
+        - name: Double – typ
+          href: ../c-language/type-double.md
+        - name: long double – typ
+          href: ../c-language/type-long-double.md
+    - name: Neúplné typy
+      href: ../c-language/incomplete-types.md
+    - name: Typedef – deklarace
+      href: ../c-language/typedef-declarations.md
+    - name: Rozšířené atributy třídy úložiště jazyka C
+      expanded: false
+      items:
+        - name: Rozšířené atributy třídy úložiště jazyka C
+          href: ../c-language/c-extended-storage-class-attributes.md
+        - name: Import a export knihovny DLL
+          href: ../c-language/dll-import-and-export.md
+        - name: Naked (C)
+          href: ../c-language/naked-c.md
+        - name: Lokální úložiště vláken
+          href: ../c-language/thread-local-storage.md
+- name: Výrazy a přiřazení
+  expanded: false
+  items:
+    - name: Výrazy a přiřazení
+      href: ../c-language/expressions-and-assignments.md
+    - name: Operandy a výrazy
+      expanded: false
+      items:
+        - name: Operandy a výrazy
+          href: ../c-language/operands-and-expressions.md
+        - name: Primární výrazy jazyka C
+          expanded: false
+          items:
+            - name: Primární výrazy jazyka C
+              href: ../c-language/c-primary-expressions.md
+            - name: Identifikátory v primárních výrazech
+              href: ../c-language/identifiers-in-primary-expressions.md
+            - name: Konstanty v primárních výrazech
+              href: ../c-language/constants-in-primary-expressions.md
+            - name: Řetězcové literály v primárních výrazech
+              href: ../c-language/string-literals-in-primary-expressions.md
+            - name: Výrazy v závorkách
+              href: ../c-language/expressions-in-parentheses.md
+        - name: Výrazy hodnot l-value a r-value
+          href: ../c-language/l-value-and-r-value-expressions.md
+        - name: Výrazy konstant v jazyce C
+          href: ../c-language/c-constant-expressions.md
+        - name: Vyhodnocení výrazu (C)
+          expanded: false
+          items:
+            - name: Vyhodnocení výrazu (C)
+              href: ../c-language/expression-evaluation-c.md
+            - name: Vedlejší efekty
+              href: ../c-language/side-effects.md
+            - name: Body sekvence jazyka C
+              href: ../c-language/c-sequence-points.md
+    - name: Operátory jazyka C
+      expanded: false
+      items:
+        - name: Operátory jazyka C
+          href: ../c-language/c-operators.md
+        - name: Přednost a pořadí vyhodnocení
+          href: ../c-language/precedence-and-order-of-evaluation.md
+        - name: Obvyklé aritmetické převody
+          href: ../c-language/usual-arithmetic-conversions.md
+        - name: Operátory přípony
+          expanded: false
+          items:
+            - name: Operátory přípony
+              href: ../c-language/postfix-operators.md
+            - name: Jednorozměrná pole
+              href: ../c-language/one-dimensional-arrays.md
+            - name: Vícerozměrná pole (C)
+              href: ../c-language/multidimensional-arrays-c.md
+            - name: Volání funkcí (C)
+              href: ../c-language/function-call-c.md
+            - name: Členy struktury a sjednocení
+              href: ../c-language/structure-and-union-members.md
+            - name: Operátory inkrementace a dekrementace přípony jazyka C
+              href: ../c-language/c-postfix-increment-and-decrement-operators.md
+        - name: Unární operátory jazyka C
+          expanded: false
+          items:
+            - name: Unární operátory jazyka C
+              href: ../c-language/c-unary-operators.md
+            - name: Operátory inkrementace a dekrementace předpony
+              href: ../c-language/prefix-increment-and-decrement-operators.md
+            - name: Operátory dereference a adresa
+              href: ../c-language/indirection-and-address-of-operators.md
+            - name: Unární aritmetické operátory
+              href: ../c-language/unary-arithmetic-operators.md
+            - name: sizeof – operátor (C)
+              href: ../c-language/sizeof-operator-c.md
+        - name: Operátory přetypování
+          href: ../c-language/cast-operators.md
+        - name: Multiplikativní operátory jazyka C
+          href: ../c-language/c-multiplicative-operators.md
+        - name: Operátory sčítání jazyka C
+          expanded: false
+          items:
+            - name: Operátory sčítání jazyka C
+              href: ../c-language/c-additive-operators.md
+            - name: Sčítání (+)
+              href: ../c-language/addition-plus.md
+            - name: Odčítání (-)
+              href: ../c-language/subtraction-minus.md
+            - name: Používání operátorů sčítání
+              href: ../c-language/using-the-additive-operators.md
+            - name: Aritmetika ukazatele
+              href: ../c-language/pointer-arithmetic.md
+        - name: Operátory bitového posunu
+          href: ../c-language/bitwise-shift-operators.md
+        - name: Relační operátory a operátory rovnosti jazyka C
+          href: ../c-language/c-relational-and-equality-operators.md
+        - name: Bitové operátory jazyka C
+          href: ../c-language/c-bitwise-operators.md
+        - name: Logické operátory jazyka C
+          href: ../c-language/c-logical-operators.md
+        - name: Operátor podmíněného výrazu
+          href: ../c-language/conditional-expression-operator.md
+        - name: Operátory přiřazení v jazyce C
+          expanded: false
+          items:
+            - name: operátory přiřazení jazyka
+              href: ../c-language/c-assignment-operators.md
+            - name: Jednoduché přiřazení (C)
+              href: ../c-language/simple-assignment-c.md
+            - name: Složené přiřazení jazyka C
+              href: ../c-language/c-compound-assignment.md
+        - name: Operátor sekvenčního vyhodnocení
+          href: ../c-language/sequential-evaluation-operator.md
+    - name: Převody typu (C)
+      expanded: false
+      items:
+        - name: Převody typu (C)
+          href: ../c-language/type-conversions-c.md
+        - name: Převody přiřazení
+          expanded: false
+          items:
+            - name: Převody přiřazení
+              href: ../c-language/assignment-conversions.md
+            - name: Převody z integrálních typů se znaménkem
+              href: ../c-language/conversions-from-signed-integral-types.md
+            - name: Převody z integrálních typů bez znaménka
+              href: ../c-language/conversions-from-unsigned-integral-types.md
+            - name: Převody z typů s plovoucí desetinnou čárkou
+              href: ../c-language/conversions-from-floating-point-types.md
+            - name: Převod na a z typů ukazatele
+              href: ../c-language/conversions-to-and-from-pointer-types.md
+            - name: Převody z ostatních typů
+              href: ../c-language/conversions-from-other-types.md
+        - name: Převody přetypování
+          href: ../c-language/type-cast-conversions.md
+        - name: Převody funkce a volání
+          href: ../c-language/function-call-conversions.md
+- name: Příkazy (C)
+  expanded: false
+  items:
+    - name: Příkazy (C)
+      href: ../c-language/statements-c.md
+    - name: Přehled příkazů jazyka C
+      href: ../c-language/overview-of-c-statements.md
+    - name: break – příkaz (C)
+      href: ../c-language/break-statement-c.md
+    - name: Složený příkaz (C)
+      href: ../c-language/compound-statement-c.md
+    - name: continue – příkaz (C)
+      href: ../c-language/continue-statement-c.md
+    - name: do-while – příkaz (C)
+      href: ../c-language/do-while-statement-c.md
+    - name: Příkaz výrazu (C)
+      href: ../c-language/expression-statement-c.md
+    - name: for – příkaz (C)
+      href: ../c-language/for-statement-c.md
+    - name: Příkaz goto a příkazy s popiskem (C)
+      href: ../c-language/goto-and-labeled-statements-c.md
+    - name: if – příkaz (C)
+      href: ../c-language/if-statement-c.md
+    - name: Null – příkaz (C)
+      href: ../c-language/null-statement-c.md
+    - name: return – příkaz (C)
+      href: ../c-language/return-statement-c.md
+    - name: switch – příkaz (C)
+      href: ../c-language/switch-statement-c.md
+    - name: try-except – příkaz (C)
+      href: ../c-language/try-except-statement-c.md
+    - name: try-finally – příkaz (C)
+      href: ../c-language/try-finally-statement-c.md
+    - name: while – příkaz (C)
+      href: ../c-language/while-statement-c.md
+- name: Funkce (C)
+  expanded: false
+  items:
+    - name: Funkce (C)
+      href: ../c-language/functions-c.md
+    - name: Přehled funkcí
+      expanded: false
+      items:
+        - name: Přehled funkcí
+          href: ../c-language/overview-of-functions.md
+        - name: Zastaralé formy deklarací a definic funkcí
+          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+    - name: Definice funkcí jazyka C
+      expanded: false
+      items:
+        - name: Definice funkcí jazyka C
+          href: ../c-language/c-function-definitions.md
+        - name: Atributy funkce
+          expanded: false
+          items:
+            - name: Atributy funkce
+              href: ../c-language/function-attributes.md
+            - name: Určení konvencí volání
+              href: ../c-language/specifying-calling-conventions.md
+            - name: Vložené funkce
+              href: ../c-language/inline-functions.md
+            - name: Vložený assembler (C)
+              href: ../c-language/inline-assembler-c.md
+        - name: Import a export funkcí knihovny DLL
+          expanded: false
+          items:
+            - name: Import a export funkcí knihovny DLL
+              href: ../c-language/dll-import-and-export-functions.md
+            - name: Definice a deklarace (C)
+              href: ../c-language/definitions-and-declarations-c.md
+            - name: Definování vložených funkcí jazyka C příkazy dllexport a dllimport
+              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+            - name: Pravidla a omezení příkazů dllimport-dllexport
+              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+        - name: Holé funkce
+          expanded: false
+          items:
+            - name: Holé funkce
+              href: ../c-language/naked-functions.md
+            - name: Pravidla a omezení pro používání holých funkcí
+              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+            - name: Důležité informace k zápisu kódu prolog-epilog
+              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+        - name: Třída úložiště
+          href: ../c-language/storage-class.md
+        - name: Návratový typ
+          href: ../c-language/return-type.md
+        - name: Parametry
+          href: ../c-language/parameters.md
+        - name: Tělo funkce
+          href: ../c-language/function-body.md
+    - name: Prototypy funkcí
+      href: ../c-language/function-prototypes.md
+    - name: Volání funkcí
+      expanded: false
+      items:
+        - name: Volání funkcí
+          href: ../c-language/function-calls.md
+        - name: Arguments
+          href: ../c-language/arguments.md
+        - name: Volání s proměnlivým počtem argumentů
+          href: ../c-language/calls-with-a-variable-number-of-arguments.md
+        - name: Rekurzivní funkce
+          href: ../c-language/recursive-functions.md
+- name: Shrnutí syntaxe jazyka C
+  expanded: false
+  items:
+    - name: Shrnutí syntaxe jazyka C
+      href: ../c-language/c-language-syntax-summary.md
+    - name: Definice a konvence
+      href: ../c-language/definitions-and-conventions.md
+    - name: Gramatika slov
+      expanded: false
+      items:
+        - name: Gramatika slov
+          href: ../c-language/lexical-grammar.md
+        - name: Shrnutí tokenů
+          href: ../c-language/summary-of-tokens.md
+        - name: Shrnutí klíčových slov
+          href: ../c-language/summary-of-keywords.md
+        - name: Shrnutí identifikátorů
+          href: ../c-language/summary-of-identifiers.md
+        - name: Shrnutí konstant
+          href: ../c-language/summary-of-constants.md
+        - name: Shrnutí řetězcových literálů
+          href: ../c-language/summary-of-string-literals.md
+        - name: Operátory (C)
+          href: ../c-language/operators-c.md
+        - name: Interpunkční znaky
+          href: ../c-language/punctuators.md
+    - name: Gramatika struktury fráze
+      expanded: false
+      items:
+        - name: Gramatika struktury fráze
+          href: ../c-language/phrase-structure-grammar.md
+        - name: Shrnutí výrazů
+          href: ../c-language/summary-of-expressions.md
+        - name: Shrnutí deklarací
+          href: ../c-language/summary-of-declarations.md
+        - name: Shrnutí příkazů
+          href: ../c-language/summary-of-statements.md
+        - name: Externí definice
+          href: ../c-language/external-definitions.md
+- name: Chování definované implementací
+  expanded: false
+  items:
+    - name: Chování definované implementací
+      href: ../c-language/implementation-defined-behavior.md
+    - name: 'Převod: Diagnostika'
+      href: ../c-language/translation-diagnostics.md
+    - name: Prostředí
+      expanded: false
+      items:
+        - name: Prostředí
+          href: ../c-language/environment.md
+        - name: Argumenty operace main
+          href: ../c-language/arguments-to-main.md
+        - name: Interaktivní zařízení
+          href: ../c-language/interactive-devices.md
+    - name: Chování identifikátorů
+      expanded: false
+      items:
+        - name: Chování identifikátorů
+          href: ../c-language/behavior-of-identifiers.md
+        - name: Důležité znaky bez externího propojení
+          href: ../c-language/significant-characters-without-external-linkage.md
+        - name: Důležité znaky s externím propojením
+          href: ../c-language/significant-characters-with-external-linkage.md
+        - name: Velká a malá písmena
+          href: ../c-language/uppercase-and-lowercase.md
+    - name: Znaky
+      expanded: false
+      items:
+        - name: Znaky
+          href: ../c-language/characters.md
+        - name: Znaková sada ASCII
+          href: ../c-language/ascii-character-set.md
+        - name: Vícebajtové znaky
+          href: ../c-language/multibyte-characters.md
+        - name: Bity na znak
+          href: ../c-language/bits-per-character.md
+        - name: Znakové sady1
+          href: ../c-language/character-sets1.md
+        - name: Nezastoupené znakové konstanty
+          href: ../c-language/unrepresented-character-constants.md
+        - name: Široké znaky
+          href: ../c-language/wide-characters.md
+        - name: Převod vícebajtových znaků
+          href: ../c-language/converting-multibyte-characters.md
+        - name: Rozsah hodnot typu char
+          href: ../c-language/range-of-char-values.md
+    - name: Celá čísla
+      expanded: false
+      items:
+        - name: Celá čísla
+          href: ../c-language/integers.md
+        - name: Rozsah celočíselných hodnot
+          href: ../c-language/range-of-integer-values.md
+        - name: Degradace celých čísel
+          href: ../c-language/demotion-of-integers.md
+        - name: Podepsané bitové operace
+          href: ../c-language/signed-bitwise-operations.md
+        - name: Připomenutí
+          href: ../c-language/remainders.md
+        - name: Posuny doprava
+          href: ../c-language/right-shifts.md
+    - name: Matematika s plovoucí desetinnou čárkou
+      expanded: false
+      items:
+        - name: Matematika s plovoucí desetinnou čárkou
+          href: ../c-language/floating-point-math.md
+        - name: Hodnoty
+          href: ../c-language/values.md
+        - name: Přetypování celých čísel na hodnoty s plovoucí desetinnou čárkou
+          href: ../c-language/casting-integers-to-floating-point-values.md
+        - name: Zkrácení hodnot s plovoucí desetinnou čárkou
+          href: ../c-language/truncation-of-floating-point-values.md
+    - name: Pole a ukazatele
+      expanded: false
+      items:
+        - name: Pole a ukazatele
+          href: ../c-language/arrays-and-pointers.md
+        - name: Maximální velikost pole
+          href: ../c-language/largest-array-size.md
+        - name: Odečtení ukazatele
+          href: ../c-language/pointer-subtraction.md
+    - name: 'Registry: dostupnost registrů'
+      href: ../c-language/registers-availability-of-registers.md
+    - name: 'Struktury, sjednocení, výčty a bitová pole'
+      expanded: false
+      items:
+        - name: 'Struktury, sjednocení, výčty a bitová pole'
+          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+        - name: Nevhodný přístup ke sjednocení
+          href: ../c-language/improper-access-to-a-union.md
+        - name: Odsazení a zarovnání členů struktury
+          href: ../c-language/padding-and-alignment-of-structure-members.md
+        - name: Znak bitových polí
+          href: ../c-language/sign-of-bit-fields.md
+        - name: Úložiště bitových polí
+          href: ../c-language/storage-of-bit-fields.md
+        - name: enum – typ
+          href: ../c-language/enum-type.md
+    - name: 'Kvalifikátory: přístup k nestálým objektům'
+      href: ../c-language/qualifiers-access-to-volatile-objects.md
+    - name: 'Deklarátory: maximální počet'
+      href: ../c-language/declarators-maximum-number.md
+    - name: 'Příkazy: omezení příkazů přepínače'
+      href: ../c-language/statements-limits-on-switch-statements.md
+    - name: Direktivy předběžného zpracování
+      expanded: false
+      items:
+        - name: Direktivy předběžného zpracování
+          href: ../c-language/preprocessing-directives.md
+        - name: Konstanty a podmíněné zahrnutí znaků
+          href: ../c-language/character-constants-and-conditional-inclusion.md
+        - name: Zahrnutí názvů souboru v závorkách
+          href: ../c-language/including-bracketed-filenames.md
+        - name: Zahrnutí názvů souboru v uvozovkách
+          href: ../c-language/including-quoted-filenames.md
+        - name: Sekvence znaků
+          href: ../c-language/character-sequences.md
+        - name: Pragmas
+          href: ../c-language/pragmas.md
+        - name: Výchozí datum a čas
+          href: ../c-language/default-date-and-time.md
+    - name: Funkce knihovny
+      expanded: false
+      items:
+        - name: Funkce knihovny
+          href: ../c-language/library-functions.md
+        - name: Makro s hodnotou NULL
+          href: ../c-language/null-macro.md
+        - name: Diagnostika vytištěná podle funkce assert
+          href: ../c-language/diagnostic-printed-by-the-assert-function.md
+        - name: Testování znaků
+          href: ../c-language/character-testing.md
+        - name: Chyby domény
+          href: ../c-language/domain-errors.md
+        - name: Podtečení hodnot s plovoucí desetinnou čárkou
+          href: ../c-language/underflow-of-floating-point-values.md
+        - name: fmod – funkce
+          href: ../c-language/fmod-function.md
+        - name: signal – funkce (C)
+          href: ../c-language/signal-function-c.md
+        - name: Výchozí signály
+          href: ../c-language/default-signals.md
+        - name: Ukončení znaků nového řádku
+          href: ../c-language/terminating-newline-characters.md
+        - name: Prázdné řádky
+          href: ../c-language/blank-lines.md
+        - name: Znaky Null
+          href: ../c-language/null-characters.md
+        - name: Pozice souboru v režimu připojení
+          href: ../c-language/file-position-in-append-mode.md
+        - name: Zkrácení textových souborů
+          href: ../c-language/truncation-of-text-files.md
+        - name: Ukládání souboru do vyrovnávací paměti
+          href: ../c-language/file-buffering.md
+        - name: Soubory s nulovou délkou
+          href: ../c-language/zero-length-files.md
+        - name: Názvy souborů
+          href: ../c-language/filenames.md
+        - name: Omezení přístupu k souboru
+          href: ../c-language/file-access-limits.md
+        - name: Odstranění otevřených souborů
+          href: ../c-language/deleting-open-files.md
+        - name: Přejmenování existujícím názvem
+          href: ../c-language/renaming-with-a-name-that-exists.md
+        - name: Čtení hodnot ukazatele
+          href: ../c-language/reading-pointer-values.md
+        - name: Čtení rozsahů
+          href: ../c-language/reading-ranges.md
+        - name: Chyby pozice souboru
+          href: ../c-language/file-position-errors.md
+        - name: Zprávy generované funkcí perror
+          href: ../c-language/messages-generated-by-the-perror-function.md
+        - name: Přidělování nulové paměti
+          href: ../c-language/allocating-zero-memory.md
+        - name: abort – funkce (C)
+          href: ../c-language/abort-function-c.md
+        - name: atexit – funkce (C)
+          href: ../c-language/atexit-function-c.md
+        - name: Názvy prostředí
+          href: ../c-language/environment-names.md
+        - name: system – funkce
+          href: ../c-language/system-function.md
+        - name: strerror – funkce
+          href: ../c-language/strerror-function.md
+        - name: Časové pásmo
+          href: ../c-language/time-zone.md
+        - name: clock – funkce (C)
+          href: ../c-language/clock-function-c.md

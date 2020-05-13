@@ -1,0 +1,1462 @@
+- name: Projekty a systémy sestavení
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Projekty sady Visual Studio – C++
+  expanded: false
+  items:
+    - name: Projekty sady Visual Studio – C++
+      href: ../build/creating-and-managing-visual-cpp-projects.md
+    - name: Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio
+      expanded: false
+      items:
+        - name: Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio
+          href: ../build/working-with-project-properties.md
+        - name: Sdílení a opakované použití nastavení projektu sady Visual Studio
+          href: ../build/create-reusable-property-configurations.md
+        - name: Dědičnost vlastností projektu
+          href: ../build/project-property-inheritance.md
+        - name: Změna vlastností a cílů beze změny souboru projektu
+          href: ../build/modify-project-properties-without-changing-project-file.md
+    - name: Clang/LLVM v projektech sady Visual Studio (MSBuild)
+      href: ../build/clang-support-msbuild.md
+    - name: Referenční knihovny a komponenty v okamžiku sestavení
+      href: ../build/adding-references-in-visual-cpp-projects.md
+    - name: Uspořádání výstupních souborů projektu
+      href: ../build/how-to-organize-project-output-files-for-builds.md
+    - name: Postup vlastního sestavení a události sestavení
+      expanded: false
+      items:
+        - name: Postup vlastního sestavení a události sestavení
+          href: ../build/understanding-custom-build-steps-and-build-events.md
+        - name: Určení nástrojů vlastního sestavení
+          href: ../build/specifying-custom-build-tools.md
+        - name: Určení událostí sestavení
+          href: ../build/specifying-build-events.md
+        - name: Řešení potíží s přizpůsobením sestavení
+          href: ../build/troubleshooting-build-customizations.md
+        - name: Formátovaní výstupu kroku vlastního sestavení nebo události sestavení
+          href: ../build/formatting-the-output-of-a-custom-build-step-or-build-event.md
+    - name: "Vytvoření projektu z\_existujícího kódu"
+      href: ../build/how-to-create-a-cpp-project-from-existing-code.md
+- name: Projekty Otevřít složku pro C++
+  expanded: false
+  items:
+    - name: Projekty Otevřít složku pro C++
+      href: ../build/open-folder-projects-cpp.md
+    - name: Referenční informace ke schématu CppProperties.json
+      href: ../build/cppproperties-schema-reference.md
+    - name: Referenční informace ke schématu Tasks.vs.json (C++)
+      href: ../build/tasks-vs-json-schema-reference-cpp.md
+    - name: Referenční informace ke schématu Launch.vs.json (C++)
+      href: ../build/launch-vs-schema-reference-cpp.md
+- name: Projekty CMake
+  expanded: false
+  items:
+    - name: Projekty CMake
+      href: ../build/cmake-projects-in-visual-studio.md
+    - name: 'Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio'
+      href: ../build/get-started-linux-cmake.md
+    - name: Clang/LLVM v projektech CMake
+      href: ../build/clang-support-cmake.md
+    - name: Konfigurace projektu Linux CMake
+      href: ../build/../linux/cmake-linux-project.md
+    - name: Vlastní nastavení sestavení CMake
+      href: ../build/customize-cmake-settings.md
+    - name: Konfigurace ladicích relací CMake
+      href: ../build/configure-cmake-debugging-sessions.md
+    - name: Referenční informace k CMakeSettings.json
+      href: ../build/cmakesettings-reference.md
+    - name: Referenční informace k předdefinovanému schématu konfigurace CMake
+      href: ../build/cmake-predefined-configuration-reference.md
+- name: 'vcpkg: Správce balíčků pro C++'
+  href: ../build/vcpkg.md
+- name: C++ Build Insights
+  href: ../build-insights/get-started-with-cpp-build-insights.md
+- name: Předkompilované soubory hlaviček
+  href: ../build/creating-precompiled-header-files.md
+- name: Sestavení pro vydání C++
+  expanded: false
+  items:
+    - name: Sestavení pro vydání C++
+      href: ../build/release-builds.md
+    - name: 'Postupy: Vytváření sestavení pro vydání'
+      href: ../build/how-to-create-a-release-build.md
+    - name: Běžné problémy při vytváření sestavení pro vydání
+      href: ../build/common-problems-when-creating-a-release-build.md
+    - name: Oprava problémů se sestavením pro vydání
+      expanded: false
+      items:
+        - name: Oprava problémů se sestavením pro vydání
+          href: ../build/fixing-release-build-problems.md
+        - name: Použití příkazu VERIFY místo ASSERT
+          href: ../build/using-verify-instead-of-assert.md
+        - name: Kontrola přepisování paměti použitím ladění sestavení
+          href: ../build/using-the-debug-build-to-check-for-memory-overwrite.md
+        - name: 'Postupy: Ladění sestavení pro vydání'
+          href: ../build/how-to-debug-a-release-build.md
+        - name: Kontrola přepisů paměti
+          href: ../build/checking-for-memory-overwrites.md
+    - name: Optimalizace kódu
+      expanded: false
+      items:
+        - name: Optimalizace kódu
+          href: ../build/optimizing-your-code.md
+        - name: Direktivy pragma a klíčová slova pro optimalizaci
+          href: ../build/optimization-pragmas-and-keywords.md
+        - name: Zvýšení propustnosti kompilátoru
+          href: ../build/improving-compiler-throughput.md
+        - name: Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost
+          href: ../build/why-floating-point-numbers-may-lose-precision.md
+        - name: Reprezentace plovoucí desetinné čárky IEEE
+          href: ../build/ieee-floating-point-representation.md
+        - name: Tipy pro zlepšení časově kritického kódu
+          href: ../build/tips-for-improving-time-critical-code.md
+        - name: Použití názvu funkce bez závorek () nevygeneruje žádný kód
+          href: ../build/using-function-name-without-parens-produces-no-code.md
+        - name: Doporučené postupy optimalizace
+          href: ../build/optimization-best-practices.md
+        - name: Optimalizace na základě profilu
+          expanded: false
+          items:
+            - name: Optimalizace na základě profilu
+              href: ../build/profile-guided-optimizations.md
+            - name: Proměnné prostředí pro optimalizace na základě profilu
+              href: ../build/environment-variables-for-profile-guided-optimizations.md
+            - name: PgoAutoSweep
+              href: ../build/pgoautosweep.md
+            - name: pgomgr
+              href: ../build/pgomgr.md
+            - name: pgosweep
+              href: ../build/pgosweep.md
+            - name: 'Postupy: Sloučení několika profilů PGO do jediného profilu'
+              href: ../build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
+- name: Použití sady nástrojů MSVC z příkazového řádku
+  expanded: false
+  items:
+    - name: Použití sady nástrojů MSVC z příkazového řádku
+      href: ../build/building-on-the-command-line.md
+    - name: 'Návod: Kompilace nativního programu C++ na příkazovém řádku'
+      href: ../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+    - name: 'Návod: Kompilace programu C na příkazovém řádku'
+      href: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+    - name: 'Návod: Kompilace programu C++/CLI na příkazovém řádku'
+      href: ../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+    - name: 'Návod: Kompilace programu C++/CX na příkazovém řádku'
+      href: ../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+    - name: Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku
+      href: ../build/setting-the-path-and-environment-variables-for-command-line-builds.md
+- name: Použití nástroje MSBuild z příkazového řádku
+  expanded: false
+  items:
+    - name: Použití nástroje MSBuild z příkazového řádku
+      href: ../build/msbuild-visual-cpp.md
+    - name: 'Návod: Vytvoření projektu C++ pomocí nástroje MSBuild'
+      href: ../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
+    - name: 'Postupy: Použití událostí sestavení v projektech MSBuild'
+      href: ../build/how-to-use-build-events-in-msbuild-projects.md
+    - name: 'Postupy: Přidání vlastního kroku sestavení do projektů MSBuild'
+      href: ../build/how-to-add-a-custom-build-step-to-msbuild-projects.md
+    - name: 'Postupy: Přidání vlastních nástrojů sestavení do projektů MSBuild'
+      href: ../build/how-to-add-custom-build-tools-to-msbuild-projects.md
+    - name: 'Postupy: Integrace vlastních nástrojů do vlastností projektu'
+      href: ../build/how-to-integrate-custom-tools-into-the-project-properties.md
+    - name: 'Postupy: Změna cílové architektury a sady nástrojů platformy'
+      href: ../build/how-to-modify-the-target-framework-and-platform-toolset.md
+- name: 'Návod: Vytvoření a použití statické knihovny (C++)'
+  href: ../build/walkthrough-creating-and-using-a-static-library-cpp.md
+- name: Sestavení knihoven DLL C++ v sadě Visual Studio
+  expanded: false
+  items:
+    - name: Sestavení knihoven DLL C++ v sadě Visual Studio
+      href: ../build/dlls-in-visual-cpp.md
+    - name: 'Návod: Vytvoření a použití dynamické knihovny DLL (C++)'
+      href: ../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+    - name: Druhy knihoven DLL
+      expanded: false
+      items:
+        - name: Druhy knihoven DLL
+          href: ../build/kinds-of-dlls.md
+        - name: 'Knihovny DLL mimo MFC: Přehled'
+          href: ../build/non-mfc-dlls-overview.md
+        - name: Běžné knihovny MFC DLL staticky propojené do MFC
+          href: ../build/regular-dlls-statically-linked-to-mfc.md
+        - name: Běžné knihovny MFC DLL dynamicky propojené do MFC
+          href: ../build/regular-dlls-dynamically-linked-to-mfc.md
+        - name: 'Rozšiřující knihovny MFC DLL: Přehled'
+          href: ../build/extension-dlls-overview.md
+    - name: Nejčastější dotazy ke knihovnám MFC DLL
+      href: ../build/dll-frequently-asked-questions.md
+    - name: "Propojení spustitelného souboru s\_knihovnou DLL"
+      href: ../build/linking-an-executable-to-a-dll.md
+    - name: Knihovny DLL a chování běhové knihovny MSVC
+      href: ../build/run-time-library-behavior.md
+    - name: LoadLibrary a AfxLoadLibrary
+      href: ../build/loadlibrary-and-afxloadlibrary.md
+    - name: GetProcAddress
+      href: ../build/getprocaddress.md
+    - name: FreeLibrary a AfxFreeLibrary
+      href: ../build/freelibrary-and-afxfreelibrary.md
+    - name: Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC
+      href: ../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md
+    - name: Rozšiřující knihovny MFC DLL
+      expanded: false
+      items:
+        - name: Rozšiřující knihovny MFC DLL
+          href: ../build/extension-dlls.md
+        - name: "Používání databázových, OLE a soketových rozšiřujících knihoven MFC DLL v\_běžných knihovnách MFC DLL"
+          href: ../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md
+    - name: Vytvoření knihovny DLL obsahující pouze prostředky
+      href: ../build/creating-a-resource-only-dll.md
+    - name: "Lokalizované prostředky v\_aplikacích MFC: Satelitní knihovny DLL"
+      href: ../build/localized-resources-in-mfc-applications-satellite-dlls.md
+    - name: Import a export
+      expanded: false
+      items:
+        - name: Import a export
+          href: ../build/importing-and-exporting.md
+        - name: Import do aplikace
+          expanded: false
+          items:
+            - name: Import do aplikace
+              href: ../build/importing-into-an-application.md
+            - name: Import do aplikace s použitím deklarace __declspec(dllimport)
+              href: ../build/importing-into-an-application-using-declspec-dllimport.md
+            - name: Import volání funkcí pomocí deklarace __declspec(dllimport)
+              href: ../build/importing-function-calls-using-declspec-dllimport.md
+            - name: Import dat pomocí deklarace __declspec(dllimport)
+              href: ../build/importing-data-using-declspec-dllimport.md
+            - name: Import pomocí souborů DEF
+              href: ../build/importing-using-def-files.md
+        - name: "Export z\_knihovny DLL"
+          expanded: false
+          items:
+            - name: "Export z\_knihovny DLL"
+              href: ../build/exporting-from-a-dll.md
+            - name: "Export z\_knihovny DLL pomocí souborů DEF"
+              href: ../build/exporting-from-a-dll-using-def-files.md
+            - name: "Export z\_knihovny DLL pomocí deklarace __declspec(dllexport)"
+              href: ../build/exporting-from-a-dll-using-declspec-dllexport.md
+            - name: Export a import pomocí třídy AFX_EXT_CLASS
+              href: ../build/exporting-and-importing-using-afx-ext-class.md
+            - name: Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C
+              href: ../build/exporting-cpp-functions-for-use-in-c-language-executables.md
+            - name: Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++
+              href: ../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md
+            - name: Výběr použité metody exportu
+              href: ../build/determining-which-exporting-method-to-use.md
+            - name: "Export funkcí z\_knihovny DLL podle pořadových čísel, nikoli podle názvu"
+              href: ../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md
+        - name: Vzájemné importy
+          href: ../build/mutual-imports.md
+        - name: Import a export vložených funkcí
+          href: ../build/importing-and-exporting-inline-functions.md
+    - name: Technologie Active a knihovny DLL
+      href: ../build/active-technology-and-dlls.md
+    - name: "Automatizace v\_knihovně DLL"
+      href: ../build/automation-in-a-dll.md
+    - name: "Volání funkcí knihovny DLL z\_aplikací jazyka Visual Basic"
+      href: ../build/calling-dll-functions-from-visual-basic-applications.md
+- name: Sestavení izolovaných aplikací C/C++ a souběžných sestavení
+  expanded: false
+  items:
+    - name: Sestavení izolovaných aplikací C/C++ a souběžných sestavení
+      href: ../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+    - name: Koncept izolovaných aplikací a souběžných sestavení
+      href: ../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md
+    - name: Sestavení izolovaných aplikací C/C++
+      href: ../build/building-c-cpp-isolated-applications.md
+    - name: Sestavení souběžných sestavení C/C++
+      href: ../build/building-c-cpp-side-by-side-assemblies.md
+    - name: 'Postupy: Sestavení součástí modelu COM bez registrace'
+      href: ../build/how-to-build-registration-free-com-components.md
+    - name: 'Postupy: Sestavení izolovaných aplikací pro zpracování součástí modelu COM'
+      href: ../build/how-to-build-isolated-applications-to-consume-com-components.md
+    - name: Základní informace o generování manifestu pro programy C/C++
+      expanded: false
+      items:
+        - name: Základní informace o generování manifestu pro programy C/C++
+          href: ../build/understanding-manifest-generation-for-c-cpp-programs.md
+        - name: Generování manifestu v sadě Visual Studio
+          href: ../build/manifest-generation-in-visual-studio.md
+        - name: Generování manifestu na příkazovém řádku
+          href: ../build/manifest-generation-at-the-command-line.md
+        - name: 'Postupy: Vložení manifestu do aplikace C/C++'
+          href: ../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
+    - name: Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
+      href: ../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+- name: Konfigurace MSVC pro 64bitové cíle x64
+  expanded: false
+  items:
+    - name: Konfigurace MSVC pro 64bitové cíle x64
+      href: ../build/configuring-programs-for-64-bit-visual-cpp.md
+    - name: 'Postupy: Konfigurace projektů C++ pro 64bitové platformy x64'
+      href: ../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
+    - name: 'Postupy: Povolení 64bitové sady nástrojů MSVC na příkazovém řádku'
+      href: ../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
+    - name: "Běžné problémy s migrací v\_64bitovém prostředí MSVC"
+      href: ../build/common-visual-cpp-64-bit-migration-issues.md
+    - name: x64 – softwarové konvence
+      expanded: false
+      items:
+        - name: x64 – softwarové konvence
+          href: ../build/x64-software-conventions.md
+        - name: x64 – konvence volání
+          href: ../build/x64-calling-convention.md
+        - name: x64 – použití zásobníku
+          href: ../build/stack-usage.md
+        - name: x64 – prolog a epilog
+          href: ../build/prolog-and-epilog.md
+        - name: x64 – ošetření výjimek
+          href: ../build/exception-handling-x64.md
+- name: Konfigurace projektů C++ pro procesory ARM
+  expanded: false
+  items:
+    - name: Konfigurace projektů C++ pro procesory ARM
+      href: ../build/configuring-programs-for-arm-processors-visual-cpp.md
+    - name: Běžné problémy s migrací ARM v prostředí MSVC
+      href: ../build/common-visual-cpp-arm-migration-issues.md
+    - name: Přehled konvencí ARM ABI
+      href: ../build/overview-of-arm-abi-conventions.md
+    - name: Přehled konvencí ARM64 ABI
+      href: ../build/arm64-windows-abi-conventions.md
+    - name: Ošetření výjimek ARM
+      href: ../build/arm-exception-handling.md
+    - name: Ošetření výjimek ARM64
+      href: ../build/arm64-exception-handling.md
+- name: Konfigurace programů pro Windows XP
+  href: ../build/configuring-programs-for-windows-xp.md
+- name: Analýza kódu pro C/C++
+  href: ../code-quality/
+- name: Referenční dokumentace ke kompilátoru a nástrojům sestavení
+  expanded: false
+  items:
+    - name: Referenční informace k sestavením v C/C++
+      href: ../build/reference/c-cpp-building-reference.md
+    - name: Referenční zdroje k nástroji MSBuild pro projekty C++
+      expanded: false
+      items:
+        - name: Referenční zdroje k nástroji MSBuild pro projekty C++
+          href: ../build/reference/msbuild-reference-cpp.md
+        - name: Vnitřní fungování nástroje MSBuild pro projekty C++
+          href: ../build/reference/msbuild-visual-cpp-overview.md
+        - name: Běžná makra pro příkazy a vlastnosti sestavení
+          href: ../build/reference/common-macros-for-build-commands-and-properties.md
+        - name: Typy souborů používaných v projektech C++
+          expanded: false
+          items:
+            - name: Typy souborů používaných v projektech C++
+              href: ../build/reference/file-types-created-for-visual-cpp-projects.md
+            - name: Soubory projektu a řešení
+              href: ../build/reference/project-and-solution-files.md
+            - name: Šablony projektů C++
+              href: ../build/reference/visual-cpp-project-types.md
+            - name: Šablony nových položek v C++
+              href: ../build/reference/using-visual-cpp-add-new-item-templates.md
+            - name: Soubory prostředků
+              href: ../build/reference/resource-files-cpp.md
+            - name: Soubory vytvořené pro projekty CLR
+              href: ../build/reference/files-created-for-clr-projects.md
+            - name: Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček
+              href: ../build/reference/atl-program-or-control-source-and-header-files.md
+            - name: Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček
+              href: ../build/reference/mfc-program-or-control-source-and-header-files.md
+            - name: Soubory nápovědy HTML
+              href: ../build/reference/help-files-html-help.md
+            - name: Soubory nápovědy Winhelp
+              href: ../build/reference/help-files-winhelp.md
+            - name: Soubory pokynů pro Intellisense
+              href: ../build/reference/hint-files.md
+            - name: Soubory XML stránky vlastností
+              href: ../build/reference/property-page-xml-files.md
+            - name: Struktura souborů .vcxproj a .props
+              href: ../build/reference/vcxproj-file-structure.md
+            - name: Ukázkový soubor projektu
+              href: ../build/reference/project-files.md
+            - name: Struktura souborů .vcxproj.filters
+              href: ../build/reference/vcxproj-filters-files.md
+        - name: Stránky vlastností projektu v C++
+          expanded: false
+          items:
+            - name: Referenční zdroje k vlastnostem projektu C++
+              href: ../build/reference/property-pages-visual-cpp.md
+            - name: Obecná stránka vlastností (projekt)
+              href: ../build/reference/general-property-page-project.md
+            - name: Obecná stránka vlastností
+              href: ../build/reference/general-property-page-file.md
+            - name: Stránka vlastností Upřesnit
+              href: ../build/reference/advanced-property-page.md
+            - name: Ladění stránek vlastností
+              href: ../build/reference/debugging-prop-pages.md
+            - name: Stránka vlastností adresářů VC++
+              href: ../build/reference/vcpp-directories-property-page.md
+            - name: Stránky vlastností C/C++
+              href: ../build/reference/c-cpp-prop-page.md
+            - name: stránky vlastností linkeru
+              href: ../build/reference/linker-property-pages.md
+            - name: Stránky vlastností příkazového řádku
+              href: ../build/reference/command-line-property-pages.md
+            - name: NMake – stránka vlastností
+              href: ../build/reference/nmake-property-page.md
+            - name: stránky vlastností nástroje manifest
+              href: ../build/reference/manifest-tool-property-pages.md
+            - name: stránky vlastností prostředků
+              href: ../build/reference/resources-property-pages.md
+            - name: Stránka vlastností spravovaných prostředků
+              href: ../build/reference/managed-resources-property-page.md
+            - name: MIDL – stránky vlastností
+              href: ../build/reference/midl-property-pages.md
+            - name: Stránka vlastností webových odkazů
+              href: ../build/reference/web-references-property-page.md
+            - name: Stránka vlastností nástroje generátoru dat XML
+              href: ../build/reference/xml-data-generator-tool-property-page.md
+            - name: Stránky vlastností nástroje Generátor dokumentů XML
+              href: ../build/reference/xml-document-generator-tool-property-pages.md
+            - name: 'Stránka vlastností vlastního kroku sestavení: Obecné'
+              href: ../build/reference/custom-build-step-property-page-general.md
+            - name: HLSL – stránky vlastností
+              href: ../build/reference/hlsl-property-pages.md
+    - name: Referenční zdroje ke kompilátorům MSVC
+      expanded: false
+      items:
+        - name: Referenční zdroje ke kompilátorům MSVC
+          href: ../build/reference/compiling-a-c-cpp-program.md
+        - name: Syntaxe příkazového řádku kompilátoru MSVC
+          expanded: false
+          items:
+            - name: Syntaxe příkazového řádku kompilátoru MSVC
+              href: ../build/reference/compiler-command-line-syntax.md
+            - name: Syntaxe názvu souboru CL
+              href: ../build/reference/cl-filename-syntax.md
+            - name: Pořadí možností CL
+              href: ../build/reference/order-of-cl-options.md
+            - name: Návratová hodnota cl.exe
+              href: ../build/reference/return-value-of-cl-exe.md
+        - name: Proměnné prostředí CL
+          href: ../build/reference/cl-environment-variables.md
+        - name: Soubory příkazů CL
+          href: ../build/reference/cl-command-files.md
+        - name: CL vyvolává linker
+          href: ../build/reference/cl-invokes-the-linker.md
+        - name: Parametry kompilátoru MSVC
+          expanded: false
+          items:
+            - name: Parametry kompilátoru MSVC
+              href: ../build/reference/compiler-options.md
+            - name: Možnosti kompilátoru uvedené podle kategorie
+              href: ../build/reference/compiler-options-listed-by-category.md
+            - name: Možnosti kompilátoru v abecedním pořadí
+              expanded: false
+              items:
+                - name: Možnosti kompilátoru v abecedním pořadí
+                  href: ../build/reference/compiler-options-listed-alphabetically.md
+                - name: '@ (zadat soubor odezvy kompilátoru)'
+                  href: ../build/reference/at-specify-a-compiler-response-file.md
+                - name: /AI (zadat adresáře metadat)
+                  href: ../build/reference/ai-specify-metadata-directories.md
+                - name: /analyze (analýza kódu)
+                  href: ../build/reference/analyze-code-analysis.md
+                - name: /arch (minimální architektura procesoru)
+                  expanded: false
+                  items:
+                    - name: /arch (minimální architektura procesoru)
+                      href: ../build/reference/arch-minimum-cpu-architecture.md
+                    - name: /arch (x86)
+                      href: ../build/reference/arch-x86.md
+                    - name: /arch (x64)
+                      href: ../build/reference/arch-x64.md
+                    - name: /arch (ARM)
+                      href: ../build/reference/arch-arm.md
+                - name: /await (povolení podpory korutiny)
+                  href: ../build/reference/await-enable-coroutine-support.md
+                - name: /bigobj (zvýšení počtu oddílů v souboru .Obj)
+                  href: ../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md
+                - name: /C (zachování komentářů při předběžném zpracování)
+                  href: ../build/reference/c-preserve-comments-during-preprocessing.md
+                - name: /c (kompilace bez propojení)
+                  href: ../build/reference/c-compile-without-linking.md
+                - name: /cgthreads (vlákna generování kódu)
+                  href: ../build/reference/cgthreads-code-generation-threads.md
+                - name: /clr (kompilace modulu Common Language Runtime)
+                  expanded: false
+                  items:
+                    - name: /clr (kompilace modulu Common Language Runtime)
+                      href: ../build/reference/clr-common-language-runtime-compilation.md
+                    - name: /clr – omezení
+                      href: ../build/reference/clr-restrictions.md
+                - name: /constexpr (kontrolní vyhodnocení constexpr)
+                  href: ../build/reference/constexpr-control-constexpr-evaluation.md
+                - name: /D (definice preprocesoru)
+                  href: ../build/reference/d-preprocessor-definitions.md
+                - name: /diagnostics (možnosti diagnostiky kompilátoru)
+                  href: ../build/reference/diagnostics-compiler-diagnostic-options.md
+                - name: /doc (zpracování dokumentačních komentářů) (C/C++)
+                  href: ../build/reference/doc-process-documentation-comments-c-cpp.md
+                - name: /E (předběžné zpracování výstupu stdout)
+                  href: ../build/reference/e-preprocess-to-stdout.md
+                - name: /EH (model ošetření výjimek)
+                  href: ../build/reference/eh-exception-handling-model.md
+                - name: '/EP (předzpracování do stdout bez direktiv #line)'
+                  href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
+                - name: /errorReport (vytvoření sestavy s interními chybami kompilátoru)
+                  href: ../build/reference/errorreport-report-internal-compiler-errors.md
+                - name: /execution/charset (nastavení znakové sady spuštění)
+                  href: ../build/reference/execution-charset-set-execution-character-set.md
+                - name: '/experimental:module'
+                  href: ../build/reference/experimental-module.md
+                - name: '/experimental:preprocessor'
+                  href: ../build/reference/experimental-preprocessor.md
+                - name: /F (nastavení velikosti zásobníku)
+                  href: ../build/reference/f-set-stack-size.md
+                - name: Možnosti výstupního souboru (/F)
+                  expanded: false
+                  items:
+                    - name: Možnosti výstupního souboru (/F)
+                      href: ../build/reference/output-file-f-options.md
+                    - name: '/FA, /Fa (soubor výpisu)'
+                      href: ../build/reference/fa-fa-listing-file.md
+                    - name: Určení názvu cesty
+                      href: ../build/reference/specifying-the-pathname.md
+                    - name: /FD (minimální opětovné sestavení IDE)
+                      href: ../build/reference/fd-ide-minimal-rebuild.md
+                    - name: /Fd (název souboru databáze programu)
+                      href: ../build/reference/fd-program-database-file-name.md
+                    - name: /Fe (název souboru EXE)
+                      href: ../build/reference/fe-name-exe-file.md
+                    - name: /Fi (předběžné zpracování názvu výstupního souboru)
+                      href: ../build/reference/fi-preprocess-output-file-name.md
+                    - name: /FI (zahrnutý soubor s povinným názvem)
+                      href: ../build/reference/fi-name-forced-include-file.md
+                    - name: /Fm (název souboru mapování)
+                      href: ../build/reference/fm-name-mapfile.md
+                    - name: /Fo (název souboru objektů)
+                      href: ../build/reference/fo-object-file-name.md
+                    - name: /Fp (pojmenování souboru .Pch)
+                      href: ../build/reference/fp-name-dot-pch-file.md
+                    - name: '/FR, /Fr (vytvoření souboru .Sbr)'
+                      href: ../build/reference/fr-fr-create-dot-sbr-file.md
+                    - name: /FU (soubor s vynuceným názvem
+                      href: ../build/reference/fu-name-forced-hash-using-file.md
+                    - name: /Fx (sloučení vloženého kódu)
+                      href: ../build/reference/fx-merge-injected-code.md
+                - name: /favor (optimalizace pro konkrétní architekturu)
+                  href: ../build/reference/favor-optimize-for-architecture-specifics.md
+                - name: /FC (úplná cesta k souboru zdrojového kódu v diagnostice)
+                  href: ../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md
+                - name: /fp (určení chování hodnot s plovoucí desetinnou čárkou)
+                  href: ../build/reference/fp-specify-floating-point-behavior.md
+                - name: /FS (vynucení synchronních zápisů do souboru PDB)
+                  href: ../build/reference/fs-force-synchronous-pdb-writes.md
+                - name: /GA (optimalizace pro aplikaci systému Windows)
+                  href: ../build/reference/ga-optimize-for-windows-application.md
+                - name: '/Gd, /Gr, /Gv, /Gz (konvence volání)'
+                  href: ../build/reference/gd-gr-gv-gz-calling-convention.md
+                - name: /Ge (povolení sond zásobníku)
+                  href: ../build/reference/ge-enable-stack-probes.md
+                - name: /GF (odstranění duplicitních řetězců)
+                  href: ../build/reference/gf-eliminate-duplicate-strings.md
+                - name: /GH (povolení funkce hooku _pexit)
+                  href: ../build/reference/gh-enable-pexit-hook-function.md
+                - name: /Gh (povolení funkce hooku _penter)
+                  href: ../build/reference/gh-enable-penter-hook-function.md
+                - name: /GL (celková optimalizace programu)
+                  href: ../build/reference/gl-whole-program-optimization.md
+                - name: /Gm (povolení minimálního opětovného sestavení)
+                  href: ../build/reference/gm-enable-minimal-rebuild.md
+                - name: /GR (Povolit informace běhového typu)
+                  href: ../build/reference/gr-enable-run-time-type-information.md
+                - name: /GS (kontrola zabezpečení vyrovnávací paměti)
+                  href: ../build/reference/gs-buffer-security-check.md
+                - name: /Gs (kontrola volání ověření zásobníku)
+                  href: ../build/reference/gs-control-stack-checking-calls.md
+                - name: /guard (povolení ochrany toku řízení)
+                  href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: /GT (podpora úložiště thread local se zabezpečenými vlákénky)
+                  href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
+                - name: /Gw (optimalizace globálních dat)
+                  href: ../build/reference/gw-optimize-global-data.md
+                - name: /GX (povolení ošetření výjimek)
+                  href: ../build/reference/gx-enable-exception-handling.md
+                - name: /Gy (povolení propojení na úrovni funkcí)
+                  href: ../build/reference/gy-enable-function-level-linking.md
+                - name: /GZ (povolení kontroly chyb bloku zásobníku za běhu)
+                  href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
+                - name: /H (omezení délky externích názvů)
+                  href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /HELP (nápověda příkazového řádku kompilátoru)
+                  href: ../build/reference/help-compiler-command-line-help.md
+                - name: /homeparams (kopírování parametrů registru do zásobníku)
+                  href: ../build/reference/homeparams-copy-register-parameters-to-stack.md
+                - name: /hotpatch (vytvoření image vyměnitelné za provozu)
+                  href: ../build/reference/hotpatch-create-hotpatchable-image.md
+                - name: /I (další adresáře k zahrnutí)
+                  href: ../build/reference/i-additional-include-directories.md
+                - name: /J (výchozí znakový typ není podepsaný)
+                  href: ../build/reference/j-default-char-type-is-unsigned.md
+                - name: "/JMC (ladění s\_možností Pouze můj kód)"
+                  href: ../build/reference/jmc.md
+                - name: /kernel (vytvoření binárního režimu jádra)
+                  href: ../build/reference/kernel-create-kernel-mode-binary.md
+                - name: /link (předání možností do linkeru)
+                  href: ../build/reference/link-pass-options-to-linker.md
+                - name: /LN (vytvoření modulu MSIL)
+                  href: ../build/reference/ln-create-msil-module.md
+                - name: '/MD, /MT, /LD (použití knihovny run-time)'
+                  href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: /MP (sestavení pomocí několika procesů)
+                  href: ../build/reference/mp-build-with-multiple-processes.md
+                - name: /nologo (potlačení úvodního nápisu) (C/C++)
+                  href: ../build/reference/nologo-suppress-startup-banner-c-cpp.md
+                - name: /O – možnosti (optimalizace kódu)
+                  expanded: false
+                  items:
+                    - name: /O – možnosti (optimalizace kódu)
+                      href: ../build/reference/o-options-optimize-code.md
+                    - name: '/O1, /O2 (minimální velikost, maximální rychlost)'
+                      href: ../build/reference/o1-o2-minimize-size-maximize-speed.md
+                    - name: /Ob (rozbalení vložené funkce)
+                      href: ../build/reference/ob-inline-function-expansion.md
+                    - name: /Od (Zakázat (ladění))
+                      href: ../build/reference/od-disable-debug.md
+                    - name: /Og (globální optimalizace)
+                      href: ../build/reference/og-global-optimizations.md
+                    - name: /Oi (generování vnitřních funkcí)
+                      href: ../build/reference/oi-generate-intrinsic-functions.md
+                    - name: '/Os, /Ot (upřednostnění malého kódu, upřednostnění rychlého kódu)'
+                      href: ../build/reference/os-ot-favor-small-code-favor-fast-code.md
+                    - name: /Ox (povolení většiny optimalizací pro rychlost)
+                      href: ../build/reference/ox-full-optimization.md
+                    - name: /Oy (vynechání rámce nebo ukazatele)
+                      href: ../build/reference/oy-frame-pointer-omission.md
+                - name: /openmp (povolení podpory OpenMP 2.0)
+                  href: ../build/reference/openmp-enable-openmp-2-0-support.md
+                - name: /P (předzpracování do souboru)
+                  href: ../build/reference/p-preprocess-to-a-file.md
+                - name: /permissive- (shoda se standardy)
+                  href: ../build/reference/permissive-standards-conformance.md
+                - name: /Q – možnosti (operace nízké úrovně)
+                  expanded: false
+                  items:
+                    - name: /Q – možnosti (operace nízké úrovně)
+                      href: ../build/reference/q-options-low-level-operations.md
+                    - name: /Qfast_transcendentals (vynucení rychlých transcendentních objektů)
+                      href: ../build/reference/qfast-transcendentals-force-fast-transcendentals.md
+                    - name: /QIfist (Potlačit _ftol)
+                      href: ../build/reference/qifist-suppress-ftol.md
+                    - name: /Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)
+                      href: ../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
+                    - name: /QIntel-jcc-erratum
+                      href: ../build/reference/qintel-jcc-erratum.md
+                    - name: /Qpar (automatická paralelizace)
+                      href: ../build/reference/qpar-auto-parallelizer.md
+                    - name: /Qpar-report (úroveň generování sestav s automatickou paralelizací)
+                      href: ../build/reference/qpar-report-auto-parallelizer-reporting-level.md
+                    - name: /Qsafe_fp_loads
+                      href: ../build/reference/qsafe-fp-loads.md
+                    - name: /Qspectre
+                      href: ../build/reference/qspectre.md
+                    - name: /Qspectre-load
+                      href: ../build/reference/qspectre-load.md
+                    - name: /Qspectre-load-cf
+                      href: ../build/reference/qspectre-load-cf.md
+                    - name: /Qpar-report (úroveň generování sestav s automatickou vektorizací)
+                      href: ../build/reference/qvec-report-auto-vectorizer-reporting-level.md
+                - name: /RTC (kontrola chyb za běhu)
+                  href: ../build/reference/rtc-run-time-error-checks.md
+                - name: /sdl (povolení dalších kontrol zabezpečení)
+                  href: ../build/reference/sdl-enable-additional-security-checks.md
+                - name: /showIncludes (seznam vložených souborů)
+                  href: ../build/reference/showincludes-list-include-files.md
+                - name: /source-charset (nastavení zdrojové znakové sady)
+                  href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /std (určení standardní jazykové verze)
+                  href: ../build/reference/std-specify-language-standard-version.md
+                - name: '/Tc, /Tp, /TC, /TP (určení typu zdrojového souboru)'
+                  href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: '/U, /u (nedefinované symboly)'
+                  href: ../build/reference/u-u-undefine-symbols.md
+                - name: /utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)
+                  href: ../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md
+                - name: /V (číslo verze)
+                  href: ../build/reference/v-version-number.md
+                - name: /validate-charset (ověření kompatibilních znaků)
+                  href: ../build/reference/validate-charset-validate-for-compatible-characters.md
+                - name: /vd (zakázání přesunutí konstrukcí)
+                  href: ../build/reference/vd-disable-construction-displacements.md
+                - name: '/vmb, /vmg (metoda reprezentace)'
+                  href: ../build/reference/vmb-vmg-representation-method.md
+                - name: '/vmm, /vms, /vmv (reprezentace pro obecné účely)'
+                  href: ../build/reference/vmm-vms-vmv-general-purpose-representation.md
+                - name: /volatile (interpretace klíčového slova volatile)
+                  href: ../build/reference/volatile-volatile-keyword-interpretation.md
+                - name: '/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (úroveň upozornění)'
+                  href: ../build/reference/compiler-option-warning-level.md
+                - name: /WL (povolení jednořádkové diagnostiky)
+                  href: ../build/reference/wl-enable-one-line-diagnostics.md
+                - name: /Wp64 (detekce problémů se 64bitovou přenositelností)
+                  href: ../build/reference/wp64-detect-64-bit-portability-issues.md
+                - name: /X (ignorování standardních cest zahrnutí)
+                  href: ../build/reference/x-ignore-standard-include-paths.md
+                - name: /Y (předkompilované hlavičky)
+                  expanded: false
+                  items:
+                    - name: /Y (předkompilované hlavičky)
+                      href: ../build/reference/y-precompiled-headers.md
+                    - name: /Y- (ignorování možností předkompilovaných hlaviček)
+                      href: ../build/reference/y-ignore-precompiled-header-options.md
+                    - name: /Yc (vytvoření souboru předkompilované hlavičky)
+                      href: ../build/reference/yc-create-precompiled-header-file.md
+                    - name: /Yd (umístění informací o ladění do souboru objektu)
+                      href: ../build/reference/yd-place-debug-information-in-object-file.md
+                    - name: /Yl (vložení odkazu na soubor PCH do knihovny ladění)
+                      href: ../build/reference/yl-inject-pch-reference-for-debug-library.md
+                    - name: /Yu (použití souboru předkompilované hlavičky)
+                      href: ../build/reference/yu-use-precompiled-header-file.md
+                - name: '/Z7, /Zi, /ZI (formát informací o ladění)'
+                  href: ../build/reference/z7-zi-zi-debug-information-format.md
+                - name: '/Za, /Ze (zakázání jazykových rozšíření)'
+                  expanded: false
+                  items:
+                    - name: '/Za, /Ze (zakázání jazykových rozšíření)'
+                      href: ../build/reference/za-ze-disable-language-extensions.md
+                    - name: Rozšíření Microsoft pro C a C++
+                      href: ../build/reference/microsoft-extensions-to-c-and-cpp.md
+                - name: /Zc (shoda)
+                  expanded: false
+                  items:
+                    - name: /Zc (shoda)
+                      href: ../build/reference/zc-conformance.md
+                    - name: '/Zc:alignedNew (přidělení nadměrného zarovnání C++17)'
+                      href: ../build/reference/zc-alignednew.md
+                    - name: '/Zc:auto (odvození typu proměnné)'
+                      href: ../build/reference/zc-auto-deduce-variable-type.md
+                    - name: '/Zc:__cplusplus (povolení aktualizovaného makra __cplusplus)'
+                      href: ../build/reference/zc-cplusplus.md
+                    - name: '/Zc:externConstexpr (povolení proměnných extern constexpr)'
+                      href: ../build/reference/zc-externconstexpr.md
+                    - name: '/Zc:forScope (vynucení souladu s oborem smyčky for loop)'
+                      href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:implicitNoexcept (specifikátory implicitních výjimek)'
+                      href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
+                    - name: '/Zc:inline (Odebrat neodkazované sekvence COMDAT)'
+                      href: ../build/reference/zc-inline-remove-unreferenced-comdat.md
+                    - name: '/Zc:noexceptTypes (pravidla C++17 noexcept)'
+                      href: ../build/reference/zc-noexcepttypes.md
+                    - name: '/Zc:referenceBinding (vynucení pravidel vazby odkazů)'
+                      href: ../build/reference/zc-referencebinding-enforce-reference-binding-rules.md
+                    - name: '/Zc:rvalueCast (Vynucení pravidel převodu typů)'
+                      href: ../build/reference/zc-rvaluecast-enforce-type-conversion-rules.md
+                    - name: '/Zc:sizedDealloc (povolení funkcí zrušení přidělení v globálním měřítku)'
+                      href: ../build/reference/zc-sizeddealloc-enable-global-sized-dealloc-functions.md
+                    - name: '/Zc:strictStrings (Zakázání převodů typů řetězcových literálů)'
+                      href: ../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md
+                    - name: '/Zc:ternary (vynucení pravidel podmiňovacího operátoru)'
+                      href: ../build/reference/zc-ternary.md
+                    - name: '/Zc:threadSafeInit (lokální statická inicializace bezpečná pro přístup z více vláken)'
+                      href: ../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md
+                    - name: '/Zc:throwingNew (předpoklad, že operátor new vyvolá výjimku)'
+                      href: ../build/reference/zc-throwingnew-assume-operator-new-throws.md
+                    - name: '/Zc:trigraphs (náhrada spřežky tří znaků)'
+                      href: ../build/reference/zc-trigraphs-trigraphs-substitution.md
+                    - name: '/Zc:twoPhase- (zakázání dvoufázového vyhledávání názvů)'
+                      href: ../build/reference/zc-twophase.md
+                    - name: '/Zc:wchar_t (wchar_t je nativní typ)'
+                      href: ../build/reference/zc-wchar-t-wchar-t-is-native-type.md
+                - name: /Zf (rychlejší generování souborů PDB)
+                  href: ../build/reference/zf.md
+                - name: /Zg (generování prototypů funkcí)
+                  href: ../build/reference/zg-generate-function-prototypes.md
+                - name: /ZH (algoritmus hash pro kontrolní součet v informacích o ladění)
+                  href: ../build/reference/zh.md
+                - name: /Zl (vynechání názvu výchozí knihovny)
+                  href: ../build/reference/zl-omit-default-library-name.md
+                - name: /Zm (určení limitu přidělení paměti pro předkompilované hlavičky)
+                  href: ../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md
+                - name: /Zo (rozšíření optimalizovaného ladění)
+                  href: ../build/reference/zo-enhance-optimized-debugging.md
+                - name: /Zp (zarovnání členů struktury)
+                  href: ../build/reference/zp-struct-member-alignment.md
+                - name: /Zs (pouze kontrola syntaxe)
+                  href: ../build/reference/zs-syntax-check-only.md
+                - name: /ZW (kompilace prostředí Windows Runtime)
+                  href: ../build/reference/zw-windows-runtime-compilation.md
+        - name: Podpora kódování Unicode v kompilátoru a linkeru
+          href: ../build/reference/unicode-support-in-the-compiler-and-linker.md
+    - name: Referenční zdroje k linkeru MSVC
+      expanded: false
+      items:
+        - name: Referenční zdroje k linkeru MSVC
+          href: ../build/reference/linking.md
+        - name: Možnosti linkeru MSVC
+          expanded: false
+          items:
+            - name: Možnosti linkeru MSVC
+              href: ../build/reference/linker-options.md
+            - name: Možnosti LINK řízené kompilátorem
+              href: ../build/reference/compiler-controlled-link-options.md
+            - name: Vstupní soubory LINK
+              expanded: false
+              items:
+                - name: Vstupní soubory LINK
+                  href: ../build/reference/link-input-files.md
+                - name: Soubory .Obj jako vstup linkeru
+                  href: ../build/reference/dot-obj-files-as-linker-input.md
+                - name: Soubory .netmodule jako vstup linkeru
+                  expanded: false
+                  items:
+                    - name: Soubory .netmodule jako vstup linkeru
+                      href: ../build/reference/netmodule-files-as-linker-input.md
+                    - name: Výběr formátu vstupních souborů .netmodule
+                      href: ../build/reference/choosing-the-format-of-netmodule-input-files.md
+                - name: Soubory .Lib jako vstup linkeru
+                  href: ../build/reference/dot-lib-files-as-linker-input.md
+                - name: Soubory .Exp jako vstup linkeru
+                  href: ../build/reference/dot-exp-files-as-linker-input.md
+                - name: Soubory .Def jako vstup linkeru
+                  href: ../build/reference/dot-def-files-as-linker-input.md
+                - name: Soubory .Pdb jako vstup linkeru
+                  href: ../build/reference/dot-pdb-files-as-linker-input.md
+                - name: Soubory .Res jako vstup linkeru
+                  href: ../build/reference/dot-res-files-as-linker-input.md
+                - name: Soubory .Exe jako vstup linkeru
+                  href: ../build/reference/dot-exe-files-as-linker-input.md
+                - name: Soubory .Txt jako vstup linkeru
+                  href: ../build/reference/dot-txt-files-as-linker-input.md
+                - name: Soubory .Ilk jako vstup linkeru
+                  href: ../build/reference/dot-ilk-files-as-linker-input.md
+            - name: LINK – výstup
+              href: ../build/reference/link-output.md
+            - name: Vyhrazená slova
+              href: ../build/reference/reserved-words.md
+            - name: '@ (zadání souboru odpovědi linkeru)'
+              href: ../build/reference/at-specify-a-linker-response-file.md
+            - name: /ALIGN (zarovnání oddílů)
+              href: ../build/reference/align-section-alignment.md
+            - name: /ALLOWBIND (zabránění vazbě knihoven DLL)
+              href: ../build/reference/allowbind-prevent-dll-binding.md
+            - name: /ALLOWISOLATION (vyhledání manifestu)
+              href: ../build/reference/allowisolation-manifest-lookup.md
+            - name: /APPCONTAINER (UPW/Microsoft Store App)
+              href: ../build/reference/appcontainer-windows-store-app.md
+            - name: /ASSEMBLYDEBUG (Přidat atribut DebuggableAttribute)
+              href: ../build/reference/assemblydebug-add-debuggableattribute.md
+            - name: /ASSEMBLYLINKRESOURCE (odkaz na prostředek rozhraní .NET Framework)
+              href: ../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md
+            - name: /ASSEMBLYMODULE (přidání modulu MSIL do sestavení)
+              href: ../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md
+            - name: /ASSEMBLYRESOURCE (vložení spravovaného prostředku)
+              href: ../build/reference/assemblyresource-embed-a-managed-resource.md
+            - name: /BASE (základní adresa)
+              href: ../build/reference/base-base-address.md
+            - name: /CETCOMPAT (kompatibilní s technologií Control-flow Enforcement Technology)
+              href: ../build/reference/cetcompat.md
+            - name: /CGTHREADS (vlákna kompilátoru)
+              href: ../build/reference/cgthreads-compiler-threads.md
+            - name: /CLRIMAGETYPE (zadání typu image modulu CLR)
+              href: ../build/reference/clrimagetype-specify-type-of-clr-image.md
+            - name: /CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke)
+              href: ../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md
+            - name: /CLRTHREADATTRIBUTE (nastavení atributu vlákna modulu CLR)
+              href: ../build/reference/clrthreadattribute-set-clr-thread-attribute.md
+            - name: /CLRUNMANAGEDCODECHECK (odebrání atributu SuppressUnmanagedCodeSecurityAttribute)
+              href: ../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md
+            - name: /DEBUG (generování informací o ladění)
+              href: ../build/reference/debug-generate-debug-info.md
+            - name: /DEBUGTYPE (možnosti ladicích informací)
+              href: ../build/reference/debugtype-debug-info-options.md
+            - name: /DEF (zadání souboru definice modulu)
+              href: ../build/reference/def-specify-module-definition-file.md
+            - name: /DEFAULTLIB (zadání výchozí knihovny)
+              href: ../build/reference/defaultlib-specify-default-library.md
+            - name: /DELAY (nastavení importu zpožděného načtení)
+              href: ../build/reference/delay-delay-load-import-settings.md
+            - name: /DELAYLOAD (import zpožděného načtení)
+              href: ../build/reference/delayload-delay-load-import.md
+            - name: /DELAYSIGN (částečné podepsání sestavení)
+              href: ../build/reference/delaysign-partially-sign-an-assembly.md
+            - name: /DEPENDENTLOADFLAG (nastavení výchozích příznaků načítání závislých knihoven DLL)
+              href: ../build/reference/dependentloadflag.md
+            - name: /DLL (Sestavit knihovnu DLL)
+              href: ../build/reference/dll-build-a-dll.md
+            - name: /DRIVER (ovladač režimu jádra Windows NT)
+              href: ../build/reference/driver-windows-nt-kernel-mode-driver.md
+            - name: /DYNAMICBASE (Použít modul pro náhodné určení rozložení adresního prostoru)
+              href: ../build/reference/dynamicbase-use-address-space-layout-randomization.md
+            - name: /ENTRY (symbol vstupního bodu)
+              href: ../build/reference/entry-entry-point-symbol.md
+            - name: /ERRORREPORT (sestava s interními chybami linkeru)
+              href: ../build/reference/errorreport-report-internal-linker-errors.md
+            - name: /EXPORT (export funkce)
+              href: ../build/reference/export-exports-a-function.md
+            - name: /FILEALIGN (zarovnání oddílů v souborech)
+              href: ../build/reference/filealign.md
+            - name: /FIXED (pevná základní adresa)
+              href: ../build/reference/fixed-fixed-base-address.md
+            - name: /FORCE (vynucení výstupu souboru)
+              href: ../build/reference/force-force-file-output.md
+            - name: /FUNCTIONPADMIN (vytvoření image vyměnitelné za provozu)
+              href: ../build/reference/functionpadmin-create-hotpatchable-image.md
+            - name: '/GENPROFILE, /FASTGENPROFILE (generování profilace instrumentovaného sestavení)'
+              href: ../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md
+            - name: /GUARD (povolení kontrol ochrany)
+              href: ../build/reference/guard-enable-guard-checks.md
+            - name: /HEAP (nastavení velikosti haldy)
+              href: ../build/reference/heap-set-heap-size.md
+            - name: /HIGHENTROPYVA (podpora 64bitové technologie ASLR)
+              href: ../build/reference/highentropyva-support-64-bit-aslr.md
+            - name: /IDLOUT (pojmenování výstupních souborů MIDL)
+              href: ../build/reference/idlout-name-midl-output-files.md
+            - name: /IGNORE (ignorování konkrétních upozornění)
+              href: ../build/reference/ignore-ignore-specific-warnings.md
+            - name: /IGNOREIDL (nezpracovávat atributy do MIDL)
+              href: ../build/reference/ignoreidl-don-t-process-attributes-into-midl.md
+            - name: /IMPLIB (pojmenování knihovny importu)
+              href: ../build/reference/implib-name-import-library.md
+            - name: /INCLUDE (vynucení odkazů na symboly)
+              href: ../build/reference/include-force-symbol-references.md
+            - name: /INCREMENTAL (přírůstkové propojení)
+              href: ../build/reference/incremental-link-incrementally.md
+            - name: /INTEGRITYCHECK (povinná kontrola podpisu)
+              href: ../build/reference/integritycheck-require-signature-check.md
+            - name: /KEYCONTAINER (zadání kontejneru klíčů pro podpis sestavení)
+              href: ../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md
+            - name: /KEYFILE (zadání klíče nebo páru klíčů pro podpis sestavení)
+              href: ../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md
+            - name: /LARGEADDRESSAWARE (zpracování velkých adres)
+              href: ../build/reference/largeaddressaware-handle-large-addresses.md
+            - name: /LIBPATH (další proměnná libpath)
+              href: ../build/reference/libpath-additional-libpath.md
+            - name: /LINKREPRO (název adresáře pro reprodukci odkazu)
+              href: ../build/reference/linkrepro.md
+            - name: /LINKREPROTARGET (název souboru pro reprodukci odkazu)
+              href: ../build/reference/linkreprotarget.md
+            - name: /LTCG (generování kódu během propojování)
+              href: ../build/reference/ltcg-link-time-code-generation.md
+            - name: /MACHINE (zadání cílové platformy)
+              href: ../build/reference/machine-specify-target-platform.md
+            - name: /MANIFEST (vytvoření manifestu souběžného sestavení)
+              href: ../build/reference/manifest-create-side-by-side-assembly-manifest.md
+            - name: /MANIFESTDEPENDENCY (určení závislostí manifestu)
+              href: ../build/reference/manifestdependency-specify-manifest-dependencies.md
+            - name: /MANIFESTFILE (pojmenování souboru manifestu)
+              href: ../build/reference/manifestfile-name-manifest-file.md
+            - name: /MANIFESTINPUT (určení vstupu manifestu)
+              href: ../build/reference/manifestinput-specify-manifest-input.md
+            - name: /MANIFESTUAC (vložené informace UAC v manifestu)
+              href: ../build/reference/manifestuac-embeds-uac-information-in-manifest.md
+            - name: /MAP (generování souboru mapování)
+              href: ../build/reference/map-generate-mapfile.md
+            - name: /MAPINFO (zahrnutí informací do souboru mapování)
+              href: ../build/reference/mapinfo-include-information-in-mapfile.md
+            - name: /MERGE (sloučení oddílů)
+              href: ../build/reference/merge-combine-sections.md
+            - name: /MIDL (určení možností příkazového řádku MIDL)
+              href: ../build/reference/midl-specify-midl-command-line-options.md
+            - name: /NATVIS (přidání Natvisu do souboru PDB)
+              href: ../build/reference/natvis-add-natvis-to-pdb.md
+            - name: /NOASSEMBLY (vytvoření modulu MSIL)
+              href: ../build/reference/noassembly-create-a-msil-module.md
+            - name: /NODEFAULTLIB (ignorování knihoven)
+              href: ../build/reference/nodefaultlib-ignore-libraries.md
+            - name: /NOENTRY (bez vstupního bodu)
+              href: ../build/reference/noentry-no-entry-point.md
+            - name: /NOLOGO (potlačení úvodního nápisu) (linker)
+              href: ../build/reference/nologo-suppress-startup-banner-linker.md
+            - name: /NXCOMPAT (kompatibilní s předcházením spuštění dat)
+              href: ../build/reference/nxcompat-compatible-with-data-execution-prevention.md
+            - name: /OPT (optimalizace)
+              href: ../build/reference/opt-optimizations.md
+            - name: /ORDER (vložení funkcí v pořadí)
+              href: ../build/reference/order-put-functions-in-order.md
+            - name: /OUT (název výstupního souboru)
+              href: ../build/reference/out-output-file-name.md
+            - name: /PDB (použití databáze programu)
+              href: ../build/reference/pdb-use-program-database.md
+            - name: /PDBALTPATH (použití alternativní cesty PDB)
+              href: ../build/reference/pdbaltpath-use-alternate-pdb-path.md
+            - name: /PDBSTRIPPED (odstranění privátních symbolů)
+              href: ../build/reference/pdbstripped-strip-private-symbols.md
+            - name: /PGD (určení databáze pro optimalizace na základě profilu)
+              href: ../build/reference/pgd-specify-database-for-profile-guided-optimizations.md
+            - name: /POGOSAFEMODE
+              href: ../build/reference/pogosafemode-linker-option.md
+            - name: /PROFILE (profiler nástrojů pro měření výkonu)
+              href: ../build/reference/profile-performance-tools-profiler.md
+            - name: /RELEASE (nastavení kontrolního součtu)
+              href: ../build/reference/release-set-the-checksum.md
+            - name: /SAFESEH (image má bezpečné obslužné rutiny výjimek)
+              href: ../build/reference/safeseh-image-has-safe-exception-handlers.md
+            - name: /SECTION (určení atributů oddílu)
+              href: ../build/reference/section-specify-section-attributes.md
+            - name: /SOURCELINK (zahrnutí souboru Sourcelink do souboru PDB)
+              href: ../build/reference/sourcelink.md
+            - name: /STACK (přidělení zásobníku)
+              href: ../build/reference/stack-stack-allocations.md
+            - name: /STUB (název souboru zástupného kódu MS-DOS)
+              href: ../build/reference/stub-ms-dos-stub-file-name.md
+            - name: /SUBSYSTEM (určení subsystému)
+              href: ../build/reference/subsystem-specify-subsystem.md
+            - name: /SWAPRUN (načtení výstupu linkeru do stránkovacího souboru)
+              href: ../build/reference/swaprun-load-linker-output-to-swap-file.md
+            - name: /TLBID (určení ID prostředku pro knihovnu typů)
+              href: ../build/reference/tlbid-specify-resource-id-for-typelib.md
+            - name: /TLBOUT (pojmenování souboru .TLB)
+              href: ../build/reference/tlbout-name-dot-tlb-file.md
+            - name: /TSAWARE (vytvoření aplikace s detekcí terminálového serveru)
+              href: ../build/reference/tsaware-create-terminal-server-aware-application.md
+            - name: /USEPROFILE
+              href: ../build/reference/useprofile.md
+            - name: /VERBOSE (tisk zpráv o průběhu)
+              href: ../build/reference/verbose-print-progress-messages.md
+            - name: /VERSION (informace o verzi)
+              href: ../build/reference/version-version-information.md
+            - name: /WHOLEARCHIVE (zahrnutí všech souborů objektů knihovny)
+              href: ../build/reference/wholearchive-include-all-library-object-files.md
+            - name: /WINMD (generování metadat Windows)
+              href: ../build/reference/winmd-generate-windows-metadata.md
+            - name: /WINMDFILE (určení souboru winmd)
+              href: ../build/reference/winmdfile-specify-winmd-file.md
+            - name: /WINMDKEYFILE (určení souboru klíče winmd)
+              href: ../build/reference/winmdkeyfile-specify-winmd-key-file.md
+            - name: /WINMDKEYCONTAINER (určení kontejneru klíče)
+              href: ../build/reference/winmdkeycontainer-specify-key-container.md
+            - name: /WINMDDELAYSIGN (částečné podepsání souboru winmd)
+              href: ../build/reference/winmddelaysign-partially-sign-a-winmd.md
+            - name: /WX (zpracovávání upozornění linkeru jako chyb)
+              href: ../build/reference/wx-treat-linker-warnings-as-errors.md
+        - name: Dekorované názvy
+          href: ../build/reference/decorated-names.md
+        - name: Soubory definice modulu (.Def)
+          expanded: false
+          items:
+            - name: Soubory definice modulu (.Def)
+              href: ../build/reference/module-definition-dot-def-files.md
+            - name: Pravidla pro příkazy definice modulu
+              expanded: false
+              items:
+                - name: Pravidla pro příkazy definice modulu
+                  href: ../build/reference/rules-for-module-definition-statements.md
+                - name: EXPORTY
+                  href: ../build/reference/exports.md
+                - name: KNIHOVNA
+                  href: ../build/reference/library.md
+                - name: VELIKOST HALDY
+                  href: ../build/reference/heapsize.md
+                - name: NÁZEV (C/C++)
+                  href: ../build/reference/name-c-cpp.md
+                - name: ODDÍLY (C/C++)
+                  href: ../build/reference/sections-c-cpp.md
+                - name: VELIKOST ZÁSOBNÍKU
+                  href: ../build/reference/stacksize.md
+                - name: Zástupný procedura
+                  href: ../build/reference/stub.md
+                - name: VERZE (C/C++)
+                  href: ../build/reference/version-c-cpp.md
+        - name: Podpora linkeru pro knihovny DLL s odloženým načtením
+          expanded: false
+          items:
+            - name: Podpora linkeru pro knihovny DLL s odloženým načtením
+              href: ../build/reference/linker-support-for-delay-loaded-dlls.md
+            - name: Určení knihoven DLL pro odložené načtení
+              href: ../build/reference/specifying-dlls-to-delay-load.md
+            - name: Explicitní uvolnění knihovny DLL načtené se zpožděním
+              href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
+            - name: Import vazeb
+              href: ../build/reference/binding-imports.md
+            - name: Načtení všech importů pro knihovnu DLL se zpožděným načtením
+              href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
+            - name: Zpracování chyb a oznámení
+              expanded: false
+              items:
+                - name: Zpracování chyb a oznámení
+                  href: ../build/reference/error-handling-and-notification.md
+                - name: Hooky oznámení
+                  href: ../build/reference/notification-hooks.md
+                - name: Hooky selhání
+                  href: ../build/reference/failure-hooks.md
+                - name: Kódy výjimek při načítání knihoven DLL (C/C++)
+                  href: ../build/reference/exceptions-c-cpp.md
+            - name: Výpis importu se zpožděným načtením
+              href: ../build/reference/dumping-delay-loaded-imports.md
+            - name: Omezení odloženého načítání knihoven DLL
+              href: ../build/reference/constraints-of-delay-loading-dlls.md
+            - name: Základní informace o podpůrné funkci
+              expanded: false
+              items:
+                - name: Základní informace o podpůrné funkci
+                  href: ../build/reference/understanding-the-helper-function.md
+                - name: Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
+                  href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
+                - name: 'Konvence volání, parametry a návratový typ'
+                  href: ../build/reference/calling-conventions-parameters-and-return-type.md
+                - name: Struktura a definice konstant
+                  href: ../build/reference/structure-and-constant-definitions.md
+                - name: Výpočet nezbytných hodnot
+                  href: ../build/reference/calculating-necessary-values.md
+                - name: Uvolnění knihovny DLL s odloženým načtením
+                  href: ../build/reference/unloading-a-delay-loaded-dll.md
+            - name: Vývoj vlastní pomocné funkce
+              href: ../build/reference/developing-your-own-helper-function.md
+    - name: Další nástroje sestavení MSVC
+      expanded: false
+      items:
+        - name: Další nástroje sestavení MSVC
+          href: ../build/reference/c-cpp-build-tools.md
+        - name: NMAKE – referenční zdroje
+          expanded: false
+          items:
+            - name: NMAKE – referenční zdroje
+              href: ../build/reference/nmake-reference.md
+            - name: Projekty NMAKE v sadě Visual Studio
+              href: ../build/reference/creating-a-makefile-project.md
+            - name: Spuštění příkazu NMAKE
+              href: ../build/reference/running-nmake.md
+            - name: Obsah souboru pravidel
+              expanded: false
+              items:
+                - name: Obsah souboru pravidel
+                  href: ../build/reference/contents-of-a-makefile.md
+                - name: Zástupné znaky a příkaz NMAKE
+                  href: ../build/reference/wildcards-and-nmake.md
+                - name: Dlouhé názvy souborů v souboru pravidel
+                  href: ../build/reference/long-filenames-in-a-makefile.md
+                - name: Komentáře v souboru pravidel
+                  href: ../build/reference/comments-in-a-makefile.md
+                - name: Speciální znaky v souboru pravidel
+                  href: ../build/reference/special-characters-in-a-makefile.md
+                - name: Ukázkový soubor pravidel
+                  href: ../build/reference/sample-makefile.md
+            - name: Bloky popisů
+              href: ../build/reference/description-blocks.md
+            - name: Příkazy v souboru pravidel
+              expanded: false
+              items:
+                - name: Příkazy v souboru pravidel
+                  href: ../build/reference/commands-in-a-makefile.md
+                - name: Modifikátory příkazů
+                  href: ../build/reference/command-modifiers.md
+                - name: Syntaxe částí názvu souboru
+                  href: ../build/reference/filename-parts-syntax.md
+                - name: Soubory vložené do souboru pravidel
+                  expanded: false
+                  items:
+                    - name: Soubory vložené do souboru pravidel
+                      href: ../build/reference/inline-files-in-a-makefile.md
+                    - name: Zadání vloženého souboru
+                      href: ../build/reference/specifying-an-inline-file.md
+                    - name: Vytvoření textu vloženého souboru
+                      href: ../build/reference/creating-inline-file-text.md
+                    - name: Opětovné použití vložených souborů
+                      href: ../build/reference/reusing-inline-files.md
+                    - name: Několik vložených souborů
+                      href: ../build/reference/multiple-inline-files.md
+            - name: Makra a příkaz NMAKE
+              expanded: false
+              items:
+                - name: Makra a příkaz NMAKE
+                  href: ../build/reference/macros-and-nmake.md
+                - name: Definice makra NMAKE
+                  expanded: false
+                  items:
+                    - name: Definice makra NMAKE
+                      href: ../build/reference/defining-an-nmake-macro.md
+                    - name: Speciální znaky v makrech
+                      href: ../build/reference/special-characters-in-macros.md
+                    - name: Hodnota Null a nedefinovaná makra
+                      href: ../build/reference/null-and-undefined-macros.md
+                    - name: Místo definice maker
+                      href: ../build/reference/where-to-define-macros.md
+                    - name: Priority v definicích maker
+                      href: ../build/reference/precedence-in-macro-definitions.md
+                - name: Použití makra NMAKE
+                  expanded: false
+                  items:
+                    - name: Použití makra NMAKE
+                      href: ../build/reference/using-an-nmake-macro.md
+                    - name: Nahrazení makra
+                      href: ../build/reference/macro-substitution.md
+                - name: Speciální makra NMAKE
+                  expanded: false
+                  items:
+                    - name: Speciální makra NMAKE
+                      href: ../build/reference/special-nmake-macros.md
+                    - name: Makra názvů souborů
+                      href: ../build/reference/filename-macros.md
+                    - name: Rekurzivní makra
+                      href: ../build/reference/recursion-macros.md
+                    - name: Příkazová makra a makra možností
+                      href: ../build/reference/command-macros-and-options-macros.md
+                    - name: Makra proměnné prostředí
+                      href: ../build/reference/environment-variable-macros.md
+            - name: Odvozená pravidla
+              expanded: false
+              items:
+                - name: Odvozená pravidla
+                  href: ../build/reference/inference-rules.md
+                - name: Definice pravidla
+                  expanded: false
+                  items:
+                    - name: Definice pravidla
+                      href: ../build/reference/defining-a-rule.md
+                    - name: Cesty hledání v pravidlech
+                      href: ../build/reference/search-paths-in-rules.md
+                - name: Pravidla dávkového režimu
+                  href: ../build/reference/batch-mode-rules.md
+                - name: Předdefinovaná pravidla
+                  href: ../build/reference/predefined-rules.md
+                - name: Odvozené závislé objekty a pravidla
+                  href: ../build/reference/inferred-dependents-and-rules.md
+                - name: Priorita odvozených pravidel
+                  href: ../build/reference/precedence-in-inference-rules.md
+            - name: Direktivy s tečkou
+              href: ../build/reference/dot-directives.md
+            - name: Předběžné zpracování souboru pravidel
+              expanded: false
+              items:
+                - name: Předběžné zpracování souboru pravidel
+                  href: ../build/reference/makefile-preprocessing.md
+                - name: Direktivy předběžného zpracování souboru pravidel
+                  href: ../build/reference/makefile-preprocessing-directives.md
+                - name: Výrazy v předběžném zpracování souboru pravidel
+                  expanded: false
+                  items:
+                    - name: Výrazy v předběžném zpracování souboru pravidel
+                      href: ../build/reference/expressions-in-makefile-preprocessing.md
+                    - name: Operátory předběžného zpracování souboru pravidel
+                      href: ../build/reference/makefile-preprocessing-operators.md
+                    - name: Spuštění programu při předběžném zpracování
+                      href: ../build/reference/executing-a-program-in-preprocessing.md
+        - name: Referenční dokumentace ke knihovně LIB
+          expanded: false
+          items:
+            - name: Referenční dokumentace ke knihovně LIB
+              href: ../build/reference/lib-reference.md
+            - name: Přehled LIB
+              expanded: false
+              items:
+                - name: Přehled LIB
+                  href: ../build/reference/overview-of-lib.md
+                - name: 'Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio'
+                  href: ../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
+                - name: Vstupní soubory knihovny LIB
+                  href: ../build/reference/lib-input-files.md
+                - name: Výstupní soubory knihovny LIB
+                  href: ../build/reference/lib-output-files.md
+                - name: Další výstup knihovny LIB
+                  href: ../build/reference/other-lib-output.md
+                - name: Struktura knihovny
+                  href: ../build/reference/structure-of-a-library.md
+            - name: Spuštění knihovny LIB
+              href: ../build/reference/running-lib.md
+            - name: Správa knihovny
+              href: ../build/reference/managing-a-library.md
+            - name: Extrahování člena knihovny
+              href: ../build/reference/extracting-a-library-member.md
+            - name: Práce s knihovnami importu a soubory exportu
+              expanded: false
+              items:
+                - name: Práce s knihovnami importu a soubory exportu
+                  href: ../build/reference/working-with-import-libraries-and-export-files.md
+                - name: Sestavení knihovny importu a souboru exportu
+                  href: ../build/reference/building-an-import-library-and-export-file.md
+                - name: Použití knihovny importu a souboru exportu
+                  href: ../build/reference/using-an-import-library-and-export-file.md
+        - name: EDITBIN – referenční dokumentace
+          expanded: false
+          items:
+            - name: EDITBIN – referenční dokumentace
+              href: ../build/reference/editbin-reference.md
+            - name: EDITBIN – příkazový řádek
+              href: ../build/reference/editbin-command-line.md
+            - name: EDITBIN – možnosti
+              expanded: false
+              items:
+                - name: EDITBIN – možnosti
+                  href: ../build/reference/editbin-options.md
+                - name: /ALLOWISOLATION
+                  href: ../build/reference/allowisolation.md
+                - name: /ALLOWBIND
+                  href: ../build/reference/allowbind.md
+                - name: /APPCONTAINER
+                  href: ../build/reference/appcontainer.md
+                - name: /BIND
+                  href: ../build/reference/bind.md
+                - name: /DYNAMICBASE
+                  href: ../build/reference/dynamicbase.md
+                - name: /ERRORREPORT (editbin.exe)
+                  href: ../build/reference/errorreport-editbin-exe.md
+                - name: /HEAP
+                  href: ../build/reference/heap.md
+                - name: /HIGHENTROPYVA
+                  href: ../build/reference/highentropyva.md
+                - name: /INTEGRITYCHECK
+                  href: ../build/reference/integritycheck.md
+                - name: /LARGEADDRESSAWARE
+                  href: ../build/reference/largeaddressaware.md
+                - name: /NOLOGO (EDITBIN)
+                  href: ../build/reference/nologo-editbin.md
+                - name: /NXCOMPAT
+                  href: ../build/reference/nxcompat.md
+                - name: /REBASE
+                  href: ../build/reference/rebase.md
+                - name: /RELEASE
+                  href: ../build/reference/release.md
+                - name: /SECTION (EDITBIN)
+                  href: ../build/reference/section-editbin.md
+                - name: /STACK
+                  href: ../build/reference/stack.md
+                - name: /SUBSYSTEM
+                  href: ../build/reference/subsystem.md
+                - name: /SWAPRUN
+                  href: ../build/reference/swaprun.md
+                - name: /TSAWARE
+                  href: ../build/reference/tsaware.md
+                - name: /VERSION
+                  href: ../build/reference/version.md
+        - name: DUMPBIN – referenční dokumentace
+          expanded: false
+          items:
+            - name: DUMPBIN – referenční dokumentace
+              href: ../build/reference/dumpbin-reference.md
+            - name: DUMPBIN – příkazový řádek
+              href: ../build/reference/dumpbin-command-line.md
+            - name: DUMPBIN – možnosti
+              expanded: false
+              items:
+                - name: DUMPBIN – možnosti
+                  href: ../build/reference/dumpbin-options.md
+                - name: /ALL
+                  href: ../build/reference/all.md
+                - name: /ARCHIVEMEMBERS
+                  href: ../build/reference/archivemembers.md
+                - name: /CLRHEADER
+                  href: ../build/reference/clrheader.md
+                - name: /DEPENDENTS
+                  href: ../build/reference/dependents.md
+                - name: /DIRECTIVES
+                  href: ../build/reference/directives.md
+                - name: /DISASM
+                  href: ../build/reference/disasm.md
+                - name: /ERRORREPORT (dumpbin.exe)
+                  href: ../build/reference/errorreport-dumpbin-exe.md
+                - name: /EXPORTS
+                  href: ../build/reference/dash-exports.md
+                - name: /FPO
+                  href: ../build/reference/fpo.md
+                - name: /HEADERS
+                  href: ../build/reference/headers.md
+                - name: /IMPORTS (DUMPBIN)
+                  href: ../build/reference/imports-dumpbin.md
+                - name: /LINENUMBERS
+                  href: ../build/reference/linenumbers.md
+                - name: /LINKERMEMBER
+                  href: ../build/reference/linkermember.md
+                - name: /LOADCONFIG
+                  href: ../build/reference/loadconfig.md
+                - name: /NOPDB
+                  href: ../build/reference/nopdb.md
+                - name: /OUT (DUMPBIN)
+                  href: ../build/reference/out-dumpbin.md
+                - name: /PDATA
+                  href: ../build/reference/pdata.md
+                - name: /PDBPATH
+                  href: ../build/reference/pdbpath.md
+                - name: /RANGE
+                  href: ../build/reference/range.md
+                - name: /RAWDATA
+                  href: ../build/reference/rawdata.md
+                - name: /RELOCATIONS
+                  href: ../build/reference/relocations.md
+                - name: /SECTION (DUMPBIN)
+                  href: ../build/reference/section-dumpbin.md
+                - name: /SUMMARY
+                  href: ../build/reference/summary.md
+                - name: /SYMBOLS
+                  href: ../build/reference/symbols.md
+                - name: /TLS
+                  href: ../build/reference/tls.md
+        - name: ERRLOOK – referenční dokumentace
+          expanded: false
+          items:
+            - name: ERRLOOK – referenční dokumentace
+              href: ../build/reference/errlook-reference.md
+            - name: Hodnota – textové pole
+              href: ../build/reference/value-edit-control.md
+            - name: Chybová zpráva – textové pole
+              href: ../build/reference/error-message-edit-control.md
+            - name: Moduly – tlačítko
+              href: ../build/reference/modules-button.md
+            - name: Hledat – tlačítko
+              href: ../build/reference/look-up-button.md
+        - name: XDCMake – referenční dokumentace
+          href: ../build/reference/xdcmake-reference.md
+        - name: BSCMAKE – referenční dokumentace
+          expanded: false
+          items:
+            - name: BSCMAKE – referenční dokumentace
+              href: ../build/reference/bscmake-reference.md
+            - name: 'Sestavení souborů informací o procházení: Přehled'
+              href: ../build/reference/building-browse-information-files-overview.md
+            - name: Sestavení souboru .Bsc
+              expanded: false
+              items:
+                - name: Sestavení souboru .Bsc
+                  href: ../build/reference/building-a-dot-bsc-file.md
+                - name: Vytvoření souboru .Sbr
+                  href: ../build/reference/creating-an-dot-sbr-file.md
+                - name: 'Postupy: Sestavení souboru .Bsc nástrojem BSCMAKE'
+                  href: ../build/reference/how-bscmake-builds-a-dot-bsc-file.md
+            - name: BSCMAKE – příkazový řádek
+              href: ../build/reference/bscmake-command-line.md
+            - name: BSCMAKE – soubor příkazů (soubor odezvy)
+              href: ../build/reference/bscmake-command-file-response-file.md
+            - name: BSCMAKEE – možnosti
+              href: ../build/reference/bscmake-options.md
+            - name: BSCMAKE – ukončovací kódy
+              href: ../build/reference/bscmake-exit-codes.md
+    - name: Chyby kompilátoru a nástrojů sestavení
+      href: ../error-messages/
+    - name: Dokumentace XML pro C++
+      expanded: false
+      items:
+        - name: Dokumentace XML pro C++
+          href: ../build/reference/xml-documentation-visual-cpp.md
+        - name: Doporučené značky pro komentáře dokumentace C++
+          expanded: false
+          items:
+            - name: Doporučené značky pro komentáře dokumentace C++
+              href: ../build/reference/recommended-tags-for-documentation-comments-visual-cpp.md
+            - name: <c>
+              href: ../build/reference/c-visual-cpp.md
+            - name: <code>
+              href: ../build/reference/code-visual-cpp.md
+            - name: <example>
+              href: ../build/reference/example-visual-cpp.md
+            - name: <exception>
+              href: ../build/reference/exception-visual-cpp.md
+            - name: <include>
+              href: ../build/reference/include-visual-cpp.md
+            - name: <list>
+              href: ../build/reference/list-visual-cpp.md
+            - name: <para>
+              href: ../build/reference/para-visual-cpp.md
+            - name: <param>
+              href: ../build/reference/param-visual-cpp.md
+            - name: <paramref>
+              href: ../build/reference/paramref-visual-cpp.md
+            - name: <permission>
+              href: ../build/reference/permission-visual-cpp.md
+            - name: <remarks>
+              href: ../build/reference/remarks-visual-cpp.md
+            - name: <returns>
+              href: ../build/reference/returns-visual-cpp.md
+            - name: <see>
+              href: ../build/reference/see-visual-cpp.md
+            - name: <seealso>
+              href: ../build/reference/seealso-visual-cpp.md
+            - name: <summary>
+              href: ../build/reference/summary-visual-cpp.md
+            - name: <value>
+              href: ../build/reference/value-visual-cpp.md
+        - name: Zpracování souboru XML
+          href: ../build/reference/dot-xml-file-processing.md
+        - name: Oddělovače pro značky dokumentace C++
+          href: ../build/reference/delimiters-for-visual-cpp-documentation-tags.md

@@ -1,0 +1,530 @@
+- name: Vývoj pro Univerzální platformu Windows (UPW)
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Referenční zdroje k jazyku C++/CX
+  expanded: false
+  items:
+    - name: Referenční zdroje k jazyku C++/CX
+      href: ../cppcx/visual-c-language-reference-c-cx.md
+    - name: Stručná referenční dokumentace
+      href: ../cppcx/quick-reference-c-cx.md
+    - name: Systém typů
+      expanded: false
+      items:
+        - name: Systém typů
+          href: ../cppcx/type-system-c-cx.md
+        - name: Obory názvů a viditelnost typů (C++/CX )
+          href: ../cppcx/namespaces-and-type-visibility-c-cx.md
+        - name: Základní typy
+          href: ../cppcx/fundamental-types-c-cx.md
+        - name: Řetězce
+          href: ../cppcx/strings-c-cx.md
+        - name: Array a WriteOnlyArray
+          href: ../cppcx/array-and-writeonlyarray-c-cx.md
+        - name: Referenční třídy a struktury
+          href: ../cppcx/ref-classes-and-structs-c-cx.md
+        - name: Hodnotové třídy a struktury
+          href: ../cppcx/value-classes-and-structs-c-cx.md
+        - name: Dílčí třídy
+          href: ../cppcx/partial-classes-c-cx.md
+        - name: Vlastnosti
+          href: ../cppcx/properties-c-cx.md
+        - name: Kolekce
+          href: ../cppcx/collections-c-cx.md
+        - name: Šablony referenčních tříd
+          href: ../cppcx/template-ref-classes-c-cx.md
+        - name: Rozhraní
+          href: ../cppcx/interfaces-c-cx.md
+        - name: Výčty
+          href: ../cppcx/enums-c-cx.md
+        - name: Delegáty
+          href: ../cppcx/delegates-c-cx.md
+        - name: Výjimky
+          href: ../cppcx/exceptions-c-cx.md
+        - name: Události
+          href: ../cppcx/events-c-cx.md
+        - name: Přetypování
+          href: ../cppcx/casting-c-cx.md
+        - name: Zabalení
+          href: ../cppcx/boxing-c-cx.md
+        - name: Atributy
+          href: ../cppcx/attributes-c-cx.md
+        - name: Vyřazování typů a členů
+          href: ../cppcx/deprecating-types-and-members-c-cx.md
+    - name: Sestavení aplikací a knihoven
+      expanded: false
+      items:
+        - name: Sestavení aplikací a knihoven
+          href: ../cppcx/building-apps-and-libraries-c-cx.md
+        - name: Možnosti kompilátoru a linkeru
+          href: ../cppcx/compiler-and-linker-options-c-cx.md
+        - name: Statické knihovny
+          href: ../cppcx/static-libraries-c-cx.md
+        - name: knihovny DLL
+          href: ../cppcx/dlls-c-cx.md
+    - name: Spolupráce s jinými jazyky
+      expanded: false
+      items:
+        - name: Spolupráce s jinými jazyky
+          href: ../cppcx/interoperating-with-other-languages-c-cx.md
+        - name: Integrace JavaScriptu
+          href: ../cppcx/javascript-integration-c-cx.md
+        - name: Integrace CLR
+          href: ../cppcx/clr-integration-c-cx.md
+        - name: Integrace WRL
+          href: ../cppcx/wrl-integration-c-cx.md
+    - name: Získání ukazatelů do vyrovnávací paměti dat
+      href: ../cppcx/obtaining-pointers-to-data-buffers-c-cx.md
+    - name: Dělení do vláken a zařazování
+      href: ../cppcx/threading-and-marshaling-c-cx.md
+    - name: Slabé odkazy a narušené cykly
+      href: ../cppcx/weak-references-and-breaking-cycles-c-cx.md
+    - name: Referenční informace o oborech názvů
+      expanded: false
+      items:
+        - name: Referenční informace o oborech názvů
+          href: ../cppcx/namespaces-reference-c-cx.md
+        - name: default – obor názvů
+          expanded: false
+          items:
+            - name: default – obor názvů
+              href: ../cppcx/default-namespace.md
+            - name: 'default::(type_name)::Equals'
+              href: ../cppcx/default-type-name-equals-method.md
+            - name: 'default::(type_name)::GetHashCode'
+              href: ../cppcx/default-type-name-gethashcode-method.md
+            - name: 'default::(type_name)::GetType'
+              href: ../cppcx/default-type-name-gettype-method.md
+            - name: 'default::(type_name)::ToString'
+              href: ../cppcx/default-type-name-tostring-method.md
+        - name: Platform – obor názvů
+          expanded: false
+          items:
+            - name: Platform – obor názvů
+              href: ../cppcx/platform-namespace-c-cx.md
+            - name: 'Platform::AccessDeniedException – třída'
+              href: ../cppcx/platform-accessdeniedexception-class.md
+            - name: 'Platform::Agile – třída'
+              href: ../cppcx/platform-agile-class.md
+            - name: 'Platform::Array – třída'
+              href: ../cppcx/platform-array-class.md
+            - name: 'Platform::ArrayReference – třída'
+              href: ../cppcx/platform-arrayreference-class.md
+            - name: 'Platform::Boolean – hodnotová třída'
+              href: ../cppcx/platform-boolean-value-class.md
+            - name: 'Platform::Box – třída'
+              href: ../cppcx/platform-box-class.md
+            - name: 'Platform::CallbackContext – výčet'
+              href: ../cppcx/platform-callbackcontext-enumeration.md
+            - name: 'Platform::ChangedStateException – třída'
+              href: ../cppcx/platform-changedstateexception-class.md
+            - name: 'Platform::ClassNotRegisteredException – třída'
+              href: ../cppcx/platform-classnotregisteredexception-class.md
+            - name: 'Platform::COMException – třída'
+              href: ../cppcx/platform-comexception-class.md
+            - name: 'Platform::Delegate – třída'
+              href: ../cppcx/platform-delegate-class.md
+            - name: 'Platform::DisconnectedException – třída'
+              href: ../cppcx/platform-disconnectedexception-class.md
+            - name: 'Platform::Enum – třída'
+              href: ../cppcx/platform-enum-class.md
+            - name: 'Platform::Exception – třída'
+              href: ../cppcx/platform-exception-class.md
+            - name: 'Platform::FailureException – třída'
+              href: ../cppcx/platform-failureexception-class.md
+            - name: 'Platform::Guid – hodnotová třída'
+              href: ../cppcx/platform-guid-value-class.md
+            - name: 'Platform::IBox – rozhraní'
+              href: ../cppcx/platform-ibox-interface.md
+            - name: 'Platform::IBoxArray – rozhraní'
+              href: ../cppcx/platform-iboxarray-interface.md
+            - name: 'Platform::IDisposable – rozhraní'
+              href: ../cppcx/platform-idisposable-interface.md
+            - name: 'Platform::IntPtr – hodnotová třída'
+              href: ../cppcx/platform-intptr-value-class.md
+            - name: 'Platform::InvalidArgumentException – třída'
+              href: ../cppcx/platform-invalidargumentexception-class.md
+            - name: 'Platform::InvalidCastException – třída'
+              href: ../cppcx/platform-invalidcastexception-class.md
+            - name: 'Platform::IValueType – rozhraní'
+              href: ../cppcx/platform-ivaluetype-interface.md
+            - name: 'Platform::MTAThreadAttribute – třída'
+              href: ../cppcx/platform-mtathreadattribute-class.md
+            - name: 'Platform::NotImplementedException – třída'
+              href: ../cppcx/platform-notimplementedexception-class.md
+            - name: 'Platform::NullReferenceException – třída'
+              href: ../cppcx/platform-nullreferenceexception-class.md
+            - name: 'Platform::Object – třída'
+              href: ../cppcx/platform-object-class.md
+            - name: 'Platform::ObjectDisposedException – třída'
+              href: ../cppcx/platform-objectdisposedexception-class.md
+            - name: 'Platform::OperationCanceledException – třída'
+              href: ../cppcx/platform-operationcanceledexception-class.md
+            - name: 'Platform::OutOfBoundsException – třída'
+              href: ../cppcx/platform-outofboundsexception-class.md
+            - name: 'Platform::OutOfMemoryException – třída'
+              href: ../cppcx/platform-outofmemoryexception-class.md
+            - name: 'Platform::ReCreateException'
+              href: ../cppcx/platform-recreateexception-method.md
+            - name: 'Platform::SizeT – hodnotová třída'
+              href: ../cppcx/platform-sizet-value-class.md
+            - name: 'Platform::STAThreadAttribute – třída'
+              href: ../cppcx/platform-stathreadattribute-class.md
+            - name: 'Platform::String – třída'
+              href: ../cppcx/platform-string-class.md
+            - name: 'Platform::StringReference – třída'
+              href: ../cppcx/platform-stringreference-class.md
+            - name: 'Platform::Type – třída'
+              href: ../cppcx/platform-type-class.md
+            - name: 'Platform::Type^ – operátor'
+              href: ../cppcx/operator-type-hat.md
+            - name: 'Platform::TypeCode – výčet'
+              href: ../cppcx/platform-typecode-enumeration.md
+            - name: 'Platform::UIntPtr – hodnotová třída'
+              href: ../cppcx/platform-uintptr-value-class.md
+            - name: 'Platform::ValueType – třída'
+              href: ../cppcx/platform-valuetype-class.md
+            - name: 'Platform::WeakReference – třída'
+              href: ../cppcx/platform-weakreference-class.md
+            - name: 'Platform::WriteOnlyArray – třída'
+              href: ../cppcx/platform-writeonlyarray-class.md
+            - name: 'Platform::WrongThreadException – třída'
+              href: ../cppcx/platform-wrongthreadexception-class.md
+        - name: 'Platform::Collections – obor názvů'
+          expanded: false
+          items:
+            - name: 'Platform::Collections – obor názvů'
+              href: ../cppcx/platform-collections-namespace.md
+            - name: 'Platform::Collections::BackInsertIterator – třída'
+              href: ../cppcx/platform-collections-backinsertiterator-class.md
+            - name: 'Platform::Collections::InputIterator – třída'
+              href: ../cppcx/platform-collections-inputiterator-class.md
+            - name: 'Platform::Collections::Map – třída'
+              href: ../cppcx/platform-collections-map-class.md
+            - name: 'Platform::Collections::MapView – třída'
+              href: ../cppcx/platform-collections-mapview-class.md
+            - name: 'Platform::Collections::UnorderedMap – třída'
+              href: ../cppcx/platform-collections-unorderedmap-class.md
+            - name: 'Platform::Collections::UnorderedMapView – třída'
+              href: ../cppcx/platform-collections-unorderedmapview-class.md
+            - name: 'Platform::Collections::Vector – třída'
+              href: ../cppcx/platform-collections-vector-class.md
+            - name: 'Platform::Collections::VectorIterator – třída'
+              href: ../cppcx/platform-collections-vectoriterator-class.md
+            - name: 'Platform::Collections::VectorView – třída'
+              href: ../cppcx/platform-collections-vectorview-class.md
+            - name: 'Platform::Collections::VectorViewIterator – třída'
+              href: ../cppcx/platform-collections-vectorviewiterator-class.md
+        - name: 'Platform::Collections::Details – obor názvů'
+          href: ../cppcx/platform-collections-details-namespace.md
+        - name: 'Platform::Details – obor názvů'
+          expanded: false
+          items:
+            - name: 'Platform::Details – obor názvů'
+              href: ../cppcx/platform-details-namespace.md
+            - name: 'Platform::Details::__GUID – struktura'
+              href: ../cppcx/platform-details-guid-struct.md
+            - name: 'Platform::Details::Console – třída'
+              href: ../cppcx/platform-details-console-class.md
+            - name: 'Platform::Details::Heap – třída'
+              href: ../cppcx/platform-details-heap-class.md
+            - name: 'Platform::Details::HeapAllocationTrackingLevel – výčet'
+              href: ../cppcx/platform-details-heapallocationtrackinglevel-enumeration.md
+            - name: 'Platform::Details::HeapEntryHandler – delegát'
+              href: ../cppcx/platform-details-heapentryhandler-delegate.md
+            - name: 'Platform::Details::IEquatable – rozhraní'
+              href: ../cppcx/platform-details-iequatable-interface.md
+            - name: 'Platform::Details::IPrintable – rozhraní'
+              href: ../cppcx/platform-details-iprintable-interface.md
+        - name: 'Platform::Metadata – obor názvů'
+          expanded: false
+          items:
+            - name: 'Platform::Metadata – obor názvů'
+              href: ../cppcx/platform-metadata-namespace.md
+            - name: 'Platform::Metadata::Attribute – atribut'
+              href: ../cppcx/platform-metadata-attribute-attribute.md
+            - name: 'Platform::Metadata::DefaultMemberAttribute – atribut'
+              href: ../cppcx/platform-metadata-defaultmemberattribute-attribute.md
+            - name: 'Platform::Metadata::FlagsAttribute – atribut'
+              href: ../cppcx/platform-metadata-flagsattribute-attribute.md
+            - name: 'Platform::Metadata::RuntimeClassName'
+              href: ../cppcx/platform-metadata-runtimeclassname.md
+        - name: 'Platform::Runtime::CompilerServices – obor názvů'
+          href: ../cppcx/platform-runtime-compilerservices-namespace.md
+        - name: 'Platform::Runtime::InteropServices – obor názvů'
+          href: ../cppcx/platform-runtime-interopservices-namespace.md
+        - name: 'Windows::Foundation::Collections – obor názvů'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation::Collections – obor názvů'
+              href: ../cppcx/windows-foundation-collections-namespace-c-cx.md
+            - name: back_inserter – funkce
+              href: ../cppcx/back-inserter-function.md
+            - name: begin – funkce
+              href: ../cppcx/begin-function.md
+            - name: end – funkce
+              href: ../cppcx/end-function.md
+            - name: to_vector – funkce
+              href: ../cppcx/to-vector-function.md
+        - name: 'Windows::UI::Xaml::Interop::TypeName – operátor'
+          href: ../cppcx/operator-windows-ui-xaml-interop-typename.md
+    - name: Nepodporované funkce CRT v aplikacích pro Univerzální platformu Windows
+      href: ../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md
+- name: Knihovna šablon C++ prostředí Windows Runtime (WRL)
+  expanded: false
+  items:
+    - name: Knihovna šablon C++ prostředí Windows Runtime (WRL)
+      href: ../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
+    - name: "Postupy: Aktivace a\_používání součástí prostředí Windows Runtime s\_použitím knihovny WRL"
+      href: ../cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
+    - name: "Postupy: Dokončení asynchronních operací s\_použitím knihovny WRL"
+      href: ../cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
+    - name: "Postupy: Zpracování událostí s\_použitím knihovny WRL"
+      href: ../cppcx/wrl/how-to-handle-events-using-wrl.md
+    - name: "Návod: Vytvoření aplikace pro UPW s\_použitím knihovny WRL a\_platformy Media Foundation"
+      href: ../cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
+    - name: "Postupy: Vytvoření klasické komponenty modelu COM s\_použitím knihovny WRL"
+      href: ../cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
+    - name: 'Postupy: Přímé vytváření instancí komponent knihovny WRL'
+      href: ../cppcx/wrl/how-to-instantiate-wrl-components-directly.md
+    - name: "Postupy: Vytváření souborů .h z\_metadat Windows pomocí nástrojů winmdidl.exe a\_midlrt.exe"
+      href: ../cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
+    - name: Nejdůležitější rozhraní API knihovny WRL podle kategorie
+      href: ../cppcx/wrl/key-wrl-apis-by-category.md
+    - name: Referenční dokumentace ke knihovně WRL
+      expanded: false
+      items:
+        - name: Referenční dokumentace ke knihovně WRL
+          href: ../cppcx/wrl/wrl-reference.md
+        - name: 'Microsoft::WRL – obor názvů'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL – obor názvů'
+              href: ../cppcx/wrl/microsoft-wrl-namespace.md
+            - name: ActivatableClass – makra
+              href: ../cppcx/wrl/activatableclass-macros.md
+            - name: ActivationFactory – třída
+              href: ../cppcx/wrl/activationfactory-class.md
+            - name: AgileActivationFactory – třída
+              href: ../cppcx/wrl/agileactivationfactory-class.md
+            - name: AgileEventSource – třída
+              href: ../cppcx/wrl/agileeventsource-class.md
+            - name: AsWeak – funkce
+              href: ../cppcx/wrl/asweak-function.md
+            - name: AsyncBase – třída
+              href: ../cppcx/wrl/asyncbase-class.md
+            - name: AsyncResultType – výčet
+              href: ../cppcx/wrl/asyncresulttype-enumeration.md
+            - name: Callback – funkce (WRL)
+              href: ../cppcx/wrl/callback-function-wrl.md
+            - name: CancelTransitionPolicy – výčet
+              href: ../cppcx/wrl/canceltransitionpolicy-enumeration.md
+            - name: ChainInterfaces – struktura
+              href: ../cppcx/wrl/chaininterfaces-structure.md
+            - name: ClassFactory – třída
+              href: ../cppcx/wrl/classfactory-class.md
+            - name: CloakedIid – struktura
+              href: ../cppcx/wrl/cloakediid-structure.md
+            - name: ComposableBase – třída
+              href: ../cppcx/wrl/composablebase-class.md
+            - name: ComPtr – třída
+              href: ../cppcx/wrl/comptr-class.md
+            - name: CreateActivationFactory – funkce
+              href: ../cppcx/wrl/createactivationfactory-function.md
+            - name: CreateClassFactory – funkce
+              href: ../cppcx/wrl/createclassfactory-function.md
+            - name: DeferrableEventArgs – třída
+              href: ../cppcx/wrl/deferrableeventargs-class.md
+            - name: EventSource – třída
+              href: ../cppcx/wrl/eventsource-class.md
+            - name: FactoryCacheFlags – výčet
+              href: ../cppcx/wrl/factorycacheflags-enumeration.md
+            - name: FtmBase – třída
+              href: ../cppcx/wrl/ftmbase-class.md
+            - name: GetModuleBase – funkce
+              href: ../cppcx/wrl/getmodulebase-function.md
+            - name: Implements – struktura
+              href: ../cppcx/wrl/implements-structure.md
+            - name: InspectableClass – makro
+              href: ../cppcx/wrl/inspectableclass-macro.md
+            - name: InvokeModeOptions – struktura
+              href: ../cppcx/wrl/invokemodeoptions-structure.md
+            - name: Make – funkce
+              href: ../cppcx/wrl/make-function.md
+            - name: MixIn – struktura
+              href: ../cppcx/wrl/mixin-structure.md
+            - name: Module – třída
+              expanded: false
+              items:
+                - name: Module – třídy
+                  href: ../cppcx/wrl/module-class.md
+                - name: 'Module::GenericReleaseNotifier – třída'
+                  href: ../cppcx/wrl/module-genericreleasenotifier-class.md
+                - name: 'Module::MethodReleaseNotifier – třída'
+                  href: ../cppcx/wrl/module-methodreleasenotifier-class.md
+                - name: 'Module::ReleaseNotifier – třída'
+                  href: ../cppcx/wrl/module-releasenotifier-class.md
+            - name: ModuleType – výčet
+              href: ../cppcx/wrl/moduletype-enumeration.md
+            - name: 'operator!= – operátor (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-inequality-operator-microsoft-wrl.md
+            - name: 'operator== – operátor (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-equality-operator-microsoft-wrl.md
+            - name: 'operator< – operátor (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-less-than-operator-microsoft-wrl.md
+            - name: RuntimeClass – třída
+              href: ../cppcx/wrl/runtimeclass-class.md
+            - name: RuntimeClassFlags – struktura
+              href: ../cppcx/wrl/runtimeclassflags-structure.md
+            - name: RuntimeClassType – výčet
+              href: ../cppcx/wrl/runtimeclasstype-enumeration.md
+            - name: SimpleActivationFactory – třída
+              href: ../cppcx/wrl/simpleactivationfactory-class.md
+            - name: SimpleClassFactory – třída
+              href: ../cppcx/wrl/simpleclassfactory-class.md
+            - name: WeakRef – třída
+              href: ../cppcx/wrl/weakref-class.md
+        - name: 'Microsoft::WRL::Details – obor názvů'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Details – obor názvů'
+              href: ../cppcx/wrl/microsoft-wrl-details-namespace.md
+            - name: ActivationFactoryCallback – funkce
+              href: ../cppcx/wrl/activationfactorycallback-function.md
+            - name: ArgTraits – struktura
+              href: ../cppcx/wrl/argtraits-structure.md
+            - name: ArgTraitsHelper – struktura
+              href: ../cppcx/wrl/argtraitshelper-structure.md
+            - name: AsyncStatusInternal – výčet
+              href: ../cppcx/wrl/asyncstatusinternal-enumeration.md
+            - name: BoolStruct – struktura
+              href: ../cppcx/wrl/boolstruct-structure.md
+            - name: ComPtrRef – třída
+              href: ../cppcx/wrl/comptrref-class.md
+            - name: ComPtrRefBase – třída
+              href: ../cppcx/wrl/comptrrefbase-class.md
+            - name: CreatorMap – struktura
+              href: ../cppcx/wrl/creatormap-structure.md
+            - name: DerefHelper – struktura
+              href: ../cppcx/wrl/derefhelper-structure.md
+            - name: DontUseNewUseMake – třída
+              href: ../cppcx/wrl/dontusenewusemake-class.md
+            - name: EnableIf – struktura
+              href: ../cppcx/wrl/enableif-structure.md
+            - name: EventTargetArray – třída
+              href: ../cppcx/wrl/eventtargetarray-class.md
+            - name: FactoryCache – struktura
+              href: ../cppcx/wrl/factorycache-structure.md
+            - name: ImplementsBase – struktura
+              href: ../cppcx/wrl/implementsbase-structure.md
+            - name: ImplementsHelper – struktura
+              href: ../cppcx/wrl/implementshelper-structure.md
+            - name: InterfaceList – struktura
+              href: ../cppcx/wrl/interfacelist-structure.md
+            - name: InterfaceListHelper – struktura
+              href: ../cppcx/wrl/interfacelisthelper-structure.md
+            - name: InterfaceTraits – struktura
+              href: ../cppcx/wrl/interfacetraits-structure.md
+            - name: InvokeHelper – struktura
+              href: ../cppcx/wrl/invokehelper-structure.md
+            - name: IsBaseOfStrict – struktura
+              href: ../cppcx/wrl/isbaseofstrict-structure.md
+            - name: IsSame – struktura
+              href: ../cppcx/wrl/issame-structure.md
+            - name: MakeAllocator – třída
+              href: ../cppcx/wrl/makeallocator-class.md
+            - name: MakeAndInitialize – funkce
+              href: ../cppcx/wrl/makeandinitialize-function.md
+            - name: ModuleBase – třída
+              href: ../cppcx/wrl/modulebase-class.md
+            - name: Move – funkce
+              href: ../cppcx/wrl/move-function.md
+            - name: Nil – struktura
+              href: ../cppcx/wrl/nil-structure.md
+            - name: RaiseException – funkce
+              href: ../cppcx/wrl/raiseexception-function.md
+            - name: RemoveIUnknown – třída
+              href: ../cppcx/wrl/removeiunknown-class.md
+            - name: RemoveReference – struktura
+              href: ../cppcx/wrl/removereference-structure.md
+            - name: RuntimeClassBase – struktura
+              href: ../cppcx/wrl/runtimeclassbase-structure.md
+            - name: RuntimeClassBaseT – struktura
+              href: ../cppcx/wrl/runtimeclassbaset-structure.md
+            - name: Swap – funkce (WRL)
+              href: ../cppcx/wrl/swap-function-wrl.md
+            - name: TerminateMap – funkce
+              href: ../cppcx/wrl/terminatemap-function.md
+            - name: VerifyInheritanceHelper – struktura
+              href: ../cppcx/wrl/verifyinheritancehelper-structure.md
+            - name: VerifyInterfaceHelper – struktura
+              href: ../cppcx/wrl/verifyinterfacehelper-structure.md
+            - name: WeakReference – třída
+              href: ../cppcx/wrl/weakreference-class.md
+        - name: 'Microsoft::WRL::Wrappers – obor názvů'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers – obor názvů'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-namespace.md
+            - name: CriticalSection – třída
+              href: ../cppcx/wrl/criticalsection-class.md
+            - name: Event – třída (WRL)
+              href: ../cppcx/wrl/event-class-wrl.md
+            - name: HandleT – třída
+              href: ../cppcx/wrl/handlet-class.md
+            - name: HString – třída
+              href: ../cppcx/wrl/hstring-class.md
+            - name: HStringReference – třída
+              href: ../cppcx/wrl/hstringreference-class.md
+            - name: Mutex – třída
+              href: ../cppcx/wrl/mutex-class.md
+            - name: RoInitializeWrapper – třída
+              href: ../cppcx/wrl/roinitializewrapper-class.md
+            - name: Semaphore – třída
+              href: ../cppcx/wrl/semaphore-class.md
+            - name: SRWLock – třída
+              href: ../cppcx/wrl/srwlock-class.md
+        - name: 'Microsoft::WRL::Wrappers::Details – obor názvů'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::Details – obor názvů'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-details-namespace.md
+            - name: CompareStringOrdinal – metoda
+              href: ../cppcx/wrl/comparestringordinal-method.md
+            - name: SyncLockT – třída
+              href: ../cppcx/wrl/synclockt-class.md
+            - name: SyncLockWithStatusT – třída
+              href: ../cppcx/wrl/synclockwithstatust-class.md
+        - name: 'Microsoft::WRL::Wrappers::HandleTraits – obor názvů'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::HandleTraits – obor názvů'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-handletraits-namespace.md
+            - name: CriticalSectionTraits – struktura
+              href: ../cppcx/wrl/criticalsectiontraits-structure.md
+            - name: EventTraits – struktura
+              href: ../cppcx/wrl/eventtraits-structure.md
+            - name: FileHandleTraits – struktura
+              href: ../cppcx/wrl/filehandletraits-structure.md
+            - name: HANDLENullTraits – struktura
+              href: ../cppcx/wrl/handlenulltraits-structure.md
+            - name: HANDLETraits – struktura
+              href: ../cppcx/wrl/handletraits-structure.md
+            - name: MutexTraits – struktura
+              href: ../cppcx/wrl/mutextraits-structure.md
+            - name: SemaphoreTraits – struktura
+              href: ../cppcx/wrl/semaphoretraits-structure.md
+            - name: SRWLockExclusiveTraits – struktura
+              href: ../cppcx/wrl/srwlockexclusivetraits-structure.md
+            - name: SRWLockSharedTraits – struktura
+              href: ../cppcx/wrl/srwlocksharedtraits-structure.md
+        - name: 'Windows::Foundation – obor názvů'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation – obor názvů'
+              href: ../cppcx/wrl/windows-foundation-namespace.md
+            - name: ActivateInstance – funkce
+              href: ../cppcx/wrl/activateinstance-function.md
+            - name: GetActivationFactory – funkce
+              href: ../cppcx/wrl/getactivationfactory-function.md
+        - name: IID_PPV_ARGS_Helper – funkce
+          href: ../cppcx/wrl/iid-ppv-args-helper-function.md
