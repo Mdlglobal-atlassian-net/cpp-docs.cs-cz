@@ -4,18 +4,18 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179364"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550768"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 
-Toto téma popisuje, jak napsat *konstruktor přesunu* a operátor přiřazení přesunu pro C++ třídu. Konstruktor přesunu umožňuje přesunout prostředky vlastněné objektem rvalue do hodnoty lvalue bez kopírování. Další informace o tom, jak se sémantika přesunutí, najdete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Toto téma popisuje, jak napsat *konstruktor přesunu* a operátor přiřazení přesunu pro třídu jazyka C++. Konstruktor přesunu umožňuje přesunout prostředky vlastněné objektem rvalue do hodnoty lvalue bez kopírování. Další informace o tom, jak se sémantika přesunu, najdete v tématu [rvalue reference deklarátor:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Toto téma se sestaví C++ na následující třídě, `MemoryBlock`, která spravuje vyrovnávací paměť.
+Toto téma se sestavuje na následující třídě jazyka C++, `MemoryBlock` která spravuje vyrovnávací paměť.
 
 ```cpp
 // MemoryBlock.h
@@ -93,9 +93,9 @@ private:
 };
 ```
 
-Následující postupy popisují, jak napsat konstruktor přesunu a operátor přiřazení přesunu pro ukázkovou C++ třídu.
+Následující postupy popisují, jak napsat konstruktor přesunu a operátor přiřazení přesunu pro ukázkovou třídu jazyka C++.
 
-### <a name="to-create-a-move-constructor-for-a-c-class"></a>Vytvoření konstruktoru přesunutí pro C++ třídu
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Vytvoření konstruktoru přesunutí pro třídu C++
 
 1. Definujte prázdnou metodu konstruktoru, která jako svůj parametr převezme odkaz rvalue na typ třídy, jak je znázorněno v následujícím příkladu:
 
@@ -121,7 +121,7 @@ Následující postupy popisují, jak napsat konstruktor přesunu a operátor p�
     other._length = 0;
     ```
 
-### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Vytvoření operátoru přiřazení přesunutí pro C++ třídu
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Vytvoření operátoru přiřazení přesunutí pro třídu C++
 
 1. Definujte prázdný operátor přiřazení, který převezme odkaz rvalue na typ třídy jako svůj parametr a vrátí odkaz na typ třídy, jak je znázorněno v následujícím příkladu:
 
@@ -141,7 +141,7 @@ Následující postupy popisují, jak napsat konstruktor přesunu a operátor p�
 
 1. V podmíněném příkazu uvolněte veškeré prostředky (například paměť) z objektu, který je přiřazen.
 
-   Následující příklad uvolní člena `_data` z objektu, který je přiřazen k:
+   Následující příklad uvolní `_data` člena z objektu, který je přiřazen k:
 
     ```cpp
     // Free the existing resource.
@@ -170,11 +170,11 @@ Následující postupy popisují, jak napsat konstruktor přesunu a operátor p�
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje úplný konstruktor Move a operátor přiřazení přesunutí pro třídu `MemoryBlock`:
+Následující příklad ukazuje úplný konstruktor přesunutí a operátor přiřazení přesunutí pro `MemoryBlock` třídu:
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak sémantika přesunutí může zlepšit výkon aplikací. Příklad přidá dva prvky do vektorového objektu a pak vloží nový prvek mezi dva existující prvky. Třída `vector` používá sémantiku přesunutí k efektivnímu provedení operace vložení přesunutím prvků vektoru místo jejich kopírování.
+Následující příklad ukazuje, jak sémantika přesunutí může zlepšit výkon aplikací. Příklad přidá dva prvky do vektorového objektu a pak vloží nový prvek mezi dva existující prvky. `vector`Třída používá sémantiku přesunutí k efektivnímu provedení operace vložení přesunutím prvků vektoru místo jejich kopírování.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -248,15 +248,15 @@ In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -299,7 +299,7 @@ Pokud poskytnete konstruktor přesunu i operátor přiřazení přesunu pro tř�
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,7 +307,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-Funkce [std:: Move](../standard-library/utility-functions.md#move) zachovává vlastnost rvalue *druhého* parametru.
+Funkce [std:: Move](../standard-library/utility-functions.md#move) převede lvalue `other` na rvalue.
 
 ## <a name="see-also"></a>Viz také
 

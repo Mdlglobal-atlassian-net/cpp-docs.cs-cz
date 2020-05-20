@@ -70,7 +70,7 @@ ms.locfileid: "67400516"
 
 Přípony **I64** a **I64** jsou specifické pro společnost Microsoft.
 
-Celočíselné konstanty jsou kladné, pokud nejsou předcházejí znaménkem mínus**-**(). Znaménko mínus je interpretováno jako unární aritmetický operátor negace. (Další informace o tomto operátoru naleznete v tématu [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) .)
+Celočíselné konstanty jsou kladné, pokud nejsou předcházejí znaménkem mínus ( **-** ). Znaménko mínus je interpretováno jako unární aritmetický operátor negace. (Další informace o tomto operátoru naleznete v tématu [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) .)
 
 Pokud celočíselná konstanta začíná **0x** nebo **0x**, je hexadecimální. Pokud začíná číslicí **0**, je osmičková. V opačném případě se předpokládá jako desetinné číslo.
 

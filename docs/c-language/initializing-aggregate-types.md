@@ -69,7 +69,7 @@ int P[4][3] =
 };
 ```
 
-Tento příkaz deklaruje `P` jako čtyřnásobné pole a inicializuje prvky jeho prvního řádku na hodnotu 1, prvky jeho druhého řádku na 2 atd. a to prostřednictvím čtvrtého řádku. Všimněte si, že seznam inicializátorů třetího a čtvrtého řádku obsahuje čárky za poslední konstantní výraz. Poslední seznam inicializátorů (`{4, 4, 4,},`) je také následován čárkou. Tyto nadbytečné čárky jsou povoleny, ale nejsou požadovány. jsou vyžadovány pouze čárky, které oddělují konstantní výrazy od sebe a ty, které oddělují jeden seznam inicializátorů z jiného.
+Tento příkaz deklaruje `P` jako čtyřnásobné pole a inicializuje prvky jeho prvního řádku na hodnotu 1, prvky jeho druhého řádku na 2 atd. a to prostřednictvím čtvrtého řádku. Všimněte si, že seznam inicializátorů třetího a čtvrtého řádku obsahuje čárky za poslední konstantní výraz. Poslední seznam inicializátorů ( `{4, 4, 4,},` ) je také následován čárkou. Tyto nadbytečné čárky jsou povoleny, ale nejsou požadovány. jsou vyžadovány pouze čárky, které oddělují konstantní výrazy od sebe a ty, které oddělují jeden seznam inicializátorů z jiného.
 
 Pokud agregační člen nemá žádný vložený seznam inicializátorů, hodnoty jsou jednoduše přiřazeny v daném pořadí pro každého člena agregace. Proto je inicializace v předchozím příkladu ekvivalentní následujícímu:
 
@@ -97,15 +97,15 @@ triplet nlist[2][3] =
 };
 ```
 
-V tomto příkladu `nlist` je deklarován jako 2 – 3 pole struktur, přičemž každá struktura má tři členy. Řádek 1 inicializace přiřadí hodnoty do prvního řádku `nlist`, jak je znázorněno níže:
+V tomto příkladu `nlist` je deklarován jako 2 – 3 pole struktur, přičemž každá struktura má tři členy. Řádek 1 inicializace přiřadí hodnoty do prvního řádku `nlist` , jak je znázorněno níže:
 
-1. První levá složená závorka na řádku 1 signalizuje kompilátoru, že je zahájena inicializace prvního `nlist` agregačního členu `nlist[0]`(to znamená,).
+1. První levá složená závorka na řádku 1 signalizuje kompilátoru, že je zahájena inicializace prvního agregačního členu `nlist` (to znamená, `nlist[0]` ).
 
-1. Druhá levá složená závorka indikuje, že se začíná inicializovat první agregovaný člen `nlist[0]` (tj. struktura at `nlist[0][0]`).
+1. Druhá levá složená závorka indikuje, že se začíná inicializovat první agregovaný člen `nlist[0]` (tj. struktura at `nlist[0][0]` ).
 
-1. První pravá složená závorka končí inicializaci struktury `nlist[0][0]`; Následující levá složená závorka zahájí `nlist[0][1]`inicializaci.
+1. První pravá složená závorka končí inicializaci struktury `nlist[0][0]` ; následující levá složená závorka zahájí inicializaci `nlist[0][1]` .
 
-1. Proces pokračuje až do konce řádku, kde pravá složená závorka končí inicializaci `nlist[0]`.
+1. Proces pokračuje až do konce řádku, kde pravá složená závorka končí inicializaci `nlist[0]` .
 
 Řádek 2 přiřadí hodnoty k druhému řádku `nlist` podobným způsobem. Všimněte si, že jsou požadovány vnější sady složených závorek ohraničujících Inicializátory na řádcích 1 a 2. Následující konstrukce, která vynechává vnější složené závorky, by způsobila chybu:
 
@@ -117,9 +117,9 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 };
 ```
 
-V této konstrukci první levá složená závorka na řádku 1 spouští inicializaci `nlist[0]`, což je pole tří struktur. Hodnoty 1, 2 a 3 jsou přiřazeny třem členům první struktury. Když se vyskytne další pravá složená závorka (po hodnotě 3), inicializace `nlist[0]` je dokončená a dvě zbývající struktury v poli se třemi strukturami se automaticky inicializují na 0. Podobně `{ 4,5,6 }` inicializuje první strukturu v druhém řádku `nlist`. Zbývající dvě struktury `nlist[1]` jsou nastaveny na hodnotu 0. Když kompilátor narazí na další seznam inicializátorů ( `{ 7,8,9 }` ), pokusí se inicializovat `nlist[2]`. Vzhledem `nlist` k tomu, že má pouze dva řádky, tento pokus způsobuje chybu.
+V této konstrukci první levá složená závorka na řádku 1 spouští inicializaci `nlist[0]` , což je pole tří struktur. Hodnoty 1, 2 a 3 jsou přiřazeny třem členům první struktury. Když se vyskytne další pravá složená závorka (po hodnotě 3), inicializace `nlist[0]` je dokončená a dvě zbývající struktury v poli se třemi strukturami se automaticky inicializují na 0. Podobně `{ 4,5,6 }` inicializuje první strukturu v druhém řádku `nlist` . Zbývající dvě struktury `nlist[1]` jsou nastaveny na hodnotu 0. Když kompilátor narazí na další seznam inicializátorů ( `{ 7,8,9 }` ), pokusí se inicializovat `nlist[2]` . Vzhledem `nlist` k tomu, že má pouze dva řádky, tento pokus způsobuje chybu.
 
-V následujícím příkladu `int` `x` jsou tři členy inicializovány na 1, 2 a 3 v uvedeném pořadí.
+V následujícím příkladu `int` jsou tři členy `x` inicializovány na 1, 2 a 3 v uvedeném pořadí.
 
 ```C
 struct list
@@ -134,7 +134,7 @@ struct list
       };
 ```
 
-Ve `list` struktuře výše `m` jsou tři prvky v prvním řádku pro inicializovány na 4,0; prvky zbývajícího řádku ve výchozím nastavení `m` jsou inicializovány na 0,0.
+Ve `list` struktuře výše jsou tři prvky v prvním řádku pro `m` inicializovány na 4,0; prvky zbývajícího řádku ve `m` výchozím nastavení jsou inicializovány na 0,0.
 
 ```C
 union
@@ -148,8 +148,8 @@ union
       };
 ```
 
-Proměnná `y`Union v tomto příkladu je inicializovaná. První prvek sjednocení je pole, takže inicializátor je agregovaný inicializátor. Seznam `{'1'}` inicializátorů přiřadí hodnoty do prvního řádku pole. Vzhledem k tomu, že se v seznamu zobrazí pouze jedna hodnota, je prvek v prvním sloupci inicializován na `1`znak a zbývající dva prvky v řádku jsou ve výchozím nastavení inicializovány na hodnotu 0. Podobně první prvek druhého řádku `x` je inicializován na znak `4`a zbývající dva prvky na řádku jsou inicializovány na hodnotu 0.
+Proměnná Union `y` v tomto příkladu je inicializovaná. První prvek sjednocení je pole, takže inicializátor je agregovaný inicializátor. Seznam inicializátorů `{'1'}` přiřadí hodnoty do prvního řádku pole. Vzhledem k tomu, že se v seznamu zobrazí pouze jedna hodnota, je prvek v prvním sloupci inicializován na znak `1` a zbývající dva prvky v řádku jsou ve výchozím nastavení inicializovány na hodnotu 0. Podobně první prvek druhého řádku `x` je inicializován na znak `4` a zbývající dva prvky na řádku jsou inicializovány na hodnotu 0.
 
 ## <a name="see-also"></a>Viz také
 
-[Operace](../c-language/initialization.md)
+[Inicializace](../c-language/initialization.md)

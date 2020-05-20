@@ -1,29 +1,29 @@
 ---
-title: Vítejte zpět v C++ - Moderní C++
-description: Popisuje nové programovací idiomy v moderním jazyce C++ a jejich zdůvodnění.
-ms.date: 01/10/2020
+title: Vítejte zpátky do C++ – moderní C++
+description: Popisuje nové programové idiomy v moderním jazyce C++ a jejich racionální.
+ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 7d0fcb623162713b845107bbf00669af7ae5ca98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369492"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550794"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>Vítejte zpět v C++ - Moderní C++
+# <a name="welcome-back-to-c---modern-c"></a>Vítejte zpátky do C++ – moderní C++
 
-Od svého vzniku se C++ stal jedním z nejpoužívanějších programovacích jazyků na světě. Dobře napsané programy C++ jsou rychlé a efektivní. Jazyk je flexibilnější než jiné jazyky: Může pracovat na nejvyššíúrovni abstrakce, a dolů na úrovni křemíku. C++ poskytuje vysoce optimalizované standardní knihovny. Umožňuje přístup k nízkoúrovňovým hardwarovým funkcím, maximalizuje rychlost a minimalizuje požadavky na paměť. Pomocí jazyka C++ můžete vytvořit širokou škálu aplikací. Hry, ovladače zařízení a vysoce výkonný vědecký software. Vložené programy. Klientské aplikace pro Windows. Dokonce i knihovny a kompilátory pro jiné programovací jazyky se napíší v jazyce C++.
+Od jejího vytvoření se C++ stane jedním z nejčastěji používaných programovacích jazyků na světě. Dobře napsané programy C++ jsou rychlé a efektivní. Jazyk je flexibilnější než jiné jazyky: může pracovat na nejvyšší úrovni abstrakce a snížit úroveň na úrovni silikonu. Jazyk C++ poskytuje vysoce optimalizované standardní knihovny. Umožňuje přístup k hardwarovým funkcím nižší úrovně, aby se maximalizovala rychlost a minimalizovala nároky na paměť. Pomocí jazyka C++ můžete vytvořit široké spektrum aplikací. Hry, ovladače zařízení a vysoce výkonný vědecký software. Vložené programy. Klientské aplikace pro Windows. I knihovny a kompilátory pro jiné programovací jazyky se napíší v jazyce C++.
 
-Jedním z původních požadavků pro C++ byla zpětná kompatibilita s jazykem C. V důsledku toho C++ má vždy povoleno programování ve stylu C, s nezpracovaná ukazatele, pole, null ukončené řetězce znaků a další funkce. Mohou umožnit skvělý výkon, ale mohou také vyvolat chyby a složitost. Vývoj jazyka C++ zdůraznil funkce, které výrazně snižují potřebu používat idiomy ve stylu C. Staré C-programovací zařízení jsou tam, když je potřebujete, ale s moderním kódem C++ byste je měli potřebovat méně a méně. Moderní kód C++ je jednodušší, bezpečnější, elegantnější a stále stejně rychlý jako vždy.
+Jeden z původních požadavků pro C++ byl zpětně kompatibilní s jazykem C. V důsledku toho jazyk C++ vždy povolil programování ve stylu jazyka C s nezpracovanými ukazateli, poli, řetězci znaků zakončenými hodnotou null a dalšími funkcemi. Můžou umožňovat skvělý výkon, ale můžou taky zamezit chyby a složitost. Vývoj v jazyce C++ obsahuje zvýrazněné funkce, které významně omezují nutnost použití idiomy ve stylu jazyka C. Stará zařízení pro programování v jazyce C jsou tam, kde je potřebujete, ale s moderním kódem jazyka C++ byste je měli potřebovat méně a méně. Moderní kód C++ je jednodušší, bezpečnější, pružnější a stále stejně rychle.
 
-Následující části poskytují přehled hlavních funkcí moderního jazyka C++. Pokud není uvedeno jinak, zde uvedené funkce jsou k dispozici v jazyce C ++ 11 a novějším. V kompilátoru Microsoft C++ můžete nastavit možnost kompilátoru [/std](../build/reference/std-specify-language-standard-version.md) a určit, kterou verzi standardu použít pro váš projekt.
+Následující části obsahují přehled hlavních funkcí moderního C++. Pokud není uvedeno jinak, funkce uvedené zde jsou k dispozici v jazyce C++ 11 a novějším. V kompilátoru jazyka Microsoft C++ můžete nastavit [`/std`](../build/reference/std-specify-language-standard-version.md) možnost kompilátoru a určit tak verzi standardu, která má být použita pro váš projekt.
 
-## <a name="resources-and-smart-pointers"></a>Zdroje a inteligentní ukazatele
+## <a name="resources-and-smart-pointers"></a>Prostředky a inteligentní ukazatele
 
-Jednou z hlavních tříd chyb v programování ve stylu Jazyka C je *nevracení paměti*. Nevracení jsou často způsobeny selhání volání **odstranit** paměť, která byla přidělena s **new**. Moderní C++ zdůrazňuje princip *získávání prostředků je inicializace* (RAII). Myšlenka je jednoduchá. Prostředky (haldy paměti, popisovače souborů, sokety a tak dále) by měly být *vlastněny* objektem. Tento objekt vytvoří nebo přijme nově přidělený prostředek v jeho konstruktoru a odstraní jej v jeho destruktoru. Princip RAII zaručuje, že všechny prostředky získat správně vráceny do operačního systému, když vlastnící objekt přejde mimo rozsah.
+Jedna z hlavních tříd chyb v programování ve stylu jazyka C je *nevracení paměti*. Nevracení jsou často způsobena selháním volání **`delete`** paměti, která byla přidělena pomocí **`new`** . Moderní jazyk C++ zvýrazňuje princip *získání prostředků je inicializace* (RAII). Nápad je jednoduchý. Prostředky (paměť haldy, popisovače souborů, sokety atd.) by měly být *vlastněny* objektem. Tento objekt vytvoří nebo přijme nově přidělený prostředek ve svém konstruktoru a odstraní ho v jeho destruktoru. Princip RAII zaručuje, že všechny prostředky se správně vrátí do operačního systému, když se vlastnící objekt dostane mimo rozsah.
 
-Pro podporu snadného přijetí principů RAII poskytuje standardní knihovna jazyka C++tři typy inteligentních ukazatelů: [std::unique_ptr](../standard-library/unique-ptr-class.md), [std::shared_ptr](../standard-library/shared-ptr-class.md)a [std::weak_ptr](../standard-library/weak-ptr-class.md). Inteligentní ukazatel zpracovává přidělení a odstranění paměti, kterou vlastní. Následující příklad ukazuje třídu s členem pole, který je přidělen `make_unique()`na haldě ve volání . Volání **new** a **delete** jsou zapouzdřeny třídou. `unique_ptr` Když `widget` objekt přejde mimo rozsah, unique_ptr destruktoru bude vyvolána a uvolní paměť, která byla přidělena pro pole.  
+Pro podporu snadného přijetí principů RAII poskytuje standardní knihovna C++ tři typy inteligentních ukazatelů: [`std::unique_ptr`](../standard-library/unique-ptr-class.md) , [`std::shared_ptr`](../standard-library/shared-ptr-class.md) a [`std::weak_ptr`](../standard-library/weak-ptr-class.md) . Inteligentní ukazatel zpracovává přidělování a odstraňování paměti, kterou vlastní. Následující příklad ukazuje třídu s členem pole, který je přidělen na haldě v volání `make_unique()` . Volání **`new`** a **`delete`** jsou zapouzdřena `unique_ptr` třídou. Když dojde k `widget` přemístění objektu mimo rozsah, vyvolá se destruktor unique_ptr a uvolní se paměť, která byla přidělena poli.  
 
 ```cpp
 #include <memory>
@@ -46,22 +46,22 @@ void functionUsingWidget() {
 
 ```
 
-Kdykoli je to možné, použijte inteligentní ukazatel při přidělování paměti haldy. Pokud je nutné použít nové a odstranit operátory explicitně, postupujte podle zásady RAII. Další informace naleznete v [tématu Životnost objektu a správa prostředků (RAII).](object-lifetime-and-resource-management-modern-cpp.md)
+Pokud je to možné, při přidělování paměti haldy použijte inteligentní ukazatel. Pokud je nutné použít operátory New a DELETE explicitně, postupujte podle principu RAII. Další informace najdete v tématu [životnost objektů a Správa prostředků (RAII)](object-lifetime-and-resource-management-modern-cpp.md).
 
-## <a name="stdstring-and-stdstring_view"></a>std::řetězec a std::string_view
+## <a name="stdstring-and-stdstring_view"></a>`std::string` a `std::string_view`
 
-Řetězce ve stylu C jsou dalším hlavním zdrojem chyb. Pomocí [std::string a std::wstring](../standard-library/basic-string-class.md)můžete eliminovat prakticky všechny chyby spojené s řetězci stylu C. Můžete také získat výhodu členských funkcí pro vyhledávání, připojení, prepending, a tak dále. Oba jsou vysoce optimalizovány pro rychlost. Při předávání řetězce funkci, která vyžaduje pouze přístup jen pro čtení, v jazyce C++ 17 můžete použít [std::string_view](../standard-library/basic-string-view-class.md) pro ještě vyšší výkon.
+Řetězce ve stylu C jsou další hlavní zdrojem chyb. Pomocí [ `std::string` a `std::wstring` ](../standard-library/basic-string-class.md)můžete eliminovat prakticky všechny chyby spojené s řetězci ve stylu jazyka C. Získáte také výhody členských funkcí pro hledání, připojení, předčekání a tak dále. Obě jsou vysoce optimalizované pro rychlost. Při předávání řetězce do funkce, která vyžaduje pouze přístup jen pro čtení, v C++ 17 můžete použít [`std::string_view`](../standard-library/basic-string-view-class.md) pro ještě vyšší výhody výkonu.
 
-## <a name="stdvector-and-other-standard-library-containers"></a>std::vektorové a jiné kontejnery standardní knihovny
+## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector`a další kontejnery standardní knihovny
 
-Standardní knihovna kontejnery všechny postupujte podle principu RAII. Poskytují iterátory pro bezpečné procházení prvků. A jsou vysoce optimalizované pro výkon a byly důkladně testovány na správnost. Pomocí těchto kontejnerů eliminujete potenciál pro chyby nebo neefektivity, které mohou být zavedeny ve vlastních datových strukturách. Místo nezpracovaných polí použijte [vektor](../standard-library/vector-class.md) jako sekvenční kontejner v jazyce C++.
+Všechny standardní kontejnery knihovny se řídí principem RAII. Poskytují iterátory pro bezpečný průchod prvků. A jsou vysoce optimalizované pro výkon a byly důkladně testovány na správnost. Pomocí těchto kontejnerů Eliminujte potenciální chyby nebo neefektivitu, které mohou být zavedeny ve vlastních datových strukturách. Místo nezpracovaných polí použijte [`vector`](../standard-library/vector-class.md) jako sekvenční kontejner v jazyce C++.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Jako [map](../standard-library/map-class.md) výchozí `unordered_map`asociativní kontejner použijte mapu (ne). Pro degenerovaný a více případů použijte [sadu](../standard-library/set-class.md), [multimapu](../standard-library/multimap-class.md)a [multiset.](../standard-library/multiset-class.md)
+Použijte [`map`](../standard-library/map-class.md) (ne `unordered_map` ) jako výchozí asociativní kontejner. Použijte [`set`](../standard-library/set-class.md) , [`multimap`](../standard-library/multimap-class.md) a [`multiset`](../standard-library/multiset-class.md) pro vygenerování a více případů.
 
 ```cpp
 map<string, string> apple_color;
@@ -69,31 +69,31 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-Pokud je potřeba optimalizace výkonu, zvažte použití:
+Když je potřeba optimalizace výkonu, zvažte použití:
 
-- Typ [pole](../standard-library/array-class-stl.md) při vkládání je důležité, například jako člen třídy.
+- [`array`](../standard-library/array-class-stl.md)Typ, pokud je vkládání důležité, například jako člen třídy.
 
-- Neuspořádané asociativní kontejnery, například [unordered_map](../standard-library/unordered-map-class.md). Ty mají nižší režii na prvek a vyhledávání v konstantním čase, ale může být obtížnější správně a efektivně používat.
+- Neuspořádané asociativní kontejnery, například [`unordered_map`](../standard-library/unordered-map-class.md) . Ty mají nižší režijní náklady na prvky a vyhledávání v čase, ale mohou být těžší používat správně a efektivně.
 
-- Seřazeno `vector`. Další informace naleznete v [tématu Algoritmy](../cpp/algorithms-modern-cpp.md).
+- Seřazeno `vector` . Další informace najdete v tématu [algoritmy](../cpp/algorithms-modern-cpp.md).
 
-Nepoužívejte pole ve stylu C. Pro starší rozhraní API, která potřebují přímý přístup k `f(vec.data(), vec.size());` datům, použijte přistupující metody, jako je například místo. Další informace o kontejnerech naleznete v [tématu Kontejnery standardní knihovny jazyka C++](../standard-library/stl-containers.md).
+Nepoužívejte pole ve stylu jazyka C. U starších rozhraní API, která potřebují přímý přístup k datům, použijte místo toho přístupové metody, jako je například `f(vec.data(), vec.size());` . Další informace o kontejnerech naleznete v tématu [kontejnery knihovny Standard C++](../standard-library/stl-containers.md).
 
 ## <a name="standard-library-algorithms"></a>Standardní algoritmy knihovny
 
-Než budete předpokládat, že je třeba napsat vlastní algoritmus pro váš program, nejprve zkontrolujte algoritmy standardní [knihovny](../standard-library/algorithm.md)C++ . Standardní knihovna obsahuje stále rostoucí sortiment algoritmů pro mnoho běžných operací, jako je vyhledávání, řazení, filtrování a randomizace. Matematická knihovna je rozsáhlá. Počínaje C++ 17 jsou k dispozici paralelní verze mnoha algoritmů.
+Než se rozhodnete, že pro svůj program potřebujete napsat vlastní algoritmus, nejdříve si přečtěte standardní [algoritmy](../standard-library/algorithm.md)knihovny C++. Standardní knihovna obsahuje stále rostoucí sortiment algoritmů pro mnoho běžných operací, jako je hledání, řazení, filtrování a náhodné provádění. Knihovna Math je rozsáhlá. Počínaje C++ 17 jsou k dispozici paralelní verze mnoha algoritmů.
 
-Zde jsou některé důležité příklady:
+Tady jsou některé důležité příklady:
 
-- **for_each**, výchozí algoritmus průchodu (spolu s rozsahem založené pro smyčky).
+- `for_each`, výchozí přenosový algoritmus (spolu s cykly založenými na rozsahu `for` ).
 
-- **transformace**, pro ne-in-place modifikace kontejnerových prvků
+- `transform`, pro nemístní úpravu prvků kontejneru
 
-- **find_if**, výchozí vyhledávací algoritmus.
+- `find_if`, výchozí algoritmus pro hledání.
 
-- **řazení**, **lower_bound**a další výchozí algoritmy řazení a vyhledávání.
+- `sort`, `lower_bound` a ostatní výchozí algoritmy pro řazení a vyhledávání.
 
-Chcete-li napsat komparátor, použijte přísné **<** a používat pojmenované *lambdas,* když je to možné.
+Chcete-li napsat komparátor, použijte striktní **`<`** a použijte *pojmenované výrazy lambda* , když můžete.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -104,18 +104,18 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="auto-instead-of-explicit-type-names"></a>auto místo explicitních názvů typů
+## <a name="auto-instead-of-explicit-type-names"></a>`auto`místo explicitních typů názvů
 
-C++ 11 představil [automatické](auto-cpp.md) klíčové slovo pro použití v deklaracích proměnných, funkcí a šablon. **auto** říká kompilátoru odvodit typ objektu, takže není nutné jej explicitně zadávat. **auto** je užitečné zejména v případě, že odvozený typ je vnořená šablona:
+Jazyk c++ 11 představil [`auto`](auto-cpp.md) klíčové slovo pro použití v deklaracích proměnných, funkcí a šablon. **`auto`** instruuje kompilátor, aby odvodit typ objektu, takže nemusíte ho explicitně zadávat. **`auto`** je zvláště užitečné, pokud je odvozený typ vnořenou šablonou:
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin(); // C-style
 auto i = m.begin(); // modern C++
 ```
 
-## <a name="range-based-for-loops"></a>Na základě rozsahu smyček
+## <a name="range-based-for-loops"></a>Cykly založené na rozsahu `for`
 
-C-style iterace přes pole a kontejnery je náchylný k chybám indexování a je také únavné psát. Chcete-li odstranit tyto chyby a váš kód čitelnější, použijte rozsah na základě smyčky s kontejnery standardní knihovny a nezpracovaná pole. Další informace naleznete v [tématu Range-based for statement](../cpp/range-based-for-statement-cpp.md).
+Iterace ve stylu jazyka C nad poli a kontejnery je náchylná k chybám indexování a je také únavné na typ. Chcete-li odstranit tyto chyby a čitelnější kód, použijte cykly založené na rozsahu `for` se standardními kontejnery knihoven a nezpracovanými poli. Další informace naleznete v tématu [ `for` příkaz založený na rozsahu](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -139,9 +139,9 @@ int main()
 }
 ```
 
-## <a name="constexpr-expressions-instead-of-macros"></a>constexpr výrazy místo maker
+## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr`výrazy namísto maker
 
-Makra v jazyce C a C++ jsou tokeny, které jsou zpracovány preprocesorem před kompilací. Každá instance tokenu makra je před kompilací souboru nahrazena definovanou hodnotou nebo výrazem. Makra se běžně používají v programování ve stylu Jazyka C k definování konstantních hodnot v době kompilace. Makra jsou však náchylné k chybám a obtížně ladit. V moderním jazyce C++ byste měli upřednostňovat proměnné [constexpr](constexpr-cpp.md) pro konstanty v době kompilace:
+Makra v jazyce C a C++ jsou tokeny, které preprocesor zpracovává před kompilací. Každá instance tokenu makra je nahrazena definovanou hodnotou nebo výrazem před zkompilováním souboru. Makra jsou běžně používána v programování ve stylu jazyka C k definování konstantních hodnot doby kompilace. Makra jsou ale náchylná k chybám a je obtížné je ladit. V moderním jazyce C++ byste měli preferovat [`constexpr`](constexpr-cpp.md) proměnné pro konstanty v době kompilace:
 
 ```cpp
 #define SIZE 10 // C-style
@@ -150,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>Jednotná inicializace
 
-V moderním jazyce C++ můžete použít inicializaci závorky pro libovolný typ. Tato forma inicializace je zvláště vhodná při inicializaci polí, vektorů nebo jiných kontejnerů. V následujícím příkladu `v2` je inicializován `S`se třemi instancemi . `v3`je inicializován se `S` třemi instancemi, které jsou samy inicializovány pomocí závorek. Kompilátor odvodí typ každého prvku na `v3`základě deklarovaného typu .
+V moderním jazyce C++ lze použít inicializaci složené závorky pro libovolný typ. Tato forma inicializace je obzvláště užitečná při inicializaci polí, vektorů nebo jiných kontejnerů. V následujícím příkladu `v2` je inicializován se třemi instancemi `S` . `v3`je inicializován se třemi instancemi `S` , které jsou samy inicializovány pomocí složených závorek. Kompilátor odvodí typ každého prvku na základě deklarovaného typu `v3` .
 
 ```cpp
 #include <vector>
@@ -183,15 +183,15 @@ int main()
 }
 ```
 
-Další informace naleznete v tématu [Inicializace závorky](initializing-classes-and-structs-without-constructors-cpp.md).
+Další informace naleznete v tématu [inicializace složené závorky](initializing-classes-and-structs-without-constructors-cpp.md).
 
-## <a name="move-semantics"></a>Přesunutí sémantiky
+## <a name="move-semantics"></a>Přesunout sémantiky
 
-Moderní C++ poskytuje *přesunout sémantiku*, které umožňují eliminovat zbytečné paměti kopií. V dřívějších verzích jazyka byly kopie v určitých situacích nevyhnutelné. Operace *přesunutí* převede vlastnictví prostředku z jednoho objektu na druhý bez vytvoření kopie. Při implementaci třídy, která vlastní prostředek (například haldy paměti, popisovače souborů a tak dále), můžete definovat *konstruktor přesunutí* a *přesunout operátor přiřazení* pro něj. Kompilátor zvolí tyto speciální členy během řešení přetížení v situacích, kdy není potřeba kopie. Typy kontejnerů standardní knihovny vyvolávají konstruktor move na objektech, pokud je definován. Další informace naleznete v tématu [Přesunutí konstruktorů a operátorů přiřazení přesunutí (C++).](move-constructors-and-move-assignment-operators-cpp.md)
+Moderní jazyk C++ poskytuje *sémantiku přesunutí*, která umožňuje eliminovat zbytečné kopie paměti. V dřívějších verzích jazyka byly kopie v určitých situacích nenevyhnutelné. Operace *přesunu* převede vlastnictví prostředku z jednoho objektu na další bez vytvoření kopie. Některé třídy vlastní prostředky, jako je například paměť haldy, popisovače souborů a tak dále. Při implementaci třídy vlastnící prostředky můžete definovat *konstruktor přesunutí* a *operátor přiřazení přesunutí* . Kompilátor zvolí tyto speciální členy během řešení přetížení v situacích, kdy není kopie nutná. Standardní typy kontejnerů knihovny vyvolávají konstruktor Move pro objekty, pokud je definována. Další informace najdete v tématech [Přesun konstruktorů a operátory přiřazení přesunutí (C++)](move-constructors-and-move-assignment-operators-cpp.md).
 
 ## <a name="lambda-expressions"></a>Výrazy lambda
 
-V programování ve stylu Jazyka C může být funkce předána jiné funkci pomocí *ukazatele funkce*. Ukazatele funkce jsou nepohodlné udržovat a pochopit. Funkce, na kterou odkazují, může být definována jinde ve zdrojovém kódu, daleko od bodu, ve kterém je vyvolána. A taky nejsou typově bezpečné. Moderní C++ poskytuje *objekty funkce*, třídy, které přepsat [()](function-call-operator-parens.md) operátor, který umožňuje jejich volání jako funkce. Nejpohodlnější způsob, jak vytvořit objekty funkce je s vřádkovými [výrazy lambda](../cpp/lambda-expressions-in-cpp.md). Následující příklad ukazuje, jak použít výraz lambda předat objekt `for_each` funkce, že funkce vyvolá na každý prvek ve vektoru:
+V programování ve stylu jazyka C může být funkce předána do jiné funkce pomocí ukazatele na *funkci*. Ukazatele na funkce jsou nepohodlné, aby je bylo možné udržovat a pochopit. Funkce, na kterou se odkazuje, mohou být definovány jinde ve zdrojovém kódu, od okamžiku, kdy se vyvolala. Nejedná se také o typově bezpečný. Moderní jazyk C++ poskytuje *objekty funkce*, třídy, které přepisují [`operator()`](function-call-operator-parens.md) operátor, což umožňuje jejich volání jako funkce. Nejpohodlnější způsob, jak vytvořit objekty funkce, je pomocí vložených [výrazů lambda](../cpp/lambda-expressions-in-cpp.md). Následující příklad ukazuje, jak použít výraz lambda k předání objektu funkce, který `for_each` funkce vyvolá u každého prvku ve vektoru:
 
 ```cpp
     std::vector<int> v {1,2,3,4,5};
@@ -200,23 +200,23 @@ V programování ve stylu Jazyka C může být funkce předána jiné funkci pom
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Výraz `[=](int i) { return i > x && i < y; }` lambda lze číst jako "funkce, která `int` přebírá jeden argument typu a vrací logickou hodnotu, která označuje, zda je argument větší než `x` a menší než `y`." Všimněte si, `x` `y` že proměnné a z okolního kontextu lze použít v lambda. Určuje, `[=]` že tyto proměnné jsou *zachyceny* hodnotou; jinými slovy, výraz lambda má své vlastní kopie těchto hodnot.
+Výraz lambda `[=](int i) { return i > x && i < y; }` lze číst jako funkci, která přijímá jeden argument typu `int` a vrací logickou hodnotu, která označuje, zda je argument větší než `x` a menší než `y` . " Všimněte si, že proměnné `x` a `y` z okolního kontextu lze použít ve výrazu lambda. `[=]`Určuje, že tyto proměnné jsou *zachyceny* hodnotou; jinými slovy, výraz lambda má své vlastní kopie těchto hodnot.
 
 ## <a name="exceptions"></a>Výjimky
 
-Moderní C++ zdůrazňuje výjimky spíše než chybové kódy jako nejlepší způsob, jak hlásit a zpracovávat chybové stavy. Další informace naleznete v [tématu Moderní C++ osvědčené postupy pro výjimky a zpracování chyb](errors-and-exception-handling-modern-cpp.md).
+Moderní jazyk C++ zvýrazňuje výjimky spíše než chybové kódy jako nejlepší způsob, jak hlásit a zpracovávat chybové stavy. Další informace najdete v tématu [moderní osvědčené postupy jazyka C++ pro výjimky a zpracování chyb](errors-and-exception-handling-modern-cpp.md).
 
-## <a name="stdatomic"></a>std::atomic
+## `std::atomic`
 
-Použijte standardní knihovnu [C++std::atomic](../standard-library/atomic-structure.md) struct a související typy pro mechanismy komunikace mezi vlákny.
+Použijte strukturu standardní knihovny jazyka C++ [`std::atomic`](../standard-library/atomic-structure.md) a související typy pro komunikační mechanismy mezi vlákny.
 
-## <a name="stdvariant-c17"></a>std::varianta (C++17)
+## <a name="stdvariant-c17"></a>`std::variant`(C++ 17)
 
-Sjednocení se běžně používají v programování ve stylu Jazyka C k úspoře paměti tím, že umožňuje členům různých typů obsadit stejné umístění paměti. Sjednocení však nejsou typově bezpečné a jsou náchylné k chybám programování. C++ 17 představuje [třídu std::variant](../standard-library/variant-class.md) jako robustnější a bezpečnější alternativu k sjednocení. [Std::visit](../standard-library/variant-functions.md#visit) funkce lze použít pro přístup `variant` k členy typu způsobem bezpečné.
+Sjednocení jsou běžně používána v programování ve stylu jazyka C k úspoře paměti tím, že umožňují členům různých typů zabírat stejné umístění v paměti. Sjednocení však nejsou typově bezpečná a jsou náchylná k chybám programování. C++ 17 zavádí [`std::variant`](../standard-library/variant-class.md) třídu jako robustnější a bezpečnou alternativu pro sjednocení. [`std::visit`](../standard-library/variant-functions.md#visit)Funkci lze použít pro přístup k členům `variant` typu typově bezpečným způsobem.
 
 ## <a name="see-also"></a>Viz také
 
-[Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)\
-[Lambda výrazy](../cpp/lambda-expressions-in-cpp.md)\
+[Reference jazyka C++](../cpp/cpp-language-reference.md)\
+[Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)\
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)\
-[Tabulka shody jazyků Microsoft C++](../overview/visual-cpp-language-conformance.md)
+[Tabulka shody jazyka Microsoft C++](../overview/visual-cpp-language-conformance.md)

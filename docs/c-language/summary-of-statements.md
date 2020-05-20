@@ -18,8 +18,8 @@ ms.locfileid: "74856992"
 &nbsp;&nbsp;&nbsp;&nbsp;*Výběr – příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz iterace*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz skoku*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except – příkaz*  / \* specifický pro společnost Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-příkaz*  / \* specifický pro společnost Microsoft\*/
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except – příkaz*  / \* Specifické pro společnost Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-– příkaz*  / \* Specifické pro společnost Microsoft\*/
 
 *příkaz skoku*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifikátor*  **;**<br/>
@@ -56,10 +56,10 @@ ms.locfileid: "74856992"
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *konstanta-výraz*  **:**  *příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Default: –**  *příkaz*
 
-*try-except – příkaz*:/\* specifické pro Microsoft\*/<br/>
+*try-except – příkaz*:/ \* specifické pro Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz* **__try**složeného*příkazu* **__except (***Expression***)**        
 
-*try-finally-příkaz*:/\* specifické pro společnost Microsoft\*/<br/>
+*try-finally-příkaz*:/ \* specifické pro společnost Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try**  *složený* příkaz **__finally**  *složeného příkazu*
 
 ## <a name="see-also"></a>Viz také
