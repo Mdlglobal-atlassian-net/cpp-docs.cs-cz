@@ -41,16 +41,16 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950194"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759235"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
-Vytiskne formátovaný výstup do standardního výstupního proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
+Vytiskne formátovaný výstup do standardního výstupního proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [printf_s, _printf_s_l, wprintf_s _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,10 +77,10 @@ int _wprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*formátovat*<br/>
 Ovládací prvek Format
 
-*argument*<br/>
+*Argument*<br/>
 Volitelné argumenty
 
 *jazyka*<br/>
@@ -88,7 +88,7 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet vytištěných znaků nebo zápornou hodnotu, pokud dojde k chybě. Pokud má formát **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**. Pokud se v *argumentu*vyskytl znak **EOF** (0xFFFF), vrátí funkce hodnotu-1.
+Vrátí počet vytištěných znaků nebo zápornou hodnotu, pokud dojde k chybě. Pokud *format* má formát **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**. Pokud se v *argumentu*vyskytl znak **EOF** (0xFFFF), vrátí funkce hodnotu-1.
 
 Informace o **errno** a chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -102,11 +102,11 @@ Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že pou
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE – definice|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_unicode definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-Argument *formátu* se skládá z běžných znaků, řídicích sekvencí a ( *Pokud následují argumenty formátu)* . Běžné znaky a řídicí sekvence jsou zkopírovány do **stdout** v pořadí podle jejich vzhledu. Například řádek:
+Argument *formátu* se skládá z běžných znaků, řídicích sekvencí a ( *Pokud následují argumenty formátu)*. Běžné znaky a řídicí sekvence jsou zkopírovány do **stdout** v pořadí podle jejich vzhledu. Například řádek:
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -135,8 +135,8 @@ Line one
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**printf**, **_printf_l**|\<stdio.h>|
-|**wprintf**, **_wprintf_l**|\<stdio. h > nebo \<WCHAR. h >|
+|**printf**, **_printf_l**|\<stdio. h>|
+|**wprintf**, **_wprintf_l**|\<stdio. h> nebo \< WCHAR. h>|
 
 Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -226,14 +226,15 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
+[Syntaxe specifikace formátu: printf a wprintf Functions](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf –, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Funkce vprintf –](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
