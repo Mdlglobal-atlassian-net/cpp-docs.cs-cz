@@ -1,50 +1,50 @@
 - name: Linux s Visual Studio C++ (dokumentace)
-  href: index.md
+  href: ../linux/index.yml
 - name: 'Stažení, instalace a nastavení úloh pro vývoj pro Linux'
-  href: download-install-and-setup-the-linux-development-workload.md
+  href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Připojení ke vzdálenému počítači s Linuxem
   expanded: true
   items:
     - name: Připojení ke vzdálenému počítači s Linuxem
-      href: connect-to-your-remote-linux-computer.md
+      href: ../linux/connect-to-your-remote-linux-computer.md
     - name: Nastavení zabezpečeného vzdáleného vývoje pro Linux kompatibilního se standardem FIPS
-      href: set-up-fips-compliant-secure-remote-linux-development.md
+      href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager – referenční dokumentace
-      href: connectionmanager-reference.md
+      href: ../linux/connectionmanager-reference.md
 - name: Vytvoření nového projektu Linux
-  href: create-a-new-linux-project.md
+  href: ../linux/create-a-new-linux-project.md
 - name: Konfigurace projektu Linux
-  href: configure-a-linux-project.md
+  href: ../linux/configure-a-linux-project.md
 - name: Vytvoření a konfigurace projektu Linux CMake
-  href: cmake-linux-project.md
+  href: ../linux/cmake-linux-project.md
 - name: Konfigurace linuxových projektů pro použití sanitizéru adres
-  href: linux-asan-configuration.md
+  href: ../linux/linux-asan-configuration.md
 - name: 'Nasazení, spuštění a ladění projektu Linux'
-  href: deploy-run-and-debug-your-linux-project.md
+  href: ../linux/deploy-run-and-debug-your-linux-project.md
 - name: 'Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio'
   href: ../build/get-started-linux-cmake.md
 - name: Odkaz na stránku vlastností projektu Linux
   expanded: false
   items:
     - name: Odkaz na stránku vlastností projektu Linux
-      href: prop-pages-linux.md
+      href: ../linux/prop-pages-linux.md
     - name: Obecné vlastnosti (Linux)
-      href: prop-pages/general-linux.md
+      href: ../linux/prop-pages/general-linux.md
     - name: Vlastnosti ladění (Linux)
-      href: prop-pages/debugging-linux.md
+      href: ../linux/prop-pages/debugging-linux.md
     - name: Vlastnosti adresářů VC++ (Linux)
-      href: prop-pages/directories-linux.md
+      href: ../linux/prop-pages/directories-linux.md
     - name: Kopírování vlastností zdrojů (Linux)
-      href: prop-pages/copy-sources-project.md
+      href: ../linux/prop-pages/copy-sources-project.md
     - name: Vlastnosti C/C++ (Linux)
-      href: prop-pages/c-cpp-linux.md
+      href: ../linux/prop-pages/c-cpp-linux.md
     - name: Vlastnosti linkeru (Linux)
-      href: prop-pages/linker-linux.md
+      href: ../linux/prop-pages/linker-linux.md
     - name: Vlastnosti události sestavení (Linux)
-      href: prop-pages/build-events-linux.md
+      href: ../linux/prop-pages/build-events-linux.md
     - name: Vlastnosti vlastního kroku sestavení (Linux)
-      href: prop-pages/custom-build-step-linux.md
+      href: ../linux/prop-pages/custom-build-step-linux.md
     - name: Vlastnosti projektu souboru pravidel (Linux)
-      href: prop-pages/makefile-linux.md
+      href: ../linux/prop-pages/makefile-linux.md
     - name: Vlastnosti vzdáleného archivu (Linux)
-      href: prop-pages/remote-ar-linux.md
+      href: ../linux/prop-pages/remote-ar-linux.md
