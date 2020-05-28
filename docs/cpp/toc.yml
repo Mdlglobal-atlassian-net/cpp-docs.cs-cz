@@ -1,959 +1,907 @@
+- name: Dokumentace jazyka C++
+  href: ../cpp/index.yml
 - name: Referenční dokumentace jazyka C++
-  href: ../cpp/cpp-language-reference.md
-- name: C++ vás vítá zpět (moderní verze jazyka C++)
-  href: ../cpp/welcome-back-to-cpp-modern-cpp.md
-- name: Lexikální konvence
-  expanded: false
+  expanded: true
   items:
+    - name: Referenční dokumentace jazyka C++
+      href: ../cpp/cpp-language-reference.md
+    - name: C++ vás vítá zpět (moderní verze jazyka C++)
+      href: ../cpp/welcome-back-to-cpp-modern-cpp.md
     - name: Lexikální konvence
-      href: ../cpp/lexical-conventions.md
-    - name: Tokeny a znakové sady
-      href: ../cpp/character-sets.md
-    - name: Komentáře
-      href: ../cpp/comments-cpp.md
-    - name: Identifikátory
-      href: ../cpp/identifiers-cpp.md
-    - name: Klíčová slova
-      href: ../cpp/keywords-cpp.md
-    - name: Interpunkční znaky
-      href: ../cpp/punctuators-cpp.md
-    - name: 'Číselné literály, logické a literály typu ukazatele'
-      href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
-    - name: Řetězcové a znakové literály
-      href: ../cpp/string-and-character-literals-cpp.md
-    - name: Literály definované uživatelem
-      href: ../cpp/user-defined-literals-cpp.md
-- name: Základní koncepty
-  expanded: false
-  items:
+      items:
+        - name: Lexikální konvence
+          href: ../cpp/lexical-conventions.md
+        - name: Tokeny a znakové sady
+          href: ../cpp/character-sets.md
+        - name: Komentáře
+          href: ../cpp/comments-cpp.md
+        - name: Identifikátory
+          href: ../cpp/identifiers-cpp.md
+        - name: Klíčová slova
+          href: ../cpp/keywords-cpp.md
+        - name: Interpunkční znaky
+          href: ../cpp/punctuators-cpp.md
+        - name: 'Číselné literály, logické a literály typu ukazatele'
+          href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
+        - name: Řetězcové a znakové literály
+          href: ../cpp/string-and-character-literals-cpp.md
+        - name: Literály definované uživatelem
+          href: ../cpp/user-defined-literals-cpp.md
     - name: Základní koncepty
-      href: ../cpp/basic-concepts-cpp.md
-    - name: C++ – systém typů
-      href: ../cpp/cpp-type-system-modern-cpp.md
-    - name: Rozsah
-      href: ../cpp/scope-visual-cpp.md
-    - name: Soubory hlaviček
-      href: ../cpp/header-files-cpp.md
-    - name: Jednotky překladu a propojení
-      href: ../cpp/program-and-linkage-cpp.md
-    - name: hlavní funkce a argumenty příkazového řádku
-      href: ../cpp/main-function-command-line-args.md
-    - name: Ukončení programu
-      href: ../cpp/program-termination.md
-    - name: Hodnoty lvalue a rvalue
-      href: ../cpp/lvalues-and-rvalues-visual-cpp.md
-    - name: Dočasné objekty
-      href: ../cpp/temporary-objects.md
-    - name: Zarovnání
-      href: ../cpp/alignment-cpp-declarations.md
-    - name: 'Triviální typy, typy standardního rozložení a typy POD'
-      href: ../cpp/trivial-standard-layout-and-pod-types.md
-    - name: Typy hodnot
-      href: ../cpp/value-types-modern-cpp.md
-    - name: Převody a bezpečnost typů
-      href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
-    - name: Standardní převody
-      href: ../cpp/standard-conversions.md
-- name: Předdefinované typy
-  expanded: false
-  items:
+      items:
+        - name: Základní koncepty
+          href: ../cpp/basic-concepts-cpp.md
+        - name: C++ – systém typů
+          href: ../cpp/cpp-type-system-modern-cpp.md
+        - name: Rozsah
+          href: ../cpp/scope-visual-cpp.md
+        - name: Soubory hlaviček
+          href: ../cpp/header-files-cpp.md
+        - name: Jednotky překladu a propojení
+          href: ../cpp/program-and-linkage-cpp.md
+        - name: hlavní funkce a argumenty příkazového řádku
+          href: ../cpp/main-function-command-line-args.md
+        - name: Ukončení programu
+          href: ../cpp/program-termination.md
+        - name: Hodnoty lvalue a rvalue
+          href: ../cpp/lvalues-and-rvalues-visual-cpp.md
+        - name: Dočasné objekty
+          href: ../cpp/temporary-objects.md
+        - name: Zarovnání
+          href: ../cpp/alignment-cpp-declarations.md
+        - name: 'Triviální typy, typy standardního rozložení a typy POD'
+          href: ../cpp/trivial-standard-layout-and-pod-types.md
+        - name: Typy hodnot
+          href: ../cpp/value-types-modern-cpp.md
+        - name: Převody a bezpečnost typů
+          href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
+        - name: Standardní převody
+          href: ../cpp/standard-conversions.md
     - name: Předdefinované typy
-      href: ../cpp/fundamental-types-cpp.md
-    - name: Rozsahy datových typů
-      href: ../cpp/data-type-ranges.md
-    - name: nullptr
-      href: ../cpp/nullptr.md
-    - name: void
-      href: ../cpp/void-cpp.md
-    - name: bool
-      href: ../cpp/bool-cpp.md
-    - name: false
-      href: ../cpp/false-cpp.md
-    - name: true
-      href: ../cpp/true-cpp.md
-    - name: 'char, wchar_t, char16_t, char32_t'
-      href: ../cpp/char-wchar-t-char16-t-char32-t.md
-    - name: '__int8, __int16, __int32, __int64'
-      href: ../cpp/int8-int16-int32-int64.md
-    - name: __m64
-      href: ../cpp/m64.md
-    - name: __m128
-      href: ../cpp/m128.md
-    - name: __m128d
-      href: ../cpp/m128d.md
-    - name: __m128i
-      href: ../cpp/m128i.md
-    - name: '__ptr32, __ptr64'
-      href: ../cpp/ptr32-ptr64.md
-    - name: Numerické limity
-      expanded: false
       items:
+        - name: Předdefinované typy
+          href: ../cpp/fundamental-types-cpp.md
+        - name: Rozsahy datových typů
+          href: ../cpp/data-type-ranges.md
+        - name: nullptr
+          href: ../cpp/nullptr.md
+        - name: void
+          href: ../cpp/void-cpp.md
+        - name: bool
+          href: ../cpp/bool-cpp.md
+        - name: false
+          href: ../cpp/false-cpp.md
+        - name: true
+          href: ../cpp/true-cpp.md
+        - name: 'char, wchar_t, char16_t, char32_t'
+          href: ../cpp/char-wchar-t-char16-t-char32-t.md
+        - name: '__int8, __int16, __int32, __int64'
+          href: ../cpp/int8-int16-int32-int64.md
+        - name: __m64
+          href: ../cpp/m64.md
+        - name: __m128
+          href: ../cpp/m128.md
+        - name: __m128d
+          href: ../cpp/m128d.md
+        - name: __m128i
+          href: ../cpp/m128i.md
+        - name: '__ptr32, __ptr64'
+          href: ../cpp/ptr32-ptr64.md
         - name: Numerické limity
-          href: ../cpp/numerical-limits-cpp.md
-        - name: Omezení celočíselných hodnot
-          href: ../cpp/integer-limits.md
-        - name: Plovoucí omezení
-          href: ../cpp/floating-limits.md
-- name: Deklarace a definice
-  expanded: false
-  items:
+          items:
+            - name: Numerické limity
+              href: ../cpp/numerical-limits-cpp.md
+            - name: Omezení celočíselných hodnot
+              href: ../cpp/integer-limits.md
+            - name: Plovoucí omezení
+              href: ../cpp/floating-limits.md
     - name: Deklarace a definice
-      href: ../cpp/declarations-and-definitions-cpp.md
-    - name: Třídy úložiště
-      href: ../cpp/storage-classes-cpp.md
-    - name: auto
-      href: ../cpp/auto-cpp.md
-    - name: const
-      href: ../cpp/const-cpp.md
-    - name: constexpr
-      href: ../cpp/constexpr-cpp.md
-    - name: extern
-      href: ../cpp/extern-cpp.md
-    - name: Inicializátory
-      href: ../cpp/initializers.md
-    - name: Aliasy a definice Typedef
-      href: ../cpp/aliases-and-typedefs-cpp.md
-    - name: using – deklarace
-      href: ../cpp/using-declaration.md
-    - name: volatile
-      href: ../cpp/volatile-cpp.md
-    - name: decltype
-      href: ../cpp/decltype-cpp.md
-    - name: Atributy
-      href: ../cpp/attributes.md
-- name: 'Integrované operátory, jejich priorita a asociativita'
-  expanded: false
-  items:
+      items:
+        - name: Deklarace a definice
+          href: ../cpp/declarations-and-definitions-cpp.md
+        - name: Třídy úložiště
+          href: ../cpp/storage-classes-cpp.md
+        - name: auto
+          href: ../cpp/auto-cpp.md
+        - name: const
+          href: ../cpp/const-cpp.md
+        - name: constexpr
+          href: ../cpp/constexpr-cpp.md
+        - name: extern
+          href: ../cpp/extern-cpp.md
+        - name: Inicializátory
+          href: ../cpp/initializers.md
+        - name: Aliasy a definice Typedef
+          href: ../cpp/aliases-and-typedefs-cpp.md
+        - name: using – deklarace
+          href: ../cpp/using-declaration.md
+        - name: volatile
+          href: ../cpp/volatile-cpp.md
+        - name: decltype
+          href: ../cpp/decltype-cpp.md
+        - name: Atributy
+          href: ../cpp/attributes.md
     - name: 'Integrované operátory, jejich priorita a asociativita'
-      href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-    - name: __alignof – operátor
-      href: ../cpp/alignof-operator.md
-    - name: __uuidof – operátor
-      href: ../cpp/uuidof-operator.md
-    - name: 'Operátory sčítání: + a -'
-      href: ../cpp/additive-operators-plus-and.md
-    - name: 'Operátor address-of: &'
-      href: ../cpp/address-of-operator-amp.md
-    - name: Operátory přiřazení
-      href: ../cpp/assignment-operators.md
-    - name: 'Bitový operátor AND: &'
-      href: ../cpp/bitwise-and-operator-amp.md
-    - name: 'Bitový exkluzivní operátor OR: ^'
-      href: ../cpp/bitwise-exclusive-or-operator-hat.md
-    - name: 'Bitový inkluzivní operátor OR: |'
-      href: ../cpp/bitwise-inclusive-or-operator-pipe.md
-    - name: 'Operátor přetypování: ()'
-      href: ../cpp/cast-operator-parens.md
-    - name: 'Operátor čárky: ,'
-      href: ../cpp/comma-operator.md
-    - name: 'Podmiňovací operátor: ? :'
-      href: ../cpp/conditional-operator-q.md
-    - name: delete – operátor
-      href: ../cpp/delete-operator-cpp.md
-    - name: 'Operátory rovnosti: == a !='
-      href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
-    - name: 'Operátor převodu explicitního typu: ()'
-      href: ../cpp/explicit-type-conversion-operator-parens.md
-    - name: 'Operátor volání funkce: ()'
-      href: ../cpp/function-call-operator-parens.md
-    - name: 'Operátor nepřímého přístupu: *'
-      href: ../cpp/indirection-operator-star.md
-    - name: Operátory posunu vlevo a vpravo (>> a <<)
-      href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
-    - name: 'Logický operátor AND: &&'
-      href: ../cpp/logical-and-operator-amp-amp.md
-    - name: 'Logický operátor negace: !'
-      href: ../cpp/logical-negation-operator-exclpt.md
-    - name: 'Logický operátor OR: ||'
-      href: ../cpp/logical-or-operator-pipe-pipe.md
-    - name: 'Operátory pro přístup k členům: . a ->'
-      href: ../cpp/member-access-operators-dot-and.md
-    - name: Multiplikativní operátory a operátor numerického zbytku
-      href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
-    - name: new – operátor
-      href: ../cpp/new-operator-cpp.md
-    - name: 'Vlastní operátor doplňku: ~'
-      href: ../cpp/one-s-complement-operator-tilde.md
-    - name: 'Operátory ukazatelů na členy: .* a ->*'
-      href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
-    - name: 'Operátory inkrementace a dekrementace přípony: ++ and --'
-      href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 'Operátory inkrementace a dekrementace předpony: ++ and --'
-      href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 'Relační operátory: <, >, <= a >='
-      href: ../cpp/relational-operators-equal-and-equal.md
-    - name: 'Operátor rozlišení oboru: ::'
-      href: ../cpp/scope-resolution-operator.md
-    - name: sizeof – operátor
-      href: ../cpp/sizeof-operator.md
-    - name: 'Operátor dolního indexu:'
-      href: ../cpp/subscript-operator.md
-    - name: typeid – operátor
-      href: ../cpp/typeid-operator.md
-    - name: 'Unární operátory Plus a Negation: + a -'
-      href: ../cpp/unary-plus-and-negation-operators-plus-and.md
-- name: Výrazy
-  expanded: false
-  items:
+      items:
+        - name: 'Integrované operátory, jejich priorita a asociativita'
+          href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+        - name: __alignof – operátor
+          href: ../cpp/alignof-operator.md
+        - name: __uuidof – operátor
+          href: ../cpp/uuidof-operator.md
+        - name: 'Operátory sčítání: + a -'
+          href: ../cpp/additive-operators-plus-and.md
+        - name: 'Operátor address-of: &'
+          href: ../cpp/address-of-operator-amp.md
+        - name: Operátory přiřazení
+          href: ../cpp/assignment-operators.md
+        - name: 'Bitový operátor AND: &'
+          href: ../cpp/bitwise-and-operator-amp.md
+        - name: 'Bitový exkluzivní operátor OR: ^'
+          href: ../cpp/bitwise-exclusive-or-operator-hat.md
+        - name: 'Bitový inkluzivní operátor OR: |'
+          href: ../cpp/bitwise-inclusive-or-operator-pipe.md
+        - name: 'Operátor přetypování: ()'
+          href: ../cpp/cast-operator-parens.md
+        - name: 'Operátor čárky: ,'
+          href: ../cpp/comma-operator.md
+        - name: 'Podmiňovací operátor: ? :'
+          href: ../cpp/conditional-operator-q.md
+        - name: delete – operátor
+          href: ../cpp/delete-operator-cpp.md
+        - name: 'Operátory rovnosti: == a !='
+          href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
+        - name: 'Operátor převodu explicitního typu: ()'
+          href: ../cpp/explicit-type-conversion-operator-parens.md
+        - name: 'Operátor volání funkce: ()'
+          href: ../cpp/function-call-operator-parens.md
+        - name: 'Operátor nepřímého přístupu: *'
+          href: ../cpp/indirection-operator-star.md
+        - name: Operátory posunu vlevo a vpravo (>> a <<)
+          href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
+        - name: 'Logický operátor AND: &&'
+          href: ../cpp/logical-and-operator-amp-amp.md
+        - name: 'Logický operátor negace: !'
+          href: ../cpp/logical-negation-operator-exclpt.md
+        - name: 'Logický operátor OR: ||'
+          href: ../cpp/logical-or-operator-pipe-pipe.md
+        - name: 'Operátory pro přístup k členům: . a ->'
+          href: ../cpp/member-access-operators-dot-and.md
+        - name: Multiplikativní operátory a operátor numerického zbytku
+          href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
+        - name: new – operátor
+          href: ../cpp/new-operator-cpp.md
+        - name: 'Vlastní operátor doplňku: ~'
+          href: ../cpp/one-s-complement-operator-tilde.md
+        - name: 'Operátory ukazatelů na členy: .* a ->*'
+          href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
+        - name: 'Operátory inkrementace a dekrementace přípony: ++ and --'
+          href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 'Operátory inkrementace a dekrementace předpony: ++ and --'
+          href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 'Relační operátory: <, >, <= a >='
+          href: ../cpp/relational-operators-equal-and-equal.md
+        - name: 'Operátor rozlišení oboru: ::'
+          href: ../cpp/scope-resolution-operator.md
+        - name: sizeof – operátor
+          href: ../cpp/sizeof-operator.md
+        - name: 'Operátor dolního indexu:'
+          href: ../cpp/subscript-operator.md
+        - name: typeid – operátor
+          href: ../cpp/typeid-operator.md
+        - name: 'Unární operátory Plus a Negation: + a -'
+          href: ../cpp/unary-plus-and-negation-operators-plus-and.md
     - name: Výrazy
-      href: ../cpp/expressions-cpp.md
-    - name: Typy výrazů
-      expanded: false
       items:
+        - name: Výrazy
+          href: ../cpp/expressions-cpp.md
         - name: Typy výrazů
-          href: ../cpp/types-of-expressions.md
-        - name: Primární výrazy
-          href: ../cpp/primary-expressions.md
-        - name: "Tři tečky a\_variadické šablony"
-          href: ../cpp/ellipses-and-variadic-templates.md
-        - name: Výrazy přípony
-          href: ../cpp/postfix-expressions.md
-        - name: Výrazy s unárními operátory
-          href: ../cpp/expressions-with-unary-operators.md
-        - name: Výrazy s binárními operátory
-          href: ../cpp/expressions-with-binary-operators.md
-        - name: Výrazy konstant
-          href: ../cpp/cpp-constant-expressions.md
-    - name: Sémantika výrazů
-      href: ../cpp/semantics-of-expressions.md
-    - name: Přetypování
-      expanded: false
-      items:
+          items:
+            - name: Typy výrazů
+              href: ../cpp/types-of-expressions.md
+            - name: Primární výrazy
+              href: ../cpp/primary-expressions.md
+            - name: "Tři tečky a\_variadické šablony"
+              href: ../cpp/ellipses-and-variadic-templates.md
+            - name: Výrazy přípony
+              href: ../cpp/postfix-expressions.md
+            - name: Výrazy s unárními operátory
+              href: ../cpp/expressions-with-unary-operators.md
+            - name: Výrazy s binárními operátory
+              href: ../cpp/expressions-with-binary-operators.md
+            - name: Výrazy konstant
+              href: ../cpp/cpp-constant-expressions.md
+        - name: Sémantika výrazů
+          href: ../cpp/semantics-of-expressions.md
         - name: Přetypování
-          href: ../cpp/casting.md
-        - name: Operátory přetypování
-          expanded: false
           items:
+            - name: Přetypování
+              href: ../cpp/casting.md
             - name: Operátory přetypování
-              href: ../cpp/casting-operators.md
-            - name: dynamic_cast – operátor
-              href: ../cpp/dynamic-cast-operator.md
-            - name: bad_cast – výjimka
-              href: ../cpp/bad-cast-exception.md
-            - name: static_cast – operátor
-              href: ../cpp/static-cast-operator.md
-            - name: const_cast – operátor
-              href: ../cpp/const-cast-operator.md
-            - name: reinterpret_cast – operátor
-              href: ../cpp/reinterpret-cast-operator.md
-        - name: Informace o typu modulu runtime (RTTI)
-          expanded: false
-          items:
+              items:
+                - name: Operátory přetypování
+                  href: ../cpp/casting-operators.md
+                - name: dynamic_cast – operátor
+                  href: ../cpp/dynamic-cast-operator.md
+                - name: bad_cast – výjimka
+                  href: ../cpp/bad-cast-exception.md
+                - name: static_cast – operátor
+                  href: ../cpp/static-cast-operator.md
+                - name: const_cast – operátor
+                  href: ../cpp/const-cast-operator.md
+                - name: reinterpret_cast – operátor
+                  href: ../cpp/reinterpret-cast-operator.md
             - name: Informace o typu modulu runtime (RTTI)
-              href: ../cpp/run-time-type-information.md
-            - name: bad_typeid – výjimka
-              href: ../cpp/bad-typeid-exception.md
-            - name: type_info – třída
-              href: ../cpp/type-info-class.md
-- name: Příkazy
-  expanded: false
-  items:
+              items:
+                - name: Informace o typu modulu runtime (RTTI)
+                  href: ../cpp/run-time-type-information.md
+                - name: bad_typeid – výjimka
+                  href: ../cpp/bad-typeid-exception.md
+                - name: type_info – třída
+                  href: ../cpp/type-info-class.md
     - name: Příkazy
-      href: ../cpp/statements-cpp.md
-    - name: Přehled příkazů jazyka C++
-      href: ../cpp/overview-of-cpp-statements.md
-    - name: Příkazy s popiskem
-      href: ../cpp/labeled-statements.md
-    - name: Příkaz výrazu
-      expanded: false
       items:
+        - name: Příkazy
+          href: ../cpp/statements-cpp.md
+        - name: Přehled příkazů jazyka C++
+          href: ../cpp/overview-of-cpp-statements.md
+        - name: Příkazy s popiskem
+          href: ../cpp/labeled-statements.md
         - name: Příkaz výrazu
-          href: ../cpp/expression-statement.md
-        - name: Null – příkaz
-          href: ../cpp/null-statement.md
-    - name: Složené příkazy (bloky)
-      href: ../cpp/compound-statements-blocks.md
-    - name: Příkazy výběru
-      expanded: false
-      items:
+          items:
+            - name: Příkaz výrazu
+              href: ../cpp/expression-statement.md
+            - name: Null – příkaz
+              href: ../cpp/null-statement.md
+        - name: Složené příkazy (bloky)
+          href: ../cpp/compound-statements-blocks.md
         - name: Příkazy výběru
-          href: ../cpp/selection-statements-cpp.md
-        - name: if-else – příkaz
-          href: ../cpp/if-else-statement-cpp.md
-        - name: __if_exists – příkaz
-          href: ../cpp/if-exists-statement.md
-        - name: __if_not_exists – příkaz
-          href: ../cpp/if-not-exists-statement.md
-        - name: switch – příkaz
-          href: ../cpp/switch-statement-cpp.md
-    - name: Příkazy iterace
-      expanded: false
-      items:
+          items:
+            - name: Příkazy výběru
+              href: ../cpp/selection-statements-cpp.md
+            - name: if-else – příkaz
+              href: ../cpp/if-else-statement-cpp.md
+            - name: __if_exists – příkaz
+              href: ../cpp/if-exists-statement.md
+            - name: __if_not_exists – příkaz
+              href: ../cpp/if-not-exists-statement.md
+            - name: switch – příkaz
+              href: ../cpp/switch-statement-cpp.md
         - name: Příkazy iterace
-          href: ../cpp/iteration-statements-cpp.md
-        - name: while – příkaz
-          href: ../cpp/while-statement-cpp.md
-        - name: do-while – příkaz
-          href: ../cpp/do-while-statement-cpp.md
-        - name: for – příkaz
-          href: ../cpp/for-statement-cpp.md
-        - name: Příkaz For založený na rozsahu
-          href: ../cpp/range-based-for-statement-cpp.md
-    - name: Jump – příkazy
-      expanded: false
-      items:
+          items:
+            - name: Příkazy iterace
+              href: ../cpp/iteration-statements-cpp.md
+            - name: while – příkaz
+              href: ../cpp/while-statement-cpp.md
+            - name: do-while – příkaz
+              href: ../cpp/do-while-statement-cpp.md
+            - name: for – příkaz
+              href: ../cpp/for-statement-cpp.md
+            - name: Příkaz For založený na rozsahu
+              href: ../cpp/range-based-for-statement-cpp.md
         - name: Jump – příkazy
-          href: ../cpp/jump-statements-cpp.md
-        - name: break – příkaz
-          href: ../cpp/break-statement-cpp.md
-        - name: continue – příkaz
-          href: ../cpp/continue-statement-cpp.md
-        - name: return – příkaz
-          href: ../cpp/return-statement-cpp.md
-        - name: goto – příkaz
-          href: ../cpp/goto-statement-cpp.md
-        - name: Přenos řízení
-          href: ../cpp/transfers-of-control.md
-- name: Jmenné prostory
-  href: ../cpp/namespaces-cpp.md
-- name: Výčty
-  href: ../cpp/enumerations-cpp.md
-- name: Sjednocení
-  href: ../cpp/unions.md
-- name: Funkce
-  expanded: false
-  items:
+          items:
+            - name: Jump – příkazy
+              href: ../cpp/jump-statements-cpp.md
+            - name: break – příkaz
+              href: ../cpp/break-statement-cpp.md
+            - name: continue – příkaz
+              href: ../cpp/continue-statement-cpp.md
+            - name: return – příkaz
+              href: ../cpp/return-statement-cpp.md
+            - name: goto – příkaz
+              href: ../cpp/goto-statement-cpp.md
+            - name: Přenos řízení
+              href: ../cpp/transfers-of-control.md
+    - name: Jmenné prostory
+      href: ../cpp/namespaces-cpp.md
+    - name: Výčty
+      href: ../cpp/enumerations-cpp.md
+    - name: Sjednocení
+      href: ../cpp/unions.md
     - name: Funkce
-      href: ../cpp/functions-cpp.md
-    - name: Funkce se seznamy argumentů proměnných
-      href: ../cpp/functions-with-variable-argument-lists-cpp.md
-    - name: Přetížení funkcí
-      href: ../cpp/function-overloading.md
-    - name: "Explicitně přednastavené a\_odstraněné funkce"
-      href: ../cpp/explicitly-defaulted-and-deleted-functions.md
-    - name: Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích
-      href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
-    - name: Výchozí argumenty
-      href: ../cpp/default-arguments.md
-    - name: Vložené funkce
-      href: ../cpp/inline-functions-cpp.md
-- name: Přetěžování operátoru
-  expanded: false
-  items:
+      items:
+        - name: Funkce
+          href: ../cpp/functions-cpp.md
+        - name: Funkce se seznamy argumentů proměnných
+          href: ../cpp/functions-with-variable-argument-lists-cpp.md
+        - name: Přetížení funkcí
+          href: ../cpp/function-overloading.md
+        - name: "Explicitně přednastavené a\_odstraněné funkce"
+          href: ../cpp/explicitly-defaulted-and-deleted-functions.md
+        - name: Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích
+          href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
+        - name: Výchozí argumenty
+          href: ../cpp/default-arguments.md
+        - name: Vložené funkce
+          href: ../cpp/inline-functions-cpp.md
     - name: Přetěžování operátoru
-      href: ../cpp/operator-overloading.md
-    - name: Obecná pravidla pro přetěžování operátoru
-      href: ../cpp/general-rules-for-operator-overloading.md
-    - name: Přetížení unárních operátorů
-      expanded: false
       items:
+        - name: Přetěžování operátoru
+          href: ../cpp/operator-overloading.md
+        - name: Obecná pravidla pro přetěžování operátoru
+          href: ../cpp/general-rules-for-operator-overloading.md
         - name: Přetížení unárních operátorů
-          href: ../cpp/overloading-unary-operators.md
-        - name: "Přetížení operátoru inkrementace a\_dekrementace"
-          href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
-    - name: Binární operátory
-      href: ../cpp/binary-operators.md
-    - name: Přiřazení
-      href: ../cpp/assignment.md
-    - name: Volání funkce
-      href: ../cpp/function-call-cpp.md
-    - name: Předplatné
-      href: ../cpp/subscripting.md
-    - name: Přístup ke členům
-      href: ../cpp/member-access.md
-- name: "Třídy a\_struktury"
-  expanded: false
-  items:
+          items:
+            - name: Přetížení unárních operátorů
+              href: ../cpp/overloading-unary-operators.md
+            - name: "Přetížení operátoru inkrementace a\_dekrementace"
+              href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
+        - name: Binární operátory
+          href: ../cpp/binary-operators.md
+        - name: Přiřazení
+          href: ../cpp/assignment.md
+        - name: Volání funkce
+          href: ../cpp/function-call-cpp.md
+        - name: Předplatné
+          href: ../cpp/subscripting.md
+        - name: Přístup ke členům
+          href: ../cpp/member-access.md
     - name: "Třídy a\_struktury"
-      href: ../cpp/classes-and-structs-cpp.md
-    - name: třída
-      href: ../cpp/class-cpp.md
-    - name: struct
-      href: ../cpp/struct-cpp.md
-    - name: Přehled členů třídy
-      href: ../cpp/class-member-overview.md
-    - name: Řízení přístupu ke členu
-      expanded: false
       items:
+        - name: "Třídy a\_struktury"
+          href: ../cpp/classes-and-structs-cpp.md
+        - name: třída
+          href: ../cpp/class-cpp.md
+        - name: struct
+          href: ../cpp/struct-cpp.md
+        - name: Přehled členů třídy
+          href: ../cpp/class-member-overview.md
         - name: Řízení přístupu ke členu
-          href: ../cpp/member-access-control-cpp.md
-        - name: friend
-          href: ../cpp/friend-cpp.md
-        - name: private
-          href: ../cpp/private-cpp.md
-        - name: protected
-          href: ../cpp/protected-cpp.md
-        - name: public
-          href: ../cpp/public-cpp.md
-    - name: Inicializace složenými závorkami
-      href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
-    - name: Životní cyklus objektů a správa prostředků (RAII)
-      href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
-    - name: Idiom ukazatele na implementaci pro zapouzdření za kompilace
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-    - name: Přenositelnost u rozhraní ABI
-      href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
-    - name: Konstruktory
-      expanded: false
-      items:
+          items:
+            - name: Řízení přístupu ke členu
+              href: ../cpp/member-access-control-cpp.md
+            - name: friend
+              href: ../cpp/friend-cpp.md
+            - name: private
+              href: ../cpp/private-cpp.md
+            - name: protected
+              href: ../cpp/protected-cpp.md
+            - name: public
+              href: ../cpp/public-cpp.md
+        - name: Inicializace složenými závorkami
+          href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
+        - name: Životní cyklus objektů a správa prostředků (RAII)
+          href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
+        - name: Idiom ukazatele na implementaci pro zapouzdření za kompilace
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+        - name: Přenositelnost u rozhraní ABI
+          href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
         - name: Konstruktory
-          href: ../cpp/constructors-cpp.md
-        - name: Kopírovací konstruktory a operátory přiřazení pro kopírování
-          href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
-        - name: Konstruktory přesunutí a operátory přiřazení pro přesunutí
-          href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
-        - name: Delegování konstruktorů
-          href: ../cpp/delegating-constructors.md
-    - name: Destruktory
-      href: ../cpp/destructors-cpp.md
-    - name: Přehled členských funkcí
-      expanded: false
-      items:
+          items:
+            - name: Konstruktory
+              href: ../cpp/constructors-cpp.md
+            - name: Kopírovací konstruktory a operátory přiřazení pro kopírování
+              href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
+            - name: Konstruktory přesunutí a operátory přiřazení pro přesunutí
+              href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
+            - name: Delegování konstruktorů
+              href: ../cpp/delegating-constructors.md
+        - name: Destruktory
+          href: ../cpp/destructors-cpp.md
         - name: Přehled členských funkcí
-          href: ../cpp/overview-of-member-functions.md
-        - name: virtual – specifikátor
-          href: ../cpp/virtual-specifier.md
-        - name: override – specifikátor
-          href: ../cpp/override-specifier.md
-        - name: final – specifikátor
-          href: ../cpp/final-specifier.md
-    - name: Dědičnost
-      expanded: false
-      items:
+          items:
+            - name: Přehled členských funkcí
+              href: ../cpp/overview-of-member-functions.md
+            - name: virtual – specifikátor
+              href: ../cpp/virtual-specifier.md
+            - name: override – specifikátor
+              href: ../cpp/override-specifier.md
+            - name: final – specifikátor
+              href: ../cpp/final-specifier.md
         - name: Dědičnost
-          href: ../cpp/inheritance-cpp.md
-        - name: Virtuální funkce
-          href: ../cpp/virtual-functions.md
-        - name: Jedna dědičnost
-          href: ../cpp/single-inheritance.md
-        - name: Základní třídy
-          href: ../cpp/base-classes.md
-        - name: Vícenásobné základní třídy
-          href: ../cpp/multiple-base-classes.md
-        - name: Explicitní přepsání
-          href: ../cpp/explicit-overrides-cpp.md
-        - name: Abstraktní třídy
-          href: ../cpp/abstract-classes-cpp.md
-        - name: Shrnutí pravidel rozsahu
-          href: ../cpp/summary-of-scope-rules.md
-        - name: Klíčová slova dědičnosti
-          href: ../cpp/inheritance-keywords.md
-        - name: virtual
-          href: ../cpp/virtual-cpp.md
-        - name: __super
-          href: ../cpp/super.md
-        - name: __interface
-          href: ../cpp/interface.md
-    - name: Zvláštní členské funkce
-      href: ../cpp/special-member-functions.md
-    - name: Statické členy
-      href: ../cpp/static-members-cpp.md
-    - name: Třídy jazyka C++ jako typy hodnot
-      href: ../cpp/value-types-modern-cpp.md
-    - name: Převody uživatelsky definovaných typů
-      href: ../cpp/user-defined-type-conversions-cpp.md
-    - name: Proměnlivé datové členy
-      href: ../cpp/mutable-data-members-cpp.md
-    - name: Deklarace vnořených tříd
-      href: ../cpp/nested-class-declarations.md
-    - name: Anonymní typy tříd
-      href: ../cpp/anonymous-class-types.md
-    - name: Ukazatele na členy
-      href: ../cpp/pointers-to-members.md
-    - name: this – ukazatel
-      href: ../cpp/this-pointer.md
-    - name: Bitová pole
-      href: ../cpp/cpp-bit-fields.md
-- name: "Výrazy lambda v\_jazyce C++"
-  expanded: false
-  items:
+          items:
+            - name: Dědičnost
+              href: ../cpp/inheritance-cpp.md
+            - name: Virtuální funkce
+              href: ../cpp/virtual-functions.md
+            - name: Jedna dědičnost
+              href: ../cpp/single-inheritance.md
+            - name: Základní třídy
+              href: ../cpp/base-classes.md
+            - name: Vícenásobné základní třídy
+              href: ../cpp/multiple-base-classes.md
+            - name: Explicitní přepsání
+              href: ../cpp/explicit-overrides-cpp.md
+            - name: Abstraktní třídy
+              href: ../cpp/abstract-classes-cpp.md
+            - name: Shrnutí pravidel rozsahu
+              href: ../cpp/summary-of-scope-rules.md
+            - name: Klíčová slova dědičnosti
+              href: ../cpp/inheritance-keywords.md
+            - name: virtual
+              href: ../cpp/virtual-cpp.md
+            - name: __super
+              href: ../cpp/super.md
+            - name: __interface
+              href: ../cpp/interface.md
+        - name: Zvláštní členské funkce
+          href: ../cpp/special-member-functions.md
+        - name: Statické členy
+          href: ../cpp/static-members-cpp.md
+        - name: Třídy jazyka C++ jako typy hodnot
+          href: ../cpp/value-types-modern-cpp.md
+        - name: Převody uživatelsky definovaných typů
+          href: ../cpp/user-defined-type-conversions-cpp.md
+        - name: Proměnlivé datové členy
+          href: ../cpp/mutable-data-members-cpp.md
+        - name: Deklarace vnořených tříd
+          href: ../cpp/nested-class-declarations.md
+        - name: Anonymní typy tříd
+          href: ../cpp/anonymous-class-types.md
+        - name: Ukazatele na členy
+          href: ../cpp/pointers-to-members.md
+        - name: this – ukazatel
+          href: ../cpp/this-pointer.md
+        - name: Bitová pole
+          href: ../cpp/cpp-bit-fields.md
     - name: "Výrazy lambda v\_jazyce C++"
-      href: ../cpp/lambda-expressions-in-cpp.md
-    - name: Syntaxe výrazu lambda
-      href: ../cpp/lambda-expression-syntax.md
-    - name: Příklady výrazů lambda
-      href: ../cpp/examples-of-lambda-expressions.md
-    - name: constexpr – výrazy lambda
-      href: ../cpp/lambda-expressions-constexpr.md
-- name: Pole
-  href: ../cpp/arrays-cpp.md
-- name: Odkazy
-  expanded: false
-  items:
+      items:
+        - name: "Výrazy lambda v\_jazyce C++"
+          href: ../cpp/lambda-expressions-in-cpp.md
+        - name: Syntaxe výrazu lambda
+          href: ../cpp/lambda-expression-syntax.md
+        - name: Příklady výrazů lambda
+          href: ../cpp/examples-of-lambda-expressions.md
+        - name: constexpr – výrazy lambda
+          href: ../cpp/lambda-expressions-constexpr.md
+    - name: Pole
+      href: ../cpp/arrays-cpp.md
     - name: Odkazy
-      href: ../cpp/references-cpp.md
-    - name: 'Deklarátor odkazu lvalue: &'
-      href: ../cpp/lvalue-reference-declarator-amp.md
-    - name: 'Deklarátor odkazu rvalue: &&'
-      href: ../cpp/rvalue-reference-declarator-amp-amp.md
-    - name: Argumenty funkce typu odkazu
-      href: ../cpp/reference-type-function-arguments.md
-    - name: Funkce vracející typ odkazu
-      href: ../cpp/reference-type-function-returns.md
-    - name: Odkazy na ukazatele
-      href: ../cpp/references-to-pointers.md
-- name: Ukazatele
-  expanded: false
-  items:
-    - name: Ukazatelé
-      href: ../cpp/pointers-cpp.md
-    - name: Nezpracované ukazatele
-      href: ../cpp/raw-pointers.md
-    - name: const a volatile – ukazatele
-      href: ../cpp/const-and-volatile-pointers.md
-    - name: new a delete – operátory
-      href: ../cpp/new-and-delete-operators.md
-    - name: Chytré ukazatele
-      href: ../cpp/smart-pointers-modern-cpp.md
-    - name: "Postupy: Vytváření a\_používání instancí ukazatelů unique_ptr"
-      href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
-    - name: "Postupy: Vytváření a\_používání instancí ukazatelů shared_ptr"
-      href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
-    - name: "Postupy: Vytváření a\_používání instancí ukazatelů weak_ptr"
-      href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
-    - name: "Postupy: Vytváření a\_používání instancí objektů CComPtr a CComQIPtr"
-      href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-    - name: Ukazatel na implementaci pro zapouzdření za kompilace
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-- name: "Ošetření výjimek v\_C++"
-  expanded: false
-  items:
+      items:
+        - name: Odkazy
+          href: ../cpp/references-cpp.md
+        - name: 'Deklarátor odkazu lvalue: &'
+          href: ../cpp/lvalue-reference-declarator-amp.md
+        - name: 'Deklarátor odkazu rvalue: &&'
+          href: ../cpp/rvalue-reference-declarator-amp-amp.md
+        - name: Argumenty funkce typu odkazu
+          href: ../cpp/reference-type-function-arguments.md
+        - name: Funkce vracející typ odkazu
+          href: ../cpp/reference-type-function-returns.md
+        - name: Odkazy na ukazatele
+          href: ../cpp/references-to-pointers.md
+    - name: Ukazatele
+      items:
+        - name: Ukazatelé
+          href: ../cpp/pointers-cpp.md
+        - name: Nezpracované ukazatele
+          href: ../cpp/raw-pointers.md
+        - name: const a volatile – ukazatele
+          href: ../cpp/const-and-volatile-pointers.md
+        - name: new a delete – operátory
+          href: ../cpp/new-and-delete-operators.md
+        - name: Chytré ukazatele
+          href: ../cpp/smart-pointers-modern-cpp.md
+        - name: "Postupy: Vytváření a\_používání instancí ukazatelů unique_ptr"
+          href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
+        - name: "Postupy: Vytváření a\_používání instancí ukazatelů shared_ptr"
+          href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
+        - name: "Postupy: Vytváření a\_používání instancí ukazatelů weak_ptr"
+          href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
+        - name: "Postupy: Vytváření a\_používání instancí objektů CComPtr a CComQIPtr"
+          href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+        - name: Ukazatel na implementaci pro zapouzdření za kompilace
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
     - name: "Ošetření výjimek v\_C++"
-      href: ../cpp/exception-handling-in-visual-cpp.md
-    - name: Moderní osvědčené postupy v jazyce C++
-      href: ../cpp/errors-and-exception-handling-modern-cpp.md
-    - name: "Postup návrhu s\_ohledem na bezpečnost výjimek"
-      href: ../cpp/how-to-design-for-exception-safety.md
-    - name: Postup vytvoření rozhraní mezi kódem výjimek a ostatním kódem
-      href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-    - name: 'try, throw a catch – příkazy'
-      href: ../cpp/try-throw-and-catch-statements-cpp.md
-    - name: Postup vyhodnocení bloků catch
-      href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
-    - name: Výjimky a uvolnění zásobníku
-      href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
-    - name: Specifikace výjimek (throw)
-      href: ../cpp/exception-specifications-throw-cpp.md
-    - name: noexcept
-      href: ../cpp/noexcept-cpp.md
-    - name: Neošetřené výjimky jazyka C++
-      href: ../cpp/unhandled-cpp-exceptions.md
-    - name: Kombinace výjimek v jazycích C (strukturované) a C++
-      expanded: false
       items:
+        - name: "Ošetření výjimek v\_C++"
+          href: ../cpp/exception-handling-in-visual-cpp.md
+        - name: Moderní osvědčené postupy v jazyce C++
+          href: ../cpp/errors-and-exception-handling-modern-cpp.md
+        - name: "Postup návrhu s\_ohledem na bezpečnost výjimek"
+          href: ../cpp/how-to-design-for-exception-safety.md
+        - name: Postup vytvoření rozhraní mezi kódem výjimek a ostatním kódem
+          href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+        - name: 'try, throw a catch – příkazy'
+          href: ../cpp/try-throw-and-catch-statements-cpp.md
+        - name: Postup vyhodnocení bloků catch
+          href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
+        - name: Výjimky a uvolnění zásobníku
+          href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
+        - name: Specifikace výjimek (throw)
+          href: ../cpp/exception-specifications-throw-cpp.md
+        - name: noexcept
+          href: ../cpp/noexcept-cpp.md
+        - name: Neošetřené výjimky jazyka C++
+          href: ../cpp/unhandled-cpp-exceptions.md
         - name: Kombinace výjimek v jazycích C (strukturované) a C++
-          href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
-        - name: Použití funkcí setjmp-longjmp
-          href: ../cpp/using-setjmp-longjmp.md
-        - name: Ošetření strukturovaných výjimek v C++
-          href: ../cpp/exception-handling-differences.md
-    - name: Strukturované ošetření výjimek (SEH) (C/C++)
-      expanded: false
-      items:
+          items:
+            - name: Kombinace výjimek v jazycích C (strukturované) a C++
+              href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
+            - name: Použití funkcí setjmp-longjmp
+              href: ../cpp/using-setjmp-longjmp.md
+            - name: Ošetření strukturovaných výjimek v C++
+              href: ../cpp/exception-handling-differences.md
         - name: Strukturované ošetření výjimek (SEH) (C/C++)
-          href: ../cpp/structured-exception-handling-c-cpp.md
-        - name: Zápis obslužné rutiny výjimek
-          expanded: false
           items:
+            - name: Strukturované ošetření výjimek (SEH) (C/C++)
+              href: ../cpp/structured-exception-handling-c-cpp.md
             - name: Zápis obslužné rutiny výjimek
-              href: ../cpp/writing-an-exception-handler.md
-            - name: try-except – příkaz
-              href: ../cpp/try-except-statement.md
-            - name: Zápis filtru výjimek
-              href: ../cpp/writing-an-exception-filter.md
-            - name: Vyvolávání výjimek softwaru
-              href: ../cpp/raising-software-exceptions.md
-            - name: Výjimky hardwaru
-              href: ../cpp/hardware-exceptions.md
-            - name: Omezení obslužných rutin výjimek
-              href: ../cpp/restrictions-on-exception-handlers.md
-        - name: Zápis obslužné rutiny ukončení
-          expanded: false
-          items:
+              items:
+                - name: Zápis obslužné rutiny výjimek
+                  href: ../cpp/writing-an-exception-handler.md
+                - name: try-except – příkaz
+                  href: ../cpp/try-except-statement.md
+                - name: Zápis filtru výjimek
+                  href: ../cpp/writing-an-exception-filter.md
+                - name: Vyvolávání výjimek softwaru
+                  href: ../cpp/raising-software-exceptions.md
+                - name: Výjimky hardwaru
+                  href: ../cpp/hardware-exceptions.md
+                - name: Omezení obslužných rutin výjimek
+                  href: ../cpp/restrictions-on-exception-handlers.md
             - name: Zápis obslužné rutiny ukončení
-              href: ../cpp/writing-a-termination-handler.md
-            - name: try-finally – příkaz
-              href: ../cpp/try-finally-statement.md
-            - name: Vymazání prostředků
-              href: ../cpp/cleaning-up-resources.md
-            - name: 'Načasování ošetření výjimky: Shrnutí'
-              href: ../cpp/timing-of-exception-handling-a-summary.md
-            - name: Omezení obslužných rutin ukončení
-              href: ../cpp/restrictions-on-termination-handlers.md
-    - name: Převod výjimek mezi vlákny
-      href: ../cpp/transporting-exceptions-between-threads.md
-- name: Kontrolní výraz a uživatelem zadané zprávy
-  expanded: false
-  items:
+              items:
+                - name: Zápis obslužné rutiny ukončení
+                  href: ../cpp/writing-a-termination-handler.md
+                - name: try-finally – příkaz
+                  href: ../cpp/try-finally-statement.md
+                - name: Vymazání prostředků
+                  href: ../cpp/cleaning-up-resources.md
+                - name: 'Načasování ošetření výjimky: Shrnutí'
+                  href: ../cpp/timing-of-exception-handling-a-summary.md
+                - name: Omezení obslužných rutin ukončení
+                  href: ../cpp/restrictions-on-termination-handlers.md
+        - name: Převod výjimek mezi vlákny
+          href: ../cpp/transporting-exceptions-between-threads.md
     - name: Kontrolní výraz a uživatelem zadané zprávy
-      href: ../cpp/assertion-and-user-supplied-messages-cpp.md
-    - name: static_assert
-      href: ../cpp/static-assert.md
-- name: Moduly
-  expanded: false
-  items:
-    - name: Přehled modulů v C++
-      href: ../cpp/modules-cpp.md
-    - name: 'modul, import, export'
-      href: ../cpp/import-export-module.md
-- name: Šablony
-  expanded: false
-  items:
+      items:
+        - name: Kontrolní výraz a uživatelem zadané zprávy
+          href: ../cpp/assertion-and-user-supplied-messages-cpp.md
+        - name: static_assert
+          href: ../cpp/static-assert.md
+    - name: Moduly
+      items:
+        - name: Přehled modulů v C++
+          href: ../cpp/modules-cpp.md
+        - name: 'modul, import, export'
+          href: ../cpp/import-export-module.md
     - name: Šablony
-      href: ../cpp/templates-cpp.md
-    - name: typename
-      href: ../cpp/typename.md
-    - name: Šablony třídy
-      href: ../cpp/class-templates.md
-    - name: Šablony funkcí
-      expanded: false
       items:
+        - name: Šablony
+          href: ../cpp/templates-cpp.md
+        - name: typename
+          href: ../cpp/typename.md
+        - name: Šablony třídy
+          href: ../cpp/class-templates.md
         - name: Šablony funkcí
-          href: ../cpp/function-templates.md
-        - name: Vytváření instancí šablon funkce
-          href: ../cpp/function-template-instantiation.md
-        - name: Explicitní vytvoření instance
-          href: ../cpp/explicit-instantiation.md
-        - name: Explicitní specializace šablon funkcí
-          href: ../cpp/explicit-specialization-of-function-templates.md
-        - name: Částečné řazení šablon funkce
-          href: ../cpp/partial-ordering-of-function-templates-cpp.md
-        - name: Šablony členských funkcí
-          href: ../cpp/member-function-templates.md
-    - name: Specializace šablon
-      href: ../cpp/template-specialization-cpp.md
-    - name: Rozlišení šablon a názvů
-      expanded: false
-      items:
+          items:
+            - name: Šablony funkcí
+              href: ../cpp/function-templates.md
+            - name: Vytváření instancí šablon funkce
+              href: ../cpp/function-template-instantiation.md
+            - name: Explicitní vytvoření instance
+              href: ../cpp/explicit-instantiation.md
+            - name: Explicitní specializace šablon funkcí
+              href: ../cpp/explicit-specialization-of-function-templates.md
+            - name: Částečné řazení šablon funkce
+              href: ../cpp/partial-ordering-of-function-templates-cpp.md
+            - name: Šablony členských funkcí
+              href: ../cpp/member-function-templates.md
+        - name: Specializace šablon
+          href: ../cpp/template-specialization-cpp.md
         - name: Rozlišení šablon a názvů
-          href: ../cpp/templates-and-name-resolution.md
-        - name: Rozlišení názvů u závislých typů
-          href: ../cpp/name-resolution-for-dependent-types.md
-        - name: Rozlišení názvů pro lokálně deklarované názvy
-          href: ../cpp/name-resolution-for-locally-declared-names.md
-        - name: Řešení přetížení volání šablony funkce
-          href: ../cpp/overload-resolution-of-function-template-calls.md
-    - name: Organizace zdrojového kódu (šablony C++)
-      href: ../cpp/source-code-organization-cpp-templates.md
-- name: Zpracování událostí
-  expanded: false
-  items:
+          items:
+            - name: Rozlišení šablon a názvů
+              href: ../cpp/templates-and-name-resolution.md
+            - name: Rozlišení názvů u závislých typů
+              href: ../cpp/name-resolution-for-dependent-types.md
+            - name: Rozlišení názvů pro lokálně deklarované názvy
+              href: ../cpp/name-resolution-for-locally-declared-names.md
+            - name: Řešení přetížení volání šablony funkce
+              href: ../cpp/overload-resolution-of-function-template-calls.md
+        - name: Organizace zdrojového kódu (šablony C++)
+          href: ../cpp/source-code-organization-cpp-templates.md
     - name: Zpracování událostí
-      href: ../cpp/event-handling.md
-    - name: __event
-      href: ../cpp/event.md
-    - name: __hook
-      href: ../cpp/hook.md
-    - name: __raise
-      href: ../cpp/raise.md
-    - name: __unhook
-      href: ../cpp/unhook.md
-    - name: Zpracování událostí v nativním kódu C++
-      href: ../cpp/event-handling-in-native-cpp.md
-    - name: Zpracování událostí v modelu COM
-      href: ../cpp/event-handling-in-com.md
-- name: Modifikátory specifické pro společnost Microsoft
-  expanded: false
-  items:
+      items:
+        - name: Zpracování událostí
+          href: ../cpp/event-handling.md
+        - name: __event
+          href: ../cpp/event.md
+        - name: __hook
+          href: ../cpp/hook.md
+        - name: __raise
+          href: ../cpp/raise.md
+        - name: __unhook
+          href: ../cpp/unhook.md
+        - name: Zpracování událostí v nativním kódu C++
+          href: ../cpp/event-handling-in-native-cpp.md
+        - name: Zpracování událostí v modelu COM
+          href: ../cpp/event-handling-in-com.md
     - name: Modifikátory specifické pro společnost Microsoft
-      href: ../cpp/microsoft-specific-modifiers.md
-    - name: Základní adresování
-      expanded: false
       items:
+        - name: Modifikátory specifické pro společnost Microsoft
+          href: ../cpp/microsoft-specific-modifiers.md
         - name: Základní adresování
-          href: ../cpp/based-addressing.md
-        - name: __based – gramatika
-          href: ../cpp/based-grammar.md
-        - name: Základní ukazatele
-          href: ../cpp/based-pointers-cpp.md
-    - name: Konvence volání
-      expanded: false
-      items:
+          items:
+            - name: Základní adresování
+              href: ../cpp/based-addressing.md
+            - name: __based – gramatika
+              href: ../cpp/based-grammar.md
+            - name: Základní ukazatele
+              href: ../cpp/based-pointers-cpp.md
         - name: Konvence volání
-          href: ../cpp/calling-conventions.md
-        - name: Konvence předávání a pojmenování argumentů
-          expanded: false
           items:
+            - name: Konvence volání
+              href: ../cpp/calling-conventions.md
             - name: Konvence předávání a pojmenování argumentů
-              href: ../cpp/argument-passing-and-naming-conventions.md
-            - name: __cdecl
-              href: ../cpp/cdecl.md
-            - name: __clrcall
-              href: ../cpp/clrcall.md
-            - name: __stdcall
-              href: ../cpp/stdcall.md
-            - name: __fastcall
-              href: ../cpp/fastcall.md
-            - name: __thiscall
-              href: ../cpp/thiscall.md
-            - name: __vectorcall
-              href: ../cpp/vectorcall.md
-        - name: 'Příklad volání: prototyp a volání funkce'
-          expanded: false
-          items:
+              items:
+                - name: Konvence předávání a pojmenování argumentů
+                  href: ../cpp/argument-passing-and-naming-conventions.md
+                - name: __cdecl
+                  href: ../cpp/cdecl.md
+                - name: __clrcall
+                  href: ../cpp/clrcall.md
+                - name: __stdcall
+                  href: ../cpp/stdcall.md
+                - name: __fastcall
+                  href: ../cpp/fastcall.md
+                - name: __thiscall
+                  href: ../cpp/thiscall.md
+                - name: __vectorcall
+                  href: ../cpp/vectorcall.md
             - name: 'Příklad volání: prototyp a volání funkce'
-              href: ../cpp/calling-example-function-prototype-and-call.md
-            - name: Příklad výsledků volání
-              href: ../cpp/results-of-calling-example.md
-        - name: Volání holé funkce
-          expanded: false
-          items:
+              items:
+                - name: 'Příklad volání: prototyp a volání funkce'
+                  href: ../cpp/calling-example-function-prototype-and-call.md
+                - name: Příklad výsledků volání
+                  href: ../cpp/results-of-calling-example.md
             - name: Volání holé funkce
-              href: ../cpp/naked-function-calls.md
-            - name: Pravidla a omezení pro holé funkce
-              href: ../cpp/rules-and-limitations-for-naked-functions.md
-            - name: Důležité informace k zápisu kódu prolog-epilog
-              href: ../cpp/considerations-for-writing-prolog-epilog-code.md
-        - name: Koprocesor čísla s plovoucí desetinnou čárkou a konvence volání
-          href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
-        - name: Zastaralé konvence volání
-          href: ../cpp/obsolete-calling-conventions.md
-    - name: restrict (C++ AMP)
-      href: ../cpp/restrict-cpp-amp.md
-    - name: tile_static – klíčové slovo
-      href: ../cpp/tile-static-keyword.md
-    - name: __declspec
-      expanded: false
-      items:
+              items:
+                - name: Volání holé funkce
+                  href: ../cpp/naked-function-calls.md
+                - name: Pravidla a omezení pro holé funkce
+                  href: ../cpp/rules-and-limitations-for-naked-functions.md
+                - name: Důležité informace k zápisu kódu prolog-epilog
+                  href: ../cpp/considerations-for-writing-prolog-epilog-code.md
+            - name: Koprocesor čísla s plovoucí desetinnou čárkou a konvence volání
+              href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
+            - name: Zastaralé konvence volání
+              href: ../cpp/obsolete-calling-conventions.md
+        - name: restrict (C++ AMP)
+          href: ../cpp/restrict-cpp-amp.md
+        - name: tile_static – klíčové slovo
+          href: ../cpp/tile-static-keyword.md
         - name: __declspec
-          href: ../cpp/declspec.md
-        - name: align
-          href: ../cpp/align-cpp.md
-        - name: allocate
-          href: ../cpp/allocate.md
-        - name: allocator
-          href: ../cpp/allocator.md
-        - name: appdomain
-          href: ../cpp/appdomain.md
-        - name: code_seg (__declspec)
-          href: ../cpp/code-seg-declspec.md
-        - name: deprecated
-          href: ../cpp/deprecated-cpp.md
-        - name: 'dllexport, dllimport'
-          expanded: false
           items:
+            - name: __declspec
+              href: ../cpp/declspec.md
+            - name: align
+              href: ../cpp/align-cpp.md
+            - name: allocate
+              href: ../cpp/allocate.md
+            - name: allocator
+              href: ../cpp/allocator.md
+            - name: appdomain
+              href: ../cpp/appdomain.md
+            - name: code_seg (__declspec)
+              href: ../cpp/code-seg-declspec.md
+            - name: deprecated
+              href: ../cpp/deprecated-cpp.md
             - name: 'dllexport, dllimport'
-              href: ../cpp/dllexport-dllimport.md
-            - name: Definice a deklarace
-              href: ../cpp/definitions-and-declarations-cpp.md
-            - name: Definování vložených funkcí jazyka C++ příkazy dllexport a dllimport
-              href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
-            - name: "Obecná pravidla a\_omezení"
-              href: ../cpp/general-rules-and-limitations.md
-            - name: Používání příkazů dllimport a dllexport ve třídách jazyka C++
-              href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
-        - name: jitintrinsic
-          href: ../cpp/jitintrinsic.md
-        - name: naked
-          href: ../cpp/naked-cpp.md
-        - name: noalias
-          href: ../cpp/noalias.md
-        - name: noinline
-          href: ../cpp/noinline.md
-        - name: noreturn
-          href: ../cpp/noreturn.md
-        - name: nothrow
-          href: ../cpp/nothrow-cpp.md
-        - name: novtable
-          href: ../cpp/novtable.md
-        - name: zpracování
-          href: ../cpp/process.md
-        - name: property
-          href: ../cpp/property-cpp.md
-        - name: restrict
-          href: ../cpp/restrict.md
-        - name: safebuffers
-          href: ../cpp/safebuffers.md
-        - name: selectany
-          href: ../cpp/selectany.md
-        - name: spectre
-          href: ../cpp/spectre.md
-        - name: vlákno
-          href: ../cpp/thread.md
-        - name: uuid
-          href: ../cpp/uuid-cpp.md
-    - name: __restrict
-      href: ../cpp/extension-restrict.md
-    - name: '__sptr, __uptr'
-      href: ../cpp/sptr-uptr.md
-    - name: __unaligned
-      href: ../cpp/unaligned.md
-    - name: __w64
-      href: ../cpp/w64.md
-    - name: __func__
-      href: ../cpp/func.md
-- name: Podpora kompilátoru modelu COM
-  expanded: false
-  items:
+              items:
+                - name: 'dllexport, dllimport'
+                  href: ../cpp/dllexport-dllimport.md
+                - name: Definice a deklarace
+                  href: ../cpp/definitions-and-declarations-cpp.md
+                - name: Definování vložených funkcí jazyka C++ příkazy dllexport a dllimport
+                  href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
+                - name: "Obecná pravidla a\_omezení"
+                  href: ../cpp/general-rules-and-limitations.md
+                - name: Používání příkazů dllimport a dllexport ve třídách jazyka C++
+                  href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
+            - name: jitintrinsic
+              href: ../cpp/jitintrinsic.md
+            - name: naked
+              href: ../cpp/naked-cpp.md
+            - name: noalias
+              href: ../cpp/noalias.md
+            - name: noinline
+              href: ../cpp/noinline.md
+            - name: noreturn
+              href: ../cpp/noreturn.md
+            - name: nothrow
+              href: ../cpp/nothrow-cpp.md
+            - name: novtable
+              href: ../cpp/novtable.md
+            - name: zpracování
+              href: ../cpp/process.md
+            - name: property
+              href: ../cpp/property-cpp.md
+            - name: restrict
+              href: ../cpp/restrict.md
+            - name: safebuffers
+              href: ../cpp/safebuffers.md
+            - name: selectany
+              href: ../cpp/selectany.md
+            - name: spectre
+              href: ../cpp/spectre.md
+            - name: vlákno
+              href: ../cpp/thread.md
+            - name: uuid
+              href: ../cpp/uuid-cpp.md
+        - name: __restrict
+          href: ../cpp/extension-restrict.md
+        - name: '__sptr, __uptr'
+          href: ../cpp/sptr-uptr.md
+        - name: __unaligned
+          href: ../cpp/unaligned.md
+        - name: __w64
+          href: ../cpp/w64.md
+        - name: __func__
+          href: ../cpp/func.md
     - name: Podpora kompilátoru modelu COM
-      href: ../cpp/compiler-com-support.md
-    - name: Globální funkce kompilátoru modelu COM
-      expanded: false
       items:
+        - name: Podpora kompilátoru modelu COM
+          href: ../cpp/compiler-com-support.md
         - name: Globální funkce kompilátoru modelu COM
-          href: ../cpp/compiler-com-global-functions.md
-        - name: _com_raise_error
-          href: ../cpp/com-raise-error.md
-        - name: ConvertStringToBSTR
-          href: ../cpp/convertstringtobstr.md
-        - name: ConvertBSTRToString
-          href: ../cpp/convertbstrtostring.md
-        - name: _set_com_error_handler
-          href: ../cpp/set-com-error-handler.md
-    - name: Třídy podpory kompilátoru modelu COM
-      expanded: false
-      items:
+          items:
+            - name: Globální funkce kompilátoru modelu COM
+              href: ../cpp/compiler-com-global-functions.md
+            - name: _com_raise_error
+              href: ../cpp/com-raise-error.md
+            - name: ConvertStringToBSTR
+              href: ../cpp/convertstringtobstr.md
+            - name: ConvertBSTRToString
+              href: ../cpp/convertbstrtostring.md
+            - name: _set_com_error_handler
+              href: ../cpp/set-com-error-handler.md
         - name: Třídy podpory kompilátoru modelu COM
-          href: ../cpp/compiler-com-support-classes.md
-        - name: _bstr_t – třída
-          expanded: false
           items:
+            - name: Třídy podpory kompilátoru modelu COM
+              href: ../cpp/compiler-com-support-classes.md
             - name: _bstr_t – třída
-              href: ../cpp/bstr-t-class.md
-            - name: _bstr_t – členské funkce
-              expanded: false
               items:
+                - name: _bstr_t – třída
+                  href: ../cpp/bstr-t-class.md
                 - name: _bstr_t – členské funkce
-                  href: ../cpp/bstr-t-member-functions.md
-                - name: '_bstr_t::Assign'
-                  href: ../cpp/bstr-t-assign.md
-                - name: '_bstr_t::Attach'
-                  href: ../cpp/bstr-t-attach.md
-                - name: '_bstr_t::_bstr_t'
-                  href: ../cpp/bstr-t-bstr-t.md
-                - name: '_bstr_t::copy'
-                  href: ../cpp/bstr-t-copy.md
-                - name: '_bstr_t::Detach'
-                  href: ../cpp/bstr-t-detach.md
-                - name: '_bstr_t::GetAddress'
-                  href: ../cpp/bstr-t-getaddress.md
-                - name: '_bstr_t::GetBSTR'
-                  href: ../cpp/bstr-t-getbstr.md
-                - name: '_bstr_t::length'
-                  href: ../cpp/bstr-t-length.md
-            - name: _bstr_t – operátory
-              expanded: false
-              items:
+                  items:
+                    - name: _bstr_t – členské funkce
+                      href: ../cpp/bstr-t-member-functions.md
+                    - name: '_bstr_t::Assign'
+                      href: ../cpp/bstr-t-assign.md
+                    - name: '_bstr_t::Attach'
+                      href: ../cpp/bstr-t-attach.md
+                    - name: '_bstr_t::_bstr_t'
+                      href: ../cpp/bstr-t-bstr-t.md
+                    - name: '_bstr_t::copy'
+                      href: ../cpp/bstr-t-copy.md
+                    - name: '_bstr_t::Detach'
+                      href: ../cpp/bstr-t-detach.md
+                    - name: '_bstr_t::GetAddress'
+                      href: ../cpp/bstr-t-getaddress.md
+                    - name: '_bstr_t::GetBSTR'
+                      href: ../cpp/bstr-t-getbstr.md
+                    - name: '_bstr_t::length'
+                      href: ../cpp/bstr-t-length.md
                 - name: _bstr_t – operátory
-                  href: ../cpp/bstr-t-operators.md
-                - name: '_bstr_t::operator ='
-                  href: ../cpp/bstr-t-operator-equal.md
-                - name: '_bstr_t::operator +=, +'
-                  href: ../cpp/bstr-t-operator-add-equal-plus.md
-                - name: '_bstr_t::operator !'
-                  href: ../cpp/bstr-t-operator-logical-not.md
-                - name: _bstr_t – relační operátory
-                  href: ../cpp/bstr-t-relational-operators.md
-                - name: '_bstr_t::wchar_t *, _bstr_t::char*'
-                  href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
-        - name: _com_error – třída
-          expanded: false
-          items:
+                  items:
+                    - name: _bstr_t – operátory
+                      href: ../cpp/bstr-t-operators.md
+                    - name: '_bstr_t::operator ='
+                      href: ../cpp/bstr-t-operator-equal.md
+                    - name: '_bstr_t::operator +=, +'
+                      href: ../cpp/bstr-t-operator-add-equal-plus.md
+                    - name: '_bstr_t::operator !'
+                      href: ../cpp/bstr-t-operator-logical-not.md
+                    - name: _bstr_t – relační operátory
+                      href: ../cpp/bstr-t-relational-operators.md
+                    - name: '_bstr_t::wchar_t *, _bstr_t::char*'
+                      href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
             - name: _com_error – třída
-              href: ../cpp/com-error-class.md
-            - name: _com_error – členské funkce
-              expanded: false
               items:
+                - name: _com_error – třída
+                  href: ../cpp/com-error-class.md
                 - name: _com_error – členské funkce
-                  href: ../cpp/com-error-member-functions.md
-                - name: '_com_error::_com_error'
-                  href: ../cpp/com-error-com-error.md
-                - name: '_com_error::Description'
-                  href: ../cpp/com-error-description.md
-                - name: '_com_error::Error'
-                  href: ../cpp/com-error-error.md
-                - name: '_com_error::ErrorInfo'
-                  href: ../cpp/com-error-errorinfo.md
-                - name: '_com_error::ErrorMessage'
-                  href: ../cpp/com-error-errormessage.md
-                - name: '_com_error::GUID'
-                  href: ../cpp/com-error-guid.md
-                - name: '_com_error::HelpContext'
-                  href: ../cpp/com-error-helpcontext.md
-                - name: '_com_error::HelpFile'
-                  href: ../cpp/com-error-helpfile.md
-                - name: '_com_error::HRESULTToWCode'
-                  href: ../cpp/com-error-hresulttowcode.md
-                - name: '_com_error::Source'
-                  href: ../cpp/com-error-source.md
-                - name: '_com_error::WCode'
-                  href: ../cpp/com-error-wcode.md
-                - name: '_com_error::WCodeToHRESULT'
-                  href: ../cpp/com-error-wcodetohresult.md
-            - name: _com_error – operátory
-              expanded: false
-              items:
+                  items:
+                    - name: _com_error – členské funkce
+                      href: ../cpp/com-error-member-functions.md
+                    - name: '_com_error::_com_error'
+                      href: ../cpp/com-error-com-error.md
+                    - name: '_com_error::Description'
+                      href: ../cpp/com-error-description.md
+                    - name: '_com_error::Error'
+                      href: ../cpp/com-error-error.md
+                    - name: '_com_error::ErrorInfo'
+                      href: ../cpp/com-error-errorinfo.md
+                    - name: '_com_error::ErrorMessage'
+                      href: ../cpp/com-error-errormessage.md
+                    - name: '_com_error::GUID'
+                      href: ../cpp/com-error-guid.md
+                    - name: '_com_error::HelpContext'
+                      href: ../cpp/com-error-helpcontext.md
+                    - name: '_com_error::HelpFile'
+                      href: ../cpp/com-error-helpfile.md
+                    - name: '_com_error::HRESULTToWCode'
+                      href: ../cpp/com-error-hresulttowcode.md
+                    - name: '_com_error::Source'
+                      href: ../cpp/com-error-source.md
+                    - name: '_com_error::WCode'
+                      href: ../cpp/com-error-wcode.md
+                    - name: '_com_error::WCodeToHRESULT'
+                      href: ../cpp/com-error-wcodetohresult.md
                 - name: _com_error – operátory
-                  href: ../cpp/com-error-operators.md
-                - name: '_com_error::operator ='
-                  href: ../cpp/com-error-operator-equal.md
-        - name: _com_ptr_t – třída
-          expanded: false
-          items:
+                  items:
+                    - name: _com_error – operátory
+                      href: ../cpp/com-error-operators.md
+                    - name: '_com_error::operator ='
+                      href: ../cpp/com-error-operator-equal.md
             - name: _com_ptr_t – třída
-              href: ../cpp/com-ptr-t-class.md
-            - name: _com_ptr_t – členské funkce
-              expanded: false
               items:
+                - name: _com_ptr_t – třída
+                  href: ../cpp/com-ptr-t-class.md
                 - name: _com_ptr_t – členské funkce
-                  href: ../cpp/com-ptr-t-member-functions.md
-                - name: '_com_ptr_t::_com_ptr_t'
-                  href: ../cpp/com-ptr-t-com-ptr-t.md
-                - name: '_com_ptr_t::AddRef'
-                  href: ../cpp/com-ptr-t-addref.md
-                - name: '_com_ptr_t::Attach'
-                  href: ../cpp/com-ptr-t-attach.md
-                - name: '_com_ptr_t::CreateInstance'
-                  href: ../cpp/com-ptr-t-createinstance.md
-                - name: '_com_ptr_t::Detach'
-                  href: ../cpp/com-ptr-t-detach.md
-                - name: '_com_ptr_t::GetActiveObject'
-                  href: ../cpp/com-ptr-t-getactiveobject.md
-                - name: '_com_ptr_t::GetInterfacePtr'
-                  href: ../cpp/com-ptr-t-getinterfaceptr.md
-                - name: '_com_ptr_t::QueryInterface'
-                  href: ../cpp/com-ptr-t-queryinterface.md
-                - name: '_com_ptr_t::Release'
-                  href: ../cpp/com-ptr-t-release.md
-            - name: _com_ptr_t – operátory
-              expanded: false
-              items:
+                  items:
+                    - name: _com_ptr_t – členské funkce
+                      href: ../cpp/com-ptr-t-member-functions.md
+                    - name: '_com_ptr_t::_com_ptr_t'
+                      href: ../cpp/com-ptr-t-com-ptr-t.md
+                    - name: '_com_ptr_t::AddRef'
+                      href: ../cpp/com-ptr-t-addref.md
+                    - name: '_com_ptr_t::Attach'
+                      href: ../cpp/com-ptr-t-attach.md
+                    - name: '_com_ptr_t::CreateInstance'
+                      href: ../cpp/com-ptr-t-createinstance.md
+                    - name: '_com_ptr_t::Detach'
+                      href: ../cpp/com-ptr-t-detach.md
+                    - name: '_com_ptr_t::GetActiveObject'
+                      href: ../cpp/com-ptr-t-getactiveobject.md
+                    - name: '_com_ptr_t::GetInterfacePtr'
+                      href: ../cpp/com-ptr-t-getinterfaceptr.md
+                    - name: '_com_ptr_t::QueryInterface'
+                      href: ../cpp/com-ptr-t-queryinterface.md
+                    - name: '_com_ptr_t::Release'
+                      href: ../cpp/com-ptr-t-release.md
                 - name: _com_ptr_t – operátory
-                  href: ../cpp/com-ptr-t-operators.md
-                - name: '_com_ptr_t::operator ='
-                  href: ../cpp/com-ptr-t-operator-equal.md
-                - name: _com_ptr_t – relační operátory
-                  href: ../cpp/com-ptr-t-relational-operators.md
-                - name: _com_ptr_t – extraktory
-                  href: ../cpp/com-ptr-t-extractors.md
-            - name: Šablony relační funkce
-              href: ../cpp/relational-function-templates.md
-        - name: _variant_t – třída
-          expanded: false
-          items:
+                  items:
+                    - name: _com_ptr_t – operátory
+                      href: ../cpp/com-ptr-t-operators.md
+                    - name: '_com_ptr_t::operator ='
+                      href: ../cpp/com-ptr-t-operator-equal.md
+                    - name: _com_ptr_t – relační operátory
+                      href: ../cpp/com-ptr-t-relational-operators.md
+                    - name: _com_ptr_t – extraktory
+                      href: ../cpp/com-ptr-t-extractors.md
+                - name: Šablony relační funkce
+                  href: ../cpp/relational-function-templates.md
             - name: _variant_t – třída
-              href: ../cpp/variant-t-class.md
-            - name: _variant_t – členské funkce
-              expanded: false
               items:
+                - name: _variant_t – třída
+                  href: ../cpp/variant-t-class.md
                 - name: _variant_t – členské funkce
-                  href: ../cpp/variant-t-member-functions.md
-                - name: '_variant_t::_variant_t'
-                  href: ../cpp/variant-t-variant-t.md
-                - name: '_variant_t::Attach'
-                  href: ../cpp/variant-t-attach.md
-                - name: '_variant_t::Clear'
-                  href: ../cpp/variant-t-clear.md
-                - name: '_variant_t::ChangeType'
-                  href: ../cpp/variant-t-changetype.md
-                - name: '_variant_t::Detach'
-                  href: ../cpp/variant-t-detach.md
-                - name: '_variant_t::SetString'
-                  href: ../cpp/variant-t-setstring.md
-            - name: _variant_t – operátory
-              expanded: false
-              items:
+                  items:
+                    - name: _variant_t – členské funkce
+                      href: ../cpp/variant-t-member-functions.md
+                    - name: '_variant_t::_variant_t'
+                      href: ../cpp/variant-t-variant-t.md
+                    - name: '_variant_t::Attach'
+                      href: ../cpp/variant-t-attach.md
+                    - name: '_variant_t::Clear'
+                      href: ../cpp/variant-t-clear.md
+                    - name: '_variant_t::ChangeType'
+                      href: ../cpp/variant-t-changetype.md
+                    - name: '_variant_t::Detach'
+                      href: ../cpp/variant-t-detach.md
+                    - name: '_variant_t::SetString'
+                      href: ../cpp/variant-t-setstring.md
                 - name: _variant_t – operátory
-                  href: ../cpp/variant-t-operators.md
-                - name: '_variant_t::operator ='
-                  href: ../cpp/variant-t-operator-equal.md
-                - name: _variant_t – relační operátory
-                  href: ../cpp/variant-t-relational-operators.md
-                - name: _variant_t – extraktory
-                  href: ../cpp/variant-t-extractors.md
-- name: Rozšíření Microsoft
-  href: ../cpp/microsoft-extensions.md
-- name: Nestandardní chování
-  href: ../cpp/nonstandard-behavior.md
-- name: Omezení kompilátoru
-  href: ../cpp/compiler-limits.md
+                  items:
+                    - name: _variant_t – operátory
+                      href: ../cpp/variant-t-operators.md
+                    - name: '_variant_t::operator ='
+                      href: ../cpp/variant-t-operator-equal.md
+                    - name: _variant_t – relační operátory
+                      href: ../cpp/variant-t-relational-operators.md
+                    - name: _variant_t – extraktory
+                      href: ../cpp/variant-t-extractors.md
+    - name: Rozšíření Microsoft
+      href: ../cpp/microsoft-extensions.md
+    - name: Nestandardní chování
+      href: ../cpp/nonstandard-behavior.md
+    - name: Omezení kompilátoru
+      href: ../cpp/compiler-limits.md
+- name: C/C++ – referenční dokumentace preprocesoru
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: Standardní knihovna C++ – referenční dokumentace
+  href: ../standard-library/cpp-standard-library-reference.md
